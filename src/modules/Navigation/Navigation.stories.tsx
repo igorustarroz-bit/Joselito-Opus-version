@@ -1,21 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { BrandLogo } from '@/components/BrandLogo';
 import { Navigation } from './Navigation';
-import { ButtonIcon } from '../../components/ButtonIcon';
-import { Icon } from '../../components/Icon';
 
-const items = [
-  { label: 'Productos', selected: true }, { label: 'Origen' }, { label: 'Excelencia' }, { label: 'Contacto' },
-];
-const actions = <><ButtonIcon variant="terciary" size="s" label="Buscar" icon={<Icon name="MagnifyingGlass" size="s" />} /><ButtonIcon variant="terciary" size="s" label="Cesta" icon={<Icon name="Bag" size="s" />} /></>;
+const items = [{ label: 'Tienda' }, { label: 'Origen', active: true }, { label: 'Excelencia' }, { label: 'Compromisos' }, { label: 'Experiencia' }];
 
 const meta = {
   title: 'Módulos/Navigation',
   component: Navigation,
   parameters: { layout: 'fullscreen' },
   argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
-  args: { brand: <BrandLogo height={36} />, items, actions, theme: 'light-white' },
+  args: { items, cart: { label: 'Cesta', count: 3 }, theme: 'light-white' },
 } satisfies Meta<typeof Navigation>;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 

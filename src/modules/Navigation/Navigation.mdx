@@ -6,24 +6,31 @@ import * as Stories from './Navigation.stories';
 # Navigation (módulo)
 
 ## Intro
-Barra de navegación superior (Navigation) a 100% del viewport: marca, enlaces y acciones.
+
+Cabecera (fiel al master): enlaces (Body/02) a la izquierda, **logo centrado** y utilidades a la derecha (Buscar con icono, Cuenta y Cesta en acento).
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
 ## Subtemas
+
 Tema propio (`data-theme`).
 
 <Canvas of={Stories.Oscuro} />
 
 ## Comportamiento responsive
-Los enlaces se ocultan por debajo de **M** (donde entraría un menú hamburguesa — módulo Menu).
+
+Los enlaces se ocultan por debajo de M (donde entra el módulo Menu). El logo queda centrado.
 
 ## Tokens
-`.grid-wrapper`, borde `--stroke-neutral-3`, colores semánticos.
+
+`type-body-2`, `--text-base`, `--text-accent-base`; logo con `currentColor`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-NavButton, ButtonIcon, Icon; módulo Menu, Breadcrumb.
+
+BrandLogo, Icon; Menu, SecondaryMenu, Breadcrumb.

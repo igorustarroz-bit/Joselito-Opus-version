@@ -6,18 +6,16 @@ import { CardsProductCarousel } from '@/modules/CardsProductCarousel';
 import { Banner } from '@/modules/Banner';
 import { Footer } from '@/modules/Footer';
 import { CardProduct } from '@/components/CardProduct';
-import { ButtonIcon } from '@/components/ButtonIcon';
 import { Icon } from '@/components/Icon';
 import { BrandLogo } from '@/components/BrandLogo';
 import { grad, navItems, footerColumns, copyright } from '@/templates/shared/demo';
 
 /** Template Home — página de inicio compuesta por módulos. */
 export function Home() {
-  const actions = <><ButtonIcon variant="terciary" size="s" label="Buscar" icon={<Icon name="MagnifyingGlass" size="s" />} /><ButtonIcon variant="terciary" size="s" label="Cesta" icon={<Icon name="Bag" size="s" />} /></>;
   const social = <><a href="#" aria-label="Facebook"><Icon name="FacebookLogo" size="m" /></a><a href="#" aria-label="Email"><Icon name="Envelope" size="m" /></a></>;
   return (
     <div>
-      <Navigation brand={<BrandLogo height={36} />} items={navItems} actions={actions} />
+      <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <HomepageHero background={grad('#260200', '#e23f36')} eyebrow="Desde 1868" title="El mejor jamón del mundo" description="Tradición, dehesa y una curación paciente en cada pieza." actions={[{ label: 'Descubrir' }, { label: 'Comprar', variant: 'secondary' }]} />
       <ContentIntro eyebrow="Un legado único" title="Cinco generaciones dedicadas a elaborar el mejor jamón del mundo, con el mismo respeto por la tradición y la naturaleza." />
       <CardsCategories heading="Categorías" theme="light-grey" items={[
