@@ -20,7 +20,7 @@ export function Compromisos() {
         { icon: 'HandHeart', title: 'Happy Pigs', description: 'Cerdos criados en libertad y sin estrés.' },
         { icon: 'Microscope', title: 'Salud', description: 'Grasa infiltrada rica en ácido oleico.' },
       ]} />
-      <ContentTextImage eyebrow="Sostenibilidad" title="Cuidamos la dehesa" body={<p style={{ margin: 0 }}>Un ecosistema que preservamos para las próximas generaciones.</p>} linkLabel="Nuestro compromiso" image={grad('#373a2c', '#9ba084')} />
+      <ContentTextImage label="Sostenibilidad" title="Cuidamos la dehesa" body={<p style={{ margin: 0 }}>Un ecosistema que preservamos para las próximas generaciones.</p>} ctaLabel="Nuestro compromiso" image={grad('#373a2c', '#9ba084')} />
       <CardsAccordion heading="Preguntas frecuentes" items={[
         { id: 'a', title: '¿Qué es la dehesa?', content: 'Un bosque mediterráneo de encinas donde crían nuestros cerdos.' },
         { id: 'b', title: '¿Por qué es saludable?', content: 'Su grasa es rica en ácido oleico, como el aceite de oliva.' },

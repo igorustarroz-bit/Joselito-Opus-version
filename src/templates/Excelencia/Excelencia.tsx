@@ -23,7 +23,7 @@ export function Excelencia() {
         { title: 'Montanera', description: 'Alimentación a base de bellota.' },
         { title: 'Curación', description: 'Entre 36 y 48 meses.' },
       ]} />
-      <ContentTextImage reverse eyebrow="Curación" title="El tiempo como aliado" body={<p style={{ margin: 0 }}>Las bodegas naturales marcan el ritmo de una curación lenta y precisa.</p>} linkLabel="Ver añadas" image={grad('#481815', '#e23f36')} />
+      <ContentTextImage type="right" label="Curación" title="El tiempo como aliado" body={<p style={{ margin: 0 }}>Las bodegas naturales marcan el ritmo de una curación lenta y precisa.</p>} ctaLabel="Ver añadas" image={grad('#481815', '#e23f36')} />
       <ListArchiveTable columns={['Añada', 'Descripción', 'Curación']} rows={[
         { cells: ['2019', 'Añada excepcional', '48 meses'], href: '#' },
         { cells: ['2018', 'Gran cosecha de bellota', '46 meses'], href: '#' },

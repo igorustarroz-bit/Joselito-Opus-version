@@ -1,45 +1,59 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { Title } from '@/components/Title';
-import { ActionLink } from '@/components/ActionLink';
+import { Button } from '@/components/Button';
 import { AspectRatio, type AspectRatioValue } from '@/components/AspectRatio';
-import { Icon } from '@/components/Icon';
 import type { ThemeName } from '@/modules/SectionHero';
 
+export type ContentTextImageType = 'left' | 'right' | 'half';
+
 export interface ContentTextImageProps {
-  eyebrow?: ReactNode;
+  /** Etiqueta superior (Body/03, gris, mayúsculas). */
+  label?: ReactNode;
+  /** Título (Title/03). */
   title: ReactNode;
+  /** Cuerpo (Body/03). */
   body?: ReactNode;
-  linkLabel?: string;
-  linkHref?: string;
+  /** Botón secundario opcional. */
+  ctaLabel?: string;
+  onCta?: () => void;
   image?: ReactNode;
   imageRatio?: AspectRatioValue;
-  /** Imagen a la izquierda. */
-  reverse?: boolean;
+  /** Disposición (fiel al master): imagen a la izquierda, a la derecha o 50/50. */
+  type?: ContentTextImageType;
   theme?: ThemeName;
   className?: string;
 }
 
 /**
- * Módulo Content / Text + Image — bloque de texto junto a una imagen (6+6 en
- * desktop, apilado en móvil), reversible y con tema propio.
+ * Módulo Content / Text + Image (fiel al master) — imagen + bloque de texto
+ * (label Body/03 gris, título Title/03, cuerpo Body/03, botón secundario).
+ * Variantes: `left`, `right` (7/5) y `half` (6/6). Apila en móvil.
  */
-export function ContentTextImage({ eyebrow, title, body, linkLabel, linkHref = '#', image, imageRatio = '4:3', reverse = false, theme = 'light-white', className }: ContentTextImageProps) {
+export function ContentTextImage({ label, title, body, ctaLabel, onCta, image, imageRatio = '4:3', type = 'left', theme = 'light-white', className }: ContentTextImageProps) {
+  const imageFirst = type !== 'right';
+  const imageCols = type === 'half' ? 'm:col-span-6' : 'm:col-span-7';
+  const textCols = type === 'half' ? 'm:col-span-6' : 'm:col-span-5';
+
+  const imageEl = image && (
+    <div className={cn('col-span-full', imageCols, !imageFirst && 'm:order-2')}>
+      <AspectRatio ratio={imageRatio} className="bg-(--bg-neutral-1)">{image}</AspectRatio>
+    </div>
+  );
+  const textEl = (
+    <div className={cn('col-span-full flex flex-col gap-fx-6', textCols, !imageFirst && 'm:order-1')}>
+      {label && <p className="type-body-3 m-0 uppercase text-(--text-neutral-2)">{label}</p>}
+      <Title level={3} as="h2">{title}</Title>
+      {body && <div className="type-body-3 flex flex-col gap-fx-3 text-(--text-neutral-1)">{body}</div>}
+      {ctaLabel && <Button variant="secondary" size="s" className="mt-fx-4 self-start" onClick={onCta}>{ctaLabel}</Button>}
+    </div>
+  );
+
   return (
-    <section data-theme={theme} className={cn('w-full bg-(--bg-base) text-(--text-base)', className)}>
-      <div className="grid-wrapper py-(--space-12)">
+    <section data-theme={theme} className={cn('w-full border-b border-(--stroke-neutral-4) bg-(--bg-base) text-(--text-base)', className)}>
+      <div className="grid-wrapper py-(--space-15)">
         <div className="grid-12 items-center gap-y-(--space-8)">
-          <div className={cn('col-span-full flex flex-col gap-fx-4 m:col-span-6', reverse ? 'm:order-2 m:col-start-7' : 'm:col-start-1')}>
-            {eyebrow && <span className="type-label-2 uppercase text-(--text-neutral-1)">{eyebrow}</span>}
-            <Title level={4} as="h2">{title}</Title>
-            {body && <div className="type-body-4 flex flex-col gap-fx-3 text-(--text-neutral-1)">{body}</div>}
-            {linkLabel && <ActionLink href={linkHref} className="mt-fx-2" iconRight={<Icon name="ArrowRight" size="s" />}>{linkLabel}</ActionLink>}
-          </div>
-          {image && (
-            <div className={cn('col-span-full m:col-span-6', reverse ? 'm:order-1 m:col-start-1' : 'm:col-start-7')}>
-              <AspectRatio ratio={imageRatio} className="bg-(--bg-neutral-1)">{image}</AspectRatio>
-            </div>
-          )}
+          {imageFirst ? <>{imageEl}{textEl}</> : <>{textEl}{imageEl}</>}
         </div>
       </div>
     </section>

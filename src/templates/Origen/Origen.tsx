@@ -27,7 +27,7 @@ export function Origen() {
         { marker: '1980', title: 'Expansión', description: 'El nombre cruza fronteras.' },
         { marker: 'Hoy', title: 'Referente mundial', description: 'El mejor jamón del mundo.' },
       ]} />
-      <ContentTextImage eyebrow="La dehesa" title="Cría en libertad" body={<p style={{ margin: 0 }}>Nuestros cerdos crecen en la dehesa, formando la grasa infiltrada que da su sabor.</p>} linkLabel="Conocer más" image={grad('#89906f', '#dcded4')} />
+      <ContentTextImage label="La dehesa" title="Cría en libertad" body={<p style={{ margin: 0 }}>Nuestros cerdos crecen en la dehesa, formando la grasa infiltrada que da su sabor.</p>} ctaLabel="Conocer más" image={grad('#89906f', '#dcded4')} />
       <PreviousNext prev={{ caption: 'Anterior', label: 'Inicio' }} next={{ caption: 'Siguiente', label: 'Excelencia' }} />
       <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
