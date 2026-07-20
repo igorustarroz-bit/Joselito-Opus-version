@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { BrandLogo } from '@/components/BrandLogo';
 import { Navigation } from './Navigation';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { Icon } from '../../components/Icon';
@@ -13,7 +14,7 @@ const meta = {
   component: Navigation,
   parameters: { layout: 'fullscreen' },
   argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
-  args: { brand: 'JOSELITO', items, actions, theme: 'light-white' },
+  args: { brand: <BrandLogo height={36} />, items, actions, theme: 'light-white' },
 } satisfies Meta<typeof Navigation>;
 export default meta;
 type Story = StoryObj<typeof meta>;

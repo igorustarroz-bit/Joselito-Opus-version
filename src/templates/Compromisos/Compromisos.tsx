@@ -1,4 +1,5 @@
 import { Navigation } from '@/modules/Navigation';
+import { BrandLogo } from '@/components/BrandLogo';
 import { SectionHeader } from '@/modules/SectionHeader';
 import { ListCharacteristics } from '@/modules/ListCharacteristics';
 import { ContentTextImage } from '@/modules/ContentTextImage';
@@ -12,7 +13,7 @@ export function Compromisos() {
   const social = <><a href="#" aria-label="Facebook"><Icon name="FacebookLogo" size="m" /></a><a href="#" aria-label="Email"><Icon name="Envelope" size="m" /></a></>;
   return (
     <div>
-      <Navigation brand="JOSELITO" items={navItems} />
+      <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <SectionHeader eyebrow="Compromisos" title="Un compromiso con la naturaleza" description="Sostenibilidad, bienestar animal y salud guían todo lo que hacemos." />
       <ListCharacteristics heading="Nuestros pilares" theme="light-grey" items={[
         { icon: 'Recycle', title: 'Sostenibilidad', description: 'Gestión responsable de la dehesa.' },
@@ -24,7 +25,7 @@ export function Compromisos() {
         { id: 'a', title: '¿Qué es la dehesa?', content: 'Un bosque mediterráneo de encinas donde crían nuestros cerdos.' },
         { id: 'b', title: '¿Por qué es saludable?', content: 'Su grasa es rica en ácido oleico, como el aceite de oliva.' },
       ]} />
-      <Footer brand="Joselito" columns={footerColumns} social={social} copyright={copyright} />
+      <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
   );
 }

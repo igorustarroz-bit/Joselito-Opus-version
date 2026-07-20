@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { BrandLogo } from '@/components/BrandLogo';
 import { Footer } from './Footer';
 import { Icon } from '../../components/Icon';
 
@@ -14,7 +15,7 @@ const meta = {
   component: Footer,
   parameters: { layout: 'fullscreen' },
   argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
-  args: { brand: 'Joselito', columns, social, copyright: '© 2026 Joselito. Todos los derechos reservados.', theme: 'dark-black-neutral' },
+  args: { brand: <BrandLogo variant="isotype" height={48} />, columns, social, copyright: '© 2026 Joselito. Todos los derechos reservados.', theme: 'dark-black-neutral' },
 } satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;

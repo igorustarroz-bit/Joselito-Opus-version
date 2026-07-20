@@ -1,4 +1,5 @@
 import { Navigation } from '@/modules/Navigation';
+import { BrandLogo } from '@/components/BrandLogo';
 import { SectionHero } from '@/modules/SectionHero';
 import { SecondaryMenu } from '@/modules/SecondaryMenu';
 import { ContentText } from '@/modules/ContentText';
@@ -14,7 +15,7 @@ export function Origen() {
   const social = <><a href="#" aria-label="Facebook"><Icon name="FacebookLogo" size="m" /></a><a href="#" aria-label="Email"><Icon name="Envelope" size="m" /></a></>;
   return (
     <div>
-      <Navigation brand="JOSELITO" items={navItems} />
+      <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <SecondaryMenu items={[{ label: 'Nuestra historia', active: true }, { label: 'La dehesa' }, { label: 'La montanera' }]} />
       <SectionHero eyebrow="Origen" title="Nuestra historia" description="Desde 1868, cinco generaciones cuidando cada detalle." image={grad('#260200', '#e23f36')} theme="light-white" />
       <ContentText title="La dehesa" columns={2}>
@@ -28,7 +29,7 @@ export function Origen() {
       ]} />
       <ContentTextImage eyebrow="La dehesa" title="Cría en libertad" body={<p style={{ margin: 0 }}>Nuestros cerdos crecen en la dehesa, formando la grasa infiltrada que da su sabor.</p>} linkLabel="Conocer más" image={grad('#89906f', '#dcded4')} />
       <PreviousNext prev={{ caption: 'Anterior', label: 'Inicio' }} next={{ caption: 'Siguiente', label: 'Excelencia' }} />
-      <Footer brand="Joselito" columns={footerColumns} social={social} copyright={copyright} />
+      <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
   );
 }
