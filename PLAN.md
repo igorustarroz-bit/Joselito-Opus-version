@@ -42,15 +42,15 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ UI07-Listbox (base: z_fragment_listbox_Item_Dropdown)
 - ⬜ UI08-Checkbox-List
 - ⬜ UI09-Checkbox-Label
-- ⬜ UI10-Checkboxes-Radios
+- ✅ UI10-Checkboxes-Radios → components/Checkbox + components/Radio
 - ⬜ UI11-Form (base: z_fragment_row_2_input, z_fragment_row_3_input)
 - ✅ UI12-Tag (Transaction/New/Aseptic · L/XS) → components/Tag
 - ✅ UI13-Accordion (simple/multiple, accesible) → components/Accordion
-- ⬜ UI14-Placeholder-Text
+- ✅ UI14-Placeholder-Text → components/PlaceholderText
 - ⬜ Card Product
 - ⬜ Card Link
 - ⬜ Card Carrusel
-- ⬜ Title
+- ✅ Title → components/Title
 - ⬜ Fragments de lista: Table List Item, list_characteristic, list_BigNumbers, list-archive
 
 ## Fase 4 — Módulos (100% viewport, grid 12 col, versiones por breakpoint)

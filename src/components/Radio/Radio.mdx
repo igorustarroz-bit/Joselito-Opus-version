@@ -1,0 +1,36 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Radio.stories';
+
+<Meta of={Stories} />
+
+# Radio
+
+## Intro
+Botón de opción (UI10) para selección única dentro de un grupo. Tamaños S y M.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+Input nativo oculto + círculo visual con punto interior al seleccionar + etiqueta.
+
+## Subtemas por componente
+Colores semánticos, adaptable por tema.
+
+## Comportamiento
+Agrupa por `name`. Estados: sin marcar, marcado, hover, focus, disabled.
+
+## Variantes y tamaños
+<Canvas of={Stories.Grupo} />
+
+## Tokens
+Borde `--stroke-neutral-2`; seleccionado `--bg-accent-base`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+Inputs `radio` nativos agrupados por `name`, asociados por `label`.
+
+## Componentes relacionados
+Checkbox (UI10), Form (UI11).
