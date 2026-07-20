@@ -3,6 +3,11 @@
 /* Tokens de color: primitivas (@theme) + semánticos por tema ([data-theme]) */
 @import "./tokens/primitives.css";
 @import "./tokens/semantic.css";
+@import "./tokens/fonts.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/grid.css";
+@import "./tokens/effects.css";
 
 /* ============================================================
    TOKENS — Breakpoints

@@ -1,0 +1,34 @@
+/* ============================================================
+   Webfonts del proyecto.
+   Coloca los .woff2 en public/fonts/ (se sirven en /fonts/*).
+   Si faltan, se usa el fallback declarado en --font-*.
+   Familias (Figma): Título = SangBleu · Texto/Label/CTA/Forms = Euclid Circular B
+   ============================================================ */
+@font-face {
+  font-family: "SangBleu";
+  src: url("/fonts/SangBleu-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SangBleu";
+  src: url("/fonts/SangBleu-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("/fonts/EuclidCircularB-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("/fonts/EuclidCircularB-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

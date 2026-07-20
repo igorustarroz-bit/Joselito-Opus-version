@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { typeGroups, fontFamilies, trackings } from './typography';
+
+<Meta title="Tokens/Tipografía" />
+
+# Tipografía
+
+## Intro
+
+Los **estilos de texto** provienen de Figma (colección **Responsive**, grupo
+`Typography/*`). Cada estilo cambia de **tamaño e interlineado por breakpoint**
+(mobile-first) y lleva su familia y *tracking* desde las primitivas.
+
+Todo componente o módulo lleva **siempre** uno de estos estilos aplicado con su
+clase (`type-*`). Cambia el **Breakpoint** en la barra superior para ver la
+adaptación responsive.
+
+### Familias
+
+<table>
+  <thead><tr><th>Token</th><th>Uso</th><th>Fuente</th></tr></thead>
+  <tbody>
+    {fontFamilies.map((f) => (<tr key={f.token}><td><code>{f.token}</code></td><td>{f.label}</td><td>{f.value}</td></tr>))}
+  </tbody>
+</table>
+
+> ⚠️ Coloca los `.woff2` en `public/fonts/`. Sin ellos se usa el fallback del sistema.
+
+## Demo
+
+{typeGroups.map((g) => (
+  <div key={g.group} style={{ marginBottom: 28 }}>
+    <h3>{g.group}</h3>
+    {g.classes.map((c) => (
+      <div key={c} style={{ display: 'flex', alignItems: 'baseline', gap: 16, borderBottom: '1px solid color-mix(in srgb, currentColor 10%, transparent)', padding: '10px 0' }}>
+        <code style={{ width: 160, flex: 'none', fontSize: 11, opacity: 0.7 }}>{c}</code>
+        <span className={c}>Joselito</span>
+      </div>
+    ))}
+  </div>
+))}
+
+## Tokens
+
+- **Clase:** `type-<estilo>` — p. ej. `type-title-6`, `type-body-4`, `type-cta-l`.
+- **Familia:** `var(--font-title)` / `var(--font-body)` (y `--font-label/cta/forms`).
+- **Tracking:** `var(--tracking-title)` … según categoría.
+
+```tsx
+<h2 className="type-title-4">Encabezado</h2>
+<p className="type-body-3">Texto de párrafo…</p>
+<span className="type-cta-l">Call to action</span>
+```

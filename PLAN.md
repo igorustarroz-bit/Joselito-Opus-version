@@ -4,7 +4,7 @@
 > Estados: ⬜ pendiente · 🟡 en progreso · ✅ completado
 > Orden de trabajo: **Tokens → Base (Foundations/Brand) → Componentes → Módulos → Templates**
 >
-> Última actualización: 2026-07-20 · Fase 1 en progreso: breakpoints ✅.
+> Última actualización: 2026-07-20 · Fase 1 (Tokens) COMPLETA ✅.
 
 ## Fase 0 — Setup del proyecto ✅
 - ✅ Verificar instrucciones (puntos 1-4) y acceso Figma MCP
@@ -18,12 +18,12 @@
 ## Fase 1 — Tokens (primitivas → semánticos)
 Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints) · **Semantic-Color** (276, 5 modos).
 - ✅ Breakpoints (Responsive): XS-390, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920 — tokens en `src/tokens/breakpoints.ts` + `@theme` Tailwind + selector Storybook + docs
-- ⬜ Colores primitivos (Primitives)
-- ⬜ Colores semánticos (Semantic-Color → `[data-theme]`): Light-White, Light-Grey, Dark-Red-Primary, Dark-Black-Neutral, Light-Yellow
-- ⬜ Tipografías / estilos de texto (responsive por breakpoint)
-- ⬜ Espaciados
-- ⬜ Grid 12 columnas (layout guide styles)
-- ⬜ Effect styles
+- ✅ Colores primitivos (Primitives) → tokens/primitives.css (@theme)
+- ✅ Colores semánticos (5 temas [data-theme]) → tokens/semantic.css
+- ✅ Tipografías / estilos de texto (type-*, responsive) → tokens/typography.css + fonts.css
+- ✅ Espaciados (fijos + responsive + radios) → tokens/spacing.css
+- ✅ Grid 12 columnas (.grid-wrapper/.grid-12) → tokens/grid.css
+- ✅ Effect styles (elevaciones + blur) → tokens/effects.css
 
 ## Fase 2 — Base: Foundations / Brand Assets [prioritarios]
 - ⬜ Aspect Ratio (9:16, 2:3, 3:4, 1:1, 4:3, 3:2, 16:9)

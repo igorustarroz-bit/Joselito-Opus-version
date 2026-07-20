@@ -115,3 +115,21 @@
   --color-system-warning-02: #f7ba40;
   --color-system-warning-03: #7a5706;
 }
+
+/* ------------------------------------------------------------
+   Primitivas tipográficas (familias, tracking).
+   Origen: Figma → Primitives → Tipography/*
+   ------------------------------------------------------------ */
+@theme {
+  --font-title: "SangBleu", Georgia, "Times New Roman", serif;
+  --font-body: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-label: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-cta: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-forms: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --tracking-title: -1.5px;
+  --tracking-body: 0px;
+  --tracking-label: 0px;
+  --tracking-cta: 0.5px;
+  --tracking-forms: 0px;
+}
