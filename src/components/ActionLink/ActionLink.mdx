@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ActionLink.stories';
+
+<Meta of={Stories} />
+
+# ActionLink
+
+## Intro
+Enlace de acción (UI04): texto en mayúsculas con subrayado e icono opcional, para acciones de bajo énfasis ("Ver más", "Descargar").
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+`<a>` con texto subrayado + icono (habitualmente flecha) a la derecha.
+
+## Subtemas por componente
+Color desde tokens semánticos de texto; se adapta a los 5 temas.
+
+## Comportamiento
+Hover/focus cambian el color; `disabled` lo atenúa y desactiva la interacción.
+
+## Variantes y tamaños
+<Canvas of={Stories.Tamaños} />
+<Canvas of={Stories.Estados} />
+Tamaños: L / M / S (`type-cta-*`).
+
+## Tokens
+`--text-base` (default), `--text-hover`, `--text-disabled`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+Enlace nativo con foco de teclado; `aria-disabled` cuando está deshabilitado.
+
+## Componentes relacionados
+Button (UI02), Icon.

@@ -33,11 +33,11 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 
 ## Fase 3 — Componentes
 > Primero los base (buttons, fragments). Los `z_fragment_*` son subcomponentes base.
-- ⬜ UI01-Nav-Button
+- ✅ UI01-Nav-Button → components/NavButton
 - ✅ UI02-Button (Primary/Secondary/Terciary · XS-XL · estados) → components/Button
-- ⬜ UI03-Button-Icon
-- ⬜ UI04-Button-Action-Link
-- ⬜ UI05-Tabs (base: z_fragment_tab_primary, z_fragment_tab_secondary)
+- ✅ UI03-Button-Icon → components/ButtonIcon
+- ✅ UI04-Button-Action-Link → components/ActionLink
+- ✅ UI05-Tabs (Primary/Secondary) → components/Tabs
 - ⬜ UI06-Input
 - ⬜ UI07-Listbox (base: z_fragment_listbox_Item_Dropdown)
 - ⬜ UI08-Checkbox-List
