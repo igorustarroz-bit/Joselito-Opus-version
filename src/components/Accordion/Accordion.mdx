@@ -1,0 +1,51 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Accordion.stories';
+
+<Meta of={Stories} />
+
+# Accordion
+
+## Intro
+
+Lista de secciones plegables (UI13) para mostrar/ocultar contenido y reducir la
+carga visual (FAQ, fichas de producto, etc.).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Anatomía
+
+Cada item: cabecera (`<button>` con título + icono Caret) y panel de contenido.
+El icono rota 180° al abrir.
+
+## Subtemas por componente
+
+Usa tokens semánticos (`--text-base`, `--text-neutral-1`, `--stroke-neutral-3`),
+adaptándose a los 5 temas (`data-theme`).
+
+## Comportamiento
+
+- Modo simple (uno abierto) o `multiple` (varios a la vez).
+- No controlado con `defaultOpen`. Alterna con click o teclado (Enter/Espacio).
+
+## Variantes y tamaños
+
+<Canvas of={Stories.MultipleAbierto} />
+
+## Tokens
+
+Título `type-title-1`, contenido `type-body-3`; colores semánticos de texto y borde.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+Cabecera como `<button>` con `aria-expanded` y `aria-controls`; el panel es una
+`region` con `aria-labelledby`. Navegable por teclado.
+
+## Componentes relacionados
+
+Cards / Accordion (módulo), Tabs (UI05).

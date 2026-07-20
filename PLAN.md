@@ -45,7 +45,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ UI10-Checkboxes-Radios
 - ⬜ UI11-Form (base: z_fragment_row_2_input, z_fragment_row_3_input)
 - ✅ UI12-Tag (Transaction/New/Aseptic · L/XS) → components/Tag
-- ⬜ UI13-Accordion (base: z_fragment_accordion)
+- ✅ UI13-Accordion (simple/multiple, accesible) → components/Accordion
 - ⬜ UI14-Placeholder-Text
 - ⬜ Card Product
 - ⬜ Card Link
