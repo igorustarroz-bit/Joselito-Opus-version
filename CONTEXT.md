@@ -61,5 +61,17 @@ Deben ir primero en el plan:
 - `figma.root.children` → páginas; pedir hijos de UNA página por llamada.
 - Con el `nodeId`: `get_screenshot`, `get_metadata`, `get_design_context`, `get_variable_defs`.
 
-## 8. Estado
-Ver `PLAN.md`. Scaffold base creado y desplegable. Pendiente: leer tokens de Figma e identificar componentes/módulos.
+## 8. Tokens en Figma (colecciones)
+- **Primitives** — 133 variables (modo: Joselito)
+- **Responsive** — 132 variables · 7 breakpoints: `XS-375 · SM-480 · M-768 · LG-1024 · XL-1440 · XXL-1620 · XXXL-1920`
+- **Semantic-Color** — 276 variables · 5 modos: `Light-White · Light-Grey · Dark-Red-Primary · Dark-Black-Neutral · Light-Yellow`
+
+## 9. Inventario (todos son *master* en Figma)
+- **Foundations:** Aspect Ratio.
+- **Brand Assets:** Icon Sizer + ~140 iconos, Brand Logo, Logo Grid, logos de cliente.
+- **Componentes (Components):** UI01–UI14 (Nav-Button, Button, Button-Icon, Button-Action-Link, Tabs, Input, Listbox, Checkbox-List, Checkbox-Label, Checkboxes-Radios, Form, Tag, Accordion, Placeholder-Text), Cards (Product, Link, Carrusel), Title y fragments de lista.
+- **Módulos (Modules):** Navigation (+ Secondary menu, Breadcrumb, PreviousNext, Footer), Menu, Heros (Homepage/Section/Header), Content (Title/Intro/Text/Image/Text+Image), List (Characteristics/Numbers/Timeline/Archive table), Cards (Links/Gallery/Product carousel/Showcase/Categories/Accordion), Banner, Form, Toast.
+- **Templates (Sprint 1):** Home, Navegación, Origen, Excelencia, Compromisos, Experiencias y eventos, Colecciones Premium.
+
+## 10. Estado
+Ver `PLAN.md`. Fase 0 (setup) completa y desplegable. Siguiente: Fase 1 — Tokens (breakpoints primero).
