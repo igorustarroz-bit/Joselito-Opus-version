@@ -39,11 +39,11 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ UI04-Button-Action-Link → components/ActionLink
 - ✅ UI05-Tabs (Primary/Secondary) → components/Tabs
 - ✅ UI06-Input (M/L, estados Forms) → components/Input
-- ⬜ UI07-Listbox (base: z_fragment_listbox_Item_Dropdown)
+- ✅ UI07-Listbox → components/Listbox
 - ✅ UI08-Checkbox-List → components/CheckboxList
 - ✅ UI09-Checkbox-Label → components/CheckboxLabel
 - ✅ UI10-Checkboxes-Radios → components/Checkbox + components/Radio
-- ⬜ UI11-Form (base: z_fragment_row_2_input, z_fragment_row_3_input)
+- ✅ UI11-Form (Form + FormRow 1-3 col) → components/Form
 - ✅ UI12-Tag (Transaction/New/Aseptic · L/XS) → components/Tag
 - ✅ UI13-Accordion (simple/multiple, accesible) → components/Accordion
 - ✅ UI14-Placeholder-Text → components/PlaceholderText

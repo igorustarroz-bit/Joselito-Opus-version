@@ -1,0 +1,24 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Form.stories';
+
+<Meta of={Stories} />
+
+# Form
+
+## Intro
+Contenedor de formulario (UI11) que organiza los campos en filas de 1–3 columnas, responsive.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+`Form` (columna con espaciado) + `FormRow` (rejilla de 1, 2 o 3 columnas que colapsa a 1 en móvil).
+
+## Comportamiento
+En móvil todas las filas son de 1 columna; desde el breakpoint **M** aplican 2 o 3 columnas.
+
+## Tokens
+Espaciados `--spacing-fx-*`; gutter entre campos con `gap`.
+
+## Componentes relacionados
+Input (UI06), Listbox (UI07), Checkbox/Radio (UI10), CheckboxLabel (UI09).
