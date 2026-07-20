@@ -6,22 +6,21 @@ import * as Stories from './Breadcrumb.stories';
 # Breadcrumb (módulo)
 
 ## Intro
-Ruta de navegación (Navigation / Breadcrumb) con separadores; el último elemento es la página actual.
+
+Navigation / Breadcrumb (fiel al master): banda de 80px con un enlace de vuelta (ArrowLeft + etiqueta).
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
-## Anatomía
-`nav > ol > li` con enlaces y separadores Caret; el actual con `aria-current="page"`.
-
 ## Tokens
-Texto `--text-base`/`--text-neutral-1`, separador `--text-neutral-2`, estilo `type-label-2`.
+
+`type-body-3`, icono ArrowLeft, fondo `--bg-base`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
-## Accesibilidad
-`nav[aria-label]`, lista ordenada, `aria-current` en la página actual.
-
 ## Componentes relacionados
-Icon, Navigation.
+
+Icon; SectionHeader, PreviousNext.

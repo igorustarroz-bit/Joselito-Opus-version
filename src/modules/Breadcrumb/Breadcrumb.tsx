@@ -1,38 +1,29 @@
-import { Fragment, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { Icon } from '@/components/Icon';
-
-export interface Crumb { label: ReactNode; href?: string; }
+import type { ThemeName } from '@/modules/SectionHero';
 
 export interface BreadcrumbProps {
-  items: Crumb[];
+  /** Etiqueta del enlace de vuelta a la sección/página anterior. */
+  label: ReactNode;
+  href?: string;
+  theme?: ThemeName;
   className?: string;
 }
 
 /**
- * Módulo Navigation / Breadcrumb — ruta de navegación con separadores (Caret).
- * El último elemento es la página actual (aria-current).
+ * Módulo Navigation / Breadcrumb (fiel al master) — banda de 80px con un enlace
+ * "volver": icono ArrowLeft + etiqueta (Body/03).
  */
-export function Breadcrumb({ items, className }: BreadcrumbProps) {
+export function Breadcrumb({ label, href = '#', theme = 'light-white', className }: BreadcrumbProps) {
   return (
-    <nav aria-label="Miga de pan" className={cn('w-full', className)}>
-      <ol className="flex flex-wrap items-center gap-fx-2 m-0 p-0 list-none type-label-2">
-        {items.map((c, i) => {
-          const last = i === items.length - 1;
-          return (
-            <Fragment key={i}>
-              <li>
-                {last ? (
-                  <span aria-current="page" className="text-(--text-neutral-1)">{c.label}</span>
-                ) : (
-                  <a href={c.href ?? '#'} className="text-(--text-base) no-underline hover:text-(--text-hover)">{c.label}</a>
-                )}
-              </li>
-              {!last && <li aria-hidden className="text-(--text-neutral-2)"><Icon name="CaretRight" size="xxs" /></li>}
-            </Fragment>
-          );
-        })}
-      </ol>
+    <nav data-theme={theme} aria-label="Volver" className={cn('w-full bg-(--bg-base) text-(--text-base)', className)}>
+      <div className="grid-wrapper flex h-20 items-center">
+        <a href={href} className="group inline-flex items-end gap-fx-2 no-underline text-(--text-base)">
+          <Icon name="ArrowLeft" size="m" className="transition-transform group-hover:-translate-x-fx-1" />
+          <span className="type-body-3">{label}</span>
+        </a>
+      </div>
     </nav>
   );
 }
