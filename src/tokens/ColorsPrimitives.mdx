@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { primitiveGroups } from './colors';
+
+<Meta title="Tokens/Colores/Primitivas" />
+
+# Colores — Primitivas
+
+## Intro
+
+Las **primitivas** son la paleta cruda del sistema (colección **Primitives** de
+Figma, modo único *Joselito*). **No se usan directamente** en componentes: son la
+base sobre la que se construyen los [colores semánticos](/docs/tokens-colores-semánticos--docs).
+
+Se exponen como utilidades Tailwind (`bg-primary-50`, `text-neutral-40`…) y como
+variables CSS (`var(--color-primary-50)`).
+
+## Demo
+
+{primitiveGroups.map((g) => (
+  <div key={g.group} style={{ marginBottom: 24 }}>
+    <h3 style={{ marginBottom: 8 }}>{g.group}</h3>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      {g.swatches.map((s) => (
+        <div key={s.name} style={{ width: 96 }}>
+          <div style={{
+            height: 56, borderRadius: 6, background: `var(--${s.name})`,
+            border: '1px solid color-mix(in srgb, currentColor 15%, transparent)',
+          }} />
+          <div style={{ fontSize: 11, marginTop: 4, fontFamily: 'ui-monospace, monospace' }}>
+            {s.name.replace('color-', '')}
+          </div>
+          <div style={{ fontSize: 10, opacity: 0.6, fontFamily: 'ui-monospace, monospace' }}>{s.hex}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+))}
+
+## Tokens
+
+- **Variable CSS:** `var(--color-<grupo>-<nivel>)` — p. ej. `var(--color-primary-50)`
+- **Utilidad Tailwind:** `bg-<grupo>-<nivel>`, `text-…`, `border-…`
+
+```tsx
+// ❌ No usar primitivas directamente en componentes
+<div className="bg-primary-50" />
+
+// ✅ Usar el token semántico correspondiente
+<div className="bg-(--bg-accent-base)" />
+```

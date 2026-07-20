@@ -1,6 +1,7 @@
 import type { Preview, Decorator } from '@storybook/react-vite';
 import '../src/styles/tailwind.css';
 import { breakpoints } from '../src/tokens/breakpoints';
+import { themes } from '../src/tokens/colors';
 
 /*
   Selectores globales del proyecto (punto 16 de las instrucciones):
@@ -65,7 +66,7 @@ const preview: Preview = {
       toolbar: {
         title: 'Tema',
         icon: 'paintbrush',
-        items: [{ value: 'light', title: 'Light' }],
+        items: themes.map((t) => ({ value: t.slug, title: t.label })),
         dynamicTitle: true,
       },
     },
@@ -80,13 +81,13 @@ const preview: Preview = {
     },
   },
   initialGlobals: {
-    theme: 'light',
+    theme: 'light-white',
     breakpoint: 'auto',
   },
   decorators: [
     withBreakpoint,
     (Story, context) => {
-      const theme = context.globals.theme ?? 'light';
+      const theme = context.globals.theme ?? 'light-white';
       if (typeof document !== 'undefined') {
         document.documentElement.setAttribute('data-theme', theme);
       }

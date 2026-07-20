@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
+/* Tokens de color: primitivas (@theme) + semánticos por tema ([data-theme]) */
+@import "./tokens/primitives.css";
+@import "./tokens/semantic.css";
+
 /* ============================================================
    TOKENS — Breakpoints
    Origen: Figma → colección "Responsive" → Layout/Viewport-width
    Deben coincidir con src/tokens/breakpoints.ts
-   ------------------------------------------------------------
-   `--breakpoint-*: initial` limpia los breakpoints por defecto
-   de Tailwind (sm/md/lg/xl/2xl) para usar solo los de Joselito.
-   Cada uno genera su variante responsive (p. ej. `m:flex`).
+   `--breakpoint-*: initial` limpia los de Tailwind por defecto.
    ============================================================ */
 @theme {
   --breakpoint-*: initial;
@@ -20,8 +21,3 @@
   --breakpoint-xxl: 1620px;
   --breakpoint-xxxl: 1920px;
 }
-
-/*
-  Próximos tokens (siguientes tareas del plan): colores primitivos,
-  colores semánticos (@theme + [data-theme]), tipografías, espaciados.
-*/
