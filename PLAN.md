@@ -59,9 +59,9 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ Menu
 - ⬜ Navigation / Secondary menu
 - ✅ Navigation / Breadcrumb → modules/Breadcrumb
-- ⬜ Navigation / PreviousNext
+- ✅ Navigation / PreviousNext → modules/PreviousNext
 - ✅ Navigation / Footer → modules/Footer
-- ⬜ Hero / Homepage hero
+- ✅ Hero / Homepage hero → modules/HomepageHero
 - ✅ Hero / Section hero → modules/SectionHero (grid 12col, responsive, data-theme)
 - ✅ Hero / Section header → modules/SectionHeader
 - ✅ Content / Title → modules/ContentTitle
@@ -71,8 +71,8 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ Content / Text + Image → modules/ContentTextImage
 - ✅ List / Characteristics → modules/ListCharacteristics
 - ✅ List / Numbers → modules/ListNumbers
-- ⬜ List / Timeline
-- ⬜ List / Archive table
+- ✅ List / Timeline → modules/ListTimeline
+- ✅ List / Archive table → modules/ListArchiveTable
 - ✅ Cards / Links → modules/CardsGrid (rejilla responsive)
 - ⬜ Cards / Gallery
 - ⬜ Cards / Product carousel

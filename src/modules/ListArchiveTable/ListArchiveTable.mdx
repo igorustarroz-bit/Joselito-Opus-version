@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ListArchiveTable.stories';
+
+<Meta of={Stories} />
+
+# ListArchiveTable (módulo)
+
+## Intro
+
+Tabla de archivo (List / Archive table) para documentos, añadas o registros, con acción de descarga/enlace por fila.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+Cabecera `type-label-2` + `--text-neutral-1`; filas `type-body-3`; bordes `--stroke-base`/`--stroke-neutral-3`.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+Tabla semántica (`thead`/`tbody`/`th`); acciones con `aria-label`.
+
+## Componentes relacionados
+
+Icon; List/Numbers.

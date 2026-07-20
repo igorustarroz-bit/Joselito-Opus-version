@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './PreviousNext.stories';
+
+<Meta of={Stories} />
+
+# PreviousNext (módulo)
+
+## Intro
+
+Navegación anterior/siguiente (Navigation / PreviousNext) entre páginas o artículos.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Comportamiento
+
+Las flechas se desplazan en hover; cada lado es un enlace con caption + título.
+
+## Tokens
+
+Bordes `--stroke-neutral-3`, `type-title-2`, colores semánticos.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+
+Icon, Breadcrumb.

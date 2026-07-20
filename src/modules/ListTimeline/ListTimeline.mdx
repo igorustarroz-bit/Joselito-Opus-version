@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ListTimeline.stories';
+
+<Meta of={Stories} />
+
+# ListTimeline (módulo)
+
+## Intro
+
+Línea temporal vertical (List / Timeline) con hitos conectados por una línea.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+Marcador/acento `--bg-accent-base` / `--text-accent-base`; línea `--stroke-neutral-3`.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+
+Title; List/Numbers, List/Characteristics.
