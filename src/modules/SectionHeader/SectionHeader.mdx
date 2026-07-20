@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SectionHeader.stories';
+
+<Meta of={Stories} />
+
+# SectionHeader (módulo)
+
+## Intro
+Cabecera de sección (eyebrow + título + descripción), centrada o a la izquierda, sobre el grid de 12 columnas.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Comportamiento responsive
+Ancho de contenido de 8 columnas (centrado con `col-start-3` desde M). En móvil ocupa todo el ancho.
+
+<Canvas of={Stories.Izquierda} />
+
+## Tokens
+`.grid-wrapper`/`.grid-12`, espaciados `--space-*`, colores semánticos. Título `type-title-5`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, SectionHero.

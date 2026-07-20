@@ -1,0 +1,24 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsGrid.stories';
+
+<Meta of={Stories} />
+
+# CardsGrid (módulo)
+
+## Intro
+Rejilla responsive de tarjetas (Cards / Links) con título opcional. Acepta CardLink, CardProduct, etc.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Comportamiento responsive
+1 columna en móvil; 2 desde **M**; 3–4 desde **LG** según `columns`.
+
+## Tokens
+`.grid-wrapper`, `--grid-gutter`, espaciados `--space-*`, colores semánticos.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+CardLink, CardProduct, CardCarousel, Title.

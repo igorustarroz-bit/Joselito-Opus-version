@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentTextImage.stories';
+
+<Meta of={Stories} />
+
+# ContentTextImage (módulo)
+
+## Intro
+Bloque de texto junto a imagen (Content / Text + Image): 6+6 columnas en desktop, apilado en móvil. Reversible.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Comportamiento responsive
+En móvil: texto sobre imagen (1 columna). Desde M: 2 columnas 6+6. `reverse` coloca la imagen a la izquierda.
+
+<Canvas of={Stories.Invertido} />
+
+## Tokens
+`.grid-12`, espaciados `--space-*`, colores semánticos.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, ActionLink, AspectRatio.

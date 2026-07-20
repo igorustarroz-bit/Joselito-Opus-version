@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Banner.stories';
+
+<Meta of={Stories} />
+
+# Banner (módulo)
+
+## Intro
+Franja de llamada a la acción (Banners / Section banner) a 100% del viewport, centrada, con título, texto y botones.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Subtemas
+Usa un tema propio (`data-theme`); por defecto el de marca.
+
+<Canvas of={Stories.Neutro} />
+
+## Comportamiento responsive
+Contenido centrado a 8 columnas desde M; ancho completo en móvil.
+
+## Tokens
+`.grid-12`, espaciados `--space-*`, colores semánticos; botones con sus tokens.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, Button, SectionHero.

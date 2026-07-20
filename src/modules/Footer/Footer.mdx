@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Footer.stories';
+
+<Meta of={Stories} />
+
+# Footer (módulo)
+
+## Intro
+Pie de página (Navigation / Footer) a 100% del viewport: marca, columnas de enlaces, social y copyright.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Subtemas
+Tema propio (`data-theme`); oscuro por defecto. Un bloque hijo puede sobreescribir el tema.
+
+<Canvas of={Stories.Claro} />
+
+## Comportamiento responsive
+Marca a 4 columnas + columnas de enlaces a 2 (desde M). En móvil se apilan (enlaces a 6 columnas = 2 por fila).
+
+## Tokens
+`.grid-12`, espaciados `--space-*`, colores semánticos; iconos con `currentColor`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Icon, NavButton, ActionLink.
