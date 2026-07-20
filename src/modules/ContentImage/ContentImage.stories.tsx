@@ -1,9 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ContentImage } from './ContentImage';
-const img = <div style={{ width:'100%', height:'100%', background:'linear-gradient(135deg,#481815,#e23f36)' }} />;
-const meta = { title: 'Módulos/ContentImage', component: ContentImage, parameters: { layout: 'fullscreen' },
-  argTypes: { width: { control: 'inline-radio', options: ['contained','full'] } },
-  args: { image: img, caption: 'Dehesa de Guijuelo, Salamanca.', ratio: '16:9', width: 'contained' } } satisfies Meta<typeof ContentImage>;
-export default meta; type Story = StoryObj<typeof meta>;
+
+const img = (c: string) => <div style={{ width: '100%', height: '100%', background: `linear-gradient(135deg,#373a2c,${c})` }} />;
+
+const meta = {
+  title: 'Módulos/ContentImage',
+  component: ContentImage,
+  parameters: { layout: 'fullscreen' },
+  argTypes: {
+    video: { control: 'boolean' },
+    theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] },
+  },
+  args: { images: img('#9ba084'), video: true, theme: 'dark-red-primary' },
+} satisfies Meta<typeof ContentImage>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
 export const Default: Story = {};
-export const AnchoCompleto: Story = { args: { width: 'full' } };
+export const DosImagenes: Story = { args: { images: [img('#9ba084'), img('#e23f36')], video: false, ratio: '3:4', theme: 'light-white' } };

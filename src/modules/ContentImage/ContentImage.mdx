@@ -6,20 +6,27 @@ import * as Stories from './ContentImage.stories';
 # ContentImage (módulo)
 
 ## Intro
-Imagen destacada (Content / Image only) con pie opcional; ancho contenido o completo.
+
+Content / Image only (fiel al master): imagen(es) centrada(s) sobre el fondo del tema, con botón de reproducción opcional para vídeo.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Canvas of={Stories.AnchoCompleto} />
+## Variantes
+
+Una imagen (con Play opcional) o dos imágenes en fila.
+
+<Canvas of={Stories.DosImagenes} />
 
 ## Tokens
-`AspectRatio`, `.grid-12`, `type-label-2`.
+
+Fondo `--bg-base`; botón de play `--bg-always-white` + icono `--text-always-black`; AspectRatio.
 
 ## Propiedades
 
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-AspectRatio, ContentTextImage.
+
+AspectRatio, Icon; ContentTextImage.
