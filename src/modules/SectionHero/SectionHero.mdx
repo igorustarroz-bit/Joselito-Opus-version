@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SectionHero.stories';
+
+<Meta of={Stories} />
+
+# SectionHero (módulo)
+
+## Intro
+Módulo *hero* a 100% del ancho del viewport, sobre el grid de 12 columnas. Presenta eyebrow, título, descripción, acciones e imagen.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+`section` (100% viewport, tema propio) → `.grid-wrapper` → `.grid-12`: bloque de texto (6 col) + imagen (6 col).
+
+## Subtemas por componente
+Acepta `theme` (`data-theme`), por lo que el módulo entero cambia de paleta.
+
+<Canvas of={Stories.Oscuro} />
+<Canvas of={Stories.Marca} />
+
+## Comportamiento responsive
+En móvil apila (texto sobre imagen, 1 columna); desde el breakpoint **M** pasa a 2 columnas (6+6). `reverse` invierte el orden.
+
+## Tokens
+Grid: `.grid-wrapper` / `.grid-12`; espaciados responsive `--space-*`; colores semánticos.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, Button, AspectRatio.
