@@ -57,7 +57,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 > Primero navegación (usada en todas las páginas).
 - ✅ Navigation (principal) → modules/Navigation
 - ✅ Menu → modules/Menu
-- ⬜ Navigation / Secondary menu
+- ✅ Navigation / Secondary menu → modules/SecondaryMenu
 - ✅ Navigation / Breadcrumb → modules/Breadcrumb
 - ✅ Navigation / PreviousNext → modules/PreviousNext
 - ✅ Navigation / Footer → modules/Footer
@@ -75,12 +75,12 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ List / Archive table → modules/ListArchiveTable
 - ✅ Cards / Links → modules/CardsGrid (rejilla responsive)
 - ✅ Cards / Gallery → modules/CardsGallery
-- ⬜ Cards / Product carousel
-- ⬜ Cards / Showcase
+- ✅ Cards / Product carousel → modules/CardsProductCarousel
+- ✅ Cards / Showcase → modules/CardsShowcase
 - ✅ Cards / Categories → modules/CardsCategories
-- ⬜ Cards / Accordion
+- ✅ Cards / Accordion → modules/CardsAccordion
 - ✅ Banners / Section banner → modules/Banner
-- ⬜ Form (módulo)
+- ✅ Form (módulo) → modules/FormSection
 - ✅ Toast → modules/Toast
 
 ## Fase 5 — Page Templates (Sprint 1)

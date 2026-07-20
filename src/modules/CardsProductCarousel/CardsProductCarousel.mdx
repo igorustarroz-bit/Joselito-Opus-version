@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsProductCarousel.stories';
+
+<Meta of={Stories} />
+
+# CardsProductCarousel (módulo)
+
+## Intro
+
+Sección con título y carrusel de tarjetas de producto (Cards / Product carousel).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+`.grid-wrapper`, `type-title-5`; hereda el carrusel de CardCarousel.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+
+CardCarousel, CardProduct, Title.

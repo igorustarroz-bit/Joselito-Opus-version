@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './FormSection.stories';
+
+<Meta of={Stories} />
+
+# FormSection (módulo)
+
+## Intro
+
+Sección de formulario (Form) con encabezado e introducción, centrada. Envuelve el componente Form.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+`.grid-12`, `type-title-4`; hereda los tokens de Form/Input.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+
+Form, Input, CheckboxLabel, Button.

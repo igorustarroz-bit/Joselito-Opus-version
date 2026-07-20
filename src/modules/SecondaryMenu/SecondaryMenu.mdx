@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SecondaryMenu.stories';
+
+<Meta of={Stories} />
+
+# SecondaryMenu (módulo)
+
+## Intro
+
+Subnavegación horizontal (Navigation / Secondary menu) con item activo; scrollable en móvil.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+Item activo con borde `--stroke-accent-base`; `type-cta-s`; borde `--stroke-neutral-3`.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+
+Navigation, Tabs, Breadcrumb.
