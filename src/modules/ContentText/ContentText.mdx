@@ -6,20 +6,28 @@ import * as Stories from './ContentText.stories';
 # ContentText (módulo)
 
 ## Intro
-Bloque de texto en prosa (Content / Text only) a 1 o 2 columnas.
+
+Content / Text only (fiel al master): etiqueta + título + cuerpo, con tres variantes.
 
 ## Demo
 
-<Canvas of={Stories.Default} />
+<Canvas of={Stories.Split} />
 
+## Variantes
+
+`split` (título izquierda / cuerpo derecha), `1-column` (apilado) y `2-column` (cuerpo a dos columnas).
+
+<Canvas of={Stories.UnaColumna} />
 <Canvas of={Stories.DosColumnas} />
 
 ## Tokens
-`type-body-4`, `.grid-12`, `--grid-gutter`.
+
+`type-body-6` (label), `type-title-4` (título), `type-body-5` (cuerpo).
 
 ## Propiedades
 
-<Controls of={Stories.Default} />
+<Controls of={Stories.Split} />
 
 ## Componentes relacionados
-Title, ContentIntro.
+
+Title; ContentTitle, ContentIntro.
