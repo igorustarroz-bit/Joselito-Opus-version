@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentImage.stories';
+
+<Meta of={Stories} />
+
+# ContentImage (módulo)
+
+## Intro
+Imagen destacada (Content / Image only) con pie opcional; ancho contenido o completo.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Canvas of={Stories.AnchoCompleto} />
+
+## Tokens
+`AspectRatio`, `.grid-12`, `type-label-2`.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+AspectRatio, ContentTextImage.

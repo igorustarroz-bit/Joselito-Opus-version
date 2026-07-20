@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentText.stories';
+
+<Meta of={Stories} />
+
+# ContentText (módulo)
+
+## Intro
+Bloque de texto en prosa (Content / Text only) a 1 o 2 columnas.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Canvas of={Stories.DosColumnas} />
+
+## Tokens
+`type-body-4`, `.grid-12`, `--grid-gutter`.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, ContentIntro.

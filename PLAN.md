@@ -64,10 +64,10 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ Hero / Homepage hero
 - ✅ Hero / Section hero → modules/SectionHero (grid 12col, responsive, data-theme)
 - ✅ Hero / Section header → modules/SectionHeader
-- ⬜ Content / Title
-- ⬜ Content / Intro text
-- ⬜ Content / Text only
-- ⬜ Content / Image only
+- ✅ Content / Title → modules/ContentTitle
+- ✅ Content / Intro text → modules/ContentIntro
+- ✅ Content / Text only → modules/ContentText
+- ✅ Content / Image only → modules/ContentImage
 - ✅ Content / Text + Image → modules/ContentTextImage
 - ✅ List / Characteristics → modules/ListCharacteristics
 - ✅ List / Numbers → modules/ListNumbers

@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentTitle.stories';
+
+<Meta of={Stories} />
+
+# ContentTitle (módulo)
+
+## Intro
+Bloque de solo título de sección (Content / Title), alineado a izquierda o centrado.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Canvas of={Stories.Centrado} />
+
+## Tokens
+`.grid-12`, `type-title-*`, colores semánticos.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title, SectionHeader.

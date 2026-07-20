@@ -1,0 +1,23 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentIntro.stories';
+
+<Meta of={Stories} />
+
+# ContentIntro (módulo)
+
+## Intro
+Párrafo introductorio destacado (Content / Intro text) con eyebrow opcional.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+Texto `type-body-6`; `.grid-12`; colores semánticos.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+SectionHeader, ContentText.
