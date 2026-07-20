@@ -6,28 +6,31 @@ import * as Stories from './SectionHero.stories';
 # SectionHero (módulo)
 
 ## Intro
-Módulo *hero* a 100% del ancho del viewport, sobre el grid de 12 columnas. Presenta eyebrow, título, descripción, acciones e imagen.
+
+Hero de sección (Hero / Section hero) fiel al master de Figma: sección a 100% del viewport con fondo `--bg-base` y contenido **centrado** — eyebrow + título.
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
 ## Anatomía
-`section` (100% viewport, tema propio) → `.grid-wrapper` → `.grid-12`: bloque de texto (6 col) + imagen (6 col).
 
-## Subtemas por componente
-Acepta `theme` (`data-theme`), por lo que el módulo entero cambia de paleta.
+Bloque centrado (ancho ~540px): eyebrow con `type-body-6` + título con `type-title-4`.
 
-<Canvas of={Stories.Oscuro} />
-<Canvas of={Stories.Marca} />
+## Subtemas
 
-## Comportamiento responsive
-En móvil apila (texto sobre imagen, 1 columna); desde el breakpoint **M** pasa a 2 columnas (6+6). `reverse` invierte el orden.
+Tema propio (`data-theme`); por defecto el de marca (rojo).
+
+<Canvas of={Stories.Blanco} />
 
 ## Tokens
-Grid: `.grid-wrapper` / `.grid-12`; espaciados responsive `--space-*`; colores semánticos.
+
+Fondo `--bg-base`, texto `--text-base`; `type-body-6` (eyebrow) y `type-title-4` (título).
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Title, Button, AspectRatio.
+
+Title; Section header, Homepage hero.

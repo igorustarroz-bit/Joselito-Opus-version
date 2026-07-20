@@ -18,7 +18,7 @@ export function Experiencias() {
   return (
     <div>
       <Navigation brand={<BrandLogo height={36} />} items={navItems} />
-      <SectionHero eyebrow="Experiencias" title="Vive Joselito" description="Catas, visitas a la dehesa y eventos exclusivos." image={grad('#481815', '#e23f36')} theme="dark-red-primary" />
+      <SectionHero eyebrow="Experiencias" title="Vive Joselito" theme="dark-red-primary" />
       <CardsGrid title="Próximos eventos" columns={3}>
         {['Cata maridaje', 'Visita a la dehesa', 'Taller de corte'].map((t) => (
           <CardLink key={t} eyebrow="Evento" title={t} description="Plazas limitadas." image={grad('#260200', '#e23f36')} />

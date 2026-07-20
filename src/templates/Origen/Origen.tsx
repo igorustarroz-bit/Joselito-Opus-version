@@ -17,7 +17,7 @@ export function Origen() {
     <div>
       <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <SecondaryMenu items={[{ label: 'Nuestra historia', active: true }, { label: 'La dehesa' }, { label: 'La montanera' }]} />
-      <SectionHero eyebrow="Origen" title="Nuestra historia" description="Desde 1868, cinco generaciones cuidando cada detalle." image={grad('#260200', '#e23f36')} theme="light-white" />
+      <SectionHero eyebrow="Origen" title="Nuestra historia" theme="dark-red-primary" />
       <ContentText title="La dehesa" columns={2}>
         <p style={{ margin: 0 }}>La dehesa es un ecosistema único donde nuestros cerdos crecen en libertad.</p>
         <p style={{ margin: 0 }}>Su alimentación a base de bellota durante la montanera define el sabor inconfundible de Joselito.</p>
