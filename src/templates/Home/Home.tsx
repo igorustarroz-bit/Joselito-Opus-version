@@ -19,7 +19,7 @@ export function Home() {
     <div>
       <Navigation brand={<BrandLogo height={36} />} items={navItems} actions={actions} />
       <HomepageHero background={grad('#260200', '#e23f36')} eyebrow="Desde 1868" title="El mejor jamón del mundo" description="Tradición, dehesa y una curación paciente en cada pieza." actions={[{ label: 'Descubrir' }, { label: 'Comprar', variant: 'secondary' }]} />
-      <ContentIntro eyebrow="Nuestra esencia">Cinco generaciones dedicadas a elaborar el mejor jamón del mundo, con el mismo respeto por la tradición y la naturaleza.</ContentIntro>
+      <ContentIntro eyebrow="Un legado único" title="Cinco generaciones dedicadas a elaborar el mejor jamón del mundo, con el mismo respeto por la tradición y la naturaleza." />
       <CardsCategories heading="Categorías" theme="light-grey" items={[
         { image: grad('#481815', '#e23f36'), label: 'Jamón' },
         { image: grad('#373a2c', '#9ba084'), label: 'Paleta' },

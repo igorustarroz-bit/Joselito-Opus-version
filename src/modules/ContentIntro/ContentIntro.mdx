@@ -6,18 +6,27 @@ import * as Stories from './ContentIntro.stories';
 # ContentIntro (módulo)
 
 ## Intro
-Párrafo introductorio destacado (Content / Intro text) con eyebrow opcional.
+
+Content / Intro text (fiel al master): bloque centrado con eyebrow (Body/02), texto grande (Title/03) y, opcionales, imagen, texto secundario y botón terciario.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
+## Anatomía
+
+Columna centrada con amplio padding vertical: eyebrow en mayúsculas + título grande; debajo imagen/párrafo/botón opcionales.
+
+<Canvas of={Stories.SoloTexto} />
+
 ## Tokens
-Texto `type-body-6`; `.grid-12`; colores semánticos.
+
+`type-body-2` (eyebrow, `--text-neutral-2`), `type-title-3` (título), `type-body-4` (secundario, `--text-neutral-1`).
 
 ## Propiedades
 
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-SectionHeader, ContentText.
+
+Title, Button, AspectRatio.
