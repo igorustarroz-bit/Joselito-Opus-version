@@ -5,11 +5,10 @@ const meta = {
   title: 'Módulos/PreviousNext',
   component: PreviousNext,
   parameters: { layout: 'fullscreen' },
-  args: {
-    prev: { caption: 'Anterior', label: 'La dehesa' },
-    next: { caption: 'Siguiente', label: 'La curación' },
-  },
+  argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
+  args: { prev: { label: 'Anterior' }, next: { label: 'Siguiente' }, theme: 'light-white' },
 } satisfies Meta<typeof PreviousNext>;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 

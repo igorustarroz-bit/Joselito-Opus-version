@@ -3,7 +3,7 @@ import { cn } from '@/lib/cn';
 import { Icon } from '@/components/Icon';
 import type { ThemeName } from '@/modules/SectionHero';
 
-export interface PrevNextLink { label: ReactNode; caption?: ReactNode; href?: string; }
+export interface PrevNextLink { label: ReactNode; href?: string; }
 
 export interface PreviousNextProps {
   prev?: PrevNextLink;
@@ -13,29 +13,28 @@ export interface PreviousNextProps {
 }
 
 /**
- * Módulo Navigation / PreviousNext — navegación anterior/siguiente entre páginas
- * o artículos, a 100% del viewport.
+ * Módulo Navigation / PreviousNext (fiel al master) — navegación anterior/
+ * siguiente: botón-icono cuadrado (64px, con borde) + etiqueta (Body/06) a cada
+ * lado, con separador superior.
  */
 export function PreviousNext({ prev, next, theme = 'light-white', className }: PreviousNextProps) {
   return (
-    <nav data-theme={theme} aria-label="Anterior y siguiente" className={cn('w-full bg-(--bg-base) text-(--text-base)', className)}>
-      <div className="grid-wrapper flex items-stretch justify-between gap-fx-4 border-y border-(--stroke-neutral-3) py-(--space-8)">
+    <nav data-theme={theme} aria-label="Anterior y siguiente" className={cn('w-full border-t border-(--stroke-neutral-3) bg-(--bg-base) text-(--text-base)', className)}>
+      <div className="grid-wrapper flex items-center justify-between gap-fx-4 py-(--space-13)">
         {prev ? (
-          <a href={prev.href ?? '#'} className="group flex items-center gap-fx-3 no-underline text-(--text-base)">
-            <Icon name="ArrowLeft" size="m" className="transition-transform group-hover:-translate-x-fx-1" />
-            <span className="flex flex-col">
-              {prev.caption && <span className="type-label-2 uppercase text-(--text-neutral-1)">{prev.caption}</span>}
-              <span className="type-title-2 group-hover:text-(--text-hover)">{prev.label}</span>
+          <a href={prev.href ?? '#'} className="group flex items-center gap-fx-8 no-underline text-(--text-base)">
+            <span className="flex size-16 shrink-0 items-center justify-center border border-(--stroke-neutral-3) transition-colors group-hover:border-(--stroke-base)">
+              <Icon name="ArrowLeft" size="m" />
             </span>
+            <span className="type-body-6">{prev.label}</span>
           </a>
         ) : <span />}
         {next ? (
-          <a href={next.href ?? '#'} className="group flex items-center gap-fx-3 text-right no-underline text-(--text-base)">
-            <span className="flex flex-col">
-              {next.caption && <span className="type-label-2 uppercase text-(--text-neutral-1)">{next.caption}</span>}
-              <span className="type-title-2 group-hover:text-(--text-hover)">{next.label}</span>
+          <a href={next.href ?? '#'} className="group flex items-center justify-end gap-fx-8 text-right no-underline text-(--text-base)">
+            <span className="type-body-6">{next.label}</span>
+            <span className="flex size-16 shrink-0 items-center justify-center border border-(--stroke-neutral-3) transition-colors group-hover:border-(--stroke-base)">
+              <Icon name="ArrowRight" size="m" />
             </span>
-            <Icon name="ArrowRight" size="m" className="transition-transform group-hover:translate-x-fx-1" />
           </a>
         ) : <span />}
       </div>
