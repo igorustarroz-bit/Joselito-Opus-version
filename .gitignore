@@ -31,3 +31,6 @@ github-token.txt
 
 # Fuentes de origen (licenciadas) — no subir; las webfonts van en public/fonts
 fonts-raw/
+
+# capturas de verificación sueltas en la raíz
+/*.png
