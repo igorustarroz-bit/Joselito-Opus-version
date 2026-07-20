@@ -1,33 +1,58 @@
 /* ============================================================
-   Webfonts del proyecto.
-   Coloca los .woff2 en public/fonts/ (se sirven en /fonts/*).
-   Si faltan, se usa el fallback declarado en --font-*.
-   Familias (Figma): Título = SangBleu · Texto/Label/CTA/Forms = Euclid Circular B
+   Webfonts del proyecto (servidas desde /fonts/*).
+   Familias (Figma):
+     Títulos → SangBleu Kingdom (pesos Regular 400 / Medium 500)
+     Texto/Label/CTA/Forms → Euclid Circular B (400/500/600/700)
+   Convertidas a woff2 (+ woff de respaldo) desde fonts-raw/.
    ============================================================ */
+
+/* ---- Euclid Circular B (texto) ---- */
 @font-face {
-  font-family: "SangBleu";
-  src: url("/fonts/SangBleu-Regular.woff2") format("woff2");
+  font-family: "Euclid Circular B";
+  src: url("/fonts/EuclidCircularB-Regular.woff2") format("woff2"),
+       url("/fonts/EuclidCircularB-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SangBleu";
-  src: url("/fonts/SangBleu-Medium.woff2") format("woff2");
+  font-family: "Euclid Circular B";
+  src: url("/fonts/EuclidCircularB-Medium.woff2") format("woff2"),
+       url("/fonts/EuclidCircularB-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Euclid Circular B";
-  src: url("/fonts/EuclidCircularB-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("/fonts/EuclidCircularB-SemiBold.woff2") format("woff2"),
+       url("/fonts/EuclidCircularB-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Euclid Circular B";
-  src: url("/fonts/EuclidCircularB-Medium.woff2") format("woff2");
+  src: url("/fonts/EuclidCircularB-Bold.woff2") format("woff2"),
+       url("/fonts/EuclidCircularB-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- SangBleu Kingdom (títulos) ---- */
+@font-face {
+  font-family: "SangBleu Kingdom";
+  src: url("/fonts/SangBleuKingdom-Regular.woff2") format("woff2"),
+       url("/fonts/SangBleuKingdom-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SangBleu Kingdom";
+  src: url("/fonts/SangBleuKingdom-Medium.woff2") format("woff2"),
+       url("/fonts/SangBleuKingdom-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;

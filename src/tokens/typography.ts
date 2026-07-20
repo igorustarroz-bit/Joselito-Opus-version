@@ -62,7 +62,7 @@ export const typeGroups: TypeGroup[] = [
 ];
 
 export const fontFamilies = [
-  { token: '--font-title', label: 'Título', value: 'SangBleu' },
+  { token: '--font-title', label: 'Título', value: 'SangBleu Kingdom' },
   { token: '--font-body', label: 'Body / Label / CTA / Forms', value: 'Euclid Circular B' },
 ];
 

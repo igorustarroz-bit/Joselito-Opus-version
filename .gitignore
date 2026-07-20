@@ -28,3 +28,6 @@ storybook-static
 
 # Nunca subir el token de GitHub
 github-token.txt
+
+# Fuentes de origen (licenciadas) — no subir; las webfonts van en public/fonts
+fonts-raw/

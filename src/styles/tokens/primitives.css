@@ -121,7 +121,7 @@
    Origen: Figma → Primitives → Tipography/*
    ------------------------------------------------------------ */
 @theme {
-  --font-title: "SangBleu", Georgia, "Times New Roman", serif;
+  --font-title: "SangBleu Kingdom", Georgia, "Times New Roman", serif;
   --font-body: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-label: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-cta: "Euclid Circular B", system-ui, -apple-system, "Segoe UI", sans-serif;
