@@ -1,0 +1,18 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Home.stories';
+
+<Meta of={Stories} />
+
+# Home (template)
+
+## Intro
+
+Página de inicio compuesta por módulos: Navigation, HomepageHero, ContentIntro, CardsCategories, CardsProductCarousel, Banner y Footer.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Composición
+
+Ensamblaje completo del sistema (tokens → componentes → módulos → template) con temas por sección.

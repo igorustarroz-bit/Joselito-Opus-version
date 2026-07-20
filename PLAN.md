@@ -4,7 +4,7 @@
 > Estados: ⬜ pendiente · 🟡 en progreso · ✅ completado
 > Orden de trabajo: **Tokens → Base (Foundations/Brand) → Componentes → Módulos → Templates**
 >
-> Última actualización: 2026-07-20 · Fase 1 (Tokens) COMPLETA ✅.
+> Última actualización: 2026-07-20 · Plan COMPLETO ✅ (Tokens, 21 componentes, 27 módulos, 6 templates).
 
 ## Fase 0 — Setup del proyecto ✅
 - ✅ Verificar instrucciones (puntos 1-4) y acceso Figma MCP
@@ -84,13 +84,13 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ Toast → modules/Toast
 
 ## Fase 5 — Page Templates (Sprint 1)
-- ⬜ Home
-- ⬜ Navegación
-- ⬜ Origen: Nuestra Historia, La Dehesa
-- ⬜ Excelencia: Añadas, Curación, Manual de Corte
-- ⬜ Compromisos: Sostenibilidad, Happy Pigs, Salud
-- ⬜ Experiencias y eventos
-- ⬜ Colecciones Premium
+- ✅ Home → templates/Home
+- ✅ Navegación → cubierto por modules/Navigation + Menu + SecondaryMenu
+- ✅ Origen → templates/Origen
+- ✅ Excelencia → templates/Excelencia
+- ✅ Compromisos → templates/Compromisos
+- ✅ Experiencias y eventos → templates/Experiencias
+- ✅ Colecciones Premium → templates/ColeccionesPremium
 
 ## Notas
 - Librería Figma NO publicada → flujo `use_figma` (ver CONTEXT §7).
