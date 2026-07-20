@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Menu.stories';
+
+<Meta of={Stories} />
+
+# Menu (módulo)
+
+## Intro
+
+Panel de navegación a pantalla completa (Menu) para móvil: enlaces primarios grandes, secundarios y pie.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Subtemas
+
+Tema propio (`data-theme`), oscuro por defecto.
+
+<Canvas of={Stories.Marca} />
+
+## Comportamiento
+
+`open` controla la visibilidad; `onClose` cierra. Overlay fijo con `role="dialog"`.
+
+## Tokens
+
+`.grid-wrapper`, `type-title-6` (enlaces), colores semánticos.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+`role="dialog"` + `aria-modal`; botón de cierre con `aria-label`.
+
+## Componentes relacionados
+
+Navigation, NavButton, ButtonIcon.
