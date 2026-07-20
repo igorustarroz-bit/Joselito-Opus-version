@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxList.stories';
+
+<Meta of={Stories} />
+
+# CheckboxList
+
+## Intro
+Grupo de casillas (UI08) con un título de grupo, en vertical u horizontal.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+`fieldset` con `legend` + lista de Checkbox.
+
+## Comportamiento
+Selección múltiple independiente por opción; soporta opciones deshabilitadas.
+
+## Variantes y tamaños
+<Canvas of={Stories.Horizontal} />
+
+## Tokens
+Hereda los de Checkbox; título con `type-input-m-label-out`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+Agrupado con `fieldset`/`legend`; cada casilla es un checkbox nativo.
+
+## Componentes relacionados
+Checkbox (UI10), Checkbox-Label (UI09), Form (UI11).

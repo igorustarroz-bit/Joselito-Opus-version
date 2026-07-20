@@ -1,0 +1,71 @@
+/* Input (UI06) — tokens Forms/* + estilos. Origen: Figma Semantic-Color / Layout-Forms. */
+:root,
+[data-theme="light-white"] {
+  --form-default-fill: #ffffff; --form-default-stroke: #cccccc; --form-default-text: #666666; --form-default-label-out: #666666; --form-default-label-in: #808080; --form-default-icon: #666666; --form-default-message: #666666;
+  --form-hover-fill: #ffffff; --form-hover-stroke: #e23f36; --form-hover-text: #000000; --form-hover-label-out: #666666; --form-hover-label-in: #808080; --form-hover-icon: #000000; --form-hover-message: #666666;
+  --form-focused-fill: #ffffff; --form-focused-stroke: #e23f36; --form-focused-text: #000000; --form-focused-label-out: #000000; --form-focused-label-in: #666666; --form-focused-icon: #000000; --form-focused-message: #666666;
+  --form-filled-fill: #ffffff; --form-filled-stroke: #cccccc; --form-filled-text: #000000; --form-filled-label-out: #666666; --form-filled-label-in: #808080; --form-filled-icon: #000000; --form-filled-message: #666666;
+  --form-error-fill: #ffffff; --form-error-stroke: #d63838; --form-error-text: #000000; --form-error-label-out: #000000; --form-error-label-in: #666666; --form-error-icon: #000000; --form-error-message: #850606;
+  --form-validated-fill: #ffffff00; --form-validated-stroke: #6dc849; --form-validated-text: #000000; --form-validated-label-out: #000000; --form-validated-label-in: #666666; --form-validated-icon: #000000; --form-validated-message: #237210;
+  --form-disabled-fill: #00000000; --form-disabled-stroke: #000000; --form-disabled-text: #000000b2; --form-disabled-label-out: #000000; --form-disabled-label-in: #000000b2; --form-disabled-icon: #000000b2; --form-disabled-message: #000000b2;
+}
+[data-theme="light-grey"] {
+  --form-default-fill: #f7f7f7; --form-default-stroke: #b3b3b3; --form-default-text: #666666; --form-default-label-out: #666666; --form-default-label-in: #808080; --form-default-icon: #434956; --form-default-message: #666666;
+  --form-hover-fill: #f7f7f7; --form-hover-stroke: #e23f36; --form-hover-text: #000000; --form-hover-label-out: #666666; --form-hover-label-in: #808080; --form-hover-icon: #000000; --form-hover-message: #666666;
+  --form-focused-fill: #ffffff; --form-focused-stroke: #e23f36; --form-focused-text: #000000; --form-focused-label-out: #000000; --form-focused-label-in: #666666; --form-focused-icon: #000000; --form-focused-message: #666666;
+  --form-filled-fill: #f7f7f7; --form-filled-stroke: #b3b3b3; --form-filled-text: #000000; --form-filled-label-out: #666666; --form-filled-label-in: #808080; --form-filled-icon: #000000; --form-filled-message: #666666;
+  --form-error-fill: #f7f7f7; --form-error-stroke: #d63838; --form-error-text: #000000; --form-error-label-out: #000000; --form-error-label-in: #666666; --form-error-icon: #000000; --form-error-message: #850606;
+  --form-validated-fill: #ffffff; --form-validated-stroke: #6dc849; --form-validated-text: #000000; --form-validated-label-out: #000000; --form-validated-label-in: #666666; --form-validated-icon: #000000; --form-validated-message: #237210;
+  --form-disabled-fill: #00000000; --form-disabled-stroke: #000000; --form-disabled-text: #000000b2; --form-disabled-label-out: #000000; --form-disabled-label-in: #000000b2; --form-disabled-icon: #000000b2; --form-disabled-message: #000000b2;
+}
+[data-theme="dark-red-primary"] {
+  --form-default-fill: #e23f36; --form-default-stroke: #ffcfcc; --form-default-text: #ffffff; --form-default-label-out: #ffffff4d; --form-default-label-in: #ffffff4d; --form-default-icon: #ffffff; --form-default-message: #ffffffcc;
+  --form-hover-fill: #e23f36; --form-hover-stroke: #ffffff; --form-hover-text: #f7f7f7; --form-hover-label-out: #e5e5e5; --form-hover-label-in: #e5e5e5; --form-hover-icon: #ffffff; --form-hover-message: #ffffffcc;
+  --form-focused-fill: #ffffff0f; --form-focused-stroke: #ffffff; --form-focused-text: #ffffff; --form-focused-label-out: #b3b3b3; --form-focused-label-in: #ffcfcc; --form-focused-icon: #ffffff; --form-focused-message: #cccccc;
+  --form-filled-fill: #ffffff0f; --form-filled-stroke: #ffffff; --form-filled-text: #ffffff; --form-filled-label-out: #ffcfcc; --form-filled-label-in: #ffcfcc; --form-filled-icon: #ffffff; --form-filled-message: #ffcfcc;
+  --form-error-fill: #ffffff0f; --form-error-stroke: #d9b8b9; --form-error-text: #ffffff; --form-error-label-out: #ffffff00; --form-error-label-in: #999999; --form-error-icon: #ffffff; --form-error-message: #d9b8b9;
+  --form-validated-fill: #ffffff00; --form-validated-stroke: #6dc849; --form-validated-text: #ffffff; --form-validated-label-out: #ffffff00; --form-validated-label-in: #999999; --form-validated-icon: #ffffff; --form-validated-message: #a2dbb3;
+  --form-disabled-fill: #ffffff05; --form-disabled-stroke: #ffffff00; --form-disabled-text: #ffffff33; --form-disabled-label-out: #ffffff00; --form-disabled-label-in: #ffffff33; --form-disabled-icon: #ffffff33; --form-disabled-message: #ffffff33;
+}
+[data-theme="dark-black-neutral"] {
+  --form-default-fill: #ffffff00; --form-default-stroke: #ffe2e0; --form-default-text: #ffffff; --form-default-label-out: #ffffff4d; --form-default-label-in: #ffffff4d; --form-default-icon: #ffffff; --form-default-message: #ffffffcc;
+  --form-hover-fill: #14161a; --form-hover-stroke: #ffffff; --form-hover-text: #f7f7f7; --form-hover-label-out: #e5e5e5; --form-hover-label-in: #e5e5e5; --form-hover-icon: #ffffff; --form-hover-message: #ffffffcc;
+  --form-focused-fill: #ffffff0a; --form-focused-stroke: #ffffff; --form-focused-text: #ffffff; --form-focused-label-out: #b3b3b3; --form-focused-label-in: #e5e5e5; --form-focused-icon: #ffffff; --form-focused-message: #cccccc;
+  --form-filled-fill: #14161a; --form-filled-stroke: #ffffffcc; --form-filled-text: #ffffff; --form-filled-label-out: #e5e5e5; --form-filled-label-in: #e5e5e5; --form-filled-icon: #ffffff; --form-filled-message: #e5e5e5;
+  --form-error-fill: #14161a; --form-error-stroke: #d63838; --form-error-text: #ffffff; --form-error-label-out: #ffffff00; --form-error-label-in: #999999; --form-error-icon: #d63838; --form-error-message: #d63838;
+  --form-validated-fill: #ffffff00; --form-validated-stroke: #6dc849; --form-validated-text: #ffffff; --form-validated-label-out: #ffffff00; --form-validated-label-in: #999999; --form-validated-icon: #6dc849; --form-validated-message: #6dc849;
+  --form-disabled-fill: #ffffff0f; --form-disabled-stroke: #ffffff00; --form-disabled-text: #ffffff33; --form-disabled-label-out: #ffffff00; --form-disabled-label-in: #ffffff33; --form-disabled-icon: #ffffff33; --form-disabled-message: #ffffff33;
+}
+[data-theme="light-yellow"] {
+  --form-default-fill: #dcded4; --form-default-stroke: #b3b3b3; --form-default-text: #666666; --form-default-label-out: #666666; --form-default-label-in: #808080; --form-default-icon: #434956; --form-default-message: #666666;
+  --form-hover-fill: #dcded4; --form-hover-stroke: #e23f36; --form-hover-text: #000000; --form-hover-label-out: #666666; --form-hover-label-in: #808080; --form-hover-icon: #000000; --form-hover-message: #666666;
+  --form-focused-fill: #ffffff; --form-focused-stroke: #e23f36; --form-focused-text: #000000; --form-focused-label-out: #000000; --form-focused-label-in: #666666; --form-focused-icon: #000000; --form-focused-message: #666666;
+  --form-filled-fill: #dcded4; --form-filled-stroke: #b3b3b3; --form-filled-text: #000000; --form-filled-label-out: #666666; --form-filled-label-in: #808080; --form-filled-icon: #000000; --form-filled-message: #666666;
+  --form-error-fill: #dcded4; --form-error-stroke: #d63838; --form-error-text: #000000; --form-error-label-out: #000000; --form-error-label-in: #666666; --form-error-icon: #000000; --form-error-message: #850606;
+  --form-validated-fill: #ffffff; --form-validated-stroke: #6dc849; --form-validated-text: #000000; --form-validated-label-out: #000000; --form-validated-label-in: #666666; --form-validated-icon: #000000; --form-validated-message: #237210;
+  --form-disabled-fill: #00000000; --form-disabled-stroke: #000000; --form-disabled-text: #000000b2; --form-disabled-label-out: #000000; --form-disabled-label-in: #000000b2; --form-disabled-icon: #000000b2; --form-disabled-message: #000000b2;
+}
+
+.field { display: inline-flex; flex-direction: column; gap: var(--spacing-fx-1); width: 100%; }
+.field__label { color: var(--form-default-label-out); }
+.field__control {
+  display: flex; align-items: center; gap: var(--spacing-fx-2);
+  height: 56px; padding-inline: 16px; border: 1px solid var(--form-default-stroke);
+  background: var(--form-default-fill); border-radius: 0; transition: border-color .15s, background-color .15s;
+}
+.field--l .field__control { height: 72px; padding-inline: 20px; }
+.field__control:hover { border-color: var(--form-hover-stroke); }
+.field__control:focus-within { border-color: var(--form-focused-stroke); background: var(--form-focused-fill); }
+.field__input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; color: var(--form-default-text); }
+.field__control:focus-within .field__input { color: var(--form-focused-text); }
+.field__input::placeholder { color: var(--form-default-label-in); }
+.field__icon { display: inline-flex; color: var(--form-default-icon); flex: none; }
+.field__message { color: var(--form-default-message); }
+/* estados */
+.field[data-state="error"] .field__control { border-color: var(--form-error-stroke); }
+.field[data-state="error"] .field__message { color: var(--form-error-message); }
+.field[data-state="validated"] .field__control { border-color: var(--form-validated-stroke); }
+.field[data-state="validated"] .field__message { color: var(--form-validated-message); }
+.field[data-state="disabled"] { opacity: 1; }
+.field[data-state="disabled"] .field__control { border-color: var(--form-disabled-stroke); background: var(--form-disabled-fill); cursor: not-allowed; }
+.field[data-state="disabled"] .field__input { color: var(--form-disabled-text); }

@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxLabel.stories';
+
+<Meta of={Stories} />
+
+# CheckboxLabel
+
+## Intro
+Casilla con **título y descripción** (UI09), para opciones que requieren contexto adicional.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+Checkbox alineado arriba + bloque de texto (título `type-title-1` + descripción `type-body-3`).
+
+## Subtemas por componente
+Colores semánticos; adaptable por tema.
+
+## Comportamiento
+Igual que Checkbox (marcar/desmarcar, hover, focus, disabled).
+
+## Tokens
+Caja: `--stroke-neutral-2` / `--bg-accent-base`; textos `--text-base` y `--text-neutral-1`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+Input `checkbox` nativo asociado por `label`; el título y la descripción forman la etiqueta accesible.
+
+## Componentes relacionados
+Checkbox (UI10), Checkbox-List (UI08).
