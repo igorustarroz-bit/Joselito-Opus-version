@@ -63,7 +63,7 @@ Deben ir primero en el plan:
 
 ## 8. Tokens en Figma (colecciones)
 - **Primitives** — 133 variables (modo: Joselito)
-- **Responsive** — 132 variables · 7 breakpoints: `XS-375 · SM-480 · M-768 · LG-1024 · XL-1440 · XXL-1620 · XXXL-1920`
+- **Responsive** — 132 variables · 7 breakpoints: `XS-390 · SM-480 · M-768 · LG-1024 · XL-1440 · XXL-1620 · XXXL-1920`
 - **Semantic-Color** — 276 variables · 5 modos: `Light-White · Light-Grey · Dark-Red-Primary · Dark-Black-Neutral · Light-Yellow`
 
 ## 9. Inventario (todos son *master* en Figma)

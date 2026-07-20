@@ -4,7 +4,7 @@
 > Estados: ⬜ pendiente · 🟡 en progreso · ✅ completado
 > Orden de trabajo: **Tokens → Base (Foundations/Brand) → Componentes → Módulos → Templates**
 >
-> Última actualización: 2026-07-20 · Listado generado automáticamente desde Figma (todos son *master*).
+> Última actualización: 2026-07-20 · Fase 1 en progreso: breakpoints ✅.
 
 ## Fase 0 — Setup del proyecto ✅
 - ✅ Verificar instrucciones (puntos 1-4) y acceso Figma MCP
@@ -17,7 +17,7 @@
 
 ## Fase 1 — Tokens (primitivas → semánticos)
 Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints) · **Semantic-Color** (276, 5 modos).
-- ⬜ Breakpoints (Responsive): XS-375, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920 — deben coincidir en Storybook
+- ✅ Breakpoints (Responsive): XS-390, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920 — tokens en `src/tokens/breakpoints.ts` + `@theme` Tailwind + selector Storybook + docs
 - ⬜ Colores primitivos (Primitives)
 - ⬜ Colores semánticos (Semantic-Color → `[data-theme]`): Light-White, Light-Grey, Dark-Red-Primary, Dark-Black-Neutral, Light-Yellow
 - ⬜ Tipografías / estilos de texto (responsive por breakpoint)
