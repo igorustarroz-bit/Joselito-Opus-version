@@ -1,0 +1,58 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Icon.stories';
+
+<Meta of={Stories} />
+
+# Icon
+
+## Intro
+
+Sistema de iconos oficial (Figma → *Brand Assets* → Icons, set Phosphor).
+Se renderizan como SVG inline y **heredan el color** con `currentColor`, por lo
+que se recolorean con `color`/clases de texto. **Ningún componente debe usar un
+icono fuera de esta lista.**
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Anatomía
+
+`<svg viewBox="0 0 32 32">` con trazos/rellenos en `currentColor`. El tamaño fija
+`width`/`height`; el trazo escala proporcionalmente.
+
+## Comportamiento
+
+- Decorativo por defecto (`aria-hidden`). Con `title`, pasa a `role="img"` y expone el nombre accesible.
+- Recoloreable: hereda el `color` del contenedor.
+
+## Variantes y tamaños
+
+<Canvas of={Stories.Tamaños} />
+<Canvas of={Stories.Color} />
+
+Tamaños (Icon Sizer): XXS 12 · XS 16 · S 20 · M 24 · L 32.
+
+### Catálogo (set base)
+
+<Canvas of={Stories.Todos} />
+
+> Set inicial. El resto de iconos del fichero se añaden al registro `icons.ts`
+> exportando su SVG desde Figma y usando `currentColor`.
+
+## Tokens
+
+Sin color propio: usa `currentColor`. Aplica tokens de texto (`--text-*`) o de icono.
+
+## Propiedades
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+Usa `title` cuando el icono transmita significado; déjalo vacío si es decorativo
+(quedará `aria-hidden`).
+
+## Componentes relacionados
+
+Button, Tag, Input y la mayoría de componentes con iconografía.

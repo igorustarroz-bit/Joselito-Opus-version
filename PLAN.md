@@ -26,15 +26,15 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ Effect styles (elevaciones + blur) → tokens/effects.css
 
 ## Fase 2 — Base: Foundations / Brand Assets [prioritarios]
-- ⬜ Aspect Ratio (9:16, 2:3, 3:4, 1:1, 4:3, 3:2, 16:9)
-- ⬜ Icon Sizer (XXS, XS, S, M, L) + set de iconos (~140, recoloreables por `currentColor`)
+- ✅ Aspect Ratio (9:16…16:9) → components/AspectRatio
+- ✅ Icon (XXS-L, currentColor) + set base 14 iconos → components/Icon (resto se añaden al registro)
 - ⬜ Brand Logo (Joselito) + Logo Grid
 - ⬜ Client Logos (Riu, UFV, Accenture, Allianz, BBVA… — set de logos de cliente)
 
 ## Fase 3 — Componentes
 > Primero los base (buttons, fragments). Los `z_fragment_*` son subcomponentes base.
 - ⬜ UI01-Nav-Button
-- ⬜ UI02-Button
+- ✅ UI02-Button (Primary/Secondary/Terciary · XS-XL · estados) → components/Button
 - ⬜ UI03-Button-Icon
 - ⬜ UI04-Button-Action-Link
 - ⬜ UI05-Tabs (base: z_fragment_tab_primary, z_fragment_tab_secondary)
@@ -44,7 +44,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ UI09-Checkbox-Label
 - ⬜ UI10-Checkboxes-Radios
 - ⬜ UI11-Form (base: z_fragment_row_2_input, z_fragment_row_3_input)
-- ⬜ UI12-Tag
+- ✅ UI12-Tag (Transaction/New/Aseptic · L/XS) → components/Tag
 - ⬜ UI13-Accordion (base: z_fragment_accordion)
 - ⬜ UI14-Placeholder-Text
 - ⬜ Card Product
