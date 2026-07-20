@@ -17,7 +17,7 @@ export function Excelencia() {
     <div>
       <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <SecondaryMenu items={[{ label: 'Añadas' }, { label: 'Curación', active: true }, { label: 'Manual de corte' }]} />
-      <SectionHeader eyebrow="Excelencia" title="Un proceso paciente" description="Cada pieza se cura de forma natural durante años hasta alcanzar su punto óptimo." />
+      <SectionHeader backLabel="Origen" title="Un proceso paciente" description="Cada pieza se cura de forma natural durante años hasta alcanzar su punto óptimo." />
       <ListNumbers heading="Nuestro proceso" theme="light-grey" items={[
         { title: 'Crianza', description: 'Cerdos 100% ibéricos en libertad.' },
         { title: 'Montanera', description: 'Alimentación a base de bellota.' },

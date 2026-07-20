@@ -5,14 +5,17 @@ const meta = {
   title: 'Módulos/SectionHeader',
   component: SectionHeader,
   parameters: { layout: 'fullscreen' },
-  argTypes: {
-    align: { control: 'inline-radio', options: ['left', 'center'] },
-    theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] },
+  argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
+  args: {
+    backLabel: 'Sección anterior',
+    title: 'Section title',
+    description: 'Lorem ipsum dolor sit amet consectetur. Diam volutpat magna risus ut ullamcorper eget. Vestibulum adipiscing volutpat eget rhoncus.',
+    theme: 'light-white',
   },
-  args: { eyebrow: 'Excelencia', title: 'Un proceso paciente', description: 'Cada pieza se cura de forma natural durante años hasta alcanzar su punto óptimo.', align: 'center', theme: 'light-white' },
 } satisfies Meta<typeof SectionHeader>;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
-export const Izquierda: Story = { args: { align: 'left', theme: 'light-grey' } };
+export const SinBarra: Story = { args: { backLabel: undefined } };

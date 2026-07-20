@@ -6,21 +6,33 @@ import * as Stories from './SectionHeader.stories';
 # SectionHeader (módulo)
 
 ## Intro
-Cabecera de sección (eyebrow + título + descripción), centrada o a la izquierda, sobre el grid de 12 columnas.
+
+Cabecera de sección (Hero / Section header) fiel al master: barra superior con enlace "sección anterior" + bloque con título grande a la izquierda y descripción a la derecha, sobre fondo neutro.
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
-## Comportamiento responsive
-Ancho de contenido de 8 columnas (centrado con `col-start-3` desde M). En móvil ocupa todo el ancho.
+## Anatomía
 
-<Canvas of={Stories.Izquierda} />
+Barra (80px) con ArrowLeft + enlace (`type-body-3`); bloque con `Title/05` (izquierda) y `Body/05` (derecha) sobre `--bg-neutral-1`.
+
+## Comportamiento responsive
+
+En móvil el título y la descripción se apilan (1 columna); desde M, 6 + 5 columnas.
+
+## Sin barra
+
+<Canvas of={Stories.SinBarra} />
 
 ## Tokens
-`.grid-wrapper`/`.grid-12`, espaciados `--space-*`, colores semánticos. Título `type-title-5`.
+
+`--bg-neutral-1`, `type-title-5`, `type-body-5`, `type-body-3`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Title, SectionHero.
+
+Icon, Title; Breadcrumb, SectionHero.

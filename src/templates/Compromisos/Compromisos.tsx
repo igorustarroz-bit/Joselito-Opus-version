@@ -14,7 +14,7 @@ export function Compromisos() {
   return (
     <div>
       <Navigation brand={<BrandLogo height={36} />} items={navItems} />
-      <SectionHeader eyebrow="Compromisos" title="Un compromiso con la naturaleza" description="Sostenibilidad, bienestar animal y salud guían todo lo que hacemos." />
+      <SectionHeader backLabel="Inicio" title="Un compromiso con la naturaleza" description="Sostenibilidad, bienestar animal y salud guían todo lo que hacemos." />
       <ListCharacteristics heading="Nuestros pilares" theme="light-grey" items={[
         { icon: 'Recycle', title: 'Sostenibilidad', description: 'Gestión responsable de la dehesa.' },
         { icon: 'HandHeart', title: 'Happy Pigs', description: 'Cerdos criados en libertad y sin estrés.' },
