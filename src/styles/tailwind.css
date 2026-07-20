@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/*
+  Los tokens de diseño (colores, tipografías, espaciados, breakpoints)
+  se centralizarán aquí como @theme una vez leídas las variables de Figma.
+  Regla del proyecto: la estética la definen los Figmas, no Tailwind.
+*/
