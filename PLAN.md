@@ -27,7 +27,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 
 ## Fase 2 — Base: Foundations / Brand Assets [prioritarios]
 - ✅ Aspect Ratio (9:16…16:9) → components/AspectRatio
-- ✅ Icon (XXS-L, currentColor) + set base 14 iconos → components/Icon (resto se añaden al registro)
+- ✅ Icon (XXS-L, currentColor) + 109 iconos importados → components/Icon
 - ⬜ Brand Logo (Joselito) + Logo Grid
 - ⬜ Client Logos (Riu, UFV, Accenture, Allianz, BBVA… — set de logos de cliente)
 
