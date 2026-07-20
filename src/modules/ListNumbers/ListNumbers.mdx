@@ -1,0 +1,24 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ListNumbers.stories';
+
+<Meta of={Stories} />
+
+# ListNumbers (módulo)
+
+## Intro
+Lista de pasos/hitos (List / Numbers) con número destacado, título y descripción.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Comportamiento responsive
+1 columna en móvil; 2–3 desde M/LG según `columns`.
+
+## Tokens
+Número `type-title-7` en `--text-accent-base`; borde `--stroke-neutral-3`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+Title; List/Characteristics, List/Timeline.

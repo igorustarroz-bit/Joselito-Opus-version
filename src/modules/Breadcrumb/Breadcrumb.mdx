@@ -1,0 +1,27 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Breadcrumb.stories';
+
+<Meta of={Stories} />
+
+# Breadcrumb (módulo)
+
+## Intro
+Ruta de navegación (Navigation / Breadcrumb) con separadores; el último elemento es la página actual.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+`nav > ol > li` con enlaces y separadores Caret; el actual con `aria-current="page"`.
+
+## Tokens
+Texto `--text-base`/`--text-neutral-1`, separador `--text-neutral-2`, estilo `type-label-2`.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+`nav[aria-label]`, lista ordenada, `aria-current` en la página actual.
+
+## Componentes relacionados
+Icon, Navigation.

@@ -55,10 +55,10 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 
 ## Fase 4 — Módulos (100% viewport, grid 12 col, versiones por breakpoint)
 > Primero navegación (usada en todas las páginas).
-- ⬜ Navigation (principal)
+- ✅ Navigation (principal) → modules/Navigation
 - ⬜ Menu
 - ⬜ Navigation / Secondary menu
-- ⬜ Navigation / Breadcrumb
+- ✅ Navigation / Breadcrumb → modules/Breadcrumb
 - ⬜ Navigation / PreviousNext
 - ✅ Navigation / Footer → modules/Footer
 - ⬜ Hero / Homepage hero
@@ -69,8 +69,8 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ Content / Text only
 - ⬜ Content / Image only
 - ✅ Content / Text + Image → modules/ContentTextImage
-- ⬜ List / Characteristics
-- ⬜ List / Numbers
+- ✅ List / Characteristics → modules/ListCharacteristics
+- ✅ List / Numbers → modules/ListNumbers
 - ⬜ List / Timeline
 - ⬜ List / Archive table
 - ✅ Cards / Links → modules/CardsGrid (rejilla responsive)
@@ -81,7 +81,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ⬜ Cards / Accordion
 - ✅ Banners / Section banner → modules/Banner
 - ⬜ Form (módulo)
-- ⬜ Toast
+- ✅ Toast → modules/Toast
 
 ## Fase 5 — Page Templates (Sprint 1)
 - ⬜ Home

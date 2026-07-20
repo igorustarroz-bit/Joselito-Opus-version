@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Navigation.stories';
+
+<Meta of={Stories} />
+
+# Navigation (módulo)
+
+## Intro
+Barra de navegación superior (Navigation) a 100% del viewport: marca, enlaces y acciones.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Subtemas
+Tema propio (`data-theme`).
+
+<Canvas of={Stories.Oscuro} />
+
+## Comportamiento responsive
+Los enlaces se ocultan por debajo de **M** (donde entraría un menú hamburguesa — módulo Menu).
+
+## Tokens
+`.grid-wrapper`, borde `--stroke-neutral-3`, colores semánticos.
+
+## Propiedades
+<Controls of={Stories.Default} />
+
+## Componentes relacionados
+NavButton, ButtonIcon, Icon; módulo Menu, Breadcrumb.
