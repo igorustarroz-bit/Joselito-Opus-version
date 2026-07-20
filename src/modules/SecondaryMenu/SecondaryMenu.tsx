@@ -7,22 +7,23 @@ export interface SecondaryMenuItem { label: ReactNode; href?: string; active?: b
 export interface SecondaryMenuProps { items: SecondaryMenuItem[]; theme?: ThemeName; className?: string; }
 
 /**
- * Módulo Navigation / Secondary menu — subnavegación horizontal (anclas de
- * sección) con item activo, scrollable en móvil.
+ * Módulo Navigation / Secondary menu (fiel al master) — subnavegación horizontal
+ * CENTRADA con items (Body/03); el activo lleva subrayado (stroke base).
+ * Scrollable si no cabe.
  */
 export function SecondaryMenu({ items, theme = 'light-white', className }: SecondaryMenuProps) {
   return (
-    <nav data-theme={theme} aria-label="Navegación secundaria" className={cn('w-full border-b border-(--stroke-neutral-3) bg-(--bg-base) text-(--text-base)', className)}>
-      <div className="grid-wrapper">
-        <ul className="flex gap-fx-6 overflow-x-auto m-0 p-0 list-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <nav data-theme={theme} aria-label="Navegación secundaria" className={cn('w-full bg-(--bg-base) text-(--text-base)', className)}>
+      <div className="grid-wrapper flex justify-center overflow-x-auto pt-fx-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <ul className="flex gap-fx-8 m-0 p-0 list-none">
           {items.map((it, i) => (
             <li key={i}>
               <a
                 href={it.href ?? '#'}
                 aria-current={it.active ? 'true' : undefined}
                 className={cn(
-                  'type-cta-s inline-flex h-14 items-center whitespace-nowrap border-b-2 uppercase no-underline',
-                  it.active ? 'border-(--stroke-accent-base) text-(--text-base)' : 'border-transparent text-(--text-neutral-1) hover:text-(--text-base)',
+                  'type-body-3 inline-flex whitespace-nowrap border-b-2 pb-fx-3 no-underline text-(--text-base) hover:text-(--text-hover)',
+                  it.active ? 'border-(--stroke-base)' : 'border-transparent',
                 )}
               >
                 {it.label}
