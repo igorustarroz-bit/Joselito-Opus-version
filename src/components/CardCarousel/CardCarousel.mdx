@@ -1,0 +1,27 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardCarousel.stories';
+
+<Meta of={Stories} />
+
+# CardCarousel
+
+## Intro
+Carrusel horizontal (Card Carrusel) con scroll-snap y controles prev/next. Acepta cualquier tarjeta.
+
+## Demo
+<Canvas of={Stories.Default} />
+
+## Anatomía
+Pista con scroll horizontal + snap por slide + dos `ButtonIcon` de navegación.
+
+## Comportamiento
+Deslizamiento táctil/rueda; los controles desplazan ~80% del ancho visible. La barra de scroll se oculta.
+
+## Tokens
+Espaciados `--spacing-fx-*`; los controles usan tokens de Button.
+
+## Accesibilidad
+`aria-roledescription="carousel"` y controles con `aria-label`. El contenido sigue siendo navegable por teclado (scroll/foco).
+
+## Componentes relacionados
+CardProduct, CardLink, ButtonIcon.

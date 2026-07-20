@@ -49,7 +49,7 @@ Colecciones en Figma: **Primitives** (133) · **Responsive** (132, 7 breakpoints
 - ✅ UI14-Placeholder-Text → components/PlaceholderText
 - ✅ Card Product → components/CardProduct
 - ✅ Card Link → components/CardLink
-- ⬜ Card Carrusel
+- ✅ Card Carrusel → components/CardCarousel
 - ✅ Title → components/Title
 - ⬜ Fragments de lista: Table List Item, list_characteristic, list_BigNumbers, list-archive
 
