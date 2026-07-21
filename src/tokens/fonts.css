@@ -1,7 +1,9 @@
 /* @font-face — webfonts del proyecto (servidas desde /public/fonts).
-   Familias confirmadas en Figma: Euclid Circular B (sans) y SangBleu Empire (serif).
-   Otros cortes SangBleu (Kingdom, Republic, Sunrise, Versailles) se añaden bajo
-   demanda cuando los tokens de tipografía confirmen su uso. */
+   Familias en uso según tokens de Figma:
+   - Euclid Circular B (sans) → cuerpo, CTA, forms, labels.
+   - SangBleu Kingdom (serif) → títulos (Font-Family/Title = SangBleu, pesos Kingdom Regular/Medium).
+   SangBleu Empire se mantiene por compatibilidad; otros cortes (Republic, Sunrise,
+   Versailles) se añaden bajo demanda si los tokens de tipografía los usan. */
 
 /* ---------- Euclid Circular B (sans) ---------- */
 @font-face {
@@ -95,4 +97,46 @@
   font-family: 'SangBleu Empire';
   src: url('/fonts/sangbleu-empire/SangBleuEmpire-BlackItalic.woff2') format('woff2');
   font-weight: 900; font-style: italic; font-display: swap;
+}
+
+/* ---------- SangBleu Kingdom (serif — títulos) ---------- */
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-Light.woff2') format('woff2');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-LightItalic.woff2') format('woff2');
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-RegularItalic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-MediumItalic.woff2') format('woff2');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Kingdom';
+  src: url('/fonts/sangbleu-kingdom/SangBleuKingdom-BoldItalic.woff2') format('woff2');
+  font-weight: 700; font-style: italic; font-display: swap;
 }

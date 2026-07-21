@@ -1,0 +1,168 @@
+/* ==========================================================================
+   PRIMITIVES — tokens globales (colección "Primitives" de Figma, modo Joselito)
+   Fuente de verdad de los valores raw. Los tokens semánticos (Semantic-Color)
+   los referencian; los componentes NUNCA usan primitivas directamente.
+   134 variables: color, espaciado fijo y tipografía primitiva.
+   ========================================================================== */
+
+:root {
+  /* ---------- Color · Neutral ---------- */
+  --color-neutral-black: #000000;
+  --color-neutral-10: #14161a;
+  --color-neutral-20: #252931;
+  --color-neutral-30: #434956;
+  --color-neutral-40: #666666;
+  --color-neutral-50: #808080;
+  --color-neutral-60: #999999;
+  --color-neutral-70: #b3b3b3;
+  --color-neutral-80: #cccccc;
+  --color-neutral-90: #e5e5e5;
+  --color-neutral-94: #f0f0f0;
+  --color-neutral-96: #f7f7f7;
+  --color-neutral-98: #f9fafa;
+  --color-neutral-white: #ffffff;
+
+  /* ---------- Color · Opacity / Black (0 = opaco → 100 = transparente) ---------- */
+  --color-opacity-black-0: #000000;
+  --color-opacity-black-10: #000000e5;
+  --color-opacity-black-20: #000000cc;
+  --color-opacity-black-30: #000000b2;
+  --color-opacity-black-40: #00000099;
+  --color-opacity-black-50: #00000080;
+  --color-opacity-black-60: #00000066;
+  --color-opacity-black-70: #0000004d;
+  --color-opacity-black-80: #00000033;
+  --color-opacity-black-90: #0000001a;
+  --color-opacity-black-94: #0000000f;
+  --color-opacity-black-96: #0000000a;
+  --color-opacity-black-98: #00000005;
+  --color-opacity-black-100: #00000000;
+
+  /* ---------- Color · Opacity / White (0 = opaco → 100 = transparente) ---------- */
+  --color-opacity-white-0: #ffffff;
+  --color-opacity-white-10: #ffffffe5;
+  --color-opacity-white-20: #ffffffcc;
+  --color-opacity-white-30: #ffffffb2;
+  --color-opacity-white-40: #ffffff99;
+  --color-opacity-white-50: #ffffff80;
+  --color-opacity-white-60: #ffffff66;
+  --color-opacity-white-70: #ffffff4d;
+  --color-opacity-white-80: #ffffff33;
+  --color-opacity-white-90: #ffffff1a;
+  --color-opacity-white-94: #ffffff0f;
+  --color-opacity-white-96: #ffffff0a;
+  --color-opacity-white-98: #ffffff05;
+  --color-opacity-white-100: #ffffff00;
+
+  /* ---------- Color · Primary (rojo Joselito) ---------- */
+  --color-primary-0: #000000;
+  --color-primary-10: #260200;
+  --color-primary-20: #481815;
+  --color-primary-30: #990800;
+  --color-primary-40: #cc0a00;
+  --color-primary-50: #e23f36;
+  --color-primary-60: #ff3d33;
+  --color-primary-70: #ff6e66;
+  --color-primary-80: #ff9e99;
+  --color-primary-90: #ffcfcc;
+  --color-primary-94: #ffe2e0;
+  --color-primary-96: #ffeceb;
+  --color-primary-98: #fff5f5;
+  --color-primary-100: #ffffff;
+
+  /* ---------- Color · Secondary-1 (verde oliva) ---------- */
+  --color-secondary-1-0: #000000;
+  --color-secondary-1-10: #1f2019;
+  --color-secondary-1-20: #373a2c;
+  --color-secondary-1-30: #525643;
+  --color-secondary-1-40: #6e7359;
+  --color-secondary-1-50: #89906f;
+  --color-secondary-1-60: #9ba084;
+  --color-secondary-1-70: #b8bca9;
+  --color-secondary-1-80: #dcded4;
+  --color-secondary-1-90: #e7e9e2;
+  --color-secondary-1-94: #f1f2ee;
+  --color-secondary-1-96: #f6f6f3;
+  --color-secondary-1-98: #fafbf9;
+  --color-secondary-1-100: #ffffff;
+
+  /* ---------- Color · Secondary-2 (verde) ---------- */
+  --color-secondary-2-0: #000000;
+  --color-secondary-2-10: #063320;
+  --color-secondary-2-20: #00663c;
+  --color-secondary-2-30: #00995a;
+  --color-secondary-2-40: #00c875;
+  --color-secondary-2-50: #04fb93;
+  --color-secondary-2-60: #36fca9;
+  --color-secondary-2-70: #68fdbe;
+  --color-secondary-2-80: #9bfdd4;
+  --color-secondary-2-90: #ccffea;
+  --color-secondary-2-94: #e0fff2;
+  --color-secondary-2-96: #ebfff6;
+  --color-secondary-2-98: #f5fffb;
+  --color-secondary-2-100: #ffffff;
+
+  /* ---------- Color · Secondary-3 (dorado) ---------- */
+  --color-secondary-3-0: #000000;
+  --color-secondary-3-10: #372800;
+  --color-secondary-3-20: #664a00;
+  --color-secondary-3-30: #996e00;
+  --color-secondary-3-40: #cc9300;
+  --color-secondary-3-50: #ffb800;
+  --color-secondary-3-60: #ffc433;
+  --color-secondary-3-70: #ffd366;
+  --color-secondary-3-80: #ffe199;
+  --color-secondary-3-90: #fff0cc;
+  --color-secondary-3-94: #fff6e0;
+  --color-secondary-3-96: #fff9eb;
+  --color-secondary-3-98: #fffcf5;
+  --color-secondary-3-100: #ffffff;
+
+  /* ---------- Color · System ---------- */
+  --color-system-error-01: #d9b8b9;
+  --color-system-error-02: #d63838;
+  --color-system-error-03: #850606;
+  --color-system-success-01: #a2dbb3;
+  --color-system-success-02: #6dc849;
+  --color-system-success-03: #237210;
+  --color-system-warning-01: #f9d999;
+  --color-system-warning-02: #f7ba40;
+  --color-system-warning-03: #7a5706;
+
+  /* ---------- Spacers Fixed (px) ---------- */
+  --spacer-fx-0: 2px;
+  --spacer-fx-1: 4px;
+  --spacer-fx-2: 8px;
+  --spacer-fx-3: 12px;
+  --spacer-fx-4: 16px;
+  --spacer-fx-5: 20px;
+  --spacer-fx-6: 24px;
+  --spacer-fx-7: 28px;
+  --spacer-fx-8: 32px;
+  --spacer-fx-9: 40px;
+
+  /* ---------- Tipografía · Font Family ---------- */
+  --font-family-body: 'Euclid Circular B', ui-sans-serif, system-ui, sans-serif;
+  --font-family-cta: var(--font-family-body);
+  --font-family-forms: var(--font-family-body);
+  --font-family-label: var(--font-family-body);
+  --font-family-title: 'SangBleu Kingdom', Georgia, 'Times New Roman', serif;
+
+  /* ---------- Tipografía · Font Weight ----------
+     Body/CTA/Form/Label = Regular. Título usa SangBleu Kingdom:
+     Title-Bold = Kingdom Regular (400), Title-Black = Kingdom Medium (500). */
+  --font-weight-body: 400;
+  --font-weight-cta: 400;
+  --font-weight-form: 400;
+  --font-weight-label: 400;
+  --font-weight-title-bold: 400;
+  --font-weight-title-black: 500;
+
+  /* ---------- Tipografía · Letter Spacing (px) ---------- */
+  --letter-spacing-body: 0;
+  --letter-spacing-cta: 0.5px;
+  --letter-spacing-display: -1.5px;
+  --letter-spacing-forms: 0;
+  --letter-spacing-label: 0;
+  --letter-spacing-title: -0.5px;
+}

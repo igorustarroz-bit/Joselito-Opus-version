@@ -1,0 +1,126 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Primitives" />
+
+export const steps = ['0','10','20','30','40','50','60','70','80','90','94','96','98','100'];
+
+export const Swatch = ({ v, label }) => (
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 4, minWidth: 64 }}>
+    <div style={{
+      height: 48, borderRadius: 6, background: `var(${v})`,
+      border: '1px solid rgba(0,0,0,0.1)',
+      backgroundImage: 'linear-gradient(45deg,#eee 25%,transparent 25%,transparent 75%,#eee 75%,#eee),linear-gradient(45deg,#eee 25%,transparent 25%,transparent 75%,#eee 75%,#eee)',
+      backgroundSize: '12px 12px', backgroundPosition: '0 0, 6px 6px',
+    }}>
+      <div style={{ height: '100%', borderRadius: 6, background: `var(${v})` }} />
+    </div>
+    <code style={{ fontSize: 11 }}>{label}</code>
+  </div>
+);
+
+export const Scale = ({ prefix, keys }) => (
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, margin: '12px 0 24px' }}>
+    {keys.map((k) => <Swatch key={k} v={`${prefix}-${k}`} label={k} />)}
+  </div>
+);
+
+# Primitives
+
+Tokens **globales** del sistema (colección `Primitives` de Figma, modo *Joselito*). Son la
+fuente de verdad de los valores raw: paleta de color, espaciado fijo y tipografía primitiva.
+
+> Los componentes **nunca** usan primitivas directamente: se aplican a través de los tokens
+> **semánticos** (`Semantic-Color`). Estas primitivas son la base que aquellos referencian.
+
+## Demo
+
+### Color · Neutral
+
+<Scale prefix="--color-neutral" keys={['10','20','30','40','50','60','70','80','90','94','96','98']} />
+
+### Color · Primary (rojo Joselito)
+
+<Scale prefix="--color-primary" keys={steps} />
+
+### Color · Secondary-1 · Secondary-2 · Secondary-3
+
+<Scale prefix="--color-secondary-1" keys={steps} />
+<Scale prefix="--color-secondary-2" keys={steps} />
+<Scale prefix="--color-secondary-3" keys={steps} />
+
+### Color · System (Error / Success / Warning)
+
+<Scale prefix="--color-system-error" keys={['01','02','03']} />
+<Scale prefix="--color-system-success" keys={['01','02','03']} />
+<Scale prefix="--color-system-warning" keys={['01','02','03']} />
+
+### Color · Opacity (Black / White)
+
+Escala de opacidad donde `0` = opaco y `100` = transparente (fondo a cuadros = transparencia).
+
+<Scale prefix="--color-opacity-black" keys={steps} />
+<Scale prefix="--color-opacity-white" keys={steps} />
+
+### Espaciado fijo
+
+<div style={{ display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16, margin: '12px 0 24px' }}>
+  {[['fx-0','2'],['fx-1','4'],['fx-2','8'],['fx-3','12'],['fx-4','16'],['fx-5','20'],['fx-6','24'],['fx-7','28'],['fx-8','32'],['fx-9','40']].map(([k,px]) => (
+    <div key={k} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+      <div style={{ width: `var(--spacer-${k})`, height: `var(--spacer-${k})`, background: 'var(--color-primary-40)', borderRadius: 2 }} />
+      <code style={{ fontSize: 11 }}>{k}</code>
+      <span style={{ fontSize: 11, opacity: 0.6 }}>{px}px</span>
+    </div>
+  ))}
+</div>
+
+### Tipografía primitiva
+
+<div style={{ margin: '12px 0 24px' }}>
+  <p style={{ fontFamily: 'var(--font-family-title)', fontWeight: 500, fontSize: 32, letterSpacing: 'var(--letter-spacing-title)', margin: '0 0 8px' }}>
+    SangBleu Kingdom — Título
+  </p>
+  <p style={{ fontFamily: 'var(--font-family-body)', fontWeight: 400, fontSize: 18, margin: 0 }}>
+    Euclid Circular B — Cuerpo, CTA, formularios y etiquetas.
+  </p>
+</div>
+
+## Tokens
+
+### Familias y tipografía
+
+| Token | Valor |
+| --- | --- |
+| `--font-family-body` | Euclid Circular B |
+| `--font-family-title` | SangBleu Kingdom |
+| `--font-weight-title-bold` | 400 (Kingdom Regular) |
+| `--font-weight-title-black` | 500 (Kingdom Medium) |
+| `--letter-spacing-cta` | 0.5px |
+| `--letter-spacing-display` | -1.5px |
+| `--letter-spacing-title` | -0.5px |
+
+### Espaciado fijo
+
+| Token | px |
+| --- | --- |
+| `--spacer-fx-0` | 2 |
+| `--spacer-fx-1` | 4 |
+| `--spacer-fx-2` | 8 |
+| `--spacer-fx-3` | 12 |
+| `--spacer-fx-4` | 16 |
+| `--spacer-fx-5` | 20 |
+| `--spacer-fx-6` | 24 |
+| `--spacer-fx-7` | 28 |
+| `--spacer-fx-8` | 32 |
+| `--spacer-fx-9` | 40 |
+
+### Color (resumen de escalas)
+
+| Escala | Pasos | Uso |
+| --- | --- | --- |
+| Neutral | Black, 10–98, White | Grises y neutros |
+| Primary | 0–100 | Rojo de marca Joselito |
+| Secondary-1 | 0–100 | Verde oliva |
+| Secondary-2 | 0–100 | Verde |
+| Secondary-3 | 0–100 | Dorado |
+| Opacity Black/White | 0–100 | Transparencias (0 opaco → 100 transparente) |
+| System | Error/Success/Warning · 01–03 | Estados |

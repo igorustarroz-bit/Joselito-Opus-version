@@ -19,7 +19,7 @@ Cada elemento, al programarse, se lee de Figma con `get_design_context`, se trad
 
 ## Fase 1 — Tokens / Foundations (PRIORITARIO, antes de cualquier componente)
 
-- [ ] **Primitives** (134 vars, modo `Joselito`) — paleta base y escalas → `@theme` en Tailwind
+- [x] **Primitives** (134 vars, modo `Joselito`) — paleta base y escalas → `src/tokens/primitives.css` (custom properties) + doc Storybook `Tokens/Primitives`
 - [ ] **Responsive** (132 vars, 7 breakpoints: XS-390, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920)
 - [ ] **Semantic-Color** (276 vars, 5 modos → `data-theme`: Light-White, Light-Grey, Dark-Red-Primary, Dark-Black-Neutral, Light-Yellow)
 - [ ] **Tipografía** — estilos de texto responsive (cambian por breakpoint) + `@font-face`
