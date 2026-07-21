@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './NavButton.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI01-Nav-Button
+
+Botón de **navegación** (uno de los tres tipos de botón del sistema). Tamaño fijo XS
+(alto 40, padding 16), texto CTA-XS en mayúsculas (12/14, tracking 0.5px), rectangular.
+Por defecto muestra un **caret** a la derecha (indica menú desplegable).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Tokens
+
+Colores desde `--btn-nav-<estado>-<fill|text|stroke|icon>` (grupo Button/Nav, por subtema).
+Tamaño desde `--btn-xs-*`.
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `selected` | `boolean` | `false` | Ítem activo |
+| `disabled` | `boolean` | `false` | Deshabilitado |
+| `iconLeft` | `string` | — | Icono a la izquierda |
+| `iconRight` | `string` | `CaretDown` | Icono a la derecha (caret desplegable) |
+| `children` | `node` | — | Texto |

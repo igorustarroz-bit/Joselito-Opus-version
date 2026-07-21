@@ -1,0 +1,85 @@
+/* SEMANTIC-COLOR · Nav-Button (grupo Button/Nav de Semantic-Color)
+   UI01-Nav-Button: Default/Hover/Focused/Selected/Disabled. Por subtema.
+   light-yellow hereda de :root (tema claro equivalente). */
+
+:root {
+  --btn-nav-default-fill: var(--color-neutral-white);
+  --btn-nav-default-icon: var(--color-neutral-black);
+  --btn-nav-default-stroke: var(--color-opacity-black-100);
+  --btn-nav-default-text: var(--color-neutral-black);
+  --btn-nav-disabled-fill: var(--color-opacity-black-100);
+  --btn-nav-disabled-icon: var(--color-opacity-black-80);
+  --btn-nav-disabled-stroke: var(--color-opacity-black-100);
+  --btn-nav-disabled-text: var(--color-opacity-black-80);
+  --btn-nav-focused-fill: var(--color-neutral-96);
+  --btn-nav-focused-icon: var(--color-primary-10);
+  --btn-nav-focused-stroke: var(--color-neutral-90);
+  --btn-nav-focused-text: var(--color-primary-10);
+  --btn-nav-hover-fill: var(--color-neutral-white);
+  --btn-nav-hover-icon: var(--color-neutral-black);
+  --btn-nav-hover-stroke: var(--color-neutral-90);
+  --btn-nav-hover-text: var(--color-neutral-black);
+  --btn-nav-selected-fill: var(--color-neutral-white);
+  --btn-nav-selected-icon: var(--color-neutral-black);
+  --btn-nav-selected-stroke: var(--color-opacity-black-100);
+  --btn-nav-selected-text: var(--color-neutral-black);
+}
+
+[data-theme="light-grey"] {
+  --btn-nav-default-fill: var(--color-neutral-96);
+  --btn-nav-default-stroke: var(--color-opacity-black-80);
+  --btn-nav-disabled-fill: var(--color-opacity-black-90);
+  --btn-nav-focused-fill: var(--color-neutral-90);
+  --btn-nav-focused-stroke: var(--color-primary-50);
+  --btn-nav-hover-stroke: var(--color-primary-50);
+  --btn-nav-selected-fill: var(--color-primary-50);
+  --btn-nav-selected-icon: var(--color-neutral-white);
+  --btn-nav-selected-stroke: var(--color-opacity-white-100);
+  --btn-nav-selected-text: var(--color-neutral-white);
+}
+
+[data-theme="dark-red-primary"] {
+  --btn-nav-default-fill: var(--color-primary-50);
+  --btn-nav-default-icon: var(--color-neutral-white);
+  --btn-nav-default-stroke: var(--color-primary-90);
+  --btn-nav-default-text: var(--color-neutral-white);
+  --btn-nav-disabled-fill: var(--color-opacity-black-94);
+  --btn-nav-disabled-icon: var(--color-opacity-black-70);
+  --btn-nav-disabled-stroke: var(--color-opacity-white-100);
+  --btn-nav-disabled-text: var(--color-opacity-black-70);
+  --btn-nav-focused-fill: var(--color-neutral-white);
+  --btn-nav-focused-icon: var(--color-neutral-white);
+  --btn-nav-focused-stroke: var(--color-primary-10);
+  --btn-nav-focused-text: var(--color-neutral-black);
+  --btn-nav-hover-fill: var(--color-neutral-white);
+  --btn-nav-hover-icon: var(--color-neutral-black);
+  --btn-nav-hover-stroke: var(--color-opacity-white-100);
+  --btn-nav-hover-text: var(--color-neutral-black);
+  --btn-nav-selected-fill: var(--color-neutral-white);
+  --btn-nav-selected-icon: var(--color-primary-10);
+  --btn-nav-selected-stroke: var(--color-opacity-white-100);
+  --btn-nav-selected-text: var(--color-primary-10);
+}
+
+[data-theme="dark-black-neutral"] {
+  --btn-nav-default-fill: var(--color-neutral-10);
+  --btn-nav-default-icon: var(--color-neutral-white);
+  --btn-nav-default-stroke: var(--color-opacity-white-70);
+  --btn-nav-default-text: var(--color-neutral-white);
+  --btn-nav-disabled-fill: var(--color-opacity-white-94);
+  --btn-nav-disabled-icon: var(--color-opacity-white-90);
+  --btn-nav-disabled-stroke: var(--color-opacity-white-100);
+  --btn-nav-disabled-text: var(--color-opacity-white-90);
+  --btn-nav-focused-fill: var(--color-opacity-white-80);
+  --btn-nav-focused-icon: var(--color-neutral-white);
+  --btn-nav-focused-stroke: var(--color-neutral-white);
+  --btn-nav-focused-text: var(--color-neutral-white);
+  --btn-nav-hover-fill: var(--color-neutral-10);
+  --btn-nav-hover-icon: var(--color-neutral-white);
+  --btn-nav-hover-stroke: var(--color-neutral-white);
+  --btn-nav-hover-text: var(--color-neutral-white);
+  --btn-nav-selected-fill: var(--color-neutral-white);
+  --btn-nav-selected-icon: var(--color-neutral-black);
+  --btn-nav-selected-stroke: var(--color-opacity-white-100);
+  --btn-nav-selected-text: var(--color-neutral-black);
+}

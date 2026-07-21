@@ -51,7 +51,7 @@ Bases / fragments:
 - [ ] z_fragment-Table List Item · z_fragment_list_characteristic · z_fragment_list_BigNumbers · z_fragment-list-archive
 
 Componentes UI:
-- [ ] UI01-Nav-Button — `id 57943:37204`
+- [x] UI01-Nav-Button — componente + estados + colores por subtema + doc
 - [x] UI02-Button (Primary/Secondary/Terciary · XS-L · estados) — componente + CSS estados + colores 5 subtemas + doc
 - [ ] UI03-Button-Icon — `id 49038:9364`
 - [ ] UI04-Button-Action-Link — `id 49038:9486`

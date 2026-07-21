@@ -1,0 +1,33 @@
+/* UI01-Nav-Button — botón de navegación. Tamaño fijo XS (40px), texto CTA-XS
+   (12/14 mayúsculas), rectangular. Caret derecho opcional (dropdown). */
+
+.jl-navbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  height: var(--btn-xs-size);
+  padding-inline: var(--btn-xs-padding);
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-cta);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: var(--letter-spacing-cta);
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .15s, color .15s, border-color .15s;
+
+  background: var(--btn-nav-default-fill);
+  color: var(--btn-nav-default-text);
+  border-color: var(--btn-nav-default-stroke);
+  --_ic: var(--btn-nav-default-icon);
+}
+.jl-navbtn__icon { display: inline-flex; color: var(--_ic); flex-shrink: 0; }
+
+.jl-navbtn:hover:not(:disabled) { background: var(--btn-nav-hover-fill); color: var(--btn-nav-hover-text); border-color: var(--btn-nav-hover-stroke); --_ic: var(--btn-nav-hover-icon); }
+.jl-navbtn:focus-visible { background: var(--btn-nav-focused-fill); color: var(--btn-nav-focused-text); border-color: var(--btn-nav-focused-stroke); --_ic: var(--btn-nav-focused-icon); outline: none; }
+.jl-navbtn[data-selected="true"] { background: var(--btn-nav-selected-fill); color: var(--btn-nav-selected-text); border-color: var(--btn-nav-selected-stroke); --_ic: var(--btn-nav-selected-icon); }
+.jl-navbtn:disabled { background: var(--btn-nav-disabled-fill); color: var(--btn-nav-disabled-text); border-color: var(--btn-nav-disabled-stroke); --_ic: var(--btn-nav-disabled-icon); cursor: not-allowed; }
