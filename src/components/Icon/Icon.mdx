@@ -1,0 +1,47 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Icon.stories.jsx';
+
+<Meta of={Stories} />
+
+# Icon
+
+Sistema de iconos del proyecto (página **Brand Assets** de Figma). Todos los iconos se cargan
+automáticamente desde `src/assets/icons/*.svg`. Ningún componente debe usar iconos fuera de
+este set.
+
+- **Color:** vía `currentColor` — hereda del color de texto o se fija con `color`.
+- **Tamaños:** escala del Icon Sizer (XXS 12 · XS 16 · S 20 · M 24 · L 32) o número en px.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Tamaños
+
+<Canvas of={Stories.Sizes} />
+
+## Color
+
+<Canvas of={Stories.Color} />
+
+## Galería
+
+<Canvas of={Stories.Gallery} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `name` | `string` | — | Nombre del icono (ver galería) |
+| `size` | `XXS \| XS \| S \| M \| L \| number` | `M` | Tamaño (Icon Sizer o px) |
+| `color` | `string` | — | Color (por defecto `currentColor`) |
+| `title` | `string` | — | Texto accesible; sin él, el icono es decorativo (`aria-hidden`) |
+
+## Uso
+
+```jsx
+<Icon name="ArrowRight" size="M" />
+<Icon name="HeartStraight" size="L" style={{ color: 'var(--color-primary-40)' }} />
+```
