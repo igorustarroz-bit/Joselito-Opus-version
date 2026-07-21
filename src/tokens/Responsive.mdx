@@ -1,0 +1,116 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Responsive" />
+
+export const spacers = ['6','7','8','9','10','11','12','13','14','15','16','17','18'];
+export const corners = [['none','0'],['xxs','2'],['xs','4'],['s','6'],['m','8'],['l','12 · 18 (XL)'],['xl','16–40 (resp.)'],['rounded','pill']];
+
+# Responsive
+
+Tokens que cambian por **breakpoint** (colección `Responsive` de Figma). El proyecto es
+**mobile-first**: la base es `XS` (390) y cada breakpoint sobreescribe hacia arriba.
+
+Los breakpoints CSS coinciden con los de **Tailwind** (`@theme`) y con los **viewports de
+Storybook** (barra de herramientas → cambia el viewport para ver los tokens adaptarse).
+
+> Usa el selector de **viewport** de la barra superior para comprobar cómo cambian los
+> spacers, gutters y esquinas en cada breakpoint.
+
+## Demo
+
+### Spacers responsive
+
+Barras con `var(--sp-N)`. Cambian de tamaño según el viewport activo.
+
+<div style={{ display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap', gap: 12, margin: '12px 0 24px' }}>
+  {spacers.map((n) => (
+    <div key={n} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+      <div style={{ width: 24, height: `var(--sp-${n})`, background: 'var(--color-primary-40)', borderRadius: 2 }} />
+      <code style={{ fontSize: 11 }}>sp-{n}</code>
+    </div>
+  ))}
+</div>
+
+### Esquinas (corners)
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, margin: '12px 0 24px' }}>
+  {['xxs','xs','s','m','l','xl'].map((c) => (
+    <div key={c} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+      <div style={{ width: 72, height: 72, background: 'var(--color-secondary-1-80)', borderRadius: `var(--corner-${c})`, border: '1px solid var(--color-secondary-1-60)' }} />
+      <code style={{ fontSize: 11 }}>{c}</code>
+    </div>
+  ))}
+</div>
+
+### Grid wrapper + gutter
+
+Franja que representa el `wrapper` (margen lateral) y el `gutter` activos.
+
+<div style={{ background: 'var(--color-neutral-94)', padding: '0 var(--grid-wrapper)', margin: '12px 0 24px', border: '1px dashed var(--color-neutral-70)' }}>
+  <div style={{ display: 'flex', gap: 'var(--grid-gutter)', padding: '16px 0' }}>
+    {Array.from({ length: 6 }).map((_, i) => (
+      <div key={i} style={{ flex: 1, height: 40, background: 'var(--color-primary-90)', borderRadius: 'var(--corner-xs)' }} />
+    ))}
+  </div>
+</div>
+
+## Tokens
+
+### Breakpoints
+
+| Nombre | Ancho | Alias Tailwind |
+| --- | --- | --- |
+| XS | 390 | (base, mobile-first) |
+| SM | 480 | `sm:` |
+| M | 768 | `md:` |
+| LG | 1024 | `lg:` |
+| XL | 1440 | `xl:` |
+| XXL | 1620 | `xxl:` |
+| XXXL | 1920 | `xxxl:` |
+
+### Grid (px por breakpoint)
+
+| Token | XS | SM | M | LG | XL | XXL | XXXL |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `--grid-gutter` | 20 | 12 | 16 | 16 | 24 | 24 | 32 |
+| `--grid-wrapper` | 20 | 20 | 32 | 32 | 80 | 64 | 84 |
+| `--grid-wrapper-header` | 16 | 16 | 32 | 32 | 32 | 32 | 56 |
+| `--grid-wrapper-modal` | 20 | 16 | 32 | 40 | 32 | 32 | 56 |
+
+### Spacers responsive (px por breakpoint)
+
+Los `sp-0…sp-5` son fijos (0, 4, 8, 12, 16, 20). Los siguientes son responsive:
+
+| Token | XS | SM | M | LG | XL | XXL | XXXL |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `--sp-6` | 20 | 20 | 24 | 24 | 24 | 20 | 20 |
+| `--sp-7` | 20 | 20 | 32 | 32 | 32 | 32 | 32 |
+| `--sp-8` | 24 | 24 | 36 | 36 | 40 | 40 | 40 |
+| `--sp-9` | 32 | 32 | 40 | 40 | 48 | 48 | 48 |
+| `--sp-10` | 40 | 40 | 44 | 44 | 56 | 56 | 56 |
+| `--sp-11` | 40 | 40 | 52 | 52 | 64 | 64 | 64 |
+| `--sp-12` | 40 | 40 | 64 | 64 | 72 | 72 | 72 |
+| `--sp-13` | 40 | 40 | 72 | 72 | 80 | 80 | 80 |
+| `--sp-14` | 40 | 40 | 80 | 80 | 92 | 92 | 92 |
+| `--sp-15` | 48 | 48 | 92 | 92 | 104 | 104 | 104 |
+| `--sp-16` | 56 | 56 | 112 | 112 | 132 | 132 | 132 |
+| `--sp-17` | 56 | 56 | 132 | 132 | 156 | 156 | 156 |
+| `--sp-18` | 64 | 64 | 156 | 156 | 184 | 184 | 184 |
+
+### Corners
+
+| Token | Radio (px) |
+| --- | --- |
+| `--corner-none` | 0 |
+| `--corner-xxs` | 2 |
+| `--corner-xs` | 4 |
+| `--corner-s` | 6 |
+| `--corner-m` | 8 |
+| `--corner-l` | 12 (18 en XL) |
+| `--corner-xl` | 24 · 16 (M/LG) · 36 (XL/XXL) · 40 (XXXL) |
+| `--corner-rounded` | 9999 (pill) |
+
+### Layout fijo (no responsive)
+
+Sizing de botones (`--btn-*`) y formularios (`--form-*`) es constante en todos los breakpoints
+(p. ej. `--btn-l-size: 64`, `--btn-m-size: 56`, `--form-l-size: 72`, `--form-m-size: 56`).

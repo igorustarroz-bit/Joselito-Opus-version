@@ -1,0 +1,145 @@
+/* ==========================================================================
+   RESPONSIVE — tokens que cambian por breakpoint (colección "Responsive" de Figma)
+   7 breakpoints: XS-390 · SM-480 · M-768 · LG-1024 · XL-1440 · XXL-1620 · XXXL-1920
+   Mobile-first: :root = XS; cada @media (min-width) sobreescribe hacia arriba.
+   Los breakpoints CSS coinciden con los de Tailwind (@theme en index.css) y con
+   los viewports de Storybook (.storybook/preview.js).
+   Nota: los tamaños de columna (1–12) se derivan del grid (paso "Grid 12 col").
+   Las tipografías responsive (SZ/LH) se definen en el paso "Tipografía".
+   ========================================================================== */
+
+:root {
+  /* ---- Fijos en todos los breakpoints ---- */
+  /* Spacers responsive fijos */
+  --sp-0: 0px;  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;  --sp-4: 16px;  --sp-5: 20px;
+  /* Corners (radios) */
+  --corner-none: 0px;
+  --corner-xxs: 2px;
+  --corner-xs: 4px;
+  --corner-s: 6px;
+  --corner-m: 8px;
+  --corner-rounded: 9999px;
+  /* Wrapper full siempre 0 */
+  --grid-wrapper-full: 0px;
+
+  /* Botones (fijos por breakpoint) */
+  --btn-xs-size: 40px; --btn-xs-padding: 16px; --btn-xs-min-width: 56px;
+  --btn-s-size: 48px;  --btn-s-padding: 20px;  --btn-s-min-width: 96px;
+  --btn-m-size: 56px;  --btn-m-padding: 24px;  --btn-m-min-width: 110px;
+  --btn-l-size: 64px;  --btn-l-padding: 32px;  --btn-l-min-width: 168px;
+  --btn-xl-size: 104px; --btn-xl-padding: 32px; --btn-xl-min-width: 168px;
+
+  /* Forms (fijos por breakpoint salvo detalles) */
+  --form-m-size: 56px; --form-m-padding-l: 16px; --form-m-padding-r: 16px;
+  --form-m-label-in: 4px; --form-m-label-out: 4px; --form-m-message: 6px;
+  --form-l-size: 72px; --form-l-padding-l: 20px; --form-l-padding-r: 20px;
+  --form-l-label-in: 4px; --form-l-label-out: 12px; --form-l-message: 8px;
+
+  /* ---- XS (390) — base mobile-first ---- */
+  --vw-name: 'XS';
+  --grid-gutter: 20px;
+  --grid-wrapper: 20px;
+  --grid-wrapper-header: 16px;
+  --grid-wrapper-modal: 20px;
+  --corner-l: 12px;
+  --corner-xl: 24px;
+  --sp-6: 20px;  --sp-7: 20px;  --sp-8: 24px;  --sp-9: 32px;  --sp-10: 40px;
+  --sp-11: 40px; --sp-12: 40px; --sp-13: 40px; --sp-14: 40px; --sp-15: 48px;
+  --sp-16: 56px; --sp-17: 56px; --sp-18: 64px;
+}
+
+/* ---- SM (480) ---- */
+@media (min-width: 480px) {
+  :root {
+    --vw-name: 'SM';
+    --grid-gutter: 12px;
+    --grid-wrapper: 20px;
+    --grid-wrapper-header: 16px;
+    --grid-wrapper-modal: 16px;
+    --corner-l: 12px;
+    --corner-xl: 24px;
+    --sp-6: 20px;  --sp-7: 20px;  --sp-8: 24px;  --sp-9: 32px;  --sp-10: 40px;
+    --sp-11: 40px; --sp-12: 40px; --sp-13: 40px; --sp-14: 40px; --sp-15: 48px;
+    --sp-16: 56px; --sp-17: 56px; --sp-18: 64px;
+  }
+}
+
+/* ---- M (768) ---- */
+@media (min-width: 768px) {
+  :root {
+    --vw-name: 'M';
+    --grid-gutter: 16px;
+    --grid-wrapper: 32px;
+    --grid-wrapper-header: 32px;
+    --grid-wrapper-modal: 32px;
+    --corner-l: 12px;
+    --corner-xl: 16px;
+    --sp-6: 24px;  --sp-7: 32px;  --sp-8: 36px;  --sp-9: 40px;  --sp-10: 44px;
+    --sp-11: 52px; --sp-12: 64px; --sp-13: 72px; --sp-14: 80px; --sp-15: 92px;
+    --sp-16: 112px; --sp-17: 132px; --sp-18: 156px;
+  }
+}
+
+/* ---- LG (1024) ---- */
+@media (min-width: 1024px) {
+  :root {
+    --vw-name: 'LG';
+    --grid-gutter: 16px;
+    --grid-wrapper: 32px;
+    --grid-wrapper-header: 32px;
+    --grid-wrapper-modal: 40px;
+    --corner-l: 12px;
+    --corner-xl: 16px;
+    --sp-6: 24px;  --sp-7: 32px;  --sp-8: 36px;  --sp-9: 40px;  --sp-10: 44px;
+    --sp-11: 52px; --sp-12: 64px; --sp-13: 72px; --sp-14: 80px; --sp-15: 92px;
+    --sp-16: 112px; --sp-17: 132px; --sp-18: 156px;
+  }
+}
+
+/* ---- XL (1440) ---- */
+@media (min-width: 1440px) {
+  :root {
+    --vw-name: 'XL';
+    --grid-gutter: 24px;
+    --grid-wrapper: 80px;
+    --grid-wrapper-header: 32px;
+    --grid-wrapper-modal: 32px;
+    --corner-l: 18px;
+    --corner-xl: 36px;
+    --sp-6: 24px;  --sp-7: 32px;  --sp-8: 40px;  --sp-9: 48px;  --sp-10: 56px;
+    --sp-11: 64px; --sp-12: 72px; --sp-13: 80px; --sp-14: 92px; --sp-15: 104px;
+    --sp-16: 132px; --sp-17: 156px; --sp-18: 184px;
+  }
+}
+
+/* ---- XXL (1620) ---- */
+@media (min-width: 1620px) {
+  :root {
+    --vw-name: 'XXL';
+    --grid-gutter: 24px;
+    --grid-wrapper: 64px;
+    --grid-wrapper-header: 32px;
+    --grid-wrapper-modal: 32px;
+    --corner-l: 12px;
+    --corner-xl: 36px;
+    --sp-6: 20px;  --sp-7: 32px;  --sp-8: 40px;  --sp-9: 48px;  --sp-10: 56px;
+    --sp-11: 64px; --sp-12: 72px; --sp-13: 80px; --sp-14: 92px; --sp-15: 104px;
+    --sp-16: 132px; --sp-17: 156px; --sp-18: 184px;
+  }
+}
+
+/* ---- XXXL (1920) ---- */
+@media (min-width: 1920px) {
+  :root {
+    --vw-name: 'XXXL';
+    --grid-gutter: 32px;
+    --grid-wrapper: 84px;
+    --grid-wrapper-header: 56px;
+    --grid-wrapper-modal: 56px;
+    --corner-l: 12px;
+    --corner-xl: 40px;
+    --sp-6: 20px;  --sp-7: 32px;  --sp-8: 40px;  --sp-9: 48px;  --sp-10: 56px;
+    --sp-11: 64px; --sp-12: 72px; --sp-13: 80px; --sp-14: 92px; --sp-15: 104px;
+    --sp-16: 132px; --sp-17: 156px; --sp-18: 184px;
+  }
+}

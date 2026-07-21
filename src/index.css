@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @import "./tokens/fonts.css";
 @import "./tokens/primitives.css";
+@import "./tokens/responsive.css";
+
+/* Breakpoints del proyecto (colección Responsive de Figma).
+   Mobile-first: la base es XS (390). Se limpian los defaults de Tailwind. */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;    /* SM */
+  --breakpoint-md: 768px;    /* M  */
+  --breakpoint-lg: 1024px;   /* LG */
+  --breakpoint-xl: 1440px;   /* XL */
+  --breakpoint-xxl: 1620px;  /* XXL */
+  --breakpoint-xxxl: 1920px; /* XXXL */
+}
 
 /*
   Tailwind CSS v4 — configuración CSS-first.
