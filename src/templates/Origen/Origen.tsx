@@ -22,10 +22,10 @@ export function Origen() {
         <p style={{ margin: 0 }}>La dehesa es un ecosistema único donde nuestros cerdos crecen en libertad.</p>
         <p style={{ margin: 0 }}>Su alimentación a base de bellota durante la montanera define el sabor inconfundible de Joselito.</p>
       </ContentText>
-      <ListTimeline heading="Hitos" theme="light-grey" items={[
-        { marker: '1868', title: 'Los orígenes', description: 'Comienza la historia en Guijuelo.' },
-        { marker: '1980', title: 'Expansión', description: 'El nombre cruza fronteras.' },
-        { marker: 'Hoy', title: 'Referente mundial', description: 'El mejor jamón del mundo.' },
+      <ListTimeline topTitle="El legado de Joselito" seeAll={{ label: 'Ver todos', href: '#' }} defaultIndex={1} entries={[
+        { year: '1868', title: 'Los orígenes', description: 'Comienza la historia en Guijuelo.' },
+        { year: '1948', title: 'Expansión', description: 'El nombre cruza fronteras.' },
+        { year: 'Hoy', title: 'Referente mundial', description: 'El mejor jamón del mundo.' },
       ]} />
       <ContentTextImage label="La dehesa" title="Cría en libertad" body={<p style={{ margin: 0 }}>Nuestros cerdos crecen en la dehesa, formando la grasa infiltrada que da su sabor.</p>} ctaLabel="Conocer más" image={grad('#89906f', '#dcded4')} />
       <PreviousNext prev={{ label: 'Inicio' }} next={{ label: 'Excelencia' }} />

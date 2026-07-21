@@ -7,15 +7,23 @@ import * as Stories from './ListTimeline.stories';
 
 ## Intro
 
-Línea temporal vertical (List / Timeline) con hitos conectados por una línea.
+List / Timeline (fiel al master): línea temporal sobre fondo de marca. Los años aparecen en grande (Title/08, serif) apilados a la derecha —el activo en color de acento, el resto atenuados—, junto a una foto rotada del hito y una tarjeta clara con título (Title/02), texto y botones anterior/siguiente.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
+## Anatomía
+
+Barra superior (título + "Ver todos"), columna de años, foto rotada del hito y tarjeta con navegación.
+
+## Comportamiento
+
+Los botones anterior/siguiente recorren los hitos; el año activo se resalta y cambian la foto y el contenido de la tarjeta. Responsive: en móvil se apilan año destacado, foto y tarjeta.
+
 ## Tokens
 
-Marcador/acento `--bg-accent-base` / `--text-accent-base`; línea `--stroke-neutral-3`.
+Años `type-title-8` (`--text-accent-base` activo / `--text-inverted` al 20%). Título de tarjeta `type-title-2`, texto `type-body-3` (`--text-neutral-2`). Botones 40px con `--stroke-neutral-2`.
 
 ## Propiedades
 
@@ -23,4 +31,4 @@ Marcador/acento `--bg-accent-base` / `--text-accent-base`; línea `--stroke-neut
 
 ## Componentes relacionados
 
-Title; List/Numbers, List/Characteristics.
+Icon (CaretLeft/CaretRight); ListNumbers.
