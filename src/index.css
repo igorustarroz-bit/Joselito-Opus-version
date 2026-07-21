@@ -2,6 +2,7 @@
 @import "./tokens/fonts.css";
 @import "./tokens/primitives.css";
 @import "./tokens/responsive.css";
+@import "./tokens/semantic-color.css";
 
 /* Breakpoints del proyecto (colección Responsive de Figma).
    Mobile-first: la base es XS (390). Se limpian los defaults de Tailwind. */

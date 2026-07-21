@@ -1,0 +1,76 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Semantic-Color" />
+
+export const bgRoles = ['base','white','inverse','neutral-1','neutral-2','neutral-3','accent-base','accent-1','accent-2','accent-3','accent-4','accent-subbrand-sec','hover','selected','disabled','overlay','always-black','always-white','error-1','error-2','error-3','success-1','success-2','success-3','warning-1','warning-2','warning-3'];
+export const textRoles = ['base','inverted','link','hover','accent-base','accent-1','accent-2','neutral-1','neutral-2','neutral-3','secondary-base','secondary-1','secondary-2','disabled','always-black','always-white','error','success','warning'];
+export const strokeRoles = ['base','inverse','accent-base','accent-1','accent-2','accent-3','accent-4','accent-subbrand-sec','neutral-1','neutral-2','neutral-3','neutral-4','secondary-base','secondary-1','secondary-2','secondary-3','secondary-4','error-1','error-2','error-3','success-1','success-2','success-3','warning-1','warning-2','warning-3'];
+
+export const Grid = ({ children }) => (
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: 12, margin: '12px 0 28px' }}>{children}</div>
+);
+export const Bg = ({ r }) => (
+  <div style={{ border: '1px solid var(--stroke-neutral-3)', borderRadius: 6, overflow: 'hidden' }}>
+    <div style={{ height: 44, background: `var(--bg-${r})` }} />
+    <code style={{ display: 'block', fontSize: 11, padding: '4px 6px' }}>bg-{r}</code>
+  </div>
+);
+export const Tx = ({ r }) => (
+  <div style={{ border: '1px solid var(--stroke-neutral-3)', borderRadius: 6, padding: '8px 10px' }}>
+    <span style={{ color: `var(--text-${r})`, fontWeight: 600 }}>Ag</span>
+    <code style={{ display: 'block', fontSize: 11, marginTop: 4 }}>text-{r}</code>
+  </div>
+);
+export const St = ({ r }) => (
+  <div style={{ border: '1px solid var(--stroke-neutral-3)', borderRadius: 6, padding: 10 }}>
+    <div style={{ height: 32, borderRadius: 4, border: `3px solid var(--stroke-${r})` }} />
+    <code style={{ display: 'block', fontSize: 11, marginTop: 6 }}>stroke-{r}</code>
+  </div>
+);
+
+# Semantic-Color
+
+Roles de color del sistema (colección `Semantic-Color`). Los componentes usan **siempre**
+estos tokens, nunca las primitivas directamente. Cada rol referencia una primitiva y
+cambia según el **subtema** activo.
+
+> Cambia el **Subtema** en la barra de herramientas (icono pincel) para ver los 5 modos:
+> Light-White · Light-Grey · Dark-Red-Primary · Dark-Black-Neutral · Light-Yellow.
+> Los subtemas se aplican con `data-theme` y un hijo puede sobreescribir al padre.
+
+## Demo
+
+### Backgrounds (`--bg-*`)
+
+<Grid>{bgRoles.map((r) => <Bg key={r} r={r} />)}</Grid>
+
+### Texts (`--text-*`)
+
+<Grid>{textRoles.map((r) => <Tx key={r} r={r} />)}</Grid>
+
+### Strokes-Icons (`--stroke-*`)
+
+<Grid>{strokeRoles.map((r) => <St key={r} r={r} />)}</Grid>
+
+## Tokens
+
+### Subtemas (modos → data-theme)
+
+| Modo Figma | `data-theme` |
+| --- | --- |
+| Light - White | *(por defecto, `:root`)* |
+| Light - Grey | `light-grey` |
+| Dark - Red - Primary | `dark-red-primary` |
+| Dark - Black - Neutral | `dark-black-neutral` |
+| Light - Yellow | `light-yellow` |
+
+### Grupos
+
+| Grupo | Prefijo | Nº roles | Uso |
+| --- | --- | --- | --- |
+| Backgrounds | `--bg-*` | 27 | Fondos |
+| Texts | `--text-*` | 19 | Color de texto |
+| Strokes-Icons | `--stroke-*` | 26 | Bordes e iconos |
+
+Uso: `background: var(--bg-base)`, `color: var(--text-base)`, `border-color: var(--stroke-neutral-2)`.
+Los grupos **Button** y **Forms** (semánticos de componente) se generan al construir esos componentes.
