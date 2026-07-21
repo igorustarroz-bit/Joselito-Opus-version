@@ -22,11 +22,11 @@ Cada elemento, al programarse, se lee de Figma con `get_design_context`, se trad
 - [x] **Primitives** (134 vars, modo `Joselito`) — paleta base y escalas → `src/tokens/primitives.css` (custom properties) + doc Storybook `Tokens/Primitives`
 - [x] **Responsive** (132 vars, 7 breakpoints: XS-390, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920) → breakpoints Tailwind + `src/tokens/responsive.css` + viewports Storybook + doc `Tokens/Responsive`. (Tipografías SZ/LH por breakpoint → paso Tipografía; tamaños de columna 1–12 → paso Grid)
 - [x] **Semantic-Color** base (72 roles bg/text/stroke × 5 modos → `data-theme`) en `src/tokens/semantic-color.css` + selector de subtema en Storybook + doc. (Grupos Button/Forms → con sus componentes)
-- [ ] **Tipografía** — estilos de texto responsive (cambian por breakpoint) + `@font-face`
-- [ ] **Espaciados** — escala de spacing aplicada a todas las distancias
-- [ ] **Grid 12 columnas** — layout guides + variables responsive (coincidir en Storybook)
-- [ ] **Effect styles** — sombras/efectos centralizados
-- [ ] **Aspect Ratio** (foundation component, set 1:1 · 2:3 · 3:2 · 3:4 · 4:3 · 9:16 · 16:9) — `id 50942:37236`
+- [x] **Tipografía** — 29 estilos responsive (`.ts-*`) en `src/tokens/typography.css` + doc
+- [x] **Espaciados** — escalas fija (`fx`) y responsive (`sp`) como utilidades Tailwind + doc
+- [x] **Grid 12 columnas** — `.wrapper` + `.grid-12` con gutter/wrapper responsive + doc
+- [x] **Effect styles** — Elevation On-Light/On-Dark + Blur en `src/tokens/effects.css` + doc
+- [x] **Aspect Ratio** (foundation, 7 ratios) — componente React + story + doc
 
 Docs por token (Storybook): Intro · Demo · Tokens.
 

@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Efectos" />
+
+export const sizes = ['s','m','l','xl'];
+
+# Efectos
+
+Sombras de **elevación** (`Elevation`) en dos variantes según el fondo, y **blur** de fondo.
+
+## Demo
+
+### Elevation — On Light
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, padding: 24, background: 'var(--color-neutral-white)', margin: '12px 0 24px' }}>
+  {sizes.map((s) => (
+    <div key={s} style={{ width: 96, height: 96, borderRadius: 12, background: 'var(--color-neutral-white)', boxShadow: `var(--shadow-on-light-${s})`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12 }}>{s.toUpperCase()}</div>
+  ))}
+</div>
+
+### Elevation — On Dark
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, padding: 24, background: 'var(--color-neutral-10)', margin: '12px 0 24px' }}>
+  {sizes.map((s) => (
+    <div key={s} style={{ width: 96, height: 96, borderRadius: 12, background: 'var(--color-neutral-20)', color: 'var(--color-neutral-white)', boxShadow: `var(--shadow-on-dark-${s})`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12 }}>{s.toUpperCase()}</div>
+  ))}
+</div>
+
+## Tokens
+
+| Grupo | Tokens / Clases |
+| --- | --- |
+| Elevation On-Light | `--shadow-on-light-{s,m,l,xl}` · `.shadow-on-light-*` |
+| Elevation On-Dark | `--shadow-on-dark-{s,m,l,xl}` · `.shadow-on-dark-*` |
+| Blur (backdrop) | `--blur-{s,m,l}` (40 / 100 / 160px) · `.backdrop-blur-*` |
+
+Radios de sombra: S 3px · M 12px · L 26px · XL 48px (offset 0, spread 0).

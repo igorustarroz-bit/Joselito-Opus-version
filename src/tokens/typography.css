@@ -1,0 +1,423 @@
+/* ==========================================================================
+   TIPOGRAFÍA — estilos de texto responsive (estilos de texto de Figma +
+   tamaños/interlineados de la colección Responsive, por breakpoint).
+   Familias: Title 2-8 = SangBleu Kingdom (serif); Title 1, Body, CTA, Label,
+   Input = Euclid Circular B (sans). Mobile-first: base XS, media queries hacia arriba.
+   Uso: clase .ts-<estilo> (p. ej. .ts-title-4, .ts-body-3, .ts-cta-l).
+   ========================================================================== */
+
+:root {
+  --ts-title-1-sz: 20px;
+  --ts-title-1-lh: 24px;
+  --ts-title-2-sz: 28px;
+  --ts-title-2-lh: 36px;
+  --ts-title-3-sz: 29px;
+  --ts-title-3-lh: 38px;
+  --ts-title-4-sz: 34px;
+  --ts-title-4-lh: 34px;
+  --ts-title-5-sz: 40px;
+  --ts-title-5-lh: 38px;
+  --ts-title-6-sz: 45px;
+  --ts-title-6-lh: 44px;
+  --ts-title-7-sz: 40px;
+  --ts-title-7-lh: 52px;
+  --ts-title-8-sz: 72px;
+  --ts-title-8-lh: 80px;
+  --ts-body-1-sz: 12px;
+  --ts-body-1-lh: 18px;
+  --ts-body-2-sz: 14px;
+  --ts-body-2-lh: 22px;
+  --ts-body-3-sz: 15px;
+  --ts-body-3-lh: 24px;
+  --ts-body-4-sz: 17px;
+  --ts-body-4-lh: 28px;
+  --ts-body-5-sz: 20px;
+  --ts-body-5-lh: 30px;
+  --ts-body-6-sz: 20px;
+  --ts-body-6-lh: 28px;
+  --ts-label-1-sz: 10px;
+  --ts-label-1-lh: 14px;
+  --ts-label-2-sz: 12px;
+  --ts-label-2-lh: 16px;
+  --ts-cta-xs-sz: 12px;
+  --ts-cta-xs-lh: 12px;
+  --ts-cta-s-sz: 14px;
+  --ts-cta-s-lh: 14px;
+  --ts-cta-m-sz: 16px;
+  --ts-cta-m-lh: 22px;
+  --ts-cta-l-sz: 18px;
+  --ts-cta-l-lh: 18px;
+  --ts-cta-xl-sz: 20px;
+  --ts-cta-xl-lh: 26px;
+  --ts-input-m-text-sz: 18px;
+  --ts-input-m-text-lh: 24px;
+  --ts-input-m-label-in-sz: 10px;
+  --ts-input-m-label-in-lh: 12px;
+  --ts-input-m-label-out-sz: 16px;
+  --ts-input-m-label-out-lh: 16px;
+  --ts-input-m-message-sz: 14px;
+  --ts-input-m-message-lh: 14px;
+  --ts-input-s-text-sz: 14px;
+  --ts-input-s-text-lh: 14px;
+  --ts-input-s-label-in-sz: 10px;
+  --ts-input-s-label-in-lh: 12px;
+  --ts-input-s-label-out-sz: 14px;
+  --ts-input-s-label-out-lh: 14px;
+  --ts-input-s-message-sz: 12px;
+  --ts-input-s-message-lh: 12px;
+}
+
+@media (min-width: 480px) {
+  :root {
+    --ts-title-3-sz: 32px;
+    --ts-title-3-lh: 32px;
+    --ts-title-4-lh: 40px;
+    --ts-title-5-lh: 50px;
+    --ts-title-6-sz: 44px;
+    --ts-title-7-sz: 64px;
+    --ts-title-7-lh: 72px;
+    --ts-body-2-sz: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ts-title-1-sz: 22px;
+    --ts-title-3-sz: 34px;
+    --ts-title-3-lh: 36px;
+    --ts-title-4-sz: 40px;
+    --ts-title-4-lh: 46px;
+    --ts-title-5-sz: 50px;
+    --ts-title-5-lh: 56px;
+    --ts-title-6-sz: 58px;
+    --ts-title-6-lh: 68px;
+    --ts-title-7-sz: 74px;
+    --ts-title-7-lh: 84px;
+    --ts-title-8-sz: 100px;
+    --ts-title-8-lh: 110px;
+    --ts-body-4-sz: 19px;
+    --ts-body-4-lh: 30px;
+    --ts-body-6-sz: 22px;
+    --ts-body-6-lh: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --ts-title-4-lh: 48px;
+    --ts-title-8-sz: 120px;
+    --ts-title-8-lh: 130px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --ts-title-1-sz: 24px;
+    --ts-title-1-lh: 28px;
+    --ts-title-2-sz: 32px;
+    --ts-title-2-lh: 48px;
+    --ts-title-3-sz: 40px;
+    --ts-title-3-lh: 50px;
+    --ts-title-4-sz: 48px;
+    --ts-title-5-sz: 60px;
+    --ts-title-5-lh: 58px;
+    --ts-title-6-sz: 72px;
+    --ts-title-6-lh: 72px;
+    --ts-title-7-sz: 104px;
+    --ts-title-7-lh: 108px;
+    --ts-title-8-sz: 180px;
+    --ts-title-8-lh: 184px;
+    --ts-body-5-sz: 22px;
+    --ts-body-5-lh: 32px;
+    --ts-body-6-sz: 26px;
+    --ts-body-6-lh: 38px;
+    --ts-cta-m-lh: 16px;
+    --ts-input-m-label-in-lh: 14px;
+  }
+}
+
+@media (min-width: 1620px) {
+  :root {
+    --ts-title-2-sz: 36px;
+    --ts-title-3-sz: 42px;
+    --ts-title-3-lh: 44px;
+    --ts-title-4-sz: 60px;
+    --ts-title-4-lh: 64px;
+    --ts-title-5-sz: 70px;
+    --ts-title-5-lh: 80px;
+    --ts-title-6-sz: 78px;
+    --ts-title-6-lh: 94px;
+    --ts-title-7-sz: 94px;
+    --ts-title-7-lh: 110px;
+    --ts-title-8-lh: 203px;
+    --ts-body-4-sz: 23px;
+    --ts-body-4-lh: 32px;
+    --ts-body-5-sz: 24px;
+    --ts-body-6-sz: 28px;
+    --ts-body-6-lh: 40px;
+    --ts-cta-m-lh: 21px;
+    --ts-cta-xl-sz: 32px;
+    --ts-cta-xl-lh: 32px;
+    --ts-input-m-label-in-lh: 12px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --ts-title-1-sz: 28px;
+    --ts-title-1-lh: 32px;
+    --ts-title-2-sz: 42px;
+    --ts-title-2-lh: 56px;
+    --ts-title-3-sz: 44px;
+    --ts-title-4-sz: 72px;
+    --ts-title-4-lh: 76px;
+    --ts-title-5-sz: 84px;
+    --ts-title-5-lh: 96px;
+    --ts-title-6-sz: 92px;
+    --ts-title-6-lh: 108px;
+    --ts-title-7-sz: 108px;
+    --ts-title-7-lh: 124px;
+    --ts-body-2-sz: 16px;
+    --ts-body-2-lh: 26px;
+    --ts-body-3-sz: 18px;
+    --ts-body-3-lh: 28px;
+    --ts-body-5-sz: 28px;
+    --ts-body-5-lh: 38px;
+    --ts-body-6-sz: 32px;
+    --ts-body-6-lh: 48px;
+    --ts-cta-m-lh: 16px;
+  }
+}
+
+/* ---- Clases de estilo de texto ---- */
+.ts-title-1 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-title-1-sz);
+  line-height: var(--ts-title-1-lh);
+}
+
+.ts-title-2 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-2-sz);
+  line-height: var(--ts-title-2-lh);
+}
+
+.ts-title-3 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-3-sz);
+  line-height: var(--ts-title-3-lh);
+}
+
+.ts-title-4 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-4-sz);
+  line-height: var(--ts-title-4-lh);
+}
+
+.ts-title-5 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-5-sz);
+  line-height: var(--ts-title-5-lh);
+}
+
+.ts-title-6 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-6-sz);
+  line-height: var(--ts-title-6-lh);
+}
+
+.ts-title-7 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-title);
+  font-size: var(--ts-title-7-sz);
+  line-height: var(--ts-title-7-lh);
+}
+
+.ts-title-8 {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  letter-spacing: -3px;
+  font-size: var(--ts-title-8-sz);
+  line-height: var(--ts-title-8-lh);
+}
+
+.ts-body-1 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-1-sz);
+  line-height: var(--ts-body-1-lh);
+}
+
+.ts-body-2 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-2-sz);
+  line-height: var(--ts-body-2-lh);
+}
+
+.ts-body-3 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-3-sz);
+  line-height: var(--ts-body-3-lh);
+}
+
+.ts-body-4 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-4-sz);
+  line-height: var(--ts-body-4-lh);
+}
+
+.ts-body-5 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-5-sz);
+  line-height: var(--ts-body-5-lh);
+}
+
+.ts-body-6 {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-body);
+  font-size: var(--ts-body-6-sz);
+  line-height: var(--ts-body-6-lh);
+}
+
+.ts-label-1 {
+  font-family: var(--font-family-label);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-label);
+  font-size: var(--ts-label-1-sz);
+  line-height: var(--ts-label-1-lh);
+}
+
+.ts-label-2 {
+  font-family: var(--font-family-label);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-label);
+  font-size: var(--ts-label-2-sz);
+  line-height: var(--ts-label-2-lh);
+}
+
+.ts-cta-xs {
+  font-family: var(--font-family-cta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-cta);
+  font-size: var(--ts-cta-xs-sz);
+  line-height: var(--ts-cta-xs-lh);
+}
+
+.ts-cta-s {
+  font-family: var(--font-family-cta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-cta);
+  font-size: var(--ts-cta-s-sz);
+  line-height: var(--ts-cta-s-lh);
+}
+
+.ts-cta-m {
+  font-family: var(--font-family-cta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-cta);
+  font-size: var(--ts-cta-m-sz);
+  line-height: var(--ts-cta-m-lh);
+}
+
+.ts-cta-l {
+  font-family: var(--font-family-cta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-cta);
+  font-size: var(--ts-cta-l-sz);
+  line-height: var(--ts-cta-l-lh);
+}
+
+.ts-cta-xl {
+  font-family: var(--font-family-cta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-cta);
+  font-size: var(--ts-cta-xl-sz);
+  line-height: var(--ts-cta-xl-lh);
+}
+
+.ts-input-m-text {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-m-text-sz);
+  line-height: var(--ts-input-m-text-lh);
+}
+
+.ts-input-m-label-in {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-m-label-in-sz);
+  line-height: var(--ts-input-m-label-in-lh);
+}
+
+.ts-input-m-label-out {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-m-label-out-sz);
+  line-height: var(--ts-input-m-label-out-lh);
+}
+
+.ts-input-m-message {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-m-message-sz);
+  line-height: var(--ts-input-m-message-lh);
+}
+
+.ts-input-s-text {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-s-text-sz);
+  line-height: var(--ts-input-s-text-lh);
+}
+
+.ts-input-s-label-in {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-s-label-in-sz);
+  line-height: var(--ts-input-s-label-in-lh);
+}
+
+.ts-input-s-label-out {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-s-label-out-sz);
+  line-height: var(--ts-input-s-label-out-lh);
+}
+
+.ts-input-s-message {
+  font-family: var(--font-family-forms);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-s-message-sz);
+  line-height: var(--ts-input-s-message-lh);
+}

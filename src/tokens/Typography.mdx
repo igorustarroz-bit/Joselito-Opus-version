@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Tipografía" />
+
+export const titles = ['title-8','title-7','title-6','title-5','title-4','title-3','title-2','title-1'];
+export const bodies = ['body-6','body-5','body-4','body-3','body-2','body-1'];
+export const utils = ['cta-xl','cta-l','cta-m','cta-s','cta-xs','label-2','label-1'];
+
+export const Row = ({ c, sample }) => (
+  <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '8px 0', borderBottom: '1px solid var(--stroke-neutral-3)' }}>
+    <code style={{ fontSize: 11, minWidth: 90, color: 'var(--text-neutral-2)' }}>.ts-{c}</code>
+    <span className={`ts-${c}`}>{sample || 'Joselito jamón ibérico'}</span>
+  </div>
+);
+
+# Tipografía
+
+Estilos de texto **responsive**: el tamaño y el interlineado cambian por breakpoint
+(datos de la colección Responsive). Las familias, pesos y letter-spacing vienen de las
+primitivas. Cambia el **viewport** en la barra para ver la escala adaptarse.
+
+- **Serif — SangBleu Kingdom:** `Title 2`–`Title 8`.
+- **Sans — Euclid Circular B:** `Title 1`, `Body`, `CTA`, `Label`, `Input`.
+
+Uso: aplica la clase `.ts-<estilo>` (p. ej. `.ts-title-4`, `.ts-body-3`).
+
+## Demo
+
+### Titulares (SangBleu Kingdom · Title 1 en Euclid)
+
+<div style={{ margin: '12px 0 28px' }}>
+  {titles.map((c) => <Row key={c} c={c} sample="Joselito" />)}
+</div>
+
+### Cuerpo (Body)
+
+<div style={{ margin: '12px 0 28px' }}>
+  {bodies.map((c) => <Row key={c} c={c} />)}
+</div>
+
+### CTA y Labels
+
+<div style={{ margin: '12px 0 28px' }}>
+  {utils.map((c) => <Row key={c} c={c} sample="Descubrir más" />)}
+</div>
+
+### Formularios (Input)
+
+<div style={{ margin: '12px 0 28px' }}>
+  {['input-m-text','input-m-label-out','input-m-label-in','input-m-message','input-s-text'].map((c) => <Row key={c} c={c} sample="Campo de formulario" />)}
+</div>
+
+## Tokens
+
+Cada estilo expone dos custom properties responsive y una clase:
+
+| Clase | Familia | Peso | Letter-spacing |
+| --- | --- | --- | --- |
+| `.ts-title-1` | Euclid Circular B | 400 | 0 |
+| `.ts-title-2` … `.ts-title-7` | SangBleu Kingdom | 400 | -0.5px |
+| `.ts-title-8` | SangBleu Kingdom | 400 | -3px |
+| `.ts-body-1` … `.ts-body-6` | Euclid Circular B | 400 | 0 |
+| `.ts-cta-xs` … `.ts-cta-xl` | Euclid Circular B | 400 | 0.5px |
+| `.ts-label-1` · `.ts-label-2` | Euclid Circular B | 400 | 0 |
+| `.ts-input-m-*` · `.ts-input-s-*` | Euclid Circular B | 400 | 0 |
+
+Variables por estilo: `--ts-<estilo>-sz` (tamaño) y `--ts-<estilo>-lh` (interlineado),
+responsive por breakpoint. Peso Medium (500) de SangBleu Kingdom disponible para énfasis.

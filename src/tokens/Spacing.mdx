@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Espaciado" />
+
+export const fx = [['fx-0','2'],['fx-1','4'],['fx-2','8'],['fx-3','12'],['fx-4','16'],['fx-5','20'],['fx-6','24'],['fx-7','28'],['fx-8','32'],['fx-9','40']];
+export const sp = ['sp-6','sp-7','sp-8','sp-9','sp-10','sp-11','sp-12','sp-13','sp-14','sp-15','sp-16','sp-17','sp-18'];
+
+# Espaciado
+
+Dos escalas: **fija** (`fx`) para micro-espaciados constantes, y **responsive** (`sp`)
+para separaciones entre secciones que crecen con el viewport.
+
+Disponibles como utilidades Tailwind: `p-fx-4`, `gap-sp-8`, `mt-sp-12`, etc.,
+y como custom properties: `var(--spacer-fx-4)`, `var(--sp-8)`.
+
+## Demo
+
+### Escala fija (`fx`)
+
+<div style={{ display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16, margin: '12px 0 28px' }}>
+  {fx.map(([k,px]) => (
+    <div key={k} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+      <div style={{ width: `var(--spacer-${k})`, height: `var(--spacer-${k})`, background: 'var(--bg-accent-base)', borderRadius: 2 }} />
+      <code style={{ fontSize: 11 }}>{k}</code><span style={{ fontSize: 11, color: 'var(--text-neutral-2)' }}>{px}px</span>
+    </div>
+  ))}
+</div>
+
+### Escala responsive (`sp`) — cambia el viewport
+
+<div style={{ display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap', gap: 12, margin: '12px 0 28px' }}>
+  {sp.map((k) => (
+    <div key={k} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+      <div style={{ width: 24, height: `var(--${k})`, background: 'var(--bg-accent-base)', borderRadius: 2 }} />
+      <code style={{ fontSize: 11 }}>{k}</code>
+    </div>
+  ))}
+</div>
+
+## Tokens
+
+- **Fija:** `--spacer-fx-0`…`--spacer-fx-9` → 2, 4, 8, 12, 16, 20, 24, 28, 32, 40 px.
+- **Responsive:** `--sp-0`…`--sp-18` (0–5 fijos; 6–18 responsive). Ver *Tokens/Responsive* para los valores por breakpoint.
+- **Utilidades Tailwind:** prefijos `fx-*` y `sp-*` en `p-`, `m-`, `gap-`, `space-`, etc.

@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './AspectRatio.stories.jsx';
+
+<Meta of={Stories} />
+
+# Aspect Ratio
+
+Foundation que mantiene una **proporción fija** y recorta su contenido. Se usa como
+contenedor de imágenes (rellenan con `object-cover`) para asegurar ratios consistentes.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Variantes
+
+Proporciones del sistema: `1:1`, `4:3`, `3:4`, `3:2`, `2:3`, `16:9`, `9:16`.
+
+<Canvas of={Stories.Ratios} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `ratio` | `1:1 \| 4:3 \| 3:4 \| 3:2 \| 2:3 \| 16:9 \| 9:16` | `1:1` | Proporción del contenedor |
+| `className` | `string` | — | Clases adicionales |
+| `children` | `node` | — | Contenido (habitualmente `<img>`) que rellena con object-cover |
+
+## Uso
+
+```jsx
+<AspectRatio ratio="16:9">
+  <img src="/foto.webp" alt="..." />
+</AspectRatio>
+```

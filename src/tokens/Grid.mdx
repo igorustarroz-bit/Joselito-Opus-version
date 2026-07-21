@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Grid 12 columnas" />
+
+# Grid 12 columnas
+
+Todos los módulos siguen una rejilla de **12 columnas** dentro de un *wrapper* (margen
+lateral) con *gutter* entre columnas. Gutter y wrapper son **responsive** (ver *Tokens/Responsive*).
+
+Clases: `.wrapper` (+ `--header`, `--modal`, `--full`) y `.grid-12` con hijos `.col-1`…`.col-12`.
+
+## Demo — cambia el viewport para ver gutter y wrapper adaptarse
+
+<div className="wrapper" style={{ background: 'var(--bg-neutral-1)', border: '1px dashed var(--stroke-neutral-2)', margin: '12px 0 24px' }}>
+  <div className="grid-12" style={{ paddingBlock: 16 }}>
+    {Array.from({ length: 12 }).map((_, i) => (
+      <div key={i} className="col-1" style={{ height: 56, background: 'var(--bg-accent-base)', borderRadius: 'var(--corner-xs)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-always-white)', fontSize: 11 }}>{i + 1}</div>
+    ))}
+  </div>
+</div>
+
+### Ejemplo de composición (col-span)
+
+<div className="wrapper" style={{ background: 'var(--bg-neutral-1)', border: '1px dashed var(--stroke-neutral-2)', margin: '12px 0 24px' }}>
+  <div className="grid-12" style={{ paddingBlock: 16, rowGap: 'var(--sp-4)' }}>
+    <div className="col-8" style={{ height: 80, background: 'var(--bg-accent-3)', borderRadius: 'var(--corner-s)' }} />
+    <div className="col-4" style={{ height: 80, background: 'var(--bg-neutral-2)', borderRadius: 'var(--corner-s)' }} />
+    <div className="col-6" style={{ height: 56, background: 'var(--bg-neutral-2)', borderRadius: 'var(--corner-s)' }} />
+    <div className="col-6" style={{ height: 56, background: 'var(--bg-neutral-2)', borderRadius: 'var(--corner-s)' }} />
+  </div>
+</div>
+
+## Tokens
+
+| Clase | Función |
+| --- | --- |
+| `.wrapper` | Contenedor con margen lateral `--grid-wrapper` (responsive) |
+| `.wrapper--header` / `--modal` / `--full` | Variantes de wrapper (header, modal, full-bleed) |
+| `.grid-12` | Rejilla de 12 columnas con `column-gap: var(--grid-gutter)` |
+| `.col-1` … `.col-12` | Span de columnas del hijo |
+
+`row-gap` se controla con la escala de espaciado (`--sp-*`) según el diseño de cada módulo.

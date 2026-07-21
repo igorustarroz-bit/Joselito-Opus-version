@@ -3,6 +3,9 @@
 @import "./tokens/primitives.css";
 @import "./tokens/responsive.css";
 @import "./tokens/semantic-color.css";
+@import "./tokens/typography.css";
+@import "./tokens/grid.css";
+@import "./tokens/effects.css";
 
 /* Breakpoints del proyecto (colección Responsive de Figma).
    Mobile-first: la base es XS (390). Se limpian los defaults de Tailwind. */
@@ -14,6 +17,38 @@
   --breakpoint-xl: 1440px;   /* XL */
   --breakpoint-xxl: 1620px;  /* XXL */
   --breakpoint-xxxl: 1920px; /* XXXL */
+
+  /* Spacing → utilidades Tailwind (p-, m-, gap-, etc.).
+     fx-* = espaciado fijo (primitivas); sp-* = espaciado responsive. */
+  --spacing-fx-0: var(--spacer-fx-0);
+  --spacing-fx-1: var(--spacer-fx-1);
+  --spacing-fx-2: var(--spacer-fx-2);
+  --spacing-fx-3: var(--spacer-fx-3);
+  --spacing-fx-4: var(--spacer-fx-4);
+  --spacing-fx-5: var(--spacer-fx-5);
+  --spacing-fx-6: var(--spacer-fx-6);
+  --spacing-fx-7: var(--spacer-fx-7);
+  --spacing-fx-8: var(--spacer-fx-8);
+  --spacing-fx-9: var(--spacer-fx-9);
+  --spacing-sp-0: var(--sp-0);
+  --spacing-sp-1: var(--sp-1);
+  --spacing-sp-2: var(--sp-2);
+  --spacing-sp-3: var(--sp-3);
+  --spacing-sp-4: var(--sp-4);
+  --spacing-sp-5: var(--sp-5);
+  --spacing-sp-6: var(--sp-6);
+  --spacing-sp-7: var(--sp-7);
+  --spacing-sp-8: var(--sp-8);
+  --spacing-sp-9: var(--sp-9);
+  --spacing-sp-10: var(--sp-10);
+  --spacing-sp-11: var(--sp-11);
+  --spacing-sp-12: var(--sp-12);
+  --spacing-sp-13: var(--sp-13);
+  --spacing-sp-14: var(--sp-14);
+  --spacing-sp-15: var(--sp-15);
+  --spacing-sp-16: var(--sp-16);
+  --spacing-sp-17: var(--sp-17);
+  --spacing-sp-18: var(--sp-18);
 }
 
 /*

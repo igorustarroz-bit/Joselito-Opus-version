@@ -1,0 +1,36 @@
+/* ==========================================================================
+   GRID 12 COLUMNAS — sistema de layout (colección Responsive: gutter + wrapper)
+   12 columnas iguales dentro del wrapper, con gutter entre columnas.
+   Gutter y wrapper son responsive (cambian por breakpoint) — ver responsive.css.
+   ========================================================================== */
+
+/* Contenedor con márgenes laterales (wrapper) responsive */
+.wrapper {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--grid-wrapper);
+}
+.wrapper--header { padding-inline: var(--grid-wrapper-header); }
+.wrapper--modal  { padding-inline: var(--grid-wrapper-modal); }
+.wrapper--full   { padding-inline: var(--grid-wrapper-full); }
+
+/* Rejilla de 12 columnas con gutter responsive */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+}
+
+/* Alineación por columnas (span). row-gap opcional con --sp-* */
+.grid-12 > .col-1  { grid-column: span 1; }
+.grid-12 > .col-2  { grid-column: span 2; }
+.grid-12 > .col-3  { grid-column: span 3; }
+.grid-12 > .col-4  { grid-column: span 4; }
+.grid-12 > .col-5  { grid-column: span 5; }
+.grid-12 > .col-6  { grid-column: span 6; }
+.grid-12 > .col-7  { grid-column: span 7; }
+.grid-12 > .col-8  { grid-column: span 8; }
+.grid-12 > .col-9  { grid-column: span 9; }
+.grid-12 > .col-10 { grid-column: span 10; }
+.grid-12 > .col-11 { grid-column: span 11; }
+.grid-12 > .col-12 { grid-column: span 12; }

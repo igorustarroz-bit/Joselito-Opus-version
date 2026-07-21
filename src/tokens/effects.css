@@ -1,0 +1,35 @@
+/* ==========================================================================
+   EFFECT STYLES — sombras y blurs (effect styles de Figma)
+   Elevation: drop-shadow (offset 0, spread 0) en variantes On-Light / On-Dark.
+   Blur: background blur → backdrop-filter.
+   ========================================================================== */
+
+:root {
+  /* Elevation — On Light */
+  --shadow-on-light-s: 0 0 3px 0 #2b343a14;
+  --shadow-on-light-m: 0 0 12px 0 #0000001a;
+  --shadow-on-light-l: 0 0 26px 0 #0000001a;
+  --shadow-on-light-xl: 0 0 48px 0 #00000029;
+  /* Elevation — On Dark */
+  --shadow-on-dark-s: 0 0 3px 0 #0000007d;
+  --shadow-on-dark-m: 0 0 12px 0 #0000008a;
+  --shadow-on-dark-l: 0 0 26px 0 #00000087;
+  --shadow-on-dark-xl: 0 0 48px 0 #000000b2;
+  /* Blur (radios) */
+  --blur-s: 40px;
+  --blur-m: 100px;
+  --blur-l: 160px;
+}
+
+.shadow-on-light-s  { box-shadow: var(--shadow-on-light-s); }
+.shadow-on-light-m  { box-shadow: var(--shadow-on-light-m); }
+.shadow-on-light-l  { box-shadow: var(--shadow-on-light-l); }
+.shadow-on-light-xl { box-shadow: var(--shadow-on-light-xl); }
+.shadow-on-dark-s   { box-shadow: var(--shadow-on-dark-s); }
+.shadow-on-dark-m   { box-shadow: var(--shadow-on-dark-m); }
+.shadow-on-dark-l   { box-shadow: var(--shadow-on-dark-l); }
+.shadow-on-dark-xl  { box-shadow: var(--shadow-on-dark-xl); }
+
+.backdrop-blur-s { backdrop-filter: blur(var(--blur-s)); }
+.backdrop-blur-m { backdrop-filter: blur(var(--blur-m)); }
+.backdrop-blur-l { backdrop-filter: blur(var(--blur-l)); }
