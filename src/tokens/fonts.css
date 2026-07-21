@@ -1,0 +1,98 @@
+/* @font-face — webfonts del proyecto (servidas desde /public/fonts).
+   Familias confirmadas en Figma: Euclid Circular B (sans) y SangBleu Empire (serif).
+   Otros cortes SangBleu (Kingdom, Republic, Sunrise, Versailles) se añaden bajo
+   demanda cuando los tokens de tipografía confirmen su uso. */
+
+/* ---------- Euclid Circular B (sans) ---------- */
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Light.woff2') format('woff2');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-LightItalic.woff2') format('woff2');
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-MediumItalic.woff2') format('woff2');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/euclid-circular-b/EuclidCircularB-BoldItalic.woff2') format('woff2');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+/* ---------- SangBleu Empire (serif) ---------- */
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-RegularItalic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-MediumItalic.woff2') format('woff2');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-BoldItalic.woff2') format('woff2');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-Black.woff2') format('woff2');
+  font-weight: 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'SangBleu Empire';
+  src: url('/fonts/sangbleu-empire/SangBleuEmpire-BlackItalic.woff2') format('woff2');
+  font-weight: 900; font-style: italic; font-display: swap;
+}
