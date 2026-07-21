@@ -3,6 +3,7 @@
 @import "./tokens/primitives.css";
 @import "./tokens/responsive.css";
 @import "./tokens/semantic-color.css";
+@import "./tokens/semantic-color-button.css";
 @import "./tokens/typography.css";
 @import "./tokens/grid.css";
 @import "./tokens/effects.css";

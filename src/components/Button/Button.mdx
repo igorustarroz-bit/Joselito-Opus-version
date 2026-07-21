@@ -1,0 +1,50 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Button.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI02-Button
+
+Botón principal del sistema. Según Figma hay **tres tipos** con usos distintos
+(Primary/Secondary/Terciary), tamaños **XS–L** y estados hover/focus/selected/disabled.
+Es **rectangular** (sin radio) y el texto va en **mayúsculas** (estilo CTA, 14/18, tracking 0.5px).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Tipos
+
+<Canvas of={Stories.Tipos} />
+
+## Tamaños
+
+Alturas: XS 40 · S 48 · M 56 · L 64. Padding y ancho mínimo por tamaño (tokens `--btn-<size>-*`).
+
+<Canvas of={Stories.Tamaños} />
+
+## Con iconos
+
+<Canvas of={Stories.ConIconos} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Tokens
+
+Colores desde `--btn-<tipo>-<estado>-<fill|text|stroke|icon>` (grupo Button de Semantic-Color,
+adaptados por subtema). Tamaños desde `--btn-<size>-{size,padding,min-width}` (colección Responsive).
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `type` | `primary \| secondary \| terciary` | `primary` | Tipo de botón |
+| `size` | `xs \| s \| m \| l` | `m` | Tamaño |
+| `selected` | `boolean` | `false` | Estado seleccionado |
+| `disabled` | `boolean` | `false` | Deshabilitado |
+| `iconLeft` / `iconRight` | `string` | — | Nombre de icono (ver Icon) |
+| `children` | `node` | — | Texto del botón |

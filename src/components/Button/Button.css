@@ -1,0 +1,54 @@
+/* UI02-Button — pixel-perfect desde Figma.
+   Rectangular (sin radio), texto CTA en mayúsculas (14/18, letter-spacing 0.5px).
+   Colores por tipo/estado desde --btn-*; tamaños desde --btn-<size>-*. */
+
+.jl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2); /* 8px */
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-cta);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--letter-spacing-cta);
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.jl-btn__icon { display: inline-flex; color: var(--_ic); flex-shrink: 0; }
+
+/* Tamaños */
+.jl-btn--xs { height: var(--btn-xs-size); padding-inline: var(--btn-xs-padding); min-width: var(--btn-xs-min-width); }
+.jl-btn--s  { height: var(--btn-s-size);  padding-inline: var(--btn-s-padding);  min-width: var(--btn-s-min-width); }
+.jl-btn--m  { height: var(--btn-m-size);  padding-inline: var(--btn-m-padding);  min-width: var(--btn-m-min-width); }
+.jl-btn--l  { height: var(--btn-l-size);  padding-inline: var(--btn-l-padding);  min-width: var(--btn-l-min-width); }
+.jl-btn--xl { height: var(--btn-xl-size); padding-inline: var(--btn-xl-padding); min-width: var(--btn-xl-min-width); }
+
+/* ---- Primary ---- */
+.jl-btn--primary { background: var(--btn-primary-default-fill); color: var(--btn-primary-default-text); border-color: var(--btn-primary-default-stroke); --_ic: var(--btn-primary-default-icon); }
+.jl-btn--primary:hover:not(:disabled) { background: var(--btn-primary-hover-fill); color: var(--btn-primary-hover-text); border-color: var(--btn-primary-hover-stroke); --_ic: var(--btn-primary-hover-icon); }
+.jl-btn--primary:focus-visible { background: var(--btn-primary-focused-fill); color: var(--btn-primary-focused-text); border-color: var(--btn-primary-focused-stroke); --_ic: var(--btn-primary-focused-icon); outline: none; }
+.jl-btn--primary[data-selected="true"] { background: var(--btn-primary-selected-fill); color: var(--btn-primary-selected-text); border-color: var(--btn-primary-selected-stroke); --_ic: var(--btn-primary-selected-icon); }
+.jl-btn--primary:disabled { background: var(--btn-primary-disabled-fill); color: var(--btn-primary-disabled-text); border-color: var(--btn-primary-disabled-stroke); --_ic: var(--btn-primary-disabled-icon); }
+
+/* ---- Secondary ---- */
+.jl-btn--secondary { background: var(--btn-secondary-default-fill); color: var(--btn-secondary-default-text); border-color: var(--btn-secondary-default-stroke); --_ic: var(--btn-secondary-default-icon); }
+.jl-btn--secondary:hover:not(:disabled) { background: var(--btn-secondary-hover-fill); color: var(--btn-secondary-hover-text); border-color: var(--btn-secondary-hover-stroke); --_ic: var(--btn-secondary-hover-icon); }
+.jl-btn--secondary:focus-visible { background: var(--btn-secondary-focused-fill); color: var(--btn-secondary-focused-text); border-color: var(--btn-secondary-focused-stroke); --_ic: var(--btn-secondary-focused-icon); outline: none; }
+.jl-btn--secondary[data-selected="true"] { background: var(--btn-secondary-selected-fill); color: var(--btn-secondary-selected-text); border-color: var(--btn-secondary-selected-stroke); --_ic: var(--btn-secondary-selected-icon); }
+.jl-btn--secondary:disabled { background: var(--btn-secondary-disabled-fill); color: var(--btn-secondary-disabled-text); border-color: var(--btn-secondary-disabled-stroke); --_ic: var(--btn-secondary-disabled-icon); }
+
+/* ---- Terciary ---- */
+.jl-btn--terciary { background: var(--btn-terciary-default-fill); color: var(--btn-terciary-default-text); border-color: var(--btn-terciary-default-stroke); --_ic: var(--btn-terciary-default-icon); }
+.jl-btn--terciary:hover:not(:disabled) { background: var(--btn-terciary-hover-fill); color: var(--btn-terciary-hover-text); border-color: var(--btn-terciary-hover-stroke); --_ic: var(--btn-terciary-hover-icon); }
+.jl-btn--terciary:focus-visible { background: var(--btn-terciary-focused-fill); color: var(--btn-terciary-focused-text); border-color: var(--btn-terciary-focused-stroke); --_ic: var(--btn-terciary-focused-icon); outline: none; }
+.jl-btn--terciary[data-selected="true"] { background: var(--btn-terciary-selected-fill); color: var(--btn-terciary-selected-text); border-color: var(--btn-terciary-selected-stroke); --_ic: var(--btn-terciary-selected-icon); }
+.jl-btn--terciary:disabled { background: var(--btn-terciary-disabled-fill); color: var(--btn-terciary-disabled-text); border-color: var(--btn-terciary-disabled-stroke); --_ic: var(--btn-terciary-disabled-icon); }
+
+.jl-btn:disabled { cursor: not-allowed; }

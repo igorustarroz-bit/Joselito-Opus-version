@@ -52,7 +52,7 @@ Bases / fragments:
 
 Componentes UI:
 - [ ] UI01-Nav-Button — `id 57943:37204`
-- [ ] UI02-Button (Primary/Secondary/Terciary · XS-L · estados) — `id 49038:9189`
+- [x] UI02-Button (Primary/Secondary/Terciary · XS-L · estados) — componente + CSS estados + colores 5 subtemas + doc
 - [ ] UI03-Button-Icon — `id 49038:9364`
 - [ ] UI04-Button-Action-Link — `id 49038:9486`
 - [ ] UI05-Tabs — `id 57943:45783`
