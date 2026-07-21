@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './BrandLogo.stories.jsx';
+
+<Meta of={Stories} />
+
+# Brand Logo
+
+Logo de **Joselito** (página Brand Assets de Figma). Dos variantes: lockup **horizontal**
+(wordmark + isotipo) e **isotipo** (marca circular del morro).
+
+El color se aplica por `currentColor`, por lo que el logo se adapta al subtema (p. ej. blanco
+sobre fondo oscuro). El tamaño se controla con `height` (ancho proporcional).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Variantes
+
+<Canvas of={Stories.Variantes} />
+
+## Sobre distintos fondos
+
+<Canvas of={Stories.SobreFondo} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `variant` | `horizontal \| isotipo` | `horizontal` | Lockup completo o solo isotipo |
+| `height` | `number` | `40` | Altura en px (ancho automático) |
+| `color` | `string` | — | Color (por defecto `currentColor`) |
+| `title` | `string` | `Joselito` | Texto accesible |
+
+> El "Logo Grid" de Figma es el diagrama de construcción (guías de espaciado), no un
+> componente de uso; queda como referencia de diseño.
