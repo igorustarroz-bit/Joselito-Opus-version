@@ -6,19 +6,21 @@ import * as Stories from './ListCharacteristics.stories';
 # ListCharacteristics (módulo)
 
 ## Intro
-Rejilla de características (List / Characteristics): icono + título + descripción.
+
+List / Characteristics (fiel al master): cabecera (Title/04) + rejilla de características con número (Body/06), título (Title/01) y texto (Body/05).
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
-## Comportamiento responsive
-1 columna en móvil; 2–4 desde M/LG según `columns`.
-
 ## Tokens
-Icono en `--stroke-accent-base`; títulos `type-title-2`; texto `--text-neutral-1`.
+
+Número `type-body-6` (`--text-neutral-1`), título `type-title-1`, texto `type-body-5`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Icon, Title; List/Numbers.
+
+Title; List/Numbers.
