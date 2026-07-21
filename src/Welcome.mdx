@@ -1,0 +1,26 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introducción" />
+
+# Joselito — Design System
+
+Versión en código del design system de **Joselito**, reproducida _pixel perfect_ a partir
+del fichero de Figma (Joselito-Library). La estética la define el Figma; el código solo la traduce.
+
+## Estructura
+
+El sistema se organiza en cuatro capas, de más atómica a más compuesta:
+
+| Capa | Descripción | Ejemplos |
+| --- | --- | --- |
+| **Tokens** | Colores, tipografías, espaciados, breakpoints | `color/semantic/*`, `spacing/*` |
+| **Componentes** | Piezas reutilizables | Button, Tag, Tabs, Toggle |
+| **Módulos** | Contenedores a 100% del ancho (grid 12 col) | Header, Footer, Hero |
+| **Page Templates** | Composición de módulos en páginas | Home, Origen, Compromisos |
+
+## Principios
+
+- Sin valores _hardcodeados_: todo viene de tokens o subcomponentes.
+- Responsive con grid de 12 columnas y breakpoints de las variables de Figma.
+- Subtemas (modos de Semantic-Color) vía `data-theme`.
+- Animaciones con GSAP.

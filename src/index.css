@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/*
+  Tailwind CSS v4 — configuración CSS-first.
+  Los tokens del design system (colores, tipografías, espaciados, breakpoints)
+  se definirán aquí con @theme a partir de las variables de Figma.
+  La estética la define el Figma, NO los valores por defecto de Tailwind.
+
+  @theme {
+    --color-...: ...;
+    --font-...: ...;
+    --spacing-...: ...;
+    --breakpoint-...: ...;
+  }
+*/

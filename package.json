@@ -1,0 +1,33 @@
+{
+  "name": "joselito-opus-version",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Joselito Design System — versión en código (React + Tailwind + GSAP + Storybook)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.5.3",
+    "@storybook/react-vite": "^10.5.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "remark-gfm": "^4.0.1",
+    "storybook": "^10.5.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.1.5",
+    "vite-plugin-svgr": "^5.2.0"
+  }
+}
