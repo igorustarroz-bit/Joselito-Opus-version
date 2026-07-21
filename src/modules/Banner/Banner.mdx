@@ -6,24 +6,21 @@ import * as Stories from './Banner.stories';
 # Banner (módulo)
 
 ## Intro
-Franja de llamada a la acción (Banners / Section banner) a 100% del viewport, centrada, con título, texto y botones.
+
+Banners / Section banner (fiel al master): cabecera (título + "ver todos") + bloque de medios a sangre con overlay y una tarjeta blanca superpuesta (título, texto, botón).
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
-## Subtemas
-Usa un tema propio (`data-theme`); por defecto el de marca.
-
-<Canvas of={Stories.Neutro} />
-
-## Comportamiento responsive
-Contenido centrado a 8 columnas desde M; ancho completo en móvil.
-
 ## Tokens
-`.grid-12`, espaciados `--space-*`, colores semánticos; botones con sus tokens.
+
+Cabecera `type-body-4`/`type-body-3`; tarjeta `type-title-2` + `type-body-3`; overlay `--bg-overlay`; botón terciario.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Title, Button, SectionHero.
+
+Title, Button, Icon, AspectRatio.

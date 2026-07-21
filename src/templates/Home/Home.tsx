@@ -28,7 +28,7 @@ export function Home() {
           <CardProduct key={n} category="Ibéricos" name={n} price="—" image={grad('#481815', '#e23f36')} />
         ))}
       </CardsProductCarousel>
-      <Banner title="Descubre nuestras colecciones premium" description="Ediciones limitadas para las mejores ocasiones." actions={[{ label: 'Ver colecciones' }, { label: 'Contactar', variant: 'secondary' }]} />
+      <Banner sectionTitle="Colecciones" image={grad('#260200', '#e23f36')} title="Descubre nuestras colecciones premium" description="Ediciones limitadas para las mejores ocasiones." ctaLabel="Ver colecciones" />
       <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
   );

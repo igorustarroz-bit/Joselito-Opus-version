@@ -1,2 +1,2 @@
 export { Banner, default } from './Banner';
-export type { BannerProps, BannerAction } from './Banner';
+export type { BannerProps } from './Banner';

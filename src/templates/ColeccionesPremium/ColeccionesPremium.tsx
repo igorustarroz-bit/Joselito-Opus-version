@@ -25,7 +25,7 @@ export function ColeccionesPremium() {
           <CardProduct key={n} category="Premium" name={n} price="—" badge="Limitado" image={grad('#260200', '#e23f36')} />
         ))}
       </CardsProductCarousel>
-      <Banner title="¿Necesitas asesoramiento?" description="Nuestro equipo te ayuda a elegir la pieza perfecta." actions={[{ label: 'Contactar' }]} theme="dark-black-neutral" />
+      <Banner sectionTitle="Contacto" image={grad('#0a0a0a', '#481815')} title="¿Necesitas asesoramiento?" description="Nuestro equipo te ayuda a elegir la pieza perfecta." ctaLabel="Contactar" />
       <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
   );

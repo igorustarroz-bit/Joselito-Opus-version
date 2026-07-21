@@ -29,7 +29,7 @@ export function Excelencia() {
         { cells: ['2018', 'Gran cosecha de bellota', '46 meses'], href: '#' },
         { cells: ['2017', 'Clima ideal de montanera', '44 meses'], href: '#' },
       ]} />
-      <Banner title="Aprende a cortar como un profesional" description="Descarga nuestro manual de corte." actions={[{ label: 'Descargar manual' }]} />
+      <Banner sectionTitle="Manual de corte" image={grad('#481815', '#e23f36')} title="Aprende a cortar como un profesional" description="Descarga nuestro manual de corte." ctaLabel="Descargar manual" />
       <Footer brand={<BrandLogo variant="isotype" height={48} />} columns={footerColumns} social={social} copyright={copyright} />
     </div>
   );
