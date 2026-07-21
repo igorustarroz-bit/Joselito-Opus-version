@@ -16,9 +16,9 @@ export function Compromisos() {
       <Navigation brand={<BrandLogo height={36} />} items={navItems} />
       <SectionHeader backLabel="Inicio" title="Un compromiso con la naturaleza" description="Sostenibilidad, bienestar animal y salud guían todo lo que hacemos." />
       <ListCharacteristics heading="Nuestros pilares" theme="light-grey" items={[
-        { icon: 'Recycle', title: 'Sostenibilidad', description: 'Gestión responsable de la dehesa.' },
-        { icon: 'HandHeart', title: 'Happy Pigs', description: 'Cerdos criados en libertad y sin estrés.' },
-        { icon: 'Microscope', title: 'Salud', description: 'Grasa infiltrada rica en ácido oleico.' },
+        { num: '01', title: 'Sostenibilidad', text: 'Gestión responsable de la dehesa.' },
+        { num: '02', title: 'Happy Pigs', text: 'Cerdos criados en libertad y sin estrés.' },
+        { num: '03', title: 'Salud', text: 'Grasa infiltrada rica en ácido oleico.' },
       ]} />
       <ContentTextImage label="Sostenibilidad" title="Cuidamos la dehesa" body={<p style={{ margin: 0 }}>Un ecosistema que preservamos para las próximas generaciones.</p>} ctaLabel="Nuestro compromiso" image={grad('#373a2c', '#9ba084')} />
       <CardsAccordion heading="Preguntas frecuentes" items={[
