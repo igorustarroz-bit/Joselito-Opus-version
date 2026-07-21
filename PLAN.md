@@ -62,7 +62,7 @@ Componentes UI:
 - [ ] UI09-Checkbox-Label — `id 43246:12097`
 - [ ] UI10-Checkboxes-Radios — `id 49722:19804`
 - [ ] UI11-Form — `id 57947:46433`
-- [ ] UI12-Tag — `id 49723:4763`
+- [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc
 - [ ] UI13-Accordion — `id 57943:46123`
 - [ ] UI14-Placeholder-Text — `id 57961:792`
 - [ ] Card Product — `id 58163:83839`

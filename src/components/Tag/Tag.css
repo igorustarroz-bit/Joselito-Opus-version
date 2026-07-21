@@ -1,0 +1,24 @@
+/* UI12-Tag — etiqueta. Tipos Transaction/New/Aseptic, tamaños L/XS.
+   Texto Label en mayúsculas. Rectangular. Colores desde semánticos generales. */
+
+.jl-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-family: var(--font-family-label);
+  font-weight: var(--font-weight-label);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Tamaños */
+.jl-tag--l  { padding: 10px 8px; font-size: var(--ts-label-2-sz); line-height: var(--ts-label-2-lh); }
+.jl-tag--xs { padding: 8px;      font-size: var(--ts-label-1-sz); line-height: var(--ts-label-1-lh); }
+
+/* Tipos */
+.jl-tag--transaction { background: var(--bg-base); border-color: var(--stroke-neutral-3); color: var(--text-neutral-1); }
+.jl-tag--new         { background: var(--bg-accent-base); color: var(--text-inverted); }
+.jl-tag--aseptic     { background: transparent; border-color: var(--stroke-neutral-3); color: var(--text-neutral-1); }

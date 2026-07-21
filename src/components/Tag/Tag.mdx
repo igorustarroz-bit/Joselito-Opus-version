@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Tag.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI12-Tag
+
+Etiqueta para destacar estados o categorías. Tres tipos y dos tamaños; texto en
+mayúsculas (estilo Label). Rectangular.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Tipos
+
+`transaction` (fondo base + borde), `new` (acento rojo, texto invertido), `aseptic` (solo borde).
+
+<Canvas of={Stories.Tipos} />
+
+## Tamaños
+
+L (texto Label-2, 12/16) · XS (texto Label-1, 10/14).
+
+<Canvas of={Stories.Tamaños} />
+
+## Tokens
+
+Colores desde semánticos generales: `--bg-base`, `--bg-accent-base`, `--stroke-neutral-3`,
+`--text-neutral-1`, `--text-inverted`. Adaptan por subtema.
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `type` | `transaction \| new \| aseptic` | `transaction` | Tipo de etiqueta |
+| `size` | `l \| xs` | `l` | Tamaño |
+| `children` | `node` | `Label` | Texto |
