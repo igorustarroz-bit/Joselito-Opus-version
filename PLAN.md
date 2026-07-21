@@ -13,8 +13,9 @@ Cada elemento, al programarse, se lee de Figma con `get_design_context`, se trad
 - [x] Scaffold: React 19 + Vite 8 + Tailwind v4 + GSAP + Storybook 10 (verificado con build)
 - [x] Validar acceso a Figma MCP (librería no publicada → `use_figma`)
 - [x] Generar `CONTEXT.md` y `PLAN.md`
-- [ ] Convertir fuentes `fonts-raw/` → `.woff2` en `public/fonts/` + `@font-face` (Euclid Circular B, SangBleu Empire)
-- [ ] Commit + push inicial a GitHub; activar GitHub Pages (Actions)
+- [x] Convertir fuentes `fonts-raw/` → `.woff2` en `public/fonts/` + `@font-face` (Euclid Circular B, SangBleu Empire) — otros cortes SangBleu (Kingdom/Republic/Sunrise/Versailles) pendientes de confirmar uso
+- [x] Commit + push inicial a GitHub
+- [ ] Activar GitHub Pages (Settings → Pages → Source: GitHub Actions)
 
 ## Fase 1 — Tokens / Foundations (PRIORITARIO, antes de cualquier componente)
 
