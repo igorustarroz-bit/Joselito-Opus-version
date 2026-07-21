@@ -33,8 +33,8 @@ Docs por token (Storybook): Intro · Demo · Tokens.
 
 ## Fase 2 — Brand Assets
 
-- [ ] **Icons** — set completo (~140 iconos, SVGR, color por `currentColor`). Ningún componente usará iconos fuera de esta lista.
-- [ ] **Icon Sizer** (XXS · XS · S · M · L) — `id 49026:6521`
+- [x] **Icons** — 132 iconos SVGR (`currentColor`) en `src/assets/icons` + componente `Icon` con carga automática + galería
+- [x] **Icon Sizer** (XXS 12 · XS 16 · S 20 · M 24 · L 32) — integrado en el componente `Icon` (prop `size`)
 - [ ] **Brand Logo** (Horizontal Sí/No) — `id 58073:6883`
 - [ ] **Logo Grid** (Horizontal/Square) — `id 51027:8208`
 - [ ] ⚠️ Logos de terceros (UFV, Riu, Accenture, BBVA...) — **confirmar alcance** antes de programar (probablemente fuera de alcance)
