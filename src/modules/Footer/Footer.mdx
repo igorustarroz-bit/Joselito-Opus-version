@@ -6,24 +6,27 @@ import * as Stories from './Footer.stories';
 # Footer (módulo)
 
 ## Intro
-Pie de página (Navigation / Footer) a 100% del viewport: marca, columnas de enlaces, social y copyright.
+
+Navigation / Footer (fiel al master): tres zonas — columnas de enlaces, banda central (newsletter + isotipo + columnas + redes) y barra inferior (copyright · legales · idioma).
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
 ## Subtemas
-Tema propio (`data-theme`); oscuro por defecto. Un bloque hijo puede sobreescribir el tema.
 
-<Canvas of={Stories.Claro} />
+Tema propio (`data-theme`); claro por defecto (como el master).
 
-## Comportamiento responsive
-Marca a 4 columnas + columnas de enlaces a 2 (desde M). En móvil se apilan (enlaces a 6 columnas = 2 por fila).
+<Canvas of={Stories.Oscuro} />
 
 ## Tokens
-`.grid-12`, espaciados `--space-*`, colores semánticos; iconos con `currentColor`.
+
+Encabezados `type-body-2`, enlaces `type-body-3` (`--text-neutral-1`), título newsletter `type-title-3`, bordes `--stroke-neutral-4`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Icon, NavButton, ActionLink.
+
+BrandLogo, Icon, Title.
