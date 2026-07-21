@@ -6,19 +6,21 @@ import * as Stories from './ListNumbers.stories';
 # ListNumbers (módulo)
 
 ## Intro
-Lista de pasos/hitos (List / Numbers) con número destacado, título y descripción.
+
+List / Numbers (fiel al master): cabecera + filas con un valor grande (Title/05, serif) y una descripción (Body/05), con filete superior.
 
 ## Demo
+
 <Canvas of={Stories.Default} />
 
-## Comportamiento responsive
-1 columna en móvil; 2–3 desde M/LG según `columns`.
-
 ## Tokens
-Número `type-title-7` en `--text-accent-base`; borde `--stroke-neutral-3`.
+
+Valor `type-title-5`; descripción `type-body-5`; filete `--stroke-neutral-2`; cabecera `type-title-1`.
 
 ## Propiedades
+
 <Controls of={Stories.Default} />
 
 ## Componentes relacionados
-Title; List/Characteristics, List/Timeline.
+
+List/Characteristics, List/Timeline.

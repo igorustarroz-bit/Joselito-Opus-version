@@ -2,18 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ListNumbers } from './ListNumbers';
 
 const items = [
-  { title: 'Crianza', description: 'Cerdos 100% ibéricos criados en libertad en la dehesa.' },
-  { title: 'Montanera', description: 'Alimentación a base de bellota durante los meses clave.' },
-  { title: 'Curación', description: 'Entre 36 y 48 meses de curación natural.' },
+  { value: '24% Vitamina B', description: 'de la cantidad diaria recomendada.' },
+  { value: '48 meses', description: 'de curación natural en bodega.' },
+  { value: '100% ibérico', description: 'de bellota, criado en libertad.' },
 ];
 
 const meta = {
   title: 'Módulos/ListNumbers',
   component: ListNumbers,
   parameters: { layout: 'fullscreen' },
-  argTypes: { columns: { control: 'inline-radio', options: [1,2,3] } },
-  args: { heading: 'Nuestro proceso', items, columns: 3 },
+  argTypes: { theme: { control: 'select', options: ['light-white','light-grey','dark-red-primary','dark-black-neutral','light-yellow'] } },
+  args: { heading: 'This is a title', items, theme: 'light-white' },
 } satisfies Meta<typeof ListNumbers>;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -19,9 +19,9 @@ export function Excelencia() {
       <SecondaryMenu items={[{ label: 'Añadas' }, { label: 'Curación', active: true }, { label: 'Manual de corte' }]} />
       <SectionHeader backLabel="Origen" title="Un proceso paciente" description="Cada pieza se cura de forma natural durante años hasta alcanzar su punto óptimo." />
       <ListNumbers heading="Nuestro proceso" theme="light-grey" items={[
-        { title: 'Crianza', description: 'Cerdos 100% ibéricos en libertad.' },
-        { title: 'Montanera', description: 'Alimentación a base de bellota.' },
-        { title: 'Curación', description: 'Entre 36 y 48 meses.' },
+        { value: 'Crianza', description: 'Cerdos 100% ibéricos en libertad.' },
+        { value: 'Montanera', description: 'Alimentación a base de bellota.' },
+        { value: 'Curación', description: 'Entre 36 y 48 meses.' },
       ]} />
       <ContentTextImage type="right" label="Curación" title="El tiempo como aliado" body={<p style={{ margin: 0 }}>Las bodegas naturales marcan el ritmo de una curación lenta y precisa.</p>} ctaLabel="Ver añadas" image={grad('#481815', '#e23f36')} />
       <ListArchiveTable columns={['Añada', 'Descripción', 'Curación']} rows={[
