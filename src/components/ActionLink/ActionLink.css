@@ -1,0 +1,30 @@
+/* UI04-Button-Action-Link — enlace de acción: texto CTA en mayúsculas con
+   subrayado (borde inferior) e iconos opcionales. El subrayado sigue al color. */
+
+.jl-actionlink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-cta);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--letter-spacing-cta);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color .15s;
+
+  color: var(--btn-link-default-text);
+  --_ic: var(--btn-link-default-icon);
+}
+.jl-actionlink__icon { display: inline-flex; color: var(--_ic); flex-shrink: 0; }
+
+.jl-actionlink:hover:not(:disabled) { color: var(--btn-link-hover-text); --_ic: var(--btn-link-hover-icon); }
+.jl-actionlink:focus-visible { color: var(--btn-link-focused-text); --_ic: var(--btn-link-focused-icon); outline: none; }
+.jl-actionlink:disabled { color: var(--btn-link-disabled-text); --_ic: var(--btn-link-disabled-icon); cursor: not-allowed; }

@@ -1,0 +1,40 @@
+/* SEMANTIC-COLOR · Action Link (grupo Button/Link Primary de Semantic-Color)
+   UI04-Button-Action-Link: Default/Hover/Focused/Disabled. Por subtema.
+   light-yellow hereda de :root. */
+
+:root {
+  --btn-link-default-text: var(--color-neutral-10);
+  --btn-link-default-icon: var(--color-primary-10);
+  --btn-link-hover-text: var(--color-opacity-black-60);
+  --btn-link-hover-icon: var(--color-opacity-black-60);
+  --btn-link-focused-text: var(--color-neutral-black);
+  --btn-link-focused-icon: var(--color-neutral-black);
+  --btn-link-disabled-text: var(--color-opacity-black-80);
+  --btn-link-disabled-icon: var(--color-opacity-black-80);
+}
+
+[data-theme="light-grey"] {
+  --btn-link-default-text: var(--color-primary-10);
+}
+
+[data-theme="dark-red-primary"] {
+  --btn-link-default-text: var(--color-neutral-white);
+  --btn-link-default-icon: var(--color-neutral-white);
+  --btn-link-hover-text: var(--color-primary-20);
+  --btn-link-hover-icon: var(--color-primary-20);
+  --btn-link-focused-text: var(--color-neutral-white);
+  --btn-link-focused-icon: var(--color-neutral-white);
+  --btn-link-disabled-text: var(--color-opacity-white-60);
+  --btn-link-disabled-icon: var(--color-opacity-white-60);
+}
+
+[data-theme="dark-black-neutral"] {
+  --btn-link-default-text: var(--color-neutral-white);
+  --btn-link-default-icon: var(--color-neutral-white);
+  --btn-link-hover-text: var(--color-primary-50);
+  --btn-link-hover-icon: var(--color-primary-50);
+  --btn-link-focused-text: var(--color-neutral-white);
+  --btn-link-focused-icon: var(--color-neutral-white);
+  --btn-link-disabled-text: var(--color-opacity-white-80);
+  --btn-link-disabled-icon: var(--color-opacity-white-80);
+}

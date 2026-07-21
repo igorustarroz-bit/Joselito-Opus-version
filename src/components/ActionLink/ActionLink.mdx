@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ActionLink.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI04-Button-Action-Link
+
+Enlace de acción: texto CTA en mayúsculas con **subrayado** (borde inferior) e iconos
+opcionales. El color y el subrayado se adaptan al estado (hover/focus/disabled) y al subtema.
+Renderiza `<a>` si recibe `href`, si no un `<button>`.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Con iconos
+
+<Canvas of={Stories.ConIconos} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Tokens
+
+Colores desde `--btn-link-<estado>-<text|icon>` (grupo Button/Link Primary, por subtema).
+Texto CTA (14/18, mayúsculas, tracking 0.5px). Subrayado con `currentColor`.
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `href` | `string` | — | Si se indica, renderiza `<a>` |
+| `disabled` | `boolean` | `false` | Deshabilitado |
+| `iconLeft` / `iconRight` | `string` | — | Iconos |
+| `children` | `node` | `Button` | Texto |
