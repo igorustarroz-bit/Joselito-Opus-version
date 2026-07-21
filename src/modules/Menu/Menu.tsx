@@ -1,49 +1,69 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
-import { ButtonIcon } from '@/components/ButtonIcon';
 import { Icon } from '@/components/Icon';
+import { ActionLink } from '@/components/ActionLink';
+import { AspectRatio } from '@/components/AspectRatio';
 import type { ThemeName } from '@/modules/SectionHero';
 
-export interface MenuLink { label: ReactNode; href?: string; }
+export interface MenuItem { label: ReactNode; href?: string; active?: boolean; }
+export interface MenuPromo { title: ReactNode; description?: ReactNode; linkLabel?: string; linkHref?: string; }
 
 export interface MenuProps {
   open?: boolean;
-  onClose?: () => void;
-  brand?: ReactNode;
-  links?: MenuLink[];
-  secondary?: MenuLink[];
-  footer?: ReactNode;
+  /** Columna de categorías (el activo se resalta con flecha). */
+  items?: MenuItem[];
+  /** Imagen destacada del panel. */
+  image?: ReactNode;
+  /** Bloque promocional a la derecha. */
+  promo?: MenuPromo;
   theme?: ThemeName;
   className?: string;
 }
 
 /**
- * Módulo Menu — panel de navegación a pantalla completa (overlay) para móvil.
- * Enlaces primarios grandes + secundarios + zona de pie. Tema oscuro por defecto.
+ * Módulo Menu (fiel al master) — mega-menú desplegable: columna de categorías
+ * (el item activo en negro con flecha, el resto atenuados) + imagen destacada +
+ * bloque promocional con enlace "descubre más". Se muestra bajo la Navigation.
  */
-export function Menu({ open = true, onClose, brand, links = [], secondary = [], footer, theme = 'dark-black-neutral', className }: MenuProps) {
+export function Menu({ open = true, items = [], image, promo, theme = 'light-white', className }: MenuProps) {
   if (!open) return null;
   return (
-    <div data-theme={theme} role="dialog" aria-modal="true" aria-label="Menú" className={cn('fixed inset-0 z-50 flex flex-col bg-(--bg-base) text-(--text-base)', className)}>
-      <div className="grid-wrapper flex h-20 items-center justify-between">
-        <div className="type-title-3">{brand}</div>
-        <ButtonIcon variant="terciary" size="s" label="Cerrar menú" icon={<Icon name="X" size="s" />} onClick={onClose} />
-      </div>
-      <nav className="grid-wrapper flex flex-1 flex-col justify-center gap-fx-4" aria-label="Menú principal">
-        {links.map((l, i) => (
-          <a key={i} href={l.href ?? '#'} className="type-title-6 text-(--text-base) no-underline hover:text-(--text-hover)">{l.label}</a>
-        ))}
-      </nav>
-      {(secondary.length > 0 || footer) && (
-        <div className="grid-wrapper flex flex-wrap items-center justify-between gap-fx-4 border-t border-(--stroke-neutral-3) py-(--space-8)">
-          <div className="flex flex-wrap gap-fx-4">
-            {secondary.map((l, i) => (
-              <a key={i} href={l.href ?? '#'} className="type-body-3 text-(--text-neutral-1) no-underline hover:text-(--text-hover)">{l.label}</a>
+    <div data-theme={theme} className={cn('w-full bg-(--bg-base) text-(--text-base)', className)}>
+      <div className="grid-wrapper flex flex-col items-start justify-between gap-(--space-8) py-(--space-8) m:flex-row">
+        <div className="flex w-full flex-col gap-(--space-8) m:w-auto m:flex-row m:gap-(--space-9)">
+          <ul className="flex w-full flex-col gap-fx-1 m:w-[315px] m-0 p-0 list-none">
+            {items.map((it, i) => (
+              <li key={i}>
+                <a
+                  href={it.href ?? '#'}
+                  aria-current={it.active ? 'true' : undefined}
+                  className={cn(
+                    'type-body-2 inline-flex items-center gap-fx-1 no-underline',
+                    it.active ? 'text-(--text-base)' : 'text-(--text-neutral-3) hover:text-(--text-base)',
+                  )}
+                >
+                  {it.active && <Icon name="ArrowRight" size="xs" />}
+                  {it.label}
+                </a>
+              </li>
             ))}
-          </div>
-          {footer}
+          </ul>
+          {image && (
+            <div className="w-full m:w-[315px]">
+              <AspectRatio ratio="3:4" className="bg-(--bg-neutral-1)">{image}</AspectRatio>
+            </div>
+          )}
         </div>
-      )}
+        {promo && (
+          <div className="flex w-full flex-col gap-fx-6 m:w-[316px]">
+            <div className="flex flex-col gap-fx-2">
+              <p className="type-body-2 m-0 text-(--text-base)">{promo.title}</p>
+              {promo.description && <p className="type-body-2 m-0 text-(--text-neutral-2)">{promo.description}</p>}
+            </div>
+            {promo.linkLabel && <ActionLink href={promo.linkHref ?? '#'} size="s" className="self-start">{promo.linkLabel}</ActionLink>}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

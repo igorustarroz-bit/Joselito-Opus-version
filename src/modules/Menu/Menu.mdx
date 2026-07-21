@@ -7,34 +7,20 @@ import * as Stories from './Menu.stories';
 
 ## Intro
 
-Panel de navegación a pantalla completa (Menu) para móvil: enlaces primarios grandes, secundarios y pie.
+Menu (fiel al master): mega-menú desplegable con columna de categorías (el activo en negro con flecha, el resto atenuados), imagen destacada y bloque promocional con enlace "descubre más". Se muestra bajo la Navigation.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-## Subtemas
-
-Tema propio (`data-theme`), oscuro por defecto.
-
-<Canvas of={Stories.Marca} />
-
-## Comportamiento
-
-`open` controla la visibilidad; `onClose` cierra. Overlay fijo con `role="dialog"`.
-
 ## Tokens
 
-`.grid-wrapper`, `type-title-6` (enlaces), colores semánticos.
+Enlaces `type-body-2` (`--text-neutral-3` inactivos / `--text-base` activo); promo `type-body-2`; enlace ActionLink.
 
 ## Propiedades
 
 <Controls of={Stories.Default} />
 
-## Accesibilidad
-
-`role="dialog"` + `aria-modal`; botón de cierre con `aria-label`.
-
 ## Componentes relacionados
 
-Navigation, NavButton, ButtonIcon.
+Navigation, ActionLink, AspectRatio, Icon.
