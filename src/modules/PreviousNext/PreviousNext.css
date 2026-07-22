@@ -1,0 +1,38 @@
+/* Módulo Navigation/PreviousNext — navegación anterior/siguiente a 100% ancho.
+   Mobile: apilado (2 filas). Desktop (>=768): en fila con separador central. */
+
+.jl-prevnext {
+  width: 100%;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--stroke-neutral-3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.jl-prevnext__half {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer-fx-8);
+  padding: 40px var(--spacer-fx-6);
+  width: 100%;
+}
+.jl-prevnext__half--prev { border-bottom: 1px solid var(--stroke-neutral-3); }
+.jl-prevnext__half--next { justify-content: flex-end; }
+.jl-prevnext__half--next .jl-prevnext__text { align-items: flex-end; text-align: right; }
+
+.jl-prevnext__btn {
+  width: 56px; height: 56px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg-base); border: 1px solid var(--stroke-neutral-2);
+  cursor: pointer; color: var(--text-base);
+}
+.jl-prevnext__text { display: flex; flex-direction: column; gap: var(--sp-2); flex: 1 0 0; min-width: 0; }
+.jl-prevnext__label { color: var(--text-neutral-2); text-transform: uppercase; margin: 0; }
+.jl-prevnext__title { color: var(--text-base); margin: 0; }
+
+@media (min-width: 768px) {
+  .jl-prevnext { flex-direction: row; padding-inline: 40px; }
+  .jl-prevnext__half { flex: 1 0 0; min-width: 0; padding: 80px 0; gap: 48px; }
+  .jl-prevnext__half--prev { border-bottom: 0; border-right: 1px solid var(--stroke-neutral-3); }
+  .jl-prevnext__btn { width: 64px; height: 64px; }
+}

@@ -77,7 +77,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [ ] Navigation (main) — `id 58182:4143`
 - [ ] Navigation / Secondary menu — `id 58084:30030`
 - [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
-- [ ] Navigation / PreviousNext — `id 58084:30111`
+- [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc
 - [ ] Navigation / Footer — `id 58163:33397`
 - [ ] Menu (mega-menú) — `id 58182:4350`
 - [ ] Hero / Homepage hero — `id 58182:4353`

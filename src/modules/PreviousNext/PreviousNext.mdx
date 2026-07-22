@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './PreviousNext.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation / PreviousNext
+
+Navegación **anterior / siguiente** a 100% de ancho. Cada lado tiene un botón-icono
+(borde neutral-2), una etiqueta (Body/03, neutral-2) y un título (SangBleu, Title/03).
+**Desktop** (≥768): en fila con separador central. **Mobile**: apilado en dos filas.
+Cambia el viewport para verlo.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Descripción |
+| --- | --- | --- |
+| `prevLabel` / `prevTitle` / `prevHref` | `string` | Lado anterior |
+| `nextLabel` / `nextTitle` / `nextHref` | `string` | Lado siguiente |
+| `onPrev` / `onNext` | `fn` | Callbacks |
