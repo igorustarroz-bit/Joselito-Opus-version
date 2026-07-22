@@ -1,0 +1,36 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './TextOnly.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Text only
+
+Bloque de texto a 100% de ancho. Variantes:
+- **columns**: label (Body/06) + título (SangBleu Title/04) + cuerpo (Body/05) en una o dos columnas.
+- **split**: título a la izquierda y cuerpo a la derecha (en desktop; apilado en mobile).
+
+Padding lateral = wrapper del grid; contenido centrado (máx. 1320px).
+
+## Dos columnas
+
+<Canvas of={Stories.DosColumnas} />
+
+## Una columna
+
+<Canvas of={Stories.UnaColumna} />
+
+## Split
+
+<Canvas of={Stories.Split} />
+
+## Propiedades
+
+| Prop | Tipo | Descripción |
+| --- | --- | --- |
+| `label` | `string` | Antetítulo (Body/06) |
+| `title` | `string` | Título (SangBleu) |
+| `columns` | `string[][]` | Columnas de párrafos |
+| `variant` | `columns \| split` | Disposición |
+
+> Nota: el master "split" incluye un botón con tokens ajenos al sistema (color `#0045ff`,
+> fuente Neue Haas) heredado de otra plantilla; se ha omitido por no pertenecer a Joselito.

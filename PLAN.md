@@ -85,7 +85,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [ ] Hero / Section header — `id 58163:39446`
 - [x] Content / Intro text — módulo intro centrado (eyebrow + título + cuerpo + cajas + botón) + doc
 - [ ] Content / Title — `id 58163:40029`
-- [ ] Content / Text only — `id 58163:39972`
+- [x] Content / Text only — módulo texto (columnas / split, responsive) + doc
 - [ ] Content / Image only — `id 58163:40001`
 - [ ] Content / Text + Image — `id 58363:34365`
 - [ ] List — `id 58418:52924`

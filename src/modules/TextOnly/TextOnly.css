@@ -1,0 +1,22 @@
+/* Módulo Content/Text only — bloque de texto a 100% ancho. Variantes:
+   "columns" (label + título + cuerpo en 1 o 2 columnas) y "split" (título izq / cuerpo der). */
+
+.jl-textonly { width: 100%; background: var(--bg-base); display: flex; justify-content: center; padding: 80px var(--grid-wrapper); }
+.jl-textonly__inner { display: flex; flex-direction: column; gap: var(--spacer-fx-8); width: 100%; max-width: 1320px; }
+.jl-textonly__head { display: flex; flex-direction: column; gap: var(--spacer-fx-4); }
+.jl-textonly__label { margin: 0; color: var(--text-base); }
+.jl-textonly__title { margin: 0; color: var(--text-base); }
+.jl-textonly__body { display: flex; flex-direction: column; gap: var(--spacer-fx-8); }
+.jl-textonly__col { display: flex; flex-direction: column; gap: 16px; color: var(--text-base); flex: 1 0 0; min-width: 0; }
+.jl-textonly__col p { margin: 0; }
+
+/* Split: título y cuerpo en paralelo */
+.jl-textonly--split .jl-textonly__row { display: flex; flex-direction: column; gap: var(--spacer-fx-8); }
+
+@media (min-width: 768px) {
+  .jl-textonly { padding: 120px var(--grid-wrapper); }
+  .jl-textonly__body--multi { flex-direction: row; gap: 144px; }
+  .jl-textonly--split .jl-textonly__row { flex-direction: row; gap: 136px; }
+  .jl-textonly--split .jl-textonly__title { flex: 0 0 537px; }
+  .jl-textonly--split .jl-textonly__body { flex: 1 0 0; min-width: 0; }
+}
