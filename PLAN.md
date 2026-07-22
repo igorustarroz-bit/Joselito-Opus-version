@@ -78,7 +78,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Navigation / Secondary menu — módulo fila de categorías (responsive, activo subrayado) + doc
 - [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
 - [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc
-- [x] Navigation / Footer — módulo footer **rehecho pixel-perfect** desde máster `58163:33397` (4 columnas + doble grupo, aside Empresa/Contacto/RRSS, newsletter, barra legal; acordeón en mobile) + doc. Pendiente: sustituir el placeholder `AspectRatio` por la ilustración real. Aviso: el máster trae la nota "Sing up for our newsletter" (typo de origen, replicado)
+- [x] Navigation / Footer — módulo footer **rehecho pixel-perfect** desde máster `58163:33397` (4 columnas + doble grupo, aside Empresa/Contacto/RRSS, newsletter, barra legal; acordeón en mobile) + doc. Ilustración real integrada (`src/assets/illustrations/footer-illustration.webp`, extraída del nodo `58182:4402`). Aviso: el máster trae la nota "Sing up for our newsletter" (typo de origen, replicado)
 - [ ] Menu (mega-menú) — `id 58182:4350`
 - [ ] Hero / Homepage hero — `id 58182:4353`
 - [ ] Hero / Section hero — `id 58163:39435`

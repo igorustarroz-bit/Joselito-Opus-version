@@ -3,6 +3,7 @@ import './Footer.css';
 import Icon from '../../components/Icon/Icon.jsx';
 import Input from '../../components/Input/Input.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import footerIllustration from '../../assets/illustrations/footer-illustration.webp';
 
 /* Contenido real del máster de Figma (Navigation / Footer, 58163:33397). */
 const COLUMNS = [
@@ -173,7 +174,9 @@ export default function Footer({
         </div>
 
         <div className="jl-footer__media">
-          <AspectRatio ratio="3:4" className="jl-footer__illus" aria-hidden="true" />
+          <AspectRatio ratio="3:4" className="jl-footer__illus" aria-hidden="true">
+            <img src={footerIllustration} alt="" />
+          </AspectRatio>
         </div>
 
         {/* Aside desktop: Empresa + Contacto + RRSS */}
