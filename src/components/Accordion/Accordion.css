@@ -1,0 +1,39 @@
+/* UI13-Accordion — pila de ítems desplegables. Ítem: fondo neutral-1, esquinas L,
+   título CTA-XS en mayúsculas, toggle Plus/Minus. */
+
+.jl-accordion { display: flex; flex-direction: column; gap: var(--sp-2); width: 100%; }
+
+.jl-accordion-item {
+  background: var(--bg-neutral-1);
+  border-radius: var(--corner-l);
+  padding: var(--spacer-fx-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-4);
+}
+.jl-accordion-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer-fx-2);
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-base);
+}
+.jl-accordion-item__title {
+  flex: 1 0 0;
+  min-width: 0;
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-cta);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: var(--letter-spacing-cta);
+  text-transform: uppercase;
+  color: var(--text-base);
+}
+.jl-accordion-item__icon { display: inline-flex; color: var(--text-base); flex-shrink: 0; }
+.jl-accordion-item__body { color: var(--text-base); }
+.jl-accordion-item__body.ts-body-3 { color: var(--text-neutral-1); }

@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Accordion.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI13-Accordion
+
+Contenedor de ítems desplegables. Cada ítem tiene fondo neutro, esquinas redondeadas (L),
+cabecera con título (CTA-XS en mayúsculas) y un toggle **Plus/Minus**; al abrir muestra su
+contenido.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Uso
+
+```jsx
+<Accordion items={[{ title: 'Título', content: 'Contenido', defaultOpen: true }]} />
+// o de forma compuesta:
+<Accordion>
+  <AccordionItem title="Título">Contenido</AccordionItem>
+</Accordion>
+```
+
+## Tokens
+
+Fondo `--bg-neutral-1`, esquinas `--corner-l`, texto `--text-base` / `--text-neutral-1`.
+Iconos Plus/Minus. Todo adapta por subtema.
+
+## Propiedades (AccordionItem)
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | `Item` | Título de la cabecera |
+| `defaultOpen` | `boolean` | `false` | Abierto por defecto |
+| `children` | `node` | — | Contenido desplegable |
