@@ -1,47 +1,165 @@
-/* Módulo Navigation/Footer — a 100% de ancho. Zonas: columnas de enlaces
-   (acordeón en mobile, columnas en desktop), newsletter y barra legal. */
+/* Módulo Navigation / Footer — contenedor a 100% de ancho.
+   Mobile-first (máster Figma Mobile 1/2, 390px): acordeón + newsletter + legal.
+   Desde 768px (breakpoint M): layout desktop (máster 1440px): 4 columnas + fila
+   newsletter (aside Empresa/Contacto/RRSS) + barra legal.
+   Colores por tokens semánticos; espaciados por escala fija (--spacer-fx-*).
+   NOTA: los espaciados grandes de sección (48/64/80/136px) no están ligados a
+   variables en Figma (get_variable_defs solo devuelve color/tipografía), por lo
+   que se aplican como valores de layout del módulo. */
 
-.jl-footer { width: 100%; background: var(--bg-base); color: var(--text-base); display: flex; flex-direction: column; }
-
-/* --- Columnas de enlaces --- */
-.jl-footer__cols { display: flex; flex-direction: column; padding: 40px var(--spacer-fx-6); border-bottom: 1px solid var(--stroke-neutral-3); }
-.jl-footer__col { display: flex; flex-direction: column; }
-.jl-footer__colhead {
-  display: flex; align-items: center; justify-content: space-between;
-  width: 100%; padding: 16px 0; border: 0; border-bottom: 1px solid var(--stroke-neutral-3);
-  background: none; cursor: pointer; color: var(--text-base); text-transform: uppercase;
+.jl-footer {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
 }
-.jl-footer__caret { display: inline-flex; transition: transform .2s; }
-.jl-footer__col[data-open="true"] .jl-footer__caret { transform: rotate(180deg); }
-.jl-footer__links { display: none; flex-direction: column; gap: var(--spacer-fx-3); padding: 8px 0 16px; }
-.jl-footer__col[data-open="true"] .jl-footer__links { display: flex; }
-.jl-footer__links a { color: var(--text-neutral-1); text-decoration: none; }
 
-/* --- Newsletter --- */
-.jl-footer__news { display: flex; flex-direction: column; gap: 40px; align-items: center; padding: 32px var(--spacer-fx-6) 24px; border-bottom: 1px solid var(--stroke-neutral-3); }
-.jl-footer__news-inner { display: flex; flex-direction: column; gap: 48px; width: 100%; }
+.jl-footer a { color: inherit; text-decoration: none; }
+
+/* Botón de acción del email en gris (Backgrounds/Neutral-3 en Figma) */
+.jl-footer .jl-input__action { background: var(--bg-neutral-3); color: var(--text-inverted); }
+
+/* ---------- Bloque superior (enlaces) ---------- */
+.jl-footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-9); /* 40 */
+  padding: var(--spacer-fx-9) var(--spacer-fx-6); /* 40 24 */
+  border-bottom: 1px solid var(--stroke-neutral-3);
+}
+.jl-footer__cols { display: flex; flex-direction: column; gap: var(--spacer-fx-1); /* 4 */ }
+.jl-footer__col { display: contents; } /* mobile: los grupos fluyen como acordeones */
+
+/* Grupo de enlaces (acordeón en mobile) */
+.jl-footer__group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacer-fx-4) 0; /* 16 */
+  border: 0;
+  border-bottom: 1px solid var(--stroke-neutral-3);
+  background: none;
+  color: var(--text-base);
+  cursor: pointer;
+  text-align: left;
+}
+.jl-footer__group-title { text-transform: uppercase; }
+.jl-footer__caret { display: inline-flex; transition: transform .2s ease; }
+.jl-footer__group[data-open="true"] .jl-footer__caret { transform: rotate(180deg); }
+.jl-footer__links {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacer-fx-3); /* 12 */
+  padding: var(--spacer-fx-3) 0 var(--spacer-fx-4); /* 12 0 16 */
+}
+.jl-footer__group[data-open="true"] .jl-footer__links { display: flex; }
+.jl-footer__links a { color: var(--text-neutral-1); }
+
+/* RRSS */
+.jl-footer__social { display: flex; gap: var(--spacer-fx-5); /* 20 */ align-items: center; color: var(--text-base); }
+.jl-footer__social a { display: inline-flex; color: var(--text-base); }
+.jl-footer__social--desktop { display: none; }
+
+/* ---------- Newsletter ---------- */
+.jl-footer__news {
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* layout de módulo (sin token) */
+  align-items: center;
+  padding: var(--spacer-fx-8) var(--spacer-fx-6) var(--spacer-fx-6); /* 32 24 24 */
+  border-bottom: 1px solid var(--stroke-neutral-3);
+}
+.jl-footer__news-main { display: flex; flex-direction: column; gap: 48px; /* layout de módulo (sin token) */ width: 100%; }
 .jl-footer__news-title { margin: 0; color: var(--text-base); }
-.jl-footer__news-note { margin: 0 0 24px; color: var(--text-neutral-1); }
-.jl-footer__isotipo { color: var(--text-base); }
+.jl-footer__form { display: flex; flex-direction: column; gap: var(--spacer-fx-6); /* 24 */ width: 100%; }
+.jl-footer__news-note { margin: 0; color: var(--text-neutral-1); }
+.jl-footer__input { width: 100%; }
+
+.jl-footer__media { width: 154px; }
+.jl-footer__illus { background: var(--bg-neutral-1); } /* placeholder de la ilustración */
+
 .jl-footer__contact { display: flex; justify-content: space-between; width: 100%; color: var(--text-neutral-1); }
-.jl-footer__social { display: flex; gap: 20px; align-items: center; color: var(--text-base); }
-.jl-footer__social a { color: var(--text-base); display: inline-flex; }
+.jl-footer__aside { display: none; }
 
-/* --- Barra legal --- */
-.jl-footer__legal { display: flex; flex-direction: column; gap: 28px; padding: 32px var(--spacer-fx-6); }
-.jl-footer__legal-links { display: flex; flex-direction: column; gap: var(--spacer-fx-4); color: var(--text-base); }
-.jl-footer__legal-links a { color: var(--text-base); text-decoration: none; }
-.jl-footer__copy { color: var(--text-neutral-2); }
-.jl-footer__lang { display: inline-flex; align-items: center; gap: var(--sp-2); color: var(--text-base); background: none; border: 0; cursor: pointer; }
+/* ---------- Barra legal ---------- */
+.jl-footer__legal { display: flex; flex-direction: column; gap: var(--spacer-fx-7); /* 28 */ padding: var(--spacer-fx-8) var(--spacer-fx-6) 0; /* 32 24 0 */ }
+.jl-footer__legal-main { display: flex; flex-direction: column; gap: var(--spacer-fx-6); /* 24 */ }
+.jl-footer__legal-links { display: flex; flex-direction: column; gap: var(--spacer-fx-4); /* 16 */ color: var(--text-base); }
+.jl-footer__copy { margin: 0; color: var(--text-neutral-2); }
+.jl-footer__lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacer-fx-4) 0; /* 16 */
+  border: 0;
+  border-top: 1px solid var(--stroke-neutral-3);
+  background: none;
+  color: var(--text-base);
+  cursor: pointer;
+  text-transform: uppercase;
+}
 
+/* ========== Desktop (>= 768px, breakpoint M) ========== */
 @media (min-width: 768px) {
-  .jl-footer__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacer-fx-8); padding: 80px 40px; }
-  .jl-footer__colhead { border-bottom: 0; padding: 0 0 20px; pointer-events: none; }
+  /* Enlaces: 4 columnas */
+  .jl-footer__top { padding: 80px var(--spacer-fx-9) 136px; gap: 0; } /* 80 40 136 */
+  .jl-footer__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacer-fx-8); /* 32 */ }
+  .jl-footer__col { display: flex; flex-direction: column; gap: var(--spacer-fx-9); /* 40 */ }
+  .jl-footer__col--mobile { display: none; }
+  .jl-footer__social--mobile { display: none; }
+
+  /* Grupo estático (sin acordeón) */
+  .jl-footer__group-head { border-bottom: 0; padding: 0 0 var(--spacer-fx-5); /* 20 */ cursor: default; pointer-events: none; }
   .jl-footer__caret { display: none; }
-  .jl-footer__links { display: flex !important; padding: 0; }
-  .jl-footer__news { flex-direction: row; justify-content: space-between; align-items: flex-start; padding: 80px 40px 136px; gap: 32px; }
-  .jl-footer__news-inner { max-width: 432px; }
-  .jl-footer__contact { width: auto; gap: 32px; }
-  .jl-footer__legal { flex-direction: row; align-items: center; justify-content: space-between; padding: 18px 40px; height: 80px; }
-  .jl-footer__legal-links { flex-direction: row; gap: 32px; }
+  .jl-footer__links { display: flex; padding: 0; }
+
+  /* Newsletter en fila */
+  .jl-footer__news {
+    position: relative;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: var(--spacer-fx-8); /* 32 */
+    min-height: 508px;
+    padding: 48px var(--spacer-fx-9) 37px; /* 48 40 37 */
+  }
+  .jl-footer__news-main { justify-content: space-between; gap: 0; width: 432px; max-width: 432px; flex: 0 0 auto; }
+  .jl-footer__form { width: 336px; max-width: 336px; }
+  .jl-footer__media { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 201px; }
+  .jl-footer__contact { display: none; }
+
+  .jl-footer__aside { display: flex; flex-direction: column; gap: var(--spacer-fx-9); /* 40 */ width: 296px; flex: 0 0 auto; }
+  .jl-footer__social--desktop { display: flex; }
+
+  /* Barra legal en una fila: copyright izq · enlaces centro · idioma dcha */
+  .jl-footer__legal {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    height: 80px;
+    padding: 0 var(--spacer-fx-9); /* 40 */
+  }
+  .jl-footer__legal-main { display: contents; }
+  .jl-footer__legal-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: var(--spacer-fx-8); /* 32 */
+  }
+  .jl-footer__copy { order: 0; color: var(--text-neutral-1); }
+  .jl-footer__lang {
+    order: 1;
+    width: auto;
+    border-top: 0;
+    padding: 10px var(--spacer-fx-4); /* 10 16 */
+    gap: 26px;
+    text-transform: none;
+  }
+  .jl-footer__lang-caret { width: 12px; height: 12px; }
 }

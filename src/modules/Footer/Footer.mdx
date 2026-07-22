@@ -5,24 +5,88 @@ import * as Stories from './Footer.stories.jsx';
 
 # Módulo · Navigation / Footer
 
-Pie de página a **100% de ancho** con tres zonas: **columnas de enlaces** (en desktop en
-rejilla; en mobile como acordeón desplegable), **bloque newsletter** (título SangBleu,
-campo de email con `Input`, isotipo `BrandLogo` y redes sociales con `Icon`) y **barra legal**
-(enlaces legales, copyright y selector de idioma). Cambia el viewport para ver el
-comportamiento responsive.
+Pie de página del sitio, contenedor a **100% de ancho**. Reúne la navegación
+secundaria completa (columnas de enlaces), la captación de newsletter, los datos
+de contacto, las redes sociales, los enlaces legales y el selector de idioma.
+
+Máster de Figma: `Navigation / Footer` (`58163:33397`), con variantes
+**Desktop** (1440), **Mobile 1** (cerrado) y **Mobile 2** (acordeón abierto).
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
+## Anatomía
+
+De arriba a abajo:
+
+1. **Columnas de enlaces** — desktop: 4 columnas (`Productos`, `Sobre Joselito`,
+   `Restaurantes y tiendas` + `Experiencias y eventos`, `Atención al cliente`).
+   Mobile: acordeón de 7 secciones (las 5 anteriores + `Empresa` + `Contacto`).
+2. **Newsletter** — título (SangBleu, Title/03), nota, campo de email con botón
+   de flecha, ilustración (aquí como `AspectRatio` placeholder 3:4) y, en desktop,
+   el aside con `Empresa`, `Contacto` y redes sociales. En mobile, redes sociales
+   sobre el bloque y fila de contacto (teléfono · email) bajo la ilustración.
+3. **Barra legal** — copyright, enlaces legales y selector de idioma.
+
+## Subtemas
+
+El módulo hereda el subtema del contenedor vía `data-theme` (colores por tokens
+semánticos, nunca hardcodeados). Un hijo puede sobrescribir al padre.
+
+<Canvas of={Stories.SubtemaOscuro} />
+
+## Comportamiento
+
+- **Desktop (≥768px):** las cabeceras de sección no son interactivas y los enlaces
+  se muestran siempre (columnas estáticas). El aside sitúa `Empresa`/`Contacto`/RRSS
+  a la derecha del newsletter; la ilustración queda centrada en la fila.
+- **Mobile (por debajo de 768px):** cada sección es un acordeón (toggle con `CaretDown` que rota
+  180°). El estado de apertura es independiente por sección.
+
+## Variantes y tamaños
+
+Una única variante de composición con dos layouts responsive (desktop / mobile),
+tomados de los másters. Los breakpoints intermedios se infieren del breakpoint **M-768**.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Texto títulos de sección / legales | `--text-base` |
+| Enlaces / notas / contacto | `--text-neutral-1` |
+| Copyright (mobile) | `--text-neutral-2` |
+| Copyright (desktop) | `--text-neutral-1` |
+| Separadores | `--stroke-neutral-3` |
+| Botón email (fondo) | `--bg-neutral-3` |
+| Tipografías | `.ts-title-3`, `.ts-body-2`, `.ts-body-3` |
+| Espaciados de contenido | `--spacer-fx-1…9` |
+
+> Los espaciados grandes de sección (48/64/80/136px) no están ligados a variables
+> en Figma, por lo que se aplican como valores de layout del módulo.
+
 ## Propiedades
 
-| Prop | Tipo | Descripción |
-| --- | --- | --- |
-| `columns` | `{title, links[]}[]` | Columnas de enlaces |
-| `newsletterTitle` / `newsletterNote` | `string` | Textos de la newsletter |
-| `social` | `string[]` | Iconos de redes |
-| `phone` / `email` | `string` | Contacto |
-| `legalLinks` | `string[]` | Enlaces legales |
-| `copyright` | `string` | Aviso de copyright |
-| `language` | `string` | Idioma mostrado |
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `columns` | `{id,title,links[]}[][]` | máster | Columnas de enlaces (cada columna puede tener varios grupos) |
+| `sideGroups` | `{id,title,links[]}[]` | Empresa, Contacto | Grupos del aside (desktop) / acordeón (mobile) |
+| `newsletterTitle` | `string` | máster | Título del bloque newsletter |
+| `newsletterNote` | `string` | máster | Nota sobre el campo de email |
+| `social` | `string[]` | X, Facebook, Instagram | Nombres de iconos de RRSS |
+| `phone` | `string` | máster | Teléfono de contacto |
+| `email` | `string` | máster | Email de contacto |
+| `legalLinks` | `string[]` | máster | Enlaces de la barra legal |
+| `copyright` | `string` | máster | Texto de copyright |
+| `language` | `string` | `English` | Idioma actual |
+
+## Accesibilidad
+
+- Cabeceras de acordeón como `<button>` con `aria-expanded`.
+- Iconos de RRSS con `aria-label`; ilustración marcada `aria-hidden`.
+- Contraste de texto sobre fondo garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`Icon`, `Input` (UI06), `AspectRatio`, y el módulo `Navigation` (header).

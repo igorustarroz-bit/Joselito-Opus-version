@@ -2,79 +2,204 @@ import { useState } from 'react';
 import './Footer.css';
 import Icon from '../../components/Icon/Icon.jsx';
 import Input from '../../components/Input/Input.jsx';
-import BrandLogo from '../../components/BrandLogo/BrandLogo.jsx';
+import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 
-const DEFAULT_COLUMNS = [
-  { title: 'Productos', links: ['Jamones de Gran Reserva', 'Paletas de Gran Reserva', 'Carne Fresca', 'Embutidos', 'Loncheados', 'Accesorios'] },
-  { title: 'Sobre Joselito', links: ['Nuestra historia', 'La Dehesa', 'Curación', 'Añadas', 'Manual de corte', 'Sostenibilidad'] },
-  { title: 'Restaurantes y tiendas', links: ["Joselito's Velázquez", "Joselito's Las Rozas", "Joselito's Bernabeu"] },
-  { title: 'Atención al cliente', links: ['Envíos y Devoluciones', 'Seguimiento del Pedido', 'Preguntas frecuentes', 'Contacto y Soporte', 'Aviso legal'] },
+/* Contenido real del máster de Figma (Navigation / Footer, 58163:33397). */
+const COLUMNS = [
+  [
+    {
+      id: 'productos',
+      title: 'Productos',
+      links: [
+        'Jamones de Gran Reserva',
+        'Paletas de Gran Reserva',
+        'Carne Fresca Joselito Nude',
+        'Embutidos y Elaborados',
+        'Loncheados',
+        'Regalos y Selecciones Especiales',
+        'Añadas & Ediciones limitadas',
+        'Accesorios',
+      ],
+    },
+  ],
+  [
+    {
+      id: 'sobre-joselito',
+      title: 'Sobre Joselito',
+      links: [
+        'Nuestra historia',
+        'La Dehesa',
+        'Curación',
+        'Añadas',
+        'Manual de corte',
+        'Sostenibilidad y Medio Ambiente',
+        'Los Animales',
+        'La Salud',
+        'Joselito Lab',
+        'Colecciones Premium Joselito',
+      ],
+    },
+  ],
+  [
+    {
+      id: 'restaurantes',
+      title: 'Restaurantes y tiendas',
+      links: [
+        'Joselito’s Velázquez',
+        'Joselito’s Las Rozas',
+        'Kiosko Joselito Las Rozas Village',
+        'Joselito’s Bernabeu',
+      ],
+    },
+    {
+      id: 'experiencias',
+      title: 'Experiencias y eventos',
+      links: [
+        'Eventos Privados y Bodas',
+        'Catas y maridajes exclusivos',
+        'Colaboraciones gastronómicas',
+        'Joselito’s Bernabeu',
+      ],
+    },
+  ],
+  [
+    {
+      id: 'atencion',
+      title: 'Atención al cliente',
+      links: [
+        'Envíos y Devoluciones',
+        'Seguimiento del Pedido',
+        'Preguntas frecuentes',
+        'Preguntas frecuentes',
+        'Contacto y Soporte',
+        'Privacidad y Protección de datos',
+        'Aviso legal',
+        'La Salud',
+        'Política de cookies',
+      ],
+    },
+  ],
 ];
 
-const DEFAULT_LEGAL = ['Condiciones de compra', 'Uso del sitio', 'Calidad', 'Canal ético'];
+const SIDE_GROUPS = [
+  { id: 'empresa', title: 'Empresa', links: ['Prensa y noticias', 'Equipo y empleo', 'Investigación y patentes'] },
+  { id: 'contacto', title: 'Contacto', links: ['(+ 34) 923 580 375', 'store@joselito.com'] },
+];
+
+/** Grupo de enlaces: acordeón en mobile, columna estática en desktop. */
+function FooterGroup({ group, open, onToggle }) {
+  const isOpen = open.has(group.id);
+  return (
+    <div className="jl-footer__group" data-open={isOpen ? 'true' : 'false'}>
+      <button
+        type="button"
+        className="jl-footer__group-head"
+        aria-expanded={isOpen}
+        onClick={() => onToggle(group.id)}
+      >
+        <span className="jl-footer__group-title ts-body-2">{group.title}</span>
+        <span className="jl-footer__caret"><Icon name="CaretDown" size="S" /></span>
+      </button>
+      <div className="jl-footer__links ts-body-3">
+        {group.links.map((l, i) => <a key={i} href="#">{l}</a>)}
+      </div>
+    </div>
+  );
+}
 
 /**
- * Módulo Navigation/Footer — a 100% de ancho. Columnas de enlaces (acordeón en
- * mobile, columnas en desktop), bloque newsletter (SangBleu + email + isotipo + redes)
- * y barra legal. Reutiliza Input, Icon y BrandLogo.
+ * Módulo Navigation / Footer — contenedor a 100% de ancho (grid 12 col).
+ * Desktop: 4 columnas de enlaces + fila de newsletter (título + email +
+ * ilustración + Empresa/Contacto/RRSS) + barra legal.
+ * Mobile: acordeón de secciones + RRSS + newsletter + enlaces legales + idioma.
+ * Reutiliza Icon, Input y AspectRatio.
  */
 export default function Footer({
-  columns = DEFAULT_COLUMNS,
+  columns = COLUMNS,
+  sideGroups = SIDE_GROUPS,
   newsletterTitle = 'Historias, novedades y experiencias para disfrutar del universo Joselito.',
-  newsletterNote = 'Suscríbete a nuestra newsletter',
+  newsletterNote = 'Sing up for our newsletter',
   social = ['XLogo', 'FacebookLogo', 'InstagramLogo'],
   phone = '(+ 34) 923 580 375',
   email = 'store@joselito.com',
-  legalLinks = DEFAULT_LEGAL,
+  legalLinks = ['Condiciones de compra', 'Uso del sitio', 'Calidad', 'Canal ético'],
   copyright = '© 1868 - 2026 Cárnicas Joselito S.A.',
-  language = 'Español',
+  language = 'English',
   className = '',
   ...rest
 }) {
-  const [open, setOpen] = useState(-1);
+  const [open, setOpen] = useState(() => new Set());
+  const toggle = (id) =>
+    setOpen((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+
+  const socialLinks = (
+    <>
+      {social.map((s) => (
+        <a key={s} href="#" aria-label={s}><Icon name={s} size={28} /></a>
+      ))}
+    </>
+  );
+
   return (
     <footer className={`jl-footer ${className}`} {...rest}>
-      <div className="jl-footer__cols">
-        {columns.map((col, i) => (
-          <div className="jl-footer__col" key={i} data-open={open === i ? 'true' : 'false'}>
-            <button type="button" className="jl-footer__colhead ts-body-2" onClick={() => setOpen(open === i ? -1 : i)}>
-              <span>{col.title}</span>
-              <span className="jl-footer__caret"><Icon name="CaretDown" size="S" /></span>
-            </button>
-            <div className="jl-footer__links ts-body-3">
-              {col.links.map((l, j) => <a key={j} href="#">{typeof l === 'string' ? l : l.label}</a>)}
+      {/* Bloque superior: columnas de enlaces (acordeón en mobile) + RRSS mobile */}
+      <div className="jl-footer__top">
+        <div className="jl-footer__cols">
+          {columns.map((col, ci) => (
+            <div className="jl-footer__col" key={ci}>
+              {col.map((g) => <FooterGroup key={g.id} group={g} open={open} onToggle={toggle} />)}
             </div>
+          ))}
+          {/* Empresa y Contacto: en mobile son acordeones aquí; en desktop van al aside */}
+          <div className="jl-footer__col jl-footer__col--mobile">
+            {sideGroups.map((g) => <FooterGroup key={g.id} group={g} open={open} onToggle={toggle} />)}
           </div>
-        ))}
+        </div>
+        <div className="jl-footer__social jl-footer__social--mobile">{socialLinks}</div>
       </div>
 
+      {/* Newsletter */}
       <div className="jl-footer__news">
-        <div className="jl-footer__news-inner">
+        <div className="jl-footer__news-main">
           <p className="jl-footer__news-title ts-title-3">{newsletterTitle}</p>
-          <div>
+          <div className="jl-footer__form">
             <p className="jl-footer__news-note ts-body-2">{newsletterNote}</p>
-            <Input size="small" label="Email" actionIcon="ArrowRight" />
-          </div>
-          <div className="jl-footer__contact ts-body-2">
-            <span>{phone}</span>
-            <span>{email}</span>
+            <Input size="small" label="Email" actionIcon="ArrowRight" className="jl-footer__input" />
           </div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'center' }}>
-          <BrandLogo variant="isotipo" height={120} className="jl-footer__isotipo" />
-          <div className="jl-footer__social">
-            {social.map((s) => <a key={s} href="#" aria-label={s}><Icon name={s} size="M" /></a>)}
-          </div>
+
+        <div className="jl-footer__media">
+          <AspectRatio ratio="3:4" className="jl-footer__illus" aria-hidden="true" />
+        </div>
+
+        {/* Aside desktop: Empresa + Contacto + RRSS */}
+        <div className="jl-footer__aside">
+          {sideGroups.map((g) => <FooterGroup key={g.id} group={g} open={open} onToggle={toggle} />)}
+          <div className="jl-footer__social jl-footer__social--desktop">{socialLinks}</div>
+        </div>
+
+        {/* Contacto mobile: teléfono | email */}
+        <div className="jl-footer__contact ts-body-2">
+          <span>{phone}</span>
+          <span>{email}</span>
         </div>
       </div>
 
-      <div className="jl-footer__legal ts-body-2">
-        <div className="jl-footer__legal-links">
-          {legalLinks.map((l) => <a key={l} href="#">{l}</a>)}
+      {/* Barra legal */}
+      <div className="jl-footer__legal">
+        <div className="jl-footer__legal-main">
+          <div className="jl-footer__legal-links ts-body-2">
+            {legalLinks.map((l) => <a key={l} href="#">{l}</a>)}
+          </div>
+          <p className="jl-footer__copy ts-body-2">{copyright}</p>
         </div>
-        <span className="jl-footer__copy">{copyright}</span>
-        <button type="button" className="jl-footer__lang">
-          {language}<Icon name="CaretDown" size="XS" />
+        <button type="button" className="jl-footer__lang ts-body-2">
+          <span>{language}</span>
+          <Icon name="CaretDown" size="S" className="jl-footer__lang-caret" />
         </button>
       </div>
     </footer>
