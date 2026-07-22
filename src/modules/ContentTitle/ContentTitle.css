@@ -1,0 +1,52 @@
+/* Módulo Content / Title — cabecera de sección (máster Figma 58163:40029).
+   Mobile-first (390): etiqueta + título apilados, y descripción + enlace debajo.
+   Desde 768px (breakpoint M): etiqueta arriba, y fila título | (descripción + enlace).
+   Colores por tokens semánticos.
+   NOTA: paddings 60/120px y el sangrado 111px no están ligados a variables en
+   Figma; se aplican como valores de layout del módulo. */
+
+.jl-ctitle {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-2); /* 8 (mobile: etiqueta → título) */
+  padding: 60px var(--spacer-fx-5) 0; /* 60 20 0 */
+}
+
+.jl-ctitle__label { color: var(--text-base); }
+.jl-ctitle__title { color: var(--text-base); margin: 0; }
+
+.jl-ctitle__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-6); /* 24 (mobile: título → descripción/enlace) */
+  width: 100%;
+}
+
+.jl-ctitle__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-2); /* 8 (mobile: descripción → enlace) */
+}
+.jl-ctitle__desc { color: var(--text-base); }
+
+/* ====================================================================== */
+@media (min-width: 768px) {
+  .jl-ctitle {
+    gap: var(--spacer-fx-4); /* 16 (desktop: etiqueta → fila) */
+    padding: 120px 60px 0;
+  }
+  .jl-ctitle__row { flex-direction: row; gap: var(--spacer-fx-6); align-items: flex-start; }
+  .jl-ctitle__title { width: 652px; flex-shrink: 0; }
+  .jl-ctitle__aside {
+    flex: 1;
+    flex-direction: row;
+    gap: var(--spacer-fx-8); /* 32 */
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 111px;
+  }
+  .jl-ctitle__desc { flex: 1; }
+}

@@ -1,0 +1,78 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentTitle.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Title
+
+Cabecera de una sección de contenido, contenedor a **100% de ancho**. Presenta
+una etiqueta opcional, un título y, opcionalmente, una descripción y un enlace
+de acción.
+
+Máster de Figma: `Content / Title` (`58163:40029`), variantes **Desktop** (1440)
+y **Mobile** (390).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Etiqueta** (`Body/06`) — antetítulo opcional.
+2. **Título** (`SangBleu`, `Title/04`).
+3. **Aside** — descripción (`Body/05`) + enlace de acción (`UI04-Button-Action-Link`).
+   En desktop va a la derecha del título; en mobile, debajo.
+
+<Canvas of={Stories.Mobile} />
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens
+semánticos). Un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop (≥768px):** etiqueta a ancho completo; debajo, fila con el título
+  (fijo, 652px) y el aside (descripción + enlace) alineado a la derecha.
+- **Mobile:** etiqueta y título apilados (gap 8); descripción y enlace en bloque
+  aparte debajo. Breakpoints intermedios inferidos del breakpoint **M-768**.
+
+## Variantes y tamaños
+
+Etiqueta, descripción y enlace son opcionales (props). Título responsive
+(`Title/04`, 36→48px).
+
+> El máster incluye además un botón con tokens ajenos al sistema Joselito
+> (azul `#0045ff`, Neue Haas Grotesk), heredado de otra plantilla; se ha
+> **omitido** por estar fuera del design system. El elemento de acción real es
+> el enlace.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Etiqueta / título / descripción | `--text-base` |
+| Enlace | tokens de `UI04-Button-Action-Link` |
+| Tipografías | `.ts-body-6`, `.ts-title-4`, `.ts-body-5` |
+| Espaciados | `--spacer-fx-2/4/6/8` |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `label` | `string \| null` | máster | Etiqueta/antetítulo (`null` = oculta) |
+| `title` | `string` | máster | Título principal |
+| `description` | `string \| null` | máster | Descripción (`null` = oculta) |
+| `link` | `string \| null` | `LINK` | Texto del enlace (`null` = oculto) |
+| `linkHref` | `string` | `#` | Destino del enlace |
+
+## Accesibilidad
+
+- Título como `<h2>`.
+- Enlace de acción como `<a>` con foco visible (vía `ActionLink`).
+- Contraste garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`UI04-Button-Action-Link`, y el resto de módulos `Content / *`.

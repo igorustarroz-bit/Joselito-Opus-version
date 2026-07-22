@@ -84,10 +84,10 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [ ] Hero / Section hero — `id 58163:39435`
 - [ ] Hero / Section header — `id 58163:39446`
 - [x] Content / Intro text — módulo intro centrado (eyebrow + título + cuerpo + cajas + botón) + doc
-- [ ] Content / Title — `id 58163:40029`
+- [x] Content / Title — etiqueta + título (SangBleu) + descripción + enlace (`ActionLink`); desktop fila título|aside, mobile apilado. Máster `58163:40029`. Nota: se omitió un botón con tokens ajenos (azul #0045ff). Pendiente verificación visual en Pages + doc
 - [x] Content / Text only — módulo texto (columnas / split, responsive) + doc
-- [ ] Content / Image only — `id 58163:40001`
-- [ ] Content / Text + Image — `id 58363:34365`
+- [x] Content / Image only — 1 imagen a sangre (fondo acento, botón play opcional) o 2 imágenes contiguas; `AspectRatio`. Máster `58163:40001`. Pendiente verificación visual en Pages + doc
+- [x] Content / Text + Image — variantes half/left/right (etiqueta + título SangBleu + cuerpo + `Button` secondary + nota al pie en half); responsive apilado. Máster `58363:34365`. Pendiente verificación visual en Pages + doc
 - [ ] List — `id 58418:52924`
 - [ ] List / Timeline — `id 58363:35241`
 - [ ] List / Numbers — `id 58447:7252`

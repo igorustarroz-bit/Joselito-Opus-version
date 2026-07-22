@@ -1,0 +1,76 @@
+/* Módulo Content / Text + Image (máster Figma 58363:34365).
+   Mobile-first: imagen y texto apilados. Desde 768px: imagen y texto en fila.
+   - half: imagen a media página + panel amplio (con nota al pie).
+   - left: imagen a la izquierda del texto.
+   - right: texto a la izquierda de la imagen.
+   Colores por tokens semánticos.
+   NOTA: paddings grandes (110/112/121px), gap 135 y anchos (468/627/720) no están
+   ligados a variables en Figma; se aplican como valores de layout del módulo. */
+
+.jl-txtimg {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+}
+.jl-txtimg--left,
+.jl-txtimg--right { border-bottom: 1px solid var(--stroke-neutral-3); }
+
+.jl-txtimg__media { width: 100%; }
+
+.jl-txtimg__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-8); /* 32 */
+  justify-content: center;
+  padding: 56px var(--spacer-fx-6) var(--spacer-fx-8); /* 56 24 32 */
+}
+.jl-txtimg__group { display: flex; flex-direction: column; gap: var(--spacer-fx-4); /* 16 */ }
+.jl-txtimg__label { color: var(--text-neutral-2); text-transform: uppercase; }
+.jl-txtimg__title { color: var(--text-base); margin: 0; }
+.jl-txtimg__text { color: var(--text-neutral-1); }
+
+.jl-txtimg__note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-1); /* 4 */
+  width: 100%;
+  padding-top: var(--spacer-fx-4); /* 16 */
+  border-top: 1px solid var(--stroke-neutral-3);
+  color: var(--text-neutral-2);
+}
+.jl-txtimg__note p { margin: 0; }
+
+/* right en mobile: texto arriba, imagen abajo */
+.jl-txtimg--right .jl-txtimg__media { order: 2; }
+
+/* ====================================================================== */
+@media (min-width: 768px) {
+  .jl-txtimg { flex-direction: row; align-items: stretch; }
+
+  /* half: imagen 720 + panel flex-1 con paddings amplios */
+  .jl-txtimg--half .jl-txtimg__media { flex: 0 0 720px; }
+  .jl-txtimg--half .jl-txtimg__panel {
+    flex: 1;
+    gap: 52px;
+    padding: 110px 121px;
+  }
+  .jl-txtimg--half .jl-txtimg__group { gap: var(--spacer-fx-6); /* 24 */ }
+
+  /* left / right: bloque padded, imagen media + texto 468 */
+  .jl-txtimg--left,
+  .jl-txtimg--right { align-items: center; padding: 112px 80px; gap: 135px; }
+  .jl-txtimg--right { justify-content: space-between; gap: var(--spacer-fx-8); }
+  .jl-txtimg--left .jl-txtimg__media,
+  .jl-txtimg--right .jl-txtimg__media { flex: 0 0 627px; order: 0; }
+  .jl-txtimg--right .jl-txtimg__media { order: 2; }
+  .jl-txtimg--left .jl-txtimg__panel,
+  .jl-txtimg--right .jl-txtimg__panel {
+    flex: 0 0 468px;
+    gap: 52px;
+    padding: 0;
+  }
+  .jl-txtimg--left .jl-txtimg__group,
+  .jl-txtimg--right .jl-txtimg__group { gap: var(--spacer-fx-6); }
+}

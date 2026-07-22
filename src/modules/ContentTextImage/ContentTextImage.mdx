@@ -1,0 +1,83 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentTextImage.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Text + Image
+
+Bloque de texto acompañado de imagen, contenedor a **100% de ancho**. Tres
+disposiciones: `half`, `left` y `right`.
+
+Máster de Figma: `Content / Text + Image` (`58363:34365`), variantes en Desktop y
+Mobile.
+
+## Demo
+
+<Canvas of={Stories.Half} />
+
+## Anatomía
+
+Panel de texto: etiqueta (`Body/03`, `Neutral-2`, mayúsculas), título (`SangBleu`,
+`Title/03`), cuerpo (`Body/03`, `Neutral-1`), botón (`UI02-Button` secondary) y,
+solo en `half`, una nota al pie con separador superior.
+
+- **half:** imagen a media página + panel amplio (`padding` generoso).
+- **left / right:** imagen media (627×470) junto a texto (468); el bloque lleva
+  `padding` 112/80 y separador inferior.
+
+<Canvas of={Stories.Left} />
+<Canvas of={Stories.Right} />
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens semánticos).
+
+## Comportamiento
+
+- **Desktop (≥768px):** imagen y texto en fila (en `right`, la imagen se coloca a
+  la derecha mediante `order`).
+- **Mobile:** apilados; en `right`, el texto va arriba y la imagen debajo.
+  Breakpoints intermedios inferidos del breakpoint **M-768**.
+
+<Canvas of={Stories.HalfMobile} />
+
+## Variantes y tamaños
+
+`type` (`half` / `left` / `right`); `label`, `cta` y `footnote` opcionales.
+Título responsive (`Title/03`, 31→40px).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Etiqueta | `--text-neutral-2` |
+| Título | `--text-base` |
+| Cuerpo | `--text-neutral-1` |
+| Nota al pie / separador | `--text-neutral-2` / `--stroke-neutral-3` |
+| Tipografías | `.ts-body-3`, `.ts-title-3`, `.ts-body-2` |
+| Espaciados | `--spacer-fx-1/4/6/8` |
+| Botón | tokens de `UI02-Button` (secondary) |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `type` | `'half' \| 'left' \| 'right'` | `'half'` | Disposición |
+| `label` | `string \| null` | máster | Etiqueta (mayúsculas) |
+| `title` | `string` | máster | Título |
+| `text` | `string \| null` | máster | Cuerpo |
+| `cta` | `string \| null` | `Button` | Texto del botón (`null` = sin botón) |
+| `footnote` | `string` | — | Nota al pie (solo `half`) |
+| `image` | `string` | — | URL de la imagen |
+| `imageAlt` | `string` | `''` | Texto alternativo |
+
+## Accesibilidad
+
+- Título como `<h2>`.
+- Imagen con `alt` configurable.
+- Contraste garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`UI02-Button`, `AspectRatio`, y el resto de módulos `Content / *`.

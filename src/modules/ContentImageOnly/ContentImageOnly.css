@@ -1,0 +1,55 @@
+/* Módulo Content / Image only — bloque multimedia (máster Figma 58163:40001).
+   count=1: imagen a sangre (fondo de acento como placeholder) + botón play opcional.
+   count=2: dos imágenes contiguas; mobile con padding menor, desktop p-60.
+   Colores por tokens semánticos. */
+
+.jl-imgonly { width: 100%; position: relative; }
+
+/* ---- 1 imagen ---- */
+.jl-imgonly--single { background: var(--bg-accent-base); }
+.jl-imgonly--single .jl-imgonly__media { width: 100%; }
+
+/* Botón de reproducción centrado */
+.jl-imgonly__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  min-width: 100px;
+  padding: 0 var(--spacer-fx-9); /* 40 */
+  background: var(--bg-base);
+  border: 1.5px solid var(--stroke-neutral-3);
+  cursor: pointer;
+}
+.jl-imgonly__play-icon {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 13px solid var(--text-base);
+}
+
+/* ---- 2 imágenes ---- */
+.jl-imgonly--double {
+  background: var(--bg-base);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacer-fx-3); /* 12 */
+  padding: var(--spacer-fx-9) var(--spacer-fx-5); /* 40 20 */
+}
+.jl-imgonly--double .jl-imgonly__media--small { flex: 0 0 42%; }
+.jl-imgonly--double .jl-imgonly__media--large { flex: 1 1 auto; }
+
+@media (min-width: 768px) {
+  .jl-imgonly--double {
+    justify-content: space-between;
+    gap: 0;
+    padding: 60px;
+  }
+  .jl-imgonly--double .jl-imgonly__media--small { flex: 0 0 424px; }
+  .jl-imgonly--double .jl-imgonly__media--large { flex: 0 0 648px; }
+}

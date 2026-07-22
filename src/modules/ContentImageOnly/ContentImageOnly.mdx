@@ -1,0 +1,72 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentImageOnly.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Image only
+
+Bloque multimedia a **100% de ancho**: una imagen a sangre (con reproducción de
+vídeo opcional) o dos imágenes contiguas.
+
+Máster de Figma: `Content / Image only` (`58163:40001`), variantes `1 Start` /
+`1 End` / `2`, en Desktop y Mobile.
+
+## Demo
+
+<Canvas of={Stories.UnaImagen} />
+<Canvas of={Stories.ConVideo} />
+<Canvas of={Stories.DosImagenes} />
+
+## Anatomía
+
+- **1 imagen:** imagen a sangre con `AspectRatio`. Con `video`, un botón de
+  reproducción centrado (triángulo play).
+- **2 imágenes:** dos imágenes contiguas (una menor + una mayor). Desktop con
+  `padding` 60 y separación amplia; mobile con `padding` reducido y gap 12.
+
+<Canvas of={Stories.DosImagenesMobile} />
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme`. El fondo de la variante de 1
+imagen usa `--bg-accent-base` (según el máster).
+
+## Comportamiento
+
+- **Desktop (≥768px):** 2 imágenes con anchos del máster (424 / 648) y `padding` 60.
+- **Mobile:** 2 imágenes con proporciones reducidas y gap 12. Breakpoints
+  intermedios inferidos del breakpoint **M-768**.
+
+## Variantes y tamaños
+
+`count` 1 o 2; `ratio` de la imagen única (16:9 "start", 9:16 "end"); `video`
+para el botón de reproducción.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo (1 imagen) | `--bg-accent-base` |
+| Fondo (2 imágenes) | `--bg-base` |
+| Botón play (fondo/borde/icono) | `--bg-base`, `--stroke-neutral-3`, `--text-base` |
+| Espaciados | `--spacer-fx-3/5/9` |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `count` | `1 \| 2` | `1` | Número de imágenes |
+| `ratio` | `string` | `16:9` | Proporción de la imagen única |
+| `video` | `boolean` | `false` | Muestra el botón de reproducción |
+| `image` | `string` | — | URL de la primera imagen |
+| `image2` | `string` | — | URL de la segunda imagen (`count=2`) |
+| `alt` | `string` | `''` | Texto alternativo |
+
+## Accesibilidad
+
+- Botón de reproducción con `aria-label`.
+- Imágenes con `alt` configurable (decorativas por defecto).
+
+## Componentes relacionados
+
+`AspectRatio`, y el resto de módulos `Content / *`.
