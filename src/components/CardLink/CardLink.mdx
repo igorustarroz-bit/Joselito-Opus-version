@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardLink.stories.jsx';
+
+<Meta of={Stories} />
+
+# Card Link
+
+Tarjeta-enlace: una imagen con proporción fija (3:4 por defecto, vía **AspectRatio**) con
+título y subtítulo superpuestos en la parte inferior, en blanco. El título usa SangBleu
+Kingdom (Title/02) y el subtítulo Euclid (Body/02). Toda la tarjeta es un enlace.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Galería
+
+<Canvas of={Stories.Galeria} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | — | Título (SangBleu) |
+| `subtitle` | `string` | — | Subtítulo / precio |
+| `image` | `string` | — | URL de la imagen (si falta, muestra placeholder) |
+| `ratio` | `string` | `3:4` | Proporción de la imagen |
+| `href` | `string` | `#` | Destino del enlace |

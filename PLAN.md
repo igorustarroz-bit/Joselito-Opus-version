@@ -66,7 +66,7 @@ Componentes UI:
 - [x] UI13-Accordion — ítems desplegables (toggle Plus/Minus) + doc
 - [x] UI14-Placeholder-Text — componente de texto/slot base + doc
 - [ ] Card Product — `id 58163:83839`
-- [ ] Card Link — `id 58182:23781`
+- [x] Card Link — tarjeta-enlace (imagen + título/subtítulo superpuestos) + doc
 - [ ] Card Carrusel — `id 58182:24262`
 - [x] Title — encabezado de sección (título + enlace opcional) + doc
 
