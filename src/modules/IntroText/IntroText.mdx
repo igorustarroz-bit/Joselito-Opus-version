@@ -1,0 +1,30 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './IntroText.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Intro text
+
+Bloque introductorio **centrado** a 100% de ancho: eyebrow (Body/03, neutral-2), título
+(SangBleu, Title/03), cuerpo (Body/04), cajas de datos opcionales (Email/Teléfono...) y un
+botón. Padding lateral = wrapper del grid. Responsive (desktop min 600px de alto).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Solo texto
+
+<Canvas of={Stories.SoloTexto} />
+
+## Propiedades
+
+| Prop | Tipo | Descripción |
+| --- | --- | --- |
+| `eyebrow` | `string` | Antetítulo |
+| `title` | `string` | Título (SangBleu) |
+| `body` | `string` | Texto |
+| `boxes` | `{label, value}[]` | Cajas de datos |
+| `buttonText` | `string` | Texto del botón (si se indica) |

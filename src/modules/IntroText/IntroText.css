@@ -1,0 +1,29 @@
+/* Módulo Content/Intro text — bloque introductorio centrado a 100% ancho:
+   eyebrow + título (SangBleu) + cuerpo + cajas opcionales + botón. */
+
+.jl-introtext {
+  width: 100%;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--stroke-neutral-3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--sp-9);
+  padding: 112px var(--grid-wrapper);
+  text-align: center;
+}
+.jl-introtext__inner { display: flex; flex-direction: column; align-items: center; gap: var(--sp-6); width: 100%; max-width: 844px; }
+.jl-introtext__eyebrow { margin: 0; color: var(--text-neutral-2); text-transform: uppercase; }
+.jl-introtext__group { display: flex; flex-direction: column; align-items: center; gap: 40px; width: 100%; }
+.jl-introtext__title { margin: 0; color: var(--text-base); }
+.jl-introtext__body { margin: 0; color: var(--text-base); max-width: 620px; }
+.jl-introtext__boxes { display: flex; flex-direction: column; width: 100%; }
+.jl-introtext__box { border: 1px solid var(--stroke-neutral-3); padding: 24px 32px; flex: 1 0 0; display: flex; flex-direction: column; gap: 4px; }
+.jl-introtext__box + .jl-introtext__box { border-top: 0; }
+.jl-introtext__box-label { color: var(--text-neutral-2); }
+.jl-introtext__box-value { color: var(--text-base); }
+
+@media (min-width: 768px) {
+  .jl-introtext { gap: 48px; min-height: 600px; padding-block: 132px; }
+  .jl-introtext__boxes { flex-direction: row; }
+  .jl-introtext__box { padding: 32px; }
+  .jl-introtext__box + .jl-introtext__box { border-top: 1px solid var(--stroke-neutral-3); border-left: 0; }
+}
