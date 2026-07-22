@@ -64,7 +64,7 @@ Componentes UI:
 - [ ] UI11-Form — `id 57947:46433`
 - [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc
 - [ ] UI13-Accordion — `id 57943:46123`
-- [ ] UI14-Placeholder-Text — `id 57961:792`
+- [x] UI14-Placeholder-Text — componente de texto/slot base + doc
 - [ ] Card Product — `id 58163:83839`
 - [ ] Card Link — `id 58182:23781`
 - [ ] Card Carrusel — `id 58182:24262`

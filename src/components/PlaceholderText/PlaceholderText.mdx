@@ -1,0 +1,23 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './PlaceholderText.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI14-Placeholder-Text
+
+Texto de relleno/slot (estilo Body/02 por defecto). Es un componente base que se usa como
+marcador de texto dentro de otros componentes; permite cambiar el estilo tipográfico.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `children` | `node` | `Text` | Contenido |
+| `textStyle` | `string` | `body-2` | Estilo tipográfico (`.ts-*`) |
+| `as` | `string` | `span` | Etiqueta HTML |
