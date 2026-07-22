@@ -68,7 +68,7 @@ Componentes UI:
 - [ ] Card Product — `id 58163:83839`
 - [ ] Card Link — `id 58182:23781`
 - [ ] Card Carrusel — `id 58182:24262`
-- [ ] Title — `id 58196:4804`
+- [x] Title — encabezado de sección (título + enlace opcional) + doc
 
 Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Comportamiento · Variantes y tamaños · Tokens · Propiedades · Accesibilidad · Componentes relacionados.
 

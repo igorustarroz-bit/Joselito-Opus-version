@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Title.stories.jsx';
+
+<Meta of={Stories} />
+
+# Title
+
+Encabezado de sección: texto de título (estilo Body/04) y, opcionalmente, un enlace
+"ver todos" (Body/03) con chevron a la derecha. Se alinean a los extremos.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Sin enlace
+
+<Canvas of={Stories.SinEnlace} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `children` | `node` | — | Texto del título |
+| `as` | `string` | `h2` | Etiqueta del encabezado |
+| `showLink` | `boolean` | `false` | Muestra el enlace "ver todos" |
+| `linkText` | `string` | `Ver todos` | Texto del enlace |
+| `href` | `string` | — | Si se indica, el enlace es `<a>` |

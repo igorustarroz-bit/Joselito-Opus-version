@@ -1,0 +1,23 @@
+/* Title — encabezado de sección: título + enlace "ver todos" opcional. */
+.jl-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  width: 100%;
+  color: var(--text-base);
+}
+.jl-title__text { color: var(--text-base); }
+.jl-title__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  color: var(--text-base);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.jl-title__link:hover { color: var(--text-hover); }
+.jl-title__link .jl-title__icon { display: inline-flex; }
