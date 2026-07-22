@@ -1,0 +1,26 @@
+/* Módulo Navigation/Breadcrumb — barra a 100% ancho con enlace "volver"
+   (flecha + etiqueta). Alto 60 (mobile) / 80 (desktop). Padding = wrapper del grid. */
+
+.jl-breadcrumb {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-inline: var(--grid-wrapper);
+}
+@media (min-width: 768px) { .jl-breadcrumb { min-height: 80px; } }
+
+.jl-breadcrumb__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text-base);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.jl-breadcrumb__icon { display: inline-flex; }
+.jl-breadcrumb__label { color: var(--text-base); }

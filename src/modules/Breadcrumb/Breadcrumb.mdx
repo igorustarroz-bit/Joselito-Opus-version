@@ -1,0 +1,27 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Breadcrumb.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation / Breadcrumb
+
+Barra de navegación a **100% de ancho** con un enlace "volver" (flecha izquierda +
+etiqueta, Body/03). Fondo base. Alto **60px** en mobile y **80px** en desktop. El padding
+lateral usa el **wrapper del grid** (responsive). Cambia el viewport para verlo adaptarse.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `label` | `string` | — | Texto del enlace |
+| `href` | `string` | — | Destino (si falta, es `<button>`) |
+| `onClick` | `fn` | — | Callback |
+
+> Nota: el master usa un negro específico (#373F41) fuera de los tokens; aquí se aplica
+> `--text-base` para mantener coherencia con el sistema y el soporte de subtemas.
