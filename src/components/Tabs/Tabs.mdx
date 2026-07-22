@@ -1,0 +1,38 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Tabs.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI05-Tabs
+
+Barra de pestañas. Dos tipos (Primary/Secondary) que se diferencian en el borde de la
+pestaña activa. Cada pestaña: alto 40, texto CTA-XS en mayúsculas, iconos opcionales.
+Controlado (`value` + `onChange`) o no controlado (`defaultValue`).
+
+## Primary
+
+<Canvas of={Stories.Primary} />
+
+<Controls of={Stories.Primary} />
+
+## Secondary
+
+<Canvas of={Stories.Secondary} />
+
+## Con iconos
+
+<Canvas of={Stories.ConIconos} />
+
+## Tokens
+
+Colores desde `--btn-tab-<primary|secondary>-<estado>-<fill|text|stroke|icon>` (grupo
+Button/Tab, por subtema). Secondary hereda de Primary salvo el borde "selected".
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `items` | `{label, iconLeft?, iconRight?, disabled?}[]` | `[]` | Pestañas |
+| `type` | `primary \| secondary` | `primary` | Tipo |
+| `value` / `defaultValue` | `number` | `0` | Índice activo (controlado/no) |
+| `onChange` | `(index) => void` | — | Callback al cambiar |

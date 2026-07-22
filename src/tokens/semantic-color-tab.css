@@ -1,0 +1,110 @@
+/* SEMANTIC-COLOR · Tabs (grupo Button/Tab Primary y Tab Secondary).
+   Secondary = Primary salvo el borde "selected" (primary-50 en :root).
+   Por subtema; light-yellow hereda de :root. */
+
+:root {
+  --btn-tab-primary-default-fill: var(--color-neutral-white);
+  --btn-tab-primary-default-icon: var(--color-neutral-black);
+  --btn-tab-primary-default-stroke: var(--color-neutral-90);
+  --btn-tab-primary-default-text: var(--color-neutral-black);
+  --btn-tab-primary-disabled-fill: var(--color-opacity-black-100);
+  --btn-tab-primary-disabled-icon: var(--color-opacity-black-80);
+  --btn-tab-primary-disabled-stroke: var(--color-opacity-black-100);
+  --btn-tab-primary-disabled-text: var(--color-opacity-black-80);
+  --btn-tab-primary-focused-fill: var(--color-neutral-96);
+  --btn-tab-primary-focused-icon: var(--color-primary-10);
+  --btn-tab-primary-focused-stroke: var(--color-neutral-90);
+  --btn-tab-primary-focused-text: var(--color-primary-10);
+  --btn-tab-primary-hover-fill: var(--color-neutral-96);
+  --btn-tab-primary-hover-icon: var(--color-neutral-black);
+  --btn-tab-primary-hover-stroke: var(--color-neutral-90);
+  --btn-tab-primary-hover-text: var(--color-neutral-black);
+  --btn-tab-primary-selected-fill: var(--color-neutral-white);
+  --btn-tab-primary-selected-icon: var(--color-neutral-black);
+  --btn-tab-primary-selected-stroke: var(--color-neutral-black);
+  --btn-tab-primary-selected-text: var(--color-neutral-black);
+
+  /* Secondary hereda de Primary excepto el borde seleccionado */
+  --btn-tab-secondary-default-fill: var(--btn-tab-primary-default-fill);
+  --btn-tab-secondary-default-icon: var(--btn-tab-primary-default-icon);
+  --btn-tab-secondary-default-stroke: var(--btn-tab-primary-default-stroke);
+  --btn-tab-secondary-default-text: var(--btn-tab-primary-default-text);
+  --btn-tab-secondary-disabled-fill: var(--btn-tab-primary-disabled-fill);
+  --btn-tab-secondary-disabled-icon: var(--btn-tab-primary-disabled-icon);
+  --btn-tab-secondary-disabled-stroke: var(--btn-tab-primary-disabled-stroke);
+  --btn-tab-secondary-disabled-text: var(--btn-tab-primary-disabled-text);
+  --btn-tab-secondary-focused-fill: var(--btn-tab-primary-focused-fill);
+  --btn-tab-secondary-focused-icon: var(--btn-tab-primary-focused-icon);
+  --btn-tab-secondary-focused-stroke: var(--btn-tab-primary-focused-stroke);
+  --btn-tab-secondary-focused-text: var(--btn-tab-primary-focused-text);
+  --btn-tab-secondary-hover-fill: var(--btn-tab-primary-hover-fill);
+  --btn-tab-secondary-hover-icon: var(--btn-tab-primary-hover-icon);
+  --btn-tab-secondary-hover-stroke: var(--btn-tab-primary-hover-stroke);
+  --btn-tab-secondary-hover-text: var(--btn-tab-primary-hover-text);
+  --btn-tab-secondary-selected-fill: var(--btn-tab-primary-selected-fill);
+  --btn-tab-secondary-selected-icon: var(--btn-tab-primary-selected-icon);
+  --btn-tab-secondary-selected-stroke: var(--color-primary-50);
+  --btn-tab-secondary-selected-text: var(--btn-tab-primary-selected-text);
+}
+
+[data-theme="light-grey"] {
+  --btn-tab-primary-default-fill: var(--color-neutral-96);
+  --btn-tab-primary-default-stroke: var(--color-opacity-black-80);
+  --btn-tab-primary-disabled-fill: var(--color-opacity-black-90);
+  --btn-tab-primary-focused-fill: var(--color-neutral-90);
+  --btn-tab-primary-focused-stroke: var(--color-primary-50);
+  --btn-tab-primary-hover-stroke: var(--color-primary-50);
+  --btn-tab-primary-selected-fill: var(--color-primary-50);
+  --btn-tab-primary-selected-icon: var(--color-neutral-white);
+  --btn-tab-primary-selected-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-selected-text: var(--color-neutral-white);
+  --btn-tab-secondary-selected-stroke: var(--color-opacity-white-100);
+}
+
+[data-theme="dark-red-primary"] {
+  --btn-tab-primary-default-fill: var(--color-primary-50);
+  --btn-tab-primary-default-icon: var(--color-neutral-white);
+  --btn-tab-primary-default-stroke: var(--color-primary-90);
+  --btn-tab-primary-default-text: var(--color-neutral-white);
+  --btn-tab-primary-disabled-fill: var(--color-opacity-black-94);
+  --btn-tab-primary-disabled-icon: var(--color-opacity-black-70);
+  --btn-tab-primary-disabled-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-disabled-text: var(--color-opacity-black-70);
+  --btn-tab-primary-focused-fill: var(--color-neutral-white);
+  --btn-tab-primary-focused-icon: var(--color-neutral-white);
+  --btn-tab-primary-focused-stroke: var(--color-primary-10);
+  --btn-tab-primary-focused-text: var(--color-neutral-black);
+  --btn-tab-primary-hover-fill: var(--color-neutral-white);
+  --btn-tab-primary-hover-icon: var(--color-neutral-black);
+  --btn-tab-primary-hover-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-hover-text: var(--color-neutral-black);
+  --btn-tab-primary-selected-fill: var(--color-neutral-white);
+  --btn-tab-primary-selected-icon: var(--color-primary-10);
+  --btn-tab-primary-selected-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-selected-text: var(--color-primary-10);
+  --btn-tab-secondary-selected-stroke: var(--color-opacity-white-100);
+}
+
+[data-theme="dark-black-neutral"] {
+  --btn-tab-primary-default-fill: var(--color-neutral-10);
+  --btn-tab-primary-default-icon: var(--color-neutral-white);
+  --btn-tab-primary-default-stroke: var(--color-opacity-white-70);
+  --btn-tab-primary-default-text: var(--color-neutral-white);
+  --btn-tab-primary-disabled-fill: var(--color-opacity-white-94);
+  --btn-tab-primary-disabled-icon: var(--color-opacity-white-90);
+  --btn-tab-primary-disabled-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-disabled-text: var(--color-opacity-white-90);
+  --btn-tab-primary-focused-fill: var(--color-opacity-white-80);
+  --btn-tab-primary-focused-icon: var(--color-neutral-white);
+  --btn-tab-primary-focused-stroke: var(--color-neutral-white);
+  --btn-tab-primary-focused-text: var(--color-neutral-white);
+  --btn-tab-primary-hover-fill: var(--color-neutral-10);
+  --btn-tab-primary-hover-icon: var(--color-neutral-white);
+  --btn-tab-primary-hover-stroke: var(--color-neutral-white);
+  --btn-tab-primary-hover-text: var(--color-neutral-white);
+  --btn-tab-primary-selected-fill: var(--color-neutral-white);
+  --btn-tab-primary-selected-icon: var(--color-neutral-black);
+  --btn-tab-primary-selected-stroke: var(--color-opacity-white-100);
+  --btn-tab-primary-selected-text: var(--color-neutral-black);
+  --btn-tab-secondary-selected-stroke: var(--color-opacity-white-100);
+}

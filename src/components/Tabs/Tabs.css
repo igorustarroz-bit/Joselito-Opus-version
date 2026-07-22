@@ -1,0 +1,37 @@
+/* UI05-Tabs — barra de pestañas. Tipos Primary/Secondary. Cada tab: alto 40,
+   padding 16, texto CTA-XS mayúsculas, borde inferior por estado. */
+
+.jl-tabs { display: flex; align-items: stretch; }
+.jl-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacer-fx-2);
+  height: var(--spacer-fx-9);
+  padding-inline: var(--spacer-fx-4);
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-family-cta);
+  font-weight: var(--font-weight-cta);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: var(--letter-spacing-cta);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.jl-tab__icon { display: inline-flex; color: var(--_ic); }
+
+.jl-tab--primary { background: var(--btn-tab-primary-default-fill); color: var(--btn-tab-primary-default-text); border-bottom-color: var(--btn-tab-primary-default-stroke); --_ic: var(--btn-tab-primary-default-icon); }
+.jl-tab--primary:hover:not(:disabled):not([data-active="true"]) { background: var(--btn-tab-primary-hover-fill); color: var(--btn-tab-primary-hover-text); border-bottom-color: var(--btn-tab-primary-hover-stroke); --_ic: var(--btn-tab-primary-hover-icon); }
+.jl-tab--primary:focus-visible { background: var(--btn-tab-primary-focused-fill); color: var(--btn-tab-primary-focused-text); border-bottom-color: var(--btn-tab-primary-focused-stroke); --_ic: var(--btn-tab-primary-focused-icon); outline: none; }
+.jl-tab--primary[data-active="true"] { background: var(--btn-tab-primary-selected-fill); color: var(--btn-tab-primary-selected-text); border-bottom-color: var(--btn-tab-primary-selected-stroke); --_ic: var(--btn-tab-primary-selected-icon); }
+.jl-tab--primary:disabled { background: var(--btn-tab-primary-disabled-fill); color: var(--btn-tab-primary-disabled-text); border-bottom-color: var(--btn-tab-primary-disabled-stroke); --_ic: var(--btn-tab-primary-disabled-icon); cursor: not-allowed; }
+
+.jl-tab--secondary { background: var(--btn-tab-secondary-default-fill); color: var(--btn-tab-secondary-default-text); border-bottom-color: var(--btn-tab-secondary-default-stroke); --_ic: var(--btn-tab-secondary-default-icon); }
+.jl-tab--secondary:hover:not(:disabled):not([data-active="true"]) { background: var(--btn-tab-secondary-hover-fill); color: var(--btn-tab-secondary-hover-text); border-bottom-color: var(--btn-tab-secondary-hover-stroke); --_ic: var(--btn-tab-secondary-hover-icon); }
+.jl-tab--secondary:focus-visible { background: var(--btn-tab-secondary-focused-fill); color: var(--btn-tab-secondary-focused-text); border-bottom-color: var(--btn-tab-secondary-focused-stroke); --_ic: var(--btn-tab-secondary-focused-icon); outline: none; }
+.jl-tab--secondary[data-active="true"] { background: var(--btn-tab-secondary-selected-fill); color: var(--btn-tab-secondary-selected-text); border-bottom-color: var(--btn-tab-secondary-selected-stroke); --_ic: var(--btn-tab-secondary-selected-icon); }
+.jl-tab--secondary:disabled { background: var(--btn-tab-secondary-disabled-fill); color: var(--btn-tab-secondary-disabled-text); border-bottom-color: var(--btn-tab-secondary-disabled-stroke); --_ic: var(--btn-tab-secondary-disabled-icon); cursor: not-allowed; }
