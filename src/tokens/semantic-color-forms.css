@@ -1,0 +1,187 @@
+/* ==========================================================================
+   SEMANTIC-COLOR · Forms (grupo "Forms" de la colección Semantic-Color)
+   Colores de campos de formulario (UI06-Input, UI07-Listbox, UI11-Form...):
+   estados Default/Hover/Focused/Filled/Error/Validated/Disabled × propiedades
+   fill/stroke/text/icon/label-in/label-out/message. Por subtema.
+   ========================================================================== */
+
+:root {
+  --form-default-fill: var(--color-neutral-white);
+  --form-default-icon: var(--color-neutral-40);
+  --form-default-label-in: var(--color-neutral-50);
+  --form-default-label-out: var(--color-neutral-40);
+  --form-default-message: var(--color-neutral-40);
+  --form-default-stroke: var(--color-neutral-80);
+  --form-default-text: var(--color-neutral-40);
+  --form-disabled-fill: var(--color-opacity-black-100);
+  --form-disabled-icon: var(--color-opacity-black-30);
+  --form-disabled-label-in: var(--color-opacity-black-30);
+  --form-disabled-label-out: var(--color-opacity-black-0);
+  --form-disabled-message: var(--color-opacity-black-30);
+  --form-disabled-stroke: var(--color-opacity-black-0);
+  --form-disabled-text: var(--color-opacity-black-30);
+  --form-error-fill: var(--color-neutral-white);
+  --form-error-icon: var(--color-neutral-black);
+  --form-error-label-in: var(--color-neutral-40);
+  --form-error-label-out: var(--color-opacity-black-0);
+  --form-error-message: var(--color-system-error-03);
+  --form-error-stroke: var(--color-system-error-02);
+  --form-error-text: var(--color-neutral-black);
+  --form-filled-fill: var(--color-neutral-white);
+  --form-filled-icon: var(--color-neutral-black);
+  --form-filled-label-in: var(--color-neutral-50);
+  --form-filled-label-out: var(--color-neutral-40);
+  --form-filled-message: var(--color-neutral-40);
+  --form-filled-stroke: var(--color-neutral-80);
+  --form-filled-text: var(--color-neutral-black);
+  --form-focused-fill: var(--color-neutral-white);
+  --form-focused-icon: var(--color-neutral-black);
+  --form-focused-label-in: var(--color-neutral-40);
+  --form-focused-label-out: var(--color-neutral-black);
+  --form-focused-message: var(--color-neutral-40);
+  --form-focused-stroke: var(--color-primary-50);
+  --form-focused-stroke-box: var(--color-neutral-60);
+  --form-focused-text: var(--color-neutral-black);
+  --form-hover-fill: var(--color-neutral-white);
+  --form-hover-icon: var(--color-neutral-black);
+  --form-hover-label-in: var(--color-neutral-50);
+  --form-hover-label-out: var(--color-neutral-40);
+  --form-hover-message: var(--color-neutral-40);
+  --form-hover-stroke: var(--color-primary-50);
+  --form-hover-text: var(--color-neutral-black);
+  --form-validated-fill: var(--color-opacity-white-100);
+  --form-validated-icon: var(--color-neutral-black);
+  --form-validated-label-in: var(--color-neutral-40);
+  --form-validated-label-out: var(--color-opacity-black-0);
+  --form-validated-message: var(--color-system-success-03);
+  --form-validated-stroke: var(--color-system-success-02);
+  --form-validated-text: var(--color-neutral-black);
+}
+
+[data-theme="light-grey"] {
+  --form-default-fill: var(--color-neutral-96);
+  --form-default-icon: var(--color-neutral-30);
+  --form-default-stroke: var(--color-neutral-70);
+  --form-error-fill: var(--color-neutral-96);
+  --form-filled-fill: var(--color-neutral-96);
+  --form-filled-stroke: var(--color-neutral-70);
+  --form-focused-stroke-box: var(--color-neutral-80);
+  --form-hover-fill: var(--color-neutral-96);
+}
+
+[data-theme="dark-red-primary"] {
+  --form-default-fill: var(--color-primary-50);
+  --form-default-icon: var(--color-neutral-white);
+  --form-default-label-in: var(--color-opacity-white-70);
+  --form-default-label-out: var(--color-opacity-white-70);
+  --form-default-message: var(--color-opacity-white-20);
+  --form-default-stroke: var(--color-primary-90);
+  --form-default-text: var(--color-neutral-white);
+  --form-disabled-fill: var(--color-opacity-white-98);
+  --form-disabled-icon: var(--color-opacity-white-80);
+  --form-disabled-label-in: var(--color-opacity-white-80);
+  --form-disabled-label-out: var(--color-opacity-white-100);
+  --form-disabled-message: var(--color-opacity-white-80);
+  --form-disabled-stroke: var(--color-opacity-white-100);
+  --form-disabled-text: var(--color-opacity-white-80);
+  --form-error-fill: var(--color-opacity-white-94);
+  --form-error-icon: var(--color-neutral-white);
+  --form-error-label-in: var(--color-neutral-60);
+  --form-error-label-out: var(--color-opacity-white-100);
+  --form-error-message: var(--color-system-error-01);
+  --form-error-stroke: var(--color-system-error-01);
+  --form-error-text: var(--color-neutral-white);
+  --form-filled-fill: var(--color-opacity-white-94);
+  --form-filled-icon: var(--color-neutral-white);
+  --form-filled-label-in: var(--color-primary-90);
+  --form-filled-label-out: var(--color-primary-90);
+  --form-filled-message: var(--color-primary-90);
+  --form-filled-stroke: var(--color-neutral-white);
+  --form-filled-text: var(--color-neutral-white);
+  --form-focused-fill: var(--color-opacity-white-94);
+  --form-focused-icon: var(--color-neutral-white);
+  --form-focused-label-in: var(--color-primary-90);
+  --form-focused-label-out: var(--color-neutral-70);
+  --form-focused-message: var(--color-neutral-80);
+  --form-focused-stroke: var(--color-neutral-white);
+  --form-focused-stroke-box: var(--color-neutral-80);
+  --form-focused-text: var(--color-neutral-white);
+  --form-hover-fill: var(--color-primary-50);
+  --form-hover-icon: var(--color-neutral-white);
+  --form-hover-label-in: var(--color-neutral-90);
+  --form-hover-label-out: var(--color-neutral-90);
+  --form-hover-message: var(--color-opacity-white-20);
+  --form-hover-stroke: var(--color-neutral-white);
+  --form-hover-text: var(--color-neutral-96);
+  --form-validated-fill: var(--color-opacity-white-100);
+  --form-validated-icon: var(--color-neutral-white);
+  --form-validated-label-in: var(--color-neutral-60);
+  --form-validated-label-out: var(--color-opacity-white-100);
+  --form-validated-message: var(--color-system-success-01);
+  --form-validated-stroke: var(--color-system-success-02);
+  --form-validated-text: var(--color-neutral-white);
+}
+
+[data-theme="dark-black-neutral"] {
+  --form-default-fill: var(--color-opacity-white-100);
+  --form-default-icon: var(--color-neutral-white);
+  --form-default-label-in: var(--color-opacity-white-70);
+  --form-default-label-out: var(--color-opacity-white-70);
+  --form-default-message: var(--color-opacity-white-20);
+  --form-default-stroke: var(--color-opacity-white-40);
+  --form-default-text: var(--color-neutral-white);
+  --form-disabled-fill: var(--color-opacity-white-94);
+  --form-disabled-icon: var(--color-opacity-white-80);
+  --form-disabled-label-in: var(--color-opacity-white-80);
+  --form-disabled-label-out: var(--color-opacity-white-100);
+  --form-disabled-message: var(--color-opacity-white-80);
+  --form-disabled-stroke: var(--color-opacity-white-100);
+  --form-disabled-text: var(--color-opacity-white-80);
+  --form-error-fill: var(--color-neutral-10);
+  --form-error-icon: var(--color-system-error-02);
+  --form-error-label-in: var(--color-neutral-60);
+  --form-error-label-out: var(--color-opacity-white-100);
+  --form-error-message: var(--color-system-error-02);
+  --form-error-stroke: var(--color-system-error-02);
+  --form-error-text: var(--color-neutral-white);
+  --form-filled-fill: var(--color-neutral-10);
+  --form-filled-icon: var(--color-neutral-white);
+  --form-filled-label-in: var(--color-neutral-90);
+  --form-filled-label-out: var(--color-neutral-90);
+  --form-filled-message: var(--color-neutral-90);
+  --form-filled-stroke: var(--color-opacity-white-20);
+  --form-filled-text: var(--color-neutral-white);
+  --form-focused-fill: var(--color-opacity-white-96);
+  --form-focused-icon: var(--color-neutral-white);
+  --form-focused-label-in: var(--color-neutral-90);
+  --form-focused-label-out: var(--color-neutral-70);
+  --form-focused-message: var(--color-neutral-80);
+  --form-focused-stroke: var(--color-neutral-white);
+  --form-focused-stroke-box: var(--color-neutral-80);
+  --form-focused-text: var(--color-neutral-white);
+  --form-hover-fill: var(--color-neutral-10);
+  --form-hover-icon: var(--color-neutral-white);
+  --form-hover-label-in: var(--color-neutral-90);
+  --form-hover-label-out: var(--color-neutral-90);
+  --form-hover-message: var(--color-opacity-white-20);
+  --form-hover-stroke: var(--color-neutral-white);
+  --form-hover-text: var(--color-neutral-96);
+  --form-validated-fill: var(--color-opacity-white-100);
+  --form-validated-icon: var(--color-system-success-02);
+  --form-validated-label-in: var(--color-neutral-60);
+  --form-validated-label-out: var(--color-opacity-white-100);
+  --form-validated-message: var(--color-system-success-02);
+  --form-validated-stroke: var(--color-system-success-02);
+  --form-validated-text: var(--color-neutral-white);
+}
+
+[data-theme="light-yellow"] {
+  --form-default-fill: var(--color-secondary-1-80);
+  --form-default-icon: var(--color-neutral-30);
+  --form-default-stroke: var(--color-neutral-70);
+  --form-error-fill: var(--color-secondary-1-80);
+  --form-filled-fill: var(--color-secondary-1-80);
+  --form-filled-stroke: var(--color-neutral-70);
+  --form-focused-stroke-box: var(--color-neutral-80);
+  --form-hover-fill: var(--color-secondary-1-80);
+}

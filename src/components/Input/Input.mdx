@@ -1,0 +1,44 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Input.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI06-Input
+
+Campo de formulario. Tamaños **Big** (72px) y **Small** (56px); estados default, filled,
+error, validated y disabled (hover/focus vía CSS). Botón de acción opcional a la derecha,
+mensaje de ayuda opcional debajo. Rectangular.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Con botón de acción
+
+<Canvas of={Stories.ConAccion} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Tamaños
+
+<Canvas of={Stories.Tamaños} />
+
+## Tokens
+
+Colores desde `--form-<estado>-<fill|stroke|text|message|...>` (grupo Forms de
+Semantic-Color, por subtema). Tamaños y paddings desde `--form-l-*` / `--form-m-*`.
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `label` | `string` | `Label` | Placeholder |
+| `size` | `big \| small` | `big` | Tamaño |
+| `state` | `default \| filled \| error \| validated \| disabled` | `default` | Estado |
+| `message` | `string` | — | Mensaje de ayuda |
+| `actionIcon` | `string` | — | Icono del botón de acción |
+| `value` / `onChange` | — | — | Valor controlado |

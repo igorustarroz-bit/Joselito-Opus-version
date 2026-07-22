@@ -56,7 +56,7 @@ Componentes UI:
 - [x] UI03-Button-Icon — componente cuadrado (3 tipos · XS-XL · estados) + doc
 - [x] UI04-Button-Action-Link — componente (enlace subrayado, estados) + doc
 - [x] UI05-Tabs — barra de pestañas (Primary/Secondary, estados) + doc
-- [ ] UI06-Input — `id 49118:2300`
+- [x] UI06-Input — campo (Big/Small, estados default/filled/error/validated/disabled) + doc
 - [ ] UI07-Listbox — `id 49650:12398`
 - [ ] UI08-Checkbox-List — `id 57947:46573`
 - [ ] UI09-Checkbox-Label — `id 43246:12097`
