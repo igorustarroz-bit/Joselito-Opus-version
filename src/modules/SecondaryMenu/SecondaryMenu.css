@@ -1,0 +1,31 @@
+/* Módulo Navigation/Secondary menu — fila de enlaces (Body/03) a 100% ancho.
+   Desktop: centrada. Mobile: alineada a la izquierda con scroll horizontal.
+   El ítem activo lleva subrayado negro. */
+
+.jl-secmenu {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  padding-top: var(--spacer-fx-6);
+  padding-inline: 20px;
+  overflow-x: auto;
+}
+.jl-secmenu__list { display: flex; align-items: center; gap: var(--spacer-fx-4); }
+.jl-secmenu__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--spacer-fx-3);
+  color: var(--text-base);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+}
+.jl-secmenu__item--active { border-bottom-color: var(--stroke-base); }
+
+@media (min-width: 768px) {
+  .jl-secmenu { justify-content: center; padding-inline: 60px; overflow-x: visible; }
+  .jl-secmenu__list { gap: var(--spacer-fx-8); }
+}

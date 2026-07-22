@@ -1,0 +1,24 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SecondaryMenu.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation / Secondary menu
+
+Fila de enlaces de categoría (Body/03) a 100% de ancho. En **desktop** va centrada; en
+**mobile** se alinea a la izquierda con scroll horizontal. El ítem **activo** lleva un
+subrayado negro. Cambia el viewport para verlo.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `items` | `string[] \| {label, href}[]` | (categorías) | Enlaces |
+| `active` | `number` | `0` | Índice activo |
+| `onSelect` | `(index) => void` | — | Callback |
