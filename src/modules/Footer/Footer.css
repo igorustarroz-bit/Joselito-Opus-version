@@ -1,0 +1,47 @@
+/* Módulo Navigation/Footer — a 100% de ancho. Zonas: columnas de enlaces
+   (acordeón en mobile, columnas en desktop), newsletter y barra legal. */
+
+.jl-footer { width: 100%; background: var(--bg-base); color: var(--text-base); display: flex; flex-direction: column; }
+
+/* --- Columnas de enlaces --- */
+.jl-footer__cols { display: flex; flex-direction: column; padding: 40px var(--spacer-fx-6); border-bottom: 1px solid var(--stroke-neutral-3); }
+.jl-footer__col { display: flex; flex-direction: column; }
+.jl-footer__colhead {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 16px 0; border: 0; border-bottom: 1px solid var(--stroke-neutral-3);
+  background: none; cursor: pointer; color: var(--text-base); text-transform: uppercase;
+}
+.jl-footer__caret { display: inline-flex; transition: transform .2s; }
+.jl-footer__col[data-open="true"] .jl-footer__caret { transform: rotate(180deg); }
+.jl-footer__links { display: none; flex-direction: column; gap: var(--spacer-fx-3); padding: 8px 0 16px; }
+.jl-footer__col[data-open="true"] .jl-footer__links { display: flex; }
+.jl-footer__links a { color: var(--text-neutral-1); text-decoration: none; }
+
+/* --- Newsletter --- */
+.jl-footer__news { display: flex; flex-direction: column; gap: 40px; align-items: center; padding: 32px var(--spacer-fx-6) 24px; border-bottom: 1px solid var(--stroke-neutral-3); }
+.jl-footer__news-inner { display: flex; flex-direction: column; gap: 48px; width: 100%; }
+.jl-footer__news-title { margin: 0; color: var(--text-base); }
+.jl-footer__news-note { margin: 0 0 24px; color: var(--text-neutral-1); }
+.jl-footer__isotipo { color: var(--text-base); }
+.jl-footer__contact { display: flex; justify-content: space-between; width: 100%; color: var(--text-neutral-1); }
+.jl-footer__social { display: flex; gap: 20px; align-items: center; color: var(--text-base); }
+.jl-footer__social a { color: var(--text-base); display: inline-flex; }
+
+/* --- Barra legal --- */
+.jl-footer__legal { display: flex; flex-direction: column; gap: 28px; padding: 32px var(--spacer-fx-6); }
+.jl-footer__legal-links { display: flex; flex-direction: column; gap: var(--spacer-fx-4); color: var(--text-base); }
+.jl-footer__legal-links a { color: var(--text-base); text-decoration: none; }
+.jl-footer__copy { color: var(--text-neutral-2); }
+.jl-footer__lang { display: inline-flex; align-items: center; gap: var(--sp-2); color: var(--text-base); background: none; border: 0; cursor: pointer; }
+
+@media (min-width: 768px) {
+  .jl-footer__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacer-fx-8); padding: 80px 40px; }
+  .jl-footer__colhead { border-bottom: 0; padding: 0 0 20px; pointer-events: none; }
+  .jl-footer__caret { display: none; }
+  .jl-footer__links { display: flex !important; padding: 0; }
+  .jl-footer__news { flex-direction: row; justify-content: space-between; align-items: flex-start; padding: 80px 40px 136px; gap: 32px; }
+  .jl-footer__news-inner { max-width: 432px; }
+  .jl-footer__contact { width: auto; gap: 32px; }
+  .jl-footer__legal { flex-direction: row; align-items: center; justify-content: space-between; padding: 18px 40px; height: 80px; }
+  .jl-footer__legal-links { flex-direction: row; gap: 32px; }
+}

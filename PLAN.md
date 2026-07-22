@@ -78,7 +78,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Navigation / Secondary menu — módulo fila de categorías (responsive, activo subrayado) + doc
 - [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
 - [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc
-- [ ] Navigation / Footer — `id 58163:33397`
+- [x] Navigation / Footer — módulo footer (columnas/acordeón + newsletter + legal, responsive) + doc
 - [ ] Menu (mega-menú) — `id 58182:4350`
 - [ ] Hero / Homepage hero — `id 58182:4353`
 - [ ] Hero / Section hero — `id 58163:39435`

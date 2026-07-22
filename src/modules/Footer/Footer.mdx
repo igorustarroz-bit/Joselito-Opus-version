@@ -1,0 +1,28 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Footer.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation / Footer
+
+Pie de página a **100% de ancho** con tres zonas: **columnas de enlaces** (en desktop en
+rejilla; en mobile como acordeón desplegable), **bloque newsletter** (título SangBleu,
+campo de email con `Input`, isotipo `BrandLogo` y redes sociales con `Icon`) y **barra legal**
+(enlaces legales, copyright y selector de idioma). Cambia el viewport para ver el
+comportamiento responsive.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Descripción |
+| --- | --- | --- |
+| `columns` | `{title, links[]}[]` | Columnas de enlaces |
+| `newsletterTitle` / `newsletterNote` | `string` | Textos de la newsletter |
+| `social` | `string[]` | Iconos de redes |
+| `phone` / `email` | `string` | Contacto |
+| `legalLinks` | `string[]` | Enlaces legales |
+| `copyright` | `string` | Aviso de copyright |
+| `language` | `string` | Idioma mostrado |
