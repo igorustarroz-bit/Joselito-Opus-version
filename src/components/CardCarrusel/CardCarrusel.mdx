@@ -1,0 +1,32 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardCarrusel.stories.jsx';
+
+<Meta of={Stories} />
+
+# Card Carrusel
+
+Tarjeta de carrusel. **Compone** AspectRatio, Tag y Action-Link. Dos orientaciones:
+**horizontal** (imagen y texto en paralelo, separación 60) y **vertical** (imagen arriba,
+texto debajo, separación 20). Título en SangBleu Kingdom (Title/04), cuerpo en Body/02
+(neutral-1), etiquetas y enlace "Descubrir".
+
+## Horizontal
+
+<Canvas of={Stories.Horizontal} />
+
+<Controls of={Stories.Horizontal} />
+
+## Vertical
+
+<Canvas of={Stories.Vertical} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | — | Título (SangBleu) |
+| `body` | `string` | — | Texto |
+| `tags` | `string[]` | `[]` | Etiquetas |
+| `cta` | `string` | `Descubrir` | Texto del enlace |
+| `orientation` | `horizontal \| vertical` | `horizontal` | Disposición |
+| `image` | `string` | — | URL de imagen |

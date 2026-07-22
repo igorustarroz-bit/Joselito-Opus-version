@@ -67,7 +67,7 @@ Componentes UI:
 - [x] UI14-Placeholder-Text — componente de texto/slot base + doc
 - [x] Card Product — ficha de producto (compone AspectRatio, Button, Icon, ActionLink) + doc
 - [x] Card Link — tarjeta-enlace (imagen + título/subtítulo superpuestos) + doc
-- [ ] Card Carrusel — `id 58182:24262`
+- [x] Card Carrusel — tarjeta de carrusel (horizontal/vertical) + doc
 - [x] Title — encabezado de sección (título + enlace opcional) + doc
 
 Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Comportamiento · Variantes y tamaños · Tokens · Propiedades · Accesibilidad · Componentes relacionados.

@@ -1,0 +1,21 @@
+/* Card Carrusel — tarjeta de carrusel. Orientación horizontal (imagen + texto al
+   lado, gap 60) o vertical (imagen arriba, texto debajo, gap 20). */
+
+.jl-carrusel { display: flex; align-items: flex-start; width: 100%; }
+.jl-carrusel--h { flex-direction: row; gap: 60px; }
+.jl-carrusel--v { flex-direction: column; gap: var(--spacer-fx-5); }
+
+.jl-carrusel__media { width: 100%; }
+.jl-carrusel--h .jl-carrusel__media { flex: 1 0 0; min-width: 0; }
+.jl-carrusel__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.jl-carrusel__placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-secondary-1-70), var(--color-neutral-30)); }
+
+.jl-carrusel__content { display: flex; flex-direction: column; }
+.jl-carrusel--h .jl-carrusel__content { align-self: stretch; justify-content: space-between; gap: var(--spacer-fx-6); }
+.jl-carrusel--v .jl-carrusel__content { width: 100%; gap: var(--spacer-fx-9); }
+
+.jl-carrusel__texts { display: flex; flex-direction: column; gap: var(--spacer-fx-4); }
+.jl-carrusel--h .jl-carrusel__texts { gap: var(--spacer-fx-6); }
+.jl-carrusel__title { margin: 0; color: var(--text-base); }
+.jl-carrusel__body { margin: 0; color: var(--text-neutral-1); }
+.jl-carrusel__tags { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
