@@ -1,0 +1,88 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Hero.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Hero / Homepage hero
+
+Cabecera principal de la home, contenedor a **100% de ancho** y alto grande.
+Imagen a sangre con la navegación superpuesta, un bloque de copy centrado y un
+aviso (`Toast`) flotante.
+
+Máster de Figma: `Hero / Homepage hero` (`58182:4353`), variantes **Desktop**
+(1440×860) y **Mobile** (390×800).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Imagen de fondo** — a sangre, `object-fit: cover`.
+2. **Navigation** — el módulo header en subtema oscuro (transparente sobre la
+   imagen), superpuesto arriba.
+3. **Copy central** — eyebrow (`Body/02`, mayúsculas, `Neutral-3`), título
+   (`SangBleu`, `Title/05`) y botón primario (`UI02-Button`), centrados.
+4. **Toast** — aviso con imagen 1:1 + título + descripción. En desktop flota
+   abajo-derecha; en mobile se centra sobre los puntos de paginación.
+5. **Puntos de paginación** (solo mobile) — indican la diapositiva activa.
+
+<Canvas of={Stories.Mobile} />
+
+## Subtemas
+
+El copy central se envuelve en `data-theme="dark-black-neutral"` para que el
+texto y el botón adopten los colores del subtema oscuro (texto blanco, botón
+primario de relleno claro) por tokens, sin valores hardcodeados. El `Toast`
+queda **fuera** del subtema para mantenerse como tarjeta clara, tal cual el
+máster.
+
+## Comportamiento
+
+- **Desktop (≥768px):** sin degradado; el Toast flota abajo-derecha (40px) y los
+  puntos se ocultan.
+- **Mobile:** degradado inferior para legibilidad; Toast y puntos centrados al
+  pie. Los breakpoints intermedios se infieren del breakpoint **M-768**.
+
+## Variantes y tamaños
+
+Una composición con dos layouts responsive (desktop / mobile). El título usa
+`Title/05`, responsive por breakpoint (36→60px). El botón es `UI02-Button`
+primario, tamaño M.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Placeholder de fondo | `--bg-inverse` |
+| Eyebrow | `--text-neutral-3` |
+| Título | `--text-base` (blanco vía subtema oscuro) |
+| Puntos de paginación | `--text-always-white` (activo opacidad 1, inactivo 0.4) |
+| Tipografías | `.ts-title-5`, `.ts-body-2` |
+| Espaciados | `--spacer-fx-2/4/6/9` |
+| Botón | tokens de `UI02-Button` (primary) |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `DICTUM CRAS ERAT` | Antetítulo |
+| `title` | `string` | máster | Título principal |
+| `cta` | `string` | `LOREM IPSUM` | Texto del botón (vacío = sin botón) |
+| `image` | `string` | — | URL de la imagen de fondo |
+| `toast` | `{title,text,image} \| null` | máster | Aviso flotante (`null` = oculto) |
+| `dots` | `number` | `3` | Nº de puntos de paginación (mobile) |
+| `activeDot` | `number` | `0` | Punto activo |
+| `navLinks` | `string[]` | máster | Enlaces de la navegación |
+| `cartCount` | `number` | `3` | Contador de la cesta |
+
+## Accesibilidad
+
+- Imagen de fondo decorativa (`alt=""`); degradado `aria-hidden`.
+- Título como `<h1>`.
+- Puntos de paginación con `role="tab"` y `aria-selected`.
+- Contraste garantizado por el subtema oscuro y el degradado inferior en mobile.
+
+## Componentes relacionados
+
+`Navigation` (header), `UI02-Button`, `Toast`, `AspectRatio` (dentro del Toast).

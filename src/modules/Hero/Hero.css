@@ -1,0 +1,90 @@
+/* Módulo Hero / Homepage hero — contenedor a 100% de ancho (máster Figma 58182:4353).
+   Mobile-first (390×800): imagen a sangre + degradado inferior + nav + copy central
+   + Toast y puntos de paginación abajo.
+   Desde 768px (breakpoint M): 1440×860, sin degradado, Toast flotando abajo-derecha,
+   sin puntos. Colores por tokens semánticos; el copy usa el subtema oscuro. */
+
+.jl-hero {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  overflow: hidden;
+  background: var(--bg-inverse); /* placeholder oscuro si no hay imagen */
+}
+
+.jl-hero__bg { position: absolute; inset: 0; z-index: 0; }
+.jl-hero__bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Degradado inferior (solo mobile, para legibilidad del Toast/texto) */
+.jl-hero__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 51%;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, #000);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.jl-hero__nav { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+
+/* Copy central */
+.jl-hero__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacer-fx-6); /* 24 */
+  width: 342px;
+  max-width: calc(100% - var(--spacer-fx-9));
+  text-align: center;
+}
+.jl-hero__eyebrow { color: var(--text-neutral-3); text-transform: uppercase; }
+.jl-hero__title { color: var(--text-base); margin: 0; }
+
+/* Pie: Toast + puntos */
+.jl-hero__foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacer-fx-4); /* 16 */
+  padding: var(--spacer-fx-6) var(--spacer-fx-6) var(--spacer-fx-4); /* 24 24 16 */
+}
+.jl-hero__toast { width: 343px; max-width: 100%; }
+
+.jl-hero__dots { display: flex; gap: var(--spacer-fx-2); /* 8 */ }
+.jl-hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-always-white);
+  opacity: 0.4;
+}
+.jl-hero__dot--active { opacity: 1; }
+
+/* ====================================================================== */
+@media (min-width: 768px) {
+  .jl-hero { min-height: 860px; }
+  .jl-hero__overlay { display: none; }
+  .jl-hero__content { width: 664px; }
+
+  .jl-hero__foot {
+    left: auto;
+    right: var(--spacer-fx-9); /* 40 */
+    bottom: var(--spacer-fx-9); /* 40 */
+    padding: 0;
+    align-items: flex-end;
+  }
+  .jl-hero__dots { display: none; }
+}
