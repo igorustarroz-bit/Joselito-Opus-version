@@ -1,0 +1,33 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardProduct.stories.jsx';
+
+<Meta of={Stories} />
+
+# Card Product
+
+Ficha de producto. Compone **AspectRatio** (imagen 3:4), un **badge** superpuesto, título
+(SangBleu Title/02), precio (Body/02), dirección (Body/03), chips de ubicación
+(**Button** secondary XS), valoración con estrellas (**Icon**) y un **Action-Link**.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Variante mínima
+
+<Canvas of={Stories.SinExtras} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | — | Título |
+| `price` | `string` | — | Precio |
+| `address` | `string` | — | Dirección |
+| `badge` | `string` | — | Etiqueta superpuesta |
+| `locations` | `string[]` | `[]` | Chips de ubicación |
+| `stars` | `number` | `0` | Nº de estrellas |
+| `cta` | `string` | `Descubrir` | Texto del enlace |
+| `image` | `string` | — | URL de imagen |
