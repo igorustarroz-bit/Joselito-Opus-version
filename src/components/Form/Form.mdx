@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Form.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI11-Form
+
+Contenedor de formulario. **Compone** una cabecera opcional (título en SangBleu Title/01 +
+descripción Body/03), los campos que se le pasen como hijos (p. ej. `Input`, `CheckboxList`)
+y una fila de acciones alineada a la derecha con botones **Cancelar** (terciary) y
+**Aceptar** (primary). Separación general de 24px.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | — | Título (SangBleu) |
+| `description` | `string` | — | Descripción |
+| `children` | `node` | — | Campos del formulario |
+| `primaryLabel` | `string` | `Aceptar` | Texto del botón principal |
+| `secondaryLabel` | `string` | `Cancelar` | Texto del botón secundario |
+| `showActions` | `boolean` | `true` | Muestra la fila de botones |
+| `onSubmit` / `onCancel` | `fn` | — | Callbacks |

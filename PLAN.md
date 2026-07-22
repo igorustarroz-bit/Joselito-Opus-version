@@ -61,7 +61,7 @@ Componentes UI:
 - [x] UI08-Checkbox-List — lista de casillas (vertical/horizontal) + doc
 - [x] UI09-Checkbox-Label — casilla con etiqueta (m/s, indeterminado) + doc
 - [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
-- [ ] UI11-Form — `id 57947:46433`
+- [x] UI11-Form — contenedor de formulario (cabecera + campos + acciones) + doc
 - [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc
 - [x] UI13-Accordion — ítems desplegables (toggle Plus/Minus) + doc
 - [x] UI14-Placeholder-Text — componente de texto/slot base + doc
