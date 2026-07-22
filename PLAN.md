@@ -100,7 +100,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [ ] Cards / Accordion — `id 58182:24099`
 - [ ] Banners / Section banner — `id 58182:4380`
 - [ ] Form (módulo) — `id 58195:43756`
-- [ ] Toast — `id 58182:23548`
+- [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
 
 ## Fase 5 — Page Templates (SPRINT 1)
 

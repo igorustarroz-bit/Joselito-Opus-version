@@ -1,0 +1,23 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Toast.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Toast
+
+Aviso compacto: imagen cuadrada (76px, vía `AspectRatio`) junto a un título (Body/02) y una
+descripción (Body/02, neutral-2). Lleva una elevación ligera para flotar sobre el contenido.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Descripción |
+| --- | --- | --- |
+| `title` | `string` | Título |
+| `text` | `string` | Descripción |
+| `image` | `string` | URL de imagen |

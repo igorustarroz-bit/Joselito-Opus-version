@@ -1,0 +1,17 @@
+/* Módulo Toast — aviso compacto: imagen 76px + título y descripción (Body/02). */
+.jl-toast {
+  background: var(--bg-base);
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  width: 343px;
+  max-width: 100%;
+  align-items: flex-start;
+  box-shadow: var(--shadow-on-light-s);
+}
+.jl-toast__media { width: 76px; height: 76px; flex-shrink: 0; }
+.jl-toast__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.jl-toast__ph { width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-secondary-1-60), var(--color-neutral-30)); }
+.jl-toast__text { display: flex; flex-direction: column; justify-content: center; flex: 1 0 0; min-width: 0; }
+.jl-toast__title { margin: 0; color: var(--text-base); }
+.jl-toast__desc { margin: 0; color: var(--text-neutral-2); }
