@@ -59,7 +59,7 @@ Componentes UI:
 - [x] UI06-Input — campo (Big/Small, estados default/filled/error/validated/disabled) + doc
 - [ ] UI07-Listbox — `id 49650:12398`
 - [ ] UI08-Checkbox-List — `id 57947:46573`
-- [ ] UI09-Checkbox-Label — `id 43246:12097`
+- [x] UI09-Checkbox-Label — casilla con etiqueta (m/s, indeterminado) + doc
 - [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
 - [ ] UI11-Form — `id 57947:46433`
 - [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc

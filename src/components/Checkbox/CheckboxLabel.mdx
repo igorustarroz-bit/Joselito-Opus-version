@@ -1,0 +1,35 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxLabel.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI09-Checkbox-Label
+
+Casilla con **etiqueta**. Es el componente `Checkbox` con texto asociado. Tamaños **Medium**
+(control 20px, etiqueta Body/03) y **Small** (control 16px, etiqueta Body/02). Estados:
+default, hover, selected, **undefined** (indeterminado → minus), disabled y disabled selected.
+La etiqueta usa `--text-neutral-1` (habilitada) / `--text-neutral-2` (deshabilitada).
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Tamaños
+
+<Canvas of={Stories.Tamaños} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `checked` | `boolean` | `false` | Marcada |
+| `indeterminate` | `boolean` | `false` | Estado indeterminado (minus) |
+| `size` | `m \| s` | `m` | Tamaño |
+| `disabled` | `boolean` | `false` | Deshabilitada |
+| `label` | `string` | — | Etiqueta |

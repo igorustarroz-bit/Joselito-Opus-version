@@ -14,6 +14,7 @@
 }
 .jl-check__control--checkbox { border-radius: 2px; }
 .jl-check__control--radio { border-radius: 9999px; }
+.jl-check__control--s { width: 16px; height: 16px; }
 
 .jl-check:hover:not(.jl-check--disabled) .jl-check__control { border-color: var(--stroke-accent-1); }
 .jl-check__input:focus-visible + .jl-check__control { outline: 2px solid var(--stroke-accent-base); outline-offset: 2px; }
@@ -29,4 +30,5 @@
 .jl-check--disabled .jl-check__control--checkbox.is-checked { background: var(--bg-neutral-3); border-color: transparent; }
 .jl-check--disabled .jl-check__dot { background: var(--bg-neutral-3); }
 
-.jl-check__label { color: var(--text-base); }
+.jl-check__label { color: var(--text-neutral-1); }
+.jl-check--disabled .jl-check__label { color: var(--text-neutral-2); }
