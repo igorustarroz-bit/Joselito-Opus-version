@@ -29,7 +29,7 @@ inventa ni se interpreta ningún diseño — se lee de Figma con `get_design_con
 - **Estilos:** Tailwind CSS v4 (CSS-first, `@tailwindcss/vite`). La estética la define el Figma, no Tailwind.
 - **Animaciones:** GSAP 3.
 - **Documentación:** Storybook 10 (`@storybook/react-vite`) + `@storybook/addon-docs` (MDX) + `remark-gfm` (tablas).
-- **Assets:** SVGR para iconos/vectores (color por `currentColor`/token), WebP para fotos. Ver `docs/assets-workflow.md`.
+- **Assets:** SVGR para iconos/vectores (color por `currentColor`/token), WebP para fotos. Extracción con `npm run figma:asset` (REST) / MCP; conversión con `npm run to-webp`. Requiere `figma-token.txt` (gitignored). Ver `docs/assets-workflow.md`.
 - **Webfonts:** almacenadas adaptadas a web en `public/fonts/` (accesibles sin la fuente instalada). Origen en `fonts-raw/` (no se sube).
 - **Node:** >= 20 (probado en v22).
 
@@ -44,6 +44,7 @@ src/
   assets/       # icons / logos / illustrations / images
 public/fonts/   # webfonts adaptadas
 docs/           # documentación de proceso (assets-workflow.md, etc.)
+scripts/        # utilidades (figma-assets.mjs, to-webp.mjs)
 .storybook/     # config de Storybook
 ```
 

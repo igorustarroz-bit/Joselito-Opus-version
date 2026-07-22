@@ -29,6 +29,9 @@ storybook-static
 # Nunca subir el token de GitHub
 github-token.txt
 
+# Nunca subir el token de Figma (usado por scripts/figma-assets.mjs)
+figma-token.txt
+
 # Fuentes de origen (licenciadas) — no subir; las webfonts van en public/fonts
 fonts-raw/
 
