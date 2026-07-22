@@ -60,7 +60,7 @@ Componentes UI:
 - [ ] UI07-Listbox — `id 49650:12398`
 - [ ] UI08-Checkbox-List — `id 57947:46573`
 - [ ] UI09-Checkbox-Label — `id 43246:12097`
-- [ ] UI10-Checkboxes-Radios — `id 49722:19804`
+- [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
 - [ ] UI11-Form — `id 57947:46433`
 - [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc
 - [x] UI13-Accordion — ítems desplegables (toggle Plus/Minus) + doc

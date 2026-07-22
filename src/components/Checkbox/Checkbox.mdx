@@ -1,0 +1,35 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Checkbox.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI10-Checkbox / Radio
+
+Controles de selección de 20px. **Checkbox** cuadrado (esquinas 2px) que al marcarse se
+rellena con el color de acento y muestra un check blanco. **Radio** circular con punto de
+acento interior. Estados hover (borde acento), disabled y selected+disabled (gris).
+
+## Checkbox
+
+<Canvas of={Stories.CheckboxDefault} />
+
+<Canvas of={Stories.Checkboxes} />
+
+## Radio
+
+<Canvas of={Stories.Radios} />
+
+## Tokens
+
+Bordes `--stroke-neutral-1` (default), `--stroke-accent-1` (hover), `--stroke-neutral-3`
+(disabled/selected). Relleno `--bg-accent-base` (marcado) / `--bg-neutral-3` (disabled).
+Check en `--text-inverted`. Todo adapta por subtema.
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `checked` | `boolean` | `false` | Marcado |
+| `onChange` | `fn` | — | Callback |
+| `disabled` | `boolean` | `false` | Deshabilitado |
+| `label` | `string` | — | Etiqueta |

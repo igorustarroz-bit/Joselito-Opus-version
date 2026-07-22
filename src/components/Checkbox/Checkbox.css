@@ -1,0 +1,32 @@
+/* UI10-Checkbox / Radio — control de 20px. Checkbox cuadrado (radio 2px) con check
+   blanco sobre acento; Radio circular con punto interior. Estados hover/disabled. */
+
+.jl-check { display: inline-flex; align-items: center; gap: var(--sp-2); cursor: pointer; font-family: var(--font-family-body); color: var(--text-base); }
+.jl-check--disabled { cursor: not-allowed; }
+.jl-check__input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.jl-check__control {
+  width: 20px; height: 20px; box-sizing: border-box; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--stroke-neutral-1);
+  color: var(--text-inverted);
+  transition: background-color .15s, border-color .15s;
+}
+.jl-check__control--checkbox { border-radius: 2px; }
+.jl-check__control--radio { border-radius: 9999px; }
+
+.jl-check:hover:not(.jl-check--disabled) .jl-check__control { border-color: var(--stroke-accent-1); }
+.jl-check__input:focus-visible + .jl-check__control { outline: 2px solid var(--stroke-accent-base); outline-offset: 2px; }
+
+/* Checkbox marcado */
+.jl-check__control--checkbox.is-checked { background: var(--bg-accent-base); border-color: transparent; }
+/* Radio marcado */
+.jl-check__control--radio.is-checked { border-color: var(--stroke-neutral-3); }
+.jl-check__dot { width: 12px; height: 12px; border-radius: 9999px; background: var(--bg-accent-base); }
+
+/* Disabled */
+.jl-check--disabled .jl-check__control { border-color: var(--stroke-neutral-3); }
+.jl-check--disabled .jl-check__control--checkbox.is-checked { background: var(--bg-neutral-3); border-color: transparent; }
+.jl-check--disabled .jl-check__dot { background: var(--bg-neutral-3); }
+
+.jl-check__label { color: var(--text-base); }
