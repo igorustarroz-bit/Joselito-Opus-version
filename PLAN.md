@@ -44,11 +44,11 @@ Docs por token (Storybook): Intro · Demo · Tokens.
 Primero los `z_fragment_*` (base de otros), luego los `UI##`.
 
 Bases / fragments:
-- [ ] z_fragment_tab_primary · z_fragment_tab_secondary (base de UI05-Tabs)
-- [ ] z_fragment_listbox_Item_Dropdown (base de UI07-Listbox)
-- [ ] z_fragment_row_2_input · z_fragment_row_3_input (base de UI11-Form)
-- [ ] z_fragment_accordion (base de UI13-Accordion)
-- [ ] z_fragment-Table List Item · z_fragment_list_characteristic · z_fragment_list_BigNumbers · z_fragment-list-archive
+- [x] z_fragment_tab_primary · z_fragment_tab_secondary → resueltos dentro de UI05-Tabs
+- [x] z_fragment_listbox_Item_Dropdown → resuelto dentro de UI07-Listbox
+- [x] z_fragment_row_2_input · z_fragment_row_3_input → resueltos dentro de UI11-Form
+- [x] z_fragment_accordion → resuelto dentro de UI13-Accordion
+- [ ] z_fragment-Table List Item · z_fragment_list_characteristic · z_fragment_list_BigNumbers · z_fragment-list-archive → piezas de los módulos List (se construyen con ellos)
 
 Componentes UI:
 - [x] UI01-Nav-Button — componente + estados + colores por subtema + doc
