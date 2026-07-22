@@ -1,0 +1,194 @@
+/* Módulo Menu (mega-menú) — contenedor a 100% de ancho (máster Figma 58182:4350).
+   Mobile-first (máster Mobile, 390px): cabecera con cierre + acordeón de secciones
+   + enlaces cuenta/cesta + idioma.
+   Desde 768px (breakpoint M): layout desktop (máster 1440px): cabecera (nav + logo
+   + acciones) + panel (Product = lista + imagen + destacado · About = 4 tarjetas).
+   Colores por tokens semánticos; espaciados por escala fija (--spacer-fx-*).
+   NOTA: los espaciados 34/50/64px y el alto de imagen del panel Product no están
+   ligados a variables en Figma, por lo que se aplican como valores de layout. */
+
+.jl-menu {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.jl-menu a { color: inherit; text-decoration: none; }
+
+/* ---------- Cabecera (común) ---------- */
+.jl-menu__header { position: relative; background: var(--bg-base); }
+
+.jl-menu__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.jl-menu__iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  color: var(--text-base);
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Cabecera mobile: cierre · logo · buscar/cesta */
+.jl-menu__header--mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 var(--spacer-fx-6); /* 24 */
+}
+.jl-menu__mobile-right { display: flex; align-items: center; gap: var(--spacer-fx-3); /* 12 */ }
+
+/* Cabecera desktop (oculta en mobile) */
+.jl-menu__header--desktop { display: none; }
+
+/* Panel desktop (oculto en mobile) */
+.jl-menu__panel { display: none; }
+
+/* ---------- Cajón mobile ---------- */
+.jl-menu__drawer { display: flex; flex-direction: column; }
+
+.jl-menu__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-1); /* 4 */
+  padding: var(--spacer-fx-6) var(--spacer-fx-5) var(--spacer-fx-9); /* 24 20 40 */
+}
+
+.jl-menu__acc-item { border-bottom: 1px solid var(--stroke-neutral-3); }
+
+.jl-menu__acc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacer-fx-4) 0; /* 16 */
+  border: 0;
+  background: none;
+  color: var(--text-base);
+  cursor: pointer;
+  text-align: left;
+}
+.jl-menu__acc-caret { display: inline-flex; }
+
+.jl-menu__acc-body { padding-bottom: var(--spacer-fx-6); /* 24 */ }
+
+/* Enlaces cuenta/cesta + idioma */
+.jl-menu__foot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-7); /* 28 */
+  padding: var(--spacer-fx-8) var(--spacer-fx-6) 0; /* 32 24 0 */
+}
+.jl-menu__legal { display: flex; gap: var(--spacer-fx-6); color: var(--text-neutral-2); }
+.jl-menu__lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacer-fx-4) 0; /* 16 */
+  border: 0;
+  border-top: 1px solid var(--stroke-neutral-4);
+  background: none;
+  color: var(--text-base);
+  cursor: pointer;
+}
+
+/* ---------- Contenido de sección: Product ---------- */
+.jl-menu__product { display: flex; flex-direction: column; gap: var(--spacer-fx-6); }
+
+.jl-menu__product-main { display: flex; flex-direction: column; gap: var(--spacer-fx-5); }
+
+.jl-menu__prodlist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-1); /* 4 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jl-menu__prod {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacer-fx-1);
+  color: var(--text-neutral-3);
+  transition: color 0.15s ease;
+}
+.jl-menu__prod:hover { color: var(--text-base); }
+.jl-menu__prod--active { color: var(--text-base); }
+.jl-menu__prod-arrow { display: inline-flex; color: var(--text-base); }
+
+.jl-menu__product-media { width: 100%; background: var(--bg-neutral-1); }
+
+.jl-menu__featured { display: flex; flex-direction: column; gap: var(--spacer-fx-6); /* 24 */ }
+.jl-menu__featured-text { display: flex; flex-direction: column; gap: var(--spacer-fx-2); /* 8 */ }
+.jl-menu__featured-title { color: var(--text-base); }
+.jl-menu__featured-desc { color: var(--text-neutral-2); }
+
+/* ---------- Contenido de sección: About (tarjetas) ---------- */
+.jl-menu__cards { display: flex; flex-wrap: wrap; gap: var(--spacer-fx-5); /* 20 */ }
+.jl-menu__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-fx-5); /* 20 */
+  width: calc((100% - var(--spacer-fx-5)) / 2); /* 2 columnas en mobile */
+}
+.jl-menu__card-media { width: 100%; background: var(--bg-neutral-1); }
+.jl-menu__card-label { color: var(--text-base); }
+
+/* ====================================================================== */
+/* Desktop (≥768px, breakpoint M) */
+@media (min-width: 768px) {
+  .jl-menu__header--mobile { display: none; }
+  .jl-menu__drawer { display: none; }
+
+  .jl-menu__header--desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacer-fx-6) var(--spacer-fx-9); /* 24 40 */
+  }
+  .jl-menu__nav { display: flex; gap: var(--spacer-fx-5); /* 20 */ align-items: center; }
+  .jl-menu__navlink { color: var(--text-base); }
+  .jl-menu__actions { display: flex; gap: var(--spacer-fx-5); align-items: center; }
+  .jl-menu__action {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacer-fx-2); /* 8 */
+    border: 0;
+    background: none;
+    color: var(--text-base);
+    cursor: pointer;
+    padding: 0;
+  }
+  .jl-menu__cart { color: var(--text-accent-base); }
+  .jl-menu__cart span { color: var(--text-accent-base); }
+
+  /* Panel desktop */
+  .jl-menu__panel { display: block; padding: var(--spacer-fx-9); /* 40 (Product) */ }
+  .jl-menu__panel:has(.jl-menu__cards) {
+    padding: var(--spacer-fx-8) var(--spacer-fx-9) 64px; /* pt-32 px-40 pb-64 (About) */
+  }
+
+  /* Product: lista + imagen | destacado */
+  .jl-menu__product { flex-direction: row; justify-content: space-between; }
+  .jl-menu__product-main { flex-direction: row; gap: 34px; }
+  .jl-menu__prodlist { width: 315px; }
+  .jl-menu__product-media { width: 315px; }
+  .jl-menu__featured { width: 316px; }
+
+  /* About: 4 tarjetas en fila */
+  .jl-menu__panel .jl-menu__cards { flex-wrap: nowrap; gap: var(--spacer-fx-8); /* 32 */ }
+  .jl-menu__panel .jl-menu__card { width: auto; flex: 1; }
+}

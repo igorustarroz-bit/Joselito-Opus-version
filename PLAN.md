@@ -79,7 +79,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
 - [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc
 - [x] Navigation / Footer — módulo footer **rehecho pixel-perfect** desde máster `58163:33397` (4 columnas + doble grupo, aside Empresa/Contacto/RRSS, newsletter, barra legal; acordeón en mobile) + doc. Ilustración real integrada (`src/assets/illustrations/footer-illustration.webp`, extraída del nodo `58182:4402`). Aviso: el máster trae la nota "Sing up for our newsletter" (typo de origen, replicado)
-- [ ] Menu (mega-menú) — `id 58182:4350`
+- [x] Menu (mega-menú) — módulo overlay **pixel-perfect** desde máster `58182:4350` (5 variantes: Desktop/Product = lista + imagen + destacado · Desktop/About = 4 tarjetas · Mobile Default/Product/About = cabecera con cierre + acordeón CaretDown↔CaretUp + pie CUENTA/CESTA/idioma). Reutiliza Icon, BrandLogo, AspectRatio, ActionLink. Nota: réplica de la inconsistencia del máster (ítem resaltado "Paletas Gran Reserva" vs destacado "Regalos…"); imágenes como placeholders Neutral-1 (el máster no trae assets). Pendiente: verificación visual del usuario en Storybook local (sin navegador headless en el entorno) + doc
 - [ ] Hero / Homepage hero — `id 58182:4353`
 - [ ] Hero / Section hero — `id 58163:39435`
 - [ ] Hero / Section header — `id 58163:39446`

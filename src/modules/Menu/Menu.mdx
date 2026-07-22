@@ -1,0 +1,113 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Menu.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation / Menu (mega-menú)
+
+Overlay de navegación que despliega el header, contenedor a **100% de ancho**.
+En desktop muestra un panel bajo la barra de navegación; en mobile es un cajón a
+pantalla completa con acordeón de secciones.
+
+Máster de Figma: `Menu` (`58182:4350`), con variantes **Desktop/Product**
+(`58182:4348`), **Desktop/About** (`58182:4349`), **Mobile/Default**
+(`58512:86748`), **Mobile/Product** (`58525:37049`) y **Mobile/About**
+(`58525:37139`).
+
+## Demo
+
+<Canvas of={Stories.DesktopProduct} />
+
+## Anatomía
+
+Desktop (de arriba a abajo):
+
+1. **Cabecera** — enlaces de sección (izq.), logo centrado y acciones
+   (`Buscar` / `Cuenta` / `Cesta`) a la derecha. Coincide con el módulo
+   `Navigation`, aquí en estado "menú abierto".
+2. **Panel** — según el tipo de sección activa:
+   - **Product:** lista de productos (columna izquierda, el activo en negro con
+     flecha; el resto en `Neutral-3`) + imagen (3:4) + bloque destacado (título,
+     descripción y enlace de acción `DESCUBRE MÁS`).
+   - **About:** fila de 4 tarjetas (imagen 3:2 + label).
+
+Mobile:
+
+1. **Cabecera** — botón de cierre (izq.), logo centrado, `Buscar` y `Cesta`.
+2. **Acordeón de secciones** — `PRODUCTOS`, `ORIGEN`, `EXCELENCIA`,
+   `COMPROMISOS`, `EXPERIENCIAS`. Al abrir una sección desplegable muestra su
+   contenido: lista de productos + destacado (Product) o grid de 2 columnas de
+   tarjetas (About).
+3. **Pie** — enlaces `CUENTA` / `CESTA` y selector de idioma (`ENGLISH`).
+
+<Canvas of={Stories.MobileDefault} />
+
+## Subtemas
+
+El módulo hereda el subtema del contenedor vía `data-theme` (colores por tokens
+semánticos, nunca hardcodeados). Un hijo puede sobrescribir al padre.
+
+<Canvas of={Stories.SubtemaOscuro} />
+
+## Comportamiento
+
+- **Desktop (≥768px):** se muestra la cabecera con la barra de navegación y un
+  único panel. El tipo de panel (`Product` / `About`) depende de la sección sobre
+  la que se abre. En la lista de productos, el ítem bajo el cursor pasa de
+  `Neutral-3` a `Texts/Base` (negro) y muestra la flecha.
+- **Mobile (por debajo de 768px):** cajón a pantalla completa. Cada sección
+  desplegable es un acordeón independiente (toggle `CaretDown` ↔ `CaretUp`); las
+  secciones de enlace simple no despliegan contenido.
+
+<Canvas of={Stories.MobileProduct} />
+<Canvas of={Stories.MobileAbout} />
+
+## Variantes y tamaños
+
+Dos dispositivos (Desktop 1440 / Mobile 390) × dos tipos de contenido
+(`Product` / `About`), más el estado Mobile por defecto (todo cerrado). Los
+breakpoints intermedios se infieren del breakpoint **M-768**.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Texto navegación / secciones / destacado (título) | `--text-base` |
+| Lista de productos (inactivos) | `--text-neutral-3` |
+| Descripción del destacado / enlaces legales | `--text-neutral-2` |
+| `Cesta` (acento) | `--text-accent-base` |
+| Separadores del acordeón | `--stroke-neutral-3` |
+| Separador del selector de idioma | `--stroke-neutral-4` |
+| Placeholder de imagen | `--bg-neutral-1` |
+| Tipografías | `.ts-body-2`, `.ts-body-3`; enlace de acción `CTA` (vía `ActionLink`) |
+| Espaciados | `--spacer-fx-1…9` |
+
+> Los valores 34px (columna imagen del panel Product), 50px y 64px (paddings de
+> sección) y el alto de imagen no están ligados a variables en Figma, por lo que
+> se aplican como valores de layout del módulo.
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `headerLinks` | `string[]` | Tienda…Experiencia | Enlaces de la barra de navegación (desktop) |
+| `sections` | `{id,label,kind,...}[]` | máster | Secciones del acordeón mobile (`kind`: `product` / `about` / `link`) |
+| `type` | `'product' \| 'about'` | `'product'` | Tipo de panel en desktop |
+| `cards` | `{label,image?}[]` | máster | Tarjetas del panel About (desktop) |
+| `cartCount` | `number` | `3` | Contador de la cesta |
+| `language` | `string` | `ENGLISH` | Idioma actual |
+| `defaultOpen` | `string \| null` | `null` | Id de la sección abierta inicialmente (mobile) |
+| `onClose` | `function` | — | Callback del botón de cierre (mobile) |
+
+## Accesibilidad
+
+- Cabeceras de acordeón como `<button>` con `aria-expanded`.
+- Botones de icono (cierre, buscar, cesta) con `aria-label`.
+- Contraste de texto sobre fondo garantizado por los tokens semánticos del subtema.
+- La lista de productos usa enlaces reales; el estado activo no depende solo del color.
+
+## Componentes relacionados
+
+`Icon`, `BrandLogo`, `AspectRatio`, `ActionLink` (UI04) y el módulo `Navigation`
+(header en estado cerrado).
