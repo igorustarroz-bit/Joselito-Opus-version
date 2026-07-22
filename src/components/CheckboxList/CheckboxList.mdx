@@ -1,0 +1,28 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxList.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI08-Checkbox-List
+
+Lista de casillas (**UI09-Checkbox-Label**). Disposición **vertical** (separación 8px) u
+**horizontal** (separación 16px). Gestiona la selección y notifica con `onChange`.
+
+## Vertical
+
+<Canvas of={Stories.Vertical} />
+
+<Controls of={Stories.Vertical} />
+
+## Horizontal
+
+<Canvas of={Stories.Horizontal} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `items` | `{label, checked?, disabled?}[]` | `[]` | Casillas |
+| `vertical` | `boolean` | `true` | Disposición |
+| `size` | `m \| s` | `m` | Tamaño de las casillas |
+| `onChange` | `(index, checked, all) => void` | — | Callback |

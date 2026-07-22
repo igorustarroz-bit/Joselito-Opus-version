@@ -58,7 +58,7 @@ Componentes UI:
 - [x] UI05-Tabs — barra de pestañas (Primary/Secondary, estados) + doc
 - [x] UI06-Input — campo (Big/Small, estados default/filled/error/validated/disabled) + doc
 - [ ] UI07-Listbox — `id 49650:12398`
-- [ ] UI08-Checkbox-List — `id 57947:46573`
+- [x] UI08-Checkbox-List — lista de casillas (vertical/horizontal) + doc
 - [x] UI09-Checkbox-Label — casilla con etiqueta (m/s, indeterminado) + doc
 - [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
 - [ ] UI11-Form — `id 57947:46433`
