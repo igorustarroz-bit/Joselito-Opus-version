@@ -1,0 +1,23 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Listbox.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI07-Listbox
+
+Lista de opciones desplegable. Fondo base, cada opción con texto de formulario (Input-M),
+esquinas 2px y realce al pasar el ratón. Controlado (`value` + `onChange`) o no controlado
+(`defaultValue`). Este componente cubre el núcleo reutilizable (lista de opciones); las
+variantes móviles de Figma añaden cabecera seleccionada y pie con botón "Aplicar".
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `items` | `{label, value?, disabled?}[]` | `[]` | Opciones |
+| `value` / `defaultValue` | `any` | — | Selección (controlada/no) |
+| `onChange` | `(value) => void` | — | Callback al seleccionar |

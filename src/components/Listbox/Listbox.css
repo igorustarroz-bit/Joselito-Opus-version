@@ -1,0 +1,32 @@
+/* UI07-Listbox — lista de opciones desplegable. Fondo base, ítems con texto
+   Input-M (neutral-1), esquinas 2px, hover con fondo neutro. */
+
+.jl-listbox {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-base);
+  padding: var(--sp-3) var(--spacer-fx-2);
+  width: 100%;
+}
+.jl-listbox__item {
+  display: flex;
+  align-items: center;
+  gap: var(--form-l-padding-r);
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: var(--corner-xxs);
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-neutral-1);
+  font-family: var(--font-family-forms);
+  font-weight: var(--font-weight-form);
+  letter-spacing: var(--letter-spacing-forms);
+  font-size: var(--ts-input-m-text-sz);
+  line-height: var(--ts-input-m-text-lh);
+  transition: background-color .15s, color .15s;
+}
+.jl-listbox__item:hover:not(:disabled) { background: var(--bg-neutral-1); color: var(--text-base); }
+.jl-listbox__item[aria-selected="true"] { color: var(--text-base); }
+.jl-listbox__item:disabled { color: var(--text-disabled); cursor: not-allowed; }

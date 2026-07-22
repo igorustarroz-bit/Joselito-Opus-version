@@ -57,7 +57,7 @@ Componentes UI:
 - [x] UI04-Button-Action-Link — componente (enlace subrayado, estados) + doc
 - [x] UI05-Tabs — barra de pestañas (Primary/Secondary, estados) + doc
 - [x] UI06-Input — campo (Big/Small, estados default/filled/error/validated/disabled) + doc
-- [ ] UI07-Listbox — `id 49650:12398`
+- [x] UI07-Listbox — lista de opciones desplegable (núcleo reutilizable) + doc
 - [x] UI08-Checkbox-List — lista de casillas (vertical/horizontal) + doc
 - [x] UI09-Checkbox-Label — casilla con etiqueta (m/s, indeterminado) + doc
 - [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
