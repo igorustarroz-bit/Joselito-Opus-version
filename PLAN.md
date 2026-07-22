@@ -74,7 +74,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 
 ## Fase 4 — Módulos (contenedores 100% ancho, grid 12 col, versiones Desktop/Mobile)
 
-- [ ] Navigation (main) — `id 58182:4143`
+- [x] Navigation (header) — módulo header (enlaces + logo + acciones, light/dark, responsive) + doc
 - [x] Navigation / Secondary menu — módulo fila de categorías (responsive, activo subrayado) + doc
 - [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
 - [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc

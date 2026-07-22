@@ -1,0 +1,34 @@
+/* Módulo Navigation (header principal) — a 100% de ancho. Desktop: enlaces (izq),
+   logo centrado, acciones (der). Mobile: hamburguesa + logo + iconos. Modo Light/Dark. */
+
+.jl-nav {
+  position: relative;
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 12px 24px;
+}
+.jl-nav--dark { background: transparent; color: var(--color-neutral-white); }
+
+.jl-nav__logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; color: inherit; }
+
+.jl-nav__desktop { display: none; }
+.jl-nav__mobile { display: flex; flex: 1; align-items: center; justify-content: space-between; }
+.jl-nav__mobile-right { display: flex; align-items: center; gap: 12px; }
+.jl-nav__iconbtn { background: none; border: 0; padding: 0; cursor: pointer; color: inherit; display: inline-flex; }
+
+.jl-nav__links { display: flex; gap: 20px; align-items: center; }
+.jl-nav__link { color: inherit; text-decoration: none; }
+.jl-nav__actions { display: flex; gap: 20px; align-items: center; }
+.jl-nav__action { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; background: none; border: 0; cursor: pointer; }
+.jl-nav__cart { color: var(--text-accent-base); display: inline-flex; gap: 4px; }
+.jl-nav--dark .jl-nav__cart { color: var(--color-neutral-white); }
+
+@media (min-width: 768px) {
+  .jl-nav { padding: 24px 40px; }
+  .jl-nav__desktop { display: flex; flex: 1; align-items: center; justify-content: space-between; }
+  .jl-nav__mobile { display: none; }
+}

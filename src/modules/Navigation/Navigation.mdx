@@ -1,0 +1,31 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Navigation.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Navigation (header)
+
+Cabecera principal a 100% de ancho. En **desktop**: enlaces de sección a la izquierda,
+**logo** centrado (BrandLogo) y acciones a la derecha (Buscar con icono, Cuenta y Cesta con
+contador en color de acento). En **mobile**: botón de menú (hamburguesa), logo centrado e
+iconos de búsqueda y cesta. Dos **modos**: `light` (fondo base) y `dark` (transparente,
+texto blanco, para superponer sobre imágenes/heros oscuros).
+
+## Light
+
+<Canvas of={Stories.Light} />
+
+<Controls of={Stories.Light} />
+
+## Dark
+
+<Canvas of={Stories.Dark} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `links` | `string[]` | (secciones) | Enlaces de navegación |
+| `cartCount` | `number` | `3` | Nº de artículos en la cesta |
+| `mode` | `light \| dark` | `light` | Tema del header |
+| `onMenu` | `fn` | — | Callback del botón de menú (mobile) |
