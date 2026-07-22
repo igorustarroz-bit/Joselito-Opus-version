@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ButtonIcon.stories.jsx';
+
+<Meta of={Stories} />
+
+# UI03-Button-Icon
+
+Botón **cuadrado solo-icono**. Tres tipos (Primary/Secondary/Terciary), tamaños XS–XL y
+estados (hover/focus/selected/disabled). Reutiliza los colores de UI02-Button. Rectangular.
+
+Tamaño de icono por tamaño de botón: XS→16 · S/M/L→20 · XL→32.
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Tipos
+
+<Canvas of={Stories.Tipos} />
+
+## Tamaños
+
+<Canvas of={Stories.Tamaños} />
+
+## Estados
+
+<Canvas of={Stories.Estados} />
+
+## Propiedades
+
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `icon` | `string` | `ArrowRight` | Nombre de icono |
+| `type` | `primary \| secondary \| terciary` | `primary` | Tipo |
+| `size` | `xs \| s \| m \| l \| xl` | `m` | Tamaño |
+| `selected` | `boolean` | `false` | Seleccionado |
+| `disabled` | `boolean` | `false` | Deshabilitado |
+| `label` | `string` | — | Texto accesible (aria-label) |

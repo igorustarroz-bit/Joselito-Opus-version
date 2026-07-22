@@ -1,0 +1,41 @@
+/* UI03-Button-Icon — botón cuadrado solo-icono. 3 tipos × XS-XL × estados.
+   Reutiliza los colores de botón (--btn-<type>-<state>-*). Rectangular. */
+
+.jl-iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.jl-iconbtn__icon { display: inline-flex; color: var(--_ic); }
+
+/* Tamaños (cuadrado) */
+.jl-iconbtn--xs { width: var(--btn-xs-size); height: var(--btn-xs-size); }
+.jl-iconbtn--s  { width: var(--btn-s-size);  height: var(--btn-s-size); }
+.jl-iconbtn--m  { width: var(--btn-m-size);  height: var(--btn-m-size); }
+.jl-iconbtn--l  { width: var(--btn-l-size);  height: var(--btn-l-size); }
+.jl-iconbtn--xl { width: var(--btn-xl-size); height: var(--btn-xl-size); }
+
+/* Tipos + estados (mismos tokens que UI02-Button) */
+.jl-iconbtn--primary { background: var(--btn-primary-default-fill); border-color: var(--btn-primary-default-stroke); --_ic: var(--btn-primary-default-icon); }
+.jl-iconbtn--primary:hover:not(:disabled) { background: var(--btn-primary-hover-fill); border-color: var(--btn-primary-hover-stroke); --_ic: var(--btn-primary-hover-icon); }
+.jl-iconbtn--primary:focus-visible { background: var(--btn-primary-focused-fill); border-color: var(--btn-primary-focused-stroke); --_ic: var(--btn-primary-focused-icon); outline: none; }
+.jl-iconbtn--primary[data-selected="true"] { background: var(--btn-primary-selected-fill); border-color: var(--btn-primary-selected-stroke); --_ic: var(--btn-primary-selected-icon); }
+.jl-iconbtn--primary:disabled { background: var(--btn-primary-disabled-fill); border-color: var(--btn-primary-disabled-stroke); --_ic: var(--btn-primary-disabled-icon); }
+
+.jl-iconbtn--secondary { background: var(--btn-secondary-default-fill); border-color: var(--btn-secondary-default-stroke); --_ic: var(--btn-secondary-default-icon); }
+.jl-iconbtn--secondary:hover:not(:disabled) { background: var(--btn-secondary-hover-fill); border-color: var(--btn-secondary-hover-stroke); --_ic: var(--btn-secondary-hover-icon); }
+.jl-iconbtn--secondary:focus-visible { background: var(--btn-secondary-focused-fill); border-color: var(--btn-secondary-focused-stroke); --_ic: var(--btn-secondary-focused-icon); outline: none; }
+.jl-iconbtn--secondary[data-selected="true"] { background: var(--btn-secondary-selected-fill); border-color: var(--btn-secondary-selected-stroke); --_ic: var(--btn-secondary-selected-icon); }
+.jl-iconbtn--secondary:disabled { background: var(--btn-secondary-disabled-fill); border-color: var(--btn-secondary-disabled-stroke); --_ic: var(--btn-secondary-disabled-icon); }
+
+.jl-iconbtn--terciary { background: var(--btn-terciary-default-fill); border-color: var(--btn-terciary-default-stroke); --_ic: var(--btn-terciary-default-icon); }
+.jl-iconbtn--terciary:hover:not(:disabled) { background: var(--btn-terciary-hover-fill); border-color: var(--btn-terciary-hover-stroke); --_ic: var(--btn-terciary-hover-icon); }
+.jl-iconbtn--terciary:focus-visible { background: var(--btn-terciary-focused-fill); border-color: var(--btn-terciary-focused-stroke); --_ic: var(--btn-terciary-focused-icon); outline: none; }
+.jl-iconbtn--terciary[data-selected="true"] { background: var(--btn-terciary-selected-fill); border-color: var(--btn-terciary-selected-stroke); --_ic: var(--btn-terciary-selected-icon); }
+.jl-iconbtn--terciary:disabled { background: var(--btn-terciary-disabled-fill); border-color: var(--btn-terciary-disabled-stroke); --_ic: var(--btn-terciary-disabled-icon); }
+
+.jl-iconbtn:disabled { cursor: not-allowed; }
