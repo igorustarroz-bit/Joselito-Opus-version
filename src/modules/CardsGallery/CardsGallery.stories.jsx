@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop — slider horizontal con ratio de imagen alterno. */
 export const Desktop = { parameters: { viewport: { value: 'xl' } } };
 

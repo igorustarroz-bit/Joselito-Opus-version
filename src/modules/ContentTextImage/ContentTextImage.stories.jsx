@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (half), fluida para comprobar el responsive. */
+export const Default = { args: { type: 'half' } };
+
 const footnote = '(Mayoral, P. et al. The Journal of nutrition, health and aging 2003; 7;2: 84-89.)';
 
 /** Half — imagen a media página + panel de texto amplio con nota al pie. */

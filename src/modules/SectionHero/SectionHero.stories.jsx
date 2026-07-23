@@ -18,6 +18,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Full bleed — imagen a sangre (16:9 desktop). Texto arriba, imagen debajo. */
 export const FullBleed = {
   name: 'Full bleed',

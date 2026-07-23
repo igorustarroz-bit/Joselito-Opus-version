@@ -9,6 +9,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop · Many — carrusel con slides asomando. */
 export const Many = { parameters: { viewport: { value: 'xl' } } };
 

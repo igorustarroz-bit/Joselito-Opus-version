@@ -9,6 +9,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop · RRSS — antetítulo + iconos en cabecera; miniaturas con handle. */
 export const RRSS = { name: 'RRSS', parameters: { viewport: { value: 'xl' } } };
 

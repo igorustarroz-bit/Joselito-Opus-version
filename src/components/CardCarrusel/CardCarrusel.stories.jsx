@@ -14,5 +14,8 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (horizontal). */
+export const Default = { render: (a) => <div style={{ maxWidth: 1000 }}><CardCarrusel {...a} /></div> };
+
 export const Horizontal = { args: { orientation: 'horizontal' }, render: (a) => <div style={{ maxWidth: 1000 }}><CardCarrusel {...a} /></div> };
 export const Vertical = { args: { orientation: 'vertical' }, render: (a) => <div style={{ width: 260 }}><CardCarrusel {...a} /></div> };

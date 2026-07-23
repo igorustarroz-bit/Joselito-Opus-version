@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (1 imagen 16:9), fluida para comprobar el responsive. */
+export const Default = { args: { count: 1, ratio: '16:9' } };
+
 /** Una imagen a sangre (16:9). */
 export const UnaImagen = { name: 'Una imagen', args: { count: 1, ratio: '16:9' }, parameters: { viewport: { value: 'xl' } } };
 

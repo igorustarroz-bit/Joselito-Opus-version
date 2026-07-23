@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop — etiqueta arriba; fila título | descripción + enlace. */
 export const Desktop = { parameters: { viewport: { value: 'xl' } } };
 

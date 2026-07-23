@@ -178,7 +178,7 @@ export default function Menu({
           <a href="#" className="jl-menu__action jl-menu__cart">Cesta <span>({cartCount})</span></a>
         </div>
         <a className="jl-menu__logo" href="#" aria-label="Joselito — inicio">
-          <BrandLogo variant="horizontal" height={56} />
+          <BrandLogo variant="horizontal" height={84} />
         </a>
       </div>
 
@@ -197,7 +197,7 @@ export default function Menu({
           <button type="button" className="jl-menu__iconbtn" aria-label="Cesta"><Icon name="Bag" size="M" /></button>
         </div>
         <a className="jl-menu__logo" href="#" aria-label="Joselito — inicio">
-          <BrandLogo variant="horizontal" height={56} />
+          <BrandLogo variant="horizontal" height={84} />
         </a>
       </div>
 

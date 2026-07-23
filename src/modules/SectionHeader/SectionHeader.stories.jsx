@@ -20,6 +20,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop · Big — título Title/07 e imagen 3:4. */
 export const Big = {
   parameters: { viewport: { value: 'xl' } },

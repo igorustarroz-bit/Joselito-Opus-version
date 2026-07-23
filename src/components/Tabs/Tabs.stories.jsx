@@ -15,6 +15,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (primary). */
+export const Default = { args: { type: 'primary' } };
+
 export const Primary = { args: { type: 'primary' } };
 export const Secondary = { args: { type: 'secondary' } };
 

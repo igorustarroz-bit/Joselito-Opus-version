@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (Product), fluida para comprobar el responsive. */
+export const Default = { args: { type: 'product' } };
+
 /** Desktop · Product — cabecera + lista de productos + imagen + destacado
  *  (máster 58182:4348). Ver en viewport ≥768. */
 export const DesktopProduct = {

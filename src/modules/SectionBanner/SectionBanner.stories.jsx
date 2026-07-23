@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop — imagen a sangre (720px) con tarjeta blanca flotante a la derecha. */
 export const Desktop = { parameters: { viewport: { value: 'xl' } } };
 

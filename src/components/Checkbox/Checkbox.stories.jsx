@@ -10,6 +10,14 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (checkbox controlado). */
+export const Default = {
+  render: (a) => {
+    const [c, setC] = useState(a.checked);
+    return <Checkbox {...a} checked={c} onChange={(e) => setC(e.target.checked)} />;
+  },
+};
+
 export const CheckboxDefault = {
   render: (a) => {
     const [c, setC] = useState(a.checked);

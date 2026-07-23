@@ -10,6 +10,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (dos columnas), fluida para comprobar el responsive. */
+export const Default = { args: { label: 'This is a label', title: 'Lorem ipsum dolor sit amet consectetur.', columns: [[p1, p2], [p1]] } };
+
 export const DosColumnas = { args: { label: 'This is a label', title: 'Lorem ipsum dolor sit amet consectetur.', columns: [[p1, p2], [p1]] } };
 export const UnaColumna = { args: { label: 'This is a label', title: 'Arte e instinto', columns: [[p1, p2]] } };
 export const Split = { args: { variant: 'split', label: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet consectetur.', columns: [[p1]] } };

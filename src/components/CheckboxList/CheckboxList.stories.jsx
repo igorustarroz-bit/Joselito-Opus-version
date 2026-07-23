@@ -15,5 +15,8 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (vertical). */
+export const Default = { args: { vertical: true } };
+
 export const Vertical = { args: { vertical: true } };
 export const Horizontal = { args: { vertical: false } };

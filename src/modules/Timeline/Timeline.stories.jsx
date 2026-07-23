@@ -17,6 +17,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto (imagen horizontal, subtema rojo), fluida para comprobar el responsive. */
+export const Default = { parameters: { defaultTheme: 'dark-red-primary' } };
+
 /** Desktop · imagen horizontal (fondo rojo). */
 export const Horizontal = {
   parameters: { viewport: { value: 'xl' }, defaultTheme: 'dark-red-primary' },

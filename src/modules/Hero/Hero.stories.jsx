@@ -7,6 +7,9 @@ const meta = {
 };
 export default meta;
 
+/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+export const Default = {};
+
 /** Desktop (1440×860) — imagen a sangre, copy central y Toast abajo-derecha. */
 export const Desktop = {
   parameters: { viewport: { value: 'xl' } },
