@@ -1,0 +1,44 @@
+/* Módulo Cards / Gallery — cabecera + galería de fichas (máster 58163:40311).
+   Ratio de imagen alterno (efecto escalonado). Desktop: slider horizontal
+   (tarjetas 312px). Mobile: dos columnas (flex-wrap). Breakpoint desktop: 768px. */
+
+.jl-cards-gallery {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.jl-cards-gallery * { box-sizing: border-box; }
+
+.jl-cards-gallery__head {
+  padding: 60px 20px 0;
+}
+.jl-cards-gallery__title {
+  color: var(--text-base);
+  max-width: 652px;
+  margin: 0;
+}
+
+.jl-cards-gallery__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 40px 20px;
+}
+.jl-cards-gallery__card {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .jl-cards-gallery__head { padding: 120px 60px 0; }
+  .jl-cards-gallery__row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 24px;
+    padding: 60px 60px 80px;
+  }
+  .jl-cards-gallery__card { flex: 0 0 312px; width: 312px; }
+}

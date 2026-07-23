@@ -1,0 +1,72 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsGallery.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Gallery
+
+Cabecera + galería de **fichas de producto** a 100% de ancho, con ratio de imagen
+alterno que produce un efecto escalonado. Máster de Figma: `Cards / Gallery`
+(`58163:40311`), variantes **Desktop** / **Mobile** y estados **default** / **expanded**.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Título** de sección (`SangBleu Kingdom`, `Title/04`).
+2. **Fichas** — componentes `CardProduct` (imagen + título `Title/02`, precio
+   `Body/02`, dirección `Body/03` y enlace de acción "Descubrir"). El **ratio de
+   imagen alterna** 3:4 / 1:1 por posición.
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme`; un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop (≥768px):** slider horizontal (scroll), tarjetas de 312px. El ratio
+  alterno escalona verticalmente el texto (galería).
+- **Mobile:** las fichas fluyen en **dos columnas** (`flex-wrap`).
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+Número de fichas flexible (prop `items`); el ratio alterna automáticamente salvo
+que se fije por ficha (`item.ratio`). El estado "expanded" del máster equivale a
+mostrar más `items`.
+
+> **Nota de máster:** el título de la cabecera aparece a menor tamaño que en otros
+> módulos `Content / Title`; aquí se usa el token único `.ts-title-4`.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Título | `--text-base` |
+| Tipografía título | `.ts-title-4` |
+| Fichas | tokens de `Card Product` (`.ts-title-2`, `.ts-body-2/3`, Action-Link) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string \| null` | `Ullamcorper tellus` | Título de sección |
+| `items` | `{ title, price, address, cta, image, ratio }[]` | 4 fichas | Fichas de producto |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de sección como `<h2>`.
+- Cada ficha incluye su enlace de acción (foco visible vía `ActionLink`).
+- Contraste garantizado por los tokens del subtema.
+
+## Componentes relacionados
+
+`Card Product`, `Aspect Ratio`, `Cards / Product carousel`, `Cards / Links`, `Content / Title`.
