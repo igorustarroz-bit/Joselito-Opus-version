@@ -1,0 +1,70 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsLinks.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Links
+
+Cabecera de sección + fila de **tarjetas-enlace** a 100% de ancho. Máster de Figma:
+`Cards / Links` (`58163:40143`), variantes **Desktop** (1440) y **Mobile** (390).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Título** de sección (`SangBleu Kingdom`, `Title/04`).
+2. **Fila de tarjetas** — componentes `CardLink` (imagen 3:4 con título `Title/02` y
+   subtítulo `Body/02` superpuestos en blanco sobre la imagen).
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens); un hijo
+puede sobrescribir al padre. El texto de las tarjetas va sobre la imagen (blanco).
+
+## Comportamiento
+
+- **Desktop (≥768px):** dos tarjetas grandes en fila (cada una ocupa la mitad).
+- **Mobile:** las mismas tarjetas en fila, más pequeñas.
+- Cada tarjeta es un enlace (`CardLink`, `as="a"`).
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Mobile} />
+<Canvas of={Stories.TresTarjetas} />
+
+## Variantes y tamaños
+
+Número de tarjetas flexible (prop `items`); las tarjetas se reparten el ancho a
+partes iguales.
+
+> **Nota de máster:** paddings (120/60 desktop, 60/20 mobile) hardcodeados en el máster.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Título | `--text-base` |
+| Tipografía título | `.ts-title-4` |
+| Tarjetas | tokens de `Card Link` (`.ts-title-2`, `.ts-body-2`) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string \| null` | `Lorem ipsum accumsan eleifend` | Título de sección (`null`/`''` = oculto) |
+| `items` | `{ title, subtitle, image, href }[]` | 2 tarjetas | Tarjetas-enlace |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de sección como `<h2>`.
+- Cada tarjeta es un enlace `<a>` (foco visible vía `CardLink`).
+- Contraste del texto sobre imagen garantizado por el overlay del componente.
+
+## Componentes relacionados
+
+`Card Link`, `Aspect Ratio`, `Cards / Gallery`, `Cards / Categories`, `Content / Title`.

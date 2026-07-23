@@ -1,0 +1,36 @@
+/* Módulo Cards / Links — cabecera + fila de tarjetas-enlace (máster 58163:40143).
+   Título + fila de CardLink. En fila en desktop y mobile. Paddings del máster
+   (literales). Breakpoint desktop: 768px. */
+
+.jl-cards-links {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.jl-cards-links * { box-sizing: border-box; }
+
+.jl-cards-links__head {
+  padding: 60px 20px 0;
+}
+.jl-cards-links__title {
+  color: var(--text-base);
+  max-width: 652px;
+  margin: 0;
+}
+
+.jl-cards-links__row {
+  display: flex;
+  gap: 12px;
+  padding: 40px 20px 60px;
+}
+.jl-cards-links__card {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .jl-cards-links__head { padding: 120px 60px 0; }
+  .jl-cards-links__row { gap: 24px; padding: 76px 60px 80px; }
+}
