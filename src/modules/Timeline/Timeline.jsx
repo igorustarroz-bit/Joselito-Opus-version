@@ -10,9 +10,10 @@ import Icon from '../../components/Icon/Icon.jsx';
  * gigantes de fondo (SangBleu, uno activo destacado), una fotografía rotada
  * superpuesta y una tarjeta blanca con título, descripción y navegación (prev/next).
  *
- * Subtema por variante (como en el máster): con imagen → fondo rojo de marca
- * (`data-theme="dark-red-primary"`); sin imagen (`image="none"`) → fondo oscuro
- * (`data-theme="dark-black-neutral"`).
+ * Subtema: el módulo HEREDA el subtema del contenedor (el fondo lo da `--bg-base`).
+ * Defaults por variante fijados en Storybook con `globals.theme` (el toolbar puede
+ * cambiarlos): con imagen → `dark-red-primary` (fondo rojo); sin imagen → oscuro.
+ * En producción, coloca el módulo bajo un `data-theme` o pásale la prop `theme`.
  *
  * Reutiliza UI03-Button-Icon (prev/next) e Icon (CaretRight del enlace).
  *
@@ -37,14 +38,14 @@ export default function Timeline({
   },
   onPrev,
   onNext,
+  theme,
   className = '',
   ...rest
 }) {
-  const theme = image === 'none' ? 'dark-black-neutral' : 'dark-red-primary';
   return (
     <section
       className={`jl-timeline jl-timeline--${image} ${className}`.trim()}
-      data-theme={theme}
+      data-theme={theme || undefined}
       {...rest}
     >
       <div className="jl-timeline__head">

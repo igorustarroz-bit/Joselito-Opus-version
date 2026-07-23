@@ -5,8 +5,13 @@ import Tag from '../../components/Tag/Tag.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 
 /**
- * Módulo Hero / Section header — cabecera de sección a 100% de ancho, subtema
- * OSCURO (`data-theme="dark-black-neutral"`). Máster Figma 58508:6679.
+ * Módulo Hero / Section header — cabecera de sección a 100% de ancho, pensado
+ * para subtema OSCURO. Máster Figma 58508:6679.
+ *
+ * Subtema: el módulo HEREDA el subtema del contenedor (colores por tokens). Su
+ * default (`dark-black-neutral`) se fija en Storybook con `globals.theme`, de modo
+ * que el toolbar puede cambiarlo. En producción, coloca el módulo bajo un
+ * contenedor con `data-theme` o pásale la prop `theme` para fijarlo.
  *
  * Dos paneles: bloque de texto (botón atrás + eyebrow arriba; título SangBleu +
  * descripción + etiquetas abajo) y una imagen. En desktop van lado a lado (texto
@@ -36,6 +41,7 @@ export default function SectionHeader({
   image,
   alt = '',
   onBack,
+  theme,
   className = '',
   ...rest
 }) {
@@ -43,7 +49,7 @@ export default function SectionHeader({
   return (
     <section
       className={`jl-sheader jl-sheader--${type} ${className}`.trim()}
-      data-theme="dark-black-neutral"
+      data-theme={theme || undefined}
       {...rest}
     >
       <div className="jl-sheader__text">
