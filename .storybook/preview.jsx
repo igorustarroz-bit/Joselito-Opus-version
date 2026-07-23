@@ -12,8 +12,11 @@ const breakpointViewports = {
 };
 
 // Subtemas = modos de la colección Semantic-Color (data-theme).
+// "auto" = usar el default del módulo (parameters.defaultTheme); el resto fuerzan
+// ese subtema (incluido "default" = Light-White).
 const themes = {
-  'default': 'Light - White (default)',
+  'auto': 'Auto (default del módulo)',
+  'default': 'Light - White',
   'light-grey': 'Light - Grey',
   'dark-red-primary': 'Dark - Red - Primary',
   'dark-black-neutral': 'Dark - Black - Neutral',
@@ -32,7 +35,7 @@ const preview = {
   },
   initialGlobals: {
     viewport: { value: 'xs', isRotated: false },
-    theme: 'default',
+    theme: 'auto',
   },
   globalTypes: {
     theme: {
@@ -47,15 +50,13 @@ const preview = {
   },
   decorators: [
     (Story, context) => {
-      // El toolbar manda cuando el usuario elige un subtema concreto; si está en
-      // "default", se aplica el default del módulo (parameters.defaultTheme).
-      // Así el dropdown cambia el módulo con normalidad, pero cada uno abre en su
-      // subtema por defecto. (Salvedad: para volver a Light-White en un módulo con
-      // default oscuro, no basta elegir "default"; ese caso queda cubierto por el
-      // propio default del módulo.)
+      // "auto" (valor inicial) → usa el default del módulo (parameters.defaultTheme,
+      // o Light-White si no hay). Cualquier otro valor del toolbar fuerza ese
+      // subtema, incluido "default" (= Light-White). Así el dropdown cambia el
+      // módulo con normalidad y cada uno abre en su default.
       const toolbar = context.globals.theme;
       const fallback = context.parameters.defaultTheme || 'default';
-      const effective = toolbar && toolbar !== 'default' ? toolbar : fallback;
+      const effective = !toolbar || toolbar === 'auto' ? fallback : toolbar;
       return (
         <div
           data-theme={effective === 'default' ? undefined : effective}
