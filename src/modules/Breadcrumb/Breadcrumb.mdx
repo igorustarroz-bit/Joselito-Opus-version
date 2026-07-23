@@ -13,15 +13,63 @@ lateral usa el **wrapper del grid** (responsive). Cambia el viewport para verlo 
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
+
+1. **Contenedor** (`nav.jl-breadcrumb`): barra a 100% de ancho con fondo base y padding lateral del wrapper del grid.
+2. **Enlace "volver"** (`.jl-breadcrumb__link`): renderiza `<a>` si hay `href` o `<button>` en caso contrario.
+3. **Icono** (`.jl-breadcrumb__icon`): flecha izquierda (`ArrowLeft`, tamaño `M`).
+4. **Etiqueta** (`.jl-breadcrumb__label`): texto del enlace con tipografía Body/03 (`ts-body-3`).
+
+## Subtemas
+
+El módulo hereda el subtema del contenedor a través de `data-theme` y resuelve sus colores
+mediante tokens semánticos (`--bg-base`, `--text-base`). Un hijo puede sobrescribir al padre
+declarando su propio `data-theme`, sin necesidad de tocar los estilos del módulo.
+
+## Comportamiento
+
+- **Interacción**: el enlace es clicable en toda su área (icono + etiqueta) con cursor `pointer`.
+- **Enlace vs. botón**: con `href` es un `<a>`; sin `href`, un `<button type="button">` que dispara `onClick`.
+- **Responsive**: el alto de la barra pasa de **60px** (mobile) a **80px** en desktop a partir del breakpoint **768px**. El padding lateral se ajusta con `--grid-wrapper`.
+
+## Variantes y tamaños
+
+Este módulo no expone variantes visuales; su única adaptación es responsive (alto 60/80px)
+y se aprecia en la Demo cambiando el viewport.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo de la barra |
+| `--text-base` | Color del icono y de la etiqueta |
+| `--sp-2` | Separación entre icono y etiqueta (`gap`) |
+| `--grid-wrapper` | Padding lateral (wrapper del grid) |
 
 ## Propiedades
 
 | Prop | Tipo | Default | Descripción |
 | --- | --- | --- | --- |
-| `label` | `string` | — | Texto del enlace |
+| `label` | `string` | `'Jamones Gran Reserva'` | Texto del enlace |
 | `href` | `string` | — | Destino (si falta, es `<button>`) |
-| `onClick` | `fn` | — | Callback |
+| `onClick` | `fn` | — | Callback al pulsar (cuando es botón) |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El contenedor es un landmark `<nav>` con `aria-label="Migas de pan"`.
+- Cuando no hay `href`, el control es un `<button type="button">` semánticamente correcto.
+- El foco es visible al navegar con teclado (elemento interactivo nativo).
+- El color de texto usa `--text-base` sobre `--bg-base` para asegurar contraste con el sistema de tokens.
+
+## Componentes relacionados
+
+- [Icon](/docs/componentes-icon--docs) — flecha `ArrowLeft`.
+- Módulos de la familia Navigation: Navigation (header), PreviousNext, Secondary menu.
 
 > Nota: el master usa un negro específico (#373F41) fuera de los tokens; aquí se aplica
 > `--text-base` para mantener coherencia con el sistema y el soporte de subtemas.

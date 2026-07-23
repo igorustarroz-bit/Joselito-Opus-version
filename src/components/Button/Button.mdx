@@ -8,35 +8,71 @@ import * as Stories from './Button.stories.jsx';
 Botón principal del sistema. Según Figma hay **tres tipos** con usos distintos
 (Primary/Secondary/Terciary), tamaños **XS–L** y estados hover/focus/selected/disabled.
 Es **rectangular** (sin radio) y el texto va en **mayúsculas** (estilo CTA, 14/18, tracking 0.5px).
+Admite iconos opcionales a izquierda y/o derecha.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Tipos
+1. **Contenedor** (`.jl-btn`): caja rectangular en `inline-flex`, centrada, con borde de 1px y espaciado interno según el tamaño.
+2. **Icono izquierdo** (`.jl-btn__icon`, opcional): se muestra cuando se pasa `iconLeft`.
+3. **Etiqueta** (`<span>`): texto del botón en mayúsculas, solo se renderiza si hay `children`.
+4. **Icono derecho** (`.jl-btn__icon`, opcional): se muestra cuando se pasa `iconRight`.
+
+El tamaño del icono se deriva del tamaño del botón: `xs`/`s` usan icono `XS`, el resto icono `S`.
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`: los colores se resuelven mediante tokens
+semánticos, y un hijo puede sobrescribir al padre estableciendo su propio subtema.
+El componente usa su **grupo de color propio** `--btn-<tipo>-<estado>-<fill|text|stroke|icon>`
+(grupo Button de Semantic-Color), que se adapta automáticamente al subtema activo.
+
+## Comportamiento
+
+- **Default**: colores base del tipo.
+- **Hover** (`:hover:not(:disabled)`): cambia fill/text/stroke/icon a los tokens de hover.
+- **Focus** (`:focus-visible`): estado de foco con `outline: none`, el foco visible se aporta vía tokens de color.
+- **Selected** (`data-selected="true"`, prop `selected`): estado activo persistente.
+- **Disabled** (`:disabled`, prop `disabled`): colores atenuados y `cursor: not-allowed`; se ignora el hover.
+- Es un botón no controlado; el estado `selected` lo gobierna quien lo usa.
+- El texto no hace wrap (`white-space: nowrap`); el ancho respeta un `min-width` por tamaño.
+
+## Variantes y tamaños
+
+Tres tipos (Primary/Secondary/Terciary):
 
 <Canvas of={Stories.Tipos} />
 
-## Tamaños
-
-Alturas: XS 40 · S 48 · M 56 · L 64. Padding y ancho mínimo por tamaño (tokens `--btn-<size>-*`).
+Cuatro tamaños (XS/S/M/L). Alturas, padding y ancho mínimo se controlan por los tokens `--btn-<size>-*`:
 
 <Canvas of={Stories.Tamaños} />
 
-## Con iconos
+Con iconos a izquierda, derecha o ambos:
 
 <Canvas of={Stories.ConIconos} />
 
-## Estados
+Matriz de estados por tipo (default/selected/disabled):
 
 <Canvas of={Stories.Estados} />
 
 ## Tokens
 
-Colores desde `--btn-<tipo>-<estado>-<fill|text|stroke|icon>` (grupo Button de Semantic-Color,
-adaptados por subtema). Tamaños desde `--btn-<size>-{size,padding,min-width}` (colección Responsive).
+Colores por tipo y estado (grupo Button de Semantic-Color, adaptados por subtema):
+
+| Token | Uso |
+| --- | --- |
+| `--btn-<tipo>-<estado>-fill` | Fondo (tipo ∈ primary/secondary/terciary; estado ∈ default/hover/focused/selected/disabled) |
+| `--btn-<tipo>-<estado>-text` | Color de texto |
+| `--btn-<tipo>-<estado>-stroke` | Color del borde |
+| `--btn-<tipo>-<estado>-icon` | Color del icono |
+| `--btn-<size>-size` | Altura del botón (size ∈ xs/s/m/l/xl) |
+| `--btn-<size>-padding` | Padding lateral |
+| `--btn-<size>-min-width` | Ancho mínimo |
+| `--sp-2` | Separación entre icono y texto (8px) |
+| `--font-family-cta`, `--font-weight-cta`, `--letter-spacing-cta` | Tipografía CTA |
 
 ## Propiedades
 
@@ -48,3 +84,20 @@ adaptados por subtema). Tamaños desde `--btn-<size>-{size,padding,min-width}` (
 | `disabled` | `boolean` | `false` | Deshabilitado |
 | `iconLeft` / `iconRight` | `string` | — | Nombre de icono (ver Icon) |
 | `children` | `node` | — | Texto del botón |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Renderiza un `<button type="button">` nativo, con foco y activación por teclado por defecto.
+- Estado `disabled` mediante el atributo nativo `disabled`.
+- El foco visible se apoya en los tokens de color del estado `focused`; el contraste se garantiza vía tokens semánticos adaptados al subtema.
+- Si el botón se usa solo con icono (sin texto), considera aportar una etiqueta accesible o usar **UI03-Button-Icon**, que gestiona `aria-label`.
+
+## Componentes relacionados
+
+- **UI03-Button-Icon**: botón cuadrado solo-icono que reutiliza los mismos tokens de color.
+- **UI01-Nav-Button**: botón de navegación (tamaño fijo XS).
+- **UI04-Action-Link**: enlace de acción con estilo CTA.
+- **Icon**: iconografía usada en `iconLeft`/`iconRight`.

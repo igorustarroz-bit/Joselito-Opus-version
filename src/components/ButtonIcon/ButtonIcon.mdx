@@ -14,19 +14,50 @@ Tamaño de icono por tamaño de botón: XS→16 · S/M/L→20 · XL→32.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Tipos
+1. **Contenedor** (`.jl-iconbtn`): caja cuadrada en `inline-flex`, centrada, con borde de 1px; ancho y alto iguales según el tamaño.
+2. **Icono** (`.jl-iconbtn__icon`): único contenido, centrado. Su tamaño se deriva del tamaño del botón (`xs`→XS, `s`/`m`/`l`→S, `xl`→L).
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`; los colores se resuelven mediante tokens
+semánticos y un hijo puede sobrescribir al padre. Usa el **grupo de color propio** `--btn-<tipo>-<estado>-*`,
+el mismo que UI02-Button, por lo que ambos comparten paleta y se adaptan al subtema activo.
+
+## Comportamiento
+
+- **Default**: colores base del tipo.
+- **Hover** (`:hover:not(:disabled)`): tokens de hover.
+- **Focus** (`:focus-visible`): `outline: none`; el foco visible se aporta vía tokens de color.
+- **Selected** (`data-selected="true"`, prop `selected`): estado activo persistente.
+- **Disabled** (`:disabled`, prop `disabled`): colores atenuados y `cursor: not-allowed`; se ignora el hover.
+- Botón no controlado: el estado `selected` lo gobierna quien lo usa.
+
+## Variantes y tamaños
+
+Tres tipos (Primary/Secondary/Terciary):
 
 <Canvas of={Stories.Tipos} />
 
-## Tamaños
+Cinco tamaños cuadrados (XS/S/M/L/XL), controlados por `--btn-<size>-size`:
 
 <Canvas of={Stories.Tamaños} />
 
-## Estados
+Estados (default/selected/disabled):
 
 <Canvas of={Stories.Estados} />
+
+## Tokens
+
+Reutiliza los tokens de color de UI02-Button (grupo Button de Semantic-Color):
+
+| Token | Uso |
+| --- | --- |
+| `--btn-<tipo>-<estado>-fill` | Fondo (tipo ∈ primary/secondary/terciary; estado ∈ default/hover/focused/selected/disabled) |
+| `--btn-<tipo>-<estado>-stroke` | Color del borde |
+| `--btn-<tipo>-<estado>-icon` | Color del icono |
+| `--btn-<size>-size` | Lado del cuadrado (size ∈ xs/s/m/l/xl) |
 
 ## Propiedades
 
@@ -38,3 +69,19 @@ Tamaño de icono por tamaño de botón: XS→16 · S/M/L→20 · XL→32.
 | `selected` | `boolean` | `false` | Seleccionado |
 | `disabled` | `boolean` | `false` | Deshabilitado |
 | `label` | `string` | — | Texto accesible (aria-label) |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Renderiza un `<button type="button">` nativo, con foco y activación por teclado.
+- Al no tener texto visible, expone un **`aria-label`**: usa el valor de `label` si se indica; en su defecto, el nombre del `icon`. Se recomienda proporcionar siempre `label` con un texto significativo.
+- Estado `disabled` mediante el atributo nativo `disabled`.
+- El foco visible y el contraste se apoyan en los tokens de color adaptados al subtema.
+
+## Componentes relacionados
+
+- **UI02-Button**: botón con texto que comparte los mismos tokens de color.
+- **UI01-Nav-Button**: botón de navegación.
+- **Icon**: iconografía renderizada dentro del botón.

@@ -11,21 +11,78 @@ contador en color de acento). En **mobile**: botón de menú (hamburguesa), logo
 iconos de búsqueda y cesta. Dos **modos**: `light` (fondo base) y `dark` (transparente,
 texto blanco, para superponer sobre imágenes/heros oscuros).
 
-## Light
+## Demo
 
 <Canvas of={Stories.Light} />
 
-<Controls of={Stories.Light} />
+## Anatomía
 
-## Dark
+1. **Contenedor** (`header.jl-nav`): cabecera a 100% de ancho, `position: relative` para centrar el logo.
+2. **Bloque desktop** (`.jl-nav__desktop`): visible desde 768px, con enlaces (izq) y acciones (der).
+3. **Enlaces de sección** (`.jl-nav__links` › `.jl-nav__link`): navegación principal, tipografía Body/02.
+4. **Acciones** (`.jl-nav__actions` › `.jl-nav__action`): Buscar (con icono `MagnifyingGlass`), Cuenta y Cesta.
+5. **Cesta** (`.jl-nav__cart`): enlace con contador; el número usa color de acento.
+6. **Bloque mobile** (`.jl-nav__mobile`): botón de menú (`List`) a la izquierda e iconos de búsqueda (`MagnifyingGlass`) y cesta (`Bag`) a la derecha.
+7. **Logo** (`.jl-nav__logo`): `BrandLogo` horizontal (altura 56px) centrado en absoluto.
+
+## Subtemas
+
+El header resuelve sus colores mediante tokens semánticos (`--bg-base`, `--text-base`,
+`--text-accent-base`) y hereda el subtema del contenedor vía `data-theme`. El modo `dark`
+actúa como sobrescritura: fuerza fondo transparente y texto blanco (`--color-neutral-white`)
+para superponerse sobre imágenes o heros oscuros, sin depender del subtema heredado.
+
+## Comportamiento
+
+- **Estados**: enlaces y acciones son interactivos con cursor `pointer`; heredan color del contenedor (`color: inherit`).
+- **Responsive**: por debajo de **768px** se muestra el bloque mobile (hamburguesa + iconos) y se oculta el desktop; a partir de **768px** se invierte. El padding pasa de `12px 24px` a `24px 40px`.
+- **Modo dark**: `.jl-nav--dark` aplica fondo transparente y texto blanco; el contador de la cesta también pasa a blanco.
+- **Menú mobile**: el botón hamburguesa dispara el callback `onMenu`.
+
+## Variantes y tamaños
+
+Dos modos controlados por la prop `mode`:
+
+### Light (fondo base)
+
+<Canvas of={Stories.Light} />
+
+### Dark (transparente, texto blanco)
 
 <Canvas of={Stories.Dark} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo del header en modo light |
+| `--text-base` | Color de texto e iconos en modo light |
+| `--text-accent-base` | Color del contador de la cesta (light) |
+| `--color-neutral-white` | Texto y contador en modo dark |
+| `--color-neutral-10` | Fondo de ejemplo tras el header en la story Dark |
 
 ## Propiedades
 
 | Prop | Tipo | Default | Descripción |
 | --- | --- | --- | --- |
-| `links` | `string[]` | (secciones) | Enlaces de navegación |
+| `links` | `string[]` | `['Tienda', 'Origen', 'Excelencia', 'Compromisos', 'Experiencia']` | Enlaces de navegación |
 | `cartCount` | `number` | `3` | Nº de artículos en la cesta |
-| `mode` | `light \| dark` | `light` | Tema del header |
+| `mode` | `'light' \| 'dark'` | `'light'` | Tema del header |
 | `onMenu` | `fn` | — | Callback del botón de menú (mobile) |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Light} />
+
+## Accesibilidad
+
+- El contenedor es un `<header>` (landmark banner) y la navegación de secciones va en un `<nav>`.
+- Los botones-icono de mobile tienen `aria-label` ("Menú", "Buscar", "Cesta").
+- El logo tiene `aria-label="Joselito — inicio"`.
+- El foco es visible en enlaces y botones (elementos interactivos nativos).
+- El modo `dark` mantiene texto blanco sobre fondos oscuros para preservar el contraste.
+
+## Componentes relacionados
+
+- [Icon](/docs/componentes-icon--docs) — iconos `MagnifyingGlass`, `List`, `Bag`.
+- [BrandLogo](/docs/componentes-brandlogo--docs) — logo centrado.
+- Módulos de la familia Navigation: Breadcrumb, PreviousNext, Secondary menu.

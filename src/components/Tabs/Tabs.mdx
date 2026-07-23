@@ -9,24 +9,62 @@ Barra de pestañas. Dos tipos (Primary/Secondary) que se diferencian en el borde
 pestaña activa. Cada pestaña: alto 40, texto CTA-XS en mayúsculas, iconos opcionales.
 Controlado (`value` + `onChange`) o no controlado (`defaultValue`).
 
-## Primary
+## Demo
 
 <Canvas of={Stories.Primary} />
 
-<Controls of={Stories.Primary} />
+## Anatomía
 
-## Secondary
+1. **Barra** (`.jl-tabs`): contenedor `flex` que alinea las pestañas en fila.
+2. **Pestaña** (`.jl-tab`, `role="tab"`): botón por cada ítem, con alto fijo, padding lateral y **borde inferior** que marca el estado.
+3. **Icono izquierdo** (`.jl-tab__icon`, opcional): se muestra si el ítem define `iconLeft`.
+4. **Etiqueta** (`<span>`): texto de la pestaña (`item.label`) en mayúsculas.
+5. **Icono derecho** (`.jl-tab__icon`, opcional): se muestra si el ítem define `iconRight`.
+
+Los iconos usan tamaño `XS`. Cada ítem puede marcarse como `disabled`.
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`; los colores se resuelven mediante tokens
+semánticos y un hijo puede sobrescribir al padre. Usa su **grupo de color propio**
+`--btn-tab-<primary|secondary>-<estado>-*` (grupo Button/Tab de Semantic-Color), que se adapta al
+subtema activo. Secondary hereda de Primary salvo el borde del estado "selected".
+
+## Comportamiento
+
+- **Default**: pestaña no activa.
+- **Hover** (`:hover:not(:disabled):not([data-active="true"])`): tokens de hover; no aplica sobre la pestaña activa.
+- **Focus** (`:focus-visible`): `outline: none`; el foco visible se aporta vía tokens de color.
+- **Selected/Active** (`data-active="true"`): pestaña seleccionada, resaltada por su borde inferior.
+- **Disabled** (`:disabled`, `item.disabled`): pestaña atenuada y `cursor: not-allowed`.
+- **Controlado vs. no controlado**: si se pasa `value`, el componente es controlado y notifica vía `onChange`; si no, gestiona el índice activo internamente partiendo de `defaultValue`.
+
+## Variantes y tamaños
+
+Tipo Primary:
+
+<Canvas of={Stories.Primary} />
+
+Tipo Secondary (se diferencia en el borde de la pestaña activa):
 
 <Canvas of={Stories.Secondary} />
 
-## Con iconos
+Pestañas con iconos a izquierda o derecha:
 
 <Canvas of={Stories.ConIconos} />
 
 ## Tokens
 
-Colores desde `--btn-tab-<primary|secondary>-<estado>-<fill|text|stroke|icon>` (grupo
-Button/Tab, por subtema). Secondary hereda de Primary salvo el borde "selected".
+| Token | Uso |
+| --- | --- |
+| `--btn-tab-<tipo>-<estado>-fill` | Fondo (tipo ∈ primary/secondary; estado ∈ default/hover/focused/selected/disabled) |
+| `--btn-tab-<tipo>-<estado>-text` | Color de texto |
+| `--btn-tab-<tipo>-<estado>-stroke` | Color del borde inferior |
+| `--btn-tab-<tipo>-<estado>-icon` | Color del icono |
+| `--spacer-fx-9` | Alto de la pestaña |
+| `--spacer-fx-4` | Padding lateral |
+| `--spacer-fx-2` | Separación entre icono y texto |
+| `--font-family-cta`, `--font-weight-cta`, `--letter-spacing-cta` | Tipografía CTA |
 
 ## Propiedades
 
@@ -34,5 +72,21 @@ Button/Tab, por subtema). Secondary hereda de Primary salvo el borde "selected".
 | --- | --- | --- | --- |
 | `items` | `{label, iconLeft?, iconRight?, disabled?}[]` | `[]` | Pestañas |
 | `type` | `primary \| secondary` | `primary` | Tipo |
-| `value` / `defaultValue` | `number` | `0` | Índice activo (controlado/no) |
-| `onChange` | `(index) => void` | — | Callback al cambiar |
+| `value` | `number` | — | Índice activo (modo controlado) |
+| `defaultValue` | `number` | `0` | Índice activo inicial (modo no controlado) |
+| `onChange` | `(index) => void` | — | Callback al cambiar de pestaña |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Primary} />
+
+## Accesibilidad
+
+- La barra expone `role="tablist"` y cada pestaña `role="tab"` con `aria-selected` reflejando la pestaña activa.
+- Cada pestaña es un `<button>` nativo: enfocable y activable por teclado; las deshabilitadas usan el atributo `disabled`.
+- El foco visible y el contraste se apoyan en los tokens de color adaptados al subtema.
+- Nota: no se implementa navegación por flechas entre pestañas ni el enlace `tabpanel`/`aria-controls`; el panel de contenido asociado debe gestionarlo quien use el componente.
+
+## Componentes relacionados
+
+- **UI02-Button** y **UI01-Nav-Button**: comparten el estilo CTA y los tokens de botón.
+- **Icon**: iconografía usada en `iconLeft`/`iconRight` de cada ítem.

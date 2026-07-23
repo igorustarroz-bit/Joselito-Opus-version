@@ -13,12 +13,62 @@ subrayado negro. Cambia el viewport para verlo.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
+
+1. **Contenedor** (`nav.jl-secmenu`): barra a 100% de ancho con fondo base y scroll horizontal en mobile.
+2. **Lista** (`.jl-secmenu__list`): fila de ítems con separación por `gap`.
+3. **Ítem** (`.jl-secmenu__item`): enlace de categoría en Body/03 (`ts-body-3`), sin envolver (`white-space: nowrap`).
+4. **Ítem activo** (`.jl-secmenu__item--active`): mismo ítem con subrayado (borde inferior `--stroke-base`).
+
+## Subtemas
+
+El módulo resuelve sus colores mediante tokens semánticos (`--bg-base`, `--text-base`,
+`--stroke-base`) y hereda el subtema del contenedor a través de `data-theme`. Un hijo puede
+sobrescribir al padre declarando su propio `data-theme`, sin tocar los estilos del módulo.
+
+## Comportamiento
+
+- **Estado activo**: el ítem indicado por `active` recibe el subrayado y `aria-current="page"`.
+- **Selección**: al pulsar un ítem se dispara `onSelect(index)`.
+- **Responsive**: en **mobile** la fila se alinea a la izquierda y permite **scroll horizontal** (`overflow-x: auto`); a partir de **768px** se centra y desaparece el scroll (`overflow-x: visible`). La separación entre ítems (`gap`) aumenta en desktop.
+
+## Variantes y tamaños
+
+Este módulo no expone variantes de estilo; su adaptación es responsive (scroll a la izquierda
+en mobile, centrada en desktop) y puede observarse cambiando el viewport en la Demo.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo de la barra |
+| `--text-base` | Color de los ítems |
+| `--stroke-base` | Subrayado del ítem activo |
+| `--spacer-fx-6` | Padding superior de la barra |
+| `--spacer-fx-4` | Separación entre ítems (mobile) y padding inferior del ítem |
+| `--spacer-fx-3` | Padding inferior del ítem (espacio hasta el subrayado) |
+| `--spacer-fx-8` | Separación entre ítems en desktop |
 
 ## Propiedades
 
 | Prop | Tipo | Default | Descripción |
 | --- | --- | --- | --- |
-| `items` | `string[] \| {label, href}[]` | (categorías) | Enlaces |
-| `active` | `number` | `0` | Índice activo |
-| `onSelect` | `(index) => void` | — | Callback |
+| `items` | `string[] \| {label, href}[]` | (9 categorías) | Enlaces de categoría |
+| `active` | `number` | `0` | Índice del ítem activo |
+| `onSelect` | `(index) => void` | — | Callback al seleccionar un ítem |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El contenedor es un landmark `<nav>` con `aria-label="Categorías"`.
+- El ítem activo expone `aria-current="page"` además del subrayado visual.
+- Los ítems son enlaces `<a>` navegables por teclado con foco visible.
+- El color del texto (`--text-base`) sobre el fondo (`--bg-base`) mantiene el contraste del sistema.
+
+## Componentes relacionados
+
+- Módulos de la familia Navigation: Breadcrumb, Navigation (header), PreviousNext.

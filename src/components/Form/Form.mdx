@@ -6,19 +6,56 @@ import * as Stories from './Form.stories.jsx';
 # UI11-Form
 
 Contenedor de formulario. **Compone** una cabecera opcional (título en SangBleu Title/01 +
-descripción Body/03), los campos que se le pasen como hijos (p. ej. `Input`, `CheckboxList`)
-y una fila de acciones alineada a la derecha con botones **Cancelar** (terciary) y
-**Aceptar** (primary). Separación general de 24px.
+descripción Body/03), los campos que se le pasen como hijos (por ejemplo `Input` o `CheckboxList`)
+y una fila de acciones alineada a la derecha con botones **Cancelar** (terciary) y **Aceptar**
+(primary). Usa una separación general de 24px.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
+
+1. **Contenedor** (`form.jl-form`): elemento `<form>` que apila cabecera, campos y acciones con separación de 24px.
+2. **Cabecera** (`div.jl-form__header`): opcional; contiene el título (`ts-title-1`) y la descripción (`ts-body-3`).
+3. **Campos** (`div.jl-form__fields`): apila los `children` (campos del formulario) con separación de 16px.
+4. **Acciones** (`div.jl-form__actions`): fila alineada a la derecha con el botón secundario (Cancelar) y el primario (Aceptar).
+
+## Subtemas
+
+Hereda el subtema del contenedor mediante `data-theme`. Los textos de cabecera usan `--text-base`;
+los campos y botones que compone resuelven sus propios tokens semánticos. Un contenedor hijo puede
+sobrescribir el subtema del padre.
+
+## Comportamiento
+
+- **Envío:** el `<form>` previene el comportamiento por defecto y ejecuta `onSubmit`; el botón Aceptar también invoca `onSubmit`.
+- **Cancelar:** el botón secundario ejecuta `onCancel`.
+- **Cabecera opcional:** solo se renderiza si hay `title` o `description`.
+- **Acciones opcionales:** la fila de botones se oculta con `showActions={false}`; el botón secundario solo aparece si hay `secondaryLabel`.
+
+## Variantes y tamaños
+
+El contenedor no define tamaños propios: se adapta al ancho disponible (`width: 100%`) y a los
+campos que compone. La principal variante es la presencia u omisión de la cabecera y de la fila de
+acciones. Los botones de acción se muestran en tamaño `s`.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--spacer-fx-6` | Separación general del formulario (24px) |
+| `--spacer-fx-4` | Separación de la cabecera y entre campos (16px) |
+| `--sp-2` | Separación entre botones de acción |
+| `--text-base` | Color del título y la descripción |
+
+Tipografías: título `ts-title-1` (SangBleu) y descripción `ts-body-3`.
 
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
 | `title` | `string` | — | Título (SangBleu) |
 | `description` | `string` | — | Descripción |
@@ -26,4 +63,22 @@ y una fila de acciones alineada a la derecha con botones **Cancelar** (terciary)
 | `primaryLabel` | `string` | `Aceptar` | Texto del botón principal |
 | `secondaryLabel` | `string` | `Cancelar` | Texto del botón secundario |
 | `showActions` | `boolean` | `true` | Muestra la fila de botones |
-| `onSubmit` / `onCancel` | `fn` | — | Callbacks |
+| `onSubmit` | `fn` | — | Callback de envío |
+| `onCancel` | `fn` | — | Callback de cancelación |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Es un elemento `<form>` nativo, que permite el envío con teclado y agrupa semánticamente los campos.
+- El título y la descripción aportan contexto; conviene asociarlos al formulario (p. ej. `aria-labelledby`) cuando sea relevante.
+- Los botones de acción son componentes `Button` accesibles y navegables por teclado.
+- Los campos que se compongan (Input, CheckboxList) aportan su propia semántica y foco visible.
+
+## Componentes relacionados
+
+- **UI06-Input** — campo de formulario.
+- **UI07-Listbox** — lista de opciones.
+- **UI08-Checkbox-List** — lista de casillas.
+- **Button** — botones de acción de la fila inferior.

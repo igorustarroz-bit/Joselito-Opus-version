@@ -6,24 +6,81 @@ import * as Stories from './Title.stories.jsx';
 # Title
 
 Encabezado de sección: texto de título (estilo Body/04) y, opcionalmente, un enlace
-"ver todos" (Body/03) con chevron a la derecha. Se alinean a los extremos.
+"ver todos" (Body/03) con chevron a la derecha. Título y enlace se alinean a los extremos.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Sin enlace
+1. **Contenedor** (`.jl-title`): fila flex que reparte el espacio entre extremos
+   (`justify-content: space-between`) y alinea verticalmente al centro.
+2. **Título** (`.jl-title__text.ts-body-4`): el encabezado, renderizado con la etiqueta de la
+   prop `as` (por defecto `h2`) y estilo tipográfico Body/04.
+3. **Enlace "ver todos"** (`.jl-title__link.ts-body-3`, opcional): se muestra si `showLink` es
+   `true`. Es un `<a>` cuando se pasa `href`, o un `<button>` en caso contrario.
+4. **Chevron** (`.jl-title__icon`): un `Icon` `CaretRight` en tamaño XS junto al texto del
+   enlace.
+
+## Subtemas
+
+Todos los elementos usan el token semántico `--text-base`, por lo que el componente hereda el
+subtema del contenedor vía `data-theme` (claro/oscuro) y un hijo puede sobrescribir al padre.
+El enlace cambia a `--text-hover` en hover. El chevron es un `Icon` que hereda el color por
+`currentColor`.
+
+## Comportamiento
+
+- **Distribución:** título a la izquierda y enlace a la derecha, separados con `--sp-4`; el
+  enlace no se parte de línea (`white-space: nowrap`).
+- **Enlace opcional:** con `showLink={false}` solo se muestra el título.
+- **Enlace vs. botón:** con `href` el enlace es navegable (`<a>`); sin `href` es un `<button>`
+  que dispara `onLinkClick`.
+- **Hover:** el enlace cambia de color a `--text-hover` al pasar el cursor.
+- **Responsive:** el contenedor ocupa el 100% del ancho disponible.
+
+## Variantes y tamaños
+
+Variante con enlace (story principal) y variante sin enlace (`showLink={false}`).
 
 <Canvas of={Stories.SinEnlace} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--text-base` | Color del título y del enlace |
+| `--text-hover` | Color del enlace en hover |
+| `--sp-4` | Separación entre título y enlace |
+| `--sp-1` | Separación entre texto del enlace y chevron |
+
+Tipografía mediante clases `ts-*`: `ts-body-4` (título) y `ts-body-3` (enlace).
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `children` | `node` | — | Texto del título |
-| `as` | `string` | `h2` | Etiqueta del encabezado |
+| `children` | `node` | `'Nuestra colección'` | Texto del título |
+| `as` | `string` | `'h2'` | Etiqueta del encabezado |
 | `showLink` | `boolean` | `false` | Muestra el enlace "ver todos" |
-| `linkText` | `string` | `Ver todos` | Texto del enlace |
-| `href` | `string` | — | Si se indica, el enlace es `<a>` |
+| `linkText` | `string` | `'Ver todos'` | Texto del enlace |
+| `href` | `string` | — | Si se indica, el enlace es `<a>`; si no, `<button>` |
+| `onLinkClick` | `function` | — | Callback del enlace cuando es `<button>` |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El título usa un encabezado real (`as`, por defecto `h2`); elige el nivel que corresponda a
+  la jerarquía de la página.
+- El enlace se renderiza como `<a>` (navegable) con `href` o como `<button>` (acción) sin él,
+  usando el elemento nativo adecuado para el foco y el teclado.
+- El chevron es un `Icon` decorativo (sin `title`), oculto a lectores de pantalla.
+- Los colores heredan tokens semánticos del subtema; verifica el contraste frente al fondo.
+
+## Componentes relacionados
+
+- **Icon** — provee el chevron `CaretRight` del enlace.
+- **PlaceholderText** — texto con estilos tipográficos del sistema.

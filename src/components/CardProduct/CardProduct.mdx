@@ -15,19 +15,85 @@ Ficha de producto. Compone **AspectRatio** (imagen 3:4), un **badge** superpuest
 
 <Controls of={Stories.Default} />
 
-## Variante mínima
+## Anatomía
+
+1. **Media** (`.jl-cardproduct__media`): imagen envuelta en **AspectRatio** (`3:4` por
+   defecto). Si no hay `image`, muestra un placeholder con degradado.
+2. **Badge** (`.jl-cardproduct__badge`, `ts-body-1`): etiqueta opcional superpuesta arriba a
+   la izquierda, sobre fondo base y con borde.
+3. **Cuerpo** (`.jl-cardproduct__body`): columna con la información y el enlace.
+   - **Cabecera** (`.jl-cardproduct__head`): título (`ts-title-2`, SangBleu) y precio (`ts-body-2`).
+   - **Dirección** (`.jl-cardproduct__address`, `ts-body-3`): opcional, en color neutral-2.
+   - **Chips de ubicación** (`.jl-cardproduct__chips`): lista de **Button** (`type="secondary"`, `size="xs"`).
+   - **Estrellas** (`.jl-cardproduct__stars`): repite el **Icon** `Star` (tamaño 18) tantas veces como `stars`.
+4. **Enlace de acción** (**ActionLink**): texto configurable con `cta` ("Descubrir" por defecto).
+
+## Subtemas
+
+La ficha no fija tema propio: hereda el subtema del contenedor vía `data-theme` y resuelve
+colores mediante tokens semánticos (`--text-base`, `--text-neutral-2`, `--bg-base`,
+`--stroke-neutral-3`). Un hijo puede sobrescribir al padre con su propio `data-theme`.
+
+## Comportamiento
+
+- El **badge** se posiciona en absoluto respecto al media (`left: 20px; top: 20px`).
+- Las secciones de **chips** y **estrellas** solo se muestran si hay `locations` o `stars`.
+- El **enlace de acción** aporta los estados de hover y foco.
+- El ancho es fluido (`width: 100%`), por lo que la ficha se adapta al contenedor y a rejillas.
+
+## Variantes y tamaños
+
+**Completa** (por defecto): con badge, dirección, chips de ubicación y estrellas.
+
+<Canvas of={Stories.Default} />
+
+**Mínima**: solo título, precio y enlace, sin extras.
 
 <Canvas of={Stories.SinExtras} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--spacer-fx-4` | Separación de la información |
+| `--spacer-fx-8` | Separación entre media y cuerpo |
+| `--spacer-fx-9` | Separación del cuerpo |
+| `--sp-2` | Separación de cabecera y chips |
+| `--bg-base` | Fondo del badge |
+| `--stroke-neutral-3` | Borde del badge |
+| `--text-base` | Color de título, precio y estrellas |
+| `--text-neutral-2` | Color de la dirección |
+| `--color-neutral-30`, `--color-neutral-10` | Degradado del placeholder |
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `title` | `string` | — | Título |
-| `price` | `string` | — | Precio |
+| `title` | `string` | `Jamón Gran Reserva` | Título |
+| `price` | `string` | `Desde 380€` | Precio |
 | `address` | `string` | — | Dirección |
 | `badge` | `string` | — | Etiqueta superpuesta |
 | `locations` | `string[]` | `[]` | Chips de ubicación |
 | `stars` | `number` | `0` | Nº de estrellas |
 | `cta` | `string` | `Descubrir` | Texto del enlace |
-| `image` | `string` | — | URL de imagen |
+| `image` | `string` | — | URL de imagen (si falta, muestra placeholder) |
+| `ratio` | `string` | `3:4` | Proporción de la imagen |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El enlace de acción es accesible por teclado y muestra **foco visible** a través de ActionLink.
+- Las imágenes usan `alt=""` por acompañarse de texto; proporciona alternativa si la imagen
+  aporta información.
+- Las estrellas de valoración son iconos decorativos: complementa la valoración con texto si
+  es un dato relevante para el usuario.
+- El contraste de textos y badge se resuelve con tokens semánticos sobre el subtema heredado.
+
+## Componentes relacionados
+
+- **AspectRatio**: mantiene la proporción de la imagen.
+- **Button**: chips de ubicación.
+- **Icon**: estrellas de valoración.
+- **ActionLink**: enlace "Descubrir".

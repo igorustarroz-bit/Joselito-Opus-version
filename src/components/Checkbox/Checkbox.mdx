@@ -1,35 +1,97 @@
-import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
 import * as Stories from './Checkbox.stories.jsx';
 
 <Meta of={Stories} />
 
 # UI10-Checkbox / Radio
 
-Controles de selección de 20px. **Checkbox** cuadrado (esquinas 2px) que al marcarse se
-rellena con el color de acento y muestra un check blanco. **Radio** circular con punto de
-acento interior. Estados hover (borde acento), disabled y selected+disabled (gris).
+Controles de selección de 20px. El **Checkbox** es cuadrado (esquinas de 2px) que al marcarse
+se rellena con el color de acento y muestra un check blanco; admite estado indeterminado (minus).
+El **Radio** es circular con un punto de acento en el interior. Ambos comparten estilos hover
+(borde de acento), disabled y selected+disabled (gris), y una etiqueta de texto opcional.
 
-## Checkbox
+## Demo
 
 <Canvas of={Stories.CheckboxDefault} />
 
-<Canvas of={Stories.Checkboxes} />
+## Anatomía
 
-## Radio
+1. **Contenedor** (`label.jl-check`): envuelve todo el control y lo hace clicable, incluida la etiqueta.
+2. **Input nativo** (`input.jl-check__input`): `checkbox` o `radio`, visualmente oculto pero accesible.
+3. **Control visual** (`span.jl-check__control`): la caja cuadrada (`--checkbox`) o el círculo (`--radio`) que muestra el estado.
+4. **Icono** (Checkbox): `Check` cuando está marcado o `Minus` cuando es indeterminado, en color invertido.
+5. **Punto** (`span.jl-check__dot`): relleno interior del Radio marcado.
+6. **Etiqueta** (`span.jl-check__label`): texto opcional asociado.
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`: todos los colores se resuelven con
+tokens semánticos (bordes `--stroke-*`, rellenos `--bg-*`, textos `--text-*`), de modo que el
+control se adapta automáticamente al subtema activo. Un contenedor hijo puede sobrescribir al
+padre declarando su propio `data-theme`.
+
+## Comportamiento
+
+- **No marcado (default):** caja/círculo con borde `--stroke-neutral-1`, sin relleno.
+- **Marcado (selected):** el Checkbox se rellena con `--bg-accent-base` y muestra el check blanco; el Radio muestra el punto de acento y su borde pasa a `--stroke-neutral-3`.
+- **Indeterminado:** solo Checkbox; muestra el icono `Minus` y se trata visualmente como marcado.
+- **Hover:** el borde del control pasa a `--stroke-accent-1` (salvo disabled).
+- **Foco:** con `:focus-visible` el input dibuja un contorno `--stroke-accent-base` con offset de 2px.
+- **Disabled:** borde `--stroke-neutral-3`, cursor `not-allowed` y etiqueta en `--text-neutral-2`.
+- **Selected + disabled:** relleno/punto en gris (`--bg-neutral-3`).
+- **Controlado / no controlado:** los componentes son controlados (prop `checked` + `onChange`); la story de demo mantiene el estado localmente con `useState`.
+
+## Variantes y tamaños
+
+Checkbox admite dos tamaños: **m** (control 20px, etiqueta Body/03) y **s** (control 16px, etiqueta
+Body/02, icono 10px). El Radio se presenta a 20px.
+
+<Canvas of={Stories.Checkboxes} />
 
 <Canvas of={Stories.Radios} />
 
 ## Tokens
 
-Bordes `--stroke-neutral-1` (default), `--stroke-accent-1` (hover), `--stroke-neutral-3`
-(disabled/selected). Relleno `--bg-accent-base` (marcado) / `--bg-neutral-3` (disabled).
-Check en `--text-inverted`. Todo adapta por subtema.
+| Token | Uso |
+| --- | --- |
+| `--stroke-neutral-1` | Borde en estado default |
+| `--stroke-accent-1` | Borde en hover |
+| `--stroke-accent-base` | Contorno de foco |
+| `--stroke-neutral-3` | Borde disabled / Radio marcado |
+| `--bg-accent-base` | Relleno del Checkbox marcado y punto del Radio |
+| `--bg-neutral-3` | Relleno marcado en disabled |
+| `--text-inverted` | Color del icono check/minus |
+| `--text-base` | Color base del contenedor |
+| `--text-neutral-1` / `--text-neutral-2` | Etiqueta habilitada / deshabilitada |
+| `--sp-2` | Separación entre control y etiqueta |
+| `--font-family-body` | Tipografía de la etiqueta |
 
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
 | `checked` | `boolean` | `false` | Marcado |
-| `onChange` | `fn` | — | Callback |
+| `indeterminate` | `boolean` | `false` | Estado indeterminado (icono minus) |
+| `onChange` | `fn` | — | Callback de cambio |
 | `disabled` | `boolean` | `false` | Deshabilitado |
-| `label` | `string` | — | Etiqueta |
+| `label` | `string` | — | Etiqueta de texto |
+| `size` | `m \| s` | `m` | Tamaño del control (solo Checkbox) |
+| `className` | `string` | `''` | Clases adicionales |
+
+Radio expone además `name` y `value` para agruparse en un conjunto de opciones exclusivas.
+
+<Controls of={Stories.CheckboxDefault} />
+
+## Accesibilidad
+
+- Se apoya en inputs nativos (`type="checkbox"` / `type="radio"`), que exponen el rol y el estado `checked` a las tecnologías de asistencia.
+- La etiqueta va dentro del `<label>`, por lo que el clic en el texto activa el control y queda asociada semánticamente.
+- Foco visible mediante `:focus-visible` con contorno de acento y offset de 2px.
+- El estado indeterminado debe reflejarse también en el DOM (`indeterminate`) para que se anuncie correctamente.
+- El color no es el único indicador: check/minus/punto aportan señal visual adicional.
+
+## Componentes relacionados
+
+- **UI09-Checkbox-Label** — casilla con etiqueta y tamaños documentados.
+- **UI08-Checkbox-List** — lista de casillas gestionada.
+- **Icon** — provee los iconos `Check` y `Minus`.

@@ -15,16 +15,75 @@ Kingdom (Title/02) y el subtítulo Euclid (Body/02). Toda la tarjeta es un enlac
 
 <Controls of={Stories.Default} />
 
-## Galería
+## Anatomía
+
+1. **Contenedor enlace** (`.jl-cardlink`): elemento `<a>` por defecto (configurable con la
+   prop `as`) que envuelve toda la tarjeta; sin subrayado y con texto en blanco.
+2. **Media** (`.jl-cardlink__media`): imagen envuelta en **AspectRatio** (proporción `3:4`
+   por defecto). Si no hay `image`, muestra un placeholder con degradado.
+3. **Overlay** (`.jl-cardlink__overlay`): capa posicionada en la parte inferior con el texto.
+   - **Título** (`.jl-cardlink__title`, `ts-title-2`): SangBleu Kingdom, en blanco.
+   - **Subtítulo** (`.jl-cardlink__subtitle`, `ts-body-2`): opcional (p. ej. precio), en blanco.
+
+## Subtemas
+
+La tarjeta fija su color de texto en blanco (`--color-neutral-white`) por superponerse sobre
+una imagen. El resto del entorno hereda el subtema del contenedor vía `data-theme`; un hijo
+puede sobrescribir al padre con su propio `data-theme`.
+
+## Comportamiento
+
+- **Toda la superficie es un enlace**: al ser el contenedor un `<a>`, el hover y el foco
+  aplican a la tarjeta completa.
+- El **overlay** se ancla al borde inferior (`bottom: 0`) ocupando todo el ancho, con relleno
+  mediante token de espaciado.
+- El ancho es fluido (`width: 100%`), por lo que la tarjeta se adapta al contenedor y a
+  rejillas (ver galería).
+- La proporción de la imagen es configurable con `ratio`.
+
+## Variantes y tamaños
+
+La proporción se controla con `ratio` (`3:4`, `1:1`, `4:3`, `16:9`).
+
+**Galería**: varias tarjetas en rejilla, compartiendo proporción y tamaño.
 
 <Canvas of={Stories.Galeria} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--color-neutral-white` | Color del texto (título y subtítulo) |
+| `--sp-2` | Separación entre título y subtítulo |
+| `--spacer-fx-8` | Relleno del overlay |
+| `--color-secondary-1-40`, `--color-neutral-10` | Degradado del placeholder |
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `title` | `string` | — | Título (SangBleu) |
+| `title` | `string` | `Jamón Gran Reserva` | Título (SangBleu) |
 | `subtitle` | `string` | — | Subtítulo / precio |
 | `image` | `string` | — | URL de la imagen (si falta, muestra placeholder) |
-| `ratio` | `string` | `3:4` | Proporción de la imagen |
+| `imageAlt` | `string` | `''` | Texto alternativo de la imagen |
 | `href` | `string` | `#` | Destino del enlace |
+| `ratio` | `string` | `3:4` | Proporción de la imagen |
+| `as` | `string` | `a` | Elemento contenedor |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- La tarjeta es un **enlace accesible** por teclado; asegúrate de que `href` apunte a un
+  destino real y de que el texto del título describa el destino.
+- Usa `imageAlt` para dar un **texto alternativo** significativo cuando la imagen aporte
+  información; si es puramente decorativa, déjalo vacío.
+- El texto blanco se superpone a la imagen: garantiza suficiente **contraste** eligiendo
+  imágenes o degradados oscuros en la zona inferior.
+- El **foco** de la tarjeta debe permanecer visible.
+
+## Componentes relacionados
+
+- **AspectRatio**: mantiene la proporción de la imagen.
+- **CardProduct** y **CardCarrusel**: otras tarjetas del sistema.

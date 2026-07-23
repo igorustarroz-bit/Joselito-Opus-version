@@ -7,7 +7,7 @@ import * as Stories from './IntroText.stories.jsx';
 
 Bloque introductorio **centrado** a 100% de ancho: eyebrow (Body/03, neutral-2), título
 (SangBleu, Title/03), cuerpo (Body/04), cajas de datos opcionales (Email/Teléfono...) y un
-botón. Padding lateral = wrapper del grid. Responsive (desktop min 600px de alto).
+botón. El padding lateral se alinea con el wrapper del grid. Es responsive.
 
 ## Demo
 
@@ -15,16 +15,78 @@ botón. Padding lateral = wrapper del grid. Responsive (desktop min 600px de alt
 
 <Controls of={Stories.Default} />
 
-## Solo texto
+## Anatomía
+
+1. **Contenedor** (`.jl-introtext`): `<section>` a 100% de ancho, centrada, con fondo base y
+   borde inferior; relleno lateral igual al wrapper del grid (`--grid-wrapper`).
+2. **Inner** (`.jl-introtext__inner`): columna centrada limitada a 844px de ancho.
+   - **Eyebrow** (`.jl-introtext__eyebrow`, `ts-body-3`): antetítulo en mayúsculas, neutral-2.
+   - **Grupo** (`.jl-introtext__group`):
+     - **Título** (`.jl-introtext__title`, `ts-title-3`): SangBleu Kingdom.
+     - **Cuerpo** (`.jl-introtext__body`, `ts-body-4`): opcional, limitado a 620px.
+     - **Cajas** (`.jl-introtext__boxes`): lista opcional de cajas con etiqueta y valor
+       (`label` / `value`), bordeadas.
+3. **Botón** (**Button** `type="primary"`, `size="m"`): opcional, se muestra si hay `buttonText`.
+
+## Subtemas
+
+El bloque no fija tema propio: hereda el subtema del contenedor vía `data-theme` y resuelve
+colores mediante tokens semánticos (`--bg-base`, `--text-base`, `--text-neutral-2`,
+`--stroke-neutral-3`). Un hijo puede sobrescribir al padre con su propio `data-theme`.
+
+## Comportamiento
+
+- **Centrado** vertical y horizontal del contenido.
+- **Responsive**: en móvil las cajas se apilan en columna (con bordes compartidos); a partir
+  de `768px` se disponen en fila, el bloque gana altura mínima (`min-height: 600px`) y aumenta
+  el relleno vertical.
+- El **botón** solo aparece si se proporciona `buttonText`, y dispara `onButton` al pulsarlo.
+- El ancho es fluido (`width: 100%`).
+
+## Variantes y tamaños
+
+**Completa** (por defecto): eyebrow, título, cuerpo, cajas de datos y botón.
+
+<Canvas of={Stories.Default} />
+
+**Solo texto**: sin cajas ni botón.
 
 <Canvas of={Stories.SoloTexto} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo del bloque |
+| `--stroke-neutral-3` | Borde inferior y bordes de las cajas |
+| `--grid-wrapper` | Relleno lateral (alineado con el grid) |
+| `--sp-6` | Separación interna del inner |
+| `--sp-9` | Separación entre inner y botón |
+| `--text-base` | Color de título, cuerpo y valor de las cajas |
+| `--text-neutral-2` | Color del eyebrow y de la etiqueta de las cajas |
+
 ## Propiedades
 
-| Prop | Tipo | Descripción |
-| --- | --- | --- |
-| `eyebrow` | `string` | Antetítulo |
-| `title` | `string` | Título (SangBleu) |
-| `body` | `string` | Texto |
-| `boxes` | `{label, value}[]` | Cajas de datos |
-| `buttonText` | `string` | Texto del botón (si se indica) |
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `Un legado único` | Antetítulo |
+| `title` | `string` | (texto largo) | Título (SangBleu) |
+| `body` | `string` | — | Texto del cuerpo |
+| `boxes` | `{label, value}[]` | `[]` | Cajas de datos |
+| `buttonText` | `string` | — | Texto del botón (si se indica) |
+| `onButton` | `function` | — | Manejador de clic del botón |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El **botón** es un **Button** accesible por teclado, con foco visible y acción disparada por
+  `onButton`.
+- El contenido se estructura con `<section>`; asegúrate de encadenar los encabezados de la
+  página de forma coherente alrededor de este bloque.
+- El contraste de textos se resuelve con tokens semánticos sobre el subtema heredado.
+
+## Componentes relacionados
+
+- **Button**: botón de la llamada a la acción.

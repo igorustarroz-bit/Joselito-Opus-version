@@ -5,24 +5,69 @@ import * as Stories from './CheckboxList.stories.jsx';
 
 # UI08-Checkbox-List
 
-Lista de casillas (**UI09-Checkbox-Label**). Disposición **vertical** (separación 8px) u
-**horizontal** (separación 16px). Gestiona la selección y notifica con `onChange`.
+Lista de casillas (**UI09-Checkbox-Label**) con disposición **vertical** (separación 8px) u
+**horizontal** (separación 16px). El componente gestiona internamente la selección de cada casilla
+y notifica los cambios mediante `onChange`.
 
-## Vertical
+## Demo
 
 <Canvas of={Stories.Vertical} />
 
-<Controls of={Stories.Vertical} />
+## Anatomía
 
-## Horizontal
+1. **Contenedor** (`div[role="group"]`): flexbox que apila las casillas en columna o fila.
+2. **Casillas** (`Checkbox`): una por cada elemento de `items`, con su `label`, estado `checked` y `disabled`.
+3. **Separación**: `--spacer-fx-2` (8px) en vertical o `--spacer-fx-4` (16px) en horizontal; en horizontal las casillas hacen wrap.
+
+## Subtemas
+
+Cada casilla hereda el subtema del contenedor a través de `data-theme` y resuelve sus colores con
+los tokens semánticos del propio `Checkbox`. El contenedor de la lista no aplica color propio.
+
+## Comportamiento
+
+- **Selección gestionada:** el estado inicial se toma de `items[i].checked`; al pulsar una casilla se alterna y se emite `onChange(index, checked, all)` con el índice, el nuevo valor y el array completo.
+- **Disabled:** cada elemento puede marcarse como `disabled` de forma individual.
+- **No controlado:** la lista mantiene su propio estado interno (`useState`); no admite un valor controlado externo.
+- Los estados hover/selected/disabled de cada casilla son los del componente `Checkbox`.
+
+## Variantes y tamaños
+
+Disposición **vertical** (por defecto) u **horizontal**, y tamaño de las casillas **m** o **s** vía `size`.
+
+<Canvas of={Stories.Vertical} />
 
 <Canvas of={Stories.Horizontal} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--spacer-fx-2` | Separación entre casillas en vertical (8px) |
+| `--spacer-fx-4` | Separación entre casillas en horizontal (16px) |
+
+Los colores de cada casilla provienen de los tokens del componente `Checkbox`.
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `items` | `{label, checked?, disabled?}[]` | `[]` | Casillas |
-| `vertical` | `boolean` | `true` | Disposición |
+| `items` | `{label, checked?, disabled?}[]` | `[]` | Casillas de la lista |
+| `vertical` | `boolean` | `true` | Disposición vertical u horizontal |
 | `size` | `m \| s` | `m` | Tamaño de las casillas |
-| `onChange` | `(index, checked, all) => void` | — | Callback |
+| `onChange` | `(index, checked, all) => void` | — | Callback al alternar una casilla |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Vertical} />
+
+## Accesibilidad
+
+- El contenedor declara `role="group"` para agrupar las casillas relacionadas ante lectores de pantalla.
+- Cada casilla es un `Checkbox` nativo y accesible; conviene aportar un nombre al grupo (p. ej. `aria-label` o `aria-labelledby`) según el contexto.
+- El teclado navega y activa cada casilla de forma nativa.
+
+## Componentes relacionados
+
+- **UI09-Checkbox-Label** — casilla individual que compone la lista.
+- **UI10-Checkbox / Radio** — control base.
+- **UI11-Form** — contenedor donde suele integrarse la lista.

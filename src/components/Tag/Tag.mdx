@@ -12,24 +12,50 @@ mayúsculas (estilo Label). Rectangular.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Tipos
+1. **Contenedor** (`.jl-tag`): elemento `<span>` en `inline-flex`, centrado, rectangular (sin radio), con borde de 1px, padding según el tamaño y texto en mayúsculas.
+2. **Etiqueta** (`children`): el texto de la etiqueta.
 
-`transaction` (fondo base + borde), `new` (acento rojo, texto invertido), `aseptic` (solo borde).
+No lleva icono; es un contenedor de texto.
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`; los colores se resuelven mediante tokens
+semánticos y un hijo puede sobrescribir al padre. A diferencia de los botones, **no usa un grupo de
+color propio**: se apoya en tokens semánticos generales (`--bg-base`, `--bg-accent-base`,
+`--stroke-neutral-3`, `--text-neutral-1`, `--text-inverted`), que se adaptan al subtema activo.
+
+## Comportamiento
+
+Es un componente puramente presentacional: no tiene estados interactivos (hover/focus/disabled) ni
+lógica controlada. Su apariencia depende solo de las props `type` y `size`. El texto no hace wrap
+(`white-space: nowrap`).
+
+## Variantes y tamaños
+
+Tres tipos: `transaction` (fondo base + borde), `new` (acento rojo, texto invertido), `aseptic` (solo borde):
 
 <Canvas of={Stories.Tipos} />
 
-## Tamaños
-
-L (texto Label-2, 12/16) · XS (texto Label-1, 10/14).
+Dos tamaños: L (texto Label-2, 12/16) y XS (texto Label-1, 10/14):
 
 <Canvas of={Stories.Tamaños} />
 
 ## Tokens
 
-Colores desde semánticos generales: `--bg-base`, `--bg-accent-base`, `--stroke-neutral-3`,
-`--text-neutral-1`, `--text-inverted`. Adaptan por subtema.
+Colores desde semánticos generales (adaptan por subtema):
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo del tipo `transaction` |
+| `--bg-accent-base` | Fondo del tipo `new` |
+| `--stroke-neutral-3` | Borde de `transaction` y `aseptic` |
+| `--text-neutral-1` | Texto de `transaction` y `aseptic` |
+| `--text-inverted` | Texto del tipo `new` |
+| `--ts-label-2-sz` / `--ts-label-2-lh` | Tipografía tamaño L |
+| `--ts-label-1-sz` / `--ts-label-1-lh` | Tipografía tamaño XS |
+| `--font-family-label`, `--font-weight-label`, `--letter-spacing-label` | Tipografía Label |
 
 ## Propiedades
 
@@ -38,3 +64,17 @@ Colores desde semánticos generales: `--bg-base`, `--bg-accent-base`, `--stroke-
 | `type` | `transaction \| new \| aseptic` | `transaction` | Tipo de etiqueta |
 | `size` | `l \| xs` | `l` | Tamaño |
 | `children` | `node` | `Label` | Texto |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Es un `<span>` no interactivo; no recibe foco ni requiere rol específico.
+- El contraste texto/fondo se garantiza mediante los tokens semánticos adaptados al subtema (especialmente `--text-inverted` sobre `--bg-accent-base` en el tipo `new`).
+- La distinción entre tipos no depende únicamente del color: el texto de la etiqueta debe describir por sí mismo el estado o categoría que representa.
+
+## Componentes relacionados
+
+- **UI02-Button** y demás botones: comparten el enfoque de tokens semánticos por subtema.
+- Componentes de tipografía **Label**, base del estilo de texto de la etiqueta.

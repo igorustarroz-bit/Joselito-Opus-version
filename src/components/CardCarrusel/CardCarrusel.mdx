@@ -5,28 +5,94 @@ import * as Stories from './CardCarrusel.stories.jsx';
 
 # Card Carrusel
 
-Tarjeta de carrusel. **Compone** AspectRatio, Tag y Action-Link. Dos orientaciones:
-**horizontal** (imagen y texto en paralelo, separación 60) y **vertical** (imagen arriba,
-texto debajo, separación 20). Título en SangBleu Kingdom (Title/04), cuerpo en Body/02
-(neutral-1), etiquetas y enlace "Descubrir".
+Tarjeta de carrusel. **Compone** AspectRatio, Tag y Action-Link. Dispone de dos
+orientaciones: **horizontal** (imagen y texto en paralelo, separación 60px) y **vertical**
+(imagen arriba, texto debajo). El título usa SangBleu Kingdom (Title/04), el cuerpo Body/02
+(neutral-1), y se acompaña de etiquetas (Tag) y del enlace "Descubrir" (Action-Link).
 
-## Horizontal
+## Demo
 
 <Canvas of={Stories.Horizontal} />
 
 <Controls of={Stories.Horizontal} />
 
-## Vertical
+## Anatomía
+
+1. **Media** (`.jl-carrusel__media`): contenedor de la imagen envuelta en **AspectRatio**
+   (proporción `3:2` por defecto). Si no hay `image`, muestra un placeholder con degradado.
+2. **Contenido** (`.jl-carrusel__content`): columna con los textos y el enlace.
+3. **Textos** (`.jl-carrusel__texts`): agrupa título, cuerpo y etiquetas.
+   - **Título** (`.jl-carrusel__title`, `ts-title-4`): SangBleu Kingdom.
+   - **Cuerpo** (`.jl-carrusel__body`, `ts-body-2`): opcional, en color neutral-1.
+   - **Etiquetas** (`.jl-carrusel__tags`): lista de **Tag** (`type="transaction"`, `size="l"`).
+4. **Enlace de acción** (**ActionLink**): texto configurable con `cta` ("Descubrir" por defecto).
+
+## Subtemas
+
+La tarjeta no fija un tema propio: hereda el subtema del contenedor a través de `data-theme`
+y resuelve sus colores mediante tokens semánticos (`--text-base`, `--text-neutral-1`). Un
+elemento hijo puede sobrescribir al padre declarando su propio `data-theme`.
+
+## Comportamiento
+
+- **Orientación horizontal** (`.jl-carrusel--h`): imagen y contenido en fila con `gap: 60px`;
+  el media ocupa el espacio flexible (`flex: 1 0 0`) y el contenido se estira repartiendo el
+  espacio entre textos y enlace (`justify-content: space-between`).
+- **Orientación vertical** (`.jl-carrusel--v`): imagen arriba y contenido debajo, apilados en
+  columna con separación mediante tokens de espaciado.
+- El enlace "Descubrir" es un **ActionLink**, que aporta los estados de hover y foco.
+- El ancho es fluido (`width: 100%`), por lo que la tarjeta se adapta al contenedor.
+
+## Variantes y tamaños
+
+Controlada por la prop `orientation`.
+
+**Horizontal** (por defecto): imagen y texto en paralelo.
+
+<Canvas of={Stories.Horizontal} />
+
+**Vertical**: imagen arriba, texto debajo. Pensada para anchos reducidos.
 
 <Canvas of={Stories.Vertical} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--spacer-fx-4` | Separación entre textos (base) |
+| `--spacer-fx-5` | Separación vertical de la orientación vertical |
+| `--spacer-fx-6` | Separación de textos y de contenido en horizontal |
+| `--spacer-fx-9` | Separación del contenido en vertical |
+| `--sp-2` | Separación entre etiquetas |
+| `--text-base` | Color del título |
+| `--text-neutral-1` | Color del cuerpo |
+| `--color-secondary-1-70`, `--color-neutral-30` | Degradado del placeholder |
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `title` | `string` | — | Título (SangBleu) |
-| `body` | `string` | — | Texto |
-| `tags` | `string[]` | `[]` | Etiquetas |
-| `cta` | `string` | `Descubrir` | Texto del enlace |
+| `title` | `string` | `Joselitos Velázquez` | Título (SangBleu) |
+| `body` | `string` | — | Texto del cuerpo |
+| `tags` | `string[]` | `[]` | Etiquetas (Tag) |
+| `cta` | `string` | `Descubrir` | Texto del enlace de acción |
+| `image` | `string` | — | URL de imagen (si falta, muestra placeholder) |
 | `orientation` | `horizontal \| vertical` | `horizontal` | Disposición |
-| `image` | `string` | — | URL de imagen |
+| `ratio` | `string` | `3:2` | Proporción de la imagen |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Horizontal} />
+
+## Accesibilidad
+
+- El enlace de acción es accesible mediante teclado y muestra **foco visible** a través de
+  ActionLink.
+- Las imágenes usan `alt=""` por tratarse de imagen decorativa acompañada de texto; si la
+  imagen aporta información, proporciona un texto alternativo significativo.
+- El contraste de textos se resuelve con tokens semánticos sobre el subtema heredado.
+
+## Componentes relacionados
+
+- **AspectRatio**: mantiene la proporción de la imagen.
+- **Tag**: etiquetas de la tarjeta.
+- **ActionLink**: enlace "Descubrir".

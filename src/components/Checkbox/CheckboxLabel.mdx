@@ -5,31 +5,86 @@ import * as Stories from './CheckboxLabel.stories.jsx';
 
 # UI09-Checkbox-Label
 
-Casilla con **etiqueta**. Es el componente `Checkbox` con texto asociado. Tamaños **Medium**
-(control 20px, etiqueta Body/03) y **Small** (control 16px, etiqueta Body/02). Estados:
-default, hover, selected, **undefined** (indeterminado → minus), disabled y disabled selected.
-La etiqueta usa `--text-neutral-1` (habilitada) / `--text-neutral-2` (deshabilitada).
+Casilla con **etiqueta**. Es el componente `Checkbox` con texto asociado. Se presenta en dos
+tamaños, **Medium** (control 20px, etiqueta Body/03) y **Small** (control 16px, etiqueta Body/02),
+y cubre los estados default, hover, selected, indeterminado (undefined → minus), disabled y
+disabled selected.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Estados
+1. **Contenedor** (`label.jl-check`): agrupa control y etiqueta, y hace clicable ambos.
+2. **Input nativo** (`input.jl-check__input`): checkbox oculto visualmente pero accesible.
+3. **Control visual** (`span.jl-check__control--checkbox`): caja cuadrada de 2px de radio con el icono de estado.
+4. **Icono**: `Check` cuando está marcado o `Minus` cuando es indeterminado.
+5. **Etiqueta** (`span.jl-check__label`): texto con estilo `ts-body-3` (m) o `ts-body-2` (s).
+
+## Subtemas
+
+Hereda el subtema del contenedor mediante `data-theme`. El control usa tokens semánticos de
+borde y relleno, y la etiqueta usa `--text-neutral-1` (habilitada) / `--text-neutral-2`
+(deshabilitada). Un contenedor hijo puede sobrescribir el subtema del padre.
+
+## Comportamiento
+
+- **Default:** casilla vacía con borde neutro y etiqueta en `--text-neutral-1`.
+- **Selected:** relleno de acento (`--bg-accent-base`) con check blanco.
+- **Undefined (indeterminado):** icono `Minus`; se trata visualmente como marcado.
+- **Hover:** el borde del control pasa a `--stroke-accent-1`.
+- **Disabled:** cursor `not-allowed`, borde `--stroke-neutral-3` y etiqueta en `--text-neutral-2`.
+- **Disabled selected:** relleno gris (`--bg-neutral-3`).
+- **Controlado / no controlado:** el componente es controlado (`checked` + `onChange`); la demo gestiona el estado con `useState`.
+
+## Variantes y tamaños
+
+Dos tamaños que ajustan el control y el estilo de la etiqueta: **Medium** (20px, Body/03) y
+**Small** (16px, Body/02).
 
 <Canvas of={Stories.Estados} />
 
-## Tamaños
-
 <Canvas of={Stories.Tamaños} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--stroke-neutral-1` | Borde default |
+| `--stroke-accent-1` | Borde en hover |
+| `--stroke-accent-base` | Contorno de foco |
+| `--stroke-neutral-3` | Borde disabled |
+| `--bg-accent-base` | Relleno marcado |
+| `--bg-neutral-3` | Relleno marcado disabled |
+| `--text-inverted` | Icono check/minus |
+| `--text-neutral-1` / `--text-neutral-2` | Etiqueta habilitada / deshabilitada |
+| `--sp-2` | Separación control-etiqueta |
 
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
 | `checked` | `boolean` | `false` | Marcada |
 | `indeterminate` | `boolean` | `false` | Estado indeterminado (minus) |
 | `size` | `m \| s` | `m` | Tamaño |
 | `disabled` | `boolean` | `false` | Deshabilitada |
 | `label` | `string` | — | Etiqueta |
+| `onChange` | `fn` | — | Callback de cambio |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Etiqueta contenida en el `<label>`: el clic en el texto activa la casilla y queda asociada semánticamente.
+- Input nativo `type="checkbox"`, que expone rol y `checked` a lectores de pantalla.
+- El estado indeterminado debe reflejarse en el DOM (`indeterminate`) para su anuncio correcto.
+- Foco visible con contorno de acento (`:focus-visible`) y offset de 2px.
+- Estados no dependen solo del color: check/minus aportan señal visual.
+
+## Componentes relacionados
+
+- **UI10-Checkbox / Radio** — control base sin las variantes de etiqueta documentadas.
+- **UI08-Checkbox-List** — lista de casillas con etiqueta.
+- **Icon** — iconos `Check` y `Minus`.

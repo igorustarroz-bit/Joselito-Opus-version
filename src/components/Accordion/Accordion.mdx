@@ -13,25 +13,85 @@ contenido.
 
 <Canvas of={Stories.Default} />
 
-## Uso
+## Anatomía
 
-```jsx
-<Accordion items={[{ title: 'Título', content: 'Contenido', defaultOpen: true }]} />
-// o de forma compuesta:
-<Accordion>
-  <AccordionItem title="Título">Contenido</AccordionItem>
-</Accordion>
-```
+1. **Contenedor** (`.jl-accordion`): pila vertical de ítems separados con `--sp-2`, al 100%
+   de ancho. Acepta la prop `items` (array) o composición con `AccordionItem` como `children`.
+2. **Ítem** (`.jl-accordion-item`): tarjeta con fondo `--bg-neutral-1`, esquinas `--corner-l`
+   y relleno `--spacer-fx-4`.
+3. **Cabecera** (`.jl-accordion-item__header`): botón a ancho completo con el título y el
+   icono de toggle.
+4. **Título** (`.jl-accordion-item__title`): tipografía CTA (familia/peso/tracking CTA,
+   12/14 px) en mayúsculas.
+5. **Icono toggle** (`.jl-accordion-item__icon`): un `Icon` `Plus` cuando está cerrado y
+   `Minus` cuando está abierto, en tamaño XS.
+6. **Cuerpo** (`.jl-accordion-item__body.ts-body-3`): el contenido desplegable, visible solo
+   cuando el ítem está abierto.
+
+## Subtemas
+
+Todos los elementos usan tokens semánticos: fondo `--bg-neutral-1` y textos `--text-base` /
+`--text-neutral-1`. Al colocar el acordeón dentro de un contenedor con `data-theme`, todo se
+adapta al subtema (claro/oscuro), y un hijo puede sobrescribir al padre. El icono Plus/Minus
+hereda el color por `currentColor`.
+
+## Comportamiento
+
+- **Abrir/cerrar:** cada ítem gestiona su estado interno; al pulsar la cabecera alterna entre
+  abierto y cerrado, y cambia el icono entre `Plus` (cerrado) y `Minus` (abierto).
+- **Estado inicial:** `defaultOpen` en un ítem lo deja abierto de entrada.
+- **Independencia:** cada `AccordionItem` es independiente; pueden estar varios abiertos a la
+  vez.
+- **Contenido condicional:** el cuerpo solo se renderiza cuando el ítem está abierto y tiene
+  contenido.
+- **Responsive:** el contenedor ocupa el 100% del ancho disponible.
+
+## Variantes y tamaños
+
+Se puede usar de dos formas: pasando un array `items` o componiendo con `AccordionItem`. No
+hay variantes de tamaño; el ancho lo determina el contenedor (en la demo, 368 px).
 
 ## Tokens
 
-Fondo `--bg-neutral-1`, esquinas `--corner-l`, texto `--text-base` / `--text-neutral-1`.
-Iconos Plus/Minus. Todo adapta por subtema.
+| Token | Uso |
+| --- | --- |
+| `--bg-neutral-1` | Fondo de cada ítem |
+| `--corner-l` | Radio de esquina del ítem |
+| `--spacer-fx-4` | Relleno del ítem y separación interna |
+| `--spacer-fx-2` | Separación en la cabecera |
+| `--sp-2` | Separación entre ítems |
+| `--text-base` | Color del título y de la cabecera |
+| `--text-neutral-1` | Color del cuerpo (`ts-body-3`) |
+| `--font-family-cta`, `--font-weight-cta`, `--letter-spacing-cta` | Tipografía CTA del título |
 
-## Propiedades (AccordionItem)
+## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+### Accordion
+
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `title` | `string` | `Item` | Título de la cabecera |
+| `items` | `Array<{ title, content, defaultOpen }>` | — | Ítems generados automáticamente |
+| `children` | `node` | — | Ítems `AccordionItem` compuestos (alternativa a `items`) |
+| `className` | `string` | `''` | Clases adicionales |
+
+### AccordionItem
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | `'Item'` | Título de la cabecera |
 | `defaultOpen` | `boolean` | `false` | Abierto por defecto |
 | `children` | `node` | — | Contenido desplegable |
+
+## Accesibilidad
+
+- La cabecera es un `<button type="button">` con `aria-expanded` que refleja el estado
+  abierto/cerrado, operable con teclado.
+- El icono Plus/Minus es un `Icon` decorativo (sin `title`), oculto a lectores de pantalla; el
+  estado lo comunica `aria-expanded`.
+- Los colores heredan tokens semánticos del subtema; verifica el contraste del título y del
+  cuerpo frente al fondo neutro.
+
+## Componentes relacionados
+
+- **Icon** — provee los iconos `Plus` / `Minus` del toggle.
+- **Title** — encabezado de sección para agrupar contenidos.

@@ -13,26 +13,69 @@ Renderiza `<a>` si recibe `href`, si no un `<button>`.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Con iconos
+1. **Contenedor** (`.jl-actionlink`): `inline-flex` centrado, sin fondo, con **borde inferior** de 1px en `currentColor` (el subrayado sigue al color del texto) y un pequeño `padding-bottom`.
+2. **Icono izquierdo** (`.jl-actionlink__icon`, opcional): se muestra cuando se pasa `iconLeft`.
+3. **Etiqueta** (`<span>`): texto en mayúsculas, solo si hay `children`.
+4. **Icono derecho** (`.jl-actionlink__icon`, opcional): se muestra cuando se pasa `iconRight`.
+
+Los iconos usan tamaño `S`. El elemento raíz es `<a>` cuando hay `href` y no está deshabilitado; en caso contrario `<button type="button">`.
+
+## Subtemas
+
+Hereda el subtema del contenedor a través de `data-theme`; los colores se resuelven mediante tokens
+semánticos y un hijo puede sobrescribir al padre. Usa su **grupo de color propio** `--btn-link-<estado>-*`
+(grupo Button/Link Primary de Semantic-Color), que se adapta al subtema activo. El subrayado toma
+`currentColor`, por lo que sigue automáticamente al color del texto en cada estado.
+
+## Comportamiento
+
+- **Default**: color base del enlace.
+- **Hover** (`:hover:not(:disabled)`): tokens de hover (texto e icono).
+- **Focus** (`:focus-visible`): `outline: none`; el foco visible se aporta vía tokens de color.
+- **Disabled** (`:disabled`, prop `disabled`): colores atenuados y `cursor: not-allowed`. Además, con `disabled` se fuerza el render como `<button>` (no `<a>`) aunque haya `href`.
+- El texto no hace wrap (`white-space: nowrap`).
+
+## Variantes y tamaños
+
+No tiene variantes de tipo ni tamaños; es un estilo único. Puede llevar iconos a izquierda o derecha:
 
 <Canvas of={Stories.ConIconos} />
 
-## Estados
+Estados (default/disabled):
 
 <Canvas of={Stories.Estados} />
 
 ## Tokens
 
-Colores desde `--btn-link-<estado>-<text|icon>` (grupo Button/Link Primary, por subtema).
-Texto CTA (14/18, mayúsculas, tracking 0.5px). Subrayado con `currentColor`.
+| Token | Uso |
+| --- | --- |
+| `--btn-link-<estado>-text` | Color de texto y subrayado (estado ∈ default/hover/focused/disabled) |
+| `--btn-link-<estado>-icon` | Color del icono |
+| `--sp-2` | Separación entre icono y texto |
+| `--font-family-cta`, `--font-weight-cta`, `--letter-spacing-cta` | Tipografía CTA (14/18, mayúsculas) |
 
 ## Propiedades
 
 | Prop | Tipo | Default | Descripción |
 | --- | --- | --- | --- |
-| `href` | `string` | — | Si se indica, renderiza `<a>` |
-| `disabled` | `boolean` | `false` | Deshabilitado |
+| `href` | `string` | — | Si se indica (y no `disabled`), renderiza `<a>` |
+| `disabled` | `boolean` | `false` | Deshabilitado (fuerza render como `<button>`) |
 | `iconLeft` / `iconRight` | `string` | — | Iconos |
 | `children` | `node` | `Button` | Texto |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Elemento semántico según uso: `<a href>` para navegación, `<button>` para acciones sin destino. Ambos son enfocables y operables por teclado.
+- En estado `disabled` se usa el atributo nativo `disabled` sobre el `<button>`.
+- El foco visible y el contraste se apoyan en los tokens de color adaptados al subtema; el subrayado permanente refuerza la identificación del enlace sin depender solo del color.
+
+## Componentes relacionados
+
+- **UI02-Button**: botón principal con el mismo estilo CTA.
+- **UI01-Nav-Button**: botón de navegación.
+- **Icon**: iconografía usada en `iconLeft`/`iconRight`.

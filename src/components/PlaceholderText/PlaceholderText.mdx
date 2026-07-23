@@ -6,18 +6,68 @@ import * as Stories from './PlaceholderText.stories.jsx';
 # UI14-Placeholder-Text
 
 Texto de relleno/slot (estilo Body/02 por defecto). Es un componente base que se usa como
-marcador de texto dentro de otros componentes; permite cambiar el estilo tipográfico.
+marcador de texto dentro de otros componentes; permite cambiar el estilo tipográfico y la
+etiqueta HTML.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
+
+1. **Etiqueta contenedora:** el elemento HTML definido por la prop `as` (por defecto `span`).
+2. **Clase tipográfica:** se aplica `ts-{textStyle}` (por ejemplo `ts-body-2`), que fija la
+   familia, tamaño e interlineado del estilo elegido.
+3. **Contenido:** el texto pasado por `children` (por defecto "Text").
+
+## Subtemas
+
+El color del texto usa el token semántico `--text-base`, por lo que hereda el subtema del
+contenedor vía `data-theme`: cambia automáticamente entre subtemas claros y oscuros. Un
+contenedor hijo puede sobrescribir el subtema del padre. El estilo en línea permite ajustes
+puntuales sin romper esa herencia.
+
+## Comportamiento
+
+- **Solo texto:** no tiene estados interactivos; es un marcador de contenido tipográfico.
+- **Tipografía intercambiable:** cambiar `textStyle` conmuta entre estilos del sistema
+  (`body-*`, `label-*`) sin alterar el color.
+- **Semántica configurable:** `as` permite renderizar `span`, `p`, `div`, etc., según el
+  contexto donde se inserte.
+- **Reenvío de props:** el resto de props (incluido `style` y `className`) se reenvían al
+  elemento.
+
+## Variantes y tamaños
+
+El estilo tipográfico se controla con `textStyle`. Opciones disponibles en la demo:
+`body-1`, `body-2`, `body-3`, `body-4`, `label-1`, `label-2`. Usa los controles para
+previsualizar cada estilo sobre la story principal.
+
+## Tokens
+
+El color del texto usa el token semántico `--text-base`. La tipografía procede de las clases
+utilitarias `ts-*` del sistema (por ejemplo `ts-body-2`), que encapsulan los tokens de
+familia, tamaño e interlineado correspondientes.
 
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `children` | `node` | `Text` | Contenido |
-| `textStyle` | `string` | `body-2` | Estilo tipográfico (`.ts-*`) |
-| `as` | `string` | `span` | Etiqueta HTML |
+| `children` | `node` | `'Text'` | Contenido |
+| `textStyle` | `string` | `'body-2'` | Estilo tipográfico (`.ts-*`) |
+| `as` | `string` | `'span'` | Etiqueta HTML |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- Al renderizar texto real, es accesible por defecto para lectores de pantalla.
+- Elige la etiqueta (`as`) adecuada al contexto semántico (por ejemplo `p` para párrafos)
+  para no romper la estructura del documento.
+- El color hereda `--text-base` del subtema; verifica el contraste frente al fondo.
+
+## Componentes relacionados
+
+- **Title** — encabezado de sección con estilos tipográficos del sistema.
+- **Accordion** — usa estilos `ts-*` en su cabecera y cuerpo.

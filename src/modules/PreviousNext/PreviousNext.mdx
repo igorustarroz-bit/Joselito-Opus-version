@@ -14,12 +14,73 @@ Cambia el viewport para verlo.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
+
+1. **Contenedor** (`nav.jl-prevnext`): barra a 100% de ancho con fondo base y borde inferior.
+2. **Mitad anterior** (`.jl-prevnext__half--prev`): botón-icono `ArrowLeft` + textos, alineados a la izquierda.
+3. **Mitad siguiente** (`.jl-prevnext__half--next`): textos + botón-icono `ArrowRight`, alineados a la derecha.
+4. **Botón-icono** (`.jl-prevnext__btn`): cuadro con borde neutral-2 (56px mobile / 64px desktop).
+5. **Etiqueta** (`.jl-prevnext__label`): "Anterior"/"Siguiente" en Body/03, neutral-2 y mayúsculas.
+6. **Título** (`.jl-prevnext__title`): título de destino en SangBleu Title/03.
+7. **Separador**: borde inferior entre mitades en mobile; borde derecho (central) en desktop.
+
+## Subtemas
+
+El módulo resuelve sus colores mediante tokens semánticos (`--bg-base`, `--text-base`,
+`--text-neutral-2`, `--stroke-neutral-2`, `--stroke-neutral-3`) y hereda el subtema del
+contenedor a través de `data-theme`. Un hijo puede sobrescribir al padre declarando su
+propio `data-theme`, sin modificar los estilos del módulo.
+
+## Comportamiento
+
+- **Interacción**: cada mitad es un enlace `<a>` clicable con cursor `pointer`; disparan `onPrev` / `onNext` respectivamente.
+- **Alineación**: la mitad "anterior" alinea contenido a la izquierda; la "siguiente" a la derecha (textos con `text-align: right`).
+- **Responsive**: en **mobile** las dos mitades se apilan en dos filas separadas por un borde inferior; a partir de **768px** se colocan en fila con un borde derecho como separador central. El padding vertical pasa de 40px a 80px y el botón-icono de 56px a 64px.
+
+## Variantes y tamaños
+
+Este módulo no expone variantes de estilo; su adaptación es responsive (apilado en mobile,
+en fila en desktop) y puede observarse cambiando el viewport en la Demo.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo de la barra y de los botones-icono |
+| `--text-base` | Color de los títulos y del icono |
+| `--text-neutral-2` | Color de las etiquetas (Anterior/Siguiente) |
+| `--stroke-neutral-2` | Borde de los botones-icono |
+| `--stroke-neutral-3` | Bordes separadores (inferior / derecho) |
+| `--spacer-fx-6` | Padding lateral en mobile |
+| `--spacer-fx-8` | Separación entre botón y textos (mobile) |
+| `--sp-2` | Separación entre etiqueta y título |
 
 ## Propiedades
 
-| Prop | Tipo | Descripción |
-| --- | --- | --- |
-| `prevLabel` / `prevTitle` / `prevHref` | `string` | Lado anterior |
-| `nextLabel` / `nextTitle` / `nextHref` | `string` | Lado siguiente |
-| `onPrev` / `onNext` | `fn` | Callbacks |
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `prevLabel` | `string` | `'Anterior'` | Etiqueta del lado anterior |
+| `prevTitle` | `string` | `'Ara Malikian'` | Título del lado anterior |
+| `prevHref` | `string` | — | Destino del lado anterior |
+| `nextLabel` | `string` | `'Siguiente'` | Etiqueta del lado siguiente |
+| `nextTitle` | `string` | `'Swarovski Edition'` | Título del lado siguiente |
+| `nextHref` | `string` | — | Destino del lado siguiente |
+| `onPrev` | `fn` | — | Callback del lado anterior |
+| `onNext` | `fn` | — | Callback del lado siguiente |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El contenedor es un landmark `<nav>` con `aria-label="Anterior y siguiente"`.
+- Cada mitad es un enlace nativo `<a>`, navegable por teclado con foco visible.
+- Los iconos son decorativos; el texto de etiqueta y título transmite el significado.
+- El color de los textos usa tokens (`--text-base`, `--text-neutral-2`) para mantener el contraste.
+
+## Componentes relacionados
+
+- [Icon](/docs/componentes-icon--docs) — flechas `ArrowLeft` y `ArrowRight`.
+- Módulos de la familia Navigation: Breadcrumb, Navigation (header), Secondary menu.

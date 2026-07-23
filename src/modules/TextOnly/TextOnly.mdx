@@ -1,4 +1,4 @@
-import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
 import * as Stories from './TextOnly.stories.jsx';
 
 <Meta of={Stories} />
@@ -11,26 +11,76 @@ Bloque de texto a 100% de ancho. Variantes:
 
 Padding lateral = wrapper del grid; contenido centrado (máx. 1320px).
 
-## Dos columnas
+## Demo
 
 <Canvas of={Stories.DosColumnas} />
 
-## Una columna
+## Anatomía
+
+1. **Contenedor** (`section.jl-textonly`): bloque a 100% de ancho con fondo base y padding lateral del wrapper del grid.
+2. **Inner** (`.jl-textonly__inner`): contenido centrado con ancho máximo de 1320px.
+3. **Cabecera** (`.jl-textonly__head`): label (`.jl-textonly__label`, Body/06) + título (`.jl-textonly__title`, SangBleu Title/04). En variante `split` el título va en la fila (`.jl-textonly__row`).
+4. **Cuerpo** (`.jl-textonly__body`): contiene una o varias columnas; `--multi` lo dispone en fila en desktop.
+5. **Columna** (`.jl-textonly__col`): párrafos en Body/05.
+
+## Subtemas
+
+El módulo resuelve sus colores mediante tokens semánticos (`--bg-base`, `--text-base`) y
+hereda el subtema del contenedor a través de `data-theme`. Un hijo puede sobrescribir al
+padre declarando su propio `data-theme`, sin modificar los estilos del módulo.
+
+## Comportamiento
+
+- **Disposición según `variant`**: `columns` apila cabecera y cuerpo; `split` coloca título y cuerpo en paralelo.
+- **Columnas**: la prop `columns` es un array de arrays de párrafos (cada sub-array = una columna). Con más de una columna se activa `--multi`.
+- **Responsive**: el padding vertical pasa de **80px** (mobile) a **120px** en desktop (≥768px). En desktop el cuerpo multi-columna se dispone en fila (`gap` 144px) y el `split` en fila (título con base 537px, `gap` 136px). En mobile todo queda apilado.
+
+## Variantes y tamaños
+
+### Dos columnas
+
+<Canvas of={Stories.DosColumnas} />
+
+### Una columna
 
 <Canvas of={Stories.UnaColumna} />
 
-## Split
+### Split (título / cuerpo)
 
 <Canvas of={Stories.Split} />
 
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo del bloque |
+| `--text-base` | Color de label, título y cuerpo |
+| `--grid-wrapper` | Padding lateral (wrapper del grid) |
+| `--spacer-fx-8` | Separación vertical (inner, cuerpo, filas del split) |
+| `--spacer-fx-4` | Separación entre label y título (cabecera) |
+
 ## Propiedades
 
-| Prop | Tipo | Descripción |
-| --- | --- | --- |
-| `label` | `string` | Antetítulo (Body/06) |
-| `title` | `string` | Título (SangBleu) |
-| `columns` | `string[][]` | Columnas de párrafos |
-| `variant` | `columns \| split` | Disposición |
+| Prop | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `label` | `string` | — | Antetítulo (Body/06) |
+| `title` | `string` | `'Lorem ipsum dolor sit amet consectetur.'` | Título (SangBleu Title/04) |
+| `columns` | `string[][]` | `[['Lorem ipsum dolor sit amet consectetur.']]` | Columnas de párrafos (cada sub-array = una columna) |
+| `variant` | `'columns' \| 'split'` | `'columns'` | Disposición del contenido |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.DosColumnas} />
+
+## Accesibilidad
+
+- El contenedor es un `<section>` para agrupar el contenido de texto.
+- El texto usa tokens (`--text-base` sobre `--bg-base`) para asegurar el contraste del sistema.
+- La jerarquía label → título → cuerpo emplea tamaños tipográficos diferenciados (Body/06, Title/04, Body/05).
+
+## Componentes relacionados
+
+- Módulos de la familia Content (bloques de contenido a ancho completo).
+- Tipografías del sistema: SangBleu (títulos) y Body (label y cuerpo).
 
 > Nota: el master "split" incluye un botón con tokens ajenos al sistema (color `#0045ff`,
 > fuente Neue Haas) heredado de otra plantilla; se ha omitido por no pertenecer a Joselito.

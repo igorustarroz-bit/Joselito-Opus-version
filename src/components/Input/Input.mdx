@@ -5,40 +5,92 @@ import * as Stories from './Input.stories.jsx';
 
 # UI06-Input
 
-Campo de formulario. Tamaños **Big** (72px) y **Small** (56px); estados default, filled,
-error, validated y disabled (hover/focus vía CSS). Botón de acción opcional a la derecha,
-mensaje de ayuda opcional debajo. Rectangular.
+Campo de formulario rectangular. Se presenta en dos tamaños, **Big** (72px) y **Small** (56px), y
+cubre los estados default, filled, error, validated y disabled, además de hover y focus resueltos
+vía CSS. Admite un botón de acción opcional a la derecha y un mensaje de ayuda opcional debajo.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Con botón de acción
+1. **Contenedor** (`div.jl-input`): apila la caja del campo y el mensaje; expone el estado en `data-state`.
+2. **Caja** (`div.jl-input__box`): borde y fondo del campo; agrupa el input y el botón de acción.
+3. **Campo** (`input.jl-input__field`): entrada de texto con `placeholder` (prop `label`).
+4. **Botón de acción** (`button.jl-input__action`): opcional, ocupa la altura del campo y muestra un `Icon`.
+5. **Mensaje** (`span.jl-input__msg`): texto de ayuda opcional bajo la caja.
+
+## Subtemas
+
+Hereda el subtema del contenedor mediante `data-theme`. Además usa un **grupo de color propio** del
+sistema (`--form-*`, grupo Forms de Semantic-Color): los colores de fondo, borde, texto y mensaje se
+resuelven por estado (`--form-<estado>-<fill|stroke|text|message|label-in>`) y por subtema. Un
+contenedor hijo puede sobrescribir el subtema del padre.
+
+## Comportamiento
+
+- **Default:** fondo y borde `--form-default-*`; placeholder en `--form-default-label-in`.
+- **Hover:** la caja pasa a `--form-hover-fill` / `--form-hover-stroke` (`:hover`).
+- **Focus:** al recibir foco interno (`:focus-within`) usa `--form-focused-*`.
+- **Filled:** estado con contenido, colores `--form-filled-*`.
+- **Error:** caja y mensaje en `--form-error-*`.
+- **Validated:** caja y mensaje en `--form-validated-*`.
+- **Disabled:** colores `--form-disabled-*`; el input y el botón de acción quedan deshabilitados.
+- **Controlado / no controlado:** admite `value` + `onChange` para uso controlado.
+
+## Variantes y tamaños
+
+Tamaños **Big** (altura 72px) y **Small** (altura 56px), que ajustan alturas, paddings y tipografía.
+El botón de acción es una variante opcional del campo.
 
 <Canvas of={Stories.ConAccion} />
 
-## Estados
-
 <Canvas of={Stories.Estados} />
-
-## Tamaños
 
 <Canvas of={Stories.Tamaños} />
 
 ## Tokens
 
-Colores desde `--form-<estado>-<fill|stroke|text|message|...>` (grupo Forms de
-Semantic-Color, por subtema). Tamaños y paddings desde `--form-l-*` / `--form-m-*`.
+| Token | Uso |
+| --- | --- |
+| `--form-default-*` / `--form-hover-*` / `--form-focused-*` | Colores en default, hover y foco (fill, stroke, text, label-in) |
+| `--form-filled-*` / `--form-error-*` / `--form-validated-*` / `--form-disabled-*` | Colores por estado (fill, stroke, text, message) |
+| `--form-l-size` / `--form-m-size` | Altura de la caja (Big / Small) |
+| `--form-l-padding-l` / `--form-m-padding-l` | Padding izquierdo |
+| `--form-l-message` / `--form-m-message` | Separación con el mensaje |
+| `--ts-input-m-text-*` / `--ts-input-s-text-*` | Tipografía del campo |
+| `--ts-input-m-message-*` / `--ts-input-s-message-*` | Tipografía del mensaje |
+| `--font-family-forms` / `--letter-spacing-forms` | Tipografía de formularios |
+| `--bg-inverse` / `--text-inverted` | Fondo y color del botón de acción |
+| `--sp-2` | Separación entre campo y botón de acción |
 
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `label` | `string` | `Label` | Placeholder |
+| `label` | `string` | `Label` | Texto del placeholder |
 | `size` | `big \| small` | `big` | Tamaño |
 | `state` | `default \| filled \| error \| validated \| disabled` | `default` | Estado |
 | `message` | `string` | — | Mensaje de ayuda |
 | `actionIcon` | `string` | — | Icono del botón de acción |
+| `onAction` | `fn` | — | Callback del botón de acción |
 | `value` / `onChange` | — | — | Valor controlado |
+| `type` | `string` | `text` | Tipo del input nativo |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El botón de acción incluye `aria-label="acción"` para anunciar su propósito.
+- El foco es visible en la caja mediante `:focus-within`, que resalta borde y fondo.
+- En estado `disabled` tanto el input como el botón se deshabilitan de forma nativa.
+- Se recomienda asociar una etiqueta visible o `aria-label` al campo, ya que el placeholder por sí solo no es una etiqueta accesible; para errores conviene reflejar `aria-invalid` cuando `state="error"`.
+- El color no es el único indicador de estado: el mensaje de ayuda acompaña a error y validación.
+
+## Componentes relacionados
+
+- **UI07-Listbox** — lista de opciones para selección.
+- **UI11-Form** — contenedor que agrupa varios campos.
+- **Icon** — icono del botón de acción.

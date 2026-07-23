@@ -5,19 +5,75 @@ import * as Stories from './Listbox.stories.jsx';
 
 # UI07-Listbox
 
-Lista de opciones desplegable. Fondo base, cada opción con texto de formulario (Input-M),
-esquinas 2px y realce al pasar el ratón. Controlado (`value` + `onChange`) o no controlado
-(`defaultValue`). Este componente cubre el núcleo reutilizable (lista de opciones); las
-variantes móviles de Figma añaden cabecera seleccionada y pie con botón "Aplicar".
+Lista de opciones desplegable. Fondo base, cada opción con texto de formulario (Input-M), esquinas
+de 2px y realce al pasar el ratón. Funciona controlado (`value` + `onChange`) o no controlado
+(`defaultValue`). Este componente cubre el núcleo reutilizable (la lista de opciones); las variantes
+móviles de Figma añaden cabecera con la selección y un pie con botón "Aplicar".
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
+## Anatomía
+
+1. **Contenedor** (`div.jl-listbox[role="listbox"]`): apila las opciones sobre fondo base con padding propio.
+2. **Opciones** (`button.jl-listbox__item[role="option"]`): un botón por elemento de `items`, con texto de formulario y `aria-selected`.
+
+## Subtemas
+
+Hereda el subtema del contenedor mediante `data-theme`. Los colores se resuelven con tokens
+semánticos: fondo `--bg-base`, texto de opción `--text-neutral-1`, realce de hover `--bg-neutral-1`
+y texto seleccionado/hover `--text-base`. Un contenedor hijo puede sobrescribir el subtema del padre.
+
+## Comportamiento
+
+- **Default:** cada opción se muestra con texto `--text-neutral-1` sobre fondo base.
+- **Hover:** la opción no deshabilitada resalta con fondo `--bg-neutral-1` y texto `--text-base`.
+- **Selected:** la opción con `aria-selected="true"` usa texto `--text-base`.
+- **Disabled:** las opciones marcadas como `disabled` usan `--text-disabled` y cursor `not-allowed`.
+- **Controlado / no controlado:** si se pasa `value` la selección la gestiona el consumidor; si no, la mantiene internamente a partir de `defaultValue`. En ambos casos se notifica con `onChange(value)`.
+
+## Variantes y tamaños
+
+El núcleo reutilizable no define tamaños ni variantes por props; renderiza la lista de opciones a
+partir de `items`. Las variantes móviles de Figma (cabecera con la selección y pie con botón
+"Aplicar") quedan fuera de este componente base.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo de la lista |
+| `--bg-neutral-1` | Fondo de la opción en hover |
+| `--text-neutral-1` | Texto de opción en default |
+| `--text-base` | Texto de opción en hover / seleccionada |
+| `--text-disabled` | Texto de opción deshabilitada |
+| `--corner-xxs` | Radio de esquina de la opción (2px) |
+| `--sp-3` / `--spacer-fx-2` | Padding del contenedor |
+| `--form-l-padding-r` | Separación interna de la opción |
+| `--ts-input-m-text-sz` / `--ts-input-m-text-lh` | Tipografía de la opción (Input-M) |
+| `--font-family-forms` / `--font-weight-form` / `--letter-spacing-forms` | Estilo de texto de formularios |
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `items` | `{label, value?, disabled?}[]` | `[]` | Opciones |
-| `value` / `defaultValue` | `any` | — | Selección (controlada/no) |
+| `items` | `{label, value?, disabled?}[]` | `[]` | Opciones de la lista |
+| `value` | `any` | — | Selección controlada |
+| `defaultValue` | `any` | — | Selección inicial (no controlada) |
 | `onChange` | `(value) => void` | — | Callback al seleccionar |
+| `className` | `string` | `''` | Clases adicionales |
+
+## Accesibilidad
+
+- El contenedor declara `role="listbox"` y cada opción `role="option"` con `aria-selected`, exponiendo la selección a lectores de pantalla.
+- Las opciones son `<button>` nativos: reciben foco y se activan con teclado.
+- Las opciones deshabilitadas usan el atributo `disabled` nativo.
+- El estado seleccionado no depende solo del color: se comunica también con `aria-selected`.
+
+## Componentes relacionados
+
+- **UI06-Input** — campo de formulario que suele acompañar a la selección.
+- **UI11-Form** — contenedor de formulario.

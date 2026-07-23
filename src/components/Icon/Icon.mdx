@@ -6,8 +6,8 @@ import * as Stories from './Icon.stories.jsx';
 # Icon
 
 Sistema de iconos del proyecto (página **Brand Assets** de Figma). Todos los iconos se cargan
-automáticamente desde `src/assets/icons/*.svg`. Ningún componente debe usar iconos fuera de
-este set.
+automáticamente desde `src/assets/icons/*.svg` (vía `import.meta.glob` + SVGR). Ningún
+componente debe usar iconos fuera de este set.
 
 - **Color:** vía `currentColor` — hereda del color de texto o se fija con `color`.
 - **Tamaños:** escala del Icon Sizer (XXS 12 · XS 16 · S 20 · M 24 · L 32) o número en px.
@@ -16,32 +16,73 @@ este set.
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Tamaños
+1. **SVG del icono:** se resuelve por la prop `name` contra el set cargado; si el nombre no
+   existe, el componente no renderiza nada (y avisa por consola en desarrollo).
+2. **Caja de tamaño:** `width` y `height` iguales, derivados de `size` (clave del Icon Sizer o
+   número en px). Se muestra en línea (`display: inline-block`) y no se encoge (`flex-shrink: 0`).
+3. **Trazo:** usa `currentColor`; puede fijarse con la prop `color` o heredar del texto.
 
-<Canvas of={Stories.Sizes} />
+## Subtemas
 
-## Color
+El icono hereda el color de texto del contenedor mediante `currentColor`: dentro de un
+contenedor con `data-theme` adopta el color semántico de ese subtema, y un hijo puede
+sobrescribir al padre. La prop `color` (o `style.color`) permite forzar un color concreto,
+normalmente un token semántico como `--color-primary-40` o `--color-system-success-02`.
 
 <Canvas of={Stories.Color} />
 
-## Galería
+## Comportamiento
+
+- **Escalado:** el icono se dibuja en una caja cuadrada del tamaño indicado; los valores del
+  Icon Sizer (XXS–L) cubren los usos comunes, y también admite un número de px arbitrario.
+- **No focusable:** se marca `focusable="false"` para que no reciba foco en navegadores que lo
+  permitirían en SVG.
+- **Decorativo por defecto:** sin `title`, se oculta a lectores de pantalla (`aria-hidden`);
+  con `title` pasa a ser una imagen accesible.
+- **Reenvío de props:** el resto de props (incluido `style`) se reenvían al SVG.
+
+## Variantes y tamaños
+
+Tamaños del Icon Sizer: XXS (12), XS (16), S (20), M (24), L (32), además de valores en px.
+
+<Canvas of={Stories.Sizes} />
+
+Galería completa del set de iconos disponibles:
 
 <Canvas of={Stories.Gallery} />
 
+## Tokens
+
+El componente no define custom properties propias: el color se resuelve con `currentColor` (o
+la prop `color`). En contexto hereda tokens semánticos de color de texto del subtema, y suele
+colorearse con tokens de color como `--color-primary-40`, `--color-system-success-02` o
+`--color-secondary-3-50`. Los tamaños del Icon Sizer están fijados en px en el componente
+(XXS 12 · XS 16 · S 20 · M 24 · L 32).
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
 | `name` | `string` | — | Nombre del icono (ver galería) |
-| `size` | `XXS \| XS \| S \| M \| L \| number` | `M` | Tamaño (Icon Sizer o px) |
-| `color` | `string` | — | Color (por defecto `currentColor`) |
+| `size` | `'XXS' \| 'XS' \| 'S' \| 'M' \| 'L' \| number` | `'M'` | Tamaño (Icon Sizer o px) |
+| `color` | `string` | — | Color del icono (por defecto `currentColor`) |
 | `title` | `string` | — | Texto accesible; sin él, el icono es decorativo (`aria-hidden`) |
+| `className` | `string` | `''` | Clases adicionales |
 
-## Uso
+<Controls of={Stories.Default} />
 
-```jsx
-<Icon name="ArrowRight" size="M" />
-<Icon name="HeartStraight" size="L" style={{ color: 'var(--color-primary-40)' }} />
-```
+## Accesibilidad
+
+- **Icono decorativo** (sin `title`): se aplica `aria-hidden="true"` para que los lectores de
+  pantalla lo ignoren; úsalo cuando el significado ya lo aporta un texto adyacente.
+- **Icono informativo** (con `title`): se expone con `role="img"` y `aria-label` igual a
+  `title`, describiendo su significado.
+- Se fuerza `focusable="false"` para evitar tabulaciones inesperadas en el SVG.
+- Mantén contraste suficiente del icono frente al fondo al usar `currentColor` o `color`.
+
+## Componentes relacionados
+
+- **BrandLogo** — activos de marca, también coloreados por `currentColor`.
+- **Title** y **Accordion** — consumen `Icon` (chevron, Plus/Minus) en sus controles.

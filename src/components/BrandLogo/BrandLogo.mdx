@@ -8,31 +8,82 @@ import * as Stories from './BrandLogo.stories.jsx';
 Logo de **Joselito** (página Brand Assets de Figma). Dos variantes: lockup **horizontal**
 (wordmark + isotipo) e **isotipo** (marca circular del morro).
 
-El color se aplica por `currentColor`, por lo que el logo se adapta al subtema (p. ej. blanco
-sobre fondo oscuro). El tamaño se controla con `height` (ancho proporcional).
+El color se aplica por `currentColor`, por lo que el logo se adapta al subtema (por ejemplo,
+blanco sobre fondo oscuro). El tamaño se controla con `height` (el ancho es proporcional al
+viewBox del SVG).
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Variantes
+1. **SVG del logo:** se renderiza el activo correspondiente a la variante seleccionada
+   (`horizontal` → wordmark + isotipo; `isotipo` → marca circular). Si la variante no existe,
+   se usa el lockup horizontal por defecto.
+2. **Dimensionado:** la altura la fija la prop `height` (en px) y el ancho se calcula solo
+   (`width: auto`) manteniendo la proporción del viewBox. Se muestra como bloque
+   (`display: block`).
+3. **Color:** el trazo del logo usa `currentColor`; puede fijarse con la prop `color` o
+   heredarse del color de texto del contenedor.
 
-<Canvas of={Stories.Variantes} />
+## Subtemas
 
-## Sobre distintos fondos
+El logo hereda el color de texto del contenedor gracias a `currentColor`: al colocarlo dentro
+de un contenedor con `data-theme`, adopta el `--text-base` de ese subtema (por ejemplo, claro
+sobre fondo oscuro). Un contenedor hijo puede sobrescribir el color del padre. La prop `color`
+permite forzar un color concreto (por ejemplo, blanco sobre un fondo de marca).
 
 <Canvas of={Stories.SobreFondo} />
 
+## Comportamiento
+
+- **Adaptación al fondo:** al basarse en `currentColor`, el logo cambia automáticamente de
+  color según el subtema o el color de texto heredado.
+- **Escalado proporcional:** al modificar `height`, el ancho se recalcula manteniendo la
+  proporción; no se deforma.
+- **Elemento estático:** no tiene estados interactivos (hover, foco) por sí mismo; es un
+  activo visual.
+
+## Variantes y tamaños
+
+Variante `horizontal` (lockup completo) e `isotipo` (marca circular). El tamaño es libre vía
+`height` (en la demo el control va de 16 a 160 px).
+
+<Canvas of={Stories.Variantes} />
+
+## Tokens
+
+El logo no define custom properties propias: el color se resuelve con `currentColor` (o la
+prop `color`). En contexto hereda tokens semánticos de color de texto del subtema (por
+ejemplo `--text-base`); los fondos de las stories de ejemplo (`--bg-base`,
+`--color-primary-40`, `--color-neutral-white`) pertenecen al contenedor, no al componente.
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `variant` | `horizontal \| isotipo` | `horizontal` | Lockup completo o solo isotipo |
-| `height` | `number` | `40` | Altura en px (ancho automático) |
-| `color` | `string` | — | Color (por defecto `currentColor`) |
-| `title` | `string` | `Joselito` | Texto accesible |
+| `variant` | `'horizontal' \| 'isotipo'` | `'horizontal'` | Lockup completo o solo isotipo |
+| `height` | `number` | `40` | Altura en px (el ancho es automático) |
+| `color` | `string` | — | Color del logo (por defecto `currentColor`) |
+| `title` | `string` | `'Joselito'` | Texto accesible (`aria-label`) |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El SVG se expone como imagen con `role="img"` y `aria-label` tomado de la prop `title`
+  (por defecto "Joselito").
+- Si el logo es decorativo y va acompañado de un texto equivalente, considera un `title`
+  vacío o marcarlo como decorativo para evitar anuncios redundantes.
+- Al confiar en `currentColor`, asegúrate de mantener contraste suficiente del logo frente al
+  fondo.
+
+## Componentes relacionados
+
+- **Icon** — grafismos vectoriales del sistema, también coloreados por `currentColor`.
+- **AspectRatio** — contenedor de proporción fija para activos de marca.
 
 > El "Logo Grid" de Figma es el diagrama de construcción (guías de espaciado), no un
 > componente de uso; queda como referencia de diseño.

@@ -6,32 +6,74 @@ import * as Stories from './AspectRatio.stories.jsx';
 # Aspect Ratio
 
 Foundation que mantiene una **proporción fija** y recorta su contenido. Se usa como
-contenedor de imágenes (rellenan con `object-cover`) para asegurar ratios consistentes.
+contenedor de imágenes (rellenan con `object-cover`) para asegurar ratios consistentes en
+tarjetas, galerías y bloques de contenido.
 
 ## Demo
 
 <Canvas of={Stories.Default} />
 
-<Controls of={Stories.Default} />
+## Anatomía
 
-## Variantes
+1. **Contenedor** (`div.relative.overflow-hidden`): fija la proporción mediante la propiedad
+   CSS `aspect-ratio` calculada a partir de la prop `ratio` (`${w} / ${h}`). Expone el atributo
+   `data-ratio` con el valor de la proporción y recorta lo que sobresalga (`overflow-hidden`).
+2. **Capa de contenido** (`div.absolute.inset-0`): ocupa todo el contenedor. Cualquier `<img>`
+   hija se estira a `width: 100%` / `height: 100%` con `object-cover` y `display: block`, de
+   modo que la imagen rellena el marco sin deformarse.
 
-Proporciones del sistema: `1:1`, `4:3`, `3:4`, `3:2`, `2:3`, `16:9`, `9:16`.
+## Subtemas
+
+AspectRatio es un contenedor estructural neutro: no aplica color propio. Hereda el subtema del
+contenedor padre vía `data-theme` y no lo sobrescribe, por lo que su contenido (imágenes u
+otros elementos) se muestra tal cual dentro del marco. Cualquier color o fondo procede del
+contenido o de las clases/estilos que se le pasen.
+
+## Comportamiento
+
+- **Proporción constante:** el contenedor conserva la relación de aspecto indicada en `ratio`
+  independientemente del ancho disponible; la altura se deriva del ancho.
+- **Responsive:** al ser fluido en ancho, escala con su contenedor. En la demo se limita con un
+  ancho fijo (`width: 240`) solo para el ejemplo.
+- **Recorte del contenido:** las imágenes rellenan el marco con `object-cover`, recortando el
+  exceso para evitar deformaciones. Otros hijos se posicionan sobre la capa absoluta.
+- **Personalización:** admite `className` y `style` adicionales (por ejemplo, `border-radius`)
+  y reenvía el resto de props al `div` contenedor.
+
+## Variantes y tamaños
+
+Proporciones del sistema disponibles en la prop `ratio`: `1:1`, `4:3`, `3:4`, `3:2`, `2:3`,
+`16:9`, `9:16`.
 
 <Canvas of={Stories.Ratios} />
 
+## Tokens
+
+El componente no define custom properties propias: la proporción se resuelve con la propiedad
+CSS nativa `aspect-ratio` y el recorte con `object-cover`. Los tokens de color/redondeo que
+aparezcan (por ejemplo `--corner-s` o `--bg-accent-3` en las stories de ejemplo) provienen del
+contenido o de los estilos que se le pasen, no del propio AspectRatio.
+
 ## Propiedades
 
-| Prop | Tipo | Default | Descripción |
+| Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
-| `ratio` | `1:1 \| 4:3 \| 3:4 \| 3:2 \| 2:3 \| 16:9 \| 9:16` | `1:1` | Proporción del contenedor |
-| `className` | `string` | — | Clases adicionales |
-| `children` | `node` | — | Contenido (habitualmente `<img>`) que rellena con object-cover |
+| `ratio` | `'1:1' \| '4:3' \| '3:4' \| '3:2' \| '2:3' \| '16:9' \| '9:16'` | `'1:1'` | Proporción del contenedor |
+| `className` | `string` | `''` | Clases adicionales |
+| `style` | `object` | — | Estilos en línea adicionales (se fusionan con `aspect-ratio`) |
+| `children` | `node` | — | Contenido (habitualmente `<img>`) que rellena con `object-cover` |
 
-## Uso
+<Controls of={Stories.Default} />
 
-```jsx
-<AspectRatio ratio="16:9">
-  <img src="/foto.webp" alt="..." />
-</AspectRatio>
-```
+## Accesibilidad
+
+- AspectRatio es un contenedor puramente visual; no aporta semántica ni roles propios.
+- La accesibilidad depende del contenido: las imágenes deben incluir un `alt` descriptivo, o
+  `alt=""` si son decorativas.
+- El recorte con `object-cover` puede ocultar partes de la imagen; elige la proporción y el
+  encuadre para no perder información relevante.
+
+## Componentes relacionados
+
+- **BrandLogo** — activo de marca que también se adapta al contenedor.
+- **Icon** — grafismos vectoriales que pueden acompañar al contenido multimedia.

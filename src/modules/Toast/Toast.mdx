@@ -5,7 +5,7 @@ import * as Stories from './Toast.stories.jsx';
 
 # Módulo · Toast
 
-Aviso compacto: imagen cuadrada (76px, vía `AspectRatio`) junto a un título (Body/02) y una
+Aviso compacto: imagen cuadrada (76px, vía **AspectRatio**) junto a un título (Body/02) y una
 descripción (Body/02, neutral-2). Lleva una elevación ligera para flotar sobre el contenido.
 
 ## Demo
@@ -14,10 +14,67 @@ descripción (Body/02, neutral-2). Lleva una elevación ligera para flotar sobre
 
 <Controls of={Stories.Default} />
 
+## Anatomía
+
+1. **Contenedor** (`.jl-toast`): caja con fondo base, relleno de 14px y sombra ligera; ancho
+   fijo de 343px (limitado por el contenedor). Se anuncia con `role="status"`.
+2. **Media** (`.jl-toast__media`): imagen cuadrada de 76px envuelta en **AspectRatio** (`1:1`).
+   Si no hay `image`, muestra un placeholder con degradado.
+3. **Texto** (`.jl-toast__text`): columna centrada verticalmente.
+   - **Título** (`.jl-toast__title`, `ts-body-2`): en color base.
+   - **Descripción** (`.jl-toast__desc`, `ts-body-2`): en color neutral-2.
+
+## Subtemas
+
+El aviso no fija tema propio: hereda el subtema del contenedor vía `data-theme` y resuelve
+colores mediante tokens semánticos (`--bg-base`, `--text-base`, `--text-neutral-2`). Un hijo
+puede sobrescribir al padre con su propio `data-theme`.
+
+## Comportamiento
+
+- **Elevación**: usa `box-shadow: var(--shadow-on-light-s)` para flotar sobre el contenido.
+- La imagen tiene tamaño fijo (76px) y no se encoge (`flex-shrink: 0`); el texto ocupa el
+  espacio restante (`flex: 1 0 0`).
+- Ancho fijo de 343px con `max-width: 100%`, de modo que se adapta a contenedores estrechos.
+- Es un elemento informativo pasivo (`role="status"`): notifica sin interrumpir al usuario.
+
+## Variantes y tamaños
+
+Presentación única: imagen cuadrada más título y descripción, con elevación ligera. El
+contenido (título, descripción e imagen) se personaliza mediante props; el ancho se mantiene
+en 343px, adaptándose al contenedor cuando este es más estrecho.
+
+<Canvas of={Stories.Default} />
+
+## Tokens
+
+| Token | Uso |
+| --- | --- |
+| `--bg-base` | Fondo del contenedor |
+| `--shadow-on-light-s` | Elevación (sombra ligera) |
+| `--text-base` | Color del título |
+| `--text-neutral-2` | Color de la descripción |
+| `--color-secondary-1-60`, `--color-neutral-30` | Degradado del placeholder |
+
 ## Propiedades
 
-| Prop | Tipo | Descripción |
-| --- | --- | --- |
-| `title` | `string` | Título |
-| `text` | `string` | Descripción |
-| `image` | `string` | URL de imagen |
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string` | `Jaime Hayon x Joselito` | Título |
+| `text` | `string` | `Descubre la nueva colección Joselito Premium` | Descripción |
+| `image` | `string` | — | URL de imagen (si falta, muestra placeholder) |
+| `className` | `string` | `''` | Clases adicionales |
+
+<Controls of={Stories.Default} />
+
+## Accesibilidad
+
+- El contenedor usa `role="status"`, por lo que los lectores de pantalla anuncian su
+  contenido de forma no intrusiva cuando aparece.
+- La imagen usa `alt=""` por ser decorativa y acompañarse de texto; usa alternativa si aporta
+  información.
+- El contraste de título y descripción se resuelve con tokens semánticos sobre el subtema.
+
+## Componentes relacionados
+
+- **AspectRatio**: mantiene la proporción cuadrada de la imagen.
