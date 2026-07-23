@@ -53,6 +53,7 @@ Comandos: `npm run dev` (Vite), `npm run storybook` (docs, :6006), `npm run buil
 ## 6. Convenciones
 
 - Orden de trabajo: **Tokens → Componentes → Módulos → Page Templates**. Los tokens prioritarios siempre antes de cualquier componente.
+- **Imágenes raster: descarga tras los iconos** (Instrucciones v2 §14). En cuanto están los iconos se bajan todas las imágenes raster a `src/assets/images` (WebP) y cada módulo cablea su imagen real al construirse (sin placeholder ni retrofit final). Los **SVG** no van por ahí: proceso estándar (SVGR/SVGO). Ver `PLAN.md` → Fase 2.5.
 - Componentes primero los que son base de otros (en Figma, los `z_fragment_*` son subcomponentes base).
 - Nada de valores hardcodeados: todo desde tokens o subcomponentes. Cualquier valor fuera de tokens/estilos es un posible error → avisar.
 - Colores aplicados vía **colores semánticos**. Subtemas = modos de `Semantic-Color`, expuestos como `data-theme` (un hijo puede sobreescribir al padre).
@@ -81,13 +82,15 @@ Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vit
 
 ### Hitos activos (revisar al arrancar sesión — §11)
 
-- ✅ **Fase 4.5 — Hito de imágenes** (Instrucciones v2 §14) — **COMPLETADO 2026-07-23**.
-  21 imágenes únicas de Figma aplicadas (WebP, 3.4 MB) sobre los 15 módulos con imagen;
-  SHA-1 verificado contra `imageHash`; `build-storybook` OK. Detalle y notas de mecánica
-  en `PLAN.md` → Fase 4.5. Siguiente fase: **Page Templates** (empezar por Home).
+- ✅ **Hito de descarga de imágenes (raster)** (Instrucciones v2 §14) — **COMPLETADO 2026-07-23**.
+  Va **justo después de los iconos** (registrado como **Fase 2.5** en `PLAN.md`). 21 imágenes
+  únicas de Figma aplicadas (WebP, 3.4 MB) sobre los 15 módulos con imagen; SHA-1 verificado
+  contra `imageHash`; `build-storybook` OK. En este proyecto se ejecutó *a posteriori* (los
+  módulos ya estaban con placeholder); desde v2 el hito va tras los iconos. No aplica a SVG.
+  Detalle y notas de mecánica en `PLAN.md` → Fase 2.5. Siguiente fase: **Page Templates** (Home).
 
 ## 10. Notas / decisiones pendientes
 
 - **Brand Assets** contiene muchos logos de terceros (UFV, Riu, Regnum Christi, Accenture, BBVA, Santander, Microsoft, etc.) que parecen heredados de otra plantilla. Probablemente **fuera de alcance** para Joselito → confirmar con el equipo antes de programarlos. Sí son propios: `Brand Logo`, `Logo Grid`, set de `Icons`, `Icon Sizer`.
 - Páginas `WIP Ale` y `WIP Miguel` en Figma: trabajo en curso ajeno → ignorar.
-- **Borrado en la carpeta vinculada (§7.9):** `build-storybook` y a veces `git push` intentan hacer `unlink` dentro de la carpeta y fallan con *Operation not permitted*, lo que puede dejar un `.git/HEAD.lock` residual que bloquea commits/push. Solución aplicada: (1) para verificar, construir Storybook a un directorio fuera de la carpeta (`npm run build-storybook -- -o /tmp/sb_verify`); (2) si queda `.git/HEAD.lock`, pedir permiso con la herramienta de Cowork `allow_cowork_file_delete` (VM path `.git/HEAD.lock`), borrarlo y reintentar commit + push. Nota: los `git push` en este entorno pueden agotar el timeout aunque el push haya llegado — verificar con `git ls-remote origin refs/heads/main` antes de reintentar.
+- **Borrado en la carpeta vinculada (§7.9) — permiso proactivo:** el shell del sandbox restringe el borrado dentro de la carpeta y devuelve *Operation not permitted*. Muchas operaciones normales lo necesitan (`build-storybook` hace `unlink` en `storybook-static/`, resolver un `.git/HEAD.lock`, borrar temporales). Solución v2: **pedir el permiso de borrado al arrancar la sesión** con la herramienta de Cowork `allow_cowork_file_delete` (no esperar a que falle un `rm`). Con el permiso concedido, `build-storybook` normal funciona en la carpeta (escribe en `storybook-static/`, gitignored) — **ya no hace falta compilar a `/tmp`** (eso queda como plan B solo si no hay permiso). Si tras un `git push` queda un `.git/HEAD.lock` residual que bloquea el siguiente commit, borrarlo (permiso ya concedido) y reintentar. Nota: los `git push` pueden agotar el timeout aunque el push haya llegado — verificar con `git ls-remote origin refs/heads/main` antes de reintentar.

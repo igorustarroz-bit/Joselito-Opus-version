@@ -2,6 +2,7 @@
 
 Estado del plan de trabajo. Marca cada elemento: `[ ]` pendiente · `[~]` en progreso · `[x]` completado.
 Orden obligatorio: **Tokens → Componentes → Módulos → Page Templates**.
+Las imágenes raster se descargan **justo después de los iconos** (v2 §14) → ver **Fase 2.5**.
 
 Cada elemento, al programarse, se lee de Figma con `get_design_context`, se traduce a tokens/estructura/responsive sin cambiar el diseño, se documenta en Storybook y se verifica el render contra la captura.
 
@@ -38,6 +39,45 @@ Docs por token (Storybook): Intro · Demo · Tokens.
 - [x] **Brand Logo** (horizontal + isotipo, `currentColor`) — componente `BrandLogo` + doc
 - [~] **Logo Grid** — es diagrama de construcción (guías), no componente de uso; documentado como referencia
 - [ ] ⚠️ Logos de terceros (UFV, Riu, Accenture, BBVA...) — **confirmar alcance** antes de programar (probablemente fuera de alcance)
+
+## Fase 2.5 — Hito de descarga de imágenes (raster) · tras iconos — ✅ COMPLETADO
+
+> **Regla (Instrucciones v2 §14):** en cuanto están los **iconos**, se descargan de golpe
+> todas las imágenes **raster** del fichero, se optimizan a WebP y se dejan en
+> `src/assets/images`. Cada módulo cablea luego su imagen real al construirse (sin fase de
+> placeholder ni retrofit final). **No aplica a SVG** (esos van por el proceso estándar, §9 /
+> `docs/assets-workflow.md`). No se salta ni se pospone en silencio.
+
+Resuelto (2026-07-23). Todos los másters SÍ traían imágenes raster reales (incluidos Menu y
+SectionBanner, al contrario de lo anotado en sesiones previas). Se aplicaron **21 imágenes
+únicas** (3.4 MB en WebP) sobre los 15 módulos con imagen. Vía usada: **Claude in Chrome**
+(`download_assets` da las URLs → navegar a cada URL fuerza la descarga por `Content-Disposition:
+attachment` a `~/Downloads` → WebP `sharp` q82 → `src/assets/images/`). El SHA-1 de cada archivo
+coincide con el `imageHash` de Figma (verificado, 0 discrepancias). `build-storybook` OK.
+
+⚠️ **Nota de orden:** en este proyecto el hito se ejecutó *a posteriori* (tras la Fase 4, flujo
+v1) porque los módulos ya estaban construidos con placeholder. Desde **v2** el hito va **aquí**,
+justo tras los iconos, y los módulos ya nacen con su imagen real.
+
+Notas de mecánica (para futuras sesiones):
+- El sandbox NO tiene red a figma.com (curl→HTTP 000); la descarga real pasa por el navegador.
+- Chrome bloquea descargas por `blob`+`click()` sin gesto de usuario; **navegar** a la URL del
+  asset sí fuerza la descarga (attachment). Se usó `browser_batch` con varias `navigate`.
+- ⚠️ Bug a evitar: `new URL('../ruta', import.meta.url).pathname` deja `%20` literal cuando la
+  carpeta tiene espacios → escribe en ruta espuria. Resolver sin `.pathname` o con `decodeURIComponent`.
+- Con permiso de borrado concedido (Cowork `allow_cowork_file_delete`, pedido al arrancar),
+  `build-storybook` normal funciona en la carpeta; no hace falta compilar a un directorio externo.
+
+- [x] **1. Inventario** — másters revisados con `use_figma`; 21 imágenes únicas mapeadas por `imageHash`/slot.
+- [x] **2. Descargar** los bytes vía Claude in Chrome (navegación a las URLs de `download_assets`). Solo raster.
+- [x] **3. Optimizar** (raster→WebP q82 con `sharp`) y colocar en `src/assets/images/`.
+- [x] **4. Cablear** cada imagen en su módulo (default de prop / `DEFAULT_ITEMS`, vía `AspectRatio`) + `build-storybook` (0 errores).
+- [x] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
+
+Módulos cableados: SectionBanner, Hero (+badge del Toast), SectionHero, SectionHeader (3:4/1:1),
+ContentImageOnly (2), ContentTextImage, Timeline (H/V), Menu (cards + featured), CardsShowcase,
+CardsCategories (5), CardsGallery (3:4/1:1), CardsProductCarousel, CardsLinks, CardsAccordion (3),
+Toast. (La ilustración del footer ya estaba aplicada de antes.)
 
 ## Fase 3 — Componentes
 
@@ -102,44 +142,10 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
 
-## Fase 4.5 — Hito de imágenes (aplicar a TODOS los módulos) — ✅ COMPLETADO
+## Fase 4.5 — (movido) → ver Fase 2.5
 
-> **Regla (Instrucciones v2 §14 «Hito de imágenes»):** cerrada la Fase 4 (Módulos),
-> Claude DEBE proponer al usuario bajar las imágenes reales de Figma y aplicarlas de
-> golpe sobre el componente `AspectRatio`. **No se salta ni se pospone en silencio**:
-> es requisito antes de dar por cerrada la fase de módulos y de empezar los Page
-> Templates. (El usuario puede pedir imágenes sueltas antes.)
-
-Resuelto (2026-07-23). Todos los másters SÍ traían imágenes raster reales (incluidos Menu
-y SectionBanner, al contrario de lo anotado en sesiones previas). Se aplicaron **21 imágenes
-únicas** (3.4 MB en WebP) sobre los 15 módulos con imagen. Vía usada: **Claude in Chrome**
-(`download_assets` da las URLs → el navegador fuerza la descarga por `Content-Disposition:
-attachment` a `~/Downloads` → conversión a WebP `sharp` q82 → `src/assets/images/`). El SHA-1
-de cada archivo coincide con el `imageHash` de Figma (verificado, 0 discrepancias).
-`build-storybook` OK (0 errores, 22 WebP emitidos).
-
-Notas de mecánica (para futuras sesiones):
-- El sandbox NO tiene red a figma.com (curl→HTTP 000); la descarga real pasa por el navegador.
-- Chrome bloquea descargas por `blob`+`click()` sin gesto de usuario; **navegar** a la URL del
-  asset sí fuerza la descarga (attachment). Se usó `browser_batch` con varias `navigate`.
-- ⚠️ Bug a evitar: `new URL('../ruta', import.meta.url).pathname` deja `%20` literal cuando la
-  carpeta tiene espacios ("joselito opus") → escribe en una ruta espuria. Resolver rutas sin
-  `.pathname` o con `decodeURIComponent`.
-- `build-storybook` normal funciona una vez habilitado el borrado en la carpeta (Cowork
-  `allow_cowork_file_delete`); ya no hace falta compilar a un directorio externo.
-
-- [x] **1. Inventario** — 14 másters revisados con `use_figma`; 21 imágenes únicas mapeadas por
-  `imageHash`/slot. Ningún máster se queda sin asset real.
-- [x] **2. Descargar** los bytes vía Claude in Chrome (navegación a las URLs de `download_assets`).
-- [x] **3. Optimizar** (raster→WebP q82 con `sharp`) y colocar en `src/assets/images/`.
-- [x] **4. Cablear** cada imagen en su módulo (default de prop / `DEFAULT_ITEMS`, vía
-  `AspectRatio`) y verificar con `build-storybook` (0 errores).
-- [x] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
-
-Módulos cableados: SectionBanner, Hero (+badge del Toast), SectionHero, SectionHeader (3:4/1:1),
-ContentImageOnly (2), ContentTextImage, Timeline (H/V), Menu (cards + featured), CardsShowcase,
-CardsCategories (5), CardsGallery (3:4/1:1), CardsProductCarousel, CardsLinks, CardsAccordion (3),
-Toast. (La ilustración del footer ya estaba aplicada de antes.)
+El hito de imágenes pasó a ejecutarse **tras los iconos** (Instrucciones v2 §14). Su detalle,
+checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (2026-07-23).
 
 ## Fase 5 — Page Templates (SPRINT 1)
 
@@ -153,5 +159,5 @@ Toast. (La ilustración del footer ya estaba aplicada de antes.)
 ---
 
 ### Próximo paso sugerido
-Fase 4 (Módulos) y Fase 4.5 (Hito de imágenes) completas. Siguiente: **Fase 5 — Page
+Fases 1–4 y el Hito de descarga de imágenes (Fase 2.5) completas. Siguiente: **Fase 5 — Page
 Templates**, empezando por **Home** (composición de los módulos ya construidos).
