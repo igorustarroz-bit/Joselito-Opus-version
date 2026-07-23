@@ -79,6 +79,11 @@ Comandos: `npm run dev` (Vite), `npm run storybook` (docs, :6006), `npm run buil
 
 Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vite + Storybook build OK), acceso a Figma validado, plan generado.
 
+**⚠️ Hito activo — Fase 4.5 (Imágenes):** la Fase 4 (Módulos) está completa. Antes de
+empezar los Page Templates, Claude DEBE proponer al usuario aplicar las imágenes reales de
+Figma a todos los módulos (§13 «Imágenes»), sobre el componente `AspectRatio`. Este paso es
+fácil de olvidar: está trazado como ítem propio en `PLAN.md` (Fase 4.5) — no lo saltes.
+
 ## 10. Notas / decisiones pendientes
 
 - **Brand Assets** contiene muchos logos de terceros (UFV, Riu, Regnum Christi, Accenture, BBVA, Santander, Microsoft, etc.) que parecen heredados de otra plantilla. Probablemente **fuera de alcance** para Joselito → confirmar con el equipo antes de programarlos. Sí son propios: `Brand Logo`, `Logo Grid`, set de `Icons`, `Icon Sizer`.

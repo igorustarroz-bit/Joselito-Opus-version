@@ -102,6 +102,24 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
 
+## Fase 4.5 — Imágenes (hito: aplicar a TODOS los módulos)
+
+> **Regla (§13 «Imágenes»):** una vez construidos todos los módulos de la Fase 4,
+> Claude DEBE proponer al usuario bajar las imágenes reales de Figma y aplicarlas de
+> golpe sobre el componente `AspectRatio`. Este hito **no se salta**: es requisito
+> antes de dar por cerrada la fase de módulos y de empezar los Page Templates.
+> (El usuario puede pedir algunas imágenes antes si lo desea.)
+
+- [ ] **Proponer y ejecutar la aplicación de imágenes a todos los módulos.**
+  Estado actual: solo `footer-illustration.webp` está aplicada; el resto de módulos
+  con `AspectRatio` usan placeholder (SectionBanner, Hero, SectionHero, SectionHeader,
+  ContentImageOnly, ContentTextImage, Timeline, Menu, CardsShowcase, CardsCategories,
+  CardsGallery/Product…). Flujo en `docs/assets-workflow.md`. El sandbox NO tiene red a
+  figma.com → ruta recomendada: **Claude in Chrome** (fetch → Descargas → optimizar a
+  WebP → `src/assets/images` → cablear cada módulo). Alternativa local:
+  `npm run figma:asset` (requiere `figma-token.txt`, hoy ausente). Nota: algunos másters
+  no traen asset real (p. ej. Menu, SectionBanner) → seguirán con placeholder.
+
 ## Fase 5 — Page Templates (SPRINT 1)
 
 - [ ] Home
@@ -114,4 +132,6 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 ---
 
 ### Próximo paso sugerido
-Convertir las fuentes y hacer el commit inicial del scaffold; después empezar la Fase 1 por **Primitives**.
+Fase 4 (Módulos) completa. **Antes de los Page Templates**, ejecutar la Fase 4.5:
+proponer al usuario aplicar las imágenes reales a todos los módulos (§13). Después,
+Fase 5 empezando por **Home**.
