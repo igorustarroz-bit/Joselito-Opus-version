@@ -47,10 +47,18 @@ const preview = {
   },
   decorators: [
     (Story, context) => {
-      const theme = context.globals.theme;
+      // El toolbar manda cuando el usuario elige un subtema concreto; si está en
+      // "default", se aplica el default del módulo (parameters.defaultTheme).
+      // Así el dropdown cambia el módulo con normalidad, pero cada uno abre en su
+      // subtema por defecto. (Salvedad: para volver a Light-White en un módulo con
+      // default oscuro, no basta elegir "default"; ese caso queda cubierto por el
+      // propio default del módulo.)
+      const toolbar = context.globals.theme;
+      const fallback = context.parameters.defaultTheme || 'default';
+      const effective = toolbar && toolbar !== 'default' ? toolbar : fallback;
       return (
         <div
-          data-theme={theme === 'default' ? undefined : theme}
+          data-theme={effective === 'default' ? undefined : effective}
           style={{ background: 'var(--bg-base)', color: 'var(--text-base)', padding: 16, minHeight: '100%' }}
         >
           <Story />

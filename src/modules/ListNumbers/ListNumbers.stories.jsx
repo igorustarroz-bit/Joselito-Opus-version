@@ -3,8 +3,8 @@ import ListNumbers from './ListNumbers.jsx';
 const meta = {
   title: 'Módulos/List · Numbers',
   component: ListNumbers,
-  globals: { theme: 'light-grey' }, // el módulo fija este subtema en su raíz
-  parameters: { layout: 'fullscreen' },
+  // Subtema por defecto (overridable con el toolbar).
+  parameters: { layout: 'fullscreen', defaultTheme: 'light-grey' },
 };
 export default meta;
 

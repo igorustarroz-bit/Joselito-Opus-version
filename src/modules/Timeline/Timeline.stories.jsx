@@ -19,28 +19,24 @@ export default meta;
 
 /** Desktop · imagen horizontal (fondo rojo). */
 export const Horizontal = {
-  globals: { theme: 'dark-red-primary' },
-  parameters: { viewport: { value: 'xl' } },
+  parameters: { viewport: { value: 'xl' }, defaultTheme: 'dark-red-primary' },
 };
 
 /** Desktop · imagen vertical (fondo rojo). */
 export const Vertical = {
   args: { image: 'vertical' },
-  globals: { theme: 'dark-red-primary' },
-  parameters: { viewport: { value: 'xl' } },
+  parameters: { viewport: { value: 'xl' }, defaultTheme: 'dark-red-primary' },
 };
 
 /** Desktop · sin imagen (fondo oscuro). */
 export const SinImagen = {
   name: 'Sin imagen',
   args: { image: 'none' },
-  globals: { theme: 'dark-black-neutral' },
-  parameters: { viewport: { value: 'xl' } },
+  parameters: { viewport: { value: 'xl' }, defaultTheme: 'dark-black-neutral' },
 };
 
 /** Mobile · imagen horizontal. */
 export const Mobile = {
   args: { image: 'horizontal' },
-  globals: { theme: 'dark-red-primary' },
-  parameters: { viewport: { value: 'xs' } },
+  parameters: { viewport: { value: 'xs' }, defaultTheme: 'dark-red-primary' },
 };
