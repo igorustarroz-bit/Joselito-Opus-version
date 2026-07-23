@@ -1,0 +1,93 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SectionBanner.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Banners / Section banner
+
+Banner destacado de sección a 100% de ancho. Máster de Figma: `Banners / Section banner`
+(`58182:4380`), variantes **Desktop** (`58182:4378`, 1440) y **Mobile** (`58182:4379`, 390).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Cabecera** — componente `Title`: antetítulo (`Body/04`) a la izquierda y enlace
+   opcional "Ver todos" (`Body/03`) con chevron `CaretRight` a la derecha.
+2. **Banner** — imagen a sangre con un velo oscuro (`rgba(0,0,0,0.2)`).
+3. **Tarjeta** — sobre la imagen (desktop) o debajo (mobile): título (`SangBleu Kingdom`,
+   `Title/02`), cuerpo (`Body/03`) y botón `UI02-Button` tipo *terciary*.
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens: `--bg-base`,
+`--text-base`, `--text-neutral-2`, `--stroke-neutral-3`); un hijo puede sobrescribir al
+padre. Prop opcional `theme` para fijarlo en producción.
+
+## Comportamiento
+
+- **Desktop (≥768px):** banner de **720px** de alto; la imagen ocupa todo el fondo y la
+  **tarjeta blanca** (372px) flota a la derecha con `padding` 32 y el contenido repartido
+  arriba/abajo (`space-between`).
+- **Mobile:** apilado — imagen **4:3**, y debajo el título, el cuerpo y el botón (sin
+  tarjeta blanca ni velo de contenedor).
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Mobile} />
+<Canvas of={Stories.SinEnlace} />
+<Canvas of={Stories.ContenidoPersonalizado} />
+
+## Variantes y tamaños
+
+Dos variantes de máster (Desktop / Mobile), resueltas con un único breakpoint (768px).
+El botón adopta tamaño **M** (56px) en desktop y **S** (48px) en mobile, según el máster.
+
+> **Nota de máster:** el alto del banner (720px), el ancho de la tarjeta (372px), los
+> paddings (40 del banner, 32 de la tarjeta) y el velo `rgba(0,0,0,0.2)` van literales en
+> el máster (no ligados a variable). Los márgenes laterales se toman de `--grid-wrapper`.
+> La imagen se muestra como *placeholder* (`--bg-neutral-3`) mientras no se pase `image`.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo del módulo / tarjeta | `--bg-base` |
+| Línea inferior | `--stroke-neutral-3` |
+| Placeholder de imagen | `--bg-neutral-3` |
+| Título | `--text-base` · `.ts-title-2` |
+| Cuerpo | `--text-neutral-2` · `.ts-body-3` |
+| Cabecera | tokens de `Title` (`.ts-body-4`, `.ts-body-3`) |
+| Botón | tokens de `UI02-Button` (*terciary*) |
+| Márgenes laterales | `--grid-wrapper` |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `Experiencias y eventos` | Antetítulo de la cabecera (`''`/`null` = oculta) |
+| `linkText` | `string` | `Ver todos` | Texto del enlace de cabecera (`''` = sin enlace) |
+| `href` | `string` | — | Destino del enlace de cabecera |
+| `onLinkClick` | `function` | — | Callback del enlace (si no hay `href`) |
+| `title` | `string` | `Eventos Privados\ny Bodas` | Título de la tarjeta (respeta `\n`) |
+| `body` | `string` | copy del máster | Cuerpo de la tarjeta |
+| `ctaText` | `string` | `SABER MÁS` | Texto del botón (`''`/`null` = oculto) |
+| `onCtaClick` | `function` | — | Callback del botón |
+| `image` | `string` | — | URL de la imagen (si falta, placeholder) |
+| `alt` | `string` | `''` | Texto alternativo de la imagen |
+| `theme` | `string` | — | Fija el subtema (`data-theme`); si no, hereda |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Antetítulo de cabecera como encabezado de sección (`<h2>` vía `Title`) y título de la
+  tarjeta como `<h3>`.
+- La imagen es decorativa (`aria-hidden`); el velo no captura eventos.
+- El enlace de cabecera y el botón exponen foco visible desde sus componentes.
+
+## Componentes relacionados
+
+`Title`, `UI02-Button`, `Aspect Ratio`, `Cards / Links`, `Content / Text + Image`.
