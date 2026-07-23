@@ -1,0 +1,86 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './List.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · List
+
+Lista de características a **100% de ancho**: un título centrado y una serie de
+ítems, cada uno con título, descripción y un número grande en itálica.
+
+Máster de Figma: `List` (`58468:60752`), variantes **Desktop** (1440) y **Mobile** (390).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Título** de sección (`SangBleu Kingdom`, `Title/04`), centrado.
+2. **Ítems** (2–4 recomendado), cada uno con:
+   - **Título** de ítem (`SangBleu Kingdom`, 24px).
+   - **Descripción** (`Body/03`, `--text-neutral-1`).
+   - **Número** grande en itálica (`SangBleu Kingdom Italic`, 40px, `--text-neutral-3`), autogenerado (01, 02, …).
+3. **Divisores** entre ítems: verticales en desktop, horizontales en mobile (`--stroke-neutral-4`).
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens semánticos);
+un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop (≥768px):** los ítems se reparten en **columnas** (flex, máx. 354px cada
+  una) separadas por **líneas verticales**; el número se ancla abajo (`space-between`,
+  altura mínima 240px). Borde inferior en el módulo.
+- **Mobile:** los ítems se **apilan** y se separan con **líneas horizontales**; el
+  número va debajo de cada texto.
+- Breakpoint en **M-768**; intermedios inferidos. Espaciados por tokens responsive
+  `--sp-*`, por lo que se ajustan solos por breakpoint.
+
+<Canvas of={Stories.Mobile} />
+<Canvas of={Stories.TresItems} />
+
+## Variantes y tamaños
+
+El número de ítems es flexible (prop `items`). En el máster hay 3 o 4 (prop
+`extraItem`); aquí se controla por la longitud del array.
+
+> **Nota de máster:** el número aparece dentro del flujo del primer ítem y como
+> hermano en el resto (inconsistencia del máster); aquí se normaliza a
+> "texto → número" en todos. Los paddings del título (120/60 desktop, 60/20 mobile)
+> están hardcodeados en el máster; el resto de espaciados usa tokens responsive.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Título / título de ítem | `--text-base` |
+| Descripción | `--text-neutral-1` |
+| Número | `--text-neutral-3` |
+| Divisores | `--stroke-neutral-4` |
+| Borde inferior (desktop) | `--stroke-neutral-3` |
+| Márgenes laterales | `--grid-wrapper` |
+| Espaciados verticales | `--sp-5`, `--sp-8`, `--sp-10`, `--sp-13` |
+| Tipografías | `.ts-title-4`, `.ts-body-3`, `--font-family-title` (ítems y número) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string \| null` | `This is a title` | Título de sección (`null`/`''` = oculto) |
+| `items` | `{ title, description }[]` | 4 ítems del máster | Lista de características |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de sección como `<h2>`; títulos de ítem como `<h3>`.
+- El número es decorativo (`aria-hidden`), no aporta información esencial.
+- Contraste garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`Content / Title`, `List / Timeline`, `List / Numbers`, `List / Archive table`.

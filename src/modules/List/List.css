@@ -1,0 +1,103 @@
+/* Módulo List — lista de características (máster Figma 58468:60752).
+   Título centrado + ítems (título / descripción / número itálico).
+   Desktop: columnas con divisores verticales. Mobile: apilado con líneas.
+   Espaciados con tokens responsive --sp-* y --grid-wrapper; paddings del título
+   son fijos (hardcodeados en el máster). Breakpoint desktop: 768px. */
+
+.jl-list {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.jl-list * { box-sizing: border-box; }
+
+/* ---- Título ---- */
+.jl-list__head {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 0;
+}
+.jl-list__title {
+  color: var(--text-base);
+  text-align: center;
+  max-width: 652px;
+  margin: 0;
+}
+
+/* ---- Ítems ---- */
+.jl-list__items {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-13) var(--grid-wrapper);
+}
+.jl-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-5); /* 20 */
+  padding: var(--sp-10) 0; /* 40 mobile */
+}
+.jl-list__item + .jl-list__item {
+  border-top: 1px solid var(--stroke-neutral-4);
+}
+.jl-list__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8); /* 24 mobile → 40 desktop */
+  width: 100%;
+}
+.jl-list__item-title {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-title);
+  color: var(--text-base);
+  margin: 0;
+}
+.jl-list__desc {
+  color: var(--text-neutral-1);
+  margin: 0;
+}
+.jl-list__num {
+  font-family: var(--font-family-title);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -0.5px;
+  color: var(--text-neutral-3);
+}
+
+/* ==========================================================================
+   Desktop (>= 768px): ítems en columnas con divisores verticales
+   ========================================================================== */
+@media (min-width: 768px) {
+  .jl-list {
+    border-bottom: 1px solid var(--stroke-neutral-3);
+  }
+  .jl-list__head {
+    padding: 120px 60px 0;
+  }
+  .jl-list__items {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .jl-list__item {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 354px;
+    min-height: 240px;
+    justify-content: space-between;
+    padding: 0 var(--sp-8); /* 40 */
+  }
+  .jl-list__item + .jl-list__item {
+    border-top: none;
+    border-left: 1px solid var(--stroke-neutral-4);
+  }
+}
