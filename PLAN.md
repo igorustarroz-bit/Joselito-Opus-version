@@ -94,7 +94,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] List / Archive table — máster `58418:53062` (Desktop/Mobile · Default/Hover). Título + entradas fecha | titular (SangBleu 24px), líneas divisorias; desktop fila, mobile apilado; filas enlazables con realce hover. `build-storybook` OK + push. Miniatura del estado Hover pendiente. Pendiente revisión visual en Pages
 - [x] Cards / Links — máster `58163:40143` (Desktop/Mobile). Cabecera (Title/04) + fila de CardLink (imagen 3:4 con overlay). Reutiliza Card Link. `build-storybook` OK + push. Pendiente revisión visual en Pages
 - [x] Cards / Gallery — máster `58163:40311` (Desktop/Mobile · default/expanded). Cabecera + galería de CardProduct con ratio alterno 3:4/1:1 (escalonado); desktop slider horizontal, mobile 2 columnas. Reutiliza Card Product. `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [ ] Cards / Product carousel — `id 58163:83548`
+- [x] Cards / Product carousel — máster `58163:83548` (Desktop/Mobile). Cabecera (antetítulo + "Explorar todos") + carrusel de CardProduct con badge/chips/estrellas/CTA; desktop 3 centradas, mobile scroll horizontal. Reutiliza Card Product. `build-storybook` OK + push. Separación desktop aproximada. Pendiente revisión en Pages
 - [ ] Cards / Showcase — `id 58182:4396`
 - [ ] Cards / Categories — `id 58182:4401`
 - [ ] Cards / Accordion — `id 58182:24099`

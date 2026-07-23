@@ -1,0 +1,72 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsProductCarousel.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Product carousel
+
+Cabecera + **carrusel** de fichas de producto a 100% de ancho. Máster de Figma:
+`Cards / Product carousel` (`58163:83548`), variantes **Desktop** / **Mobile** / **Mobile 2**.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Cabecera** — antetítulo (`Body/04`) a la izquierda y enlace "Explorar todos"
+   (`Body/03`, `--text-neutral-2`) con chevron a la derecha.
+2. **Carrusel** — fichas `CardProduct` con **badge** ("TOP VENTAS"), título `Title/02`,
+   precio, dirección, **chips de ubicación** (Button secondary), **estrellas** y enlace
+   "Descubrir".
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme`; un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop (≥768px):** tres fichas (329px) centradas.
+- **Mobile:** carrusel con **scroll horizontal** (fichas de 260px, scroll-snap).
+- El enlace "Explorar todos" es un `<a>`.
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+Número de fichas flexible (prop `items`); cada ficha admite badge, ubicaciones,
+estrellas y enlace.
+
+> **Nota de máster:** en desktop el máster reparte 3 fichas con mucho hueco; aquí se
+> implementa como carrusel con separación uniforme y scroll (aproximado).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Antetítulo | `--text-base` |
+| Enlace | `--text-neutral-2` |
+| Fichas | tokens de `Card Product` (badge, chips `Button`, `.ts-title-2`, Action-Link) |
+| Tipografías cabecera | `.ts-body-4`, `.ts-body-3` |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `Nuestros chefs` | Antetítulo de la cabecera |
+| `link` / `linkHref` | `string` | `Explorar todos` / `#` | Enlace de la cabecera |
+| `items` | `CardProduct[]` | 3 fichas | Fichas del carrusel |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- El enlace de cabecera y los de cada ficha son `<a>` con foco visible.
+- Las fichas incluyen badge, chips y estrellas; el contraste lo garantizan los tokens.
+
+## Componentes relacionados
+
+`Card Product`, `Icon`, `Cards / Gallery`, `Cards / Showcase`.
