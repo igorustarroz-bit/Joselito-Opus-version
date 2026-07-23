@@ -17,9 +17,11 @@
   --jl-year-faded: rgba(179, 179, 179, 0.25);
 }
 .jl-timeline * { box-sizing: border-box; }
+/* El fondo lo da --bg-base, que bajo data-theme="dark-red-primary" ya es el rojo
+   de marca (#e23f36) y bajo dark-black-neutral es oscuro. Solo cambia el color de
+   los años atenuados según la variante. */
 .jl-timeline--horizontal,
 .jl-timeline--vertical {
-  background: var(--bg-accent-base);
   --jl-year-faded: rgba(0, 0, 0, 0.30);
 }
 
