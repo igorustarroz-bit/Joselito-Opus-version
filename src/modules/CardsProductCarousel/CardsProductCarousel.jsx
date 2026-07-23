@@ -1,6 +1,7 @@
 import './CardsProductCarousel.css';
 import CardProduct from '../../components/CardProduct/CardProduct.jsx';
 import Icon from '../../components/Icon/Icon.jsx';
+import productImg from '../../assets/images/product-portrait.webp';
 
 /**
  * Módulo Cards / Product carousel — cabecera + carrusel de fichas de producto.
@@ -22,6 +23,7 @@ const DEFAULT_ITEMS = Array.from({ length: 3 }).map(() => ({
   stars: 3,
   cta: 'Descubrir',
   ratio: '3:4',
+  image: productImg,
 }));
 
 export default function CardsProductCarousel({

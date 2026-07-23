@@ -1,5 +1,6 @@
 import './SectionHero.css';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import sectionHeroImg from '../../assets/images/section-hero.webp';
 
 /**
  * Módulo Hero / Section hero — cabecera de sección a 100% de ancho.
@@ -27,7 +28,7 @@ export default function SectionHero({
   eyebrow = 'COLECCIONES JOSELITO',
   title = 'Selecciones exclusivas para los paladares más exigentes',
   layout = 'full-bleed',
-  image,
+  image = sectionHeroImg,
   alt = '',
   className = '',
   ...rest

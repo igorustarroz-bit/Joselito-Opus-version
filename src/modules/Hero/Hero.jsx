@@ -2,6 +2,8 @@ import './Hero.css';
 import Navigation from '../Navigation/Navigation.jsx';
 import Button from '../../components/Button/Button.jsx';
 import Toast from '../Toast/Toast.jsx';
+import heroBg from '../../assets/images/feature-portrait.webp';
+import toastImg from '../../assets/images/generic-filler.webp';
 
 /**
  * Módulo Hero / Homepage hero — contenedor a 100% de ancho y alto grande.
@@ -16,10 +18,11 @@ export default function Hero({
   eyebrow = 'DICTUM CRAS ERAT',
   title = 'Lorem ipsum dolor sit amet consectetur',
   cta = 'LOREM IPSUM',
-  image,
+  image = heroBg,
   toast = {
     title: 'Jaime Hayon x Joselito',
     text: 'Descubre la nueva colección Joselito Premium',
+    image: toastImg,
   },
   dots = 3,
   activeDot = 0,

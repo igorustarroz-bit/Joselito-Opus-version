@@ -1,5 +1,8 @@
 import './CardsAccordion.css';
 import Button from '../../components/Button/Button.jsx';
+import photo1 from '../../assets/images/accordion-1.webp';
+import photo2 from '../../assets/images/showcase.webp';
+import photo3 from '../../assets/images/accordion-2.webp';
 
 /**
  * Módulo Cards / Accordion — máster Figma 58182:24099. Subtema oscuro.
@@ -39,7 +42,7 @@ export default function CardsAccordion({
   attributes = ['Complejidad', 'Equilibrio', 'Dulzura'],
   duration = '4 a 6 años de curación',
   cta = 'Descubrir',
-  images = [],
+  images = [photo1, photo2, photo3],
   theme,
   className = '',
   ...rest

@@ -1,6 +1,7 @@
 import './ContentTextImage.css';
 import Button from '../../components/Button/Button.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import textImg from '../../assets/images/generic-filler.webp';
 
 /**
  * Módulo Content / Text + Image — bloque de texto + imagen, a 100% de ancho.
@@ -15,7 +16,7 @@ export default function ContentTextImage({
   text = 'Productos procedentes de cerdos criados en libertad y alimentados de manera natural, su carne es rica en ácido oleico, un tipo de grasa monoinsaturada beneficiosa para el corazón.',
   cta = 'Button',
   footnote,
-  image,
+  image = textImg,
   imageAlt = '',
   className = '',
   ...rest

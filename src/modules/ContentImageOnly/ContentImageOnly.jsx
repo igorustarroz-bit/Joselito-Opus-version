@@ -1,5 +1,7 @@
 import './ContentImageOnly.css';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import imgA from '../../assets/images/content-image-a.webp';
+import imgB from '../../assets/images/content-image-b.webp';
 
 /**
  * Módulo Content / Image only — bloque multimedia a 100% de ancho.
@@ -16,8 +18,8 @@ export default function ContentImageOnly({
   count = 1,
   ratio = '16:9',
   video = false,
-  image,
-  image2,
+  image = imgA,
+  image2 = imgB,
   alt = '',
   className = '',
   ...rest

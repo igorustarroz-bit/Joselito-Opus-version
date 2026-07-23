@@ -1,6 +1,7 @@
 import './SectionBanner.css';
 import Title from '../../components/Title/Title.jsx';
 import Button from '../../components/Button/Button.jsx';
+import bannerImg from '../../assets/images/banner-section.webp';
 
 /**
  * Módulo Banners / Section banner — máster Figma `58182:4380`
@@ -34,7 +35,7 @@ export default function SectionBanner({
   body = DEFAULT_BODY,
   ctaText = 'SABER MÁS',
   onCtaClick,
-  image,
+  image = bannerImg,
   alt = '',
   theme,
   className = '',

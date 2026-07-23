@@ -1,5 +1,6 @@
 import './CardsLinks.css';
 import CardLink from '../../components/CardLink/CardLink.jsx';
+import linkImg from '../../assets/images/feature-portrait.webp';
 
 /**
  * Módulo Cards / Links — cabecera + fila de tarjetas-enlace. Máster Figma
@@ -12,8 +13,8 @@ import CardLink from '../../components/CardLink/CardLink.jsx';
  * Nota de máster: paddings (120/60 desktop, 60/20 mobile) hardcodeados en el máster.
  */
 const DEFAULT_ITEMS = [
-  { title: 'Jamón Gran Reserva', subtitle: 'Desde 380€' },
-  { title: 'Jamón Gran Reserva', subtitle: 'Desde 380€' },
+  { title: 'Jamón Gran Reserva', subtitle: 'Desde 380€', image: linkImg },
+  { title: 'Jamón Gran Reserva', subtitle: 'Desde 380€', image: linkImg },
 ];
 
 export default function CardsLinks({

@@ -3,6 +3,8 @@ import './SectionHeader.css';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon.jsx';
 import Tag from '../../components/Tag/Tag.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import portraitImg from '../../assets/images/section-header-portrait.webp';
+import squareImg from '../../assets/images/section-header-square.webp';
 
 /**
  * Módulo Hero / Section header — cabecera de sección a 100% de ancho, pensado
@@ -46,6 +48,7 @@ export default function SectionHeader({
   ...rest
 }) {
   const lines = String(title).split('\n');
+  const imgSrc = image ?? (type === 'big' ? portraitImg : squareImg);
   return (
     <section
       className={`jl-sheader jl-sheader--${type} ${className}`.trim()}
@@ -92,7 +95,7 @@ export default function SectionHeader({
 
       <div className="jl-sheader__media">
         <AspectRatio ratio={type === 'big' ? '3:4' : '1:1'} className="jl-sheader__ar">
-          {image ? <img src={image} alt={alt} /> : null}
+          {imgSrc ? <img src={imgSrc} alt={alt} /> : null}
         </AspectRatio>
       </div>
     </section>

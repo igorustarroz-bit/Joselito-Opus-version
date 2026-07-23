@@ -1,11 +1,12 @@
 import './Toast.css';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import toastImg from '../../assets/images/generic-filler.webp';
 
 /**
  * Módulo Toast — aviso compacto: imagen cuadrada (76px) + título (Body/02) y
  * descripción (Body/02, neutral-2). Elevación ligera para flotar sobre el contenido.
  */
-export default function Toast({ title = 'Jaime Hayon x Joselito', text = 'Descubre la nueva colección Joselito Premium', image, className = '', ...rest }) {
+export default function Toast({ title = 'Jaime Hayon x Joselito', text = 'Descubre la nueva colección Joselito Premium', image = toastImg, className = '', ...rest }) {
   return (
     <div className={`jl-toast ${className}`} role="status" {...rest}>
       <div className="jl-toast__media">

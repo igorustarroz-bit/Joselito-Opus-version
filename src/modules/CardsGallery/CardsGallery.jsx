@@ -1,5 +1,7 @@
 import './CardsGallery.css';
 import CardProduct from '../../components/CardProduct/CardProduct.jsx';
+import portraitImg from '../../assets/images/product-portrait.webp';
+import squareImg from '../../assets/images/gallery-square.webp';
 
 /**
  * Módulo Cards / Gallery — cabecera + galería/slider de fichas de producto.
@@ -14,10 +16,10 @@ import CardProduct from '../../components/CardProduct/CardProduct.jsx';
  * "expanded" del máster (más filas visibles) se cubre añadiendo más `items`.
  */
 const DEFAULT_ITEMS = [
-  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir' },
-  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir' },
-  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir' },
-  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir' },
+  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir', image: portraitImg },
+  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir', image: squareImg },
+  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir', image: portraitImg },
+  { title: 'Jamón Gran Reserva', price: 'Desde 380€', address: 'Calle Velázquez, 30', cta: 'Descubrir', image: squareImg },
 ];
 
 export default function CardsGallery({

@@ -1,6 +1,11 @@
 import './CardsCategories.css';
 import Icon from '../../components/Icon/Icon.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import cat1 from '../../assets/images/category-1.webp';
+import cat2 from '../../assets/images/category-2.webp';
+import cat3 from '../../assets/images/category-3.webp';
+import cat4 from '../../assets/images/category-4.webp';
+import catDefault from '../../assets/images/category-default.webp';
 
 /**
  * Módulo Cards / Categories — feed de redes sociales con miniaturas escalonadas.
@@ -16,11 +21,11 @@ import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
  * Reutiliza Icon y AspectRatio.
  */
 const DEFAULT_ITEMS = [
-  { handle: '@neonflight', ratio: '3:4' },
-  { handle: '@autecuisine', ratio: '3:2' },
-  { handle: '@jamonjoselito', ratio: '3:4' },
-  { handle: '@elbulli', ratio: '3:2' },
-  { handle: '@jamonjoselito', ratio: '3:4' },
+  { handle: '@neonflight', ratio: '3:4', image: cat1 },
+  { handle: '@autecuisine', ratio: '3:2', image: cat2 },
+  { handle: '@jamonjoselito', ratio: '3:4', image: cat3 },
+  { handle: '@elbulli', ratio: '3:2', image: cat4 },
+  { handle: '@jamonjoselito', ratio: '3:4', image: catDefault },
 ];
 const DEFAULT_SOCIALS = ['XLogo', 'FacebookLogo', 'InstagramLogo', 'LinkedinLogo', 'TiktokLogo'];
 

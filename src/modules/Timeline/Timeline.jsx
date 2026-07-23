@@ -1,6 +1,8 @@
 import './Timeline.css';
 import ButtonIcon from '../../components/ButtonIcon/ButtonIcon.jsx';
 import Icon from '../../components/Icon/Icon.jsx';
+import timelineH from '../../assets/images/timeline-1.webp';
+import timelineV from '../../assets/images/timeline-2.webp';
 
 /**
  * Módulo List / Timeline — banda a 100% de ancho con línea temporal. Máster Figma
@@ -42,6 +44,7 @@ export default function Timeline({
   className = '',
   ...rest
 }) {
+  const mediaSrc = imageSrc ?? (image === 'vertical' ? timelineV : timelineH);
   return (
     <section
       className={`jl-timeline jl-timeline--${image} ${className}`.trim()}
@@ -71,7 +74,7 @@ export default function Timeline({
         </div>
         {image !== 'none' && (
           <div className={`jl-timeline__media jl-timeline__media--${image}`}>
-            {imageSrc ? <img src={imageSrc} alt={alt} /> : null}
+            {mediaSrc ? <img src={mediaSrc} alt={alt} /> : null}
           </div>
         )}
       </div>

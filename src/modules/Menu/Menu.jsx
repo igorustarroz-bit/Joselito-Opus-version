@@ -4,6 +4,8 @@ import Icon from '../../components/Icon/Icon.jsx';
 import BrandLogo from '../../components/BrandLogo/BrandLogo.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 import ActionLink from '../../components/ActionLink/ActionLink.jsx';
+import cardImg from '../../assets/images/generic-filler.webp';
+import featuredImg from '../../assets/images/menu-feature.webp';
 
 /* Contenido real de los másters de Figma (Menu, 58182:4350).
    - Desktop/Product (58182:4348): lista de productos + imagen + destacado.
@@ -36,10 +38,10 @@ const PRODUCT = {
 
 /* Tarjetas del panel About en desktop (máster Desktop/About). */
 const ABOUT_CARDS = [
-  { label: 'Joselito Lab' },
-  { label: 'Colecciones Joselito Premium' },
-  { label: 'Tiendas y Restaurantes' },
-  { label: 'Experiencias y Eventos Privados' },
+  { label: 'Joselito Lab', image: cardImg },
+  { label: 'Colecciones Joselito Premium', image: cardImg },
+  { label: 'Tiendas y Restaurantes', image: cardImg },
+  { label: 'Experiencias y Eventos Privados', image: cardImg },
 ];
 
 /* Secciones del cajón mobile (máster Mobile). PRODUCTOS despliega la lista de
@@ -53,10 +55,10 @@ const SECTIONS = [
     label: 'EXCELENCIA',
     kind: 'about',
     cards: [
-      { label: 'Sostenibilidad' },
-      { label: 'Sostenibilidad' },
-      { label: 'Sostenibilidad' },
-      { label: 'Sostenibilidad' },
+      { label: 'Sostenibilidad', image: cardImg },
+      { label: 'Sostenibilidad', image: cardImg },
+      { label: 'Sostenibilidad', image: cardImg },
+      { label: 'Sostenibilidad', image: cardImg },
     ],
   },
   { id: 'compromisos', label: 'COMPROMISOS', kind: 'link', href: '#' },
@@ -115,7 +117,9 @@ function SectionContent({ section }) {
       <div className="jl-menu__product">
         <div className="jl-menu__product-main">
           <ProductList items={section.product.items} />
-          <AspectRatio ratio="3:4" className="jl-menu__product-media" />
+          <AspectRatio ratio="3:4" className="jl-menu__product-media">
+            <img src={featuredImg} alt="" />
+          </AspectRatio>
         </div>
         <Featured featured={section.product.featured} />
       </div>

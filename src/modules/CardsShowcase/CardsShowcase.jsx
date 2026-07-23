@@ -1,6 +1,7 @@
 import './CardsShowcase.css';
 import CardCarrusel from '../../components/CardCarrusel/CardCarrusel.jsx';
 import Icon from '../../components/Icon/Icon.jsx';
+import showcaseImg from '../../assets/images/showcase.webp';
 
 /**
  * Módulo Cards / Showcase — cabecera + carrusel de tarjetas grandes (imagen +
@@ -12,8 +13,8 @@ import Icon from '../../components/Icon/Icon.jsx';
  * tarjeta a todo el ancho. Reutiliza Card Carrusel e Icon.
  */
 const DEFAULT_ITEMS = [
-  { title: 'Joselitos Velázquez', body: 'Lorem ipsum dolor sit amet consectetur. Purus neque sagittis serum.', tags: ['Madrid', 'Restaurante'], cta: 'Descubrir' },
-  { title: 'Joselitos Serrano', body: 'Lorem ipsum dolor sit amet consectetur. Purus neque sagittis serum.', tags: ['Madrid', 'Tienda'], cta: 'Descubrir' },
+  { title: 'Joselitos Velázquez', body: 'Lorem ipsum dolor sit amet consectetur. Purus neque sagittis serum.', tags: ['Madrid', 'Restaurante'], cta: 'Descubrir', image: showcaseImg },
+  { title: 'Joselitos Serrano', body: 'Lorem ipsum dolor sit amet consectetur. Purus neque sagittis serum.', tags: ['Madrid', 'Tienda'], cta: 'Descubrir', image: showcaseImg },
 ];
 
 export default function CardsShowcase({

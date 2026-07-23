@@ -81,10 +81,10 @@ Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vit
 
 ### Hitos activos (revisar al arrancar sesión — §11)
 
-- 🔴 **Fase 4.5 — Hito de imágenes** (Instrucciones v2 §14). La Fase 4 (Módulos) está
-  completa. Antes de empezar los Page Templates, Claude DEBE proponer al usuario aplicar
-  las imágenes reales de Figma a todos los módulos, sobre el componente `AspectRatio`.
-  Trazado como ítem propio (5 pasos) en `PLAN.md` → Fase 4.5. **No se salta.**
+- ✅ **Fase 4.5 — Hito de imágenes** (Instrucciones v2 §14) — **COMPLETADO 2026-07-23**.
+  21 imágenes únicas de Figma aplicadas (WebP, 3.4 MB) sobre los 15 módulos con imagen;
+  SHA-1 verificado contra `imageHash`; `build-storybook` OK. Detalle y notas de mecánica
+  en `PLAN.md` → Fase 4.5. Siguiente fase: **Page Templates** (empezar por Home).
 
 ## 10. Notas / decisiones pendientes
 

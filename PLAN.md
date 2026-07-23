@@ -102,7 +102,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
 
-## Fase 4.5 — Hito de imágenes (aplicar a TODOS los módulos) — 🔴 HITO ACTIVO
+## Fase 4.5 — Hito de imágenes (aplicar a TODOS los módulos) — ✅ COMPLETADO
 
 > **Regla (Instrucciones v2 §14 «Hito de imágenes»):** cerrada la Fase 4 (Módulos),
 > Claude DEBE proponer al usuario bajar las imágenes reales de Figma y aplicarlas de
@@ -110,25 +110,36 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 > es requisito antes de dar por cerrada la fase de módulos y de empezar los Page
 > Templates. (El usuario puede pedir imágenes sueltas antes.)
 
-Estado actual: solo `footer-illustration.webp` está aplicada; el resto de módulos con
-`AspectRatio` usan placeholder. El sandbox NO tiene red a figma.com → ruta recomendada:
-**Claude in Chrome** (fetch → Descargas → optimizar a WebP → `src/assets/images` →
-cablear). Alternativa local: `npm run figma:asset` (requiere `figma-token.txt`, hoy
-ausente). Flujo en `docs/assets-workflow.md`.
+Resuelto (2026-07-23). Todos los másters SÍ traían imágenes raster reales (incluidos Menu
+y SectionBanner, al contrario de lo anotado en sesiones previas). Se aplicaron **21 imágenes
+únicas** (3.4 MB en WebP) sobre los 15 módulos con imagen. Vía usada: **Claude in Chrome**
+(`download_assets` da las URLs → el navegador fuerza la descarga por `Content-Disposition:
+attachment` a `~/Downloads` → conversión a WebP `sharp` q82 → `src/assets/images/`). El SHA-1
+de cada archivo coincide con el `imageHash` de Figma (verificado, 0 discrepancias).
+`build-storybook` OK (0 errores, 22 WebP emitidos).
 
-- [ ] **1. Inventario** — listar módulos con imagen y qué asset real trae cada máster en
-  Figma (marcar los que NO traen asset: seguirán con placeholder por diseño; p. ej. Menu,
-  SectionBanner).
-- [ ] **2. Descargar** los bytes vía Claude in Chrome (o `npm run figma:asset` si hay token).
-- [ ] **3. Optimizar** (raster→WebP; SVG con SVGO conservando viewBox y currentColor) y
-  colocar en `src/assets/{images|illustrations}`.
-- [ ] **4. Cablear** cada imagen en su módulo (vía `AspectRatio`) y verificar con
-  `build-storybook` (a `/tmp`).
-- [ ] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
+Notas de mecánica (para futuras sesiones):
+- El sandbox NO tiene red a figma.com (curl→HTTP 000); la descarga real pasa por el navegador.
+- Chrome bloquea descargas por `blob`+`click()` sin gesto de usuario; **navegar** a la URL del
+  asset sí fuerza la descarga (attachment). Se usó `browser_batch` con varias `navigate`.
+- ⚠️ Bug a evitar: `new URL('../ruta', import.meta.url).pathname` deja `%20` literal cuando la
+  carpeta tiene espacios ("joselito opus") → escribe en una ruta espuria. Resolver rutas sin
+  `.pathname` o con `decodeURIComponent`.
+- `build-storybook` normal funciona una vez habilitado el borrado en la carpeta (Cowork
+  `allow_cowork_file_delete`); ya no hace falta compilar a un directorio externo.
 
-Módulos con `AspectRatio` a revisar: SectionBanner, Hero, SectionHero, SectionHeader,
-ContentImageOnly, ContentTextImage, Timeline, Menu, CardsShowcase, CardsCategories,
-CardsGallery, CardsProductCarousel, Toast.
+- [x] **1. Inventario** — 14 másters revisados con `use_figma`; 21 imágenes únicas mapeadas por
+  `imageHash`/slot. Ningún máster se queda sin asset real.
+- [x] **2. Descargar** los bytes vía Claude in Chrome (navegación a las URLs de `download_assets`).
+- [x] **3. Optimizar** (raster→WebP q82 con `sharp`) y colocar en `src/assets/images/`.
+- [x] **4. Cablear** cada imagen en su módulo (default de prop / `DEFAULT_ITEMS`, vía
+  `AspectRatio`) y verificar con `build-storybook` (0 errores).
+- [x] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
+
+Módulos cableados: SectionBanner, Hero (+badge del Toast), SectionHero, SectionHeader (3:4/1:1),
+ContentImageOnly (2), ContentTextImage, Timeline (H/V), Menu (cards + featured), CardsShowcase,
+CardsCategories (5), CardsGallery (3:4/1:1), CardsProductCarousel, CardsLinks, CardsAccordion (3),
+Toast. (La ilustración del footer ya estaba aplicada de antes.)
 
 ## Fase 5 — Page Templates (SPRINT 1)
 
@@ -142,6 +153,5 @@ CardsGallery, CardsProductCarousel, Toast.
 ---
 
 ### Próximo paso sugerido
-Fase 4 (Módulos) completa. **Antes de los Page Templates**, ejecutar la Fase 4.5:
-proponer al usuario aplicar las imágenes reales a todos los módulos (§13). Después,
-Fase 5 empezando por **Home**.
+Fase 4 (Módulos) y Fase 4.5 (Hito de imágenes) completas. Siguiente: **Fase 5 — Page
+Templates**, empezando por **Home** (composición de los módulos ya construidos).
