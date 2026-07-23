@@ -1,0 +1,76 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ListNumbers.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · List / Numbers
+
+Cifras destacadas a **100% de ancho**: un título de sección y una lista de filas,
+cada una con una cifra grande y una descripción, separadas por líneas.
+
+Máster de Figma: `List / Numbers` (`58447:7252`), variantes **Desktop** (1440) y
+**Mobile** (390). Fondo gris claro (subtema `light-grey`).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Título** de sección (`SangBleu Kingdom`).
+2. **Filas** de cifra, cada una con:
+   - **Cifra** grande (`SangBleu Kingdom`, `Title/03`).
+   - **Descripción** (`Body/05`).
+3. **Líneas** divisorias sobre cada fila (`--stroke-neutral-3`).
+
+## Subtemas
+
+El módulo fija `data-theme="light-grey"` (fondo `#f7f7f7`). El resto de colores se
+resuelve por tokens semánticos; un hijo podría sobrescribir el subtema.
+
+## Comportamiento
+
+- **Desktop (≥768px):** cada fila muestra la **cifra a la izquierda** y la
+  **descripción a la derecha** (`space-between`).
+- **Mobile:** cifra y descripción se **apilan**.
+- Breakpoint en **M-768**; espaciados por tokens responsive `--sp-*`.
+
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+Número de filas flexible (prop `items`). Título opcional.
+
+> **Nota de máster:** la línea superior aparece también sobre la primera fila
+> (fiel a la variante desktop). El color de la línea usa `--stroke-neutral-3`.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Subtema / fondo | `data-theme="light-grey"` · `--bg-base` (#f7f7f7) |
+| Título / cifra / descripción | `--text-base` |
+| Líneas | `--stroke-neutral-3` |
+| Márgenes laterales | `--grid-wrapper` |
+| Espaciados | `--sp-3`, `--sp-8`, `--sp-9`, `--sp-13` |
+| Tipografías | `--font-family-title` (título), `.ts-title-3` (cifra), `.ts-body-5` (descripción) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string \| null` | `Nuestra huella en cifras` | Título de sección (`null`/`''` = oculto) |
+| `items` | `{ value, label }[]` | 3 cifras del máster | Filas de cifra + descripción |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de sección como `<h2>`.
+- La cifra y su descripción se leen en orden; contraste garantizado por los tokens
+  del subtema.
+
+## Componentes relacionados
+
+`List`, `List / Timeline`, `List / Archive table`, `Content / Title`.

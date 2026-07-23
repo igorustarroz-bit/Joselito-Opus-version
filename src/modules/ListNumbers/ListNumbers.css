@@ -1,0 +1,53 @@
+/* Módulo List / Numbers — cifras destacadas (máster Figma 58447:7252).
+   Fondo gris claro (subtema light-grey). Título + filas cifra/descripción con
+   líneas divisorias. Desktop: cifra | descripción en fila. Mobile: apilado.
+   Espaciados con tokens responsive --sp-* y --grid-wrapper. Breakpoint: 768px. */
+
+.jl-numbers {
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.jl-numbers * { box-sizing: border-box; }
+
+.jl-numbers__head {
+  padding: var(--sp-13) var(--grid-wrapper) 0;
+}
+.jl-numbers__title {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: clamp(20px, 2.5vw, 24px);
+  line-height: 1.2;
+  color: var(--text-base);
+  margin: 0;
+}
+
+.jl-numbers__rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3); /* 12 */
+  padding: var(--sp-9) var(--grid-wrapper) var(--sp-13);
+}
+.jl-numbers__row {
+  border-top: 1px solid var(--stroke-neutral-3);
+  padding: var(--sp-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.jl-numbers__value { color: var(--text-base); }
+.jl-numbers__label { color: var(--text-base); margin: 0; }
+
+@media (min-width: 768px) {
+  .jl-numbers__row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .jl-numbers__value { flex: 0 0 auto; width: 515px; max-width: 50%; }
+  .jl-numbers__label { flex: 0 0 auto; width: 406px; max-width: 45%; }
+}
