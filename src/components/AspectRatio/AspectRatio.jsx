@@ -5,12 +5,12 @@
  */
 export const RATIOS = ['1:1', '4:3', '3:4', '3:2', '2:3', '16:9', '9:16'];
 
-export default function AspectRatio({ ratio = '1:1', className = '', children, ...rest }) {
+export default function AspectRatio({ ratio = '1:1', className = '', style, children, ...rest }) {
   const [w, h] = ratio.split(':');
   return (
     <div
       className={`relative overflow-hidden ${className}`}
-      style={{ aspectRatio: `${w} / ${h}` }}
+      style={{ ...style, aspectRatio: `${w} / ${h}` }}
       data-ratio={ratio}
       {...rest}
     >
