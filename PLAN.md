@@ -97,7 +97,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Cards / Product carousel — máster `58163:83548` (Desktop/Mobile). Cabecera (antetítulo + "Explorar todos") + carrusel de CardProduct con badge/chips/estrellas/CTA; desktop 3 centradas, mobile scroll horizontal. Reutiliza Card Product. `build-storybook` OK + push. Separación desktop aproximada. Pendiente revisión en Pages
 - [x] Cards / Showcase — máster `58182:4396` (Desktop Many/One · Mobile Many). Cabecera + carrusel de CardCarrusel (imagen 3:2 + título/desc/tags/CTA); type many (slides asomando) / one (única). Reutiliza Card Carrusel. `build-storybook` OK + push. Pendiente revisión en Pages
 - [x] Cards / Categories — máster `58182:4401` (Desktop/Mobile × RRSS/Instagram). Feed social: cabecera (antetítulo + iconos sociales) + fila escalonada de miniaturas (ratio alterno 3:4/3:2) con handle. Reutiliza Icon + AspectRatio. `build-storybook` OK + push. Pendiente revisión en Pages
-- [ ] Cards / Accordion — `id 58182:24099`
+- [x] Cards / Accordion — máster `58182:24099` (nodo 58182:24098). OJO: el nodo NO es un acordeón sino una **banda tipográfica** (palabras gigantes SangBleu rojo/blanco + fotos al fondo, subtema oscuro); construido fiel al nodo por decisión del equipo. El acordeón real está en `58512:9289` (pendiente si se quiere como módulo aparte). `build-storybook` OK + push. Aproximado en offsets de fotos. Pendiente revisión en Pages
 - [ ] Banners / Section banner — `id 58182:4380`
 - [ ] Form (módulo) — `id 58195:43756`
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc

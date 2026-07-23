@@ -1,0 +1,74 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsAccordion.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Accordion
+
+> **Aviso:** pese al nombre "Accordion", el máster de este nodo (`58182:24099` /
+> `58182:24098`) es una **banda tipográfica** decorativa, no un acordeón. Se ha
+> construido fiel al nodo. El acordeón real vive en otro máster (`58512:9289`).
+
+Banda a 100% de ancho, subtema oscuro: palabras gigantes (SangBleu, `Title/08`)
+repetidas alternando el **rojo de marca** y **blanco**, con fotografías dispersas
+al fondo.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Palabras** — líneas en `SangBleu Kingdom` (≈180px en desktop); todas en rojo
+   (`--text-accent-base`) salvo la central en blanco (`--text-base`).
+2. **Fotos de fondo** — tres imágenes dispersas al 70% de opacidad (decorativas).
+
+## Subtemas
+
+Subtema **oscuro** (default `dark-black-neutral`, fijado con `parameters.defaultTheme`);
+hereda del contenedor, el toolbar puede cambiarlo.
+
+## Comportamiento
+
+- **Desktop (≥768px):** banda de 900px; palabras centradas y fotos posicionadas al fondo.
+- **Mobile:** misma composición con tipografía reducida (clamp).
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+`lines` define las palabras y cuáles van en blanco (`light: true`). `images` (hasta 3)
+rellena las fotos de fondo.
+
+> **Nota de máster:** módulo muy art-directed; offsets de las fotos **aproximados**.
+> Sin `images`, se muestran placeholders.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` (subtema oscuro) |
+| Palabras (rojo) | `--text-accent-base` |
+| Palabra en blanco | `--text-base` |
+| Placeholder de foto | `--bg-neutral-2` |
+| Tipografía | `--font-family-title` (SangBleu) |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `lines` | `{ text, light? }[]` | 5 líneas del máster | Palabras (con `light` = blanco) |
+| `images` | `string[]` | `[]` | Hasta 3 fotos de fondo |
+| `theme` | `string` | — | Fija `data-theme` en el raíz (producción) |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Las fotos de fondo son decorativas (`aria-hidden`).
+- El texto es puramente visual; si aporta significado, acompáñalo de contexto en la página.
+- Contraste garantizado por los tokens del subtema oscuro.
+
+## Componentes relacionados
+
+`UI13-Accordion` (el acordeón real), `List / Timeline` (otra banda art-directed).
