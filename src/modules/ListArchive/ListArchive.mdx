@@ -1,0 +1,82 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ListArchive.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · List / Archive table
+
+Tabla de archivo/noticias a **100% de ancho**: un título de sección y una lista de
+entradas, cada una con fecha y titular, separadas por líneas.
+
+Máster de Figma: `List / Archive table` (`58418:53062`), variantes **Desktop** /
+**Mobile** y estados **Default** / **Hover**.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Título** de sección (Euclid, sans).
+2. **Entradas** (filas), cada una con:
+   - **Fecha** (`Body/03`, `--text-neutral-2`).
+   - **Titular** (`SangBleu Kingdom`, 24px, `--text-base`).
+3. **Líneas** divisorias sobre cada entrada (`--stroke-neutral-4`).
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens semánticos);
+un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop (≥768px):** cada entrada muestra la **fecha a la izquierda** (columna
+  de 240px) y el **titular a la derecha**.
+- **Mobile:** fecha y titular se **apilan**.
+- **Hover:** si la entrada trae `href`, la fila es un enlace y se **realza** al pasar
+  el cursor. En el máster, el estado Hover muestra además una miniatura siguiendo al
+  cursor; esa miniatura queda como mejora pendiente.
+- Breakpoint en **M-768**; espaciados por tokens responsive `--sp-*`.
+
+<Canvas of={Stories.Mobile} />
+<Canvas of={Stories.ConEnlaces} />
+
+## Variantes y tamaños
+
+Número de entradas flexible (prop `items`). Cada entrada puede ser enlace (`href`).
+
+> **Nota de máster:** el título de sección usa la familia sans (Euclid) según el
+> máster; los titulares usan SangBleu. La miniatura del estado Hover no está
+> implementada (mejora pendiente).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Título / titular | `--text-base` |
+| Fecha | `--text-neutral-2` |
+| Líneas | `--stroke-neutral-4` |
+| Márgenes laterales | `--grid-wrapper` |
+| Espaciados | `--sp-6`, `--sp-8`, `--sp-9`, `--sp-13` |
+| Tipografías | `--font-family-body` (título), `--font-family-title` (titular), `.ts-body-3` (fecha) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `title` | `string \| null` | `Últimas noticias` | Título de sección (`null`/`''` = oculto) |
+| `items` | `{ date, headline, href? }[]` | 3 entradas del máster | Entradas del archivo |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de sección como `<h2>`.
+- Las entradas con `href` son enlaces `<a>` con foco visible; sin `href`, son estáticas.
+- Contraste garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`List`, `List / Timeline`, `List / Numbers`, `Content / Title`.

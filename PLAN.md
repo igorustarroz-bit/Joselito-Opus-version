@@ -91,7 +91,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] List — máster **`58468:60752`** (id del plan 58418:52924 obsoleto). Título centrado + ítems (título/descripción/número itálico); columnas con divisores en desktop, apilado con líneas en mobile. Espaciados con tokens `--sp-*`. `build-storybook` OK + push. Pendiente revisión visual en Pages
 - [x] List / Timeline — máster `58363:35241` (6 variantes Desktop/Mobile × imagen Horizontal/Vertical/None). Banda art-directed: años gigantes de fondo (activo destacado), foto rotada y tarjeta blanca con nav (ButtonIcon). Fondo rojo (con imagen) u oscuro (None) por subtema. `build-storybook` OK + push. Aproximado en offsets/rotación decorativos — pendiente ajuste fino tras revisión en Pages
 - [x] List / Numbers — máster `58447:7252` (Desktop/Mobile). Título + filas cifra grande (SangBleu Title/03) | descripción (Body/05), líneas divisorias; desktop en fila, mobile apilado. Fondo gris claro (light-grey). `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [ ] List / Archive table — `id 58418:53062`
+- [x] List / Archive table — máster `58418:53062` (Desktop/Mobile · Default/Hover). Título + entradas fecha | titular (SangBleu 24px), líneas divisorias; desktop fila, mobile apilado; filas enlazables con realce hover. `build-storybook` OK + push. Miniatura del estado Hover pendiente. Pendiente revisión visual en Pages
 - [ ] Cards / Links — `id 58163:40143`
 - [ ] Cards / Gallery — `id 58163:40311`
 - [ ] Cards / Product carousel — `id 58163:83548`

@@ -1,0 +1,68 @@
+/* Módulo List / Archive table — tabla de archivo/noticias (máster 58418:53062).
+   Título + entradas fecha/titular con líneas divisorias. Desktop: fecha | titular
+   en fila. Mobile: apilado. Espaciados con tokens --sp-* y --grid-wrapper.
+   Breakpoint desktop: 768px. */
+
+.jl-archive {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.jl-archive * { box-sizing: border-box; }
+
+.jl-archive__head {
+  padding: 60px var(--grid-wrapper) 0;
+}
+.jl-archive__title {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 22px);
+  line-height: 1.4;
+  color: var(--text-base);
+  margin: 0;
+}
+
+.jl-archive__rows {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-8) var(--grid-wrapper) var(--sp-13);
+}
+
+.jl-archive__row {
+  border-top: 1px solid var(--stroke-neutral-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-9); /* 32 mobile */
+  padding: var(--sp-6) 0 var(--sp-9);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+}
+a.jl-archive__row:hover { opacity: 0.6; }
+
+.jl-archive__date {
+  color: var(--text-neutral-2);
+  flex-shrink: 0;
+}
+.jl-archive__headline {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-title);
+  color: var(--text-base);
+}
+
+@media (min-width: 768px) {
+  .jl-archive__head { padding: 120px var(--grid-wrapper) 0; }
+  .jl-archive__row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 112px;
+    padding: var(--sp-6) 0 var(--sp-9);
+  }
+  .jl-archive__date { width: 240px; padding: 4px 0; }
+  .jl-archive__headline { flex: 1 1 0; min-width: 0; max-width: 819px; }
+}
