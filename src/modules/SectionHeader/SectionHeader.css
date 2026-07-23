@@ -1,0 +1,107 @@
+/* Módulo Hero / Section header — máster Figma 58508:6679. Subtema OSCURO.
+   Dos paneles: texto | imagen. Mobile apilado (borde inferior en el texto);
+   desktop lado a lado (borde derecho en el texto). Colores/tipografías por tokens.
+   Gaps/paddings y el ancho de imagen desktop (515px) son fijos (hardcodeados en el
+   máster); los márgenes laterales usan --grid-wrapper. Breakpoint desktop: 768px. */
+
+.jl-sheader {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.jl-sheader * { box-sizing: border-box; }
+
+/* ---- Panel de texto ---- */
+.jl-sheader__text {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 56px var(--grid-wrapper);
+  border-bottom: 1px solid var(--stroke-neutral-3);
+}
+.jl-sheader__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.jl-sheader__eyebrow {
+  color: var(--text-base);
+  white-space: nowrap;
+  margin: 0;
+}
+.jl-sheader__body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.jl-sheader__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.jl-sheader__title {
+  color: var(--text-base);
+  font-feature-settings: "lnum" 1, "pnum" 1;
+  margin: 0;
+}
+.jl-sheader__desc {
+  color: var(--text-neutral-2);
+  margin: 0;
+}
+.jl-sheader__labels {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---- Panel multimedia ---- */
+.jl-sheader__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--grid-wrapper);
+}
+.jl-sheader__ar {
+  width: 100%;
+  background: var(--bg-accent-base); /* placeholder cuando no hay imagen */
+}
+
+/* ==========================================================================
+   Desktop (>= 768px): paneles lado a lado 50/50, texto con justify-between
+   ========================================================================== */
+@media (min-width: 768px) {
+  .jl-sheader {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .jl-sheader__text {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 0;
+    padding: 80px;
+    justify-content: space-between;
+    border-bottom: none;
+    border-right: 1px solid var(--stroke-neutral-3);
+  }
+  /* columna de contenido acotada como en el máster (514px) */
+  .jl-sheader__top,
+  .jl-sheader__body {
+    width: 100%;
+    max-width: 514px;
+  }
+  .jl-sheader__top { gap: 24px; }
+  .jl-sheader__body { gap: 40px; }
+  .jl-sheader__titles { gap: 24px; }
+
+  .jl-sheader__media {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 80px;
+  }
+  .jl-sheader__ar {
+    width: 515px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,103 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SectionHeader.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Hero / Section header
+
+Cabecera de sección a **100% de ancho** con **subtema oscuro**
+(`data-theme="dark-black-neutral"`). Combina un bloque de texto (botón de volver +
+antetítulo arriba; título, descripción y etiquetas abajo) con una imagen destacada.
+
+Máster de Figma: `Hero / Section header` (`58508:6679`), 4 variantes: **Desktop**
+(1440) y **Mobile** (390) × **Big** / **Small**.
+
+## Demo
+
+<Canvas of={Stories.Big} />
+
+## Anatomía
+
+1. **Botón de volver** — `UI03-Button-Icon` (tipo *secondary*, icono `ArrowLeft`).
+2. **Antetítulo / eyebrow** (`Body/02`, `--text-base`).
+3. **Título** (`SangBleu Kingdom`; `Title/07` en Big, `Title/06` en Small; admite salto de línea con `\n`).
+4. **Descripción** (`Body/04`, `--text-neutral-2`).
+5. **Etiquetas** — `UI12-Tag` (tipo *aseptic*, solo borde); por defecto `PREMIUM` y `2018`. Opcionales (`showLabels`).
+6. **Imagen** — `AspectRatio` 3:4 (Big) o 1:1 (Small).
+
+## Subtemas
+
+El módulo fija `data-theme="dark-black-neutral"`, por lo que todos los colores se
+resuelven en su versión oscura vía tokens semánticos (fondo oscuro, texto blanco,
+bordes en blanco translúcido). Al ser un `data-theme` explícito, un contenedor
+padre no lo altera; los subcomponentes (botón, etiquetas) heredan este subtema.
+
+## Comportamiento
+
+- **Desktop (≥768px):** dos paneles al 50% lado a lado. El de texto lleva **borde
+  derecho** y distribuye su contenido con `justify-between` (eyebrow arriba, título
+  y etiquetas abajo), acotado a 514px. La imagen (515px de ancho) se centra en su panel.
+- **Mobile:** los paneles se **apilan**; el de texto lleva **borde inferior** y la
+  imagen ocupa todo el ancho debajo.
+- Breakpoint en **M-768**; intermedios inferidos. La tipografía escala por breakpoint
+  vía los tokens `.ts-*`.
+- El botón de volver expone `onClick` (prop `onBack`).
+
+<Canvas of={Stories.Small} />
+<Canvas of={Stories.MobileBig} />
+<Canvas of={Stories.MobileSmall} />
+<Canvas of={Stories.SinEtiquetas} />
+
+## Variantes y tamaños
+
+`type`: **big** (Title/07 + imagen 3:4) · **small** (Title/06 + imagen 1:1).
+Etiquetas y descripción opcionales.
+
+> **Notas de máster:** los gaps/paddings (56/48/40/32/24/16/8) y el ancho de imagen
+> en desktop (515px) están hardcodeados en el máster (no ligados a variables), por lo
+> que se replican como valores fijos; los márgenes laterales usan `--grid-wrapper`.
+> El botón de volver usa tamaño `m` (48px) también en mobile, donde el máster lo
+> reduce a 40px. El look del botón (*secondary*) y de las etiquetas (*aseptic*) se
+> toma de sus componentes del sistema; conviene confirmarlo visualmente en Pages.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Subtema | `data-theme="dark-black-neutral"` |
+| Fondo | `--bg-base` |
+| Antetítulo / título | `--text-base` |
+| Descripción | `--text-neutral-2` |
+| Borde entre paneles | `--stroke-neutral-3` |
+| Placeholder de imagen | `--bg-accent-base` |
+| Márgenes laterales | `--grid-wrapper` |
+| Tipografías | `.ts-body-2`, `.ts-title-7` / `.ts-title-6`, `.ts-body-4` |
+| Botón / etiquetas | tokens de `UI03-Button-Icon` y `UI12-Tag` |
+
+## Propiedades
+
+<Controls of={Stories.Big} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string \| null` | máster | Antetítulo (`null`/`''` = oculto) |
+| `title` | `string` | máster | Título; usa `\n` para saltos de línea |
+| `description` | `string \| null` | máster | Descripción (`null` = oculta) |
+| `type` | `'big' \| 'small'` | `big` | Tamaño de título e imagen |
+| `labels` | `string[]` | `['PREMIUM','2018']` | Etiquetas |
+| `showLabels` | `boolean` | `true` | Muestra/oculta las etiquetas |
+| `image` | `string` | — | URL de la imagen (sin ella, placeholder) |
+| `alt` | `string` | `''` | Texto alternativo de la imagen |
+| `onBack` | `() => void` | — | Callback del botón de volver |
+
+## Accesibilidad
+
+- Título como `<h2>` (cabecera de sección).
+- Botón de volver con `aria-label="Volver"` y foco visible (vía `ButtonIcon`).
+- Imagen decorativa con `alt=""`; si aporta contenido, pásale un `alt`.
+- Contraste garantizado por los tokens del subtema oscuro.
+
+## Componentes relacionados
+
+`UI03-Button-Icon`, `UI12-Tag`, `Aspect Ratio` (foundation), `Hero / Section hero`,
+`Hero / Homepage hero`.
