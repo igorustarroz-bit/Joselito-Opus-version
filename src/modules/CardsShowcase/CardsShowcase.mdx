@@ -1,0 +1,71 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsShowcase.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Showcase
+
+Cabecera + **carrusel de tarjetas grandes** (imagen + texto al lado) a 100% de ancho.
+Máster de Figma: `Cards / Showcase` (`58182:4396`), variantes **Desktop Many** /
+**Desktop One** / **Mobile Many**.
+
+## Demo
+
+<Canvas of={Stories.Many} />
+
+## Anatomía
+
+1. **Cabecera** — antetítulo (`Body/04`) + enlace "Ver todos" (`Body/03`) con chevron.
+2. **Tarjetas** `CardCarrusel` (horizontales): imagen 3:2 + título `Title/04` +
+   descripción `Body/02` + tags (`UI12-Tag`) + enlace "Descubrir".
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme`; un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Desktop · Many:** carrusel horizontal; los slides (≈1000px) asoman y se
+  desplazan con scroll.
+- **Desktop · One:** una sola tarjeta a todo el ancho.
+- **Mobile:** tarjetas a todo el ancho con scroll horizontal.
+- Borde inferior en el módulo. Breakpoint en **M-768**.
+
+<Canvas of={Stories.One} />
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+`type`: **many** (carrusel) · **one** (una tarjeta). Número de tarjetas por `items`.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Antetítulo | `--text-base` |
+| Enlace | `--text-neutral-1` |
+| Borde inferior | `--stroke-neutral-3` |
+| Márgenes laterales | `--grid-wrapper` |
+| Tarjetas | tokens de `Card Carrusel` (`.ts-title-4`, `.ts-body-2`, `Tag`, Action-Link) |
+
+## Propiedades
+
+<Controls of={Stories.Many} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `Tiendas y restaurantes` | Antetítulo |
+| `link` / `linkHref` | `string` | `Ver todos` / `#` | Enlace de cabecera |
+| `type` | `'many' \| 'one'` | `many` | Carrusel o tarjeta única |
+| `items` | `CardCarrusel[]` | 2 tarjetas | Contenido de las tarjetas |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Los enlaces (cabecera y tarjetas) son `<a>` con foco visible.
+- Contraste garantizado por los tokens del subtema.
+
+## Componentes relacionados
+
+`Card Carrusel`, `Icon`, `Cards / Product carousel`, `Cards / Categories`.

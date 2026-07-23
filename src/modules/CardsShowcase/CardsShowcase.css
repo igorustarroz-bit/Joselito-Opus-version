@@ -1,0 +1,45 @@
+/* Módulo Cards / Showcase — cabecera + carrusel de tarjetas grandes (máster 58182:4396).
+   Desktop Many: slides asomando (scroll). One: una sola a todo el ancho. Mobile: full.
+   Breakpoint desktop: 768px. */
+
+.jl-showcase {
+  width: 100%;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--stroke-neutral-3);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 68px var(--grid-wrapper) 88px;
+  box-sizing: border-box;
+}
+.jl-showcase * { box-sizing: border-box; }
+
+.jl-showcase__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.jl-showcase__eyebrow { color: var(--text-base); margin: 0; }
+.jl-showcase__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-neutral-1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.jl-showcase__track {
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+}
+.jl-showcase__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .jl-showcase--many .jl-showcase__slide { flex: 0 0 1000px; max-width: 1000px; }
+}
