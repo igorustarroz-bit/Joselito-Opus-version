@@ -1,0 +1,101 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './FormModule.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Form
+
+Bloque de formulario a 100% de ancho con una columna de texto de apoyo. Máster de
+Figma: `Form` (`58195:43756`), variantes **Desktop** (`58195:43767`, 1440) y
+**Mobile** (`58195:43777`, 390), layout `text-left`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+1. **Columna de texto** — antetítulo (`Body/06`), título (`SangBleu Kingdom`,
+   `Title/04`) y cuerpo (`Body/05`).
+2. **Formulario** — componente `Form` (UI11): cabecera (título `Title/01` +
+   descripción `Body/03`), campos (`Input`) y fila de acciones.
+3. **Campos** — una fila de **dos inputs** + **dos inputs** a ancho completo
+   (tamaño *small*, 56px) y una casilla (`CheckboxList`).
+4. **Acciones** — `CANCEL` (botón *terciary*) y `ACCEPT` (botón *primary*).
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens:
+`--bg-base`, `--text-base`); un hijo puede sobrescribir al padre. Prop opcional
+`theme` para fijarlo en producción.
+
+## Comportamiento
+
+- **Desktop (≥1024px):** dos columnas — texto flexible (máx. 648px) a la izquierda
+  y formulario (405px) a la derecha, repartidos con `space-between`.
+- **Mobile:** apilado — el texto arriba y el formulario debajo, ambos a ancho
+  completo.
+- Breakpoint en **LG-1024** (las dos columnas del máster solo caben con holgura a
+  partir de ese ancho).
+
+<Canvas of={Stories.Mobile} />
+<Canvas of={Stories.ContenidoPersonalizado} />
+
+## Variantes y tamaños
+
+Máster con un único layout (`text-left`) en Desktop / Mobile. Número y etiquetas de
+campos configurables (prop `fields`): los dos primeros forman la fila superior y el
+resto se apilan a ancho completo.
+
+> **Notas de máster:** (1) el máster incluye tras el cuerpo un botón azul
+> `#0045ff` con tipografía ajena al sistema (Neue Haas) → **omitido** por no
+> pertenecer a los tokens Joselito. (2) En mobile el párrafo del máster usa esa
+> misma fuente ajena; aquí se unifica con `Body/05`. (3) La fila de acciones se
+> alinea a la izquierda como en este máster (el componente `Form` la alinea a la
+> derecha por defecto → *override* local). (4) Paddings verticales (120 desktop /
+> 40-60 mobile) literales del máster; márgenes laterales vía `--grid-wrapper`.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Texto (antetítulo/título/cuerpo) | `--text-base` |
+| Antetítulo | `.ts-body-6` |
+| Título | `.ts-title-4` (SangBleu) |
+| Cuerpo | `.ts-body-5` |
+| Formulario | tokens de `UI11-Form` (`.ts-title-1`, `.ts-body-3`) |
+| Campos | tokens de `UI06-Input` (*small*, 56px) |
+| Botones | tokens de `UI02-Button` (*terciary* / *primary*) |
+| Márgenes laterales | `--grid-wrapper` |
+| Separación fila de inputs | `--spacer-fx-4` (mobile) · `--spacer-fx-6` (desktop) |
+
+## Propiedades
+
+<Controls of={Stories.Desktop} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `This is a label` | Antetítulo de la columna de texto |
+| `title` | `string` | `Lorem ipsum…` | Título (SangBleu) |
+| `body` | `string` | copy del máster | Cuerpo de la columna de texto |
+| `formTitle` | `string` | `Title Form` | Título del formulario |
+| `formDescription` | `string` | `Description` | Descripción del formulario |
+| `fields` | `{ label }[]` | 4 campos | Campos (los 2 primeros van en fila) |
+| `checkboxLabel` | `string` | `Label` | Etiqueta de la casilla (`''` = sin casilla) |
+| `primaryLabel` | `string` | `ACCEPT` | Texto del botón primario |
+| `secondaryLabel` | `string` | `CANCEL` | Texto del botón secundario |
+| `onSubmit` / `onCancel` | `function` | — | Callbacks de las acciones |
+| `theme` | `string` | — | Fija el subtema (`data-theme`); si no, hereda |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Título de la columna como `<h2>`; el formulario es un `<form>` semántico
+  (`Form`) que previene el envío por defecto y expone `onSubmit`.
+- Inputs con `placeholder` = etiqueta; casilla operable por teclado (`CheckboxList`).
+- Botones con foco visible desde `UI02-Button`.
+
+## Componentes relacionados
+
+`UI11-Form`, `UI06-Input`, `UI08-Checkbox-List`, `UI02-Button`, `Content / Title`.

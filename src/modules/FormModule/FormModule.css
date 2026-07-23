@@ -1,0 +1,72 @@
+/* Módulo Form — máster 58195:43756.
+   Columna de texto + componente Form (UI11). Mobile: apilado. Desktop (≥1024px):
+   dos columnas (texto flexible | formulario 405px) con space-between.
+   Colores por tokens; márgenes laterales vía --grid-wrapper; paddings verticales
+   literales del máster. */
+
+.jl-form-module {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px var(--grid-wrapper) 60px;
+  box-sizing: border-box;
+}
+.jl-form-module *,
+.jl-form-module *::before,
+.jl-form-module *::after { box-sizing: border-box; }
+
+/* --- Columna de texto --------------------------------------------------- */
+.jl-form-module__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;                    /* mobile: titulares ↔ cuerpo */
+}
+.jl-form-module__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                     /* mobile */
+  color: var(--text-base);
+}
+.jl-form-module__eyebrow { margin: 0; color: var(--text-base); }
+.jl-form-module__title { margin: 0; color: var(--text-base); }
+.jl-form-module__body { margin: 0; color: var(--text-base); }
+
+/* --- Formulario (fila de 2 inputs) -------------------------------------- */
+.jl-form-module__row {
+  display: flex;
+  gap: var(--spacer-fx-4);      /* mobile: 16px */
+  width: 100%;
+}
+.jl-form-module__row > * { flex: 1 1 0; min-width: 0; }
+
+/* En este máster la fila de acciones va alineada a la izquierda
+   (el componente Form la alinea a la derecha por defecto). */
+.jl-form-module__form .jl-form__actions { justify-content: flex-start; }
+
+/* --- Desktop (≥1024px) --------------------------------------------------- */
+@media (min-width: 1024px) {
+  .jl-form-module {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 120px var(--grid-wrapper);
+  }
+
+  .jl-form-module__text {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 648px;
+    gap: 32px;
+  }
+  .jl-form-module__titles { gap: 16px; }
+  .jl-form-module__body { max-width: 528px; }
+
+  .jl-form-module__form {
+    flex: 0 0 auto;
+    width: 405px;
+  }
+  .jl-form-module__row { gap: var(--spacer-fx-6); }  /* desktop: 24px */
+}
