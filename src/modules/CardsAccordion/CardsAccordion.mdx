@@ -19,20 +19,26 @@ al fondo.
 
 ## Anatomía
 
-1. **Palabras** — líneas en `SangBleu Kingdom` (≈180px en desktop); todas en rojo
-   (`--text-accent-base`) salvo la central en blanco (`--text-base`).
-2. **Fotos de fondo** — tres imágenes dispersas al 70% de opacidad (decorativas).
+Desktop y mobile son **estructuralmente distintos**:
+
+- **Desktop:** palabras gigantes en `SangBleu Kingdom` (≈180px), en **rojo de marca**
+  salvo la central en blanco, con **tres fotos** dispersas al fondo (70% opacidad).
+- **Mobile:** antetítulo ("AÑOS DE CURACIÓN"), tres palabras (72px), descripción
+  (`Body/03`), línea de atributos ("COMPLEJIDAD · EQUILIBRIO · DULZURA"), duración y
+  un **botón terciary** ("DESCUBRIR"). Sin fotos.
 
 ## Subtemas
 
 Subtema **oscuro** (default `dark-black-neutral`, fijado con `parameters.defaultTheme`);
-hereda del contenedor, el toolbar puede cambiarlo.
+hereda del contenedor, el toolbar puede cambiarlo. El rojo usa la primitiva de marca
+`--color-primary-50` (en el subtema oscuro ningún token de texto la devuelve).
 
 ## Comportamiento
 
-- **Desktop (≥768px):** banda de 900px; palabras centradas y fotos posicionadas al fondo.
-- **Mobile:** misma composición con tipografía reducida (clamp).
-- Breakpoint en **M-768**.
+- **Desktop (≥768px):** banda de 900px; palabras centradas y fotos al fondo (sin CTA).
+- **Mobile:** tarjeta de contenido apilada (antetítulo → palabras → descripción →
+  atributos → botón).
+- Cada breakpoint muestra su propia composición vía CSS. Breakpoint en **M-768**.
 
 <Canvas of={Stories.Mobile} />
 
