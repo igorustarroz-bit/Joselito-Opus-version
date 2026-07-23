@@ -1,0 +1,97 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Timeline.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · List / Timeline
+
+Banda a **100% de ancho** para una línea temporal art-directed: años gigantes de
+fondo (uno activo destacado), una fotografía rotada superpuesta y una tarjeta
+blanca con título, descripción y navegación anterior/siguiente.
+
+Máster de Figma: `List / Timeline` (`58363:35241`), 6 variantes: **Desktop** /
+**Mobile** × imagen **Horizontal** / **Vertical** / **None**.
+
+## Demo
+
+<Canvas of={Stories.Horizontal} />
+
+## Anatomía
+
+1. **Cabecera** — eyebrow (`Body/04`) + enlace "Ver todos" (`Body/03`) con `CaretRight`.
+2. **Años de fondo** — números gigantes (`SangBleu Kingdom`), atenuados salvo el
+   **año activo** (blanco, `--text-always-white`).
+3. **Fotografía** rotada (variantes Horizontal / Vertical; ausente en None).
+4. **Tarjeta** blanca — título (`SangBleu`, 24px), descripción (`Body/03`) y dos
+   botones de navegación (`UI03-Button-Icon`, `CaretLeft` / `CaretRight`).
+
+## Subtemas
+
+El subtema depende de la variante (como en el máster): **con imagen** →
+`data-theme="dark-red-primary"` (fondo rojo de marca); **sin imagen** →
+`data-theme="dark-black-neutral"` (fondo oscuro). La tarjeta es una isla clara
+dentro de la banda.
+
+## Comportamiento
+
+- **Desktop (≥768px):** banda de 900px con layout **absoluto** — cabecera arriba,
+  años en columna a la derecha, foto rotada superpuesta y tarjeta abajo a la izquierda.
+- **Mobile:** los bloques se **apilan** (cabecera, escenario años+foto, tarjeta).
+- Los botones de navegación exponen `onPrev` / `onNext` (pensado para un carrusel de años).
+- Breakpoint en **M-768**.
+
+<Canvas of={Stories.Vertical} />
+<Canvas of={Stories.SinImagen} />
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+`image`: **horizontal** · **vertical** · **none**. Años y año activo configurables
+(`years`, `activeYear`); contenido de la tarjeta vía `card`.
+
+> **Nota de máster:** módulo muy art-directed (posiciones absolutas, offsets
+> concretos de los años, foto rotada). Aquí se reproduce la **estructura y el
+> lenguaje visual** de forma fiel pero **aproximada** en offsets decorativos, ángulo
+> de rotación y algunos gaps; conviene ajuste fino tras revisión visual en Pages.
+> Sin `imageSrc`, la foto se muestra como placeholder. El color de la descripción de
+> la tarjeta se fija a un gris neutro (isla clara sobre banda oscura).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo (con imagen) | `--bg-accent-base` |
+| Fondo (sin imagen) | `--bg-base` (subtema oscuro) |
+| Eyebrow / enlace | `--text-base` |
+| Año activo | `--text-always-white` |
+| Años atenuados | color con alfa (negro sobre rojo / gris sobre oscuro) |
+| Tarjeta | `--bg-always-white`, título `--text-always-black` |
+| Márgenes laterales | `--grid-wrapper` |
+| Espaciados | `--sp-5`, `--sp-7`, `--sp-8` |
+| Tipografías | `--font-family-title` (años/título de tarjeta), `.ts-body-3`, `.ts-body-4` |
+
+## Propiedades
+
+<Controls of={Stories.Horizontal} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `El legado de Joselito` | Antetítulo de la cabecera |
+| `link` / `linkHref` | `string` | `Ver todos` / `#` | Enlace "ver todos" |
+| `years` | `number[]` | `[1920,1868,1948,1964,1972]` | Años de fondo |
+| `activeYear` | `number` | `1948` | Año destacado |
+| `image` | `'horizontal' \| 'vertical' \| 'none'` | `horizontal` | Orientación / ausencia de foto |
+| `imageSrc` / `alt` | `string` | — | Fotografía |
+| `card` | `{ title, description }` | máster | Contenido de la tarjeta |
+| `onPrev` / `onNext` | `() => void` | — | Navegación |
+
+## Accesibilidad
+
+- Títulos de tarjeta como `<h3>`; los años de fondo son decorativos (`aria-hidden`).
+- Botones de navegación con `aria-label` (Anterior / Siguiente) vía `ButtonIcon`.
+- El enlace "Ver todos" es un `<a>`.
+- Contraste garantizado por los tokens del subtema.
+
+## Componentes relacionados
+
+`UI03-Button-Icon`, `Icon`, `List`, `List / Numbers`, `List / Archive table`.

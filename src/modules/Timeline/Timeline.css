@@ -1,0 +1,157 @@
+/* Módulo List / Timeline — máster Figma 58363:35241. Banda art-directed con años
+   gigantes de fondo, foto rotada superpuesta y tarjeta blanca con navegación.
+   Fondo por variante: rojo de marca (con imagen) u oscuro (sin imagen).
+   Posiciones/rotaciones DECORATIVAS aproximadas; pendiente ajuste tras revisión.
+   Breakpoint desktop: 768px. */
+
+.jl-timeline {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+  padding: 40px var(--grid-wrapper) var(--sp-5);
+  --jl-year-faded: rgba(179, 179, 179, 0.25);
+}
+.jl-timeline * { box-sizing: border-box; }
+.jl-timeline--horizontal,
+.jl-timeline--vertical {
+  background: var(--bg-accent-base);
+  --jl-year-faded: rgba(0, 0, 0, 0.30);
+}
+
+/* ---- Cabecera ---- */
+.jl-timeline__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 2;
+}
+.jl-timeline__eyebrow { color: var(--text-base); margin: 0; }
+.jl-timeline__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-base);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ---- Escenario (años + foto) ---- */
+.jl-timeline__stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+.jl-timeline__years {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.jl-timeline__year {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: clamp(56px, 10vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--jl-year-faded);
+}
+.jl-timeline__year--active {
+  color: var(--text-always-white);
+  z-index: 1;
+}
+.jl-timeline__media {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  max-width: 80%;
+  aspect-ratio: 3 / 2;
+  background: rgba(0, 0, 0, 0.25);
+  transform: rotate(-7deg);
+}
+.jl-timeline__media--vertical { aspect-ratio: 2 / 3; width: 240px; transform: rotate(7deg); }
+.jl-timeline__media > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---- Tarjeta ---- */
+.jl-timeline__card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 405px;
+  background: var(--bg-always-white);
+  padding: var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+.jl-timeline__card-title {
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.17;
+  color: var(--text-always-black);
+  margin: 0;
+}
+.jl-timeline__card-desc { color: var(--color-neutral-60); margin: 0; }
+.jl-timeline__nav { display: flex; gap: 8px; }
+
+/* ==========================================================================
+   Desktop (>= 768px): layout absoluto, banda de 900px
+   ========================================================================== */
+@media (min-width: 768px) {
+  .jl-timeline {
+    display: block;
+    height: 900px;
+    padding: 0;
+    gap: 0;
+  }
+  .jl-timeline__head {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    right: 80px;
+  }
+  .jl-timeline__stage {
+    position: absolute;
+    inset: 0;
+  }
+  .jl-timeline__years {
+    inset: 0 8% 0 auto;
+    width: 40%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+  }
+  .jl-timeline__year { font-size: clamp(120px, 12vw, 180px); }
+  .jl-timeline__media {
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    width: 520px;
+    max-width: none;
+  }
+  .jl-timeline__media--vertical {
+    width: 400px;
+    transform: translate(-50%, -50%) rotate(7deg);
+  }
+  .jl-timeline__card {
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    width: 405px;
+    padding: var(--sp-7);
+  }
+}

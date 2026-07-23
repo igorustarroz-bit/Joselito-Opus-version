@@ -89,7 +89,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Content / Image only — 1 imagen a sangre (fondo acento, botón play opcional) o 2 imágenes contiguas; `AspectRatio`. Máster `58163:40001`. Pendiente verificación visual en Pages + doc
 - [x] Content / Text + Image — variantes half/left/right (etiqueta + título SangBleu + cuerpo + `Button` secondary + nota al pie en half); responsive apilado. Máster `58363:34365`. Pendiente verificación visual en Pages + doc
 - [x] List — máster **`58468:60752`** (id del plan 58418:52924 obsoleto). Título centrado + ítems (título/descripción/número itálico); columnas con divisores en desktop, apilado con líneas en mobile. Espaciados con tokens `--sp-*`. `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [ ] List / Timeline — `id 58363:35241`
+- [x] List / Timeline — máster `58363:35241` (6 variantes Desktop/Mobile × imagen Horizontal/Vertical/None). Banda art-directed: años gigantes de fondo (activo destacado), foto rotada y tarjeta blanca con nav (ButtonIcon). Fondo rojo (con imagen) u oscuro (None) por subtema. `build-storybook` OK + push. Aproximado en offsets/rotación decorativos — pendiente ajuste fino tras revisión en Pages
 - [ ] List / Numbers — `id 58447:7252`
 - [ ] List / Archive table — `id 58418:53062`
 - [ ] Cards / Links — `id 58163:40143`
