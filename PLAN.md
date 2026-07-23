@@ -102,23 +102,33 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
 
-## Fase 4.5 — Imágenes (hito: aplicar a TODOS los módulos)
+## Fase 4.5 — Hito de imágenes (aplicar a TODOS los módulos) — 🔴 HITO ACTIVO
 
-> **Regla (§13 «Imágenes»):** una vez construidos todos los módulos de la Fase 4,
+> **Regla (Instrucciones v2 §14 «Hito de imágenes»):** cerrada la Fase 4 (Módulos),
 > Claude DEBE proponer al usuario bajar las imágenes reales de Figma y aplicarlas de
-> golpe sobre el componente `AspectRatio`. Este hito **no se salta**: es requisito
-> antes de dar por cerrada la fase de módulos y de empezar los Page Templates.
-> (El usuario puede pedir algunas imágenes antes si lo desea.)
+> golpe sobre el componente `AspectRatio`. **No se salta ni se pospone en silencio**:
+> es requisito antes de dar por cerrada la fase de módulos y de empezar los Page
+> Templates. (El usuario puede pedir imágenes sueltas antes.)
 
-- [ ] **Proponer y ejecutar la aplicación de imágenes a todos los módulos.**
-  Estado actual: solo `footer-illustration.webp` está aplicada; el resto de módulos
-  con `AspectRatio` usan placeholder (SectionBanner, Hero, SectionHero, SectionHeader,
-  ContentImageOnly, ContentTextImage, Timeline, Menu, CardsShowcase, CardsCategories,
-  CardsGallery/Product…). Flujo en `docs/assets-workflow.md`. El sandbox NO tiene red a
-  figma.com → ruta recomendada: **Claude in Chrome** (fetch → Descargas → optimizar a
-  WebP → `src/assets/images` → cablear cada módulo). Alternativa local:
-  `npm run figma:asset` (requiere `figma-token.txt`, hoy ausente). Nota: algunos másters
-  no traen asset real (p. ej. Menu, SectionBanner) → seguirán con placeholder.
+Estado actual: solo `footer-illustration.webp` está aplicada; el resto de módulos con
+`AspectRatio` usan placeholder. El sandbox NO tiene red a figma.com → ruta recomendada:
+**Claude in Chrome** (fetch → Descargas → optimizar a WebP → `src/assets/images` →
+cablear). Alternativa local: `npm run figma:asset` (requiere `figma-token.txt`, hoy
+ausente). Flujo en `docs/assets-workflow.md`.
+
+- [ ] **1. Inventario** — listar módulos con imagen y qué asset real trae cada máster en
+  Figma (marcar los que NO traen asset: seguirán con placeholder por diseño; p. ej. Menu,
+  SectionBanner).
+- [ ] **2. Descargar** los bytes vía Claude in Chrome (o `npm run figma:asset` si hay token).
+- [ ] **3. Optimizar** (raster→WebP; SVG con SVGO conservando viewBox y currentColor) y
+  colocar en `src/assets/{images|illustrations}`.
+- [ ] **4. Cablear** cada imagen en su módulo (vía `AspectRatio`) y verificar con
+  `build-storybook` (a `/tmp`).
+- [ ] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
+
+Módulos con `AspectRatio` a revisar: SectionBanner, Hero, SectionHero, SectionHeader,
+ContentImageOnly, ContentTextImage, Timeline, Menu, CardsShowcase, CardsCategories,
+CardsGallery, CardsProductCarousel, Toast.
 
 ## Fase 5 — Page Templates (SPRINT 1)
 

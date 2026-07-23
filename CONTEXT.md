@@ -79,10 +79,12 @@ Comandos: `npm run dev` (Vite), `npm run storybook` (docs, :6006), `npm run buil
 
 Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vite + Storybook build OK), acceso a Figma validado, plan generado.
 
-**⚠️ Hito activo — Fase 4.5 (Imágenes):** la Fase 4 (Módulos) está completa. Antes de
-empezar los Page Templates, Claude DEBE proponer al usuario aplicar las imágenes reales de
-Figma a todos los módulos (§13 «Imágenes»), sobre el componente `AspectRatio`. Este paso es
-fácil de olvidar: está trazado como ítem propio en `PLAN.md` (Fase 4.5) — no lo saltes.
+### Hitos activos (revisar al arrancar sesión — §11)
+
+- 🔴 **Fase 4.5 — Hito de imágenes** (Instrucciones v2 §14). La Fase 4 (Módulos) está
+  completa. Antes de empezar los Page Templates, Claude DEBE proponer al usuario aplicar
+  las imágenes reales de Figma a todos los módulos, sobre el componente `AspectRatio`.
+  Trazado como ítem propio (5 pasos) en `PLAN.md` → Fase 4.5. **No se salta.**
 
 ## 10. Notas / decisiones pendientes
 
