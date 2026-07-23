@@ -3,6 +3,7 @@ import ListNumbers from './ListNumbers.jsx';
 const meta = {
   title: 'Módulos/List · Numbers',
   component: ListNumbers,
+  globals: { theme: 'light-grey' }, // el módulo fija este subtema en su raíz
   parameters: { layout: 'fullscreen' },
 };
 export default meta;

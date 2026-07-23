@@ -3,6 +3,7 @@ import SectionHeader from './SectionHeader.jsx';
 const meta = {
   title: 'Módulos/Hero · Section header',
   component: SectionHeader,
+  globals: { theme: 'dark-black-neutral' }, // el módulo fija este subtema en su raíz
   parameters: { layout: 'fullscreen' },
   argTypes: {
     type: { control: 'inline-radio', options: ['big', 'small'] },

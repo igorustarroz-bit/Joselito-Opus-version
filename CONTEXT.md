@@ -56,6 +56,7 @@ Comandos: `npm run dev` (Vite), `npm run storybook` (docs, :6006), `npm run buil
 - Componentes primero los que son base de otros (en Figma, los `z_fragment_*` son subcomponentes base).
 - Nada de valores hardcodeados: todo desde tokens o subcomponentes. Cualquier valor fuera de tokens/estilos es un posible error → avisar.
 - Colores aplicados vía **colores semánticos**. Subtemas = modos de `Semantic-Color`, expuestos como `data-theme` (un hijo puede sobreescribir al padre).
+- **Subtemas por módulo (no globales):** un módulo/componente que va siempre en un subtema concreto fija su propio `data-theme` en su **elemento raíz** (fuente de verdad; se ve bien en cualquier contexto). No dependas del toolbar global de Storybook para el aspecto real. En Storybook, cada módulo que se auto-tematiza declara su subtema por defecto con `globals: { theme: '<modo>' }` a nivel de meta (o de story si las variantes difieren), manteniendo el toolbar para probar otros modos. Modos: `default` (Light-White), `light-grey`, `dark-red-primary`, `dark-black-neutral`, `light-yellow`.
 - Breakpoints = modos de la colección `Responsive`; deben coincidir en Storybook.
 - Grid de **12 columnas** en todos los módulos.
 - Documentación por elemento en Storybook: demos con `<Canvas>` (nunca `<Story>`), variantes en horizontal con `flex-wrap`, cajas de demo sin altura fija (dependen del contenido).
