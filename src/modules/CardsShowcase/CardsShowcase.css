@@ -1,5 +1,6 @@
 /* Módulo Cards / Showcase — cabecera + carrusel de tarjetas grandes (máster 58182:4396).
-   Desktop Many: slides asomando (scroll). One: una sola a todo el ancho. Mobile: full.
+   Desktop Many: slides horizontales asomando (scroll, ~1000px). One: una a todo el ancho.
+   Mobile Many: tarjetas VERTICALES (imagen arriba) de 249px con scroll.
    Breakpoint desktop: 768px. */
 
 .jl-showcase {
@@ -8,8 +9,8 @@
   border-bottom: 1px solid var(--stroke-neutral-3);
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 68px var(--grid-wrapper) 88px;
+  gap: 32px;
+  padding: 40px var(--grid-wrapper) 64px;
   box-sizing: border-box;
 }
 .jl-showcase * { box-sizing: border-box; }
@@ -32,14 +33,26 @@
 
 .jl-showcase__track {
   display: flex;
-  gap: 60px;
+  gap: 32px;
   overflow-x: auto;
 }
 .jl-showcase__slide {
   flex: 0 0 100%;
   min-width: 0;
 }
+.jl-showcase--many .jl-showcase__slide { flex: 0 0 249px; }
+
+/* Mobile: la tarjeta (reutilizada horizontal) se muestra VERTICAL (imagen arriba). */
+@media (max-width: 767px) {
+  .jl-showcase__slide.jl-carrusel--h { flex-direction: column; gap: 20px; }
+  .jl-showcase__slide.jl-carrusel--h .jl-carrusel__media { flex: none; width: 100%; }
+  .jl-showcase__slide.jl-carrusel--h .jl-carrusel__content { align-self: auto; gap: 40px; }
+  .jl-showcase__slide.jl-carrusel--h .jl-carrusel__texts { gap: 16px; }
+}
 
 @media (min-width: 768px) {
+  .jl-showcase { gap: 40px; padding: 68px var(--grid-wrapper) 88px; }
+  .jl-showcase__track { gap: 60px; }
   .jl-showcase--many .jl-showcase__slide { flex: 0 0 1000px; max-width: 1000px; }
+  .jl-showcase--one .jl-showcase__slide { flex: 0 0 100%; }
 }

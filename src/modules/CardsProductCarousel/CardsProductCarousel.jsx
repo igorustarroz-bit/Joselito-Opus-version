@@ -35,7 +35,7 @@ export default function CardsProductCarousel({
   return (
     <section className={`jl-carousel ${className}`.trim()} {...rest}>
       <div className="jl-carousel__head">
-        {eyebrow && <p className="jl-carousel__eyebrow ts-body-4">{eyebrow}</p>}
+        {eyebrow && <p className="jl-carousel__eyebrow">{eyebrow}</p>}
         {link && (
           <a className="jl-carousel__link ts-body-3" href={linkHref}>
             {link}

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 48px 20px;
+  padding: 40px 24px 64px;
   box-sizing: border-box;
 }
 .jl-carousel * { box-sizing: border-box; }
@@ -19,7 +19,13 @@
   justify-content: space-between;
   gap: 16px;
 }
-.jl-carousel__eyebrow { color: var(--text-base); margin: 0; }
+/* Antetítulo: Body/03 en mobile, Body/04 en desktop (según máster) */
+.jl-carousel__eyebrow {
+  color: var(--text-base);
+  margin: 0;
+  font-size: var(--ts-body-3-sz);
+  line-height: var(--ts-body-3-lh);
+}
 .jl-carousel__link {
   display: inline-flex;
   align-items: center;
@@ -31,18 +37,22 @@
 
 .jl-carousel__track {
   display: flex;
-  gap: 16px;
+  gap: 32px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
 .jl-carousel__card {
-  flex: 0 0 260px;
-  width: 260px;
+  flex: 0 0 281px;
+  width: 281px;
   scroll-snap-align: start;
 }
 
 @media (min-width: 768px) {
   .jl-carousel { gap: 48px; padding: 68px 80px; }
+  .jl-carousel__eyebrow {
+    font-size: var(--ts-body-4-sz);
+    line-height: var(--ts-body-4-lh);
+  }
   .jl-carousel__track { gap: 48px; justify-content: center; }
   .jl-carousel__card { flex: 0 0 329px; width: 329px; }
 }

@@ -1,6 +1,7 @@
 /* Módulo Cards / Categories — feed de redes (máster 58182:4401).
-   Cabecera (antetítulo + iconos sociales) + fila escalonada de miniaturas con handle.
-   Miniaturas alternan retrato/apaisado, alineadas por abajo. Breakpoint: 768px. */
+   RRSS: desktop iconos en cabecera + handles; mobile iconos abajo + sin handles.
+   Instagram: sin iconos, miniaturas centradas + pie "SÍGUENOS / @cuenta".
+   Miniaturas retrato/apaisado alineadas por abajo. Breakpoint desktop: 768px. */
 
 .jl-categories {
   width: 100%;
@@ -8,13 +9,14 @@
   border-bottom: 1px solid var(--stroke-neutral-4);
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 68px 20px;
+  gap: 80px;
+  padding: 40px var(--grid-wrapper) 64px;
   box-sizing: border-box;
   overflow: hidden;
 }
 .jl-categories * { box-sizing: border-box; }
 
+/* Cabecera (solo RRSS) */
 .jl-categories__head {
   display: flex;
   align-items: center;
@@ -22,31 +24,55 @@
   gap: 24px;
   flex-wrap: wrap;
 }
-.jl-categories__eyebrow { color: var(--text-base); margin: 0; }
+.jl-categories__eyebrow {
+  color: var(--text-base);
+  margin: 0;
+  font-size: var(--ts-body-3-sz);
+  line-height: var(--ts-body-3-lh);
+}
+
+/* Iconos sociales */
 .jl-categories__socials { display: flex; align-items: center; gap: 20px; }
 .jl-categories__socials a { color: var(--text-base); display: inline-flex; }
+.jl-categories__socials--head { display: none; }          /* mobile: no en cabecera */
+.jl-categories__socials--foot { justify-content: center; width: 100%; } /* mobile: abajo centrado */
 
+/* Miniaturas */
 .jl-categories__track {
   display: flex;
   align-items: flex-end;
-  gap: 48px;
+  gap: 32px;
   overflow-x: auto;
   padding-bottom: 4px;
 }
-.jl-categories__thumb {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  flex: 0 0 auto;
-}
+.jl-categories--instagram .jl-categories__track { justify-content: center; }
+.jl-categories__thumb { margin: 0; display: flex; flex-direction: column; gap: 36px; flex: 0 0 auto; }
 .jl-categories__media { width: 204px; }
 .jl-categories__thumb--landscape .jl-categories__media { width: 268px; }
 .jl-categories__ar { background: var(--bg-neutral-2); }
 .jl-categories__ar > img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .jl-categories__handle { color: var(--text-neutral-2); margin: 0; white-space: nowrap; }
+/* RRSS mobile: miniaturas sin handle */
+.jl-categories--rrss .jl-categories__handle { display: none; }
+
+/* Pie de Instagram */
+.jl-categories__follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.jl-categories__follow-label { color: var(--text-neutral-2); text-transform: uppercase; margin: 0; }
+.jl-categories__follow-account { color: var(--text-base); text-transform: uppercase; margin: 0; }
+.jl-categories--instagram { align-items: center; gap: 131px; padding-top: 112px; }
 
 @media (min-width: 768px) {
   .jl-categories { padding: 68px 80px; gap: 48px; }
+  .jl-categories__eyebrow { font-size: var(--ts-body-4-sz); line-height: var(--ts-body-4-lh); }
+  .jl-categories__socials--head { display: flex; }         /* desktop: en cabecera */
+  .jl-categories__socials--foot { display: none; }         /* desktop: no abajo */
   .jl-categories__track { gap: 80px; }
+  .jl-categories--rrss .jl-categories__handle { display: block; } /* desktop: con handle */
+  .jl-categories--instagram { padding-top: 112px; gap: 131px; }
 }

@@ -27,21 +27,25 @@ Hereda el subtema del contenedor vía `data-theme`; un hijo puede sobrescribir a
 
 ## Comportamiento
 
-- **RRSS:** muestra el set completo de iconos sociales.
-- **Instagram:** solo el icono de Instagram (prop `socials`).
-- Las miniaturas fluyen en **scroll horizontal**, alineadas por abajo.
-- Borde inferior en el módulo. Breakpoint en **M-768**.
+- **RRSS · desktop:** antetítulo a la izquierda + iconos sociales a la derecha en la
+  cabecera; miniaturas **con handle**.
+- **RRSS · mobile:** antetítulo solo arriba; miniaturas **sin handle**; iconos
+  sociales **abajo, centrados**.
+- **Instagram:** sin iconos; miniaturas centradas y un pie centrado "SÍGUENOS /
+  @cuenta".
+- Las miniaturas fluyen en **scroll horizontal**, alineadas por abajo. Borde inferior
+  en el módulo. Breakpoint en **M-768**.
 
 <Canvas of={Stories.Instagram} />
 <Canvas of={Stories.Mobile} />
 
 ## Variantes y tamaños
 
-`socials` controla los iconos (RRSS vs Instagram). `items` define las miniaturas y
-su `ratio` (3:4 / 3:2).
+`variant`: **rrss** (iconos) · **instagram** (pie con cuenta). `items` define las
+miniaturas y su `ratio` (3:4 / 3:2); `socials` el set de iconos.
 
-> **Nota de máster:** el antetítulo usa el color base (en el máster, `secondary-1`,
-> visualmente casi negro). Sin `image`, las miniaturas muestran un placeholder.
+> **Nota de máster:** el antetítulo usa el color base. Sin `image`, las miniaturas
+> muestran un placeholder.
 
 ## Tokens
 
