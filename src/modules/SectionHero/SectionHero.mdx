@@ -1,0 +1,90 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './SectionHero.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Hero / Section hero
+
+Cabecera de sección a **100% de ancho**: un bloque de texto centrado (antetítulo
++ título) acompañado de una imagen. Se usa para abrir secciones de contenido
+(no confundir con el `Hero / Homepage hero`, que lleva navegación y CTA).
+
+Máster de Figma: `Hero / Section hero` (`58508:35830`), 6 variantes: **Desktop**
+(1440) y **Mobile** (390) × 3 layouts (**Full bleed**, **Margins**, **Small image**).
+
+## Demo
+
+<Canvas of={Stories.FullBleed} />
+
+## Anatomía
+
+1. **Antetítulo / eyebrow** (`Body/03`, `--text-neutral-2`) — opcional.
+2. **Título** (`SangBleu`, `Title/04`, `--text-base`) — máx. 842px en desktop, centrado.
+3. **Imagen** — a sangre, dentro de márgenes o pequeña 3:4 según el layout.
+   Reutiliza el foundation **Aspect Ratio** en la variante `small-image`.
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme` (colores por tokens
+semánticos). Un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **Full bleed:** imagen a ancho completo del viewport; ratio **1:1** en mobile y
+  **16:9** en desktop. Sin borde. Texto arriba, imagen debajo.
+- **Margins:** igual que Full bleed pero la imagen queda dentro de los márgenes
+  (`--grid-wrapper`) y añade **borde inferior**.
+- **Small image:** imagen pequeña **3:4** (158px mobile / 180px desktop) colocada
+  **encima** del texto, con borde inferior. El gap texto-imagen es 54px en mobile
+  y 80px en desktop.
+- Breakpoint desktop en **M-768**; intermedios inferidos. La tipografía escala por
+  breakpoint vía los tokens `.ts-*`.
+- Orden del DOM siempre título→imagen (imagen decorativa); en `small-image` la
+  imagen se sube visualmente con `order` en CSS.
+
+<Canvas of={Stories.Margins} />
+<Canvas of={Stories.SmallImage} />
+<Canvas of={Stories.MobileFullBleed} />
+<Canvas of={Stories.MobileSmallImage} />
+
+## Variantes y tamaños
+
+`layout`: `full-bleed` · `margins` · `small-image`. Antetítulo y título opcionales.
+
+> **Nota de máster:** los gaps y paddings de 80px (y 54px en small-image mobile)
+> están hardcodeados en el máster (no ligados a variables Responsive), por lo que
+> se replican como valores fijos. Los márgenes laterales sí usan `--grid-wrapper`.
+> Sin `image`, el área multimedia muestra un placeholder (`--bg-accent-base`).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Antetítulo | `--text-neutral-2` |
+| Título | `--text-base` |
+| Borde inferior (Margins / Small image) | `--stroke-neutral-3` |
+| Placeholder de imagen | `--bg-accent-base` |
+| Márgenes laterales | `--grid-wrapper` |
+| Tipografías | `.ts-body-3`, `.ts-title-4` |
+| Gap interno texto | `--spacer-fx-8` (32) |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string \| null` | máster | Antetítulo (`null`/`''` = oculto) |
+| `title` | `string` | máster | Título principal |
+| `layout` | `'full-bleed' \| 'margins' \| 'small-image'` | `full-bleed` | Disposición |
+| `image` | `string` | — | URL de la imagen (sin ella, placeholder) |
+| `alt` | `string` | `''` | Texto alternativo de la imagen |
+
+## Accesibilidad
+
+- Título como `<h2>` (cabecera de sección, no de página).
+- Imagen decorativa con `alt=""`; si la imagen aporta contenido, pásale un `alt`.
+- Contraste garantizado por los tokens semánticos del subtema.
+
+## Componentes relacionados
+
+`Aspect Ratio` (foundation), `Hero / Homepage hero`, y los módulos `Content / *`.

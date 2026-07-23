@@ -1,0 +1,119 @@
+/* Módulo Hero / Section hero — máster Figma 58508:35830.
+   Contenedor a 100% de ancho, bloque de texto centrado + imagen.
+   Colores/tipografías por tokens. Los gaps/paddings de 80/54px son fijos
+   (hardcodeados en el máster, no ligados a variables); los márgenes laterales
+   usan el token responsive --grid-wrapper. Breakpoint desktop: 768px. */
+
+.jl-shero {
+  width: 100%;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ---- Bloque de texto (común) ---- */
+.jl-shero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacer-fx-8); /* 32 */
+  width: 100%;
+  text-align: center;
+}
+.jl-shero__eyebrow {
+  color: var(--text-neutral-2);
+  white-space: nowrap;
+}
+.jl-shero__title {
+  color: var(--text-base);
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
+/* ---- Área multimedia (común) ---- */
+.jl-shero__media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-accent-base); /* placeholder cuando no hay imagen */
+}
+.jl-shero__media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Variante: Full bleed — imagen a ancho completo, sin borde.
+   ========================================================================== */
+.jl-shero--full-bleed {
+  gap: 80px;
+  padding-top: 80px;
+}
+.jl-shero--full-bleed .jl-shero__text {
+  padding-inline: var(--grid-wrapper);
+}
+.jl-shero--full-bleed .jl-shero__media {
+  aspect-ratio: 1 / 1;
+}
+
+/* ==========================================================================
+   Variante: Margins — imagen dentro de los márgenes + borde inferior.
+   ========================================================================== */
+.jl-shero--margins {
+  gap: 80px;
+  padding: 80px var(--grid-wrapper) 24px;
+  border-bottom: 1px solid var(--stroke-neutral-3);
+}
+.jl-shero--margins .jl-shero__media {
+  aspect-ratio: 1 / 1;
+}
+
+/* ==========================================================================
+   Variante: Small image — imagen pequeña 3:4 arriba, texto debajo + borde.
+   ========================================================================== */
+.jl-shero--small-image {
+  gap: 54px;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--stroke-neutral-3);
+}
+.jl-shero--small-image .jl-shero__text {
+  order: 2;
+  padding-inline: var(--grid-wrapper);
+}
+.jl-shero__media--small {
+  order: 1;
+  width: 158px;
+  background: transparent;
+  overflow: visible;
+}
+.jl-shero__ar {
+  background: var(--bg-accent-base); /* placeholder */
+}
+
+/* ==========================================================================
+   Desktop (>= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .jl-shero__title {
+    max-width: 842px;
+  }
+
+  .jl-shero--full-bleed .jl-shero__media,
+  .jl-shero--margins .jl-shero__media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .jl-shero--margins {
+    padding: 80px;
+  }
+
+  .jl-shero--small-image {
+    gap: 80px;
+  }
+  .jl-shero__media--small {
+    width: 180px;
+  }
+}
