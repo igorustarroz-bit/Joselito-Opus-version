@@ -1,5 +1,7 @@
-/* Módulo Navigation (header principal) — a 100% de ancho. Desktop: enlaces (izq),
-   logo centrado, acciones (der). Mobile: hamburguesa + logo + iconos. Modo Light/Dark. */
+/* Módulo Navigation (header principal) — máster Figma 58182:4143.
+   Desktop 1440×70 (padding 24/40): enlaces (izq) · logo centrado · acciones (der).
+   Mobile 390×56 (padding 12/24): hamburguesa (2 barras) · logo centrado · iconos.
+   Modo Light (fondo base) / Dark (transparente, texto blanco). */
 
 .jl-nav {
   position: relative;
@@ -13,22 +15,30 @@
 }
 .jl-nav--dark { background: transparent; color: var(--color-neutral-white); }
 
+/* Logo centrado. La caja del máster es 126×84 (height=84); el wordmark ocupa la
+   franja central del SVG, así que la caja rebasa la barra pero es transparente. */
 .jl-nav__logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; color: inherit; }
+.jl-nav__logo svg { height: 84px; width: auto; display: block; }
 
-.jl-nav__desktop { display: none; }
+/* Mobile */
 .jl-nav__mobile { display: flex; flex: 1; align-items: center; justify-content: space-between; }
 .jl-nav__mobile-right { display: flex; align-items: center; gap: 12px; }
-.jl-nav__iconbtn { background: none; border: 0; padding: 0; cursor: pointer; color: inherit; display: inline-flex; }
+.jl-nav__iconbtn { background: none; border: 0; padding: 0; cursor: pointer; color: inherit; display: inline-flex; align-items: center; }
+/* Hamburguesa de 2 barras (máster: 16×6) */
+.jl-nav__burger { flex-direction: column; justify-content: center; gap: 3px; width: 24px; height: 24px; }
+.jl-nav__burger span { display: block; width: 16px; height: 1.5px; background: currentColor; }
 
+/* Desktop groups */
+.jl-nav__desktop { display: none; }
 .jl-nav__links { display: flex; gap: 20px; align-items: center; }
 .jl-nav__link { color: inherit; text-decoration: none; }
 .jl-nav__actions { display: flex; gap: 20px; align-items: center; }
-.jl-nav__action { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; background: none; border: 0; cursor: pointer; }
+.jl-nav__action { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; background: none; border: 0; cursor: pointer; font: inherit; }
 .jl-nav__cart { color: var(--text-accent-base); display: inline-flex; gap: 4px; }
 .jl-nav--dark .jl-nav__cart { color: var(--color-neutral-white); }
 
 @media (min-width: 768px) {
-  .jl-nav { padding: 24px 40px; }
+  .jl-nav { padding: 24px 40px; min-height: 70px; }
   .jl-nav__desktop { display: flex; flex: 1; align-items: center; justify-content: space-between; }
   .jl-nav__mobile { display: none; }
 }

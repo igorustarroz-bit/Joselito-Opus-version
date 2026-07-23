@@ -5,6 +5,8 @@ import * as Stories from './Navigation.stories.jsx';
 
 # Módulo · Navigation (header)
 
+Máster Figma `58182:4143` (set Device=Desktop/Mobile × Mode=Light/Dark; Desktop 1440×70, Mobile 390×56).
+
 Cabecera principal a 100% de ancho. En **desktop**: enlaces de sección a la izquierda,
 **logo** centrado (BrandLogo) y acciones a la derecha (Buscar con icono, Cuenta y Cesta con
 contador en color de acento). En **mobile**: botón de menú (hamburguesa), logo centrado e
@@ -22,8 +24,8 @@ texto blanco, para superponer sobre imágenes/heros oscuros).
 3. **Enlaces de sección** (`.jl-nav__links` › `.jl-nav__link`): navegación principal, tipografía Body/02.
 4. **Acciones** (`.jl-nav__actions` › `.jl-nav__action`): Buscar (con icono `MagnifyingGlass`), Cuenta y Cesta.
 5. **Cesta** (`.jl-nav__cart`): enlace con contador; el número usa color de acento.
-6. **Bloque mobile** (`.jl-nav__mobile`): botón de menú (`List`) a la izquierda e iconos de búsqueda (`MagnifyingGlass`) y cesta (`Bag`) a la derecha.
-7. **Logo** (`.jl-nav__logo`): `BrandLogo` horizontal (altura 56px) centrado en absoluto.
+6. **Bloque mobile** (`.jl-nav__mobile`): botón de menú (hamburguesa de **2 barras**, `.jl-nav__burger`, 16×6 como el máster) a la izquierda e iconos de búsqueda (`MagnifyingGlass`) y cesta (`Bag`), tamaño M, a la derecha.
+7. **Logo** (`.jl-nav__logo`): `BrandLogo` horizontal centrado en absoluto. Caja **126×84** (altura 84px) como el máster; el wordmark ocupa la franja central del SVG (~22px visibles), por lo que la caja rebasa la barra pero es transparente.
 
 ## Subtemas
 
@@ -34,6 +36,7 @@ para superponerse sobre imágenes o heros oscuros, sin depender del subtema here
 
 ## Comportamiento
 
+- **Tamaños e iconos**: enlaces y acciones en Body/02; icono Buscar a tamaño S (20px) en desktop y M (24px) en mobile; icono Cesta a M (24px). Gaps del máster: 20px entre grupos/acciones (desktop), 12px en mobile, 8px icono↔texto de Buscar, 4px en la cesta.
 - **Estados**: enlaces y acciones son interactivos con cursor `pointer`; heredan color del contenedor (`color: inherit`).
 - **Responsive**: por debajo de **768px** se muestra el bloque mobile (hamburguesa + iconos) y se oculta el desktop; a partir de **768px** se invierte. El padding pasa de `12px 24px` a `24px 40px`.
 - **Modo dark**: `.jl-nav--dark` aplica fondo transparente y texto blanco; el contador de la cesta también pasa a blanco.
@@ -83,6 +86,6 @@ Dos modos controlados por la prop `mode`:
 
 ## Componentes relacionados
 
-- [Icon](/docs/componentes-icon--docs) — iconos `MagnifyingGlass`, `List`, `Bag`.
+- [Icon](/docs/componentes-icon--docs) — iconos `MagnifyingGlass` y `Bag` (la hamburguesa mobile es de 2 barras vía CSS, no un icono).
 - [BrandLogo](/docs/componentes-brandlogo--docs) — logo centrado.
 - Módulos de la familia Navigation: Breadcrumb, PreviousNext, Secondary menu.
