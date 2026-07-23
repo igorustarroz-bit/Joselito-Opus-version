@@ -16,7 +16,7 @@ Cada elemento, al programarse, se lee de Figma con `get_design_context`, se trad
 - [x] Convertir fuentes `fonts-raw/` → `.woff2` en `public/fonts/` + `@font-face` (Euclid Circular B, SangBleu Empire) — otros cortes SangBleu (Kingdom/Republic/Sunrise/Versailles) pendientes de confirmar uso
 - [x] Commit + push inicial a GitHub
 - [x] Workflow de despliegue de Storybook a GitHub Pages (`.github/workflows/deploy.yml`)
-- [ ] **Activar GitHub Pages en Settings → Pages → Source: GitHub Actions** (paso manual del usuario; sin esto el deploy falla)
+- [x] **Activar GitHub Pages en Settings → Pages → Source: GitHub Actions** (hecho por el usuario)
 
 ## Fase 1 — Tokens / Foundations (PRIORITARIO, antes de cualquier componente)
 
