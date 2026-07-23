@@ -96,7 +96,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Cards / Gallery — máster `58163:40311` (Desktop/Mobile · default/expanded). Cabecera + galería de CardProduct con ratio alterno 3:4/1:1 (escalonado); desktop slider horizontal, mobile 2 columnas. Reutiliza Card Product. `build-storybook` OK + push. Pendiente revisión visual en Pages
 - [x] Cards / Product carousel — máster `58163:83548` (Desktop/Mobile). Cabecera (antetítulo + "Explorar todos") + carrusel de CardProduct con badge/chips/estrellas/CTA; desktop 3 centradas, mobile scroll horizontal. Reutiliza Card Product. `build-storybook` OK + push. Separación desktop aproximada. Pendiente revisión en Pages
 - [x] Cards / Showcase — máster `58182:4396` (Desktop Many/One · Mobile Many). Cabecera + carrusel de CardCarrusel (imagen 3:2 + título/desc/tags/CTA); type many (slides asomando) / one (única). Reutiliza Card Carrusel. `build-storybook` OK + push. Pendiente revisión en Pages
-- [ ] Cards / Categories — `id 58182:4401`
+- [x] Cards / Categories — máster `58182:4401` (Desktop/Mobile × RRSS/Instagram). Feed social: cabecera (antetítulo + iconos sociales) + fila escalonada de miniaturas (ratio alterno 3:4/3:2) con handle. Reutiliza Icon + AspectRatio. `build-storybook` OK + push. Pendiente revisión en Pages
 - [ ] Cards / Accordion — `id 58182:24099`
 - [ ] Banners / Section banner — `id 58182:4380`
 - [ ] Form (módulo) — `id 58195:43756`

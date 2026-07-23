@@ -1,0 +1,76 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardsCategories.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Cards / Categories
+
+Feed de **redes sociales** a 100% de ancho: cabecera con antetítulo e iconos
+sociales, y una fila escalonada de miniaturas con su handle. Máster de Figma:
+`Cards / Categories` (`58182:4401`), variantes **Desktop/Mobile** × **RRSS / Instagram**.
+
+## Demo
+
+<Canvas of={Stories.RRSS} />
+
+## Anatomía
+
+1. **Cabecera** — antetítulo (`Body/04`) + fila de **iconos sociales** (`Icon`,
+   28px): X, Facebook, Instagram, LinkedIn, TikTok.
+2. **Miniaturas** — imagen (`AspectRatio`, retrato 3:4 o apaisado 3:2) + **handle**
+   (`Body/03`, `--text-neutral-2`). Alternan orientación y se alinean por abajo
+   (efecto escalonado).
+
+## Subtemas
+
+Hereda el subtema del contenedor vía `data-theme`; un hijo puede sobrescribir al padre.
+
+## Comportamiento
+
+- **RRSS:** muestra el set completo de iconos sociales.
+- **Instagram:** solo el icono de Instagram (prop `socials`).
+- Las miniaturas fluyen en **scroll horizontal**, alineadas por abajo.
+- Borde inferior en el módulo. Breakpoint en **M-768**.
+
+<Canvas of={Stories.Instagram} />
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+`socials` controla los iconos (RRSS vs Instagram). `items` define las miniaturas y
+su `ratio` (3:4 / 3:2).
+
+> **Nota de máster:** el antetítulo usa el color base (en el máster, `secondary-1`,
+> visualmente casi negro). Sin `image`, las miniaturas muestran un placeholder.
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Antetítulo / iconos | `--text-base` |
+| Handle | `--text-neutral-2` |
+| Placeholder miniatura | `--bg-neutral-2` |
+| Borde inferior | `--stroke-neutral-4` |
+| Tipografías | `.ts-body-4`, `.ts-body-3` |
+
+## Propiedades
+
+<Controls of={Stories.RRSS} />
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `eyebrow` | `string` | `Síguenos en redes sociales` | Antetítulo |
+| `socials` | `string[]` | 5 iconos | Nombres de icono social (`Icon`) |
+| `items` | `{ handle, ratio, image }[]` | 5 miniaturas | Miniaturas del feed |
+| `className` | `string` | — | Clases adicionales |
+
+## Accesibilidad
+
+- Cada icono social es un enlace `<a>` con `aria-label`.
+- Miniaturas como `<figure>`/`<figcaption>`; el handle describe la imagen.
+- Contraste garantizado por los tokens del subtema.
+
+## Componentes relacionados
+
+`Icon`, `Aspect Ratio`, `Navigation / Footer`, `Cards / Gallery`.
