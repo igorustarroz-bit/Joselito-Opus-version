@@ -26,7 +26,9 @@ Máster de Figma: `Hero / Section hero` (`58508:35830`), 6 variantes: **Desktop*
 ## Subtemas
 
 Hereda el subtema del contenedor vía `data-theme` (colores por tokens
-semánticos). Un hijo puede sobrescribir al padre.
+semánticos). La prop opcional `theme` fija `data-theme` en el raíz para forzar un
+subtema en producción (p. ej. el hero de *Manual de Corte* va en `dark-red-primary`).
+Un hijo puede sobrescribir al padre.
 
 ## Comportamiento
 
@@ -54,7 +56,9 @@ semánticos). Un hijo puede sobrescribir al padre.
 > **Nota de máster:** los gaps y paddings de 80px (y 54px en small-image mobile)
 > están hardcodeados en el máster (no ligados a variables Responsive), por lo que
 > se replican como valores fijos. Los márgenes laterales sí usan `--grid-wrapper`.
-> Sin `image`, el área multimedia muestra un placeholder (`--bg-accent-base`).
+> Sin `image`: full-bleed/margins muestran un placeholder neutro (`--bg-neutral-2`); en
+> small-image el contenedor es transparente (la imagen suele ser un recorte PNG que
+> descansa sobre el fondo de la sección).
 
 ## Tokens
 
@@ -64,10 +68,10 @@ semánticos). Un hijo puede sobrescribir al padre.
 | Antetítulo | `--text-neutral-2` |
 | Título | `--text-base` |
 | Borde inferior (Margins / Small image) | `--stroke-neutral-3` |
-| Placeholder de imagen | `--bg-accent-base` |
+| Placeholder de imagen (full-bleed/margins) | `--bg-neutral-2` |
 | Márgenes laterales | `--grid-wrapper` |
 | Tipografías | `.ts-body-3`, `.ts-title-4` |
-| Gap interno texto | `--spacer-fx-8` (32) |
+| Gap interno texto | 24px (mobile) / 32px (desktop) |
 
 ## Propiedades
 
@@ -78,6 +82,7 @@ semánticos). Un hijo puede sobrescribir al padre.
 | `layout` | `'full-bleed' \| 'margins' \| 'small-image'` | `full-bleed` | Disposición |
 | `image` | `string` | — | URL de la imagen (sin ella, placeholder) |
 | `alt` | `string` | `''` | Texto alternativo de la imagen |
+| `theme` | `string` | — | Fija `data-theme` en el raíz (p. ej. `dark-red-primary`) |
 
 ## Accesibilidad
 

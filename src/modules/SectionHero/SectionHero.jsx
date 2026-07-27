@@ -33,12 +33,17 @@ export default function SectionHero({
   layout = 'full-bleed',
   image = sectionHeroImg,
   alt = '',
+  theme,
   className = '',
   ...rest
 }) {
   const isSmall = layout === 'small-image';
   return (
-    <section className={`jl-shero jl-shero--${layout} ${className}`.trim()} {...rest}>
+    <section
+      className={`jl-shero jl-shero--${layout} ${className}`.trim()}
+      data-theme={theme || undefined}
+      {...rest}
+    >
       <div className="jl-shero__text">
         {eyebrow && <p className="jl-shero__eyebrow ts-body-3">{eyebrow}</p>}
         {title && <h2 className="jl-shero__title ts-title-4">{title}</h2>}

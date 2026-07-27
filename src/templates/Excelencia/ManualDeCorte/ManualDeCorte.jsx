@@ -17,7 +17,7 @@ import heroImg from '../../../assets/images/tpl-manual-hero.webp';
  *
  * COMPOSICIÓN (de arriba abajo):
  *   1. Navigation ................. header (claro)
- *   2. Hero / Section hero ........ `layout="small-image"` (claro)
+ *   2. Hero / Section hero ........ `layout="small-image"` · Dark-Red-Primary
  *   3. Fila de navegación ⚠️ ....... sección a medida → mapeada a `SecondaryMenu`
  *   4. Content / Intro text ....... intro centrado (claro)
  *   5. Content Stack .............. acordeón de pasos (2ª fila abierta) (claro)
@@ -25,7 +25,7 @@ import heroImg from '../../../assets/images/tpl-manual-hero.webp';
  *   7. Cards / Showcase ........... `type="many"` (claro)
  *   8. Navigation / Footer ........ footer
  *
- * Toda la página en Light-White.
+ * El hero va en subtema Dark-Red-Primary; el resto de la página en Light-White.
  *
  * Nota de mapeo (decisión del equipo, Instrucciones §13): la franja 3 es una fila de
  * enlaces construida a medida en el máster (no es instancia de un módulo guardado); se
@@ -37,8 +37,8 @@ export default function ManualDeCorte({ className = '', ...rest }) {
       {/* 1 — Navigation */}
       <Navigation />
 
-      {/* 2 — Section hero (small image) */}
-      <SectionHero layout="small-image" image={heroImg} />
+      {/* 2 — Section hero (small image, subtema rojo) */}
+      <SectionHero layout="small-image" image={heroImg} theme="dark-red-primary" />
 
       {/* 3 — ⚠️ Fila de navegación → SecondaryMenu */}
       <SecondaryMenu />
