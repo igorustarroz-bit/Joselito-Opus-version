@@ -1,0 +1,9 @@
+/* Page Template — Excelencia · Añadas.
+ * Pila vertical de módulos a 100% del ancho del viewport. Cada módulo gestiona su
+ * propio grid, paddings y subtema; el template no añade layout ni espaciado extra. */
+.jl-tmpl-anadas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--bg-base);
+}

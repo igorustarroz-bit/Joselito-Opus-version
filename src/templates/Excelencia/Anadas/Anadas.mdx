@@ -1,0 +1,65 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Anadas.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Excelencia / Añadas
+
+Página de la sección **Excelencia** dedicada a las añadas. Es una **composición vertical
+de módulos ya construidos**, en el orden y con los subtemas del máster de Figma.
+
+> **Nota de origen.** La página "↳ Excelencia…" (`58080:18442`) está **en progreso** en
+> Figma (🟠) y contiene varias iteraciones de cada frame. Por indicación del equipo se toma
+> siempre la versión **más a la izquierda** del grupo: desktop `58590:82913` (1440×6971) y
+> mobile `58479:62962` (390×6407).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Intro text | `IntroText` | Light-White |
+| 4 | Cards / Accordion ⚠️ | `CardsAccordion` | Dark-Black-Neutral |
+| 5 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 6 | Content / Text + Image ⚠️ | `ContentTextImage` | `type="left"`, sin label/CTA · Dark-Red-Primary |
+| 7 | List / Timeline | `Timeline` | `image="none"` · Dark-Black-Neutral |
+| 8 | Cards / Showcase | `CardsShowcase` | `type="many"` · Light-White |
+| 9 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Aproximaciones de mapeo.**
+> - **Franja 4:** en el máster es el **acordeón de producto real** (variante
+>   `Type="Accordion"`: imagen + filas desplegables), que **no existe como módulo** — solo
+>   se construyó la banda tipográfica homónima (`CardsAccordion`). Se usa esa como
+>   aproximación; queda pendiente construir el módulo acordeón real (máster `58512:9289`).
+> - **Franja 6:** franja construida a medida (imagen izq + texto der sobre fondo rojo). Se
+>   compone con `ContentTextImage type="left"` envuelto en `data-theme="dark-red-primary"`.
+
+## Subtemas
+
+Franjas oscuras: **4** y **7** en `dark-black-neutral`, **6** en `dark-red-primary`. El resto
+en Light-White. `Timeline` y `CardsAccordion` reciben el subtema por su prop `theme`;
+`ContentTextImage` (sin prop `theme`) se envuelve en un `<div data-theme>`.
+
+## Comportamiento
+
+- **Desktop (≥1024px):** las franjas Text+Image se muestran en fila (según `type`); el
+  Timeline muestra los años gigantes sin foto (`image="none"`).
+- **Mobile:** cada módulo aplica su versión apilada.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre el contenedor `.jl-tmpl-anadas` |
+
+## Componentes relacionados
+
+Módulos que compone: `Navigation`, `SectionHero`, `IntroText`, `CardsAccordion`,
+`ContentTextImage`, `Timeline`, `CardsShowcase`, `Footer`.
