@@ -54,44 +54,47 @@ export default function ContentStack({
       {items.map((item, i) => {
         const isOpen = i === active;
         return (
-          <div className="jl-cstack__item" key={item.number ?? i}>
-            {isOpen ? (
-              <div className="jl-cstack__expanded">
-                {/* Orden DOM: texto → imagen → número. En mobile se apila en ese orden
-                    (como el máster); en desktop el grid recoloca texto arriba-izq,
-                    número abajo-izq e imagen a la derecha. */}
-                <div className="jl-cstack__group">
-                  <div className="jl-cstack__titletext">
-                    <button
-                      type="button"
-                      className="jl-cstack__head"
-                      aria-expanded="true"
-                      onClick={() => setActive(i)}
-                    >
+          <div className="jl-cstack__item" data-open={isOpen} key={item.number ?? i}>
+            {/* Capa expandida (texto + imagen + número). Persistente: no se remonta al
+                cambiar, así el alto puede animarse (grid-template-rows 0fr↔1fr). */}
+            <div className="jl-cstack__wrap jl-cstack__wrap--open" inert={!isOpen || undefined}>
+              <div className="jl-cstack__wrapinner">
+                <div className="jl-cstack__expanded">
+                  {/* Orden DOM: texto → imagen → número. Mobile apila en ese orden; desktop
+                      recoloca con grid (texto arriba-izq, número abajo-izq, imagen derecha). */}
+                  <div className="jl-cstack__group">
+                    <div className="jl-cstack__titletext">
                       <span className="jl-cstack__title ts-title-3">{item.title}</span>
-                    </button>
-                    {item.description && <p className="jl-cstack__desc ts-body-4">{item.description}</p>}
+                      {item.description && <p className="jl-cstack__desc ts-body-4">{item.description}</p>}
+                    </div>
+                    {item.cta && <Button type="secondary" size="s">{item.cta}</Button>}
                   </div>
-                  {item.cta && <Button type="secondary" size="s">{item.cta}</Button>}
+                  {item.image && (
+                    <AspectRatio ratio={item.ratio || ratio} className="jl-cstack__media">
+                      <img src={item.image} alt={item.alt || ''} />
+                    </AspectRatio>
+                  )}
+                  {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
                 </div>
-                {item.image && (
-                  <AspectRatio ratio={item.ratio || ratio} className="jl-cstack__media">
-                    <img src={item.image} alt={item.alt || ''} />
-                  </AspectRatio>
-                )}
-                {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
               </div>
-            ) : (
-              <button
-                type="button"
-                className="jl-cstack__row"
-                aria-expanded="false"
-                onClick={() => setActive(i)}
-              >
-                <span className="jl-cstack__title ts-title-3">{item.title}</span>
-                {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
-              </button>
-            )}
+            </div>
+            {/* Capa colapsada (abre al pulsar) */}
+            <button
+              type="button"
+              className="jl-cstack__wrap jl-cstack__wrap--collapsed"
+              aria-expanded={isOpen}
+              aria-label={item.title}
+              tabIndex={isOpen ? -1 : 0}
+              inert={isOpen || undefined}
+              onClick={() => setActive(i)}
+            >
+              <div className="jl-cstack__wrapinner">
+                <div className="jl-cstack__row">
+                  <span className="jl-cstack__title ts-title-3">{item.title}</span>
+                  {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
+                </div>
+              </div>
+            </button>
           </div>
         );
       })}

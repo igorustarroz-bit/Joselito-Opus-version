@@ -36,7 +36,10 @@ Subtema **claro** por defecto; hereda del contenedor (colores por tokens). Prop 
 - **Desktop (≥768px):** fila abierta en dos columnas (texto | imagen), `space-between`.
 - **Mobile:** fila abierta apilada en el orden del máster (`58468:60235`): **texto → imagen
   → número**, padding 40/24.
-- Interacción: click en cabecera (`<button aria-expanded>`) cambia la fila activa.
+- Interacción: click en la fila colapsada (`<button aria-expanded>`) cambia la fila activa.
+- **Animación de alto:** cada fila es un ítem **persistente** (no se remonta al cambiar), así que
+  al abrir/cerrar el **alto se anima** (`grid-template-rows` 0fr↔1fr) hasta el alto exacto del
+  contenido, con *fade* de opacidad. Respeta `prefers-reduced-motion`.
 
 <Canvas of={Stories.Mobile} />
 

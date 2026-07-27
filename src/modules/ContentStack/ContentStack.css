@@ -15,6 +15,28 @@
   border-bottom: 1px solid var(--stroke-neutral-3);
 }
 
+/* Capas expandida/colapsada: animan el ALTO (grid-template-rows 0fr↔1fr) + opacidad. El hijo
+   (wrapinner) recorta el desborde, de modo que al colapsar la fila llega a 0 (padding incluido)
+   sin dejar espacio residual. Ítems persistentes: no se remontan al cambiar → el alto anima. */
+.jl-cstack__wrap {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 400ms ease, opacity 300ms ease;
+}
+.jl-cstack__wrapinner { overflow: hidden; min-height: 0; }
+/* La capa colapsada es un <button>: resetea estilos de botón. */
+.jl-cstack__wrap--collapsed {
+  width: 100%; border: 0; background: none; padding: 0; margin: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
+}
+.jl-cstack__wrap--collapsed:hover .jl-cstack__title { text-decoration: underline; }
+.jl-cstack__wrap--collapsed:focus-visible { outline: 2px solid var(--stroke-neutral-1); outline-offset: -4px; }
+
+.jl-cstack__item[data-open="true"]  > .jl-cstack__wrap--open      { grid-template-rows: 1fr; }
+.jl-cstack__item[data-open="false"] > .jl-cstack__wrap--open      { grid-template-rows: 0fr; opacity: 0; pointer-events: none; }
+.jl-cstack__item[data-open="true"]  > .jl-cstack__wrap--collapsed { grid-template-rows: 0fr; opacity: 0; pointer-events: none; }
+.jl-cstack__item[data-open="false"] > .jl-cstack__wrap--collapsed { grid-template-rows: 1fr; }
+
 /* Número itálico decorativo (SangBleu), neutro claro. Reusa el tamaño de ts-title-3. */
 .jl-cstack__num {
   font-style: italic;
@@ -25,7 +47,7 @@
   color: var(--text-base);
 }
 
-/* ---- Fila colapsada ---- */
+/* ---- Fila colapsada (contenido) ---- */
 .jl-cstack__row {
   display: flex;
   align-items: center;
@@ -33,14 +55,7 @@
   gap: var(--sp-5);
   width: 100%;
   padding: var(--sp-8) var(--grid-wrapper);
-  border: 0;
-  background: none;
-  cursor: pointer;
-  text-align: left;
-  color: inherit;
 }
-.jl-cstack__row:hover .jl-cstack__title { text-decoration: underline; }
-.jl-cstack__row:focus-visible { outline: 2px solid var(--stroke-neutral-1); outline-offset: -4px; }
 
 /* ---- Fila abierta (mobile-first: texto → imagen → número) ---- */
 .jl-cstack__expanded {
@@ -59,16 +74,6 @@
   flex-direction: column;
   gap: 20px;
 }
-.jl-cstack__head {
-  border: 0;
-  background: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  text-align: left;
-  color: inherit;
-}
-.jl-cstack__head:focus-visible { outline: 2px solid var(--stroke-neutral-1); outline-offset: 2px; }
 .jl-cstack__desc { color: var(--text-neutral-1); }
 .jl-cstack__media { width: 100%; }
 .jl-cstack__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -87,4 +92,9 @@
   .jl-cstack__titletext { gap: 24px; }
   .jl-cstack__media { grid-column: 2; grid-row: 1 / span 2; align-self: stretch; }
   .jl-cstack__num { grid-column: 1; grid-row: 2; align-self: end; }
+}
+
+/* Menos movimiento: sin animación de alto. */
+@media (prefers-reduced-motion: reduce) {
+  .jl-cstack__wrap { transition: none; }
 }
