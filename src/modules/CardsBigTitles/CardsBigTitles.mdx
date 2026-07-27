@@ -33,7 +33,9 @@ Desktop y mobile son **estructuralmente distintos**:
 Subtema **oscuro** (default `dark-black-neutral`, fijado con `parameters.defaultTheme`);
 hereda del contenedor, el toolbar puede cambiarlo. Las palabras usan tokens semánticos:
 rojo `--text-link`, blanco `--text-base` (en los subtemas oscuros `text-base` → blanco y
-`text-link` → rojo de marca).
+`text-link` → rojo de marca). **Excepción `dark-red-primary`** (p. ej. la franja roja de
+Home): el fondo ES el rojo de marca, así que las palabras de acento cambian a `--text-inverted`
+(efecto tonal, como el máster) para no quedar rojo-sobre-rojo; la destacada sigue en `--text-base`.
 
 ## Comportamiento
 

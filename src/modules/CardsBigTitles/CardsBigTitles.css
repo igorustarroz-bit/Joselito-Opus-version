@@ -29,6 +29,12 @@
   color: var(--text-link); /* rojo (token semántico) */
 }
 .jl-typeband__word--light { color: var(--text-base); }
+/* Subtema rojo: el fondo ES --color-primary-50 (= --text-link), así que las palabras de
+   acento no pueden ir en rojo. Como en el máster (franja roja de Home) usan --text-inverted
+   (efecto tonal sobre el rojo); la palabra destacada sigue en --text-base (blanco). */
+[data-theme="dark-red-primary"] .jl-typeband__word:not(.jl-typeband__word--light) {
+  color: var(--text-inverted);
+}
 
 /* ============================ Mobile (por defecto) ============================ */
 .jl-typeband__desktop { display: none; }
