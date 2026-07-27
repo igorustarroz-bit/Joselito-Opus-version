@@ -31,8 +31,9 @@ Desktop y mobile son **estructuralmente distintos**:
 ## Subtemas
 
 Subtema **oscuro** (default `dark-black-neutral`, fijado con `parameters.defaultTheme`);
-hereda del contenedor, el toolbar puede cambiarlo. El rojo usa la primitiva de marca
-`--color-primary-50` (en el subtema oscuro ningún token de texto la devuelve).
+hereda del contenedor, el toolbar puede cambiarlo. Las palabras usan tokens semánticos:
+rojo `--text-link`, blanco `--text-base` (en los subtemas oscuros `text-base` → blanco y
+`text-link` → rojo de marca).
 
 ## Comportamiento
 
@@ -56,7 +57,7 @@ rellena las fotos de fondo.
 | Rol | Token |
 | --- | --- |
 | Fondo | `--bg-base` (subtema oscuro) |
-| Palabras (rojo) | `--text-accent-base` |
+| Palabras (rojo) | `--text-link` |
 | Palabra en blanco | `--text-base` |
 | Placeholder de foto | `--bg-neutral-2` |
 | Tipografía | `--font-family-title` (SangBleu) |

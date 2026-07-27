@@ -188,13 +188,23 @@ Pendientes técnicos:
   "Cards · Big Titles" / "Cards · Accordion"), docs MDX, y las plantillas Home (usa la banda →
   `CardsBigTitles`) y Añadas (usa el acordeón → `CardsAccordion`). Clases CSS internas
   (`jl-typeband*` / `jl-pacc*`) sin cambios (no colisionan). `build-storybook` OK.
-- [ ] **(Hallazgo) Variante `Type=Carrousel` del set "Cards / Accordion"** (`58512:9285` desktop /
-  `58512:9286` mobile). El set `58512:9289` tiene 2 tipos (Accordion + Carrousel); `CardsAccordion`
-  solo cubre Accordion. Pendiente decidir si la variante Carrousel equivale al `CardsProductCarousel`
-  ya existente (otro máster) o es un módulo distinto por construir.
-- [ ] **(Hallazgo) Set nuevo "Accordion-Collapse"** (`58512:82775`, estados Close / Open 1 / Open 2).
-  Parece la pieza colapsable individual del acordeón. Pendiente analizar si se construye como
-  fragment/subcomponente.
+- [x] **Variante `Type=Carrousel` del set "Cards / Accordion"** (`58512:9285` desktop /
+  `58512:9286` mobile) construida como **segundo modo del módulo `CardsAccordion`** (prop
+  `type="accordion" | "carrousel"`), no un módulo aparte. Verificado que NO es el
+  `CardsProductCarousel` existente (ese son tarjetas de producto uniformes, otro máster
+  `58163:83548`): el carrousel es la misma colección del acordeón en carril (ficha central +
+  vecinas asomando + flechas prev/next 56px, scroll-snap). Reutiliza la ficha `.jl-pacc__open`
+  (imagen 404/detalle 315 desktop; imagen 135/columna, ficha 326 mobile). Stories `Carrousel`
+  y `Carrousel · Mobile` + doc. `build-storybook` OK. Aprox.: el asomado queda dentro del
+  wrapper (no sangra al borde como el máster a 1440). Pendiente revisión visual en Pages.
+- [x] **Set nuevo "Accordion-Collapse"** (`58512:82775`, Close / Open 1 / Open 2): identificado
+  como la **sección desplegable del menú móvil** (fila "PRODUCTOS" → lista + destacado, o grid de
+  tarjetas), ya **cubierta funcionalmente dentro del módulo `Menu`** (acordeón mobile CaretDown/Up,
+  lista, `Featured`, grid). Figma solo lo ha extraído como componente reutilizable. Decisión del
+  equipo (2026-07-27): dejarlo como está; opcional extraerlo como fragment si se necesita reuso.
+- [x] **Colores de `CardsBigTitles`** corregidos a tokens semánticos (2026-07-27): palabras rojas
+  `--text-link`, blancas `--text-base` (antes el rojo era la primitiva `--color-primary-50`
+  hardcodeada). Cumple la regla de solo-tokens.
 - [x] **Mobile de `ContentStack`** contrastado contra el máster (`58468:60235`) y corregido:
   el orden mobile ahora es texto → imagen → número (antes imagen y número iban invertidos);
   desktop reimplementado con grid (texto arriba-izq, número abajo-izq, imagen derecha).

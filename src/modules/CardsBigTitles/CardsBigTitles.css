@@ -1,8 +1,9 @@
-/* Módulo Cards / Accordion — banda tipográfica (máster 58182:24099). Subtema oscuro.
+/* Módulo Cards / Big Titles — banda tipográfica (máster 58182:24099). Subtema oscuro.
    Desktop (≥768px): palabras gigantes + fotos al fondo, sin texto/CTA.
    Mobile: eyebrow + palabras + descripción + atributos + botón, sin fotos.
-   El rojo es el de marca (--color-primary-50) porque en el subtema oscuro ningún
-   token de texto lo da. Offsets de fotos aproximados. */
+   Colores de las palabras vía tokens semánticos: rojo = --text-link, blanco = --text-base
+   (en los subtemas oscuros text-base → blanco y text-link → rojo de marca).
+   Offsets de fotos aproximados. */
 
 .jl-typeband {
   position: relative;
@@ -25,7 +26,7 @@
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.03em;
-  color: var(--color-primary-50); /* rojo de marca */
+  color: var(--text-link); /* rojo (token semántico) */
 }
 .jl-typeband__word--light { color: var(--text-base); }
 

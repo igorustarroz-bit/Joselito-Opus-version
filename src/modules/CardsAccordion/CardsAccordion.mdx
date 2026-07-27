@@ -5,8 +5,15 @@ import * as Stories from './CardsAccordion.stories.jsx';
 
 # Módulo · Cards / Accordion
 
-Acordeón de producto a 100% de ancho para presentar una colección. Un panel está **abierto**
-(ficha completa) y el resto **colapsados**; al pulsar un colapsado, ese se abre.
+Módulo a 100% de ancho para presentar una colección de producto. Tiene **dos variantes**
+(prop `type`, ambas en el component set de Figma):
+
+- **`type="accordion"`** (por defecto): un panel **abierto** (ficha completa) y el resto
+  **colapsados**; al pulsar un colapsado, ese se abre.
+- **`type="carrousel"`**: carril horizontal con la ficha central + las vecinas asomando y
+  **flechas** prev/next (scroll-snap).
+
+Ambas comparten la misma ficha (imagen 3:4 + título + estrellas + cuerpo + tags + enlace).
 
 > **Nomenclatura.** En Figma el nodo se llama "Cards / Accordion" (variante `Type=Accordion`,
 > component set `58512:9289`) y este módulo lleva el mismo nombre. La antigua banda tipográfica
@@ -43,8 +50,16 @@ Subtema **claro** por defecto; hereda del contenedor. Prop opcional `theme` para
 
 ## Variantes y tamaños
 
-Toggles del máster por instancia: `showStars`, `showBody`, `showLabels`, `showLink`.
-`defaultActive` fija la ficha abierta inicial.
+`type="accordion"` (default) o `type="carrousel"`. Toggles del máster por instancia:
+`showStars`, `showBody`, `showLabels`, `showLink`. `defaultActive` fija la ficha abierta
+inicial (variante accordion).
+
+<Canvas of={Stories.Carrousel} />
+
+Máster carrousel `58512:9285` (desktop) / `58512:9286` (mobile). Ficha 863px en desktop
+(imagen 404 + detalle 315 + padding 48) y 326px en mobile; flechas `UI02` de 56px.
+Nota: el asomado de las vecinas queda dentro del wrapper (no sangra al borde como el máster
+a 1440px).
 
 ## Tokens
 
@@ -61,6 +76,7 @@ Toggles del máster por instancia: `showStars`, `showBody`, `showLabels`, `showL
 
 | Prop | Tipo | Defecto | Descripción |
 | --- | --- | --- | --- |
+| `type` | `'accordion' \| 'carrousel'` | `'accordion'` | Presentación: acordeón o carril |
 | `eyebrow` | `string` | `'Nuestra colección'` | Antetítulo de la cabecera |
 | `link` / `linkHref` | `string` | `'Ver todos'` / `'#'` | Enlace de la cabecera |
 | `title` | `string` | — | Título SangBleu |

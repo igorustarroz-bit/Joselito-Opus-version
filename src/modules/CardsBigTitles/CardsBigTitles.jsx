@@ -16,9 +16,8 @@ import photo3 from '../../assets/images/accordion-2.webp';
  *  - Mobile (58182:24097): eyebrow + 3 palabras + descripción + atributos + botón
  *    (terciary). Sin fotos.
  *
- * El rojo es el rojo de marca (`--color-primary-50`): en el subtema oscuro ningún
- * token semántico de texto lo devuelve (accent-base → blanco), así que se usa la
- * primitiva de marca directamente.
+ * Colores de las palabras vía tokens semánticos: rojo = `--text-link`, blanco =
+ * `--text-base` (en los subtemas oscuros `text-base` → blanco y `text-link` → rojo de marca).
  *
  * Subtema oscuro por defecto (parameters.defaultTheme en Storybook); hereda del
  * contenedor. Nota: offsets de fotos en desktop aproximados.

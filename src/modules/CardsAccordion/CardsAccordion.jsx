@@ -1,5 +1,5 @@
 import './CardsAccordion.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 import Tag from '../../components/Tag/Tag.jsx';
 import ActionLink from '../../components/ActionLink/ActionLink.jsx';
@@ -7,9 +7,11 @@ import Icon from '../../components/Icon/Icon.jsx';
 import fillerImg from '../../assets/images/generic-filler.webp';
 
 /**
- * Módulo Cards / Accordion — variante **Type=Accordion** (acordeón de producto).
- * Máster Figma: component set `58512:9289`, variantes Desktop `58512:9287` y
- * Mobile `58512:9288`.
+ * Módulo Cards / Accordion — component set `58512:9289`. Dos variantes vía prop `type`:
+ *  - `type="accordion"` (por defecto): acordeón de producto (másters Desktop `58512:9287`
+ *    / Mobile `58512:9288`). Un panel abierto + colapsados.
+ *  - `type="carrousel"`: carril de fichas con scroll-snap + flechas prev/next (másters
+ *    Desktop `58512:9285` / Mobile `58512:9286`). Reutiliza la misma ficha (`.jl-pacc__open`).
  *
  * Nomenclatura: en Figma este nodo se llama "Cards / Accordion" y este módulo lleva
  * el mismo nombre. La antigua banda tipográfica (máster `58182:24099`), que antes se
@@ -48,6 +50,7 @@ export default function CardsAccordion({
   linkHref = '#',
   title = 'Elige el jamón que mejor se adapte a tu celebración.',
   items = DEFAULT_ITEMS,
+  type = 'accordion',
   defaultActive = 0,
   showStars = true,
   showBody = true,
@@ -58,55 +61,99 @@ export default function CardsAccordion({
   ...rest
 }) {
   const [active, setActive] = useState(defaultActive);
+  const trackRef = useRef(null);
 
+  const header = (
+    <div className="jl-pacc__header">
+      <div className="jl-pacc__toprow">
+        <span className="jl-pacc__eyebrow ts-body-4">{eyebrow}</span>
+        {link && (
+          <a className="jl-pacc__seeall" href={linkHref}>
+            <span className="ts-body-3">{link}</span>
+            <Icon name="CaretRight" size="M" />
+          </a>
+        )}
+      </div>
+      {title && <h2 className="jl-pacc__title ts-title-3">{title}</h2>}
+    </div>
+  );
+
+  /* Contenido de una ficha (imagen 3:4 + detalle), compartido por acordeón y carrousel. */
+  const cardInner = (it) => (
+    <>
+      {it.image && (
+        <AspectRatio ratio="3:4" className="jl-pacc__media">
+          <img src={it.image} alt={it.alt || ''} />
+        </AspectRatio>
+      )}
+      <div className="jl-pacc__details">
+        <div className="jl-pacc__group">
+          <h3 className="jl-pacc__ptitle ts-title-3">{it.title}</h3>
+          {showStars && it.stars > 0 && (
+            <div className="jl-pacc__stars" aria-label={`${it.stars} de 3`}>
+              {Array.from({ length: it.stars }).map((_, s) => (
+                <Icon key={s} name="Star" size={18} />
+              ))}
+            </div>
+          )}
+          <div className="jl-pacc__bodywrap">
+            {showBody && it.body && <p className="jl-pacc__body ts-body-3">{it.body}</p>}
+            {showLabels && it.labels?.length > 0 && (
+              <div className="jl-pacc__tags">
+                {it.labels.map((l, k) => (
+                  <Tag key={k} type="transaction" size="l">{l}</Tag>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+        {showLink && it.cta && <ActionLink>{it.cta}</ActionLink>}
+      </div>
+    </>
+  );
+
+  /* ----------------------------- Variante Carrousel ----------------------------- */
+  if (type === 'carrousel') {
+    const step = (dir) => {
+      const track = trackRef.current;
+      if (!track) return;
+      const card = track.querySelector('.jl-cacc-car__card');
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 24;
+      const w = card ? card.offsetWidth : track.clientWidth * 0.8;
+      track.scrollBy({ left: dir * (w + gap), behavior: 'smooth' });
+    };
+    return (
+      <section className={`jl-pacc jl-cacc-car ${className}`.trim()} data-theme={theme || undefined} {...rest}>
+        {header}
+        <div className="jl-cacc-car__viewport" ref={trackRef}>
+          {items.map((it, i) => (
+            <article className="jl-pacc__open jl-cacc-car__card" key={it.title ?? i}>
+              {cardInner(it)}
+            </article>
+          ))}
+        </div>
+        <div className="jl-cacc-car__arrows">
+          <button type="button" className="jl-cacc-car__arrow" aria-label="Anterior" onClick={() => step(-1)}>
+            <Icon name="ArrowLeft" size="L" />
+          </button>
+          <button type="button" className="jl-cacc-car__arrow" aria-label="Siguiente" onClick={() => step(1)}>
+            <Icon name="ArrowRight" size="L" />
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  /* ----------------------------- Variante Accordion ----------------------------- */
   return (
     <section className={`jl-pacc ${className}`.trim()} data-theme={theme || undefined} {...rest}>
-      <div className="jl-pacc__header">
-        <div className="jl-pacc__toprow">
-          <span className="jl-pacc__eyebrow ts-body-4">{eyebrow}</span>
-          {link && (
-            <a className="jl-pacc__seeall" href={linkHref}>
-              <span className="ts-body-3">{link}</span>
-              <Icon name="CaretRight" size="M" />
-            </a>
-          )}
-        </div>
-        {title && <h2 className="jl-pacc__title ts-title-3">{title}</h2>}
-      </div>
-
+      {header}
       <div className="jl-pacc__row">
         {items.map((it, i) => {
           if (i === active) {
             return (
               <div className="jl-pacc__open" key={it.title ?? i}>
-                {it.image && (
-                  <AspectRatio ratio="3:4" className="jl-pacc__media">
-                    <img src={it.image} alt={it.alt || ''} />
-                  </AspectRatio>
-                )}
-                <div className="jl-pacc__details">
-                  <div className="jl-pacc__group">
-                    <h3 className="jl-pacc__ptitle ts-title-3">{it.title}</h3>
-                    {showStars && it.stars > 0 && (
-                      <div className="jl-pacc__stars" aria-label={`${it.stars} de 3`}>
-                        {Array.from({ length: it.stars }).map((_, s) => (
-                          <Icon key={s} name="Star" size={18} />
-                        ))}
-                      </div>
-                    )}
-                    <div className="jl-pacc__bodywrap">
-                      {showBody && it.body && <p className="jl-pacc__body ts-body-3">{it.body}</p>}
-                      {showLabels && it.labels?.length > 0 && (
-                        <div className="jl-pacc__tags">
-                          {it.labels.map((l, k) => (
-                            <Tag key={k} type="transaction" size="l">{l}</Tag>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  {showLink && it.cta && <ActionLink>{it.cta}</ActionLink>}
-                </div>
+                {cardInner(it)}
               </div>
             );
           }

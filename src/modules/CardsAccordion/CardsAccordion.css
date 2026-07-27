@@ -74,3 +74,43 @@
   .jl-pacc__vtitle { writing-mode: vertical-rl; }
   .jl-pacc__num { display: block; }
 }
+
+/* ============================ Carrousel (Type=Carrousel) ============================ */
+/* Reutiliza la ficha de `.jl-pacc__open`; añade el carril (scroll-snap) y las flechas.
+   Máster: 58512:9285 (desktop) / 58512:9286 (mobile). Ficha centrada + vecinas asomando.
+   NOTA: el asomado queda dentro del wrapper (no sangra al borde del viewport como el
+   máster a 1440); anchos de ficha (326 mobile / 863 desktop) literales del máster. */
+.jl-cacc-car__viewport {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-inline: max(0px, calc((100% - 326px) / 2));
+  scrollbar-width: none;
+}
+.jl-cacc-car__viewport::-webkit-scrollbar { display: none; }
+
+/* Cada ficha del carril: no encoge y se centra al hacer snap (override de .jl-pacc__open) */
+.jl-cacc-car__card {
+  flex: 0 0 auto;
+  width: 326px;
+  scroll-snap-align: center;
+}
+
+.jl-cacc-car__arrows { display: flex; gap: 24px; align-items: center; width: 100%; }
+.jl-cacc-car__arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; flex: 0 0 auto;
+  border: 1.5px solid var(--stroke-neutral-3);
+  background: none; cursor: pointer; color: var(--text-base);
+}
+.jl-cacc-car__arrow:hover { border-color: var(--stroke-base); }
+
+@media (min-width: 768px) {
+  .jl-cacc-car__viewport { gap: 32px; padding-inline: max(0px, calc((100% - 863px) / 2)); }
+  /* En desktop la ficha recupera el layout en fila de `.jl-pacc__open` (imagen 404 +
+     detalle 315); solo se fuerza que no encoja dentro del carril. */
+  .jl-cacc-car__card { width: auto; }
+  .jl-cacc-car__arrows { justify-content: space-between; gap: 0; }
+}

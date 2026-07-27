@@ -22,3 +22,16 @@ export const AbreLa2 = {
   args: { defaultActive: 1 },
   parameters: { viewport: { value: 'xl' } },
 };
+
+/** Carrousel — variante `Type=Carrousel`: carril con ficha central + vecinas asomando y flechas prev/next. */
+export const Carrousel = {
+  args: { type: 'carrousel' },
+  parameters: { viewport: { value: 'xl' } },
+};
+
+/** Carrousel · Mobile — misma variante, apilada; la siguiente ficha asoma por la derecha. */
+export const CarrouselMobile = {
+  name: 'Carrousel · Mobile',
+  args: { type: 'carrousel' },
+  parameters: { viewport: { value: 'xs' } },
+};
