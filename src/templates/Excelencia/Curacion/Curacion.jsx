@@ -6,6 +6,7 @@ import IntroText from '../../../modules/IntroText/IntroText.jsx';
 import ContentStack from '../../../modules/ContentStack/ContentStack.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-curacion-hero.webp';
 
 /**
  * Page Template — Excelencia · Curación.
@@ -30,7 +31,7 @@ export default function Curacion({ className = '', ...rest }) {
       <Navigation />
 
       {/* 2 — Section hero (full-bleed) */}
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
 
       {/* 3 — Intro text */}
       <IntroText />

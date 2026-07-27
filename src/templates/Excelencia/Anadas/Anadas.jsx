@@ -8,6 +8,7 @@ import ContentTextImage from '../../../modules/ContentTextImage/ContentTextImage
 import Timeline from '../../../modules/Timeline/Timeline.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-anadas-hero.webp';
 
 /**
  * Page Template — Excelencia · Añadas.
@@ -42,7 +43,7 @@ export default function Anadas({ className = '', ...rest }) {
       <Navigation />
 
       {/* 2 — Section hero (full-bleed) */}
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
 
       {/* 3 — Intro text */}
       <IntroText />

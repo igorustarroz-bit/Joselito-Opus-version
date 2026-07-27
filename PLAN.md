@@ -187,6 +187,14 @@ Pendientes técnicos:
   desktop reimplementado con grid (texto arriba-izq, número abajo-izq, imagen derecha).
 - [ ] (Humano) Revisar en Pages las franjas ⚠️ mapeadas a módulo cercano (Home, La Dehesa,
   Manual de Corte, Salud, Colecciones Premium) y decidir si se promueven a módulos propios.
+- [x] **Imágenes reales de página aplicadas a las plantillas** — descargadas por navegador
+  (Claude in Chrome, §14: sandbox sin red a figma.com) desde los másters de cada página,
+  optimizadas a WebP (máx 1600px, q82) en `src/assets/images` con prefijo `tpl-*`, y cableadas
+  como props: hero de las 11 plantillas + imágenes de página (La Dehesa: hero small + 2 image-only;
+  Sostenibilidad: hero small + image-only). Las imágenes internas de cada módulo siguen usando
+  los assets reales de la 1ª fase. Pendiente opcional: imágenes de franjas secundarias (los 3
+  Text+Image de Experiencias en retrato, el índice de Colecciones, franjas Text+Image de Añadas/
+  Happy Pigs/Salud) que hoy usan el asset por defecto del módulo.
 
 Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3
 franjas a medida (Title+fichas, banda Vintage, carrusel de expertos) y sustituir el mapeo.

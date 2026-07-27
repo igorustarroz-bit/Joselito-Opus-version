@@ -5,6 +5,7 @@ import SectionHero from '../../../modules/SectionHero/SectionHero.jsx';
 import ContentTextImage from '../../../modules/ContentTextImage/ContentTextImage.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-happypigs-hero.webp';
 
 /**
  * Page Template — Compromisos · Happy Pigs.
@@ -26,7 +27,7 @@ export default function HappyPigs({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-happypigs ${className}`.trim()} {...rest}>
       <Navigation />
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
       <ContentTextImage type="right" label={null} cta={null} />
       <ContentTextImage type="left" label={null} cta={null} />
       <ContentTextImage type="right" label={null} cta={null} />

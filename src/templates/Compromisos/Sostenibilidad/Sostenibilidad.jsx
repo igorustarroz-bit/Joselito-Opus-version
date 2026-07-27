@@ -8,6 +8,8 @@ import ListNumbers from '../../../modules/ListNumbers/ListNumbers.jsx';
 import ContentTextImage from '../../../modules/ContentTextImage/ContentTextImage.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-sosten-hero.webp';
+import imgOnly from '../../../assets/images/tpl-sosten-io.webp';
 
 /**
  * Page Template — Compromisos · Sostenibilidad.
@@ -31,8 +33,8 @@ export default function Sostenibilidad({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-sostenibilidad ${className}`.trim()} {...rest}>
       <Navigation />
-      <SectionHero layout="small-image" />
-      <ContentImageOnly count={1} />
+      <SectionHero layout="small-image" image={heroImg} />
+      <ContentImageOnly count={1} image={imgOnly} />
       <IntroText />
       <ListNumbers />
       <ContentTextImage type="left" cta={null} />

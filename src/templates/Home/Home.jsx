@@ -9,6 +9,7 @@ import CardsProductCarousel from '../../modules/CardsProductCarousel/CardsProduc
 import CardsShowcase from '../../modules/CardsShowcase/CardsShowcase.jsx';
 import CardsCategories from '../../modules/CardsCategories/CardsCategories.jsx';
 import Footer from '../../modules/Footer/Footer.jsx';
+import heroImg from '../../assets/images/tpl-home-hero.webp';
 
 /**
  * Page Template — Home. Máster Figma: página "↳ Home 🟢" (58080:18441),
@@ -42,7 +43,7 @@ export default function Home({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-home ${className}`.trim()} {...rest}>
       {/* 1 — Hero (subtema oscuro autogestionado por el propio módulo) */}
-      <Hero />
+      <Hero image={heroImg} />
 
       {/* 2 — Intro text */}
       <IntroText />

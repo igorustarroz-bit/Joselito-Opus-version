@@ -8,6 +8,7 @@ import ContentStack from '../../../modules/ContentStack/ContentStack.jsx';
 import PreviousNext from '../../../modules/PreviousNext/PreviousNext.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-manual-hero.webp';
 
 /**
  * Page Template — Excelencia · Manual de Corte.
@@ -37,7 +38,7 @@ export default function ManualDeCorte({ className = '', ...rest }) {
       <Navigation />
 
       {/* 2 — Section hero (small image) */}
-      <SectionHero layout="small-image" />
+      <SectionHero layout="small-image" image={heroImg} />
 
       {/* 3 — ⚠️ Fila de navegación → SecondaryMenu */}
       <SecondaryMenu />

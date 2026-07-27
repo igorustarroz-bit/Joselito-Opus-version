@@ -6,6 +6,7 @@ import IntroText from '../../modules/IntroText/IntroText.jsx';
 import List from '../../modules/List/List.jsx';
 import CardsShowcase from '../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../modules/Footer/Footer.jsx';
+import heroImg from '../../assets/images/tpl-colec-hero.webp';
 
 /**
  * Page Template — Colecciones Premium.
@@ -31,7 +32,7 @@ export default function ColeccionesPremium({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-colecciones ${className}`.trim()} {...rest}>
       <Navigation />
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
       <IntroText />
       {/* ⚠️ Índice de colecciones a medida → List */}
       <List />

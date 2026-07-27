@@ -7,6 +7,7 @@ import ContentTextImage from '../../../modules/ContentTextImage/ContentTextImage
 import Timeline from '../../../modules/Timeline/Timeline.jsx';
 import SectionBanner from '../../../modules/SectionBanner/SectionBanner.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-nh-hero.webp';
 
 /**
  * Page Template — Origen · Nuestra Historia.
@@ -35,7 +36,7 @@ export default function NuestraHistoria({ className = '', ...rest }) {
       <Navigation />
 
       {/* 2 — Section hero (full-bleed) */}
-      <SectionHero />
+      <SectionHero image={heroImg} />
 
       {/* 3 — Intro text */}
       <IntroText />

@@ -6,6 +6,9 @@ import ContentImageOnly from '../../../modules/ContentImageOnly/ContentImageOnly
 import IntroText from '../../../modules/IntroText/IntroText.jsx';
 import CardsCategories from '../../../modules/CardsCategories/CardsCategories.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-dehesa-hero.webp';
+import io1Img from '../../../assets/images/tpl-dehesa-io1.webp';
+import io2Img from '../../../assets/images/tpl-dehesa-io2.webp';
 
 /**
  * Page Template — Origen · La Dehesa.
@@ -38,10 +41,10 @@ export default function LaDehesa({ className = '', ...rest }) {
       <Navigation />
 
       {/* 2 — Section hero (small image) */}
-      <SectionHero layout="small-image" />
+      <SectionHero layout="small-image" image={heroImg} />
 
       {/* 3 — Image only (1 imagen a sangre) */}
-      <ContentImageOnly count={1} />
+      <ContentImageOnly count={1} image={io1Img} />
 
       {/* 4 — Intro text */}
       <IntroText />
@@ -53,7 +56,7 @@ export default function LaDehesa({ className = '', ...rest }) {
       <IntroText />
 
       {/* 7 — Image only con botón de vídeo */}
-      <ContentImageOnly count={1} video />
+      <ContentImageOnly count={1} video image={io2Img} />
 
       {/* 8 — ⚠️ Feed social → CardsCategories (variante instagram) */}
       <CardsCategories variant="instagram" />

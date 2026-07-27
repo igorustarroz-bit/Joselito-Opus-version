@@ -7,6 +7,7 @@ import List from '../../../modules/List/List.jsx';
 import ListNumbers from '../../../modules/ListNumbers/ListNumbers.jsx';
 import CardsShowcase from '../../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../../modules/Footer/Footer.jsx';
+import heroImg from '../../../assets/images/tpl-salud-hero.webp';
 
 /**
  * Page Template — Compromisos · Salud.
@@ -35,7 +36,7 @@ export default function Salud({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-salud ${className}`.trim()} {...rest}>
       <Navigation />
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
       <ContentTextImage type="right" label={null} cta={null} />
       {/* ⚠️ Main-Description a medida → List */}
       <List />

@@ -6,6 +6,7 @@ import ContentTextImage from '../../modules/ContentTextImage/ContentTextImage.js
 import IntroText from '../../modules/IntroText/IntroText.jsx';
 import CardsShowcase from '../../modules/CardsShowcase/CardsShowcase.jsx';
 import Footer from '../../modules/Footer/Footer.jsx';
+import heroImg from '../../assets/images/tpl-exp-hero.webp';
 
 /**
  * Page Template — Experiencias y eventos.
@@ -33,7 +34,7 @@ export default function ExperienciasEventos({ className = '', ...rest }) {
   return (
     <div className={`jl-tmpl-experiencias ${className}`.trim()} {...rest}>
       <Navigation />
-      <SectionHero layout="full-bleed" />
+      <SectionHero layout="full-bleed" image={heroImg} />
       <ContentTextImage type="right" label={null} />
       <ContentTextImage type="left" label={null} />
       <ContentTextImage type="right" label={null} />
