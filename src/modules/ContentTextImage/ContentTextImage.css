@@ -27,7 +27,7 @@
   padding: 56px var(--spacer-fx-6) var(--spacer-fx-8); /* 56 24 32 */
 }
 .jl-txtimg__group { display: flex; flex-direction: column; gap: var(--spacer-fx-4); /* 16 */ }
-.jl-txtimg__label { color: var(--text-neutral-2); text-transform: uppercase; }
+.jl-txtimg__label { color: var(--text-neutral-2); }
 .jl-txtimg__title { color: var(--text-base); margin: 0; }
 .jl-txtimg__text { color: var(--text-neutral-1); }
 
@@ -45,6 +45,16 @@
 /* right en mobile: texto arriba, imagen abajo */
 .jl-txtimg--right .jl-txtimg__media { order: 2; }
 
+/* half en mobile: imagen 3:4 con margen lateral (no a sangre) + sangría superior 24
+   (máster 58363:34360: imagen 342 centrada, contenedor pt 24). */
+@media (max-width: 767.98px) {
+  .jl-txtimg--half { padding-top: var(--spacer-fx-6); /* 24 */ }
+  .jl-txtimg--half .jl-txtimg__media {
+    width: calc(100% - 2 * var(--spacer-fx-6));
+    align-self: center;
+  }
+}
+
 /* ====================================================================== */
 @media (min-width: 768px) {
   .jl-txtimg { flex-direction: row; align-items: stretch; }
@@ -57,6 +67,7 @@
     padding: 110px 121px;
   }
   .jl-txtimg--half .jl-txtimg__group { gap: var(--spacer-fx-6); /* 24 */ }
+  .jl-txtimg--half .jl-txtimg__title { max-width: 468px; }
 
   /* left / right: bloque padded, imagen media + texto 468 */
   .jl-txtimg--left,
