@@ -1,5 +1,5 @@
 import './CardsAccordion.css';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 import Tag from '../../components/Tag/Tag.jsx';
 import ActionLink from '../../components/ActionLink/ActionLink.jsx';
@@ -67,7 +67,7 @@ export default function CardsAccordion({
 
   /* Accordion: mide el panel del producto MÁS ALTO (medidor oculto) y fija ese alto como
      mínimo del panel abierto, para que el módulo no salte al cambiar de producto. */
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (type !== 'accordion') return undefined;
     const measure = () => {
       const el = measureRef.current;
@@ -169,32 +169,36 @@ export default function CardsAccordion({
 
   /* ----------------------------- Variante Accordion ----------------------------- */
   return (
-    <section className={`jl-pacc ${className}`.trim()} data-theme={theme || undefined} {...rest}>
+    <section
+      className={`jl-pacc ${className}`.trim()}
+      data-theme={theme || undefined}
+      style={openMinH ? { '--jl-open-min-h': `${openMinH}px` } : undefined}
+      {...rest}
+    >
       {header}
       <div className="jl-pacc__row">
         {items.map((it, i) => {
-          if (i === active) {
-            return (
-              <div
-                className="jl-pacc__open"
-                key={it.title ?? i}
-                style={openMinH ? { minHeight: openMinH } : undefined}
-              >
+          const isOpen = i === active;
+          return (
+            <div className="jl-pacc__item" data-open={isOpen} key={it.title ?? i}>
+              {/* Capa abierta (ficha completa) */}
+              <div className="jl-pacc__open" inert={!isOpen || undefined}>
                 {cardInner(it)}
               </div>
-            );
-          }
-          return (
-            <button
-              type="button"
-              className="jl-pacc__collapsed"
-              key={it.title ?? i}
-              aria-expanded="false"
-              onClick={() => setActive(i)}
-            >
-              <span className="jl-pacc__vtitle ts-body-4">{it.title}</span>
-              <span className="jl-pacc__num ts-body-4" aria-hidden="true">{i + 1}</span>
-            </button>
+              {/* Capa colapsada (título + número); abre al pulsar */}
+              <button
+                type="button"
+                className="jl-pacc__collapsed"
+                aria-expanded={isOpen}
+                aria-label={it.title}
+                tabIndex={isOpen ? -1 : 0}
+                inert={isOpen || undefined}
+                onClick={() => setActive(i)}
+              >
+                <span className="jl-pacc__vtitle ts-body-4">{it.title}</span>
+                <span className="jl-pacc__num ts-body-4" aria-hidden="true">{i + 1}</span>
+              </button>
+            </div>
           );
         })}
       </div>

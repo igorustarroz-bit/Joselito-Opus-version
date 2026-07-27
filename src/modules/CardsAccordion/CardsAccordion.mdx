@@ -46,9 +46,13 @@ Subtema **claro** por defecto; hereda del contenedor. Prop opcional `theme` para
   título centrado.
 - Interacción: cada colapsado es un `<button aria-expanded>` que lo abre.
 - **Alto estable:** un medidor oculto calcula el panel del producto **más alto** y ese alto se
-  fija como mínimo del panel abierto, de modo que el módulo no salta al cambiar de producto.
-- **Animación:** al aparecer y al cambiar de producto, los paneles que cambian hacen
-  *fade + leve subida* (CSS, con `prefers-reduced-motion`); los que no cambian se mantienen.
+  fija (vía `--jl-open-min-h`) como alto de todos los ítems, de modo que el módulo no salta al
+  cambiar de producto.
+- **Animación de ancho (desktop):** cada producto es un ítem **persistente** (no se remonta al
+  cambiar), así que al abrir uno su **ancho crece** (`flex-grow`) y los demás se encogen con una
+  transición suave, mientras el contenido abierto y el colapsado hacen *cross-fade*. En **mobile**
+  es una pila vertical (el ancho no aplica). Entrada con *fade + subida* al montar. Todo respeta
+  `prefers-reduced-motion`.
 
 <Canvas of={Stories.Mobile} />
 

@@ -29,7 +29,22 @@
 .jl-pacc__row > * + * { border-top: 0; }
 
 .jl-pacc__open,
-.jl-pacc__collapsed { border: 1px solid var(--stroke-neutral-2); box-sizing: border-box; }
+.jl-pacc__collapsed { box-sizing: border-box; }
+
+/* Ítem persistente del acordeón: lleva el borde y (en desktop) anima el ancho. Cada ítem
+   contiene las dos capas (abierta y colapsada); el estado se controla con data-open, así el
+   elemento NO se remonta al cambiar → el ancho puede transicionar. */
+.jl-pacc__item {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid var(--stroke-neutral-2);
+  width: 100%;
+}
+/* Mobile: apilado; se muestra/oculta la capa según estado (el ancho no aplica). */
+@media (max-width: 767.98px) {
+  .jl-pacc__item[data-open="false"] .jl-pacc__open { display: none; }
+  .jl-pacc__item[data-open="true"]  .jl-pacc__collapsed { display: none; }
+}
 
 /* Medidor oculto (accordion): réplicas para calcular el panel más alto. Fuera de flujo,
    invisible y sin interacción; conserva el ancho de contenido (padding del wrapper). */
@@ -66,9 +81,10 @@
 .jl-pacc__vtitle { color: var(--text-base); white-space: nowrap; transition: color 160ms ease; }
 .jl-pacc__num { color: var(--text-neutral-3); display: none; }
 
-/* Animación (accordion): los paneles hacen fade + leve subida al aparecer y al cambiar de
-   producto (React remonta el panel que se abre y el que se colapsa, así que solo esos dos
-   se animan; los que no cambian se mantienen). Respeta prefers-reduced-motion. */
+/* Animación de entrada (accordion): cada ítem hace fade + leve subida al montarse.
+   Al cambiar de producto NO se remonta nada (ítems persistentes): la transición del
+   ancho (flex-grow) y el cross-fade de las capas manejan el cambio. Respeta
+   prefers-reduced-motion. */
 @keyframes jl-pacc-open-in {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: none; }
@@ -98,6 +114,35 @@
      de ancho y desborde la fila). */
   .jl-pacc__vtitle { writing-mode: vertical-rl; }
   .jl-pacc__num { display: block; }
+
+  /* Ítems en fila: el abierto crece (flex-grow 4), los colapsados reparten el resto.
+     La transición de flex-grow ANIMA EL ANCHO al cambiar de producto. El alto lo marca
+     el panel más alto (medido) vía --jl-open-min-h; con fallback por si aún no hay medida. */
+  .jl-pacc__item {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    min-height: var(--jl-open-min-h, 620px);
+    transition: flex-grow 420ms ease;
+  }
+  .jl-pacc__item[data-open="true"] { flex-grow: 4; }
+
+  /* Las dos capas se superponen (position: absolute) y hacen cross-fade. */
+  .jl-pacc__item > .jl-pacc__open,
+  .jl-pacc__item > .jl-pacc__collapsed {
+    position: absolute;
+    inset: 0;
+    transition: opacity 300ms ease;
+  }
+  .jl-pacc__item[data-open="false"] > .jl-pacc__open { opacity: 0; pointer-events: none; }
+  .jl-pacc__item[data-open="true"]  > .jl-pacc__collapsed { opacity: 0; pointer-events: none; }
+}
+
+/* Respeta la preferencia de menos movimiento: sin transiciones de ancho/opacidad. */
+@media (prefers-reduced-motion: reduce) {
+  .jl-pacc__item,
+  .jl-pacc__item > .jl-pacc__open,
+  .jl-pacc__item > .jl-pacc__collapsed { transition: none; }
 }
 
 /* ============================ Carrousel (Type=Carrousel) ============================ */
@@ -123,6 +168,8 @@
   flex: 0 0 auto;
   width: 326px;
   scroll-snap-align: center;
+  box-sizing: border-box;
+  border: 1px solid var(--stroke-neutral-2);
 }
 
 .jl-cacc-car__arrows { display: flex; gap: 24px; align-items: center; width: 100%; }
