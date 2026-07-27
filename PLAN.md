@@ -149,7 +149,7 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
 
 ## Fase 5 — Page Templates (SPRINT 1)
 
-- [ ] Home
+- [x] **Home** — máster `58196:24000` (desktop) / `58153:29609` (mobile). Composición de 11 franjas en `src/templates/Home` (Home.jsx + story + doc MDX). Instancias de módulo: Hero, IntroText, SectionBanner ×2, CardsAccordion (oscuro), CardsShowcase, CardsCategories, Footer. ⚠️ 3 franjas a medida del máster (no son módulo guardado) mapeadas al módulo más cercano por decisión del equipo (2026-07-27): Title+3 fichas→`CardsGallery`; banda "Reserva·Vintage·Millésime"→`CardsAccordion` (dark-red-primary); carrusel de expertos→`CardsProductCarousel` (envuelto en dark-black-neutral). Aproximaciones anotadas, pendientes de revisión visual en Pages. `build-storybook` OK + push.
 - [ ] Origen: Nuestra Historia, La Dehesa
 - [ ] Excelencia: Añadas, Curación, Manual de Corte
 - [ ] Compromisos: Sostenibilidad, Happy Pigs, Salud
@@ -159,5 +159,9 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
 ---
 
 ### Próximo paso sugerido
-Fases 1–4 y el Hito de descarga de imágenes (Fase 2.5) completas. Siguiente: **Fase 5 — Page
-Templates**, empezando por **Home** (composición de los módulos ya construidos).
+Fases 1–4, Hito de imágenes (2.5) y **Home** (Fase 5) completos. Siguiente template:
+**Origen: Nuestra Historia, La Dehesa** (página Figma `58080:16503`). Mismo flujo: leer el
+máster, mapear franjas a módulos ya construidos, componer en `src/templates`.
+
+Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3
+franjas a medida (Title+fichas, banda Vintage, carrusel de expertos) y sustituir el mapeo.

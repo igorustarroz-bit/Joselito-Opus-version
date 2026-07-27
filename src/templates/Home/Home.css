@@ -1,0 +1,10 @@
+/* Page Template — Home.
+ * El template es una simple pila vertical de módulos a 100% del ancho del
+ * viewport. Cada módulo gestiona su propio grid de 12 columnas, paddings y
+ * subtema; aquí no se añade layout ni espaciado extra para no alterar el diseño. */
+.jl-tmpl-home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--bg-base);
+}

@@ -1,0 +1,77 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Home.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Home
+
+Primera **Page Template** del proyecto: la portada de Joselito. Es una **composición
+vertical de los módulos ya construidos**, en el orden y con los subtemas del máster
+de Figma (página "↳ Home 🟢" `58080:18441`; desktop `58196:24000` de 1440×9614,
+mobile `58153:29609` de 390×8605).
+
+Una plantilla **no aporta diseño propio**: apila módulos a 100% del ancho del viewport.
+Cada módulo gestiona su grid de 12 columnas, sus paddings, su versión responsive y su
+subtema. Aquí solo se define el orden y qué subtema fuerza cada franja.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Subtema |
+| --- | --- | --- | --- |
+| 1 | Hero / Homepage hero | `Hero` | Oscuro (autogestionado) |
+| 2 | Content / Intro text | `IntroText` | Light-White |
+| 3 | Title + 3 fichas ⚠️ | `CardsGallery` | Light-White |
+| 4 | Banners / Section banner | `SectionBanner` | Light-White |
+| 5 | Banda "Reserva·Vintage·Millésime" ⚠️ | `CardsAccordion` | Dark-Red-Primary |
+| 6 | Carrusel de expertos ⚠️ | `CardsProductCarousel` | Dark-Black-Neutral |
+| 7 | Cards / Accordion | `CardsAccordion` | Dark-Black-Neutral |
+| 8 | Cards / Showcase | `CardsShowcase` | Light-White |
+| 9 | Banners / Section banner | `SectionBanner` | Light-White |
+| 10 | Cards / Categories | `CardsCategories` | Light-White |
+| 11 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Secciones a medida (mapeo aproximado).** Las franjas 3, 5 y 6 están construidas
+> a medida en el máster de Figma: usan subcomponentes del DS (Title, CardProduct,
+> AspectRatio, Tag, Button, ActionLink) pero **no son instancias de un módulo guardado**.
+> Por decisión del equipo (2026-07-27, Instrucciones §13) el template las compone con el
+> **módulo más cercano** en vez de replicarlas pixel-perfect. Son aproximaciones conocidas,
+> pendientes de revisión visual en Pages. Si se quiere fidelidad total, el siguiente paso
+> es promoverlas a módulos propios.
+
+## Subtemas
+
+Cada módulo pinta su propio `background: var(--bg-base)` y **hereda** el subtema del
+contenedor. Las franjas oscuras/rojas se fuerzan así:
+
+- `SectionBanner` y `CardsAccordion` exponen la prop **`theme`** → se les pasa
+  `theme="dark-red-primary"` (franja 5) y `theme="dark-black-neutral"` (franja 7).
+- `CardsProductCarousel` **no** expone `theme` → se envuelve en un `<div data-theme="dark-black-neutral">` (franja 6).
+- El resto quedan en **Light-White** (default).
+
+## Comportamiento
+
+- **Desktop (≥1024px):** los módulos muestran su versión ancha (grid de 12 columnas,
+  carruseles horizontales, banda tipográfica a 900px).
+- **Mobile:** cada módulo aplica su propia versión apilada; no hay lógica responsive en
+  el template.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre el contenedor `.jl-tmpl-home` |
+
+Los datos (textos, imágenes) provienen de los **defaults de cada módulo** (ya cableados
+desde sus propios másters). Para una página real, se pasan props a cada módulo desde
+este archivo.
+
+## Componentes relacionados
+
+Todos los módulos que compone: `Hero`, `IntroText`, `CardsGallery`, `SectionBanner`,
+`CardsAccordion`, `CardsProductCarousel`, `CardsShowcase`, `CardsCategories`, `Footer`.
