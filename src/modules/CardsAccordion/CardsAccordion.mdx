@@ -45,6 +45,10 @@ Subtema **claro** por defecto; hereda del contenedor. Prop opcional `theme` para
 - **Mobile:** pila vertical; ficha abierta con imagen arriba, colapsados como barras con el
   título centrado.
 - Interacción: cada colapsado es un `<button aria-expanded>` que lo abre.
+- **Alto estable:** un medidor oculto calcula el panel del producto **más alto** y ese alto se
+  fija como mínimo del panel abierto, de modo que el módulo no salta al cambiar de producto.
+- **Animación:** al aparecer y al cambiar de producto, los paneles que cambian hacen
+  *fade + leve subida* (CSS, con `prefers-reduced-motion`); los que no cambian se mantienen.
 
 <Canvas of={Stories.Mobile} />
 

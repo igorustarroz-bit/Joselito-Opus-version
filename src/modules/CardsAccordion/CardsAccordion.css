@@ -4,6 +4,7 @@
    NOTA: paddings 68/48/80 y anchos 404/315 son literales del máster (sin variable). */
 
 .jl-pacc {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -28,7 +29,20 @@
 .jl-pacc__row > * + * { border-top: 0; }
 
 .jl-pacc__open,
-.jl-pacc__collapsed { border: 1px solid var(--stroke-neutral-2); }
+.jl-pacc__collapsed { border: 1px solid var(--stroke-neutral-2); box-sizing: border-box; }
+
+/* Medidor oculto (accordion): réplicas para calcular el panel más alto. Fuera de flujo,
+   invisible y sin interacción; conserva el ancho de contenido (padding del wrapper). */
+.jl-pacc__measure {
+  position: absolute;
+  top: 0;
+  left: var(--grid-wrapper);
+  right: var(--grid-wrapper);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 /* ---- Panel abierto ---- */
 .jl-pacc__open { display: flex; flex-direction: column; gap: 32px; padding: 24px; width: 100%; }
@@ -49,8 +63,19 @@
   background: none; cursor: pointer; text-align: center; color: inherit;
 }
 .jl-pacc__collapsed:hover .jl-pacc__vtitle { text-decoration: underline; }
-.jl-pacc__vtitle { color: var(--text-base); white-space: nowrap; }
+.jl-pacc__vtitle { color: var(--text-base); white-space: nowrap; transition: color 160ms ease; }
 .jl-pacc__num { color: var(--text-neutral-3); display: none; }
+
+/* Animación (accordion): los paneles hacen fade + leve subida al aparecer y al cambiar de
+   producto (React remonta el panel que se abre y el que se colapsa, así que solo esos dos
+   se animan; los que no cambian se mantienen). Respeta prefers-reduced-motion. */
+@keyframes jl-pacc-open-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .jl-pacc__row > * { animation: jl-pacc-open-in 280ms ease both; }
+}
 
 /* ====================================================================== */
 @media (min-width: 768px) {

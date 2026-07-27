@@ -1,5 +1,5 @@
 import './CardsAccordion.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 import Tag from '../../components/Tag/Tag.jsx';
 import ActionLink from '../../components/ActionLink/ActionLink.jsx';
@@ -62,6 +62,29 @@ export default function CardsAccordion({
 }) {
   const [active, setActive] = useState(defaultActive);
   const trackRef = useRef(null);
+  const measureRef = useRef(null);
+  const [openMinH, setOpenMinH] = useState(0);
+
+  /* Accordion: mide el panel del producto MÁS ALTO (medidor oculto) y fija ese alto como
+     mínimo del panel abierto, para que el módulo no salte al cambiar de producto. */
+  useEffect(() => {
+    if (type !== 'accordion') return undefined;
+    const measure = () => {
+      const el = measureRef.current;
+      if (!el) return;
+      let max = 0;
+      el.querySelectorAll('.jl-pacc__open').forEach((p) => { max = Math.max(max, p.offsetHeight); });
+      setOpenMinH(max);
+    };
+    measure();
+    let ro;
+    if (typeof ResizeObserver !== 'undefined' && measureRef.current) {
+      ro = new ResizeObserver(measure);
+      ro.observe(measureRef.current);
+    }
+    window.addEventListener('resize', measure);
+    return () => { if (ro) ro.disconnect(); window.removeEventListener('resize', measure); };
+  }, [type, items]);
 
   const header = (
     <div className="jl-pacc__header">
@@ -152,7 +175,11 @@ export default function CardsAccordion({
         {items.map((it, i) => {
           if (i === active) {
             return (
-              <div className="jl-pacc__open" key={it.title ?? i}>
+              <div
+                className="jl-pacc__open"
+                key={it.title ?? i}
+                style={openMinH ? { minHeight: openMinH } : undefined}
+              >
                 {cardInner(it)}
               </div>
             );
@@ -170,6 +197,13 @@ export default function CardsAccordion({
             </button>
           );
         })}
+      </div>
+
+      {/* Medidor oculto: réplicas de cada producto para calcular el panel más alto. */}
+      <div className="jl-pacc__measure" aria-hidden="true" ref={measureRef}>
+        {items.map((it, i) => (
+          <div className="jl-pacc__open" key={`m-${i}`}>{cardInner(it)}</div>
+        ))}
       </div>
     </section>
   );
