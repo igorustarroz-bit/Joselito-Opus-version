@@ -20,8 +20,9 @@ import fillerImg from '../../assets/images/generic-filler.webp';
  * Toggles del máster por elemento: `number`, `description`, `cta` e `image`.
  * Subtema claro por defecto; hereda del contenedor (colores por tokens).
  *
- * Nota: el máster define variantes Desktop y Mobile; la versión mobile aquí está
- * inferida (apilado), pendiente de contraste fino contra el máster mobile.
+ * Responsive contrastado contra el máster: mobile (58468:60235) apila texto → imagen →
+ * número (padding 40/24); desktop (58468:60217) usa dos columnas (texto | imagen 3:4) con
+ * el número anclado abajo-izquierda.
  */
 const DEFAULT_ITEMS = [
   {
@@ -56,28 +57,29 @@ export default function ContentStack({
           <div className="jl-cstack__item" key={item.number ?? i}>
             {isOpen ? (
               <div className="jl-cstack__expanded">
-                <div className="jl-cstack__col">
-                  <div className="jl-cstack__group">
-                    <div className="jl-cstack__titletext">
-                      <button
-                        type="button"
-                        className="jl-cstack__head"
-                        aria-expanded="true"
-                        onClick={() => setActive(i)}
-                      >
-                        <span className="jl-cstack__title ts-title-3">{item.title}</span>
-                      </button>
-                      {item.description && <p className="jl-cstack__desc ts-body-4">{item.description}</p>}
-                    </div>
-                    {item.cta && <Button type="secondary" size="s">{item.cta}</Button>}
+                {/* Orden DOM: texto → imagen → número. En mobile se apila en ese orden
+                    (como el máster); en desktop el grid recoloca texto arriba-izq,
+                    número abajo-izq e imagen a la derecha. */}
+                <div className="jl-cstack__group">
+                  <div className="jl-cstack__titletext">
+                    <button
+                      type="button"
+                      className="jl-cstack__head"
+                      aria-expanded="true"
+                      onClick={() => setActive(i)}
+                    >
+                      <span className="jl-cstack__title ts-title-3">{item.title}</span>
+                    </button>
+                    {item.description && <p className="jl-cstack__desc ts-body-4">{item.description}</p>}
                   </div>
-                  {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
+                  {item.cta && <Button type="secondary" size="s">{item.cta}</Button>}
                 </div>
                 {item.image && (
                   <AspectRatio ratio={item.ratio || ratio} className="jl-cstack__media">
                     <img src={item.image} alt={item.alt || ''} />
                   </AspectRatio>
                 )}
+                {item.number && <span className="jl-cstack__num ts-title-3">{item.number}</span>}
               </div>
             ) : (
               <button

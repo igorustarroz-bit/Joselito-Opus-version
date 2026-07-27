@@ -1,5 +1,10 @@
 /* Módulo Content Stack / Text + Image — acordeón de pasos (texto + imagen).
-   Máster: component set 58468:60216 (Expanded 58468:60217 / Collapsed 58468:60253). */
+   Máster: component set 58468:60216.
+   - Desktop (58468:60217): fila abierta a dos columnas (texto | imagen 3:4), número
+     anclado abajo-izquierda; padding 80, gap grande (~320) texto↔imagen.
+   - Mobile (58468:60235): apilado en orden texto → imagen → número; padding 40/24.
+   - Colapsada (58468:60253 / 60259): título + número, padding responsive.
+   Colores por tokens. Paddings/gaps de layout literales del máster (sin variable). */
 
 .jl-cstack {
   width: 100%;
@@ -37,27 +42,22 @@
 .jl-cstack__row:hover .jl-cstack__title { text-decoration: underline; }
 .jl-cstack__row:focus-visible { outline: 2px solid var(--stroke-neutral-1); outline-offset: -4px; }
 
-/* ---- Fila abierta ---- */
+/* ---- Fila abierta (mobile-first: texto → imagen → número) ---- */
 .jl-cstack__expanded {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-7);
-  padding: var(--sp-13) var(--grid-wrapper);
-}
-.jl-cstack__col {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-7);
+  gap: 40px;
+  padding: 40px var(--grid-wrapper);
 }
 .jl-cstack__group {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-7);
+  gap: 20px;
 }
 .jl-cstack__titletext {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-6);
+  gap: 20px;
 }
 .jl-cstack__head {
   border: 0;
@@ -73,18 +73,18 @@
 .jl-cstack__media { width: 100%; }
 .jl-cstack__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* ---- Desktop (≥768px): fila abierta a dos columnas ---- */
+/* ---- Desktop (≥768px): grid texto arriba-izq · número abajo-izq · imagen derecha ---- */
 @media (min-width: 768px) {
   .jl-cstack__expanded {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: var(--sp-13);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 424px;
+    grid-template-rows: 1fr auto;
+    column-gap: clamp(48px, 22vw, 320px);
+    padding: 80px var(--grid-wrapper);
+    align-items: start;
   }
-  .jl-cstack__col {
-    flex: 0 1 536px;
-    justify-content: space-between;
-  }
-  .jl-cstack__group { padding-right: var(--sp-13); }
-  .jl-cstack__media { flex: 0 0 424px; align-self: stretch; }
+  .jl-cstack__group { grid-column: 1; grid-row: 1; gap: 32px; }
+  .jl-cstack__titletext { gap: 24px; }
+  .jl-cstack__media { grid-column: 2; grid-row: 1 / span 2; align-self: stretch; }
+  .jl-cstack__num { grid-column: 1; grid-row: 2; align-self: end; }
 }

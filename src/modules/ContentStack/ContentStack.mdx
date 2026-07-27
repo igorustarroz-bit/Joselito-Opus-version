@@ -34,8 +34,8 @@ Subtema **claro** por defecto; hereda del contenedor (colores por tokens). Prop 
 ## Comportamiento
 
 - **Desktop (≥768px):** fila abierta en dos columnas (texto | imagen), `space-between`.
-- **Mobile:** fila abierta apilada (texto arriba, imagen debajo). *Versión mobile inferida,
-  pendiente de contraste fino contra el máster mobile.*
+- **Mobile:** fila abierta apilada en el orden del máster (`58468:60235`): **texto → imagen
+  → número**, padding 40/24.
 - Interacción: click en cabecera (`<button aria-expanded>`) cambia la fila activa.
 
 <Canvas of={Stories.Mobile} />

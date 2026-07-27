@@ -1,0 +1,71 @@
+/* Módulo Cards / Accordion (Type=Accordion) — acordeón de producto.
+   Máster: 58512:9287 (desktop) / 58512:9288 (mobile). Mobile-first: pila vertical;
+   desde 768px: fila horizontal con paneles colapsados rotados. Colores por tokens.
+   NOTA: paddings 68/48/80 y anchos 404/315 son literales del máster (sin variable). */
+
+.jl-pacc {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+  padding: 68px var(--grid-wrapper);
+  background: var(--bg-base);
+}
+
+.jl-pacc__header { display: flex; flex-direction: column; gap: 40px; width: 100%; }
+.jl-pacc__toprow { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.jl-pacc__eyebrow { color: var(--text-base); }
+.jl-pacc__seeall {
+  display: inline-flex; align-items: center; gap: 4px;
+  color: var(--text-neutral-1); text-decoration: none;
+}
+.jl-pacc__seeall:hover { color: var(--text-base); }
+.jl-pacc__title { color: var(--text-base); margin: 0; width: 100%; }
+
+.jl-pacc__row { display: flex; flex-direction: column; width: 100%; }
+/* Evita bordes dobles al apilar (mobile, columna) */
+.jl-pacc__row > * + * { border-top: 0; }
+
+.jl-pacc__open,
+.jl-pacc__collapsed { border: 1px solid var(--stroke-neutral-2); }
+
+/* ---- Panel abierto ---- */
+.jl-pacc__open { display: flex; flex-direction: column; gap: 32px; padding: 24px; width: 100%; }
+.jl-pacc__media { width: 135px; }
+.jl-pacc__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.jl-pacc__details { display: flex; flex-direction: column; gap: 48px; width: 100%; }
+.jl-pacc__group { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.jl-pacc__ptitle { color: var(--text-base); margin: 0; }
+.jl-pacc__stars { display: flex; align-items: center; gap: 9px; color: var(--text-base); }
+.jl-pacc__bodywrap { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+.jl-pacc__body { color: var(--text-neutral-1); margin: 0; }
+.jl-pacc__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---- Panel colapsado ---- */
+.jl-pacc__collapsed {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 32px; padding: 24px; width: 100%;
+  background: none; cursor: pointer; text-align: center; color: inherit;
+}
+.jl-pacc__collapsed:hover .jl-pacc__vtitle { text-decoration: underline; }
+.jl-pacc__vtitle { color: var(--text-base); white-space: nowrap; }
+.jl-pacc__num { color: var(--text-neutral-3); display: none; }
+
+/* ====================================================================== */
+@media (min-width: 768px) {
+  .jl-pacc__row { flex-direction: row; align-items: stretch; justify-content: center; }
+  /* En fila: recupera el borde superior y elimina el izquierdo duplicado */
+  .jl-pacc__row > * + * { border-top: 1px solid var(--stroke-neutral-2); border-left: 0; }
+
+  .jl-pacc__open {
+    flex-direction: row; gap: 48px; padding: 48px;
+    flex: 0 0 auto; align-items: stretch; width: auto;
+  }
+  .jl-pacc__media { width: 404px; flex: 0 0 404px; align-self: flex-start; }
+  .jl-pacc__details { width: 315px; flex: 0 0 315px; justify-content: space-between; }
+
+  .jl-pacc__collapsed { flex: 1; padding: 48px 80px; justify-content: space-between; }
+  .jl-pacc__vtitle { transform: rotate(90deg); transform-origin: center; }
+  .jl-pacc__num { display: block; }
+}

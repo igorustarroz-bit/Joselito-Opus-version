@@ -177,13 +177,16 @@ Excelencia (Añadas, Curación, Manual de Corte), Compromisos (Sostenibilidad, H
 Salud), Experiencias y eventos, Colecciones Premium. Todas en `src/templates`, verificadas
 con `build-storybook` y publicadas. Fases 1–5 del proyecto completas.
 
-Pendientes técnicos anotados (mejoras de fidelidad, no bloqueantes):
-- Construir el **módulo acordeón de producto real** (`58512:9289`), hoy aproximado con
-  `CardsAccordion` en Añadas.
-- Contrastar el **mobile de `ContentStack`** contra su máster mobile.
-- Revisar visualmente en Pages todas las franjas ⚠️ mapeadas a módulo cercano (Home,
-  La Dehesa, Añadas, Manual de Corte, Salud, Colecciones Premium) y decidir si se promueven
-  a módulos propios para fidelidad pixel-perfect.
+Pendientes técnicos:
+- [x] **Módulo acordeón de producto real** (`ProductAccordion`, máster `58512:9289`) construido
+  (jsx+css+story+doc, Desktop+Mobile) y cableado en Añadas (franja 4) sustituyendo la
+  aproximación `CardsAccordion`. Nomenclatura: el nombre Figma "Cards/Accordion" ya lo ocupaba
+  la banda tipográfica; el acordeón real se publica como `ProductAccordion`.
+- [x] **Mobile de `ContentStack`** contrastado contra el máster (`58468:60235`) y corregido:
+  el orden mobile ahora es texto → imagen → número (antes imagen y número iban invertidos);
+  desktop reimplementado con grid (texto arriba-izq, número abajo-izq, imagen derecha).
+- [ ] (Humano) Revisar en Pages las franjas ⚠️ mapeadas a módulo cercano (Home, La Dehesa,
+  Manual de Corte, Salud, Colecciones Premium) y decidir si se promueven a módulos propios.
 
 Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3
 franjas a medida (Title+fichas, banda Vintage, carrusel de expertos) y sustituir el mapeo.
