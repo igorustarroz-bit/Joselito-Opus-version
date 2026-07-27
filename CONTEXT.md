@@ -87,7 +87,12 @@ Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vit
   únicas de Figma aplicadas (WebP, 3.4 MB) sobre los 15 módulos con imagen; SHA-1 verificado
   contra `imageHash`; `build-storybook` OK. En este proyecto se ejecutó *a posteriori* (los
   módulos ya estaban con placeholder); desde v2 el hito va tras los iconos. No aplica a SVG.
-  Detalle y notas de mecánica en `PLAN.md` → Fase 2.5. Siguiente fase: **Page Templates** (Home).
+  Detalle y notas de mecánica en `PLAN.md` → Fase 2.5.
+
+- ✅ **Page Templates — Home** — **COMPLETADO 2026-07-27**. `src/templates/Home` compone 11
+  franjas de módulos ya construidos (máster `58196:24000` desktop / `58153:29609` mobile).
+  3 franjas a medida del máster mapeadas al módulo más cercano (decisión de equipo). Detalle
+  en `PLAN.md` → Fase 5. Siguiente template: **Origen: Nuestra Historia, La Dehesa** (`58080:16503`).
 
 ## 10. Notas / decisiones pendientes
 
