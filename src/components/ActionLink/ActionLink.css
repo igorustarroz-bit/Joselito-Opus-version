@@ -3,6 +3,10 @@
 
 .jl-actionlink {
   display: inline-flex;
+  /* Hug horizontal (como en Figma): abraza su texto y nunca ocupa todo el ancho,
+     aunque el contenedor padre sea flex-column con align-items:stretch. */
+  width: fit-content;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   gap: var(--sp-2);
