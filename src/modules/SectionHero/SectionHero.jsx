@@ -19,9 +19,10 @@ import sectionHeroImg from '../../assets/images/section-hero.webp';
  * El orden semántico del DOM es siempre título→imagen (imagen decorativa, alt="");
  * en `small-image` la imagen se coloca visualmente arriba con `order` en CSS.
  *
- * Notas de máster: los gaps y paddings de 80px/54px están hardcodeados en el
- * máster (no ligados a variables Responsive), así que se replican como valores
- * fijos. Los márgenes laterales sí usan el token `--grid-wrapper`.
+ * Notas de máster: gaps/paddings de 80/54px hardcodeados en el máster (valores
+ * fijos). El gap del bloque de texto es 24px en mobile y 32px en desktop. La
+ * variante `small-image` centra el contenido en un alto fijo (640px mobile / 786px
+ * desktop). Los márgenes laterales usan el token `--grid-wrapper`.
  * Sin imagen, el área multimedia muestra un placeholder (`--bg-accent-base`).
  */
 export default function SectionHero({
