@@ -23,7 +23,9 @@ import sectionHeroImg from '../../assets/images/section-hero.webp';
  * fijos). El gap del bloque de texto es 24px en mobile y 32px en desktop. La
  * variante `small-image` centra el contenido en un alto fijo (640px mobile / 786px
  * desktop). Los márgenes laterales usan el token `--grid-wrapper`.
- * Sin imagen, el área multimedia muestra un placeholder (`--bg-accent-base`).
+ * Sin imagen: full-bleed/margins muestran un placeholder neutro (`--bg-neutral-2`);
+ * en small-image el contenedor es transparente (la imagen suele ser un recorte PNG
+ * que descansa sobre el fondo de la sección).
  */
 export default function SectionHero({
   eyebrow = 'COLECCIONES JOSELITO',

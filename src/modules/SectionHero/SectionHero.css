@@ -36,7 +36,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: var(--bg-accent-base); /* placeholder cuando no hay imagen */
+  background: var(--bg-neutral-2); /* placeholder neutro cuando no hay imagen */
 }
 .jl-shero__media > img {
   display: block;
@@ -92,7 +92,10 @@
   overflow: visible;
 }
 .jl-shero__ar {
-  background: var(--bg-accent-base); /* placeholder */
+  /* La imagen del small-image suele ser un recorte PNG con transparencia (p. ej. las
+     hojas de La Dehesa); debe descansar sobre el fondo de la sección, no sobre un
+     color. Por eso el contenedor es transparente (hereda --bg-base de la sección). */
+  background: transparent;
 }
 
 /* ==========================================================================
