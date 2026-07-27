@@ -59,13 +59,14 @@
 @media (min-width: 768px) {
   .jl-txtimg { flex-direction: row; align-items: stretch; }
 
-  /* half: imagen 720 + panel flex-1 con paddings amplios.
-     `flex-basis` fija el tamaño del máster (1440) pero se permite encoger
-     (`0 1` + min-width:0) para que por debajo de 1440 no desborde el viewport. */
-  .jl-txtimg--half .jl-txtimg__media { flex: 0 1 720px; min-width: 0; }
+  /* half: reparto 50/50 a cualquier ancho (máster desktop = imagen 720 / panel 720).
+     Ambas columnas `flex: 1 1 0` → mitad y mitad; `box-sizing: border-box` en el panel
+     para que su padding quede dentro del 50% y no desequilibre el reparto. */
+  .jl-txtimg--half .jl-txtimg__media { flex: 1 1 0; min-width: 0; }
   .jl-txtimg--half .jl-txtimg__panel {
     flex: 1 1 0;
     min-width: 0;
+    box-sizing: border-box;
     gap: 52px;
     padding: 110px 121px;
   }
