@@ -165,19 +165,25 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
   - **Happy Pigs** — máster `58512:66765`. 7 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
   - **Salud** — máster `58512:66781`. 10 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`, ⚠️ Main-Description→`List` (aprox.), ListNumbers, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
   - `build-storybook` OK + push. Pendiente revisión visual en Pages.
-- [ ] Experiencias y eventos
-- [ ] Colecciones Premium
+- [x] **Experiencias y eventos** — página Figma `58080:26824`, frame más a la izquierda `58509:40298`. `src/templates/ExperienciasEventos`. 8 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`/`left`/`right` (con CTA), IntroText, CardsShowcase, Footer. Nota: el máster usa imagen retrato 3:4 + botón M; el módulo renderiza 4:3 + botón S (diferencia de variante anotada).
+- [x] **Colecciones Premium** — página Figma `58080:28565`, frame más a la izquierda `58508:36015`. `src/templates/ColeccionesPremium`. 6 franjas: Navigation, SectionHero full-bleed, IntroText, ⚠️ índice de colecciones→`List` (aprox.), CardsShowcase, Footer.
+- Ambas: `build-storybook` OK + push. Pendiente revisión visual en Pages.
 
 ---
 
 ### Próximo paso sugerido
-Fases 1–4, Hito de imágenes (2.5), **Home**, **Origen**, **Excelencia** y **Compromisos**
-(Sostenibilidad, Happy Pigs, Salud) completos. Quedan del sprint: **Colecciones Premium**
-(`58080:28565`) y **Experiencias y eventos** (`58080:26824`). Mismo flujo: leer el máster,
-mapear franjas a módulos, componer en `src/templates`.
+**SPRINT 1 de Page Templates COMPLETO** ✅ — Home, Origen (Nuestra Historia, La Dehesa),
+Excelencia (Añadas, Curación, Manual de Corte), Compromisos (Sostenibilidad, Happy Pigs,
+Salud), Experiencias y eventos, Colecciones Premium. Todas en `src/templates`, verificadas
+con `build-storybook` y publicadas. Fases 1–5 del proyecto completas.
 
-Pendiente técnico: construir el **módulo acordeón de producto real** (`58512:9289`), hoy
-aproximado con `CardsAccordion` en Añadas.
+Pendientes técnicos anotados (mejoras de fidelidad, no bloqueantes):
+- Construir el **módulo acordeón de producto real** (`58512:9289`), hoy aproximado con
+  `CardsAccordion` en Añadas.
+- Contrastar el **mobile de `ContentStack`** contra su máster mobile.
+- Revisar visualmente en Pages todas las franjas ⚠️ mapeadas a módulo cercano (Home,
+  La Dehesa, Añadas, Manual de Corte, Salud, Colecciones Premium) y decidir si se promueven
+  a módulos propios para fidelidad pixel-perfect.
 
 Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3
 franjas a medida (Title+fichas, banda Vintage, carrusel de expertos) y sustituir el mapeo.

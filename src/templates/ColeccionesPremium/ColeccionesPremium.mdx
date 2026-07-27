@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ColeccionesPremium.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Colecciones Premium
+
+Página de colecciones premium de Joselito. Composición vertical de módulos ya construidos;
+máster desktop `58508:36015` (1440×4909) / mobile `58508:36047`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Intro text | `IntroText` | Light-White |
+| 4 | Índice de colecciones ⚠️ | `List` | título + ítems (mapeo aproximado) |
+| 5 | Cards / Showcase | `CardsShowcase` | `type="many"` |
+| 6 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Aproximación de mapeo.** La franja 4 es un índice art-directed (un `Title` + una lista
+> tipográfica de ~12 nombres de colección con dos imágenes flotantes 3:4) construido a medida
+> en el máster; se aproxima con el módulo `List`. Pendiente de revisión visual en Pages.
+
+Toda la página en **Light-White**.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-colecciones` |
+
+## Componentes relacionados
+
+`Navigation`, `SectionHero`, `IntroText`, `List`, `CardsShowcase`, `Footer`.

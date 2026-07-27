@@ -1,0 +1,46 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ExperienciasEventos.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Experiencias y eventos
+
+Página de experiencias y eventos de Joselito (eventos y bodas, cotos y maridajes, alianzas
+culinarias). Composición vertical de módulos ya construidos; máster desktop `58509:40298`
+(1440×6335) / mobile `58509:40307`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Text + Image | `ContentTextImage` | `type="right"` con CTA |
+| 4 | Content / Text + Image | `ContentTextImage` | `type="left"` con CTA |
+| 5 | Content / Text + Image | `ContentTextImage` | `type="right"` con CTA |
+| 6 | Content / Intro text | `IntroText` | Light-White |
+| 7 | Cards / Showcase | `CardsShowcase` | `type="many"` |
+| 8 | Navigation / Footer | `Footer` | Light-White |
+
+> **Nota de variante.** En el máster, las 3 franjas Text+Image usan imagen en **retrato**
+> (~3:4) y botón tamaño **M**; el módulo `ContentTextImage` (left/right) renderiza imagen
+> **4:3** y botón `secondary` **S**. Diferencia conocida de la variante; estructura, orden y
+> alternancia (right/left/right) coinciden.
+
+Toda la página en **Light-White**.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-experiencias` |
+
+## Componentes relacionados
+
+`Navigation`, `SectionHero`, `ContentTextImage`, `IntroText`, `CardsShowcase`, `Footer`.
