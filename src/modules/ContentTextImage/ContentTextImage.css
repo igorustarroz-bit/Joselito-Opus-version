@@ -60,11 +60,15 @@
   .jl-txtimg { flex-direction: row; align-items: stretch; }
 
   /* half: reparto 50/50 a cualquier ancho (máster desktop = imagen 720 / panel 720).
-     Ambas columnas `flex: 1 1 0` → mitad y mitad; `box-sizing: border-box` en el panel
-     para que su padding quede dentro del 50% y no desequilibre el reparto. */
-  .jl-txtimg--half .jl-txtimg__media { flex: 1 1 0; min-width: 0; }
+     Se usa GRID de dos columnas `1fr 1fr` en vez de flex: el track fija el 50% real, sin que
+     el `aspect-ratio` de la imagen (que en flex hace derivar el ancho del alto) desequilibre.
+     `box-sizing: border-box` en el panel → su padding queda dentro del 50%. */
+  .jl-txtimg--half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .jl-txtimg--half .jl-txtimg__media { min-width: 0; }
   .jl-txtimg--half .jl-txtimg__panel {
-    flex: 1 1 0;
     min-width: 0;
     box-sizing: border-box;
     gap: 52px;
