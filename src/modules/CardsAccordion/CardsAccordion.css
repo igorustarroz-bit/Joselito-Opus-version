@@ -47,12 +47,18 @@
   .jl-pacc__item > .jl-pacc__open,
   .jl-pacc__item > .jl-pacc__collapsed {
     overflow: hidden;
-    transition: max-height 420ms ease, opacity 260ms ease;
+    transition: max-height 420ms ease, padding 420ms ease, opacity 260ms ease;
   }
   .jl-pacc__item > .jl-pacc__open { max-height: var(--jl-open-min-h, 1200px); opacity: 1; }
   .jl-pacc__item > .jl-pacc__collapsed { max-height: 240px; opacity: 1; }
-  .jl-pacc__item[data-open="false"] > .jl-pacc__open { max-height: 0; opacity: 0; pointer-events: none; }
-  .jl-pacc__item[data-open="true"]  > .jl-pacc__collapsed { max-height: 0; opacity: 0; pointer-events: none; }
+  /* Plegado: además de max-height 0, se anula el padding vertical (si no, seguiría
+     ocupando alto y cada paso plegado se vería más alto). */
+  .jl-pacc__item[data-open="false"] > .jl-pacc__open {
+    max-height: 0; padding-block: 0; opacity: 0; pointer-events: none;
+  }
+  .jl-pacc__item[data-open="true"] > .jl-pacc__collapsed {
+    max-height: 0; padding-block: 0; opacity: 0; pointer-events: none;
+  }
 }
 
 /* Medidor oculto (accordion): réplicas para calcular el panel más alto. Fuera de flujo,
