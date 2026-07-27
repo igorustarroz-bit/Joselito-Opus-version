@@ -1,0 +1,80 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ContentStack.stories.jsx';
+
+<Meta of={Stories} />
+
+# Módulo · Content / Stack (Text + Image)
+
+Acordeón a 100% de ancho para presentar una secuencia de pasos (p. ej. el proceso de
+curación). Un elemento está **abierto** y el resto **colapsados**; al pulsar una fila
+colapsada, esa se abre y las demás se cierran (una sola abierta a la vez).
+
+Máster Figma: component set `58468:60216` (Expanded `58468:60217` / Collapsed `58468:60253`).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Anatomía
+
+- **Fila colapsada** (130px): título (SangBleu `Title/03`) a la izquierda y número
+  itálico neutro claro a la derecha, en `space-between`; borde inferior `stroke-neutral-3`.
+- **Fila abierta:** dos columnas.
+  - *Texto* (536px en desktop): título + descripción (`Body/04`, `text-neutral-1`) +
+    botón `secondary` opcional; el número itálico se ancla abajo.
+  - *Imagen* (424px, ratio `3:4`) vía `AspectRatio`.
+- Padding `--grid-wrapper` en horizontal; `--sp-8` (40) en filas colapsadas y `--sp-13`
+  (80) en la abierta.
+
+## Subtemas
+
+Subtema **claro** por defecto; hereda del contenedor (colores por tokens). Prop opcional
+`theme` para fijar `data-theme` en el raíz (producción).
+
+## Comportamiento
+
+- **Desktop (≥768px):** fila abierta en dos columnas (texto | imagen), `space-between`.
+- **Mobile:** fila abierta apilada (texto arriba, imagen debajo). *Versión mobile inferida,
+  pendiente de contraste fino contra el máster mobile.*
+- Interacción: click en cabecera (`<button aria-expanded>`) cambia la fila activa.
+
+<Canvas of={Stories.Mobile} />
+
+## Variantes y tamaños
+
+Cada elemento admite los toggles del máster: `number`, `description`, `cta`/botón e
+`image`. `defaultActive` fija qué fila abre inicialmente; `ratio` cambia la proporción de
+la imagen (por defecto `3:4`).
+
+## Tokens
+
+| Rol | Token |
+| --- | --- |
+| Fondo | `--bg-base` |
+| Título | `--text-base` · `.ts-title-3` |
+| Descripción | `--text-neutral-1` · `.ts-body-4` |
+| Número (itálico) | `--text-neutral-3` |
+| Divisor | `--stroke-neutral-3` |
+| Padding horizontal | `--grid-wrapper` |
+| Espaciados | `--sp-6` · `--sp-7` · `--sp-8` · `--sp-13` |
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `items` | `{ number, title, description, cta, image, alt, ratio }[]` | 5 pasos de curación | Filas del acordeón |
+| `defaultActive` | `number` | `0` | Índice de la fila abierta inicial |
+| `ratio` | `string` | `'3:4'` | Proporción de la imagen abierta |
+| `theme` | `string` | — | Fija `data-theme` en el raíz (producción) |
+| `className` | `string` | `''` | Clases adicionales |
+
+## Accesibilidad
+
+- Cada cabecera es un `<button>` con `aria-expanded` que refleja el estado.
+- El foco se marca con `outline` sobre tokens de stroke.
+- El número es decorativo; el orden lógico lo da la secuencia de filas.
+
+## Componentes relacionados
+
+`Content / Text + Image` (bloque texto+imagen único), `UI13-Accordion` (acordeón de
+texto), `AspectRatio`, `UI02-Button`.

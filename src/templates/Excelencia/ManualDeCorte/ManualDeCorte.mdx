@@ -1,0 +1,56 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './ManualDeCorte.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Excelencia / Manual de Corte
+
+Página de la sección **Excelencia** con el manual de corte del jamón. Composición vertical
+de módulos ya construidos.
+
+> **Nota de origen.** Página "↳ Excelencia…" (`58080:18442`), **en progreso** en Figma (🟠).
+> Se usa la versión más a la izquierda del grupo Manual de Corte: desktop `58479:69902`
+> (1440×4682).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="small-image"` · Light-White |
+| 3 | Fila de navegación ⚠️ | `SecondaryMenu` | Light-White |
+| 4 | Content / Intro text | `IntroText` | Light-White |
+| 5 | Content Stack | `ContentStack` | `defaultActive={1}` · Light-White |
+| 6 | Navigation / PreviousNext | `PreviousNext` | Light-White |
+| 7 | Cards / Showcase | `CardsShowcase` | `type="many"` · Light-White |
+| 8 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Aproximación de mapeo.** La franja 3 es una fila de enlaces construida a medida en el
+> máster (no es instancia de un módulo guardado); se aproxima con `SecondaryMenu` (fila de
+> categorías con el activo subrayado).
+
+## Subtemas
+
+Toda la página en **Light-White**; cada módulo hereda el subtema del contenedor.
+
+## Comportamiento
+
+- **Desktop (≥768px):** la fila abierta del acordeón se muestra a dos columnas.
+- **Mobile:** cada módulo apila su contenido.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-manualcorte` |
+
+## Componentes relacionados
+
+Módulos que compone: `Navigation`, `SectionHero`, `SecondaryMenu`, `IntroText`,
+`ContentStack`, `PreviousNext`, `CardsShowcase`, `Footer`.

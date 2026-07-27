@@ -1,0 +1,53 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Curacion.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Excelencia / Curación
+
+Página de la sección **Excelencia** sobre el proceso de curación. Composición vertical de
+módulos ya construidos.
+
+> **Nota de origen.** Página "↳ Excelencia…" (`58080:18442`), **en progreso** en Figma (🟠).
+> Se usa la versión más a la izquierda del grupo Curación: desktop `58479:64263` (1440×4884).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Intro text | `IntroText` | Light-White |
+| 4 | Content Stack | `ContentStack` | acordeón de 5 pasos · Light-White |
+| 5 | Cards / Showcase | `CardsShowcase` | `type="many"` · Light-White |
+| 6 | Navigation / Footer | `Footer` | Light-White |
+
+La franja 4 usa el módulo **`ContentStack`** (construido para esta sección): un acordeón de
+pasos con una fila abierta (texto + imagen) y el resto colapsadas. En el máster las imágenes
+de las filas son placeholders; aquí se usan los datos por defecto del módulo (ilustrativos).
+
+## Subtemas
+
+Toda la página en **Light-White**; cada módulo hereda el subtema del contenedor.
+
+## Comportamiento
+
+- **Desktop (≥768px):** la fila abierta del acordeón se muestra a dos columnas (texto | imagen).
+- **Mobile:** cada módulo apila su contenido.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-curacion` |
+
+## Componentes relacionados
+
+Módulos que compone: `Navigation`, `SectionHero`, `IntroText`, `ContentStack`,
+`CardsShowcase`, `Footer`.
