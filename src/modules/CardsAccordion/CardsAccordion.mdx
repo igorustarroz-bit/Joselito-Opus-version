@@ -61,6 +61,13 @@ Máster carrousel `58512:9285` (desktop) / `58512:9286` (mobile). Ficha 863px en
 Nota: el asomado de las vecinas queda dentro del wrapper (no sangra al borde como el máster
 a 1440px).
 
+**Alturas y animación (carrousel).** Todas las slides igualan su alto al de la más alta
+(flex `align-items: stretch`). Las flechas desplazan con **scroll suave**; las tarjetas
+hacen **fade + leve subida** al entrar en el carril (CSS scroll-driven, `animation-timeline:
+view()`), como *progressive enhancement*: donde no haya soporte —o con `prefers-reduced-motion`—
+las tarjetas se muestran normales, sin estado oculto. No se atenúan ni encogen las laterales
+(se respeta el reposo del máster).
+
 ## Tokens
 
 | Rol | Token |

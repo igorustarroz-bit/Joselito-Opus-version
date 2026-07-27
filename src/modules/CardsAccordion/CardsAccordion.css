@@ -84,8 +84,10 @@
   display: flex;
   gap: 16px;
   width: 100%;
+  align-items: stretch; /* todas las slides toman el alto de la más alta */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding-inline: max(0px, calc((100% - 326px) / 2));
   scrollbar-width: none;
 }
@@ -104,8 +106,26 @@
   width: 56px; height: 56px; flex: 0 0 auto;
   border: 1.5px solid var(--stroke-neutral-3);
   background: none; cursor: pointer; color: var(--text-base);
+  transition: border-color 160ms ease, color 160ms ease;
 }
 .jl-cacc-car__arrow:hover { border-color: var(--stroke-base); }
+
+/* Entrada de las tarjetas: fade + leve subida al entrar en el carril, ligada al scroll
+   horizontal. Progressive enhancement: solo con soporte de scroll-driven animations y si
+   el usuario no pide menos movimiento; en el resto, las tarjetas se ven normales. */
+@keyframes jl-cacc-car-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .jl-cacc-car__card {
+      animation: jl-cacc-car-reveal linear both;
+      animation-timeline: view(inline);
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .jl-cacc-car__viewport { gap: 32px; padding-inline: max(0px, calc((100% - 863px) / 2)); }
