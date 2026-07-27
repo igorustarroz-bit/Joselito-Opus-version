@@ -40,10 +40,19 @@
   border: 1px solid var(--stroke-neutral-2);
   width: 100%;
 }
-/* Mobile: apilado; se muestra/oculta la capa según estado (el ancho no aplica). */
+/* Mobile: apilado; se anima el ALTO (expandir/colapsar) con max-height + opacidad. El tope
+   del panel abierto es el alto del producto más alto ya medido (--jl-open-min-h). Scoped a
+   `.jl-pacc__item >` para no tocar la ficha del carrusel. */
 @media (max-width: 767.98px) {
-  .jl-pacc__item[data-open="false"] .jl-pacc__open { display: none; }
-  .jl-pacc__item[data-open="true"]  .jl-pacc__collapsed { display: none; }
+  .jl-pacc__item > .jl-pacc__open,
+  .jl-pacc__item > .jl-pacc__collapsed {
+    overflow: hidden;
+    transition: max-height 420ms ease, opacity 260ms ease;
+  }
+  .jl-pacc__item > .jl-pacc__open { max-height: var(--jl-open-min-h, 1200px); opacity: 1; }
+  .jl-pacc__item > .jl-pacc__collapsed { max-height: 240px; opacity: 1; }
+  .jl-pacc__item[data-open="false"] > .jl-pacc__open { max-height: 0; opacity: 0; pointer-events: none; }
+  .jl-pacc__item[data-open="true"]  > .jl-pacc__collapsed { max-height: 0; opacity: 0; pointer-events: none; }
 }
 
 /* Medidor oculto (accordion): réplicas para calcular el panel más alto. Fuera de flujo,

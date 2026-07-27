@@ -48,11 +48,12 @@ Subtema **claro** por defecto; hereda del contenedor. Prop opcional `theme` para
 - **Alto estable:** un medidor oculto calcula el panel del producto **más alto** y ese alto se
   fija (vía `--jl-open-min-h`) como alto de todos los ítems, de modo que el módulo no salta al
   cambiar de producto.
-- **Animación de ancho (desktop):** cada producto es un ítem **persistente** (no se remonta al
-  cambiar), así que al abrir uno su **ancho crece** (`flex-grow`) y los demás se encogen con una
-  transición suave, mientras el contenido abierto y el colapsado hacen *cross-fade*. En **mobile**
-  es una pila vertical (el ancho no aplica). Entrada con *fade + subida* al montar. Todo respeta
-  `prefers-reduced-motion`.
+- **Animación al cambiar de producto** (ítems **persistentes**, no se remontan):
+  - **Desktop:** el ítem que se abre **crece de ancho** (`flex-grow`) y los demás se encogen con
+    transición suave; las capas abierta/colapsada hacen *cross-fade*.
+  - **Mobile** (pila vertical): se anima el **alto** — el panel abierto se despliega y el colapsado
+    se pliega (`max-height` + opacidad); el tope es el alto del producto más alto ya medido.
+  - Entrada con *fade + subida* al montar. Todo respeta `prefers-reduced-motion`.
 
 <Canvas of={Stories.Mobile} />
 
