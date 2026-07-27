@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Sostenibilidad.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Compromisos / Sostenibilidad
+
+Página de la sección **Compromisos** sobre sostenibilidad. Composición vertical de módulos
+ya construidos; máster desktop `58590:81784` (1440×5989) / mobile `58512:66756`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="small-image"` · Light-White |
+| 3 | Content / Image only | `ContentImageOnly` | `count={1}` |
+| 4 | Content / Intro text | `IntroText` | Light-White |
+| 5 | List / Numbers | `ListNumbers` | Light-White |
+| 6 | Content / Text + Image | `ContentTextImage` | `type="left"`, con label, sin CTA |
+| 7 | Content / Text + Image | `ContentTextImage` | `type="right"`, con label, sin CTA |
+| 8 | Cards / Showcase | `CardsShowcase` | `type="many"` |
+| 9 | Navigation / Footer | `Footer` | Light-White |
+
+Todas las franjas son instancias directas de módulos. Toda la página en **Light-White**.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-sostenibilidad` |
+
+## Componentes relacionados
+
+`Navigation`, `SectionHero`, `ContentImageOnly`, `IntroText`, `ListNumbers`,
+`ContentTextImage`, `CardsShowcase`, `Footer`.

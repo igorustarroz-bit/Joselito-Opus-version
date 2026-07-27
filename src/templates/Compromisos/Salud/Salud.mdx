@@ -1,0 +1,48 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './Salud.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Compromisos / Salud
+
+Página de la sección **Compromisos** sobre los beneficios para la salud ("100% natural, sin
+conservantes, sin aditivos"). Composición vertical de módulos ya construidos; máster desktop
+`58512:66781` (1440×6952) / mobile `58512:66792`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 4 | Main-Description ⚠️ | `List` | título + columnas (mapeo aproximado) |
+| 5 | List / Numbers | `ListNumbers` | Light-White |
+| 6 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 7 | Content / Text + Image | `ContentTextImage` | `type="left"`, sin label/CTA |
+| 8 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 9 | Cards / Showcase | `CardsShowcase` | `type="many"` |
+| 10 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Aproximación de mapeo.** La franja 4 ("Beneficios específicos": título + 3 columnas de
+> características) está construida a medida en el máster; se aproxima con el módulo `List`
+> (título + ítems en columnas con divisores). Pendiente de revisión visual en Pages.
+
+Toda la página en **Light-White**.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-salud` |
+
+## Componentes relacionados
+
+`Navigation`, `SectionHero`, `ContentTextImage`, `List`, `ListNumbers`, `CardsShowcase`,
+`Footer`.

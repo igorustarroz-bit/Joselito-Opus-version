@@ -1,0 +1,40 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './HappyPigs.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Compromisos / Happy Pigs
+
+Página de la sección **Compromisos** sobre el bienestar animal ("los cerdos Joselito son
+animales felices"). Composición vertical de módulos ya construidos; máster desktop
+`58512:66765` (1440×5081) / mobile `58512:66773`.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 4 | Content / Text + Image | `ContentTextImage` | `type="left"`, sin label/CTA |
+| 5 | Content / Text + Image | `ContentTextImage` | `type="right"`, sin label/CTA |
+| 6 | Cards / Showcase | `CardsShowcase` | `type="many"` |
+| 7 | Navigation / Footer | `Footer` | Light-White |
+
+Todas las franjas son instancias directas de módulos. Toda la página en **Light-White**.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre `.jl-tmpl-happypigs` |
+
+## Componentes relacionados
+
+`Navigation`, `SectionHero`, `ContentTextImage`, `CardsShowcase`, `Footer`.

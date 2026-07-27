@@ -160,17 +160,21 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
   - **Manual de Corte** — máster `58479:69902`. 8 franjas: Navigation, SectionHero small-image, ⚠️ fila nav→SecondaryMenu, IntroText, ContentStack `defaultActive=1`, PreviousNext, CardsShowcase, Footer.
   - 🆕 **Módulo nuevo `ContentStack` (Content / Stack Text+Image)** construido para esta sección (máster set `58468:60216`): acordeón de pasos (fila abierta texto+imagen 3:4 + colapsadas número/título). jsx+css+story+doc. Mobile inferido (pendiente contraste). Pendiente: construir el **acordeón de producto real** (`58512:9289`) usado en Añadas.
   - `build-storybook` OK + push. Pendiente revisión visual en Pages.
-- [ ] Compromisos: Sostenibilidad, Happy Pigs, Salud
+- [x] **Compromisos: Sostenibilidad, Happy Pigs, Salud** — página Figma `58080:18443` (frame más a la izquierda de cada grupo). 3 templates en `src/templates/Compromisos`.
+  - **Sostenibilidad** — máster `58590:81784`. 9 franjas de módulos: Navigation, SectionHero small-image, ContentImageOnly, IntroText, ListNumbers, ContentTextImage `left`+`right` (con label), CardsShowcase, Footer.
+  - **Happy Pigs** — máster `58512:66765`. 7 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
+  - **Salud** — máster `58512:66781`. 10 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`, ⚠️ Main-Description→`List` (aprox.), ListNumbers, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
+  - `build-storybook` OK + push. Pendiente revisión visual en Pages.
 - [ ] Experiencias y eventos
 - [ ] Colecciones Premium
 
 ---
 
 ### Próximo paso sugerido
-Fases 1–4, Hito de imágenes (2.5), **Home**, **Origen** y **Excelencia** (Añadas, Curación,
-Manual de Corte) completos. Siguiente template del sprint: **Compromisos: Sostenibilidad,
-Happy Pigs, Salud** (página Figma `58080:18443`). Mismo flujo: leer el máster, mapear
-franjas a módulos, componer en `src/templates`.
+Fases 1–4, Hito de imágenes (2.5), **Home**, **Origen**, **Excelencia** y **Compromisos**
+(Sostenibilidad, Happy Pigs, Salud) completos. Quedan del sprint: **Colecciones Premium**
+(`58080:28565`) y **Experiencias y eventos** (`58080:26824`). Mismo flujo: leer el máster,
+mapear franjas a módulos, componer en `src/templates`.
 
 Pendiente técnico: construir el **módulo acordeón de producto real** (`58512:9289`), hoy
 aproximado con `CardsAccordion` en Añadas.
