@@ -150,7 +150,10 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
 ## Fase 5 — Page Templates (SPRINT 1)
 
 - [x] **Home** — máster `58196:24000` (desktop) / `58153:29609` (mobile). Composición de 11 franjas en `src/templates/Home` (Home.jsx + story + doc MDX). Instancias de módulo: Hero, IntroText, SectionBanner ×2, CardsAccordion (oscuro), CardsShowcase, CardsCategories, Footer. ⚠️ 3 franjas a medida del máster (no son módulo guardado) mapeadas al módulo más cercano por decisión del equipo (2026-07-27): Title+3 fichas→`CardsGallery`; banda "Reserva·Vintage·Millésime"→`CardsAccordion` (dark-red-primary); carrusel de expertos→`CardsProductCarousel` (envuelto en dark-black-neutral). Aproximaciones anotadas, pendientes de revisión visual en Pages. `build-storybook` OK + push.
-- [ ] Origen: Nuestra Historia, La Dehesa
+- [x] **Origen: Nuestra Historia, La Dehesa** — página Figma `58080:16503` (2 templates).
+  - **Nuestra Historia** — máster `58367:40833` (desktop) / `58367:41051` (mobile). `src/templates/Origen/NuestraHistoria`. 8 franjas, **todas instancias de módulos** (Navigation, SectionHero full-bleed, IntroText, ContentTextImage ×2 con `type="right"`/`type="left"`, Timeline `dark-red-primary`, SectionBanner, Footer). Sin secciones a medida.
+  - **La Dehesa** — máster `58443:45016` (desktop) / `58443:45028` (mobile). `src/templates/Origen/LaDehesa`. 9 franjas: Navigation, SectionHero `small-image`, ContentImageOnly ×3 (uno con vídeo), IntroText ×2, Footer. ⚠️ 2 franjas a medida mapeadas al módulo más cercano: imagen grande+card→`ContentImageOnly count={2}`; feed social→`CardsCategories` instagram. Aproximaciones anotadas.
+  - `build-storybook` OK + push. Pendiente revisión visual en Pages.
 - [ ] Excelencia: Añadas, Curación, Manual de Corte
 - [ ] Compromisos: Sostenibilidad, Happy Pigs, Salud
 - [ ] Experiencias y eventos
@@ -159,8 +162,9 @@ checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (202
 ---
 
 ### Próximo paso sugerido
-Fases 1–4, Hito de imágenes (2.5) y **Home** (Fase 5) completos. Siguiente template:
-**Origen: Nuestra Historia, La Dehesa** (página Figma `58080:16503`). Mismo flujo: leer el
+Fases 1–4, Hito de imágenes (2.5), **Home** y **Origen** (Nuestra Historia + La Dehesa)
+completos. Siguiente template: **Excelencia: Añadas, Curación, Manual de Corte**
+(página Figma `58080:18442`, marcada 🟠 = en progreso en Figma). Mismo flujo: leer el
 máster, mapear franjas a módulos ya construidos, componer en `src/templates`.
 
 Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3

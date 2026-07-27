@@ -1,0 +1,60 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './NuestraHistoria.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Origen / Nuestra Historia
+
+Página de la sección **Origen** que narra la historia de Joselito. Es una
+**composición vertical de módulos ya construidos**, en el orden y con los subtemas
+del máster de Figma (página "↳ Origen…" `58080:16503`; desktop `58367:40833` de
+1440×6241, mobile `58367:41051` de 390×5516).
+
+A diferencia del Home, **todas las franjas son instancias directas de módulos** (no
+hay secciones a medida): la plantilla solo define el orden y el subtema de cada una.
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="full-bleed"` · Light-White |
+| 3 | Content / Intro text | `IntroText` | Light-White |
+| 4 | Content / Text + Image | `ContentTextImage` | `type="right"` (texto izq · imagen der) |
+| 5 | List / Timeline | `Timeline` | `theme="dark-red-primary"` (foto horizontal) |
+| 6 | Content / Text + Image | `ContentTextImage` | `type="left"` (imagen izq · texto der) |
+| 7 | Banners / Section banner | `SectionBanner` | Light-White |
+| 8 | Navigation / Footer | `Footer` | Light-White |
+
+## Subtemas
+
+Cada módulo pinta su propio `background: var(--bg-base)` y **hereda** el subtema del
+contenedor. Todas las franjas quedan en **Light-White** salvo el **Timeline**, que se
+fuerza a `dark-red-primary` mediante su prop `theme` (banda roja con foto horizontal y
+el año activo destacado).
+
+## Comportamiento
+
+- **Desktop (≥1024px):** los dos `Content / Text + Image` se muestran en fila (imagen a
+  un lado, texto al otro, según `type`); el Timeline muestra los años gigantes al fondo.
+- **Mobile:** cada módulo aplica su versión apilada; no hay lógica responsive en el template.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre el contenedor `.jl-tmpl-historia` |
+
+Los datos (textos, imágenes) provienen de los **defaults de cada módulo**. Para una
+página real, se pasan props a cada módulo desde este archivo.
+
+## Componentes relacionados
+
+Módulos que compone: `Navigation`, `SectionHero`, `IntroText`, `ContentTextImage`,
+`Timeline`, `SectionBanner`, `Footer`.

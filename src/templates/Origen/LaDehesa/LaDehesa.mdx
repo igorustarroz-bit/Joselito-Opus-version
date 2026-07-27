@@ -1,0 +1,62 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import * as Stories from './LaDehesa.stories.jsx';
+
+<Meta of={Stories} />
+
+# Plantilla · Origen / La Dehesa
+
+Página de la sección **Origen** dedicada a la dehesa y sus cuatro estaciones. Es una
+**composición vertical de módulos ya construidos**, en el orden y con los subtemas del
+máster de Figma (página "↳ Origen…" `58080:16503`; desktop `58443:45016` de 1440×6564,
+mobile `58443:45028` de 390×6094).
+
+## Demo
+
+<Canvas of={Stories.Desktop} />
+
+## Composición (de arriba abajo)
+
+| # | Franja del máster | Módulo | Props / Subtema |
+| --- | --- | --- | --- |
+| 1 | Navigation | `Navigation` | `mode="light"` |
+| 2 | Hero / Section hero | `SectionHero` | `layout="small-image"` · Light-White |
+| 3 | Content / Image only | `ContentImageOnly` | `count={1}` |
+| 4 | Content / Intro text | `IntroText` | Light-White |
+| 5 | Imagen grande + card ⚠️ | `ContentImageOnly` | `count={2}` (mapeo aproximado) |
+| 6 | Content / Intro text | `IntroText` | Light-White |
+| 7 | Content / Image only | `ContentImageOnly` | `count={1} video` (botón de play) |
+| 8 | Feed social ⚠️ | `CardsCategories` | `variant="instagram"` (mapeo aproximado) |
+| 9 | Navigation / Footer | `Footer` | Light-White |
+
+> ⚠️ **Secciones a medida (mapeo aproximado).** Las franjas 5 y 8 están construidas a
+> medida en el máster (no son instancias de un módulo guardado). Por decisión del equipo
+> se componen con el módulo más cercano: la franja 5 (imagen grande + tarjeta pequeña con
+> pie) se aproxima con `ContentImageOnly` de dos imágenes; la franja 8 (feed de miniaturas
+> sociales) con `CardsCategories` en variante instagram. Pendientes de revisión visual en Pages.
+
+## Subtemas
+
+Toda la página va en **Light-White**; cada módulo pinta su propio `background: var(--bg-base)`
+y hereda el subtema del contenedor. No hay franjas oscuras ni de acento.
+
+## Comportamiento
+
+- **Desktop (≥1024px):** las franjas de imagen se muestran a sangre o en pareja; el feed
+  social reparte las miniaturas en fila.
+- **Mobile:** cada módulo aplica su versión apilada; no hay lógica responsive en el template.
+
+<Canvas of={Stories.Mobile} />
+
+## Propiedades
+
+| Prop | Tipo | Defecto | Descripción |
+| --- | --- | --- | --- |
+| `className` | `string` | `''` | Clases adicionales sobre el contenedor `.jl-tmpl-dehesa` |
+
+Los datos (textos, imágenes) provienen de los **defaults de cada módulo**. Para una
+página real, se pasan props a cada módulo desde este archivo.
+
+## Componentes relacionados
+
+Módulos que compone: `Navigation`, `SectionHero`, `ContentImageOnly`, `IntroText`,
+`CardsCategories`, `Footer`.
