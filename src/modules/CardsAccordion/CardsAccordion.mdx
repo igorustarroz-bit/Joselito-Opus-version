@@ -50,7 +50,9 @@ Subtema **claro** por defecto; hereda del contenedor. Prop opcional `theme` para
   cambiar de producto.
 - **Animación al cambiar de producto** (ítems **persistentes**, no se remontan):
   - **Desktop:** el ítem que se abre **crece de ancho** (`flex-grow`) y los demás se encogen con
-    transición suave; las capas abierta/colapsada hacen *cross-fade*.
+    transición suave; las capas abierta/colapsada hacen *cross-fade* (alpha). El contenido de la
+    ficha tiene ancho fijo (imagen 404 / detalle 315, `flex: 0 0`), así **no reflúye** durante la
+    animación: solo se revela con el ancho del contenedor y aparece con opacidad.
   - **Mobile** (pila vertical): se anima el **alto** — el panel abierto se despliega y el colapsado
     se pliega (`max-height` + opacidad); el tope es el alto del producto más alto ya medido.
   - Entrada con *fade + subida* al montar. Todo respeta `prefers-reduced-motion`.

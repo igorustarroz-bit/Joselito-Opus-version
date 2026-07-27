@@ -114,14 +114,16 @@
   /* En fila: recupera el borde superior y elimina el izquierdo duplicado */
   .jl-pacc__row > * + * { border-top: 1px solid var(--stroke-neutral-2); border-left: 0; }
 
-  /* Anchos del máster (imagen 404 / detalle 315) como flex-basis pero encogibles
-     (`0 1` + min-width:0) para no desbordar la fila por debajo de 1440. */
+  /* Anchos del máster (imagen 404 / detalle 315). NO encogen (`flex: 0 0`): así el
+     contenido NO reflúye durante la animación de ancho del ítem — se percibe solo por el
+     desplazamiento del contenedor (revelado por overflow) + el fundido de opacidad. Si el
+     ítem es más estrecho que el contenido, éste se recorta (overflow hidden del ítem). */
   .jl-pacc__open {
     flex-direction: row; gap: 48px; padding: 48px;
     flex: 0 1 auto; min-width: 0; align-items: stretch; width: auto;
   }
-  .jl-pacc__media { width: 404px; flex: 0 1 404px; min-width: 0; align-self: flex-start; }
-  .jl-pacc__details { width: 315px; flex: 0 1 315px; min-width: 0; justify-content: space-between; }
+  .jl-pacc__media { width: 404px; flex: 0 0 404px; align-self: flex-start; }
+  .jl-pacc__details { width: 315px; flex: 0 0 315px; justify-content: space-between; }
 
   .jl-pacc__collapsed { flex: 1 1 0; min-width: 0; padding: 48px 80px; justify-content: space-between; }
   /* `writing-mode` en vez de `transform: rotate` para que el título vertical NO
