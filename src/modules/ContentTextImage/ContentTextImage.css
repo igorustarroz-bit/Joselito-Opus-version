@@ -59,10 +59,13 @@
 @media (min-width: 768px) {
   .jl-txtimg { flex-direction: row; align-items: stretch; }
 
-  /* half: imagen 720 + panel flex-1 con paddings amplios */
-  .jl-txtimg--half .jl-txtimg__media { flex: 0 0 720px; }
+  /* half: imagen 720 + panel flex-1 con paddings amplios.
+     `flex-basis` fija el tamaño del máster (1440) pero se permite encoger
+     (`0 1` + min-width:0) para que por debajo de 1440 no desborde el viewport. */
+  .jl-txtimg--half .jl-txtimg__media { flex: 0 1 720px; min-width: 0; }
   .jl-txtimg--half .jl-txtimg__panel {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     gap: 52px;
     padding: 110px 121px;
   }
@@ -73,12 +76,15 @@
   .jl-txtimg--left,
   .jl-txtimg--right { align-items: center; padding: 112px 80px; gap: 135px; }
   .jl-txtimg--right { justify-content: space-between; gap: var(--spacer-fx-8); }
+  /* Anchos del máster (imagen 627 / texto 468) como flex-basis, pero encogibles
+     (`0 1` + min-width:0) para no desbordar por debajo de 1440. */
   .jl-txtimg--left .jl-txtimg__media,
-  .jl-txtimg--right .jl-txtimg__media { flex: 0 0 627px; order: 0; }
+  .jl-txtimg--right .jl-txtimg__media { flex: 0 1 627px; min-width: 0; order: 0; }
   .jl-txtimg--right .jl-txtimg__media { order: 2; }
   .jl-txtimg--left .jl-txtimg__panel,
   .jl-txtimg--right .jl-txtimg__panel {
-    flex: 0 0 468px;
+    flex: 0 1 468px;
+    min-width: 0;
     gap: 52px;
     padding: 0;
   }
