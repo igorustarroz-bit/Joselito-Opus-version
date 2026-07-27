@@ -26,9 +26,9 @@ subtema. Aquí solo se define el orden y qué subtema fuerza cada franja.
 | 2 | Content / Intro text | `IntroText` | Light-White |
 | 3 | Title + 3 fichas ⚠️ | `CardsGallery` | Light-White |
 | 4 | Banners / Section banner | `SectionBanner` | Light-White |
-| 5 | Banda "Reserva·Vintage·Millésime" ⚠️ | `CardsAccordion` | Dark-Red-Primary |
+| 5 | Banda "Reserva·Vintage·Millésime" ⚠️ | `CardsBigTitles` | Dark-Red-Primary |
 | 6 | Carrusel de expertos ⚠️ | `CardsProductCarousel` | Dark-Black-Neutral |
-| 7 | Cards / Accordion | `CardsAccordion` | Dark-Black-Neutral |
+| 7 | Cards / Big Titles | `CardsBigTitles` | Dark-Black-Neutral |
 | 8 | Cards / Showcase | `CardsShowcase` | Light-White |
 | 9 | Banners / Section banner | `SectionBanner` | Light-White |
 | 10 | Cards / Categories | `CardsCategories` | Light-White |
@@ -47,7 +47,7 @@ subtema. Aquí solo se define el orden y qué subtema fuerza cada franja.
 Cada módulo pinta su propio `background: var(--bg-base)` y **hereda** el subtema del
 contenedor. Las franjas oscuras/rojas se fuerzan así:
 
-- `SectionBanner` y `CardsAccordion` exponen la prop **`theme`** → se les pasa
+- `SectionBanner` y `CardsBigTitles` exponen la prop **`theme`** → se les pasa
   `theme="dark-red-primary"` (franja 5) y `theme="dark-black-neutral"` (franja 7).
 - `CardsProductCarousel` **no** expone `theme` → se envuelve en un `<div data-theme="dark-black-neutral">` (franja 6).
 - El resto quedan en **Light-White** (default).
@@ -74,4 +74,4 @@ este archivo.
 ## Componentes relacionados
 
 Todos los módulos que compone: `Hero`, `IntroText`, `CardsGallery`, `SectionBanner`,
-`CardsAccordion`, `CardsProductCarousel`, `CardsShowcase`, `CardsCategories`, `Footer`.
+`CardsBigTitles`, `CardsProductCarousel`, `CardsShowcase`, `CardsCategories`, `Footer`.

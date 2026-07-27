@@ -3,15 +3,22 @@ import CardsAccordion from './CardsAccordion.jsx';
 const meta = {
   title: 'Módulos/Cards · Accordion',
   component: CardsAccordion,
-  parameters: { layout: 'fullscreen', defaultTheme: 'dark-black-neutral' },
+  parameters: { layout: 'fullscreen' },
 };
 export default meta;
 
-/** Default — vista por defecto, fluida (sin viewport fijo) para comprobar el responsive. */
+/** Default — vista fluida (sin viewport fijo) para comprobar el responsive. */
 export const Default = {};
 
-/** Desktop — banda tipográfica sobre fondo oscuro. */
+/** Desktop — fila horizontal: ficha abierta + paneles colapsados (título rotado + número). */
 export const Desktop = { parameters: { viewport: { value: 'xl' } } };
 
-/** Mobile — tipografía reducida. */
+/** Mobile — pila vertical: ficha abierta arriba, colapsados como barras. */
 export const Mobile = { parameters: { viewport: { value: 'xs' } } };
+
+/** Abre la 2ª ficha por defecto (prop `defaultActive`). */
+export const AbreLa2 = {
+  name: 'Abre la 2ª',
+  args: { defaultActive: 1 },
+  parameters: { viewport: { value: 'xl' } },
+};

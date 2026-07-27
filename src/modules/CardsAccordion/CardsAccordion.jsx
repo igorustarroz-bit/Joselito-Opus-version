@@ -1,97 +1,128 @@
 import './CardsAccordion.css';
-import Button from '../../components/Button/Button.jsx';
-import photo1 from '../../assets/images/accordion-1.webp';
-import photo2 from '../../assets/images/showcase.webp';
-import photo3 from '../../assets/images/accordion-2.webp';
+import { useState } from 'react';
+import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import Tag from '../../components/Tag/Tag.jsx';
+import ActionLink from '../../components/ActionLink/ActionLink.jsx';
+import Icon from '../../components/Icon/Icon.jsx';
+import fillerImg from '../../assets/images/generic-filler.webp';
 
 /**
- * Módulo Cards / Accordion — máster Figma 58182:24099. Subtema oscuro.
+ * Módulo Cards / Accordion — variante **Type=Accordion** (acordeón de producto).
+ * Máster Figma: component set `58512:9289`, variantes Desktop `58512:9287` y
+ * Mobile `58512:9288`.
  *
- * OJO: pese al nombre "Accordion", NO es un acordeón. Es una banda tipográfica
- * decorativa. Además, desktop y mobile son estructuralmente distintos:
- *  - Desktop (58182:24098): palabras gigantes (SangBleu, Title/08) repetidas
- *    alternando rojo de marca y blanco, con fotos dispersas al fondo. Sin texto/CTA.
- *  - Mobile (58182:24097): eyebrow + 3 palabras + descripción + atributos + botón
- *    (terciary). Sin fotos.
+ * Nomenclatura: en Figma este nodo se llama "Cards / Accordion" y este módulo lleva
+ * el mismo nombre. La antigua banda tipográfica (máster `58182:24099`), que antes se
+ * llamaba "Cards / Accordion" en Figma, es ahora "Cards / Big Titles" → módulo
+ * `CardsBigTitles`.
  *
- * El rojo es el rojo de marca (`--color-primary-50`): en el subtema oscuro ningún
- * token semántico de texto lo devuelve (accent-base → blanco), así que se usa la
- * primitiva de marca directamente.
+ * Estructura: cabecera (antetítulo `Body/04` + enlace "Ver todos" con CaretRight +
+ * título SangBleu `Title/03`) y una fila/pila de paneles. UN panel abierto muestra la
+ * ficha completa (imagen 3:4 + título + estrellas + cuerpo + tags + enlace "DESCUBRIR");
+ * los colapsados muestran, en **desktop**, el título rotado 90° + el número, y en
+ * **mobile**, el título centrado. Al pulsar un colapsado, ese se abre.
  *
- * Subtema oscuro por defecto (parameters.defaultTheme en Storybook); hereda del
- * contenedor. Nota: offsets de fotos en desktop aproximados.
+ * Toggles del máster: `showStars`, `showBody`, `showLabels`, `showLink`.
+ * Subtema claro por defecto; hereda del contenedor (colores por tokens).
+ * Nota: anchos de panel (imagen 404 / detalle 315) y paddings (68/48/80) literales del
+ * máster (no ligados a variable). El panel abierto abraza su contenido; los colapsados
+ * reparten el resto.
  */
-const DESKTOP_LINES = [
-  { text: 'Reserva' },
-  { text: 'Vintage' },
-  { text: 'Millésime', light: true },
-  { text: 'Reserva' },
-  { text: 'Vintage' },
-];
-const MOBILE_LINES = [
-  { text: 'Reserva' },
-  { text: 'Millésime', light: true },
-  { text: 'Vintage' },
+const DEFAULT_ITEMS = [
+  {
+    title: 'Joselito Gran Reserva',
+    stars: 3,
+    body:
+      'Los jamones Gran Reserva representan la pureza del sabor Joselito en su forma más armoniosa: jugosos, suaves y de aromas delicados, en una experiencia gastronómica auténtica.',
+    labels: ['Complejidad', 'Equilibrio', 'Dulzura'],
+    cta: 'Descubrir',
+    image: fillerImg,
+  },
+  { title: 'Joselito Vintage', stars: 3, body: 'Una añada excepcional, seleccionada entre las mejores piezas de la bodega.', labels: ['Intensidad', 'Carácter'], cta: 'Descubrir', image: fillerImg },
+  { title: 'Joselito Millésime', stars: 3, body: 'La cima de la colección: curaciones largas y perfiles aromáticos únicos.', labels: ['Excepcional'], cta: 'Descubrir', image: fillerImg },
 ];
 
 export default function CardsAccordion({
-  eyebrow = 'AÑOS DE CURACIÓN',
-  desktopLines = DESKTOP_LINES,
-  mobileLines = MOBILE_LINES,
-  description = 'Los jamones Gran Reserva expresan el sabor Joselito en su forma más armoniosa: jugosos, suaves y de aromas delicados.',
-  attributes = ['Complejidad', 'Equilibrio', 'Dulzura'],
-  duration = '4 a 6 años de curación',
-  cta = 'Descubrir',
-  images = [photo1, photo2, photo3],
+  eyebrow = 'Nuestra colección',
+  link = 'Ver todos',
+  linkHref = '#',
+  title = 'Elige el jamón que mejor se adapte a tu celebración.',
+  items = DEFAULT_ITEMS,
+  defaultActive = 0,
+  showStars = true,
+  showBody = true,
+  showLabels = true,
+  showLink = true,
   theme,
   className = '',
   ...rest
 }) {
-  const Word = ({ l }) => (
-    <span className={`jl-typeband__word${l.light ? ' jl-typeband__word--light' : ''}`}>{l.text}</span>
-  );
+  const [active, setActive] = useState(defaultActive);
 
   return (
-    <section className={`jl-typeband ${className}`.trim()} data-theme={theme || undefined} {...rest}>
-      {/* ---- Desktop: banda con fotos ---- */}
-      <div className="jl-typeband__desktop">
-        <div className="jl-typeband__photos" aria-hidden="true">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className={`jl-typeband__photo jl-typeband__photo--${i + 1}`}>
-              {images[i] ? <img src={images[i]} alt="" /> : null}
-            </div>
-          ))}
+    <section className={`jl-pacc ${className}`.trim()} data-theme={theme || undefined} {...rest}>
+      <div className="jl-pacc__header">
+        <div className="jl-pacc__toprow">
+          <span className="jl-pacc__eyebrow ts-body-4">{eyebrow}</span>
+          {link && (
+            <a className="jl-pacc__seeall" href={linkHref}>
+              <span className="ts-body-3">{link}</span>
+              <Icon name="CaretRight" size="M" />
+            </a>
+          )}
         </div>
-        <div className="jl-typeband__words">
-          {desktopLines.map((l, i) => <Word key={i} l={l} />)}
-        </div>
+        {title && <h2 className="jl-pacc__title ts-title-3">{title}</h2>}
       </div>
 
-      {/* ---- Mobile: eyebrow + palabras + contenido + CTA ---- */}
-      <div className="jl-typeband__mobile">
-        {eyebrow && <p className="jl-typeband__eyebrow ts-body-2">{eyebrow}</p>}
-        <div className="jl-typeband__words jl-typeband__words--mobile">
-          {mobileLines.map((l, i) => <Word key={i} l={l} />)}
-        </div>
-        <div className="jl-typeband__content">
-          {description && <p className="jl-typeband__desc ts-body-3">{description}</p>}
-          {(attributes?.length > 0 || duration) && (
-            <div className="jl-typeband__meta">
-              {attributes?.length > 0 && (
-                <p className="jl-typeband__attrs">
-                  {attributes.map((a, i) => (
-                    <span key={i}>
-                      <span className="jl-typeband__attr">{a}</span>
-                      {i < attributes.length - 1 && <span className="jl-typeband__dot" aria-hidden="true"> · </span>}
-                    </span>
-                  ))}
-                </p>
-              )}
-              {duration && <p className="jl-typeband__duration">{duration}</p>}
-            </div>
-          )}
-          {cta && <Button type="terciary" size="s">{cta}</Button>}
-        </div>
+      <div className="jl-pacc__row">
+        {items.map((it, i) => {
+          if (i === active) {
+            return (
+              <div className="jl-pacc__open" key={it.title ?? i}>
+                {it.image && (
+                  <AspectRatio ratio="3:4" className="jl-pacc__media">
+                    <img src={it.image} alt={it.alt || ''} />
+                  </AspectRatio>
+                )}
+                <div className="jl-pacc__details">
+                  <div className="jl-pacc__group">
+                    <h3 className="jl-pacc__ptitle ts-title-3">{it.title}</h3>
+                    {showStars && it.stars > 0 && (
+                      <div className="jl-pacc__stars" aria-label={`${it.stars} de 3`}>
+                        {Array.from({ length: it.stars }).map((_, s) => (
+                          <Icon key={s} name="Star" size={18} />
+                        ))}
+                      </div>
+                    )}
+                    <div className="jl-pacc__bodywrap">
+                      {showBody && it.body && <p className="jl-pacc__body ts-body-3">{it.body}</p>}
+                      {showLabels && it.labels?.length > 0 && (
+                        <div className="jl-pacc__tags">
+                          {it.labels.map((l, k) => (
+                            <Tag key={k} type="transaction" size="l">{l}</Tag>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  {showLink && it.cta && <ActionLink>{it.cta}</ActionLink>}
+                </div>
+              </div>
+            );
+          }
+          return (
+            <button
+              type="button"
+              className="jl-pacc__collapsed"
+              key={it.title ?? i}
+              aria-expanded="false"
+              onClick={() => setActive(i)}
+            >
+              <span className="jl-pacc__vtitle ts-body-4">{it.title}</span>
+              <span className="jl-pacc__num ts-body-4" aria-hidden="true">{i + 1}</span>
+            </button>
+          );
+        })}
       </div>
     </section>
   );

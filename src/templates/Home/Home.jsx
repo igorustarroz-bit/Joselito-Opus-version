@@ -4,7 +4,7 @@ import Hero from '../../modules/Hero/Hero.jsx';
 import IntroText from '../../modules/IntroText/IntroText.jsx';
 import CardsGallery from '../../modules/CardsGallery/CardsGallery.jsx';
 import SectionBanner from '../../modules/SectionBanner/SectionBanner.jsx';
-import CardsAccordion from '../../modules/CardsAccordion/CardsAccordion.jsx';
+import CardsBigTitles from '../../modules/CardsBigTitles/CardsBigTitles.jsx';
 import CardsProductCarousel from '../../modules/CardsProductCarousel/CardsProductCarousel.jsx';
 import CardsShowcase from '../../modules/CardsShowcase/CardsShowcase.jsx';
 import CardsCategories from '../../modules/CardsCategories/CardsCategories.jsx';
@@ -20,9 +20,9 @@ import heroImg from '../../assets/images/tpl-home-hero.webp';
  *   2. Content / Intro text  ...... instancia de módulo (Light-White)
  *   3. Title + 3 fichas      ...... ⚠️ sección a medida del máster → mapeada a `CardsGallery`
  *   4. Banners / Section banner ... instancia de módulo (Light-White)
- *   5. Banda "Reserva·Vintage·Millésime" ⚠️ sección a medida → mapeada a `CardsAccordion` (Dark-Red-Primary)
+ *   5. Banda "Reserva·Vintage·Millésime" ⚠️ sección a medida → mapeada a `CardsBigTitles` (Dark-Red-Primary)
  *   6. Carrusel de expertos  ...... ⚠️ sección a medida → mapeada a `CardsProductCarousel` (Dark-Black-Neutral)
- *   7. Cards / Accordion     ...... instancia de módulo (Dark-Black-Neutral, banda tipográfica)
+ *   7. Cards / Big Titles    ...... instancia de módulo (Dark-Black-Neutral, banda tipográfica)
  *   8. Cards / Showcase      ...... instancia de módulo (Light-White)
  *   9. Banners / Section banner ... instancia de módulo (Light-White)
  *  10. Cards / Categories    ...... instancia de módulo (Light-White, feed social)
@@ -36,7 +36,7 @@ import heroImg from '../../assets/images/tpl-home-hero.webp';
  *
  * Subtemas: cada módulo pinta su propio `background: var(--bg-base)` y hereda el
  * subtema del contenedor. Las franjas oscuras/rojas se fuerzan con la prop `theme`
- * (SectionBanner/CardsAccordion la exponen) o envolviéndolas en `data-theme`
+ * (SectionBanner/CardsBigTitles la exponen) o envolviéndolas en `data-theme`
  * (CardsProductCarousel no la expone). El resto quedan en Light-White (default).
  */
 export default function Home({ className = '', ...rest }) {
@@ -54,16 +54,16 @@ export default function Home({ className = '', ...rest }) {
       {/* 4 — Section banner */}
       <SectionBanner />
 
-      {/* 5 — ⚠️ Banda "Reserva·Vintage·Millésime" → CardsAccordion en rojo de marca */}
-      <CardsAccordion theme="dark-red-primary" />
+      {/* 5 — ⚠️ Banda "Reserva·Vintage·Millésime" → CardsBigTitles en rojo de marca */}
+      <CardsBigTitles theme="dark-red-primary" />
 
       {/* 6 — ⚠️ Carrusel de expertos → CardsProductCarousel sobre fondo oscuro */}
       <div data-theme="dark-black-neutral">
         <CardsProductCarousel />
       </div>
 
-      {/* 7 — Cards / Accordion (banda tipográfica, subtema oscuro) */}
-      <CardsAccordion theme="dark-black-neutral" />
+      {/* 7 — Cards / Big Titles (banda tipográfica, subtema oscuro) */}
+      <CardsBigTitles theme="dark-black-neutral" />
 
       {/* 8 — Cards / Showcase */}
       <CardsShowcase />

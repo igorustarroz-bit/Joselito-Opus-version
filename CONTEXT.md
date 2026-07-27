@@ -98,4 +98,11 @@ Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vit
 
 - **Brand Assets** contiene muchos logos de terceros (UFV, Riu, Regnum Christi, Accenture, BBVA, Santander, Microsoft, etc.) que parecen heredados de otra plantilla. Probablemente **fuera de alcance** para Joselito → confirmar con el equipo antes de programarlos. Sí son propios: `Brand Logo`, `Logo Grid`, set de `Icons`, `Icon Sizer`.
 - Páginas `WIP Ale` y `WIP Miguel` en Figma: trabajo en curso ajeno → ignorar.
+- **Nomenclatura Cards / Accordion vs Big Titles (2026-07-27):** Figma renombró el nodo
+  `58182:24099` de "Cards / Accordion" a **"Cards / Big Titles"** (es una banda tipográfica,
+  no un acordeón). El nombre "Cards / Accordion" lo lleva ahora el acordeón real (`58512:9289`).
+  En código: banda = módulo **`CardsBigTitles`**; acordeón real = módulo **`CardsAccordion`**
+  (antes `ProductAccordion`). Home compone la banda (`CardsBigTitles`), Añadas el acordeón
+  (`CardsAccordion`). Pendientes anotados en `PLAN.md`: variante `Type=Carrousel` del set
+  `58512:9289` y set nuevo `Accordion-Collapse` (`58512:82775`).
 - **Borrado en la carpeta vinculada (§7.9) — permiso proactivo:** el shell del sandbox restringe el borrado dentro de la carpeta y devuelve *Operation not permitted*. Muchas operaciones normales lo necesitan (`build-storybook` hace `unlink` en `storybook-static/`, resolver un `.git/HEAD.lock`, borrar temporales). Solución v2: **pedir el permiso de borrado al arrancar la sesión** con la herramienta de Cowork `allow_cowork_file_delete` (no esperar a que falle un `rm`). Con el permiso concedido, `build-storybook` normal funciona en la carpeta (escribe en `storybook-static/`, gitignored) — **ya no hace falta compilar a `/tmp`** (eso queda como plan B solo si no hay permiso). Si tras un `git push` queda un `.git/HEAD.lock` residual que bloquea el siguiente commit, borrarlo (permiso ya concedido) y reintentar. Nota: los `git push` pueden agotar el timeout aunque el push haya llegado — verificar con `git ls-remote origin refs/heads/main` antes de reintentar.

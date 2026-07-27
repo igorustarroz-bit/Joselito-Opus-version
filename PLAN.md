@@ -137,7 +137,7 @@ Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Compo
 - [x] Cards / Product carousel — máster `58163:83548` (Desktop/Mobile). Cabecera (antetítulo + "Explorar todos") + carrusel de CardProduct con badge/chips/estrellas/CTA; desktop 3 centradas, mobile scroll horizontal. Reutiliza Card Product. **Auditado**: corregido spacing mobile (gap 32, padding 40/24/64, tarjeta 281, antetítulo Body/03). `build-storybook` OK + push
 - [x] Cards / Showcase — máster `58182:4396` (Desktop Many/One · Mobile Many). Cabecera + carrusel de CardCarrusel (imagen 3:2 + título/desc/tags/CTA); type many (slides asomando) / one (única). Reutiliza Card Carrusel. **Auditado**: corregido mobile (tarjetas VERTICALES de 249px, padding 40/24/64) — antes salían horizontales a todo el ancho. `build-storybook` OK + push
 - [x] Cards / Categories — máster `58182:4401` (Desktop/Mobile × RRSS/Instagram). Feed social. **Auditado y rehecho**: prop `variant` (rrss/instagram). RRSS desktop = iconos en cabecera + handles; RRSS mobile = iconos abajo centrados + sin handles; Instagram = sin iconos + pie "SÍGUENOS/@cuenta". Antes solo variaba el set de iconos (incorrecto). Reutiliza Icon + AspectRatio. `build-storybook` OK + push
-- [x] Cards / Accordion — máster `58182:24099` (nodo 58182:24098). OJO: el nodo NO es un acordeón sino una **banda tipográfica** (palabras gigantes SangBleu rojo/blanco + fotos al fondo, subtema oscuro); construido fiel al nodo por decisión del equipo. El acordeón real está en `58512:9289` (pendiente si se quiere como módulo aparte). `build-storybook` OK + push. Aproximado en offsets de fotos. Pendiente revisión en Pages
+- [x] Cards / Big Titles — máster `58182:24099` (nodo 58182:24098) → módulo `CardsBigTitles`. En Figma este nodo se **renombró** de "Cards / Accordion" a "Cards / Big Titles" (2026-07-27); el módulo se renombró en consecuencia (antes `CardsAccordion`). NO es un acordeón sino una **banda tipográfica** (palabras gigantes SangBleu rojo/blanco + fotos al fondo, subtema oscuro); construido fiel al nodo. El acordeón real es "Cards / Accordion" (`58512:9289`) → módulo `CardsAccordion`. `build-storybook` OK + push. Aproximado en offsets de fotos. Pendiente revisión en Pages
 - [x] Banners / Section banner — máster `58182:4380` (Desktop `58182:4378` / Mobile `58182:4379`). Cabecera (`Title`) + banner: imagen a sangre con velo `rgba(0,0,0,0.2)` y tarjeta blanca superpuesta (título SangBleu `Title/02` + cuerpo `Body/03` + botón terciary). Desktop: banner 720px, tarjeta 372px flotante a la derecha (`space-between`); mobile: apilado (imagen 4:3 → texto + botón, botón S). Reutiliza `Title`, `Button`. `build-storybook` OK + push. Notas: alto/ancho/paddings del banner y velo literales del máster; márgenes vía `--grid-wrapper`; imagen como placeholder. Pendiente revisión visual en Pages
 - [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
 - [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
@@ -178,10 +178,23 @@ Salud), Experiencias y eventos, Colecciones Premium. Todas en `src/templates`, v
 con `build-storybook` y publicadas. Fases 1–5 del proyecto completas.
 
 Pendientes técnicos:
-- [x] **Módulo acordeón de producto real** (`ProductAccordion`, máster `58512:9289`) construido
-  (jsx+css+story+doc, Desktop+Mobile) y cableado en Añadas (franja 4) sustituyendo la
-  aproximación `CardsAccordion`. Nomenclatura: el nombre Figma "Cards/Accordion" ya lo ocupaba
-  la banda tipográfica; el acordeón real se publica como `ProductAccordion`.
+- [x] **Módulo acordeón de producto real** (máster `58512:9289`, "Cards / Accordion" en Figma)
+  construido (jsx+css+story+doc, Desktop+Mobile) y cableado en Añadas (franja 4).
+- [x] **Nomenclatura alineada con Figma (2026-07-27).** Figma renombró la banda tipográfica
+  homónima `58182:24099` de "Cards / Accordion" → "Cards / Big Titles", liberando el nombre
+  "Cards / Accordion" para el acordeón real `58512:9289`. En código se renombró en consecuencia:
+  el antiguo `CardsAccordion` (banda) → **`CardsBigTitles`**, y el antiguo `ProductAccordion`
+  (acordeón real) → **`CardsAccordion`**. Actualizados imports, stories (títulos Storybook:
+  "Cards · Big Titles" / "Cards · Accordion"), docs MDX, y las plantillas Home (usa la banda →
+  `CardsBigTitles`) y Añadas (usa el acordeón → `CardsAccordion`). Clases CSS internas
+  (`jl-typeband*` / `jl-pacc*`) sin cambios (no colisionan). `build-storybook` OK.
+- [ ] **(Hallazgo) Variante `Type=Carrousel` del set "Cards / Accordion"** (`58512:9285` desktop /
+  `58512:9286` mobile). El set `58512:9289` tiene 2 tipos (Accordion + Carrousel); `CardsAccordion`
+  solo cubre Accordion. Pendiente decidir si la variante Carrousel equivale al `CardsProductCarousel`
+  ya existente (otro máster) o es un módulo distinto por construir.
+- [ ] **(Hallazgo) Set nuevo "Accordion-Collapse"** (`58512:82775`, estados Close / Open 1 / Open 2).
+  Parece la pieza colapsable individual del acordeón. Pendiente analizar si se construye como
+  fragment/subcomponente.
 - [x] **Mobile de `ContentStack`** contrastado contra el máster (`58468:60235`) y corregido:
   el orden mobile ahora es texto → imagen → número (antes imagen y número iban invertidos);
   desktop reimplementado con grid (texto arriba-izq, número abajo-izq, imagen derecha).
