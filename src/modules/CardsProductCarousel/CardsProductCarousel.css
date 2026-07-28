@@ -40,7 +40,12 @@
   gap: 32px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  cursor: grab;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
+.jl-carousel__track::-webkit-scrollbar { display: none; }
+.jl-carousel__track.is-dragging { cursor: grabbing; user-select: none; scroll-behavior: auto; }
 .jl-carousel__card {
   flex: 0 0 281px;
   width: 281px;
@@ -53,6 +58,8 @@
     font-size: var(--ts-body-4-sz);
     line-height: var(--ts-body-4-lh);
   }
-  .jl-carousel__track { gap: 48px; justify-content: center; }
+  /* `safe center`: centra cuando caben todas, pero alinea al inicio si desbordan (si no,
+     no se podría hacer scroll hasta la primera/última tarjeta). */
+  .jl-carousel__track { gap: 48px; justify-content: safe center; }
   .jl-carousel__card { flex: 0 0 329px; width: 329px; }
 }

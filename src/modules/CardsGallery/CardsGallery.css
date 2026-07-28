@@ -39,6 +39,12 @@
     overflow-x: auto;
     gap: 24px;
     padding: 60px 60px 80px;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
-  .jl-cards-gallery__card { flex: 0 0 312px; width: 312px; }
+  .jl-cards-gallery__row::-webkit-scrollbar { display: none; }
+  .jl-cards-gallery__row.is-dragging { cursor: grabbing; user-select: none; scroll-behavior: auto; }
+  .jl-cards-gallery__card { flex: 0 0 312px; width: 312px; scroll-snap-align: start; }
 }

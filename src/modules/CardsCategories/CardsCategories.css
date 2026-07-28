@@ -44,9 +44,16 @@
   gap: 32px;
   overflow-x: auto;
   padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
-.jl-categories--instagram .jl-categories__track { justify-content: center; }
-.jl-categories__thumb { margin: 0; display: flex; flex-direction: column; gap: 36px; flex: 0 0 auto; }
+.jl-categories__track::-webkit-scrollbar { display: none; }
+.jl-categories__track.is-dragging { cursor: grabbing; user-select: none; scroll-behavior: auto; }
+/* `safe center`: centra si caben, pero permite scroll hasta la primera/última si desbordan. */
+.jl-categories--instagram .jl-categories__track { justify-content: safe center; }
+.jl-categories__thumb { margin: 0; display: flex; flex-direction: column; gap: 36px; flex: 0 0 auto; scroll-snap-align: start; }
 .jl-categories__media { width: 204px; }
 .jl-categories__thumb--landscape .jl-categories__media { width: 268px; }
 .jl-categories__ar { background: var(--bg-neutral-2); }

@@ -1,6 +1,7 @@
 import './CardsCategories.css';
 import Icon from '../../components/Icon/Icon.jsx';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
+import useDragScroll from '../../hooks/useDragScroll.js';
 import cat1 from '../../assets/images/category-1.webp';
 import cat2 from '../../assets/images/category-2.webp';
 import cat3 from '../../assets/images/category-3.webp';
@@ -50,6 +51,7 @@ export default function CardsCategories({
   ...rest
 }) {
   const isRRSS = variant === 'rrss';
+  const trackRef = useDragScroll();
   return (
     <section className={`jl-categories jl-categories--${variant} ${className}`.trim()} {...rest}>
       {isRRSS && (
@@ -59,7 +61,7 @@ export default function CardsCategories({
         </div>
       )}
 
-      <div className="jl-categories__track">
+      <div className="jl-categories__track" ref={trackRef}>
         {items.map((it, i) => {
           const landscape = it.ratio === '3:2';
           return (

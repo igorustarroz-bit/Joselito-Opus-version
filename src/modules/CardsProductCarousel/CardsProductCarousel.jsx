@@ -1,6 +1,7 @@
 import './CardsProductCarousel.css';
 import CardProduct from '../../components/CardProduct/CardProduct.jsx';
 import Icon from '../../components/Icon/Icon.jsx';
+import useDragScroll from '../../hooks/useDragScroll.js';
 import productImg from '../../assets/images/product-portrait.webp';
 
 /**
@@ -34,6 +35,7 @@ export default function CardsProductCarousel({
   className = '',
   ...rest
 }) {
+  const trackRef = useDragScroll();
   return (
     <section className={`jl-carousel ${className}`.trim()} {...rest}>
       <div className="jl-carousel__head">
@@ -45,7 +47,7 @@ export default function CardsProductCarousel({
           </a>
         )}
       </div>
-      <div className="jl-carousel__track">
+      <div className="jl-carousel__track" ref={trackRef}>
         {items.map((it, i) => (
           <CardProduct key={i} className="jl-carousel__card" {...it} />
         ))}

@@ -35,10 +35,17 @@
   display: flex;
   gap: 32px;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
+.jl-showcase__track::-webkit-scrollbar { display: none; }
+.jl-showcase__track.is-dragging { cursor: grabbing; user-select: none; scroll-behavior: auto; }
 .jl-showcase__slide {
   flex: 0 0 100%;
   min-width: 0;
+  scroll-snap-align: start;
 }
 .jl-showcase--many .jl-showcase__slide { flex: 0 0 249px; }
 

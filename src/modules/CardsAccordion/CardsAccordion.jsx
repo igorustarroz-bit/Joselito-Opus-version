@@ -1,5 +1,6 @@
 import './CardsAccordion.css';
 import { useState, useRef, useLayoutEffect } from 'react';
+import useDragScroll from '../../hooks/useDragScroll.js';
 import AspectRatio from '../../components/AspectRatio/AspectRatio.jsx';
 import Tag from '../../components/Tag/Tag.jsx';
 import ActionLink from '../../components/ActionLink/ActionLink.jsx';
@@ -61,7 +62,7 @@ export default function CardsAccordion({
   ...rest
 }) {
   const [active, setActive] = useState(defaultActive);
-  const trackRef = useRef(null);
+  const trackRef = useDragScroll();
   const measureRef = useRef(null);
   const [openMinH, setOpenMinH] = useState(0);
 

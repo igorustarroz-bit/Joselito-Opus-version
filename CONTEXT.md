@@ -98,6 +98,14 @@ Ver `PLAN.md`. Sesión de arranque completada: scaffold creado y verificado (Vit
 
 - **Brand Assets** contiene muchos logos de terceros (UFV, Riu, Regnum Christi, Accenture, BBVA, Santander, Microsoft, etc.) que parecen heredados de otra plantilla. Probablemente **fuera de alcance** para Joselito → confirmar con el equipo antes de programarlos. Sí son propios: `Brand Logo`, `Logo Grid`, set de `Icons`, `Icon Sizer`.
 - Páginas `WIP Ale` y `WIP Miguel` en Figma: trabajo en curso ajeno → ignorar.
+- **Carruseles con scroll horizontal (patrón común):** todos los tracks de cards con scroll
+  horizontal usan **scroll-snap** (`scroll-snap-type: x mandatory` + `scroll-snap-align` en las
+  cards) y el hook **`src/hooks/useDragScroll.js`** para arrastrar con el ratón (en táctil se
+  deja el scroll nativo; el hook pausa el snap al arrastrar y lo restaura al soltar → "cae" a la
+  slide más cercana, y cancela el click si hubo arrastre). Scrollbar oculta; `cursor: grab/grabbing`.
+  Aplicado en: `CardsShowcase`, `CardsGallery` (desktop), `CardsProductCarousel`, `CardsCategories`
+  y el carrusel de `CardsAccordion` (`type="carrousel"`). Para que se vean todas las slides al
+  desbordar, los tracks centrados usan `justify-content: safe center` (no `center`).
 - **Nomenclatura Cards / Accordion vs Big Titles (2026-07-27):** Figma renombró el nodo
   `58182:24099` de "Cards / Accordion" a **"Cards / Big Titles"** (es una banda tipográfica,
   no un acordeón). El nombre "Cards / Accordion" lo lleva ahora el acordeón real (`58512:9289`).

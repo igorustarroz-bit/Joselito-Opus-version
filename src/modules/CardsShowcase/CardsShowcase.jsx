@@ -1,6 +1,7 @@
 import './CardsShowcase.css';
 import CardCarrusel from '../../components/CardCarrusel/CardCarrusel.jsx';
 import Icon from '../../components/Icon/Icon.jsx';
+import useDragScroll from '../../hooks/useDragScroll.js';
 import showcaseImg from '../../assets/images/showcase.webp';
 
 /**
@@ -27,6 +28,7 @@ export default function CardsShowcase({
   ...rest
 }) {
   const list = type === 'one' ? items.slice(0, 1) : items;
+  const trackRef = useDragScroll();
   return (
     <section className={`jl-showcase jl-showcase--${type} ${className}`.trim()} {...rest}>
       <div className="jl-showcase__head">
@@ -38,7 +40,7 @@ export default function CardsShowcase({
           </a>
         )}
       </div>
-      <div className="jl-showcase__track">
+      <div className="jl-showcase__track" ref={trackRef}>
         {list.map((it, i) => (
           <CardCarrusel key={i} className="jl-showcase__slide" orientation="horizontal" {...it} />
         ))}

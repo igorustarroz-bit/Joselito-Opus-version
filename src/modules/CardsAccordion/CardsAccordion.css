@@ -175,10 +175,12 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  cursor: grab;
   padding-inline: max(0px, calc((100% - 326px) / 2));
   scrollbar-width: none;
 }
 .jl-cacc-car__viewport::-webkit-scrollbar { display: none; }
+.jl-cacc-car__viewport.is-dragging { cursor: grabbing; user-select: none; scroll-behavior: auto; }
 
 /* Cada ficha del carril: no encoge y se centra al hacer snap (override de .jl-pacc__open) */
 .jl-cacc-car__card {

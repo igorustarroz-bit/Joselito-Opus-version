@@ -1,5 +1,6 @@
 import './CardsGallery.css';
 import CardProduct from '../../components/CardProduct/CardProduct.jsx';
+import useDragScroll from '../../hooks/useDragScroll.js';
 import portraitImg from '../../assets/images/product-portrait.webp';
 import squareImg from '../../assets/images/gallery-square.webp';
 
@@ -28,6 +29,7 @@ export default function CardsGallery({
   className = '',
   ...rest
 }) {
+  const trackRef = useDragScroll();
   return (
     <section className={`jl-cards-gallery ${className}`.trim()} {...rest}>
       {title && (
@@ -35,7 +37,7 @@ export default function CardsGallery({
           <h2 className="jl-cards-gallery__title ts-title-4">{title}</h2>
         </div>
       )}
-      <div className="jl-cards-gallery__row">
+      <div className="jl-cards-gallery__row" ref={trackRef}>
         {items.map((it, i) => (
           <CardProduct
             key={i}
