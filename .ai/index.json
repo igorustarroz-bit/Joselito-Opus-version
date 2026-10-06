@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T15:46:02.687Z",
+  "generatedAt": "2026-10-06T15:59:42.155Z",
   "output": "react-storybook",
   "items": [
     {
@@ -201,7 +201,7 @@
       "builtFp": "70b13aa5"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Visa",
@@ -213,7 +213,7 @@
       "key": "brand:visa"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Brand Logo",
@@ -225,7 +225,7 @@
       "key": "brand:brand-logo"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Logo Grid",
@@ -237,7 +237,7 @@
       "key": "brand:logo-grid"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Logo Riu",
@@ -249,7 +249,7 @@
       "key": "brand:logo-riu"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Logo UFV",
@@ -261,7 +261,7 @@
       "key": "brand:logo-ufv"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "PEFC CERTIFICATE",
@@ -273,7 +273,7 @@
       "key": "brand:pefc-certificate"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Customer Award Ekomi",
@@ -285,7 +285,7 @@
       "key": "brand:customer-award-ekomi"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "Logo_junta_de_castilla_y_leon",
@@ -297,7 +297,7 @@
       "key": "brand:logo-junta-de-castilla-y-leon"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_ferran_adria",
@@ -309,7 +309,7 @@
       "key": "brand:firma-ferran-adria"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_nou_manolín",
@@ -321,7 +321,7 @@
       "key": "brand:firma-nou-manolin"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_eneko_atxa",
@@ -333,7 +333,7 @@
       "key": "brand:firma-eneko-atxa"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_bittor_arginzoniz",
@@ -345,7 +345,7 @@
       "key": "brand:firma-bittor-arginzoniz"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_yannick_alleno",
@@ -357,7 +357,7 @@
       "key": "brand:firma-yannick-alleno"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_joaquim_wissler",
@@ -369,7 +369,7 @@
       "key": "brand:firma-joaquim-wissler"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_seiji_yamamoto",
@@ -381,7 +381,7 @@
       "key": "brand:firma-seiji-yamamoto"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_jonnie_boer",
@@ -393,7 +393,7 @@
       "key": "brand:firma-jonnie-boer"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "brand",
       "name": "firma_massimiliano_alajmo",

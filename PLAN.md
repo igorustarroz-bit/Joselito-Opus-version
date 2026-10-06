@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 8/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 25/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -24,23 +24,23 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 ## Fase 2b — Iconos y brand assets
 
 - [x] Set de iconos (137) → SVGR/SVGO <!-- k:icons:set -->
-- [ ] Visa `63609:144103` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:visa -->
-- [ ] Brand Logo `58073:6883` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:brand-logo -->
-- [ ] Logo Grid `51027:8208` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-grid -->
-- [ ] Logo Riu `52007:6841` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-riu -->
-- [ ] Logo UFV `49722:3620` — 4 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-ufv -->
-- [ ] PEFC CERTIFICATE `58786:48814` — 3 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:pefc-certificate -->
-- [ ] Customer Award Ekomi `58786:48912` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:customer-award-ekomi -->
-- [ ] Logo_junta_de_castilla_y_leon `58799:2555` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-junta-de-castilla-y-leon -->
-- [ ] firma_ferran_adria `62303:284950` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-ferran-adria -->
-- [ ] firma_nou_manolín `62348:109683` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-nou-manolin -->
-- [ ] firma_eneko_atxa `62348:110429` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-eneko-atxa -->
-- [ ] firma_bittor_arginzoniz `62348:110843` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-bittor-arginzoniz -->
-- [ ] firma_yannick_alleno `62348:111288` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-yannick-alleno -->
-- [ ] firma_joaquim_wissler `62348:111452` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-joaquim-wissler -->
-- [ ] firma_seiji_yamamoto `62348:111667` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-seiji-yamamoto -->
-- [ ] firma_jonnie_boer `62348:111829` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-jonnie-boer -->
-- [ ] firma_massimiliano_alajmo `62348:111888` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-massimiliano-alajmo -->
+- [x] Visa `63609:144103` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:visa -->
+- [x] Brand Logo `58073:6883` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:brand-logo -->
+- [x] Logo Grid `51027:8208` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-grid -->
+- [x] Logo Riu `52007:6841` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-riu -->
+- [x] Logo UFV `49722:3620` — 4 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-ufv -->
+- [x] PEFC CERTIFICATE `58786:48814` — 3 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:pefc-certificate -->
+- [x] Customer Award Ekomi `58786:48912` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:customer-award-ekomi -->
+- [x] Logo_junta_de_castilla_y_leon `58799:2555` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-junta-de-castilla-y-leon -->
+- [x] firma_ferran_adria `62303:284950` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-ferran-adria -->
+- [x] firma_nou_manolín `62348:109683` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-nou-manolin -->
+- [x] firma_eneko_atxa `62348:110429` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-eneko-atxa -->
+- [x] firma_bittor_arginzoniz `62348:110843` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-bittor-arginzoniz -->
+- [x] firma_yannick_alleno `62348:111288` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-yannick-alleno -->
+- [x] firma_joaquim_wissler `62348:111452` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-joaquim-wissler -->
+- [x] firma_seiji_yamamoto `62348:111667` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-seiji-yamamoto -->
+- [x] firma_jonnie_boer `62348:111829` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-jonnie-boer -->
+- [x] firma_massimiliano_alajmo `62348:111888` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-massimiliano-alajmo -->
 
 ## Fase 2.5 — HITO de imágenes (justo después de los iconos; no se salta)
 

@@ -1,0 +1,118 @@
+{
+  "name": "BrandLogo",
+  "kind": "component",
+  "title": "Brand Logo",
+  "figma": {
+    "nodeId": "58073:6883",
+    "name": "Brand Logo",
+    "fp": "aa50b476"
+  },
+  "description": "Logo de la marca (máster **Brand Logo**, variantes Horizontal Yes/No) y el resto de brand assets vectoriales de la página Brand Assets de Figma: logos de partners (Riu, UFV), Logo Grid, certificaciones (PEFC, Junta de Castilla y León) y las 9 firmas de chefs. Ficheros en `src/assets/logos/<nombre>.svg`; mapa nombre ↔ nodo en `maps/logos.json`. Los monocromos heredan el color del texto (`currentColor`); los de terceros conservan sus colores de marca. Visa y Ekomi son raster (`src/assets/images`).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Horizontal": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "HorizontalYes",
+      "title": "Horizontal=Yes (300×200)"
+    },
+    {
+      "story": "HorizontalNo",
+      "title": "Horizontal=No (200×200)"
+    },
+    {
+      "story": "Galeria",
+      "title": "Galería — logos, sellos y certificaciones"
+    },
+    {
+      "story": "Firmas",
+      "title": "Firmas de chefs (9)"
+    }
+  ],
+  "props": [
+    {
+      "name": "horizontal",
+      "figma": "Horizontal",
+      "description": "`Yes` logotipo horizontal, `No` pictograma.",
+      "default": "Yes",
+      "control": "inline-radio"
+    },
+    {
+      "name": "width",
+      "description": "Ancho en px; el alto se ajusta a la proporción del frame de Figma.",
+      "default": "300 / 200",
+      "control": "number"
+    },
+    {
+      "name": "title",
+      "description": "Texto accesible. Vacío = decorativo (`aria-hidden`).",
+      "default": "Joselito",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "logo de marca y logos de partners (currentColor)"
+      },
+      {
+        "token": "--texts-accent-base",
+        "usage": "firmas de chefs"
+      },
+      {
+        "token": "--backgrounds-inverse",
+        "usage": "fondo de muestra del escudo de la Junta (blanco/gris) en la galería"
+      }
+    ],
+    "spacing": []
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Los monocromos heredan el color de texto del subtema; PEFC, Junta y Logo Grid mantienen colores fijos."
+  },
+  "anatomy": [
+    "SVG con el viewBox del frame de Figma (incluye su margen interior)",
+    "Un único trazado vectorial por logo"
+  ],
+  "behavior": [
+    "Sin interacción propia; se usa en Header, Footer y módulos de chefs/certificaciones.",
+    "`Logo` (export nombrado) pinta cualquier brand asset por nombre."
+  ],
+  "content": [
+    {
+      "field": "name (Logo)",
+      "notes": "Usar siempre un fichero de src/assets/logos; no añadir SVG sueltos."
+    }
+  ],
+  "a11y": [
+    "El logo de marca lleva `role=img` y `aria-label` (\"Joselito\").",
+    "Si va dentro de un enlace a home, el enlace debe tener nombre accesible."
+  ],
+  "related": [
+    "Icon",
+    "Header",
+    "Footer"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "SVG descargados con download_assets (export SVG del nodo) y comprobados por tamaño (22/22). El export incluía fondos del lienzo (#D1D1D1, #F7F7F7) y el borde discontinuo del component set (#9747FF): se eliminan antes de SVGO.",
+    "Colores sin variable en Figma: logos en black y firmas en #E23636 (= Primary/50) → currentColor + tokens. Avisar a diseño.",
+    "Logo UFV: las variantes Light y Dark son idénticas en Figma (mismo vector en negro), y Riu/UFV son placeholders con el logo de Joselito. Avisar a diseño.",
+    "Logo Grid es una retícula de construcción (no un logo): se exporta como referencia.",
+    "PEFC: 3 variantes (pefc-1 horizontal, pefc-2 vertical, pefc-mark); los textos del sello van trazados (no son texto vivo)."
+  ],
+  "codePath": "src/components/BrandLogo/BrandLogo.jsx"
+}

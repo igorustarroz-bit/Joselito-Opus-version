@@ -1,0 +1,185 @@
+{
+  "brand-logo-horizontal": {
+    "nodeId": "51027:4369",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 3120
+  },
+  "brand-logo-vertical": {
+    "nodeId": "51027:4368",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 713
+  },
+  "logo-grid-horizontal": {
+    "nodeId": "51027:8207",
+    "mono": false,
+    "colors": [
+      "#005eff",
+      "#fff"
+    ],
+    "bytes": 974
+  },
+  "logo-grid-square": {
+    "nodeId": "51027:8206",
+    "mono": false,
+    "colors": [
+      "#005eff",
+      "#fff"
+    ],
+    "bytes": 930
+  },
+  "logo-riu": {
+    "nodeId": "52007:6841",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 2803
+  },
+  "logo-ufv-siglas-light": {
+    "nodeId": "49722:3567",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 678
+  },
+  "logo-ufv-siglas-dark": {
+    "nodeId": "49722:3621",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 678
+  },
+  "logo-ufv-institucional-dark": {
+    "nodeId": "49722:3689",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 678
+  },
+  "logo-ufv-institucional-light": {
+    "nodeId": "49722:3691",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 678
+  },
+  "pefc-1": {
+    "nodeId": "58786:48812",
+    "mono": false,
+    "colors": [
+      "#fff",
+      "#7dba28",
+      "#010202"
+    ],
+    "bytes": 32526
+  },
+  "pefc-2": {
+    "nodeId": "58786:48813",
+    "mono": false,
+    "colors": [
+      "#fff",
+      "#7dba28",
+      "#010202"
+    ],
+    "bytes": 31411
+  },
+  "pefc-mark": {
+    "nodeId": "58799:26211",
+    "mono": false,
+    "colors": [
+      "#7dba28"
+    ],
+    "bytes": 1504
+  },
+  "logo-junta-castilla-leon": {
+    "nodeId": "58799:2555",
+    "mono": false,
+    "colors": [
+      "#b3b3b3",
+      "#fff"
+    ],
+    "bytes": 12371
+  },
+  "firma-ferran-adria": {
+    "nodeId": "62303:284950",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 9485
+  },
+  "firma-nou-manolin": {
+    "nodeId": "62348:109683",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 5299
+  },
+  "firma-eneko-atxa": {
+    "nodeId": "62348:110429",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 5395
+  },
+  "firma-bittor-arginzoniz": {
+    "nodeId": "62348:110843",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 12373
+  },
+  "firma-yannick-alleno": {
+    "nodeId": "62348:111288",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 10316
+  },
+  "firma-joaquim-wissler": {
+    "nodeId": "62348:111452",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 11099
+  },
+  "firma-seiji-yamamoto": {
+    "nodeId": "62348:111667",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 12177
+  },
+  "firma-jonnie-boer": {
+    "nodeId": "62348:111829",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 8603
+  },
+  "firma-massimiliano-alajmo": {
+    "nodeId": "62348:111888",
+    "mono": true,
+    "colors": [
+      "currentColor"
+    ],
+    "bytes": 13387
+  }
+}

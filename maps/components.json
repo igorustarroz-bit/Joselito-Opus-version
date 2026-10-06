@@ -8,5 +8,10 @@
     "name": "Icon",
     "path": "src/components/Icon/Icon.jsx",
     "fp": "e44630a6"
+  },
+  "58073:6883": {
+    "name": "BrandLogo",
+    "path": "src/components/BrandLogo/BrandLogo.jsx",
+    "fp": "aa50b476"
   }
 }
