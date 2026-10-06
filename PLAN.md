@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 25/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 26/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -48,7 +48,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 ## Fase 3 — Componentes (ordenados: primero los que son base de otros)
 
-- [ ] Button-Action-Link `49038:9486` — 12 variantes <!-- k:component:button-action-link -->
+- [x] Button-Action-Link `49038:9486` — 12 variantes <!-- k:component:button-action-link -->
 - [ ] Button-Icon `49038:9364` — 65 variantes <!-- k:component:button-icon -->
 - [ ] Button `49038:9189` — 60 variantes <!-- k:component:button -->
 - [ ] Tag `49723:4763` — 9 variantes <!-- k:component:tag -->

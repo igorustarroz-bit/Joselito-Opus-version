@@ -1,0 +1,47 @@
+/* Button-Action-Link — Figma 49038:9486. Solo tokens.
+   El subrayado es un trazo inferior INSIDE de 1px en Figma: se pinta con box-shadow inset para
+   no sumar altura (L 22px · M 18px · S 16px, igual que el máster). */
+.button-action-link {
+  --bal-line: var(--strokes-icons-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--layout-spacers-responsive-2);
+  width: fit-content;
+  margin: 0;
+  padding: 0 0 var(--spacers-fixed-fx-1);
+  border: 0;
+  background: none;
+  color: var(--button-link-primary-default-text);
+  box-shadow: inset 0 -1px 0 var(--bal-line);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.button-action-link--m { padding-bottom: var(--spacers-fixed-fx-0); }
+.button-action-link--s { padding-bottom: 0; gap: var(--layout-spacers-responsive-1); }
+
+/* Hover */
+.button-action-link:hover,
+.button-action-link.is-hover {
+  --bal-line: var(--strokes-icons-neutral-1);
+  color: var(--texts-neutral-1);
+}
+
+/* Focus: igual que Default en Figma + contorno solo con teclado (decisión de Igor, accesibilidad) */
+.button-action-link:focus { outline: none; }
+.button-action-link:focus-visible,
+.button-action-link.is-focus {
+  --bal-line: var(--button-link-primary-default-stroke);
+  color: var(--button-link-primary-default-text);
+  outline: 1px solid var(--button-link-primary-default-stroke);
+  outline-offset: var(--spacers-fixed-fx-1);
+}
+
+/* Disabled (después de hover para que no reaccione) */
+.button-action-link:disabled,
+.button-action-link[aria-disabled='true'] {
+  --bal-line: var(--strokes-icons-neutral-2);
+  color: var(--texts-neutral-3);
+  cursor: not-allowed;
+}

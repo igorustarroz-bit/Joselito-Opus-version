@@ -13,5 +13,10 @@
     "name": "BrandLogo",
     "path": "src/components/BrandLogo/BrandLogo.jsx",
     "fp": "aa50b476"
+  },
+  "49038:9486": {
+    "name": "ButtonActionLink",
+    "path": "src/components/ButtonActionLink/ButtonActionLink.jsx",
+    "fp": "b8ad2b00"
   }
 }

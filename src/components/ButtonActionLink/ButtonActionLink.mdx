@@ -1,0 +1,198 @@
+{/* Generado por scripts/docs-generator.mjs desde ButtonActionLink.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ButtonActionLink.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Button-Action-Link
+
+## Introducción
+
+Enlace de acción: texto en mayúsculas con subrayado de 1 px y un icono opcional a cada lado. Se usa para acciones secundarias dentro de tarjetas, módulos y menús ("Ver más", "Añadir"…). Es `<a>` cuando lleva `href` y `<button>` cuando no. Ancho según contenido.
+
+
+Figma: `Button-Action-Link` (`49038:9486`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Icono izquierdo opcional (20 px, Icon size S)
+- Texto en mayúsculas (estilo CTA según tamaño)
+- Icono derecho opcional (20 px, Icon size S)
+- Subrayado inferior de 1 px (trazo interior: no suma altura)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+No fija subtema: texto y subrayado salen de tokens semánticos y se adaptan al subtema del contenedor.
+
+## Comportamiento
+
+- Hover: texto y subrayado pasan a gris (Neutral 1).
+- Focus (teclado): igual que Default + contorno de 1 px separado 4 px (:focus-visible). Con ratón no aparece.
+- Disabled: texto y subrayado en gris claro, no reacciona a hover ni recibe foco; en `<a>` se quita el `href` y se marca `aria-disabled`.
+- Ancho según contenido (fit-content); el texto no se parte (nowrap).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Default, Size=L
+
+<Canvas of={Stories.DefaultL} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Hover, Size=L
+
+<Canvas of={Stories.HoverL} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Focus, Size=L
+
+<Canvas of={Stories.FocusL} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Disabled, Size=L
+
+<Canvas of={Stories.DisabledL} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Default, Size=M
+
+<Canvas of={Stories.DefaultM} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Hover, Size=M
+
+<Canvas of={Stories.HoverM} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Focus, Size=M
+
+<Canvas of={Stories.FocusM} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Disabled, Size=M
+
+<Canvas of={Stories.DisabledM} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Default, Size=S
+
+<Canvas of={Stories.DefaultS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Hover, Size=S
+
+<Canvas of={Stories.HoverS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Focus, Size=S
+
+<Canvas of={Stories.FocusS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Disabled, Size=S
+
+<Canvas of={Stories.DisabledS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show Icon Left + Show Icon Right
+
+<Canvas of={Stories.ConIconos} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Como enlace (con href)
+
+<Canvas of={Stories.ComoEnlace} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--button-link-primary-default-text` | texto (Default y Focus) |
+| color | `--strokes-icons-base` | subrayado (Default) |
+| color | `--texts-neutral-1` | texto (Hover) |
+| color | `--strokes-icons-neutral-1` | subrayado (Hover) |
+| color | `--button-link-primary-default-stroke` | subrayado y contorno de foco (Focus) |
+| color | `--texts-neutral-3` | texto (Disabled) |
+| color | `--strokes-icons-neutral-2` | subrayado (Disabled) |
+| spacing | `--layout-spacers-responsive-2` | separación texto–iconos (L, M) |
+| spacing | `--layout-spacers-responsive-1` | separación texto–iconos (S) |
+| spacing | `--spacers-fixed-fx-1` | espacio bajo el texto (L) y separación del contorno de foco |
+| spacing | `--spacers-fixed-fx-0` | espacio bajo el texto (M) |
+| typography | `ts-cta-03` |  |
+| typography | `ts-cta-02` |  |
+| typography | `ts-cta-01` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| text | Texto del enlace (se muestra en mayúsculas por el estilo CTA). | "Button" | text |
+| size | Tamaño: `L` (CTA/03, 14 px), `M` (CTA/02, 12 px), `S` (CTA/01, 12 px compacto). | L | inline-radio |
+| href | Si se pasa, se renderiza como `<a>`; si no, como `<button>`. | — | text |
+| disabled | Desactiva el enlace (texto y subrayado en gris, sin interacción). | false | boolean |
+| showIconLeft | Muestra el icono izquierdo. | false | boolean |
+| showIconRight | Muestra el icono derecho. | false | boolean |
+| iconLeft | Nombre del icono izquierdo (set de iconos). En Figma: Star. | star | select |
+| iconRight | Nombre del icono derecho (set de iconos). En Figma: ArrowRight. | arrow-right | select |
+| state | Solo documentación: fuerza la apariencia de `Hover` o `Focus`. En producción los estados son nativos (:hover, :focus-visible). | — | select |
+| theme | Fija un subtema (`data-theme`). Por defecto hereda el del contenedor. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Texto |  | Verbo de acción corto (1–3 palabras). En el máster: "Button". |
+
+## Accesibilidad
+
+- Usa `href` cuando navega (enlace) y sin `href` cuando ejecuta una acción (botón).
+- Foco visible con teclado (:focus-visible).
+- Los iconos son decorativos (aria-hidden); el texto da el nombre accesible.
+
+## Componentes relacionados
+
+- Button
+- Button-Icon
+- Card Product
+- Icon
