@@ -27,7 +27,8 @@ Estructura: `src/tokens` (generado) · `src/components` · `src/modules` · `src
 Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · todas las variantes del máster · solo tokens · docs generadas · `npm run dod -- <meta>` pasa · build OK · push a main y comprobado con `git ls-remote` · revisión visual humana en Pages (no bloquea).
 
 ## 6. Hitos activos (revisar al arrancar sesión)
-- [ ] HITO de imágenes raster justo después de los iconos (`milestone:images` en PLAN.md).
+- [ ] HITO de imágenes raster justo después de los iconos (`milestone:images` en PLAN.md). Ni la nube ni la shell local tienen red a figma.com (proxy 403) → vía navegador (navegar a las URLs de `download_assets` → Descargas → `npm run images -- --from ~/Downloads`).
+- [ ] Aspect Ratio en curso (`[~]`): código, docs y DoD OK salvo la foto real (hash 99ad7255…), que se cablea al cerrar el HITO de imágenes; entonces marcar `foundation:aspect-ratio=done --fp`.
 
 ## 7. Decisiones y notas
 - 2026-10-06 — **Arranque desde cero sobre `main`** (decisión de Igor): se vació el contenido del proyecto anterior (Joselito sobre `Joselito-Library` xtL6cbqN…, flujo v1/v2) para testar la skill desde cero. El historial completo sigue en git (último commit del proyecto anterior: `37da1b1`).
@@ -45,3 +46,4 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 
 ## 8. Sesiones
 - 2026-10-06, Igor + Claude — Fase 0 (config, scaffold, permisos, git) + Fase 1 (perfil del Figma) + Fase 2 parcial (inventario de Foundations, Brand Assets, Components, Raw Modules → PLAN.md, 107 elementos). ~9 llamadas MCP. Build de Storybook pendiente de tokens. Webfonts + volcado de variables (8 llamadas + 2 de verificación) → `npm run tokens` → build OK. Total sesión ≈ 19 llamadas MCP. **Siguiente:** Foundation `Aspect Ratio` → set de iconos → HITO de imágenes raster.
+- 2026-10-06, Igor + Claude — Aspect Ratio construido (8 variantes, `src/components/AspectRatio`), digest en `.ai/masters/aspect-ratio.json`, 3:2 exacto (Figma 320×207). DoD OK salvo imagen real → `[~]`. +2 llamadas MCP. **Siguiente:** set de iconos (137) → HITO de imágenes.

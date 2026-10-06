@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 5/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 5/107 hechos · 1 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -19,7 +19,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 ## Fase 2 — Foundations
 
-- [ ] Aspect Ratio `50942:37236` — 8 variantes · 8 img <!-- k:foundation:aspect-ratio -->
+- [~] Aspect Ratio `50942:37236` — 8 variantes · 8 img <!-- k:foundation:aspect-ratio -->
 
 ## Fase 2b — Iconos y brand assets
 

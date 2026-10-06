@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T15:02:44.641Z",
+  "generatedAt": "2026-10-06T15:20:38.478Z",
   "output": "react-storybook",
   "items": [
     {
@@ -38,7 +38,7 @@
       "name": "Generar tokens (npm run tokens) y documentarlos: primitivas, responsive/breakpoints, subtemas, tipografía, espaciados, grid, efectos"
     },
     {
-      "status": "todo",
+      "status": "doing",
       "phase": "foundations",
       "kind": "foundation",
       "name": "Aspect Ratio",

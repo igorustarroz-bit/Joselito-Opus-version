@@ -1,0 +1,38 @@
+{
+  "name": "AspectRatio",
+  "kind": "foundation",
+  "title": "Aspect Ratio",
+  "figma": { "nodeId": "50942:37236", "name": "Aspect Ratio", "fp": "06244532" },
+  "description": "Marco de proporción para fotos, vídeos y otros medios. Todas las imágenes del sistema van dentro de un Aspect Ratio: la imagen cubre el marco (`object-fit: cover`) y el marco ocupa el 100% del ancho de su contenedor (en Figma la muestra es de 320 px). `Fill` no impone proporción y ocupa el alto y el ancho del contenedor.",
+  "defaultStory": "Default",
+  "variantAxes": { "Size": ["16:9", "9:16", "4:3", "3:4", "3:2", "2:3", "1:1", "Fill"] },
+  "codeOnlyAxes": [],
+  "variants": [
+    { "story": "Ratio16x9", "title": "Size=16:9" },
+    { "story": "Ratio9x16", "title": "Size=9:16" },
+    { "story": "Ratio4x3", "title": "Size=4:3" },
+    { "story": "Ratio3x4", "title": "Size=3:4" },
+    { "story": "Ratio3x2", "title": "Size=3:2" },
+    { "story": "Ratio2x3", "title": "Size=2:3" },
+    { "story": "Ratio1x1", "title": "Size=1:1" },
+    { "story": "Fill", "title": "Size=Fill" }
+  ],
+  "props": [
+    { "name": "size", "figma": "Size", "description": "Proporción del marco. `Fill` ocupa el contenedor sin proporción fija.", "default": "16:9", "control": "select" },
+    { "name": "src", "description": "URL de la imagen (WebP de `src/assets/images`).", "default": "—", "control": "text" },
+    { "name": "alt", "description": "Texto alternativo de la imagen. Vacío si es decorativa.", "default": "\"\"", "control": "text" },
+    { "name": "loading", "description": "Carga de la imagen (`lazy` | `eager`). Usa `eager` en imágenes above the fold.", "default": "lazy", "control": "select" },
+    { "name": "children", "description": "Contenido alternativo a `src` (vídeo, iframe…); se ajusta igual que la imagen.", "default": "—", "control": "none" }
+  ],
+  "tokens": { "color": [{ "token": "--backgrounds-neutral-2", "usage": "fondo mientras no hay imagen" }], "spacing": [] },
+  "subthemes": { "default": "light-white", "supported": ["light-white", "light-grey", "dark-red-primary", "dark-black-neutral"], "notes": "No fija subtema: solo el fondo vacío depende del subtema del contenedor." },
+  "anatomy": ["Marco con la proporción (`aspect-ratio`)", "Imagen o medio a sangre (`object-fit: cover`)"],
+  "behavior": ["El ancho lo da el contenedor (columnas del grid en los módulos); el alto sale de la proporción.", "`Fill`: el marco toma el alto del contenedor (el contenedor debe tener alto).", "La imagen se recorta centrada para cubrir el marco."],
+  "content": [{ "field": "Imagen", "notes": "Foto real del máster (`maps/images.json`) en WebP; ancho máximo 2880 px." }],
+  "a11y": ["`alt` descriptivo en imágenes con contenido; `alt=\"\"` en imágenes decorativas.", "Vídeos con controles accesibles y sin autoplay con sonido."],
+  "related": ["Card Product", "Card Link", "M07-Content-Text+Image", "M08-Content-Imageonly"],
+  "images": ["99ad72551c2bb43ead01d135e290d0a20dab5c35"],
+  "placeholders": [{ "what": "Foto de muestra del máster (hash 99ad7255…) en las demos", "why": "Pendiente del HITO de imágenes raster (sin red a figma.com en esta sesión); se cablea al completar el hito" }],
+  "notes": ["En Figma la variante 3:2 mide 320×207 (proporción 1,546), no 320×213: se implementa 3:2 exacto (decisión de Igor, 2026-10-06). Avisar a diseño.", "La auditoría del digest marca NO_DEVICE_PROP/NO_THEME_MODE porque el set mide más de 1200 px de ancho: falso positivo (es un componente, no un módulo)."],
+  "codePath": "src/components/AspectRatio/AspectRatio.jsx"
+}

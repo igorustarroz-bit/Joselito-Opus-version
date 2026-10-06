@@ -1,1 +1,7 @@
-{}
+{
+  "50942:37236": {
+    "name": "AspectRatio",
+    "path": "src/components/AspectRatio/AspectRatio.jsx",
+    "fp": "06244532"
+  }
+}
