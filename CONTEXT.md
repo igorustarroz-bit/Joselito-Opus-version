@@ -33,7 +33,9 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 - 2026-10-06 — **Arranque desde cero sobre `main`** (decisión de Igor): se vació el contenido del proyecto anterior (Joselito sobre `Joselito-Library` xtL6cbqN…, flujo v1/v2) para testar la skill desde cero. El historial completo sigue en git (último commit del proyecto anterior: `37da1b1`).
 - 2026-10-06 — Figma `Design-To-code` (`nANHdr2nKaFD6UCXAMND4s`): copia de Joselito basada en la plantilla Hanzo → `figma.source = hanzo-template`, nivel A. Librería no publicada → `use_figma` en solo lectura.
 - 2026-10-06 — Plan Figma: se asume HanzoStudio (Pro, asiento Full) — `whoami` no indica el team del fichero; confirmar.
-- Riesgo: los estilos de texto devuelven familias **Georgia** e **Inter** (no Euclid Circular B / SangBleu como el Joselito original, que están en `fonts-raw/`). Aclarar en el volcado de variables antes de `npm run fonts`.
+- 2026-10-06 — Tipografías confirmadas por Igor: **Georgia** (títulos, fuente del sistema, no se carga) e **Inter** (resto, Google Fonts, solo corte 400). `fonts-raw/` (Euclid/SangBleu) no se usa en este proyecto. `fonts.overrides` fijado porque la shell local no tiene red a Google.
+- Tokens: volcado verificado contra Figma por huella (Primitives/Responsive/Semantic-Color/estilos de texto). `CTA/03` no tiene la variable de peso ligada en Figma → sale `font-weight: 400` literal (avisar a diseño).
+- Mejora detectada en la skill: `plan.mjs` solo aplica el último `--set` si se pasan varios en la misma llamada.
 - Semantic-Color: 4 subtemas (Light-White, Light-Grey, Dark-Red-Primary, Dark-Black-Neutral).
 - Plan: dos másters generan la misma clave `component:accordion` (`Accordion` 57943:46123 y `accordion` 57943:46054) → revisar (colisión de slug en plan.mjs).
 - Plan: dependencias sin máster en el fichero: `button` (M11), `Arrow`, `Arrow Dropdown`, `Main_Secondary-Link` (M20/M24), `*/Overrides/Stars/Star` (M28) → instancias de componentes remotos/borrados; revisar al construir esos módulos.
@@ -42,4 +44,4 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 - Mejora detectada en la skill: el scaffold react-storybook no crea `public/` y `build-storybook` falla por `staticDirs` hasta que existe (creado `public/fonts/.gitkeep`).
 
 ## 8. Sesiones
-- 2026-10-06, Igor + Claude — Fase 0 (config, scaffold, permisos, git) + Fase 1 (perfil del Figma) + Fase 2 parcial (inventario de Foundations, Brand Assets, Components, Raw Modules → PLAN.md, 107 elementos). ~9 llamadas MCP. Build de Storybook pendiente de tokens. **Siguiente:** webfonts (aclarar familias) + volcado de variables → `npm run tokens`.
+- 2026-10-06, Igor + Claude — Fase 0 (config, scaffold, permisos, git) + Fase 1 (perfil del Figma) + Fase 2 parcial (inventario de Foundations, Brand Assets, Components, Raw Modules → PLAN.md, 107 elementos). ~9 llamadas MCP. Build de Storybook pendiente de tokens. Webfonts + volcado de variables (8 llamadas + 2 de verificación) → `npm run tokens` → build OK. Total sesión ≈ 19 llamadas MCP. **Siguiente:** Foundation `Aspect Ratio` → set de iconos → HITO de imágenes raster.

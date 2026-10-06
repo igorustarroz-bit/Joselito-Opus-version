@@ -1,0 +1,3093 @@
+{
+  "generatedFrom": ".ai/figma/variables.json",
+  "collections": [
+    {
+      "name": "Primitives",
+      "role": "base",
+      "modes": [
+        "Joselito"
+      ],
+      "vars": 144
+    },
+    {
+      "name": "Responsive",
+      "role": "responsive",
+      "modes": [
+        "XL - 1440",
+        "XS - 390",
+        "SM - 480",
+        "M - 768",
+        "LG - 1024",
+        "XXL - 1620",
+        "XXXL - 1920"
+      ],
+      "vars": 138
+    },
+    {
+      "name": "Semantic-Color",
+      "role": "theme",
+      "modes": [
+        "Light - White",
+        "Light - Grey",
+        "Dark - Red - Primary",
+        "Dark - Black - Neutral"
+      ],
+      "vars": 276
+    }
+  ],
+  "breakpoints": [
+    {
+      "name": "xs",
+      "label": "XS - 390",
+      "width": 390
+    },
+    {
+      "name": "sm",
+      "label": "SM - 480",
+      "width": 480
+    },
+    {
+      "name": "m",
+      "label": "M - 768",
+      "width": 768
+    },
+    {
+      "name": "lg",
+      "label": "LG - 1024",
+      "width": 1024
+    },
+    {
+      "name": "xl",
+      "label": "XL - 1440",
+      "width": 1440
+    },
+    {
+      "name": "xxl",
+      "label": "XXL - 1620",
+      "width": 1620
+    },
+    {
+      "name": "xxxl",
+      "label": "XXXL - 1920",
+      "width": 1920
+    }
+  ],
+  "themes": [
+    {
+      "slug": "light-white",
+      "name": "Light - White",
+      "default": true
+    },
+    {
+      "slug": "light-grey",
+      "name": "Light - Grey",
+      "default": false
+    },
+    {
+      "slug": "dark-red-primary",
+      "name": "Dark - Red - Primary",
+      "default": false
+    },
+    {
+      "slug": "dark-black-neutral",
+      "name": "Dark - Black - Neutral",
+      "default": false
+    }
+  ],
+  "defaultTheme": "light-white",
+  "grids": [
+    {
+      "name": "Layout/XS (390)",
+      "width": 390,
+      "columns": 6,
+      "gutter": 12,
+      "margin": 24
+    },
+    {
+      "name": "Layout/SM (480)",
+      "width": 480,
+      "columns": 6,
+      "gutter": 12,
+      "margin": 24
+    },
+    {
+      "name": "Layout/M (768)",
+      "width": 768,
+      "columns": 8,
+      "gutter": 16,
+      "margin": 40
+    },
+    {
+      "name": "Layout/LG (1024)",
+      "width": 1024,
+      "columns": 12,
+      "gutter": 16,
+      "margin": 40
+    },
+    {
+      "name": "Layout/XL (1440)",
+      "width": 1440,
+      "columns": 12,
+      "gutter": 32,
+      "margin": 80
+    },
+    {
+      "name": "Layout/XXL (1620)",
+      "width": 1620,
+      "columns": 12,
+      "gutter": 32,
+      "margin": 96
+    },
+    {
+      "name": "Layout/XXXL (1920)",
+      "width": 1920,
+      "columns": 12,
+      "gutter": 32,
+      "margin": 112
+    }
+  ],
+  "textStyles": [
+    {
+      "class": "ts-title-08",
+      "name": "Title/08"
+    },
+    {
+      "class": "ts-title-07",
+      "name": "Title/07"
+    },
+    {
+      "class": "ts-title-06",
+      "name": "Title/06"
+    },
+    {
+      "class": "ts-title-05",
+      "name": "Title/05"
+    },
+    {
+      "class": "ts-title-04",
+      "name": "Title/04"
+    },
+    {
+      "class": "ts-title-03",
+      "name": "Title/03"
+    },
+    {
+      "class": "ts-title-02",
+      "name": "Title/02"
+    },
+    {
+      "class": "ts-title-01",
+      "name": "Title/01"
+    },
+    {
+      "class": "ts-body-06",
+      "name": "Body/06"
+    },
+    {
+      "class": "ts-body-05",
+      "name": "Body/05"
+    },
+    {
+      "class": "ts-body-04",
+      "name": "Body/04"
+    },
+    {
+      "class": "ts-body-03",
+      "name": "Body/03"
+    },
+    {
+      "class": "ts-body-02",
+      "name": "Body/02"
+    },
+    {
+      "class": "ts-body-01",
+      "name": "Body/01"
+    },
+    {
+      "class": "ts-labels-01",
+      "name": "Labels/01"
+    },
+    {
+      "class": "ts-labels-02",
+      "name": "Labels/02"
+    },
+    {
+      "class": "ts-cta-03",
+      "name": "CTA/03"
+    },
+    {
+      "class": "ts-cta-02",
+      "name": "CTA/02"
+    },
+    {
+      "class": "ts-cta-01",
+      "name": "CTA/01"
+    },
+    {
+      "class": "ts-cta-link-footer-02",
+      "name": "CTA-Link-Footer/02"
+    },
+    {
+      "class": "ts-cta-link-footer-01",
+      "name": "CTA-Link-Footer/01"
+    },
+    {
+      "class": "ts-forms-input-m-text",
+      "name": "Forms/Input-M/Text"
+    },
+    {
+      "class": "ts-forms-input-m-label-in",
+      "name": "Forms/Input-M/Label-In"
+    },
+    {
+      "class": "ts-forms-input-m-label-out",
+      "name": "Forms/Input-M/Label-Out"
+    },
+    {
+      "class": "ts-forms-input-m-info",
+      "name": "Forms/Input-M/Info"
+    },
+    {
+      "class": "ts-forms-input-s-text",
+      "name": "Forms/Input-S/Text"
+    },
+    {
+      "class": "ts-forms-input-s-label-in",
+      "name": "Forms/Input-S/Label-In"
+    },
+    {
+      "class": "ts-forms-input-s-label-out",
+      "name": "Forms/Input-S/Label-Out"
+    },
+    {
+      "class": "ts-forms-input-s-info",
+      "name": "Forms/Input-S/Info"
+    }
+  ],
+  "effectStyles": [
+    "fx-elevation-blur-l",
+    "fx-elevation-blur-m",
+    "fx-elevation-blur-s",
+    "fx-elevation-on-light-xl",
+    "fx-elevation-on-light-l",
+    "fx-elevation-on-light-m",
+    "fx-elevation-on-light-s",
+    "fx-elevation-on-dark-xl",
+    "fx-elevation-on-dark-l",
+    "fx-elevation-on-dark-m",
+    "fx-elevation-on-dark-s"
+  ],
+  "warnings": [],
+  "fontFamilies": [
+    {
+      "family": "Georgia",
+      "cuts": [
+        {
+          "weight": 400,
+          "italic": false
+        }
+      ]
+    },
+    {
+      "family": "Inter",
+      "cuts": [
+        {
+          "weight": 400,
+          "italic": false
+        }
+      ]
+    }
+  ],
+  "cssVars": {
+    "--color-neutral-white": {
+      "figma": "Primitives::Color/Neutral/White",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-98": {
+      "figma": "Primitives::Color/Neutral/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-96": {
+      "figma": "Primitives::Color/Neutral/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-94": {
+      "figma": "Primitives::Color/Neutral/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-90": {
+      "figma": "Primitives::Color/Neutral/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-80": {
+      "figma": "Primitives::Color/Neutral/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-70": {
+      "figma": "Primitives::Color/Neutral/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-60": {
+      "figma": "Primitives::Color/Neutral/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-50": {
+      "figma": "Primitives::Color/Neutral/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-40": {
+      "figma": "Primitives::Color/Neutral/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-30": {
+      "figma": "Primitives::Color/Neutral/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-20": {
+      "figma": "Primitives::Color/Neutral/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-10": {
+      "figma": "Primitives::Color/Neutral/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-neutral-black": {
+      "figma": "Primitives::Color/Neutral/Black",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-100": {
+      "figma": "Primitives::Color/Primary/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-98": {
+      "figma": "Primitives::Color/Primary/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-96": {
+      "figma": "Primitives::Color/Primary/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-94": {
+      "figma": "Primitives::Color/Primary/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-90": {
+      "figma": "Primitives::Color/Primary/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-80": {
+      "figma": "Primitives::Color/Primary/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-70": {
+      "figma": "Primitives::Color/Primary/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-60": {
+      "figma": "Primitives::Color/Primary/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-50": {
+      "figma": "Primitives::Color/Primary/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-40": {
+      "figma": "Primitives::Color/Primary/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-30": {
+      "figma": "Primitives::Color/Primary/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-20": {
+      "figma": "Primitives::Color/Primary/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-10": {
+      "figma": "Primitives::Color/Primary/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-primary-0": {
+      "figma": "Primitives::Color/Primary/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-100": {
+      "figma": "Primitives::Color/Secondary-1/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-98": {
+      "figma": "Primitives::Color/Secondary-1/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-96": {
+      "figma": "Primitives::Color/Secondary-1/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-94": {
+      "figma": "Primitives::Color/Secondary-1/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-90": {
+      "figma": "Primitives::Color/Secondary-1/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-80": {
+      "figma": "Primitives::Color/Secondary-1/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-70": {
+      "figma": "Primitives::Color/Secondary-1/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-60": {
+      "figma": "Primitives::Color/Secondary-1/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-50": {
+      "figma": "Primitives::Color/Secondary-1/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-40": {
+      "figma": "Primitives::Color/Secondary-1/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-30": {
+      "figma": "Primitives::Color/Secondary-1/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-20": {
+      "figma": "Primitives::Color/Secondary-1/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-10": {
+      "figma": "Primitives::Color/Secondary-1/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-1-0": {
+      "figma": "Primitives::Color/Secondary-1/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-100": {
+      "figma": "Primitives::Color/Secondary-2/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-98": {
+      "figma": "Primitives::Color/Secondary-2/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-96": {
+      "figma": "Primitives::Color/Secondary-2/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-94": {
+      "figma": "Primitives::Color/Secondary-2/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-90": {
+      "figma": "Primitives::Color/Secondary-2/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-80": {
+      "figma": "Primitives::Color/Secondary-2/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-70": {
+      "figma": "Primitives::Color/Secondary-2/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-60": {
+      "figma": "Primitives::Color/Secondary-2/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-50": {
+      "figma": "Primitives::Color/Secondary-2/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-40": {
+      "figma": "Primitives::Color/Secondary-2/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-30": {
+      "figma": "Primitives::Color/Secondary-2/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-20": {
+      "figma": "Primitives::Color/Secondary-2/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-10": {
+      "figma": "Primitives::Color/Secondary-2/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-100": {
+      "figma": "Primitives::Color/Secondary-3/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-2-0": {
+      "figma": "Primitives::Color/Secondary-2/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-98": {
+      "figma": "Primitives::Color/Secondary-3/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-96": {
+      "figma": "Primitives::Color/Secondary-3/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-94": {
+      "figma": "Primitives::Color/Secondary-3/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-90": {
+      "figma": "Primitives::Color/Secondary-3/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-80": {
+      "figma": "Primitives::Color/Secondary-3/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-70": {
+      "figma": "Primitives::Color/Secondary-3/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-60": {
+      "figma": "Primitives::Color/Secondary-3/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-50": {
+      "figma": "Primitives::Color/Secondary-3/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-40": {
+      "figma": "Primitives::Color/Secondary-3/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-30": {
+      "figma": "Primitives::Color/Secondary-3/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-20": {
+      "figma": "Primitives::Color/Secondary-3/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-10": {
+      "figma": "Primitives::Color/Secondary-3/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-secondary-3-0": {
+      "figma": "Primitives::Color/Secondary-3/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-100": {
+      "figma": "Primitives::Color/Opacity/Black/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-98": {
+      "figma": "Primitives::Color/Opacity/Black/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-96": {
+      "figma": "Primitives::Color/Opacity/Black/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-94": {
+      "figma": "Primitives::Color/Opacity/Black/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-90": {
+      "figma": "Primitives::Color/Opacity/Black/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-80": {
+      "figma": "Primitives::Color/Opacity/Black/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-70": {
+      "figma": "Primitives::Color/Opacity/Black/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-60": {
+      "figma": "Primitives::Color/Opacity/Black/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-50": {
+      "figma": "Primitives::Color/Opacity/Black/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-40": {
+      "figma": "Primitives::Color/Opacity/Black/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-30": {
+      "figma": "Primitives::Color/Opacity/Black/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-20": {
+      "figma": "Primitives::Color/Opacity/Black/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-10": {
+      "figma": "Primitives::Color/Opacity/Black/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-black-0": {
+      "figma": "Primitives::Color/Opacity/Black/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-100": {
+      "figma": "Primitives::Color/Opacity/White/100",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-98": {
+      "figma": "Primitives::Color/Opacity/White/98",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-96": {
+      "figma": "Primitives::Color/Opacity/White/96",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-94": {
+      "figma": "Primitives::Color/Opacity/White/94",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-90": {
+      "figma": "Primitives::Color/Opacity/White/90",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-80": {
+      "figma": "Primitives::Color/Opacity/White/80",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-70": {
+      "figma": "Primitives::Color/Opacity/White/70",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-60": {
+      "figma": "Primitives::Color/Opacity/White/60",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-50": {
+      "figma": "Primitives::Color/Opacity/White/50",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-40": {
+      "figma": "Primitives::Color/Opacity/White/40",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-30": {
+      "figma": "Primitives::Color/Opacity/White/30",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-20": {
+      "figma": "Primitives::Color/Opacity/White/20",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-10": {
+      "figma": "Primitives::Color/Opacity/White/10",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-opacity-white-0": {
+      "figma": "Primitives::Color/Opacity/White/0",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-error-01": {
+      "figma": "Primitives::Color/System/Error/01",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-error-02": {
+      "figma": "Primitives::Color/System/Error/02",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-error-03": {
+      "figma": "Primitives::Color/System/Error/03",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-success-01": {
+      "figma": "Primitives::Color/System/Success/01",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-success-02": {
+      "figma": "Primitives::Color/System/Success/02",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-success-03": {
+      "figma": "Primitives::Color/System/Success/03",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-warning-01": {
+      "figma": "Primitives::Color/System/Warning/01",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-warning-02": {
+      "figma": "Primitives::Color/System/Warning/02",
+      "role": "base",
+      "type": "C"
+    },
+    "--color-system-warning-03": {
+      "figma": "Primitives::Color/System/Warning/03",
+      "role": "base",
+      "type": "C"
+    },
+    "--tipography-font-family-title": {
+      "figma": "Primitives::Tipography/Font-Family/Title",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-title-black": {
+      "figma": "Primitives::Tipography/Font-Weight/Title-Black",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-title-bold": {
+      "figma": "Primitives::Tipography/Font-Weight/Title-Bold",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-title-regular": {
+      "figma": "Primitives::Tipography/Font-Weight/Title-Regular",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-letter-spacing-display": {
+      "figma": "Primitives::Tipography/Letter-Spacing/Display",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-letter-spacing-title": {
+      "figma": "Primitives::Tipography/Letter-Spacing/Title",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-letter-spacing-body": {
+      "figma": "Primitives::Tipography/Letter-Spacing/Body",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-letter-spacing-label": {
+      "figma": "Primitives::Tipography/Letter-Spacing/Label",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-letter-spacing-cta": {
+      "figma": "Primitives::Tipography/Letter-Spacing/CTA",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-letter-spacing-forms": {
+      "figma": "Primitives::Tipography/Letter-Spacing/Forms",
+      "role": "base",
+      "type": "F"
+    },
+    "--tipography-font-weight-body": {
+      "figma": "Primitives::Tipography/Font-Weight/Body",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-label": {
+      "figma": "Primitives::Tipography/Font-Weight/Label",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-cta": {
+      "figma": "Primitives::Tipography/Font-Weight/CTA",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-weight-form": {
+      "figma": "Primitives::Tipography/Font-Weight/Form",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-family-body": {
+      "figma": "Primitives::Tipography/Font-Family/Body",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-family-label": {
+      "figma": "Primitives::Tipography/Font-Family/Label",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-family-cta": {
+      "figma": "Primitives::Tipography/Font-Family/CTA",
+      "role": "base",
+      "type": "S"
+    },
+    "--tipography-font-family-forms": {
+      "figma": "Primitives::Tipography/Font-Family/Forms",
+      "role": "base",
+      "type": "S"
+    },
+    "--spacers-fixed-fx-18": {
+      "figma": "Primitives::Spacers Fixed/fx-18",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-17": {
+      "figma": "Primitives::Spacers Fixed/fx-17",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-16": {
+      "figma": "Primitives::Spacers Fixed/fx-16",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-15": {
+      "figma": "Primitives::Spacers Fixed/fx-15",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-14": {
+      "figma": "Primitives::Spacers Fixed/fx-14",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-13": {
+      "figma": "Primitives::Spacers Fixed/fx-13",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-12": {
+      "figma": "Primitives::Spacers Fixed/fx-12",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-11": {
+      "figma": "Primitives::Spacers Fixed/fx-11",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-10": {
+      "figma": "Primitives::Spacers Fixed/fx-10",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-9": {
+      "figma": "Primitives::Spacers Fixed/fx-9",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-8": {
+      "figma": "Primitives::Spacers Fixed/fx-8",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-7": {
+      "figma": "Primitives::Spacers Fixed/fx-7",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-6": {
+      "figma": "Primitives::Spacers Fixed/fx-6",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-5": {
+      "figma": "Primitives::Spacers Fixed/fx-5",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-4": {
+      "figma": "Primitives::Spacers Fixed/fx-4",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-3": {
+      "figma": "Primitives::Spacers Fixed/fx-3",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-2": {
+      "figma": "Primitives::Spacers Fixed/fx-2",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-1": {
+      "figma": "Primitives::Spacers Fixed/fx-1",
+      "role": "base",
+      "type": "F"
+    },
+    "--spacers-fixed-fx-0": {
+      "figma": "Primitives::Spacers Fixed/fx-0",
+      "role": "base",
+      "type": "F"
+    },
+    "--layout-viewport-width-name": {
+      "figma": "Responsive::Layout/Viewport-width/Name",
+      "role": "responsive",
+      "type": "S"
+    },
+    "--typography-title-8-sz": {
+      "figma": "Responsive::Typography/Title 8/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-8-lh": {
+      "figma": "Responsive::Typography/Title 8/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-7-sz": {
+      "figma": "Responsive::Typography/Title 7/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-7-lh": {
+      "figma": "Responsive::Typography/Title 7/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-6-sz": {
+      "figma": "Responsive::Typography/Title 6/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-6-lh": {
+      "figma": "Responsive::Typography/Title 6/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-5-sz": {
+      "figma": "Responsive::Typography/Title 5/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-5-lh": {
+      "figma": "Responsive::Typography/Title 5/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-4-sz": {
+      "figma": "Responsive::Typography/Title 4/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-4-lh": {
+      "figma": "Responsive::Typography/Title 4/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-3-sz": {
+      "figma": "Responsive::Typography/Title 3/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-3-lh": {
+      "figma": "Responsive::Typography/Title 3/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-2-sz": {
+      "figma": "Responsive::Typography/Title 2/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-2-lh": {
+      "figma": "Responsive::Typography/Title 2/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-1-sz": {
+      "figma": "Responsive::Typography/Title 1/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-title-1-lh": {
+      "figma": "Responsive::Typography/Title 1/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-6-sz": {
+      "figma": "Responsive::Typography/Body 6/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-6-lh": {
+      "figma": "Responsive::Typography/Body 6/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-5-sz": {
+      "figma": "Responsive::Typography/Body 5/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-5-lh": {
+      "figma": "Responsive::Typography/Body 5/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-4-sz": {
+      "figma": "Responsive::Typography/Body 4/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-4-lh": {
+      "figma": "Responsive::Typography/Body 4/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-3-sz": {
+      "figma": "Responsive::Typography/Body 3/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-3-lh": {
+      "figma": "Responsive::Typography/Body 3/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-2-sz": {
+      "figma": "Responsive::Typography/Body 2/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-1-sz": {
+      "figma": "Responsive::Typography/Body 1/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-1-lh": {
+      "figma": "Responsive::Typography/Body 1/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-body-2-lh": {
+      "figma": "Responsive::Typography/Body 2/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-label-2-sz": {
+      "figma": "Responsive::Typography/Label 2/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-label-2-lh": {
+      "figma": "Responsive::Typography/Label 2/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-label-1-sz": {
+      "figma": "Responsive::Typography/Label 1/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-label-1-lh": {
+      "figma": "Responsive::Typography/Label 1/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-viewport-width-size": {
+      "figma": "Responsive::Layout/Viewport-width/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-grids-wrapper-default": {
+      "figma": "Responsive::Layout/Grids/Wrapper-Default",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-grids-wrapper-nav": {
+      "figma": "Responsive::Layout/Grids/Wrapper-Nav",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-grids-wrapper-full": {
+      "figma": "Responsive::Layout/Grids/Wrapper-Full",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-grids-wrapper-modal": {
+      "figma": "Responsive::Layout/Grids/Wrapper-Modal",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-grids-gutter": {
+      "figma": "Responsive::Layout/Grids/Gutter",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-18": {
+      "figma": "Responsive::Layout/Spacers Responsive/18",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-17": {
+      "figma": "Responsive::Layout/Spacers Responsive/17",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-16": {
+      "figma": "Responsive::Layout/Spacers Responsive/16",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-15": {
+      "figma": "Responsive::Layout/Spacers Responsive/15",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-14": {
+      "figma": "Responsive::Layout/Spacers Responsive/14",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-13": {
+      "figma": "Responsive::Layout/Spacers Responsive/13",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-12": {
+      "figma": "Responsive::Layout/Spacers Responsive/12",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-11": {
+      "figma": "Responsive::Layout/Spacers Responsive/11",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-10": {
+      "figma": "Responsive::Layout/Spacers Responsive/10",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-9": {
+      "figma": "Responsive::Layout/Spacers Responsive/9",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-8": {
+      "figma": "Responsive::Layout/Spacers Responsive/8",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-7": {
+      "figma": "Responsive::Layout/Spacers Responsive/7",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-6": {
+      "figma": "Responsive::Layout/Spacers Responsive/6",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-5": {
+      "figma": "Responsive::Layout/Spacers Responsive/5",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-4": {
+      "figma": "Responsive::Layout/Spacers Responsive/4",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-3": {
+      "figma": "Responsive::Layout/Spacers Responsive/3",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-2": {
+      "figma": "Responsive::Layout/Spacers Responsive/2",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-1": {
+      "figma": "Responsive::Layout/Spacers Responsive/1",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-spacers-responsive-0": {
+      "figma": "Responsive::Layout/Spacers Responsive/0",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-xxs": {
+      "figma": "Responsive::Layout/Corners/XXS",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-xs": {
+      "figma": "Responsive::Layout/Corners/XS",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-s": {
+      "figma": "Responsive::Layout/Corners/S",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-m": {
+      "figma": "Responsive::Layout/Corners/M",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-l": {
+      "figma": "Responsive::Layout/Corners/L",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-xl": {
+      "figma": "Responsive::Layout/Corners/XL",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-rounded": {
+      "figma": "Responsive::Layout/Corners/Rounded",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-corners-none": {
+      "figma": "Responsive::Layout/Corners/None",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-xl-sz": {
+      "figma": "Responsive::Typography/CTA-XL/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-xl-lh": {
+      "figma": "Responsive::Typography/CTA-XL/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-l-sz": {
+      "figma": "Responsive::Typography/CTA-L/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-l-lh": {
+      "figma": "Responsive::Typography/CTA-L/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-m-sz": {
+      "figma": "Responsive::Typography/CTA-M/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-m-lh": {
+      "figma": "Responsive::Typography/CTA-M/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-s-sz": {
+      "figma": "Responsive::Typography/CTA-S/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-xs-sz": {
+      "figma": "Responsive::Typography/CTA-XS/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-xs-lh": {
+      "figma": "Responsive::Typography/CTA-XS/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-cta-s-lh": {
+      "figma": "Responsive::Typography/CTA-S/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-text-sz": {
+      "figma": "Responsive::Typography/Input-M/Text/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-text-lh": {
+      "figma": "Responsive::Typography/Input-M/Text/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-label-in-sz": {
+      "figma": "Responsive::Typography/Input-M/Label-In/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-label-in-lh": {
+      "figma": "Responsive::Typography/Input-M/Label-In/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-label-out-sz": {
+      "figma": "Responsive::Typography/Input-M/Label-Out/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-label-out-lh": {
+      "figma": "Responsive::Typography/Input-M/Label-Out/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-message-sz": {
+      "figma": "Responsive::Typography/Input-M/Message/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-m-message-lh": {
+      "figma": "Responsive::Typography/Input-M/Message/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-text-sz": {
+      "figma": "Responsive::Typography/Input-S/Text/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-text-lh": {
+      "figma": "Responsive::Typography/Input-S/Text/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-label-in-sz": {
+      "figma": "Responsive::Typography/Input-S/Label-In/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-label-in-lh": {
+      "figma": "Responsive::Typography/Input-S/Label-In/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-label-out-sz": {
+      "figma": "Responsive::Typography/Input-S/Label-Out/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-label-out-lh": {
+      "figma": "Responsive::Typography/Input-S/Label-Out/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-message-sz": {
+      "figma": "Responsive::Typography/Input-S/Message/SZ",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--typography-input-s-message-lh": {
+      "figma": "Responsive::Typography/Input-S/Message/LH",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xl-size": {
+      "figma": "Responsive::Layout/Button/XL/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xl-padding": {
+      "figma": "Responsive::Layout/Button/XL/Padding",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xl-min-width": {
+      "figma": "Responsive::Layout/Button/XL/Min-Width",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-l-size": {
+      "figma": "Responsive::Layout/Button/L/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-size": {
+      "figma": "Responsive::Layout/Forms/L/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-padding-r": {
+      "figma": "Responsive::Layout/Forms/L/Padding-R",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-padding-l": {
+      "figma": "Responsive::Layout/Forms/L/Padding-L",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-message-distance": {
+      "figma": "Responsive::Layout/Forms/L/Message-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-label-in-distance": {
+      "figma": "Responsive::Layout/Forms/L/Label-In-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-l-label-out-distance": {
+      "figma": "Responsive::Layout/Forms/L/Label-Out-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-size": {
+      "figma": "Responsive::Layout/Forms/M/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-padding-r": {
+      "figma": "Responsive::Layout/Forms/M/Padding-R",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-padding-l": {
+      "figma": "Responsive::Layout/Forms/M/Padding-L",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-message-distance": {
+      "figma": "Responsive::Layout/Forms/M/Message-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-label-in-distance": {
+      "figma": "Responsive::Layout/Forms/M/Label-In-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-forms-m-label-out-distance": {
+      "figma": "Responsive::Layout/Forms/M/Label-Out-Distance",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-12cols": {
+      "figma": "Responsive::Layout/Cols Size/12cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-11cols": {
+      "figma": "Responsive::Layout/Cols Size/11cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-10cols": {
+      "figma": "Responsive::Layout/Cols Size/10cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-9cols": {
+      "figma": "Responsive::Layout/Cols Size/9cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-8cols": {
+      "figma": "Responsive::Layout/Cols Size/8cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-7cols": {
+      "figma": "Responsive::Layout/Cols Size/7cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-6cols": {
+      "figma": "Responsive::Layout/Cols Size/6cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-5cols": {
+      "figma": "Responsive::Layout/Cols Size/5cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-4cols": {
+      "figma": "Responsive::Layout/Cols Size/4cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-3cols": {
+      "figma": "Responsive::Layout/Cols Size/3cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-2cols": {
+      "figma": "Responsive::Layout/Cols Size/2cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-1cols": {
+      "figma": "Responsive::Layout/Cols Size/1cols",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-gutter1col": {
+      "figma": "Responsive::Layout/Cols Size/gutter1col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-gutter2col": {
+      "figma": "Responsive::Layout/Cols Size/gutter2col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-gutter3col": {
+      "figma": "Responsive::Layout/Cols Size/gutter3col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-4cols-1-gutter": {
+      "figma": "Responsive::Layout/Cols Size/4cols-1Gutter",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-wrapper1-col": {
+      "figma": "Responsive::Layout/Cols Size/Wrapper1Col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-wrapper2-col": {
+      "figma": "Responsive::Layout/Cols Size/Wrapper2Col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-cols-size-wrapper3-col": {
+      "figma": "Responsive::Layout/Cols Size/Wrapper3Col",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-l-padding": {
+      "figma": "Responsive::Layout/Button/L/Padding",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-l-min-width": {
+      "figma": "Responsive::Layout/Button/L/Min-Width",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-m-size": {
+      "figma": "Responsive::Layout/Button/M/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-m-padding": {
+      "figma": "Responsive::Layout/Button/M/Padding",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-m-min-width": {
+      "figma": "Responsive::Layout/Button/M/Min-Width",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-s-size": {
+      "figma": "Responsive::Layout/Button/S/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-s-padding": {
+      "figma": "Responsive::Layout/Button/S/Padding",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-s-min-width": {
+      "figma": "Responsive::Layout/Button/S/Min-Width",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xs-size": {
+      "figma": "Responsive::Layout/Button/XS/Size",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xs-padding": {
+      "figma": "Responsive::Layout/Button/XS/Padding",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--layout-button-xs-min-width": {
+      "figma": "Responsive::Layout/Button/XS/Min-Width",
+      "role": "responsive",
+      "type": "F"
+    },
+    "--backgrounds-base": {
+      "figma": "Semantic-Color::Backgrounds/Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-neutral-1": {
+      "figma": "Semantic-Color::Backgrounds/Neutral-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-neutral-2": {
+      "figma": "Semantic-Color::Backgrounds/Neutral-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-neutral-3": {
+      "figma": "Semantic-Color::Backgrounds/Neutral-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-white": {
+      "figma": "Semantic-Color::Backgrounds/White",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-inverse": {
+      "figma": "Semantic-Color::Backgrounds/Inverse",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-base": {
+      "figma": "Semantic-Color::Backgrounds/Accent-Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-sub-brand-sec": {
+      "figma": "Semantic-Color::Backgrounds/Accent-SubBrand-Sec",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-2": {
+      "figma": "Semantic-Color::Backgrounds/Accent-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-3": {
+      "figma": "Semantic-Color::Backgrounds/Accent-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-4": {
+      "figma": "Semantic-Color::Backgrounds/Accent-4",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-accent-5": {
+      "figma": "Semantic-Color::Backgrounds/Accent-5",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-success-1": {
+      "figma": "Semantic-Color::Backgrounds/Success-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-success-2": {
+      "figma": "Semantic-Color::Backgrounds/Success-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-success-3": {
+      "figma": "Semantic-Color::Backgrounds/Success-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-error-1": {
+      "figma": "Semantic-Color::Backgrounds/Error-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-error-2": {
+      "figma": "Semantic-Color::Backgrounds/Error-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-error-3": {
+      "figma": "Semantic-Color::Backgrounds/Error-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-warning-1": {
+      "figma": "Semantic-Color::Backgrounds/Warning-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-warning-2": {
+      "figma": "Semantic-Color::Backgrounds/Warning-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-warning-3": {
+      "figma": "Semantic-Color::Backgrounds/Warning-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-always-white": {
+      "figma": "Semantic-Color::Backgrounds/Always-White",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-always-black": {
+      "figma": "Semantic-Color::Backgrounds/Always-Black",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-hover": {
+      "figma": "Semantic-Color::Backgrounds/Hover",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-disabled": {
+      "figma": "Semantic-Color::Backgrounds/Disabled",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-selected": {
+      "figma": "Semantic-Color::Backgrounds/Selected",
+      "role": "theme",
+      "type": "C"
+    },
+    "--backgrounds-overlay": {
+      "figma": "Semantic-Color::Backgrounds/Overlay",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-base": {
+      "figma": "Semantic-Color::Texts/Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-base": {
+      "figma": "Semantic-Color::Strokes-Icons/Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-default-fill": {
+      "figma": "Semantic-Color::Button/Primary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-default-stroke": {
+      "figma": "Semantic-Color::Button/Primary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-default-text": {
+      "figma": "Semantic-Color::Button/Primary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-default-icon": {
+      "figma": "Semantic-Color::Button/Primary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-hover-fill": {
+      "figma": "Semantic-Color::Button/Primary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Primary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-hover-text": {
+      "figma": "Semantic-Color::Button/Primary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-hover-icon": {
+      "figma": "Semantic-Color::Button/Primary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-focused-fill": {
+      "figma": "Semantic-Color::Button/Primary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Primary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-focused-text": {
+      "figma": "Semantic-Color::Button/Primary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-focused-icon": {
+      "figma": "Semantic-Color::Button/Primary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-selected-fill": {
+      "figma": "Semantic-Color::Button/Primary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Primary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-selected-text": {
+      "figma": "Semantic-Color::Button/Primary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-selected-icon": {
+      "figma": "Semantic-Color::Button/Primary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Primary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Primary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-disabled-text": {
+      "figma": "Semantic-Color::Button/Primary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-primary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Primary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-default-fill": {
+      "figma": "Semantic-Color::Button/Secondary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-default-stroke": {
+      "figma": "Semantic-Color::Button/Secondary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-default-text": {
+      "figma": "Semantic-Color::Button/Secondary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-default-icon": {
+      "figma": "Semantic-Color::Button/Secondary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-hover-fill": {
+      "figma": "Semantic-Color::Button/Secondary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Secondary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-hover-text": {
+      "figma": "Semantic-Color::Button/Secondary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-hover-icon": {
+      "figma": "Semantic-Color::Button/Secondary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-focused-fill": {
+      "figma": "Semantic-Color::Button/Secondary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Secondary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-focused-text": {
+      "figma": "Semantic-Color::Button/Secondary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-focused-icon": {
+      "figma": "Semantic-Color::Button/Secondary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-selected-fill": {
+      "figma": "Semantic-Color::Button/Secondary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Secondary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-selected-text": {
+      "figma": "Semantic-Color::Button/Secondary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-selected-icon": {
+      "figma": "Semantic-Color::Button/Secondary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Secondary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Secondary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-disabled-text": {
+      "figma": "Semantic-Color::Button/Secondary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-secondary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Secondary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-default-fill": {
+      "figma": "Semantic-Color::Button/Terciary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-default-stroke": {
+      "figma": "Semantic-Color::Button/Terciary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-default-text": {
+      "figma": "Semantic-Color::Button/Terciary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-default-icon": {
+      "figma": "Semantic-Color::Button/Terciary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-hover-fill": {
+      "figma": "Semantic-Color::Button/Terciary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Terciary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-hover-text": {
+      "figma": "Semantic-Color::Button/Terciary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-hover-icon": {
+      "figma": "Semantic-Color::Button/Terciary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-focused-fill": {
+      "figma": "Semantic-Color::Button/Terciary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Terciary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-focused-text": {
+      "figma": "Semantic-Color::Button/Terciary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-focused-icon": {
+      "figma": "Semantic-Color::Button/Terciary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-selected-fill": {
+      "figma": "Semantic-Color::Button/Terciary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Terciary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-selected-text": {
+      "figma": "Semantic-Color::Button/Terciary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-selected-icon": {
+      "figma": "Semantic-Color::Button/Terciary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Terciary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Terciary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-disabled-text": {
+      "figma": "Semantic-Color::Button/Terciary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-terciary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Terciary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-fill": {
+      "figma": "Semantic-Color::Forms/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-stroke": {
+      "figma": "Semantic-Color::Forms/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-text": {
+      "figma": "Semantic-Color::Forms/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-label-out": {
+      "figma": "Semantic-Color::Forms/Default/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-label-in": {
+      "figma": "Semantic-Color::Forms/Default/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-icon": {
+      "figma": "Semantic-Color::Forms/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-default-message": {
+      "figma": "Semantic-Color::Forms/Default/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-fill": {
+      "figma": "Semantic-Color::Forms/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-stroke": {
+      "figma": "Semantic-Color::Forms/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-text": {
+      "figma": "Semantic-Color::Forms/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-label-out": {
+      "figma": "Semantic-Color::Forms/Hover/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-label-in": {
+      "figma": "Semantic-Color::Forms/Hover/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-icon": {
+      "figma": "Semantic-Color::Forms/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-hover-message": {
+      "figma": "Semantic-Color::Forms/Hover/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-fill": {
+      "figma": "Semantic-Color::Forms/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-fill": {
+      "figma": "Semantic-Color::Forms/Filled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-stroke": {
+      "figma": "Semantic-Color::Forms/Filled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-text": {
+      "figma": "Semantic-Color::Forms/Filled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-label-out": {
+      "figma": "Semantic-Color::Forms/Filled/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-label-in": {
+      "figma": "Semantic-Color::Forms/Filled/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-icon": {
+      "figma": "Semantic-Color::Forms/Filled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-filled-message": {
+      "figma": "Semantic-Color::Forms/Filled/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-stroke": {
+      "figma": "Semantic-Color::Forms/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-stroke-box": {
+      "figma": "Semantic-Color::Forms/Focused/Stroke-Box",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-text": {
+      "figma": "Semantic-Color::Forms/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-label-out": {
+      "figma": "Semantic-Color::Forms/Focused/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-label-in": {
+      "figma": "Semantic-Color::Forms/Focused/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-icon": {
+      "figma": "Semantic-Color::Forms/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-focused-message": {
+      "figma": "Semantic-Color::Forms/Focused/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-fill": {
+      "figma": "Semantic-Color::Forms/Error/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-stroke": {
+      "figma": "Semantic-Color::Forms/Error/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-text": {
+      "figma": "Semantic-Color::Forms/Error/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-label-out": {
+      "figma": "Semantic-Color::Forms/Error/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-label-in": {
+      "figma": "Semantic-Color::Forms/Error/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-icon": {
+      "figma": "Semantic-Color::Forms/Error/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-error-message": {
+      "figma": "Semantic-Color::Forms/Error/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-fill": {
+      "figma": "Semantic-Color::Forms/Validated/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-stroke": {
+      "figma": "Semantic-Color::Forms/Validated/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-text": {
+      "figma": "Semantic-Color::Forms/Validated/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-label-out": {
+      "figma": "Semantic-Color::Forms/Validated/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-label-in": {
+      "figma": "Semantic-Color::Forms/Validated/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-icon": {
+      "figma": "Semantic-Color::Forms/Validated/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-validated-message": {
+      "figma": "Semantic-Color::Forms/Validated/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-fill": {
+      "figma": "Semantic-Color::Forms/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-stroke": {
+      "figma": "Semantic-Color::Forms/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-text": {
+      "figma": "Semantic-Color::Forms/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-label-out": {
+      "figma": "Semantic-Color::Forms/Disabled/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-label-in": {
+      "figma": "Semantic-Color::Forms/Disabled/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-icon": {
+      "figma": "Semantic-Color::Forms/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-disabled-message": {
+      "figma": "Semantic-Color::Forms/Disabled/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-fill": {
+      "figma": "Semantic-Color::Forms/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-stroke": {
+      "figma": "Semantic-Color::Forms/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-text": {
+      "figma": "Semantic-Color::Forms/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-label-out": {
+      "figma": "Semantic-Color::Forms/Selected/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-label-in": {
+      "figma": "Semantic-Color::Forms/Selected/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-icon": {
+      "figma": "Semantic-Color::Forms/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-selected-message": {
+      "figma": "Semantic-Color::Forms/Selected/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-neutral-1": {
+      "figma": "Semantic-Color::Strokes-Icons/Neutral 1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-neutral-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Neutral 2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-neutral-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Neutral 3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-neutral-4": {
+      "figma": "Semantic-Color::Strokes-Icons/Neutral 4",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-inverse": {
+      "figma": "Semantic-Color::Strokes-Icons/Inverse",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-base": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-sub-brand-sec": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-SubBrand-Sec",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-4": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-4",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-accent-5": {
+      "figma": "Semantic-Color::Strokes-Icons/Accent-5",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-secondary-base": {
+      "figma": "Semantic-Color::Strokes-Icons/Secondary-Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-secondary-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Secondary-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-secondary-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Secondary-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-secondary-4": {
+      "figma": "Semantic-Color::Strokes-Icons/Secondary-4",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-secondary-5": {
+      "figma": "Semantic-Color::Strokes-Icons/Secondary-5",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-success-1": {
+      "figma": "Semantic-Color::Strokes-Icons/Success-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-success-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Success-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-success-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Success-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-error-1": {
+      "figma": "Semantic-Color::Strokes-Icons/Error-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-error-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Error-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-error-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Error-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-warning-1": {
+      "figma": "Semantic-Color::Strokes-Icons/Warning-1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-warning-2": {
+      "figma": "Semantic-Color::Strokes-Icons/Warning-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--strokes-icons-warning-3": {
+      "figma": "Semantic-Color::Strokes-Icons/Warning-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-neutral-1": {
+      "figma": "Semantic-Color::Texts/Neutral 1",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-neutral-2": {
+      "figma": "Semantic-Color::Texts/Neutral 2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-neutral-3": {
+      "figma": "Semantic-Color::Texts/Neutral 3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-inverted": {
+      "figma": "Semantic-Color::Texts/Inverted",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-accent-base": {
+      "figma": "Semantic-Color::Texts/Accent-Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-accent-2": {
+      "figma": "Semantic-Color::Texts/Accent-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-accent-3": {
+      "figma": "Semantic-Color::Texts/Accent-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-secondary-base": {
+      "figma": "Semantic-Color::Texts/Secondary-Base",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-secondary-2": {
+      "figma": "Semantic-Color::Texts/Secondary-2",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-secondary-3": {
+      "figma": "Semantic-Color::Texts/Secondary-3",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-error": {
+      "figma": "Semantic-Color::Texts/Error",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-success": {
+      "figma": "Semantic-Color::Texts/Success",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-warning": {
+      "figma": "Semantic-Color::Texts/Warning",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-link": {
+      "figma": "Semantic-Color::Texts/Link",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-hover": {
+      "figma": "Semantic-Color::Texts/Hover",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-always-black": {
+      "figma": "Semantic-Color::Texts/Always-Black",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-always-white": {
+      "figma": "Semantic-Color::Texts/Always-White",
+      "role": "theme",
+      "type": "C"
+    },
+    "--texts-disabled": {
+      "figma": "Semantic-Color::Texts/Disabled",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-default-fill": {
+      "figma": "Semantic-Color::Button/Nav/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-default-stroke": {
+      "figma": "Semantic-Color::Button/Nav/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-default-text": {
+      "figma": "Semantic-Color::Button/Nav/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-default-icon": {
+      "figma": "Semantic-Color::Button/Nav/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-hover-fill": {
+      "figma": "Semantic-Color::Button/Nav/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-hover-stroke": {
+      "figma": "Semantic-Color::Button/Nav/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-hover-text": {
+      "figma": "Semantic-Color::Button/Nav/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-hover-icon": {
+      "figma": "Semantic-Color::Button/Nav/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-focused-fill": {
+      "figma": "Semantic-Color::Button/Nav/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-focused-stroke": {
+      "figma": "Semantic-Color::Button/Nav/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-focused-text": {
+      "figma": "Semantic-Color::Button/Nav/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-focused-icon": {
+      "figma": "Semantic-Color::Button/Nav/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-selected-fill": {
+      "figma": "Semantic-Color::Button/Nav/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-selected-stroke": {
+      "figma": "Semantic-Color::Button/Nav/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-selected-text": {
+      "figma": "Semantic-Color::Button/Nav/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-selected-icon": {
+      "figma": "Semantic-Color::Button/Nav/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-disabled-fill": {
+      "figma": "Semantic-Color::Button/Nav/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Nav/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-disabled-text": {
+      "figma": "Semantic-Color::Button/Nav/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-nav-disabled-icon": {
+      "figma": "Semantic-Color::Button/Nav/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-default-fill": {
+      "figma": "Semantic-Color::Button/Link Primary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-default-stroke": {
+      "figma": "Semantic-Color::Button/Link Primary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-default-text": {
+      "figma": "Semantic-Color::Button/Link Primary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-default-icon": {
+      "figma": "Semantic-Color::Button/Link Primary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-hover-fill": {
+      "figma": "Semantic-Color::Button/Link Primary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Link Primary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-hover-text": {
+      "figma": "Semantic-Color::Button/Link Primary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-hover-icon": {
+      "figma": "Semantic-Color::Button/Link Primary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-focused-fill": {
+      "figma": "Semantic-Color::Button/Link Primary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Link Primary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-focused-text": {
+      "figma": "Semantic-Color::Button/Link Primary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-focused-icon": {
+      "figma": "Semantic-Color::Button/Link Primary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-selected-fill": {
+      "figma": "Semantic-Color::Button/Link Primary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Link Primary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-selected-text": {
+      "figma": "Semantic-Color::Button/Link Primary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-selected-icon": {
+      "figma": "Semantic-Color::Button/Link Primary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Link Primary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Link Primary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-disabled-text": {
+      "figma": "Semantic-Color::Button/Link Primary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-link-primary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Link Primary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-fill": {
+      "figma": "Semantic-Color::Forms/Undefined/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-stroke": {
+      "figma": "Semantic-Color::Forms/Undefined/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-text": {
+      "figma": "Semantic-Color::Forms/Undefined/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-label-out": {
+      "figma": "Semantic-Color::Forms/Undefined/Label-Out",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-label-in": {
+      "figma": "Semantic-Color::Forms/Undefined/Label-In",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-icon": {
+      "figma": "Semantic-Color::Forms/Undefined/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--forms-undefined-message": {
+      "figma": "Semantic-Color::Forms/Undefined/Message",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-default-fill": {
+      "figma": "Semantic-Color::Button/Tab Primary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-default-stroke": {
+      "figma": "Semantic-Color::Button/Tab Primary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-default-text": {
+      "figma": "Semantic-Color::Button/Tab Primary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-default-icon": {
+      "figma": "Semantic-Color::Button/Tab Primary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-hover-fill": {
+      "figma": "Semantic-Color::Button/Tab Primary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Tab Primary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-hover-text": {
+      "figma": "Semantic-Color::Button/Tab Primary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-hover-icon": {
+      "figma": "Semantic-Color::Button/Tab Primary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-focused-fill": {
+      "figma": "Semantic-Color::Button/Tab Primary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Tab Primary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-focused-text": {
+      "figma": "Semantic-Color::Button/Tab Primary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-focused-icon": {
+      "figma": "Semantic-Color::Button/Tab Primary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-selected-fill": {
+      "figma": "Semantic-Color::Button/Tab Primary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Tab Primary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-selected-text": {
+      "figma": "Semantic-Color::Button/Tab Primary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-selected-icon": {
+      "figma": "Semantic-Color::Button/Tab Primary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Tab Primary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Tab Primary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-disabled-text": {
+      "figma": "Semantic-Color::Button/Tab Primary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-primary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Tab Primary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-default-fill": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Default/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-default-stroke": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Default/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-default-text": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Default/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-default-icon": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Default/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-hover-fill": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Hover/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-hover-stroke": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Hover/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-hover-text": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Hover/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-hover-icon": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Hover/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-focused-fill": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Focused/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-focused-stroke": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Focused/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-focused-text": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Focused/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-focused-icon": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Focused/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-selected-fill": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Selected/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-selected-stroke": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Selected/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-selected-text": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Selected/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-selected-icon": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Selected/Icon",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-disabled-fill": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Disabled/Fill",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-disabled-stroke": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Disabled/Stroke",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-disabled-text": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Disabled/Text",
+      "role": "theme",
+      "type": "C"
+    },
+    "--button-tab-secondary-disabled-icon": {
+      "figma": "Semantic-Color::Button/Tab Secondary/Disabled/Icon",
+      "role": "theme",
+      "type": "C"
+    }
+  }
+}

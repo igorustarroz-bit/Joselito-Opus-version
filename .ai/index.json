@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T14:55:33.093Z",
+  "generatedAt": "2026-10-06T15:02:44.641Z",
   "output": "react-storybook",
   "items": [
     {
@@ -10,28 +10,28 @@
       "name": "Configuración del proyecto (hanzo.config.json, permisos, git, MCP, plan Figma)"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "setup",
       "kind": "setup",
       "key": "setup:scaffold",
       "name": "Scaffold del perfil de salida (react-storybook) + despliegue"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "setup",
       "kind": "setup",
       "key": "setup:webfonts",
       "name": "Tipografías: Google Fonts si existen, fonts-raw/ si no (npm run fonts)"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "tokens",
       "kind": "tokens",
       "key": "tokens:dump",
       "name": "Volcado de variables y estilos (.ai/figma/variables.json)"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "tokens",
       "kind": "tokens",
       "key": "tokens:generate",

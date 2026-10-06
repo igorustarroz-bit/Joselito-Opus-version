@@ -1,0 +1,5214 @@
+{
+ "fileName": "Document",
+ "fileKey": "nANHdr2nKaFD6UCXAMND4s",
+ "readAt": "2026-10-06T14:58:35.265Z",
+ "collections": [
+  {
+   "name": "Primitives",
+   "modes": [
+    "Joselito"
+   ],
+   "vars": [
+    [
+     "Color/Neutral/White",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/Neutral/98",
+     "C",
+     "#f9fafa"
+    ],
+    [
+     "Color/Neutral/96",
+     "C",
+     "#f7f7f7"
+    ],
+    [
+     "Color/Neutral/94",
+     "C",
+     "#f0f0f0"
+    ],
+    [
+     "Color/Neutral/90",
+     "C",
+     "#e5e5e5"
+    ],
+    [
+     "Color/Neutral/80",
+     "C",
+     "#cccccc"
+    ],
+    [
+     "Color/Neutral/70",
+     "C",
+     "#b3b3b3"
+    ],
+    [
+     "Color/Neutral/60",
+     "C",
+     "#999999"
+    ],
+    [
+     "Color/Neutral/50",
+     "C",
+     "#808080"
+    ],
+    [
+     "Color/Neutral/40",
+     "C",
+     "#666666"
+    ],
+    [
+     "Color/Neutral/30",
+     "C",
+     "#434956"
+    ],
+    [
+     "Color/Neutral/20",
+     "C",
+     "#252931"
+    ],
+    [
+     "Color/Neutral/10",
+     "C",
+     "#14161a"
+    ],
+    [
+     "Color/Neutral/Black",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Primary/100",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/Primary/98",
+     "C",
+     "#fff5f5"
+    ],
+    [
+     "Color/Primary/96",
+     "C",
+     "#ffebeb"
+    ],
+    [
+     "Color/Primary/94",
+     "C",
+     "#ffe0e0"
+    ],
+    [
+     "Color/Primary/90",
+     "C",
+     "#ffcccc"
+    ],
+    [
+     "Color/Primary/80",
+     "C",
+     "#ff9999"
+    ],
+    [
+     "Color/Primary/70",
+     "C",
+     "#ff6666"
+    ],
+    [
+     "Color/Primary/60",
+     "C",
+     "#ff3333"
+    ],
+    [
+     "Color/Primary/50",
+     "C",
+     "#e23636"
+    ],
+    [
+     "Color/Primary/40",
+     "C",
+     "#cc0000"
+    ],
+    [
+     "Color/Primary/30",
+     "C",
+     "#990000"
+    ],
+    [
+     "Color/Primary/20",
+     "C",
+     "#481515"
+    ],
+    [
+     "Color/Primary/10",
+     "C",
+     "#260000"
+    ],
+    [
+     "Color/Primary/0",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Secondary-1/100",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/Secondary-1/98",
+     "C",
+     "#fafbf9"
+    ],
+    [
+     "Color/Secondary-1/96",
+     "C",
+     "#f6f6f3"
+    ],
+    [
+     "Color/Secondary-1/94",
+     "C",
+     "#f1f2ee"
+    ],
+    [
+     "Color/Secondary-1/90",
+     "C",
+     "#e7e9e2"
+    ],
+    [
+     "Color/Secondary-1/80",
+     "C",
+     "#dcded4"
+    ],
+    [
+     "Color/Secondary-1/70",
+     "C",
+     "#b8bca9"
+    ],
+    [
+     "Color/Secondary-1/60",
+     "C",
+     "#9ba084"
+    ],
+    [
+     "Color/Secondary-1/50",
+     "C",
+     "#89906f"
+    ],
+    [
+     "Color/Secondary-1/40",
+     "C",
+     "#6e7359"
+    ],
+    [
+     "Color/Secondary-1/30",
+     "C",
+     "#525643"
+    ],
+    [
+     "Color/Secondary-1/20",
+     "C",
+     "#373a2c"
+    ],
+    [
+     "Color/Secondary-1/10",
+     "C",
+     "#1f2019"
+    ],
+    [
+     "Color/Secondary-1/0",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Secondary-2/100",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/Secondary-2/98",
+     "C",
+     "#f5fffb"
+    ],
+    [
+     "Color/Secondary-2/96",
+     "C",
+     "#ebfff6"
+    ],
+    [
+     "Color/Secondary-2/94",
+     "C",
+     "#e0fff2"
+    ],
+    [
+     "Color/Secondary-2/90",
+     "C",
+     "#ccffea"
+    ],
+    [
+     "Color/Secondary-2/80",
+     "C",
+     "#9bfdd4"
+    ],
+    [
+     "Color/Secondary-2/70",
+     "C",
+     "#68fdbe"
+    ],
+    [
+     "Color/Secondary-2/60",
+     "C",
+     "#36fca9"
+    ],
+    [
+     "Color/Secondary-2/50",
+     "C",
+     "#04fb93"
+    ],
+    [
+     "Color/Secondary-2/40",
+     "C",
+     "#00c875"
+    ],
+    [
+     "Color/Secondary-2/30",
+     "C",
+     "#00995a"
+    ],
+    [
+     "Color/Secondary-2/20",
+     "C",
+     "#00663c"
+    ],
+    [
+     "Color/Secondary-2/10",
+     "C",
+     "#063320"
+    ],
+    [
+     "Color/Secondary-3/100",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/Secondary-2/0",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Secondary-3/98",
+     "C",
+     "#fffcf5"
+    ],
+    [
+     "Color/Secondary-3/96",
+     "C",
+     "#fff9eb"
+    ],
+    [
+     "Color/Secondary-3/94",
+     "C",
+     "#fff6e0"
+    ],
+    [
+     "Color/Secondary-3/90",
+     "C",
+     "#fff0cc"
+    ],
+    [
+     "Color/Secondary-3/80",
+     "C",
+     "#ffe199"
+    ],
+    [
+     "Color/Secondary-3/70",
+     "C",
+     "#ffd366"
+    ],
+    [
+     "Color/Secondary-3/60",
+     "C",
+     "#ffc433"
+    ],
+    [
+     "Color/Secondary-3/50",
+     "C",
+     "#ffb800"
+    ],
+    [
+     "Color/Secondary-3/40",
+     "C",
+     "#cc9300"
+    ],
+    [
+     "Color/Secondary-3/30",
+     "C",
+     "#996e00"
+    ],
+    [
+     "Color/Secondary-3/20",
+     "C",
+     "#664a00"
+    ],
+    [
+     "Color/Secondary-3/10",
+     "C",
+     "#372800"
+    ],
+    [
+     "Color/Secondary-3/0",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Opacity/Black/100",
+     "C",
+     "#00000000"
+    ],
+    [
+     "Color/Opacity/Black/98",
+     "C",
+     "#00000005"
+    ],
+    [
+     "Color/Opacity/Black/96",
+     "C",
+     "#0000000a"
+    ],
+    [
+     "Color/Opacity/Black/94",
+     "C",
+     "#0000000f"
+    ],
+    [
+     "Color/Opacity/Black/90",
+     "C",
+     "#0000001a"
+    ],
+    [
+     "Color/Opacity/Black/80",
+     "C",
+     "#00000033"
+    ],
+    [
+     "Color/Opacity/Black/70",
+     "C",
+     "#0000004d"
+    ],
+    [
+     "Color/Opacity/Black/60",
+     "C",
+     "#00000066"
+    ],
+    [
+     "Color/Opacity/Black/50",
+     "C",
+     "#00000080"
+    ],
+    [
+     "Color/Opacity/Black/40",
+     "C",
+     "#00000099"
+    ],
+    [
+     "Color/Opacity/Black/30",
+     "C",
+     "#000000b2"
+    ],
+    [
+     "Color/Opacity/Black/20",
+     "C",
+     "#000000cc"
+    ],
+    [
+     "Color/Opacity/Black/10",
+     "C",
+     "#000000e5"
+    ],
+    [
+     "Color/Opacity/Black/0",
+     "C",
+     "#000000"
+    ],
+    [
+     "Color/Opacity/White/100",
+     "C",
+     "#ffffff00"
+    ],
+    [
+     "Color/Opacity/White/98",
+     "C",
+     "#ffffff05"
+    ],
+    [
+     "Color/Opacity/White/96",
+     "C",
+     "#ffffff0a"
+    ],
+    [
+     "Color/Opacity/White/94",
+     "C",
+     "#ffffff0f"
+    ],
+    [
+     "Color/Opacity/White/90",
+     "C",
+     "#ffffff1a"
+    ],
+    [
+     "Color/Opacity/White/80",
+     "C",
+     "#ffffff33"
+    ],
+    [
+     "Color/Opacity/White/70",
+     "C",
+     "#ffffff4d"
+    ],
+    [
+     "Color/Opacity/White/60",
+     "C",
+     "#ffffff66"
+    ],
+    [
+     "Color/Opacity/White/50",
+     "C",
+     "#ffffff80"
+    ],
+    [
+     "Color/Opacity/White/40",
+     "C",
+     "#ffffff99"
+    ],
+    [
+     "Color/Opacity/White/30",
+     "C",
+     "#ffffffb2"
+    ],
+    [
+     "Color/Opacity/White/20",
+     "C",
+     "#ffffffcc"
+    ],
+    [
+     "Color/Opacity/White/10",
+     "C",
+     "#ffffffe5"
+    ],
+    [
+     "Color/Opacity/White/0",
+     "C",
+     "#ffffff"
+    ],
+    [
+     "Color/System/Error/01",
+     "C",
+     "#d9b8b9"
+    ],
+    [
+     "Color/System/Error/02",
+     "C",
+     "#d63838"
+    ],
+    [
+     "Color/System/Error/03",
+     "C",
+     "#850606"
+    ],
+    [
+     "Color/System/Success/01",
+     "C",
+     "#a2dbb3"
+    ],
+    [
+     "Color/System/Success/02",
+     "C",
+     "#6dc849"
+    ],
+    [
+     "Color/System/Success/03",
+     "C",
+     "#237210"
+    ],
+    [
+     "Color/System/Warning/01",
+     "C",
+     "#f9d999"
+    ],
+    [
+     "Color/System/Warning/02",
+     "C",
+     "#f7ba40"
+    ],
+    [
+     "Color/System/Warning/03",
+     "C",
+     "#7a5706"
+    ],
+    [
+     "Tipography/Font-Family/Title",
+     "S",
+     "Georgia"
+    ],
+    [
+     "Tipography/Font-Weight/Title-Black",
+     "S",
+     "Black"
+    ],
+    [
+     "Tipography/Font-Weight/Title-Bold",
+     "S",
+     "Bold"
+    ],
+    [
+     "Tipography/Font-Weight/Title-Regular",
+     "S",
+     "Regular"
+    ],
+    [
+     "Tipography/Letter-Spacing/Display",
+     "F",
+     -0.5
+    ],
+    [
+     "Tipography/Letter-Spacing/Title",
+     "F",
+     -0.5
+    ],
+    [
+     "Tipography/Letter-Spacing/Body",
+     "F",
+     0
+    ],
+    [
+     "Tipography/Letter-Spacing/Label",
+     "F",
+     0
+    ],
+    [
+     "Tipography/Letter-Spacing/CTA",
+     "F",
+     0.5
+    ],
+    [
+     "Tipography/Letter-Spacing/Forms",
+     "F",
+     0
+    ],
+    [
+     "Tipography/Font-Weight/Body",
+     "S",
+     "Regular"
+    ],
+    [
+     "Tipography/Font-Weight/Label",
+     "S",
+     "Regular"
+    ],
+    [
+     "Tipography/Font-Weight/CTA",
+     "S",
+     "Regular"
+    ],
+    [
+     "Tipography/Font-Weight/Form",
+     "S",
+     "Regular"
+    ],
+    [
+     "Tipography/Font-Family/Body",
+     "S",
+     "Inter"
+    ],
+    [
+     "Tipography/Font-Family/Label",
+     "S",
+     "Inter"
+    ],
+    [
+     "Tipography/Font-Family/CTA",
+     "S",
+     "Inter"
+    ],
+    [
+     "Tipography/Font-Family/Forms",
+     "S",
+     "Inter"
+    ],
+    [
+     "Spacers Fixed/fx-18",
+     "F",
+     180
+    ],
+    [
+     "Spacers Fixed/fx-17",
+     "F",
+     148
+    ],
+    [
+     "Spacers Fixed/fx-16",
+     "F",
+     124
+    ],
+    [
+     "Spacers Fixed/fx-15",
+     "F",
+     112
+    ],
+    [
+     "Spacers Fixed/fx-14",
+     "F",
+     96
+    ],
+    [
+     "Spacers Fixed/fx-13",
+     "F",
+     80
+    ],
+    [
+     "Spacers Fixed/fx-12",
+     "F",
+     72
+    ],
+    [
+     "Spacers Fixed/fx-11",
+     "F",
+     64
+    ],
+    [
+     "Spacers Fixed/fx-10",
+     "F",
+     56
+    ],
+    [
+     "Spacers Fixed/fx-9",
+     "F",
+     40
+    ],
+    [
+     "Spacers Fixed/fx-8",
+     "F",
+     36
+    ],
+    [
+     "Spacers Fixed/fx-7",
+     "F",
+     32
+    ],
+    [
+     "Spacers Fixed/fx-6",
+     "F",
+     24
+    ],
+    [
+     "Spacers Fixed/fx-5",
+     "F",
+     20
+    ],
+    [
+     "Spacers Fixed/fx-4",
+     "F",
+     16
+    ],
+    [
+     "Spacers Fixed/fx-3",
+     "F",
+     12
+    ],
+    [
+     "Spacers Fixed/fx-2",
+     "F",
+     8
+    ],
+    [
+     "Spacers Fixed/fx-1",
+     "F",
+     4
+    ],
+    [
+     "Spacers Fixed/fx-0",
+     "F",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "Responsive",
+   "modes": [
+    "XL - 1440",
+    "XS - 390",
+    "SM - 480",
+    "M - 768",
+    "LG - 1024",
+    "XXL - 1620",
+    "XXXL - 1920"
+   ],
+   "vars": [
+    [
+     "Layout/Viewport-width/Name",
+     "S",
+     [
+      "XL",
+      "XS",
+      "SM",
+      "M",
+      "LG",
+      "XXL",
+      "XXXL"
+     ]
+    ],
+    [
+     "Typography/Title 8/SZ",
+     "F",
+     [
+      180,
+      72,
+      72,
+      100,
+      120,
+      180,
+      180
+     ]
+    ],
+    [
+     "Typography/Title 8/LH",
+     "F",
+     [
+      184,
+      80,
+      80,
+      110,
+      130,
+      184,
+      184
+     ]
+    ],
+    [
+     "Typography/Title 7/SZ",
+     "F",
+     [
+      96,
+      56,
+      56,
+      74,
+      74,
+      96,
+      96
+     ]
+    ],
+    [
+     "Typography/Title 7/LH",
+     "F",
+     [
+      108,
+      62,
+      62,
+      84,
+      84,
+      108,
+      108
+     ]
+    ],
+    [
+     "Typography/Title 6/SZ",
+     "F",
+     [
+      72,
+      40,
+      40,
+      58,
+      58,
+      72,
+      72
+     ]
+    ],
+    [
+     "Typography/Title 6/LH",
+     "F",
+     [
+      80,
+      48,
+      48,
+      68,
+      68,
+      80,
+      80
+     ]
+    ],
+    [
+     "Typography/Title 5/SZ",
+     "F",
+     [
+      70,
+      34,
+      34,
+      50,
+      50,
+      70,
+      70
+     ]
+    ],
+    [
+     "Typography/Title 5/LH",
+     "F",
+     [
+      80,
+      40,
+      40,
+      56,
+      56,
+      80,
+      80
+     ]
+    ],
+    [
+     "Typography/Title 4/SZ",
+     "F",
+     [
+      48,
+      30,
+      30,
+      40,
+      40,
+      48,
+      48
+     ]
+    ],
+    [
+     "Typography/Title 4/LH",
+     "F",
+     [
+      52,
+      38,
+      38,
+      46,
+      46,
+      52,
+      52
+     ]
+    ],
+    [
+     "Typography/Title 3/SZ",
+     "F",
+     [
+      36,
+      28,
+      28,
+      34,
+      34,
+      36,
+      36
+     ]
+    ],
+    [
+     "Typography/Title 3/LH",
+     "F",
+     [
+      44,
+      34,
+      34,
+      36,
+      36,
+      44,
+      44
+     ]
+    ],
+    [
+     "Typography/Title 2/SZ",
+     "F",
+     [
+      30,
+      24,
+      24,
+      28,
+      28,
+      30,
+      30
+     ]
+    ],
+    [
+     "Typography/Title 2/LH",
+     "F",
+     [
+      38,
+      28,
+      28,
+      32,
+      32,
+      38,
+      38
+     ]
+    ],
+    [
+     "Typography/Title 1/SZ",
+     "F",
+     [
+      24,
+      20,
+      20,
+      22,
+      22,
+      24,
+      24
+     ]
+    ],
+    [
+     "Typography/Title 1/LH",
+     "F",
+     [
+      28,
+      24,
+      24,
+      24,
+      24,
+      28,
+      28
+     ]
+    ],
+    [
+     "Typography/Body 6/SZ",
+     "F",
+     [
+      24,
+      22,
+      22,
+      22,
+      22,
+      24,
+      24
+     ]
+    ],
+    [
+     "Typography/Body 6/LH",
+     "F",
+     [
+      38,
+      28,
+      28,
+      28,
+      28,
+      38,
+      38
+     ]
+    ],
+    [
+     "Typography/Body 5/SZ",
+     "F",
+     20
+    ],
+    [
+     "Typography/Body 5/LH",
+     "F",
+     32
+    ],
+    [
+     "Typography/Body 4/SZ",
+     "F",
+     18
+    ],
+    [
+     "Typography/Body 4/LH",
+     "F",
+     28
+    ],
+    [
+     "Typography/Body 3/SZ",
+     "F",
+     16
+    ],
+    [
+     "Typography/Body 3/LH",
+     "F",
+     24
+    ],
+    [
+     "Typography/Body 2/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/Body 1/SZ",
+     "F",
+     12
+    ],
+    [
+     "Typography/Body 1/LH",
+     "F",
+     18
+    ],
+    [
+     "Typography/Body 2/LH",
+     "F",
+     22
+    ],
+    [
+     "Typography/Label 2/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/Label 2/LH",
+     "F",
+     18
+    ],
+    [
+     "Typography/Label 1/SZ",
+     "F",
+     12
+    ],
+    [
+     "Typography/Label 1/LH",
+     "F",
+     16
+    ],
+    [
+     "Layout/Viewport-width/Size",
+     "F",
+     [
+      1440,
+      390,
+      480,
+      768,
+      1024,
+      1620,
+      1920
+     ]
+    ],
+    [
+     "Layout/Grids/Wrapper-Default",
+     "F",
+     [
+      80,
+      24,
+      24,
+      40,
+      40,
+      96,
+      112
+     ]
+    ],
+    [
+     "Layout/Grids/Wrapper-Nav",
+     "F",
+     [
+      40,
+      24,
+      24,
+      32,
+      32,
+      40,
+      56
+     ]
+    ],
+    [
+     "Layout/Grids/Wrapper-Full",
+     "F",
+     0
+    ],
+    [
+     "Layout/Grids/Wrapper-Modal",
+     "F",
+     [
+      32,
+      20,
+      16,
+      32,
+      40,
+      32,
+      56
+     ]
+    ],
+    [
+     "Layout/Grids/Gutter",
+     "F",
+     [
+      32,
+      12,
+      12,
+      16,
+      16,
+      32,
+      32
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/18",
+     "F",
+     [
+      184,
+      64,
+      64,
+      156,
+      156,
+      184,
+      184
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/17",
+     "F",
+     [
+      156,
+      56,
+      56,
+      132,
+      132,
+      156,
+      156
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/16",
+     "F",
+     [
+      132,
+      56,
+      56,
+      112,
+      112,
+      132,
+      132
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/15",
+     "F",
+     [
+      104,
+      48,
+      48,
+      92,
+      92,
+      104,
+      104
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/14",
+     "F",
+     [
+      92,
+      40,
+      40,
+      80,
+      80,
+      92,
+      92
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/13",
+     "F",
+     [
+      80,
+      40,
+      40,
+      72,
+      72,
+      80,
+      80
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/12",
+     "F",
+     [
+      72,
+      40,
+      40,
+      64,
+      64,
+      72,
+      72
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/11",
+     "F",
+     [
+      64,
+      40,
+      40,
+      52,
+      52,
+      64,
+      64
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/10",
+     "F",
+     [
+      56,
+      40,
+      40,
+      44,
+      44,
+      56,
+      56
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/9",
+     "F",
+     [
+      48,
+      32,
+      32,
+      40,
+      40,
+      48,
+      48
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/8",
+     "F",
+     [
+      40,
+      24,
+      24,
+      36,
+      36,
+      40,
+      40
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/7",
+     "F",
+     [
+      32,
+      20,
+      20,
+      32,
+      32,
+      32,
+      32
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/6",
+     "F",
+     [
+      24,
+      20,
+      20,
+      24,
+      24,
+      20,
+      20
+     ]
+    ],
+    [
+     "Layout/Spacers Responsive/5",
+     "F",
+     20
+    ],
+    [
+     "Layout/Spacers Responsive/4",
+     "F",
+     16
+    ],
+    [
+     "Layout/Spacers Responsive/3",
+     "F",
+     12
+    ],
+    [
+     "Layout/Spacers Responsive/2",
+     "F",
+     8
+    ],
+    [
+     "Layout/Spacers Responsive/1",
+     "F",
+     4
+    ],
+    [
+     "Layout/Spacers Responsive/0",
+     "F",
+     0
+    ],
+    [
+     "Layout/Corners/XXS",
+     "F",
+     2
+    ],
+    [
+     "Layout/Corners/XS",
+     "F",
+     4
+    ],
+    [
+     "Layout/Corners/S",
+     "F",
+     6
+    ],
+    [
+     "Layout/Corners/M",
+     "F",
+     8
+    ],
+    [
+     "Layout/Corners/L",
+     "F",
+     [
+      18,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12
+     ]
+    ],
+    [
+     "Layout/Corners/XL",
+     "F",
+     [
+      36,
+      24,
+      24,
+      16,
+      16,
+      36,
+      40
+     ]
+    ],
+    [
+     "Layout/Corners/Rounded",
+     "F",
+     10000
+    ],
+    [
+     "Layout/Corners/None",
+     "F",
+     0
+    ],
+    [
+     "Typography/CTA-XL/SZ",
+     "F",
+     20
+    ],
+    [
+     "Typography/CTA-XL/LH",
+     "F",
+     26
+    ],
+    [
+     "Typography/CTA-L/SZ",
+     "F",
+     18
+    ],
+    [
+     "Typography/CTA-L/LH",
+     "F",
+     18
+    ],
+    [
+     "Typography/CTA-M/SZ",
+     "F",
+     16
+    ],
+    [
+     "Typography/CTA-M/LH",
+     "F",
+     16
+    ],
+    [
+     "Typography/CTA-S/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/CTA-XS/SZ",
+     "F",
+     12
+    ],
+    [
+     "Typography/CTA-XS/LH",
+     "F",
+     12
+    ],
+    [
+     "Typography/CTA-S/LH",
+     "F",
+     16
+    ],
+    [
+     "Typography/Input-M/Text/SZ",
+     "F",
+     18
+    ],
+    [
+     "Typography/Input-M/Text/LH",
+     "F",
+     24
+    ],
+    [
+     "Typography/Input-M/Label-In/SZ",
+     "F",
+     10
+    ],
+    [
+     "Typography/Input-M/Label-In/LH",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-M/Label-Out/SZ",
+     "F",
+     16
+    ],
+    [
+     "Typography/Input-M/Label-Out/LH",
+     "F",
+     16
+    ],
+    [
+     "Typography/Input-M/Message/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-M/Message/LH",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-S/Text/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-S/Text/LH",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-S/Label-In/SZ",
+     "F",
+     10
+    ],
+    [
+     "Typography/Input-S/Label-In/LH",
+     "F",
+     12
+    ],
+    [
+     "Typography/Input-S/Label-Out/SZ",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-S/Label-Out/LH",
+     "F",
+     14
+    ],
+    [
+     "Typography/Input-S/Message/SZ",
+     "F",
+     12
+    ],
+    [
+     "Typography/Input-S/Message/LH",
+     "F",
+     12
+    ],
+    [
+     "Layout/Button/XL/Size",
+     "F",
+     104
+    ],
+    [
+     "Layout/Button/XL/Padding",
+     "F",
+     32
+    ],
+    [
+     "Layout/Button/XL/Min-Width",
+     "F",
+     168
+    ],
+    [
+     "Layout/Button/L/Size",
+     "F",
+     64
+    ],
+    [
+     "Layout/Forms/L/Size",
+     "F",
+     72
+    ],
+    [
+     "Layout/Forms/L/Padding-R",
+     "F",
+     20
+    ],
+    [
+     "Layout/Forms/L/Padding-L",
+     "F",
+     20
+    ],
+    [
+     "Layout/Forms/L/Message-Distance",
+     "F",
+     8
+    ],
+    [
+     "Layout/Forms/L/Label-In-Distance",
+     "F",
+     4
+    ],
+    [
+     "Layout/Forms/L/Label-Out-Distance",
+     "F",
+     12
+    ],
+    [
+     "Layout/Forms/M/Size",
+     "F",
+     56
+    ],
+    [
+     "Layout/Forms/M/Padding-R",
+     "F",
+     16
+    ],
+    [
+     "Layout/Forms/M/Padding-L",
+     "F",
+     16
+    ],
+    [
+     "Layout/Forms/M/Message-Distance",
+     "F",
+     [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      4
+     ]
+    ],
+    [
+     "Layout/Forms/M/Label-In-Distance",
+     "F",
+     4
+    ],
+    [
+     "Layout/Forms/M/Label-Out-Distance",
+     "F",
+     4
+    ],
+    [
+     "Layout/Cols Size/12cols",
+     "F",
+     [
+      1280,
+      342,
+      432,
+      688,
+      944,
+      1428,
+      1696
+     ]
+    ],
+    [
+     "Layout/Cols Size/11cols",
+     "F",
+     [
+      1170.5999755859375,
+      342,
+      432,
+      688,
+      864,
+      1306.300048828125,
+      1552
+     ]
+    ],
+    [
+     "Layout/Cols Size/10cols",
+     "F",
+     [
+      1061.300048828125,
+      342,
+      432,
+      688,
+      784,
+      1184.5999755859375,
+      1408
+     ]
+    ],
+    [
+     "Layout/Cols Size/9cols",
+     "F",
+     [
+      952,
+      342,
+      432,
+      688,
+      704,
+      1063,
+      1264
+     ]
+    ],
+    [
+     "Layout/Cols Size/8cols",
+     "F",
+     [
+      842.5999755859375,
+      342,
+      432,
+      688,
+      624,
+      941.2999877929688,
+      1120
+     ]
+    ],
+    [
+     "Layout/Cols Size/7cols",
+     "F",
+     [
+      733.2999877929688,
+      342,
+      432,
+      600,
+      544,
+      819.5999755859375,
+      976
+     ]
+    ],
+    [
+     "Layout/Cols Size/6cols",
+     "F",
+     [
+      624,
+      342,
+      432,
+      512,
+      464,
+      698,
+      832
+     ]
+    ],
+    [
+     "Layout/Cols Size/5cols",
+     "F",
+     [
+      514.5999755859375,
+      283,
+      358,
+      424,
+      384,
+      576.2999877929688,
+      688
+     ]
+    ],
+    [
+     "Layout/Cols Size/4cols",
+     "F",
+     [
+      405.29998779296875,
+      224,
+      284,
+      336,
+      304,
+      454.6000061035156,
+      544
+     ]
+    ],
+    [
+     "Layout/Cols Size/3cols",
+     "F",
+     [
+      296,
+      165,
+      210,
+      248,
+      224,
+      333,
+      400
+     ]
+    ],
+    [
+     "Layout/Cols Size/2cols",
+     "F",
+     [
+      186.60000610351562,
+      106,
+      136,
+      160,
+      144,
+      211.3000030517578,
+      256
+     ]
+    ],
+    [
+     "Layout/Cols Size/1cols",
+     "F",
+     [
+      77.30000305175781,
+      47,
+      62,
+      72,
+      64,
+      89.5999984741211,
+      112
+     ]
+    ],
+    [
+     "Layout/Cols Size/gutter1col",
+     "F",
+     [
+      141.3000030517578,
+      71,
+      86,
+      104,
+      96,
+      153.60000610351562,
+      176
+     ]
+    ],
+    [
+     "Layout/Cols Size/gutter2col",
+     "F",
+     [
+      250.60000610351562,
+      130,
+      160,
+      192,
+      176,
+      275.29998779296875,
+      320
+     ]
+    ],
+    [
+     "Layout/Cols Size/gutter3col",
+     "F",
+     [
+      360,
+      189,
+      234,
+      280,
+      256,
+      397,
+      464
+     ]
+    ],
+    [
+     "Layout/Cols Size/4cols-1Gutter",
+     "F",
+     [
+      373.29998779296875,
+      212,
+      272,
+      320,
+      288,
+      422.6000061035156,
+      512
+     ]
+    ],
+    [
+     "Layout/Cols Size/Wrapper1Col",
+     "F",
+     [
+      189.3000030517578,
+      83,
+      98,
+      128,
+      120,
+      217.60000610351562,
+      256
+     ]
+    ],
+    [
+     "Layout/Cols Size/Wrapper2Col",
+     "F",
+     [
+      298.6000061035156,
+      142,
+      172,
+      216,
+      200,
+      339.29998779296875,
+      400
+     ]
+    ],
+    [
+     "Layout/Cols Size/Wrapper3Col",
+     "F",
+     [
+      408,
+      201,
+      246,
+      304,
+      280,
+      461,
+      544
+     ]
+    ],
+    [
+     "Layout/Button/L/Padding",
+     "F",
+     32
+    ],
+    [
+     "Layout/Button/L/Min-Width",
+     "F",
+     168
+    ],
+    [
+     "Layout/Button/M/Size",
+     "F",
+     56
+    ],
+    [
+     "Layout/Button/M/Padding",
+     "F",
+     24
+    ],
+    [
+     "Layout/Button/M/Min-Width",
+     "F",
+     110
+    ],
+    [
+     "Layout/Button/S/Size",
+     "F",
+     48
+    ],
+    [
+     "Layout/Button/S/Padding",
+     "F",
+     20
+    ],
+    [
+     "Layout/Button/S/Min-Width",
+     "F",
+     96
+    ],
+    [
+     "Layout/Button/XS/Size",
+     "F",
+     40
+    ],
+    [
+     "Layout/Button/XS/Padding",
+     "F",
+     16
+    ],
+    [
+     "Layout/Button/XS/Min-Width",
+     "F",
+     56
+    ]
+   ]
+  },
+  {
+   "name": "Semantic-Color",
+   "modes": [
+    "Light - White",
+    "Light - Grey",
+    "Dark - Red - Primary",
+    "Dark - Black - Neutral"
+   ],
+   "vars": [
+    [
+     "Backgrounds/Base",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Backgrounds/Neutral-1",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Neutral/20}"
+     ]
+    ],
+    [
+     "Backgrounds/Neutral-2",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Backgrounds/Neutral-3",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Primary/60}",
+      "{Primitives::Color/Primary/0}"
+     ]
+    ],
+    [
+     "Backgrounds/White",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Backgrounds/Inverse",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Backgrounds/Accent-Base",
+     "C",
+     [
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Primary/50}"
+     ]
+    ],
+    [
+     "Backgrounds/Accent-SubBrand-Sec",
+     "C",
+     "{Primitives::Color/Secondary-1/50}"
+    ],
+    [
+     "Backgrounds/Accent-2",
+     "C",
+     [
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}"
+     ]
+    ],
+    [
+     "Backgrounds/Accent-3",
+     "C",
+     [
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/70}",
+      "{Primitives::Color/Primary/70}"
+     ]
+    ],
+    [
+     "Backgrounds/Accent-4",
+     "C",
+     [
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/40}"
+     ]
+    ],
+    [
+     "Backgrounds/Accent-5",
+     "C",
+     [
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/30}"
+     ]
+    ],
+    [
+     "Backgrounds/Success-1",
+     "C",
+     [
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}"
+     ]
+    ],
+    [
+     "Backgrounds/Success-2",
+     "C",
+     "{Primitives::Color/System/Success/02}"
+    ],
+    [
+     "Backgrounds/Success-3",
+     "C",
+     [
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/01}"
+     ]
+    ],
+    [
+     "Backgrounds/Error-1",
+     "C",
+     [
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}"
+     ]
+    ],
+    [
+     "Backgrounds/Error-2",
+     "C",
+     "{Primitives::Color/System/Error/02}"
+    ],
+    [
+     "Backgrounds/Error-3",
+     "C",
+     [
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/01}"
+     ]
+    ],
+    [
+     "Backgrounds/Warning-1",
+     "C",
+     [
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/03}"
+     ]
+    ],
+    [
+     "Backgrounds/Warning-2",
+     "C",
+     "{Primitives::Color/System/Warning/02}"
+    ],
+    [
+     "Backgrounds/Warning-3",
+     "C",
+     [
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/01}"
+     ]
+    ],
+    [
+     "Backgrounds/Always-White",
+     "C",
+     "{Primitives::Color/Neutral/White}"
+    ],
+    [
+     "Backgrounds/Always-Black",
+     "C",
+     "{Primitives::Color/Neutral/Black}"
+    ],
+    [
+     "Backgrounds/Hover",
+     "C",
+     [
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/20}",
+      "{Primitives::Color/Primary/20}"
+     ]
+    ],
+    [
+     "Backgrounds/Disabled",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Neutral/40}"
+     ]
+    ],
+    [
+     "Backgrounds/Selected",
+     "C",
+     [
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/20}",
+      "{Primitives::Color/Primary/20}"
+     ]
+    ],
+    [
+     "Backgrounds/Overlay",
+     "C",
+     "{Primitives::Color/Opacity/Black/30}"
+    ],
+    [
+     "Texts/Base",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Base",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Primary/Default/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Primary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Primary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Primary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Primary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Primary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Primary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Selected/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Button/Primary/Selected/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Button/Primary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Primary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Opacity/White/90}"
+     ]
+    ],
+    [
+     "Button/Primary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}"
+     ]
+    ],
+    [
+     "Button/Primary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}"
+     ]
+    ],
+    [
+     "Button/Primary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}"
+     ]
+    ],
+    [
+     "Button/Secondary/Default/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Secondary-1/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Neutral/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/Black/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/Black/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/Black/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/Black/20}"
+     ]
+    ],
+    [
+     "Button/Secondary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Selected/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Selected/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Secondary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Secondary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Opacity/White/90}"
+     ]
+    ],
+    [
+     "Button/Secondary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Secondary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Secondary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Default/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Terciary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Opacity/White/40}"
+     ]
+    ],
+    [
+     "Button/Terciary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Terciary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Terciary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Terciary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Button/Terciary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Selected/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Terciary/Selected/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Terciary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Terciary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Terciary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/White/90}",
+      "{Primitives::Color/Opacity/White/90}"
+     ]
+    ],
+    [
+     "Button/Terciary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Button/Terciary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Button/Terciary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Opacity/Black/90}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Forms/Default/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Forms/Default/Stroke",
+     "C",
+     [
+      "{Semantic-Color::Strokes-Icons/Neutral 2}",
+      "{Semantic-Color::Strokes-Icons/Neutral 2}",
+      "{Semantic-Color::Strokes-Icons/Neutral 1}",
+      "{Semantic-Color::Strokes-Icons/Neutral 1}"
+     ]
+    ],
+    [
+     "Forms/Default/Text",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Base}",
+      "{Semantic-Color::Texts/Base}"
+     ]
+    ],
+    [
+     "Forms/Default/Label-Out",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Primitives::Color/Opacity/White/70}",
+      "{Primitives::Color/Opacity/White/70}"
+     ]
+    ],
+    [
+     "Forms/Default/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Opacity/White/70}",
+      "{Primitives::Color/Opacity/White/70}"
+     ]
+    ],
+    [
+     "Forms/Default/Icon",
+     "C",
+     [
+      "{Semantic-Color::Strokes-Icons/Neutral 1}",
+      "{Semantic-Color::Strokes-Icons/Neutral 1}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}"
+     ]
+    ],
+    [
+     "Forms/Default/Message",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Primitives::Color/Opacity/White/20}",
+      "{Primitives::Color/Opacity/White/20}"
+     ]
+    ],
+    [
+     "Forms/Hover/Fill",
+     "C",
+     "{Semantic-Color::Backgrounds/Base}"
+    ],
+    [
+     "Forms/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Forms/Hover/Text",
+     "C",
+     [
+      "{Semantic-Color::Texts/Base}",
+      "{Semantic-Color::Texts/Base}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}"
+     ]
+    ],
+    [
+     "Forms/Hover/Label-Out",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Forms/Hover/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Forms/Hover/Icon",
+     "C",
+     "{Semantic-Color::Strokes-Icons/Base}"
+    ],
+    [
+     "Forms/Hover/Message",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Primitives::Color/Opacity/White/20}",
+      "{Primitives::Color/Opacity/White/20}"
+     ]
+    ],
+    [
+     "Forms/Focused/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/White}",
+      "{Semantic-Color::Backgrounds/White}",
+      "{Primitives::Color/Opacity/White/94}",
+      "{Primitives::Color/Opacity/White/96}"
+     ]
+    ],
+    [
+     "Forms/Filled/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Opacity/White/94}",
+      "{Semantic-Color::Backgrounds/Base}"
+     ]
+    ],
+    [
+     "Forms/Filled/Stroke",
+     "C",
+     [
+      "{Semantic-Color::Strokes-Icons/Neutral 2}",
+      "{Semantic-Color::Strokes-Icons/Neutral 2}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Opacity/White/20}"
+     ]
+    ],
+    [
+     "Forms/Filled/Text",
+     "C",
+     "{Semantic-Color::Texts/Base}"
+    ],
+    [
+     "Forms/Filled/Label-Out",
+     "C",
+     "{Semantic-Color::Texts/Neutral 1}"
+    ],
+    [
+     "Forms/Filled/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/50}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}"
+     ]
+    ],
+    [
+     "Forms/Filled/Icon",
+     "C",
+     "{Semantic-Color::Strokes-Icons/Base}"
+    ],
+    [
+     "Forms/Filled/Message",
+     "C",
+     "{Semantic-Color::Texts/Neutral 1}"
+    ],
+    [
+     "Forms/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}"
+     ]
+    ],
+    [
+     "Forms/Focused/Stroke-Box",
+     "C",
+     [
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Forms/Focused/Text",
+     "C",
+     "{Semantic-Color::Texts/Base}"
+    ],
+    [
+     "Forms/Focused/Label-Out",
+     "C",
+     [
+      "{Semantic-Color::Texts/Base}",
+      "{Semantic-Color::Texts/Base}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}"
+     ]
+    ],
+    [
+     "Forms/Focused/Label-In",
+     "C",
+     "{Semantic-Color::Texts/Neutral 1}"
+    ],
+    [
+     "Forms/Focused/Icon",
+     "C",
+     "{Semantic-Color::Strokes-Icons/Base}"
+    ],
+    [
+     "Forms/Focused/Message",
+     "C",
+     [
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Semantic-Color::Texts/Neutral 1}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Forms/Error/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Opacity/White/94}",
+      "{Semantic-Color::Backgrounds/Base}"
+     ]
+    ],
+    [
+     "Forms/Error/Stroke",
+     "C",
+     [
+      "{Primitives::Color/System/Error/02}",
+      "{Primitives::Color/System/Error/02}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/02}"
+     ]
+    ],
+    [
+     "Forms/Error/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Forms/Error/Label-Out",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Forms/Error/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Forms/Error/Icon",
+     "C",
+     [
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Primitives::Color/System/Error/02}"
+     ]
+    ],
+    [
+     "Forms/Error/Message",
+     "C",
+     [
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/02}"
+     ]
+    ],
+    [
+     "Forms/Validated/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/White/100}",
+      "{Semantic-Color::Backgrounds/White}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Forms/Validated/Stroke",
+     "C",
+     "{Primitives::Color/System/Success/02}"
+    ],
+    [
+     "Forms/Validated/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Forms/Validated/Label-Out",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Forms/Validated/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Forms/Validated/Icon",
+     "C",
+     [
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Semantic-Color::Strokes-Icons/Base}",
+      "{Primitives::Color/System/Success/02}"
+     ]
+    ],
+    [
+     "Forms/Validated/Message",
+     "C",
+     [
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/02}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/98}",
+      "{Primitives::Color/Opacity/White/94}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/20}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Label-Out",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Label-In",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Forms/Disabled/Message",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/Black/70}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Forms/Selected/Fill",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Stroke",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Text",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Label-Out",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Label-In",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Icon",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Selected/Message",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Strokes-Icons/Neutral 1",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Opacity/White/40}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Neutral 2",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Opacity/White/60}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Neutral 3",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Primary/70}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Neutral 4",
+     "C",
+     [
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Neutral/94}",
+      "{Primitives::Color/Primary/60}",
+      "{Primitives::Color/Opacity/White/90}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Inverse",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Accent-Base",
+     "C",
+     [
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Primary/50}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Accent-SubBrand-Sec",
+     "C",
+     "{Primitives::Color/Secondary-1/50}"
+    ],
+    [
+     "Strokes-Icons/Accent-2",
+     "C",
+     [
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Accent-3",
+     "C",
+     [
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Accent-4",
+     "C",
+     [
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Primary/40}",
+      "{Primitives::Color/Primary/40}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Accent-5",
+     "C",
+     [
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/30}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Secondary-Base",
+     "C",
+     "{Primitives::Color/Secondary-1/60}"
+    ],
+    [
+     "Strokes-Icons/Secondary-2",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/10}",
+      "{Primitives::Color/Secondary-1/10}",
+      "{Primitives::Color/Secondary-1/0}",
+      "{Primitives::Color/Secondary-1/0}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Secondary-3",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/80}",
+      "{Primitives::Color/Secondary-1/80}",
+      "{Primitives::Color/Secondary-1/10}",
+      "{Primitives::Color/Secondary-1/10}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Secondary-4",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/90}",
+      "{Primitives::Color/Secondary-1/90}",
+      "{Primitives::Color/Secondary-1/80}",
+      "{Primitives::Color/Secondary-1/80}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Secondary-5",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/0}",
+      "{Primitives::Color/Secondary-1/0}",
+      "{Primitives::Color/Secondary-1/90}",
+      "{Primitives::Color/Secondary-1/90}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Success-1",
+     "C",
+     [
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/01}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Success-2",
+     "C",
+     "{Primitives::Color/System/Success/02}"
+    ],
+    [
+     "Strokes-Icons/Success-3",
+     "C",
+     [
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Error-1",
+     "C",
+     [
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/01}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Error-2",
+     "C",
+     "{Primitives::Color/System/Error/02}"
+    ],
+    [
+     "Strokes-Icons/Error-3",
+     "C",
+     [
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/01}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Warning-1",
+     "C",
+     [
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/01}"
+     ]
+    ],
+    [
+     "Strokes-Icons/Warning-2",
+     "C",
+     "{Primitives::Color/System/Warning/02}"
+    ],
+    [
+     "Strokes-Icons/Warning-3",
+     "C",
+     [
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/03}"
+     ]
+    ],
+    [
+     "Texts/Neutral 1",
+     "C",
+     [
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Texts/Neutral 2",
+     "C",
+     [
+      "{Primitives::Color/Neutral/60}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Texts/Neutral 3",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Primary/70}",
+      "{Primitives::Color/Neutral/70}"
+     ]
+    ],
+    [
+     "Texts/Inverted",
+     "C",
+     [
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Texts/Accent-Base",
+     "C",
+     [
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Texts/Accent-2",
+     "C",
+     [
+      "{Primitives::Color/Primary/20}",
+      "{Primitives::Color/Primary/20}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Texts/Accent-3",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Texts/Secondary-Base",
+     "C",
+     "{Primitives::Color/Secondary-1/60}"
+    ],
+    [
+     "Texts/Secondary-2",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/10}",
+      "{Primitives::Color/Secondary-1/10}",
+      "{Primitives::Color/Secondary-1/80}",
+      "{Primitives::Color/Secondary-1/80}"
+     ]
+    ],
+    [
+     "Texts/Secondary-3",
+     "C",
+     [
+      "{Primitives::Color/Secondary-1/0}",
+      "{Primitives::Color/Secondary-1/0}",
+      "{Primitives::Color/Secondary-1/94}",
+      "{Primitives::Color/Secondary-1/80}"
+     ]
+    ],
+    [
+     "Texts/Error",
+     "C",
+     [
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/03}",
+      "{Primitives::Color/System/Error/02}",
+      "{Primitives::Color/System/Error/02}"
+     ]
+    ],
+    [
+     "Texts/Success",
+     "C",
+     [
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/03}",
+      "{Primitives::Color/System/Success/01}",
+      "{Primitives::Color/System/Success/01}"
+     ]
+    ],
+    [
+     "Texts/Warning",
+     "C",
+     [
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/03}",
+      "{Primitives::Color/System/Warning/01}",
+      "{Primitives::Color/System/Warning/01}"
+     ]
+    ],
+    [
+     "Texts/Link",
+     "C",
+     [
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/50}"
+     ]
+    ],
+    [
+     "Texts/Hover",
+     "C",
+     [
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/50}",
+      "{Primitives::Color/Primary/30}",
+      "{Primitives::Color/Primary/50}"
+     ]
+    ],
+    [
+     "Texts/Always-Black",
+     "C",
+     "{Primitives::Color/Neutral/10}"
+    ],
+    [
+     "Texts/Always-White",
+     "C",
+     "{Primitives::Color/Neutral/White}"
+    ],
+    [
+     "Texts/Disabled",
+     "C",
+     [
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Primary/80}",
+      "{Primitives::Color/Neutral/60}"
+     ]
+    ],
+    [
+     "Button/Nav/Default/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Nav/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Nav/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Nav/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Nav/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Button/Nav/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Button/Nav/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Button/Nav/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/70}",
+      "{Primitives::Color/Neutral/30}",
+      "{Primitives::Color/Neutral/30}"
+     ]
+    ],
+    [
+     "Button/Nav/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Button/Nav/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Button/Nav/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Button/Nav/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/20}",
+      "{Primitives::Color/Neutral/80}",
+      "{Primitives::Color/Neutral/80}"
+     ]
+    ],
+    [
+     "Button/Nav/Selected/Fill",
+     "C",
+     "{Primitives::Color/Primary/50}"
+    ],
+    [
+     "Button/Nav/Selected/Stroke",
+     "C",
+     "{Primitives::Color/Primary/50}"
+    ],
+    [
+     "Button/Nav/Selected/Text",
+     "C",
+     "{Primitives::Color/Primary/50}"
+    ],
+    [
+     "Button/Nav/Selected/Icon",
+     "C",
+     "{Primitives::Color/Primary/50}"
+    ],
+    [
+     "Button/Nav/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Nav/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Nav/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Nav/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Default/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Primary/100}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Primary/100}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Primary/100}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/100}",
+      "{Primitives::Color/Neutral/90}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/White/50}",
+      "{Primitives::Color/Opacity/White/50}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/White/50}",
+      "{Primitives::Color/Opacity/White/50}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/White/50}",
+      "{Primitives::Color/Opacity/White/50}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/Black/60}",
+      "{Primitives::Color/Opacity/White/50}",
+      "{Primitives::Color/Opacity/White/50}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/0}",
+      "{Primitives::Color/Opacity/White/0}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/0}",
+      "{Primitives::Color/Opacity/White/0}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Selected/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/0}",
+      "{Primitives::Color/Opacity/White/0}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Selected/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/Black/0}",
+      "{Primitives::Color/Opacity/White/0}",
+      "{Primitives::Color/Opacity/White/0}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Link Primary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Forms/Undefined/Fill",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Stroke",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Text",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Label-Out",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Label-In",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Icon",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Forms/Undefined/Message",
+     "C",
+     "{Primitives::Color/Neutral/50}"
+    ],
+    [
+     "Button/Tab Primary/Default/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Selected/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Selected/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Tab Primary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Default/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Default/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Default/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Default/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/50}",
+      "{Primitives::Color/Neutral/40}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Hover/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Hover/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Hover/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Hover/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Focused/Fill",
+     "C",
+     [
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/96}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Focused/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/90}",
+      "{Primitives::Color/Neutral/10}",
+      "{Primitives::Color/Neutral/10}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Focused/Text",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Focused/Icon",
+     "C",
+     [
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/10}",
+      "{Primitives::Color/Primary/90}",
+      "{Primitives::Color/Primary/90}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Selected/Fill",
+     "C",
+     [
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Semantic-Color::Backgrounds/Base}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Selected/Stroke",
+     "C",
+     "{Primitives::Color/Primary/50}"
+    ],
+    [
+     "Button/Tab Secondary/Selected/Text",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Selected/Icon",
+     "C",
+     [
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/Black}",
+      "{Primitives::Color/Neutral/White}",
+      "{Primitives::Color/Neutral/White}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Disabled/Fill",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Disabled/Stroke",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/Black/100}",
+      "{Primitives::Color/Opacity/White/100}",
+      "{Primitives::Color/Opacity/White/100}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Disabled/Text",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ],
+    [
+     "Button/Tab Secondary/Disabled/Icon",
+     "C",
+     [
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/Black/80}",
+      "{Primitives::Color/Opacity/White/80}",
+      "{Primitives::Color/Opacity/White/80}"
+     ]
+    ]
+   ]
+  }
+ ],
+ "textStyles": [
+  {
+   "name": "Title/08",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 180,
+   "lineHeight": 184,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Display",
+    "fontSize": "Responsive::Typography/Title 8/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 8/LH"
+   }
+  },
+  {
+   "name": "Title/07",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 96,
+   "lineHeight": 108,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Display",
+    "fontSize": "Responsive::Typography/Title 7/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 7/LH"
+   }
+  },
+  {
+   "name": "Title/06",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 72,
+   "lineHeight": 80,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Title",
+    "fontSize": "Responsive::Typography/Title 6/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 6/LH"
+   }
+  },
+  {
+   "name": "Title/05",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 70,
+   "lineHeight": 80,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Title",
+    "fontSize": "Responsive::Typography/Title 5/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 5/LH"
+   }
+  },
+  {
+   "name": "Title/04",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 48,
+   "lineHeight": 52,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Title",
+    "fontSize": "Responsive::Typography/Title 4/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 4/LH"
+   }
+  },
+  {
+   "name": "Title/03",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 36,
+   "lineHeight": 44,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Title",
+    "fontSize": "Responsive::Typography/Title 3/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 3/LH"
+   }
+  },
+  {
+   "name": "Title/02",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 30,
+   "lineHeight": 38,
+   "letterSpacing": "-0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Title",
+    "fontSize": "Responsive::Typography/Title 2/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 2/LH"
+   }
+  },
+  {
+   "name": "Title/01",
+   "family": "Georgia",
+   "style": "Regular",
+   "size": 24,
+   "lineHeight": 28,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Title 1/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Title-Regular",
+    "fontFamily": "Primitives::Tipography/Font-Family/Title",
+    "lineHeight": "Responsive::Typography/Title 1/LH"
+   }
+  },
+  {
+   "name": "Body/06",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 24,
+   "lineHeight": 38,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 6/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 6/LH"
+   }
+  },
+  {
+   "name": "Body/05",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 20,
+   "lineHeight": 32,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 5/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 5/LH"
+   }
+  },
+  {
+   "name": "Body/04",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 18,
+   "lineHeight": 28,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 4/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 4/LH"
+   }
+  },
+  {
+   "name": "Body/03",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 16,
+   "lineHeight": 24,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 3/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 3/LH"
+   }
+  },
+  {
+   "name": "Body/02",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 22,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 2/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 2/LH"
+   }
+  },
+  {
+   "name": "Body/01",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 12,
+   "lineHeight": 18,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Body",
+    "fontSize": "Responsive::Typography/Body 1/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/Body",
+    "lineHeight": "Responsive::Typography/Body 1/LH"
+   }
+  },
+  {
+   "name": "Labels/01",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 12,
+   "lineHeight": 16,
+   "letterSpacing": "0px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Label",
+    "fontSize": "Responsive::Typography/Label 1/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Label",
+    "fontFamily": "Primitives::Tipography/Font-Family/Label",
+    "lineHeight": "Responsive::Typography/Label 1/LH"
+   }
+  },
+  {
+   "name": "Labels/02",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 18,
+   "letterSpacing": "0px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Label",
+    "fontSize": "Responsive::Typography/Label 2/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Label",
+    "fontFamily": "Primitives::Tipography/Font-Family/Label",
+    "lineHeight": "Responsive::Typography/Label 2/LH"
+   }
+  },
+  {
+   "name": "CTA/03",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 18,
+   "letterSpacing": "0.5px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/CTA",
+    "fontSize": "Responsive::Typography/CTA-S/SZ",
+    "fontFamily": "Primitives::Tipography/Font-Family/CTA",
+    "lineHeight": "Responsive::Typography/CTA-L/LH"
+   }
+  },
+  {
+   "name": "CTA/02",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 12,
+   "lineHeight": 16,
+   "letterSpacing": "0.5px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/CTA",
+    "fontSize": "Responsive::Typography/CTA-XS/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/CTA",
+    "fontFamily": "Primitives::Tipography/Font-Family/CTA",
+    "lineHeight": "Responsive::Typography/CTA-M/LH"
+   }
+  },
+  {
+   "name": "CTA/01",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 12,
+   "lineHeight": 16,
+   "letterSpacing": "0.5px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/CTA",
+    "fontSize": "Responsive::Typography/CTA-XS/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/CTA",
+    "fontFamily": "Primitives::Tipography/Font-Family/CTA",
+    "lineHeight": "Responsive::Typography/CTA-S/LH"
+   }
+  },
+  {
+   "name": "CTA-Link-Footer/02",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 16,
+   "lineHeight": 16,
+   "letterSpacing": "0.5px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/CTA",
+    "fontSize": "Responsive::Typography/CTA-M/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/CTA",
+    "lineHeight": "Responsive::Typography/CTA-M/LH"
+   }
+  },
+  {
+   "name": "CTA-Link-Footer/01",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 16,
+   "letterSpacing": "0.5px",
+   "textCase": "UPPER",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/CTA",
+    "fontSize": "Responsive::Typography/CTA-S/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Body",
+    "fontFamily": "Primitives::Tipography/Font-Family/CTA",
+    "lineHeight": "Responsive::Typography/CTA-S/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-M/Text",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 18,
+   "lineHeight": 24,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-M/Text/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-M/Text/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-M/Label-In",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 10,
+   "lineHeight": 14,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-M/Label-In/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-M/Label-In/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-M/Label-Out",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 16,
+   "lineHeight": 16,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-M/Label-Out/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-M/Label-Out/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-M/Info",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 14,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-M/Message/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-M/Message/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-S/Text",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 14,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-S/Text/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-S/Text/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-S/Label-In",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 10,
+   "lineHeight": 12,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-S/Label-In/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-S/Label-In/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-S/Label-Out",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 14,
+   "lineHeight": 14,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-S/Label-Out/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-S/Label-Out/LH"
+   }
+  },
+  {
+   "name": "Forms/Input-S/Info",
+   "family": "Inter",
+   "style": "Regular",
+   "size": 12,
+   "lineHeight": 12,
+   "letterSpacing": "0px",
+   "textCase": "ORIGINAL",
+   "textDecoration": "NONE",
+   "bound": {
+    "letterSpacing": "Primitives::Tipography/Letter-Spacing/Forms",
+    "fontSize": "Responsive::Typography/Input-S/Message/SZ",
+    "fontStyle": "Primitives::Tipography/Font-Weight/Form",
+    "fontFamily": "Primitives::Tipography/Font-Family/Forms",
+    "lineHeight": "Responsive::Typography/Input-S/Message/LH"
+   }
+  }
+ ],
+ "effectStyles": [
+  {
+   "name": "Elevation/Blur/L",
+   "effects": [
+    {
+     "type": "BACKGROUND_BLUR",
+     "radius": 160,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/Blur/M",
+   "effects": [
+    {
+     "type": "BACKGROUND_BLUR",
+     "radius": 100,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/Blur/S",
+   "effects": [
+    {
+     "type": "BACKGROUND_BLUR",
+     "radius": 40,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Light/XL",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#00000029",
+     "x": 0,
+     "y": 0,
+     "blur": 48,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Light/L",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#0000001a",
+     "x": 0,
+     "y": 0,
+     "blur": 26,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Light/M",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#0000001a",
+     "x": 0,
+     "y": 0,
+     "blur": 12,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Light/S",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#2b343a14",
+     "x": 0,
+     "y": 0,
+     "blur": 3,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Dark/XL",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#000000b2",
+     "x": 0,
+     "y": 0,
+     "blur": 48,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Dark/L",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#00000087",
+     "x": 0,
+     "y": 0,
+     "blur": 26,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Dark/M",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#0000008a",
+     "x": 0,
+     "y": 0,
+     "blur": 12,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "Elevation/On-Dark/S",
+   "effects": [
+    {
+     "type": "DROP_SHADOW",
+     "color": "#0000007d",
+     "x": 0,
+     "y": 0,
+     "blur": 3,
+     "spread": 0,
+     "visible": true
+    }
+   ]
+  }
+ ],
+ "gridStyles": [
+  {
+   "name": "Main-Grid",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 12,
+     "gutter": 32,
+     "offset": 80,
+     "alignment": "STRETCH"
+    },
+    {
+     "pattern": "ROWS",
+     "count": 400,
+     "gutter": 0,
+     "offset": 0,
+     "alignment": "MIN",
+     "size": 24
+    },
+    {
+     "pattern": "ROWS",
+     "count": 1,
+     "gutter": 0,
+     "offset": 0,
+     "alignment": "MAX",
+     "size": 64
+    }
+   ]
+  },
+  {
+   "name": "Layout/XXXL (1920)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 12,
+     "gutter": 32,
+     "offset": 112,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/XXL (1620)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 12,
+     "gutter": 32,
+     "offset": 96,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/XL (1440)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 12,
+     "gutter": 32,
+     "offset": 80,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/LG (1024)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 12,
+     "gutter": 16,
+     "offset": 40,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/M (768)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 8,
+     "gutter": 16,
+     "offset": 40,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/SM (480)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 6,
+     "gutter": 12,
+     "offset": 24,
+     "alignment": "STRETCH"
+    }
+   ]
+  },
+  {
+   "name": "Layout/XS (390)",
+   "layoutGrids": [
+    {
+     "pattern": "COLUMNS",
+     "count": 6,
+     "gutter": 12,
+     "offset": 24,
+     "alignment": "STRETCH"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+/* Estilos de efecto de Figma → clases .fx-*. Generado: no editar a mano. */
+
+.fx-elevation-blur-l {
+  backdrop-filter: var(--fx-elevation-blur-l);
+}
+
+.fx-elevation-blur-m {
+  backdrop-filter: var(--fx-elevation-blur-m);
+}
+
+.fx-elevation-blur-s {
+  backdrop-filter: var(--fx-elevation-blur-s);
+}
+
+.fx-elevation-on-light-xl {
+  box-shadow: var(--fx-elevation-on-light-xl);
+}
+
+.fx-elevation-on-light-l {
+  box-shadow: var(--fx-elevation-on-light-l);
+}
+
+.fx-elevation-on-light-m {
+  box-shadow: var(--fx-elevation-on-light-m);
+}
+
+.fx-elevation-on-light-s {
+  box-shadow: var(--fx-elevation-on-light-s);
+}
+
+.fx-elevation-on-dark-xl {
+  box-shadow: var(--fx-elevation-on-dark-xl);
+}
+
+.fx-elevation-on-dark-l {
+  box-shadow: var(--fx-elevation-on-dark-l);
+}
+
+.fx-elevation-on-dark-m {
+  box-shadow: var(--fx-elevation-on-dark-m);
+}
+
+.fx-elevation-on-dark-s {
+  box-shadow: var(--fx-elevation-on-dark-s);
+}

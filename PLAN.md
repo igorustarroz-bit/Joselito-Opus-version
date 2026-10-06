@@ -4,18 +4,18 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 1/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 5/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
 - [x] Configuración del proyecto (hanzo.config.json, permisos, git, MCP, plan Figma) <!-- k:setup:config -->
-- [ ] Scaffold del perfil de salida (react-storybook) + despliegue <!-- k:setup:scaffold -->
-- [ ] Tipografías: Google Fonts si existen, fonts-raw/ si no (npm run fonts) <!-- k:setup:webfonts -->
+- [x] Scaffold del perfil de salida (react-storybook) + despliegue <!-- k:setup:scaffold -->
+- [x] Tipografías: Google Fonts si existen, fonts-raw/ si no (npm run fonts) <!-- k:setup:webfonts -->
 
 ## Fase 1 — Tokens (antes que cualquier componente)
 
-- [ ] Volcado de variables y estilos (.ai/figma/variables.json) <!-- k:tokens:dump -->
-- [ ] Generar tokens (npm run tokens) y documentarlos: primitivas, responsive/breakpoints, subtemas, tipografía, espaciados, grid, efectos <!-- k:tokens:generate -->
+- [x] Volcado de variables y estilos (.ai/figma/variables.json) <!-- k:tokens:dump -->
+- [x] Generar tokens (npm run tokens) y documentarlos: primitivas, responsive/breakpoints, subtemas, tipografía, espaciados, grid, efectos <!-- k:tokens:generate -->
 
 ## Fase 2 — Foundations
 

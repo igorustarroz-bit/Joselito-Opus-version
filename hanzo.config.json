@@ -42,7 +42,10 @@
   "fonts": {
     "$comment": "Google Fonts (online) si la familia está allí; fonts-raw/ solo si no. overrides fuerza la decisión por familia (necesario si no hay red para comprobarlo).",
     "source": "auto",
-    "overrides": {},
+    "overrides": {
+      "Inter": "google",
+      "Georgia": "system"
+    },
     "extra": {}
   }
 }

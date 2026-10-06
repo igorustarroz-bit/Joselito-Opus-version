@@ -1,0 +1,239 @@
+/* Estilos de texto de Figma → clases .ts-*. Generado: no editar a mano. */
+
+.ts-title-08 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-8-sz);
+  line-height: var(--typography-title-8-lh);
+  letter-spacing: var(--tipography-letter-spacing-display);
+}
+
+.ts-title-07 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-7-sz);
+  line-height: var(--typography-title-7-lh);
+  letter-spacing: var(--tipography-letter-spacing-display);
+}
+
+.ts-title-06 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-6-sz);
+  line-height: var(--typography-title-6-lh);
+  letter-spacing: var(--tipography-letter-spacing-title);
+}
+
+.ts-title-05 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-5-sz);
+  line-height: var(--typography-title-5-lh);
+  letter-spacing: var(--tipography-letter-spacing-title);
+}
+
+.ts-title-04 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-4-sz);
+  line-height: var(--typography-title-4-lh);
+  letter-spacing: var(--tipography-letter-spacing-title);
+}
+
+.ts-title-03 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-3-sz);
+  line-height: var(--typography-title-3-lh);
+  letter-spacing: var(--tipography-letter-spacing-title);
+}
+
+.ts-title-02 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-2-sz);
+  line-height: var(--typography-title-2-lh);
+  letter-spacing: var(--tipography-letter-spacing-title);
+}
+
+.ts-title-01 {
+  font-family: var(--tipography-font-family-title);
+  font-weight: var(--tipography-font-weight-title-regular);
+  font-size: var(--typography-title-1-sz);
+  line-height: var(--typography-title-1-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-06 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-6-sz);
+  line-height: var(--typography-body-6-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-05 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-5-sz);
+  line-height: var(--typography-body-5-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-04 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-4-sz);
+  line-height: var(--typography-body-4-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-03 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-3-sz);
+  line-height: var(--typography-body-3-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-02 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-2-sz);
+  line-height: var(--typography-body-2-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-body-01 {
+  font-family: var(--tipography-font-family-body);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-body-1-sz);
+  line-height: var(--typography-body-1-lh);
+  letter-spacing: var(--tipography-letter-spacing-body);
+}
+
+.ts-labels-01 {
+  font-family: var(--tipography-font-family-label);
+  font-weight: var(--tipography-font-weight-label);
+  font-size: var(--typography-label-1-sz);
+  line-height: var(--typography-label-1-lh);
+  letter-spacing: var(--tipography-letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.ts-labels-02 {
+  font-family: var(--tipography-font-family-label);
+  font-weight: var(--tipography-font-weight-label);
+  font-size: var(--typography-label-2-sz);
+  line-height: var(--typography-label-2-lh);
+  letter-spacing: var(--tipography-letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.ts-cta-03 {
+  font-family: var(--tipography-font-family-cta);
+  font-weight: 400;
+  font-size: var(--typography-cta-s-sz);
+  line-height: var(--typography-cta-l-lh);
+  letter-spacing: var(--tipography-letter-spacing-cta);
+  text-transform: uppercase;
+}
+
+.ts-cta-02 {
+  font-family: var(--tipography-font-family-cta);
+  font-weight: var(--tipography-font-weight-cta);
+  font-size: var(--typography-cta-xs-sz);
+  line-height: var(--typography-cta-m-lh);
+  letter-spacing: var(--tipography-letter-spacing-cta);
+  text-transform: uppercase;
+}
+
+.ts-cta-01 {
+  font-family: var(--tipography-font-family-cta);
+  font-weight: var(--tipography-font-weight-cta);
+  font-size: var(--typography-cta-xs-sz);
+  line-height: var(--typography-cta-s-lh);
+  letter-spacing: var(--tipography-letter-spacing-cta);
+  text-transform: uppercase;
+}
+
+.ts-cta-link-footer-02 {
+  font-family: var(--tipography-font-family-cta);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-cta-m-sz);
+  line-height: var(--typography-cta-m-lh);
+  letter-spacing: var(--tipography-letter-spacing-cta);
+}
+
+.ts-cta-link-footer-01 {
+  font-family: var(--tipography-font-family-cta);
+  font-weight: var(--tipography-font-weight-body);
+  font-size: var(--typography-cta-s-sz);
+  line-height: var(--typography-cta-s-lh);
+  letter-spacing: var(--tipography-letter-spacing-cta);
+  text-transform: uppercase;
+}
+
+.ts-forms-input-m-text {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-m-text-sz);
+  line-height: var(--typography-input-m-text-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-m-label-in {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-m-label-in-sz);
+  line-height: var(--typography-input-m-label-in-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-m-label-out {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-m-label-out-sz);
+  line-height: var(--typography-input-m-label-out-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-m-info {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-m-message-sz);
+  line-height: var(--typography-input-m-message-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-s-text {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-s-text-sz);
+  line-height: var(--typography-input-s-text-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-s-label-in {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-s-label-in-sz);
+  line-height: var(--typography-input-s-label-in-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-s-label-out {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-s-label-out-sz);
+  line-height: var(--typography-input-s-label-out-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
+
+.ts-forms-input-s-info {
+  font-family: var(--tipography-font-family-forms);
+  font-weight: var(--tipography-font-weight-form);
+  font-size: var(--typography-input-s-message-sz);
+  line-height: var(--typography-input-s-message-lh);
+  letter-spacing: var(--tipography-letter-spacing-forms);
+}
