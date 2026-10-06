@@ -3,5 +3,10 @@
     "name": "AspectRatio",
     "path": "src/components/AspectRatio/AspectRatio.jsx",
     "fp": "06244532"
+  },
+  "49026:6521": {
+    "name": "Icon",
+    "path": "src/components/Icon/Icon.jsx",
+    "fp": "e44630a6"
   }
 }

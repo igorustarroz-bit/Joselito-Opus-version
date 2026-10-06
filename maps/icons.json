@@ -1,0 +1,682 @@
+{
+  "arrow-down": {
+    "nodeId": "49026:6534",
+    "figma": "ArrowDown",
+    "fp": "7c59d271"
+  },
+  "arrow-down-left": {
+    "nodeId": "49026:6536",
+    "figma": "ArrowDownLeft",
+    "fp": "780b1580"
+  },
+  "arrow-down-right": {
+    "nodeId": "49026:6538",
+    "figma": "ArrowDownRight",
+    "fp": "e75352f5"
+  },
+  "arrow-left": {
+    "nodeId": "49026:6540",
+    "figma": "ArrowLeft",
+    "fp": "91551d91"
+  },
+  "arrow-right": {
+    "nodeId": "49026:6542",
+    "figma": "ArrowRight",
+    "fp": "268f7a03"
+  },
+  "arrow-up": {
+    "nodeId": "49026:6544",
+    "figma": "ArrowUp",
+    "fp": "64da5567"
+  },
+  "arrow-up-left": {
+    "nodeId": "49026:6546",
+    "figma": "ArrowUpLeft",
+    "fp": "8edcfe2b"
+  },
+  "arrow-up-right": {
+    "nodeId": "49026:6548",
+    "figma": "ArrowUpRight",
+    "fp": "9e15b9f2"
+  },
+  "caret-down": {
+    "nodeId": "49026:6550",
+    "figma": "CaretDown",
+    "fp": "37389925"
+  },
+  "caret-left": {
+    "nodeId": "49026:6552",
+    "figma": "CaretLeft",
+    "fp": "1606c6d2"
+  },
+  "caret-right": {
+    "nodeId": "49026:6554",
+    "figma": "CaretRight",
+    "fp": "62350db1"
+  },
+  "caret-up": {
+    "nodeId": "49026:6556",
+    "figma": "CaretUp",
+    "fp": "ab7dcb0f"
+  },
+  "arrow-square-out": {
+    "nodeId": "49026:6558",
+    "figma": "ArrowSquareOut",
+    "fp": "5757e96d"
+  },
+  "arrow-line-down": {
+    "nodeId": "49026:6560",
+    "figma": "ArrowLineDown",
+    "fp": "8fdf7747"
+  },
+  "arrow-line-up": {
+    "nodeId": "49026:6562",
+    "figma": "ArrowLineUp",
+    "fp": "4dc4c367"
+  },
+  "heart-straight": {
+    "nodeId": "49026:6564",
+    "figma": "HeartStraight",
+    "fp": "308adf14"
+  },
+  "chat": {
+    "nodeId": "49026:6566",
+    "figma": "Chat",
+    "fp": "c8e7780a"
+  },
+  "phone": {
+    "nodeId": "49026:6568",
+    "figma": "Phone",
+    "fp": "025375e0"
+  },
+  "star": {
+    "nodeId": "49026:6570",
+    "figma": "Star",
+    "fp": "ed3c5732"
+  },
+  "envelope": {
+    "nodeId": "49026:6572",
+    "figma": "Envelope",
+    "fp": "2e1008db"
+  },
+  "quotes": {
+    "nodeId": "49026:6574",
+    "figma": "Quotes",
+    "fp": "02b31c09"
+  },
+  "eye-slash": {
+    "nodeId": "49026:6576",
+    "figma": "EyeSlash",
+    "fp": "37235a0e"
+  },
+  "eye": {
+    "nodeId": "49026:6578",
+    "figma": "Eye",
+    "fp": "55bf5467"
+  },
+  "copy": {
+    "nodeId": "49026:6580",
+    "figma": "Copy",
+    "fp": "102171db"
+  },
+  "file": {
+    "nodeId": "49026:6582",
+    "figma": "File",
+    "fp": "c3bfcdc0"
+  },
+  "calendar-blank": {
+    "nodeId": "49026:6584",
+    "figma": "CalendarBlank",
+    "fp": "6518df23"
+  },
+  "clock": {
+    "nodeId": "49026:6586",
+    "figma": "Clock",
+    "fp": "2d500ed0"
+  },
+  "magnifying-glass": {
+    "nodeId": "49026:6588",
+    "figma": "MagnifyingGlass",
+    "fp": "196d3f0f"
+  },
+  "mouse-simple": {
+    "nodeId": "49026:6590",
+    "figma": "MouseSimple",
+    "fp": "84292923"
+  },
+  "cursor": {
+    "nodeId": "49026:6592",
+    "figma": "Cursor",
+    "fp": "86f9f9a1"
+  },
+  "link": {
+    "nodeId": "49026:6594",
+    "figma": "Link",
+    "fp": "1d34e4cf"
+  },
+  "link-simple": {
+    "nodeId": "49026:6596",
+    "figma": "LinkSimple",
+    "fp": "4b346f6a"
+  },
+  "check": {
+    "nodeId": "49026:6598",
+    "figma": "Check",
+    "fp": "76c724e7"
+  },
+  "sign-out": {
+    "nodeId": "49026:6600",
+    "figma": "SignOut",
+    "fp": "94b4cf14"
+  },
+  "sign-in": {
+    "nodeId": "49026:6602",
+    "figma": "SignIn",
+    "fp": "e10dbfdd"
+  },
+  "user": {
+    "nodeId": "49026:6604",
+    "figma": "User",
+    "fp": "252b00d2"
+  },
+  "camera": {
+    "nodeId": "49026:6606",
+    "figma": "Camera",
+    "fp": "afcda9c1"
+  },
+  "play": {
+    "nodeId": "49026:6608",
+    "figma": "Play",
+    "fp": "f7e65aac"
+  },
+  "speaker-high": {
+    "nodeId": "49026:6610",
+    "figma": "SpeakerHigh",
+    "fp": "49b8aa44"
+  },
+  "speaker-simple-x": {
+    "nodeId": "49026:6612",
+    "figma": "SpeakerSimpleX",
+    "fp": "8f70b2ea"
+  },
+  "pause": {
+    "nodeId": "49026:6614",
+    "figma": "Pause",
+    "fp": "2108622a"
+  },
+  "microphone": {
+    "nodeId": "49026:6616",
+    "figma": "Microphone",
+    "fp": "2c74ae42"
+  },
+  "microphone-slash": {
+    "nodeId": "49026:6618",
+    "figma": "MicrophoneSlash",
+    "fp": "27fc5f39"
+  },
+  "images-square": {
+    "nodeId": "49026:6620",
+    "figma": "ImagesSquare",
+    "fp": "285ebafa"
+  },
+  "chart-bar": {
+    "nodeId": "49026:6622",
+    "figma": "ChartBar",
+    "fp": "3de1cbe2"
+  },
+  "chart-pie-slice": {
+    "nodeId": "49026:6624",
+    "figma": "ChartPieSlice",
+    "fp": "8b73595f"
+  },
+  "infinity": {
+    "nodeId": "49026:6626",
+    "figma": "Infinity",
+    "fp": "7398dbd0"
+  },
+  "minus": {
+    "nodeId": "49026:6628",
+    "figma": "Minus",
+    "fp": "cd2ce7a7"
+  },
+  "equals": {
+    "nodeId": "49026:6630",
+    "figma": "Equals",
+    "fp": "e7381ea2"
+  },
+  "radical": {
+    "nodeId": "49026:6632",
+    "figma": "Radical",
+    "fp": "df157607"
+  },
+  "percent": {
+    "nodeId": "49026:6634",
+    "figma": "Percent",
+    "fp": "5c757aab"
+  },
+  "plus": {
+    "nodeId": "49026:6636",
+    "figma": "Plus",
+    "fp": "bff7c195"
+  },
+  "x": {
+    "nodeId": "49026:6638",
+    "figma": "X",
+    "fp": "820e40b3"
+  },
+  "trend-down": {
+    "nodeId": "49026:6640",
+    "figma": "TrendDown",
+    "fp": "8224f580"
+  },
+  "trend-up": {
+    "nodeId": "49026:6642",
+    "figma": "TrendUp",
+    "fp": "2c9f9e02"
+  },
+  "flag": {
+    "nodeId": "49026:6644",
+    "figma": "Flag",
+    "fp": "d6d1717b"
+  },
+  "globe": {
+    "nodeId": "49026:6646",
+    "figma": "Globe",
+    "fp": "aa237105"
+  },
+  "map-pin": {
+    "nodeId": "49026:6648",
+    "figma": "MapPin",
+    "fp": "e693bf39"
+  },
+  "house": {
+    "nodeId": "49026:6650",
+    "figma": "House",
+    "fp": "298c90a2"
+  },
+  "behance-logo": {
+    "nodeId": "49026:6652",
+    "figma": "BehanceLogo",
+    "fp": "13e2b14f"
+  },
+  "dribbble-logo": {
+    "nodeId": "49026:6654",
+    "figma": "DribbbleLogo",
+    "fp": "c48092e2"
+  },
+  "discord-logo": {
+    "nodeId": "49026:6656",
+    "figma": "DiscordLogo",
+    "fp": "727385ca"
+  },
+  "facebook-logo": {
+    "nodeId": "49026:6658",
+    "figma": "FacebookLogo",
+    "fp": "976945a5"
+  },
+  "figma-logo": {
+    "nodeId": "49026:6660",
+    "figma": "FigmaLogo",
+    "fp": "9fc59f8b"
+  },
+  "dropbox-logo": {
+    "nodeId": "49026:6662",
+    "figma": "DropboxLogo",
+    "fp": "35f2816a"
+  },
+  "framer-logo": {
+    "nodeId": "49026:6664",
+    "figma": "FramerLogo",
+    "fp": "b1c460c0"
+  },
+  "google-drive-logo": {
+    "nodeId": "49026:6666",
+    "figma": "GoogleDriveLogo",
+    "fp": "7529518d"
+  },
+  "github-logo": {
+    "nodeId": "49026:6668",
+    "figma": "GithubLogo",
+    "fp": "1ae8c487"
+  },
+  "google-logo": {
+    "nodeId": "49026:6670",
+    "figma": "GoogleLogo",
+    "fp": "5e218dd3"
+  },
+  "medium-logo": {
+    "nodeId": "49026:6672",
+    "figma": "MediumLogo",
+    "fp": "a8e540fb"
+  },
+  "youtube-logo": {
+    "nodeId": "49026:6674",
+    "figma": "YoutubeLogo",
+    "fp": "e8e66e43"
+  },
+  "whatsapp-logo": {
+    "nodeId": "49026:6676",
+    "figma": "WhatsappLogo",
+    "fp": "8d8b1597"
+  },
+  "pinterest-logo": {
+    "nodeId": "49026:6678",
+    "figma": "PinterestLogo",
+    "fp": "5049a103"
+  },
+  "twitch-logo": {
+    "nodeId": "49026:6680",
+    "figma": "TwitchLogo",
+    "fp": "7a09a6d5"
+  },
+  "tiktok-logo": {
+    "nodeId": "49026:6682",
+    "figma": "TiktokLogo",
+    "fp": "ccfccbca"
+  },
+  "xlogo": {
+    "nodeId": "49026:6684",
+    "figma": "XLogo",
+    "fp": "8ff32197"
+  },
+  "tumblr-logo": {
+    "nodeId": "49026:6686",
+    "figma": "TumblrLogo",
+    "fp": "167b817a"
+  },
+  "dots-three": {
+    "nodeId": "49026:6688",
+    "figma": "DotsThree",
+    "fp": "bc10f68a"
+  },
+  "dots-three-vertical": {
+    "nodeId": "49026:6690",
+    "figma": "DotsThreeVertical",
+    "fp": "358ce4de"
+  },
+  "instagram-logo": {
+    "nodeId": "49026:6692",
+    "figma": "InstagramLogo",
+    "fp": "cc3ff942"
+  },
+  "divide": {
+    "nodeId": "49026:6695",
+    "figma": "Divide",
+    "fp": "65999ccb"
+  },
+  "wechat-logo": {
+    "nodeId": "49026:6698",
+    "figma": "WechatLogo",
+    "fp": "429c13ee"
+  },
+  "linkedin-logo": {
+    "nodeId": "49026:6702",
+    "figma": "LinkedinLogo",
+    "fp": "b51adaae"
+  },
+  "arrow-circle-right": {
+    "nodeId": "49680:3167",
+    "figma": "ArrowCircleRight",
+    "fp": "6949fa06"
+  },
+  "hospital": {
+    "nodeId": "49681:3177",
+    "figma": "Hospital",
+    "fp": "275318ca"
+  },
+  "list": {
+    "nodeId": "49725:11742",
+    "figma": "List",
+    "fp": "53f81ab5"
+  },
+  "dots-nine": {
+    "nodeId": "49725:11741",
+    "figma": "DotsNine",
+    "fp": "17c81a01"
+  },
+  "certificate": {
+    "nodeId": "49799:1399",
+    "figma": "Certificate",
+    "fp": "9df388e5"
+  },
+  "graduation-cap": {
+    "nodeId": "49799:1398",
+    "figma": "GraduationCap",
+    "fp": "a7e363a1"
+  },
+  "book": {
+    "nodeId": "49800:1440",
+    "figma": "Book",
+    "fp": "eee27fa5"
+  },
+  "address-book": {
+    "nodeId": "49800:1443",
+    "figma": "AddressBook",
+    "fp": "1769c2a5"
+  },
+  "bookmark-simple": {
+    "nodeId": "49800:1442",
+    "figma": "BookmarkSimple",
+    "fp": "eb3f74d6"
+  },
+  "notepad": {
+    "nodeId": "49800:1441",
+    "figma": "Notepad",
+    "fp": "016ed9c0"
+  },
+  "book-open-text": {
+    "nodeId": "49800:1444",
+    "figma": "BookOpenText",
+    "fp": "b6e52941"
+  },
+  "laptop": {
+    "nodeId": "49800:1439",
+    "figma": "Laptop",
+    "fp": "6c13e714"
+  },
+  "trophy": {
+    "nodeId": "49800:1455",
+    "figma": "Trophy",
+    "fp": "e3388bf3"
+  },
+  "buildings": {
+    "nodeId": "49832:1432",
+    "figma": "Buildings",
+    "fp": "776a79f7"
+  },
+  "briefcase": {
+    "nodeId": "49832:1431",
+    "figma": "Briefcase",
+    "fp": "c10fd7b9"
+  },
+  "crane-tower": {
+    "nodeId": "49844:15571",
+    "figma": "CraneTower",
+    "fp": "9a2561c8"
+  },
+  "factory": {
+    "nodeId": "49844:15587",
+    "figma": "Factory",
+    "fp": "a3b75dc4"
+  },
+  "map-pin-2": {
+    "nodeId": "49864:3114",
+    "figma": "MapPin",
+    "fp": "0c632691"
+  },
+  "flask": {
+    "nodeId": "49907:11403",
+    "figma": "Flask",
+    "fp": "3ebad222"
+  },
+  "backpack": {
+    "nodeId": "49907:11402",
+    "figma": "Backpack",
+    "fp": "00822c0a"
+  },
+  "chef-hat": {
+    "nodeId": "49909:11421",
+    "figma": "ChefHat",
+    "fp": "ab7fe528"
+  },
+  "megaphone-simple": {
+    "nodeId": "49911:11426",
+    "figma": "MegaphoneSimple",
+    "fp": "54137e17"
+  },
+  "paint-brush": {
+    "nodeId": "49911:11446",
+    "figma": "PaintBrush",
+    "fp": "5efacc04"
+  },
+  "newspaper": {
+    "nodeId": "49935:1944",
+    "figma": "Newspaper",
+    "fp": "ab2c330a"
+  },
+  "translate": {
+    "nodeId": "50187:164",
+    "figma": "Translate",
+    "fp": "051c0ba9"
+  },
+  "quotes-2": {
+    "nodeId": "50347:142",
+    "figma": "Quotes",
+    "fp": "ebf672e0"
+  },
+  "arrow-clockwise": {
+    "nodeId": "50679:149",
+    "figma": "ArrowClockwise",
+    "fp": "9d3e7bfe"
+  },
+  "exclamation-mark": {
+    "nodeId": "50840:7715",
+    "figma": "ExclamationMark",
+    "fp": "42eabf9c"
+  },
+  "notches": {
+    "nodeId": "50908:1712",
+    "figma": "Notches",
+    "fp": "920cbaa8"
+  },
+  "hand-coins": {
+    "nodeId": "50927:177",
+    "figma": "HandCoins",
+    "fp": "0938e74a"
+  },
+  "plus-circle": {
+    "nodeId": "51278:42497",
+    "figma": "PlusCircle",
+    "fp": "42ec4742"
+  },
+  "trash": {
+    "nodeId": "51540:15639",
+    "figma": "Trash",
+    "fp": "1aeccbc5"
+  },
+  "sliders-horizontal": {
+    "nodeId": "51672:14675",
+    "figma": "SlidersHorizontal",
+    "fp": "cbaa52a0"
+  },
+  "person-simple-throw": {
+    "nodeId": "52060:10362",
+    "figma": "PersonSimpleThrow",
+    "fp": "4cf49699"
+  },
+  "books": {
+    "nodeId": "52060:10369",
+    "figma": "Books",
+    "fp": "e8f606c7"
+  },
+  "hand-heart": {
+    "nodeId": "52060:10378",
+    "figma": "HandHeart",
+    "fp": "8aee2690"
+  },
+  "person-arms-spread": {
+    "nodeId": "52060:10383",
+    "figma": "PersonArmsSpread",
+    "fp": "92ba2f65"
+  },
+  "address-book-tabs": {
+    "nodeId": "52060:10387",
+    "figma": "AddressBookTabs",
+    "fp": "c2bcacdf"
+  },
+  "chart-line": {
+    "nodeId": "52060:10395",
+    "figma": "ChartLine",
+    "fp": "6574d0a0"
+  },
+  "handshake": {
+    "nodeId": "52060:10399",
+    "figma": "Handshake",
+    "fp": "2cb19cf8"
+  },
+  "house-2": {
+    "nodeId": "52060:10407",
+    "figma": "House",
+    "fp": "31b3f44a"
+  },
+  "person-simple-circle": {
+    "nodeId": "52060:10410",
+    "figma": "PersonSimpleCircle",
+    "fp": "ca1bc354"
+  },
+  "heart-half": {
+    "nodeId": "52060:10417",
+    "figma": "HeartHalf",
+    "fp": "71bc3e62"
+  },
+  "globe-hemisphere-west": {
+    "nodeId": "52060:10424",
+    "figma": "GlobeHemisphereWest",
+    "fp": "5cbc428f"
+  },
+  "microscope": {
+    "nodeId": "52060:10430",
+    "figma": "Microscope",
+    "fp": "0f3093a0"
+  },
+  "hands-praying": {
+    "nodeId": "52060:10436",
+    "figma": "HandsPraying",
+    "fp": "ae226d9a"
+  },
+  "brain": {
+    "nodeId": "52060:10442",
+    "figma": "Brain",
+    "fp": "9da4b767"
+  },
+  "recycle": {
+    "nodeId": "52060:10450",
+    "figma": "Recycle",
+    "fp": "16707699"
+  },
+  "cpu": {
+    "nodeId": "52060:10458",
+    "figma": "Cpu",
+    "fp": "f57aa84b"
+  },
+  "scan-smiley": {
+    "nodeId": "52060:10470",
+    "figma": "ScanSmiley",
+    "fp": "ece95a99"
+  },
+  "info": {
+    "nodeId": "52299:5242",
+    "figma": "Info",
+    "fp": "a9e8cdd0"
+  },
+  "bag": {
+    "nodeId": "58195:44167",
+    "figma": "Bag",
+    "fp": "c8f7d62b"
+  },
+  "bag-items": {
+    "nodeId": "61406:198000",
+    "figma": "Bag - Items",
+    "fp": "3171063c"
+  }
+}

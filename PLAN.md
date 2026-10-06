@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 5/107 hechos · 1 en curso · 0 bloqueados
+**Progreso:** 6/107 hechos · 1 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -23,7 +23,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 ## Fase 2b — Iconos y brand assets
 
-- [ ] Set de iconos (137) → SVGR/SVGO <!-- k:icons:set -->
+- [x] Set de iconos (137) → SVGR/SVGO <!-- k:icons:set -->
 - [ ] Visa `63609:144103` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:visa -->
 - [ ] Brand Logo `58073:6883` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:brand-logo -->
 - [ ] Logo Grid `51027:8208` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-grid -->

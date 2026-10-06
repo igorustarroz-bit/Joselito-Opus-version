@@ -1,0 +1,119 @@
+{/* Generado por scripts/docs-generator.mjs desde Icon.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Icon.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Icon
+
+## Introducción
+
+Iconos del sistema (136, página Brand Assets › Icons de Figma) como componentes SVG optimizados. Heredan el color del texto (`currentColor`), así que se colorean con el token de texto o de icono del contenedor. El tamaño sigue el máster **Icon Sizer** (L 32 · M 24 · S 20 · XS 16 · XXS 12 px). Ficheros en `src/assets/icons/<nombre>.svg`; el mapa nombre ↔ nodo de Figma está en `maps/icons.json`.
+
+
+Figma: `Icon Sizer` (`49026:6521`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- SVG 32×32 (viewBox) escalado al tamaño del Icon Sizer
+- Trazo de 1,5 px (escala con el icono)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el color del texto del subtema.
+
+## Comportamiento
+
+- Sin interacción propia: lo usan Button, Button-Icon, NavButton, Tabs, Input…
+- El color se controla con `color` en el contenedor (tokens Texts/* o Strokes-Icons/*).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=L (32 px)
+
+<Canvas of={Stories.SizeL} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=M (24 px)
+
+<Canvas of={Stories.SizeM} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=S (20 px)
+
+<Canvas of={Stories.SizeS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=XS (16 px)
+
+<Canvas of={Stories.SizeXS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=XXS (12 px)
+
+<Canvas of={Stories.SizeXXS} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Galería — los 136 iconos (L)
+
+<Canvas of={Stories.Galeria} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `currentColor` | trazo/relleno del icono (hereda del contenedor) |
+| color | `--strokes-icons-accent-base` | punto de aviso de `bag-items` |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| name | Nombre del icono en kebab-case (p. ej. `arrow-right`, `magnifying-glass`). Ver la story Galería. | star | select |
+| size | Tamaño del Icon Sizer. | M | select |
+| title | Texto accesible. Si se omite, el icono es decorativo (`aria-hidden`). | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| name |  | Usar siempre un icono del set; no añadir SVG sueltos. |
+
+## Accesibilidad
+
+- Decorativo por defecto (`aria-hidden`).
+- Si el icono es la única pista (botón solo icono), pasa `title` o pon `aria-label` en el botón.
+
+## Componentes relacionados
+
+- Button
+- Button-Icon
+- NavButton
+- Tabs
+- Input

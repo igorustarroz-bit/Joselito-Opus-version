@@ -1,0 +1,127 @@
+{
+  "name": "Icon",
+  "kind": "component",
+  "title": "Icon",
+  "figma": {
+    "nodeId": "49026:6521",
+    "name": "Icon Sizer",
+    "fp": "e44630a6"
+  },
+  "description": "Iconos del sistema (136, página Brand Assets › Icons de Figma) como componentes SVG optimizados. Heredan el color del texto (`currentColor`), así que se colorean con el token de texto o de icono del contenedor. El tamaño sigue el máster **Icon Sizer** (L 32 · M 24 · S 20 · XS 16 · XXS 12 px). Ficheros en `src/assets/icons/<nombre>.svg`; el mapa nombre ↔ nodo de Figma está en `maps/icons.json`.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Size": [
+      "L",
+      "M",
+      "S",
+      "XS",
+      "XXS"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SizeL",
+      "title": "Size=L (32 px)"
+    },
+    {
+      "story": "SizeM",
+      "title": "Size=M (24 px)"
+    },
+    {
+      "story": "SizeS",
+      "title": "Size=S (20 px)"
+    },
+    {
+      "story": "SizeXS",
+      "title": "Size=XS (16 px)"
+    },
+    {
+      "story": "SizeXXS",
+      "title": "Size=XXS (12 px)"
+    },
+    {
+      "story": "Galeria",
+      "title": "Galería — los 136 iconos (L)"
+    }
+  ],
+  "props": [
+    {
+      "name": "name",
+      "figma": "Instance",
+      "description": "Nombre del icono en kebab-case (p. ej. `arrow-right`, `magnifying-glass`). Ver la story Galería.",
+      "default": "star",
+      "control": "select"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "Tamaño del Icon Sizer.",
+      "default": "M",
+      "control": "select"
+    },
+    {
+      "name": "title",
+      "description": "Texto accesible. Si se omite, el icono es decorativo (`aria-hidden`).",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "currentColor",
+        "usage": "trazo/relleno del icono (hereda del contenedor)"
+      },
+      {
+        "token": "--strokes-icons-accent-base",
+        "usage": "punto de aviso de `bag-items`"
+      }
+    ],
+    "spacing": []
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el color del texto del subtema."
+  },
+  "anatomy": [
+    "SVG 32×32 (viewBox) escalado al tamaño del Icon Sizer",
+    "Trazo de 1,5 px (escala con el icono)"
+  ],
+  "behavior": [
+    "Sin interacción propia: lo usan Button, Button-Icon, NavButton, Tabs, Input…",
+    "El color se controla con `color` en el contenedor (tokens Texts/* o Strokes-Icons/*)."
+  ],
+  "content": [
+    {
+      "field": "name",
+      "notes": "Usar siempre un icono del set; no añadir SVG sueltos."
+    }
+  ],
+  "a11y": [
+    "Decorativo por defecto (`aria-hidden`).",
+    "Si el icono es la única pista (botón solo icono), pasa `title` o pon `aria-label` en el botón."
+  ],
+  "related": [
+    "Button",
+    "Button-Icon",
+    "NavButton",
+    "Tabs",
+    "Input"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Tamaños del Icon Sizer en px literales: Figma no los liga a variables (token-audit da 10 avisos explicados).",
+    "Nombres duplicados en Figma: MapPin (49026:6648 → `map-pin`, 49864:3114 → `map-pin-2`, con remates redondeados), Quotes (`quotes`, `quotes-2`) y House (`house`, `house-2`). Avisar a diseño para renombrarlos.",
+    "`Bag - Items` trae el punto en #E23636 sin variable (= Primary/50): se pinta con `--strokes-icons-accent-base`. Avisar a diseño.",
+    "SVG exportados con `exportAsync` desde Figma y verificados por huella (136/136); colores `black` → `currentColor`; SVGO (preset-default, sin dimensiones, ids prefijados)."
+  ],
+  "codePath": "src/components/Icon/Icon.jsx"
+}

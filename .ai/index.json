@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T15:20:38.478Z",
+  "generatedAt": "2026-10-06T15:33:23.118Z",
   "output": "react-storybook",
   "items": [
     {
@@ -51,7 +51,7 @@
       "key": "foundation:aspect-ratio"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "brand",
       "kind": "icons",
       "key": "icons:set",
@@ -196,7 +196,8 @@
         "58195:44167",
         "61406:198000"
       ],
-      "fp": "70b13aa5"
+      "fp": "70b13aa5",
+      "builtFp": "70b13aa5"
     },
     {
       "status": "todo",
