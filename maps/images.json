@@ -1,0 +1,614 @@
+{
+  "99ad72551c2bb43ead01d135e290d0a20dab5c35": {
+    "file": "aspect-ratio.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "png",
+    "kb": 220,
+    "masters": [
+      "Aspect Ratio"
+    ]
+  },
+  "02820c5e5172fb35c478d827351f0d0e75c0e68f": {
+    "file": "m14-hero-sectionheader.webp",
+    "width": 660,
+    "height": 666,
+    "sourceFormat": "png",
+    "kb": 52,
+    "masters": [
+      "M14-Hero-Sectionheader"
+    ]
+  },
+  "fb29c2196a901128ef19c17cc516873670f5a7ff": {
+    "file": "m14-hero-sectionheader-2.webp",
+    "width": 1628,
+    "height": 1493,
+    "sourceFormat": "png",
+    "kb": 472,
+    "masters": [
+      "M14-Hero-Sectionheader"
+    ]
+  },
+  "de6fed704c4d8bafdd86f740c752aea3cb47f3de": {
+    "file": "m17-banners-sectionbanner.webp",
+    "width": 2203,
+    "height": 1636,
+    "sourceFormat": "png",
+    "kb": 57,
+    "masters": [
+      "M17-Banners-Sectionbanner",
+      "M18-Banners-Full Screen Slider",
+      "M16-Hero-Productdetail"
+    ]
+  },
+  "44e615aba734c2ba484afc9fb31e9b08faf8e015": {
+    "file": "m02-menu.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "png",
+    "kb": 30,
+    "masters": [
+      "M02-Menu"
+    ]
+  },
+  "d8ecc788ed606aeca65175de5f846fac5d1bb068": {
+    "file": "m23-cards-gallery.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "png",
+    "kb": 185,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  },
+  "f7803a0587a650072e6bf2c812fc25efe3f2d610": {
+    "file": "404-picture.webp",
+    "width": 567,
+    "height": 802,
+    "sourceFormat": "png",
+    "kb": 41,
+    "masters": [
+      "404_picture"
+    ]
+  },
+  "4f1f7e96fc9113e6019e852a13aba5a354e5294f": {
+    "file": "m14-hero-sectionheader-3.webp",
+    "width": 402,
+    "height": 337,
+    "sourceFormat": "png",
+    "kb": 14,
+    "masters": [
+      "M14-Hero-Sectionheader"
+    ]
+  },
+  "eebf288a348e1dd9ad144b0ec713ea1123710efb": {
+    "file": "m28-cards-accordion.webp",
+    "width": 1481,
+    "height": 1983,
+    "sourceFormat": "png",
+    "kb": 104,
+    "masters": [
+      "M28-Cards-Accordion"
+    ]
+  },
+  "728ce3bd1fafc5a2139a205d243e1babb3dff732": {
+    "file": "m16-hero-productdetail.webp",
+    "width": 1541,
+    "height": 2314,
+    "sourceFormat": "png",
+    "kb": 155,
+    "masters": [
+      "M16-Hero-Productdetail"
+    ]
+  },
+  "ffe8697778fc8deb05ecc972027730d68a184a6c": {
+    "file": "mobile-menu-accordion.webp",
+    "width": 2880,
+    "height": 1921,
+    "sourceFormat": "jpeg",
+    "kb": 208,
+    "masters": [
+      "mobile_menu_accordion",
+      "M02-Menu"
+    ]
+  },
+  "c1336c98989e9f8c951d700cb5c6fd61d3eaa14d": {
+    "file": "m17-banners-sectionbanner-2.webp",
+    "width": 800,
+    "height": 1035,
+    "sourceFormat": "jpeg",
+    "kb": 57,
+    "masters": [
+      "M17-Banners-Sectionbanner"
+    ]
+  },
+  "3a99b63f1dd6caf13e3645384fc953748fd3899d": {
+    "file": "card-product.webp",
+    "width": 1335,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 266,
+    "masters": [
+      "Card Product",
+      "Order Summary",
+      "Order by Day",
+      "M27-Cards-Categories",
+      "M24-Cards-Productcarousel",
+      "M19-Card-Grid"
+    ]
+  },
+  "ff7cd014d789405b68041b059983fcbd231c54ad": {
+    "file": "m22-navigation-direct-link.webp",
+    "width": 1000,
+    "height": 1095,
+    "sourceFormat": "png",
+    "kb": 39,
+    "masters": [
+      "M22-NavigationDirectLink"
+    ]
+  },
+  "7cdd4de80df7207cd31c84eebe7748c3382afe8a": {
+    "file": "m32-list-archive-list.webp",
+    "width": 1248,
+    "height": 1190,
+    "sourceFormat": "png",
+    "kb": 171,
+    "masters": [
+      "M32-List-ArchiveList"
+    ]
+  },
+  "5df2a892a49b6cc6795c6b1af7f833bf31e3c6a9": {
+    "file": "m30-hero-joselito-lab.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "jpeg",
+    "kb": 163,
+    "masters": [
+      "M30-Hero-Joselito-Lab"
+    ]
+  },
+  "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49": {
+    "file": "m03-navigation-footer-ekomi-1.webp",
+    "width": 619,
+    "height": 623,
+    "sourceFormat": "png",
+    "kb": 38,
+    "masters": [
+      "M03-Navigation-Footer",
+      "Customer Award Ekomi"
+    ]
+  },
+  "d2b83549275777f44f89992403207c57b9a72c0d": {
+    "file": "card-link.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "png",
+    "kb": 294,
+    "masters": [
+      "Card Link"
+    ]
+  },
+  "f18fd097a75decc4c4e3fd71baa9fbcc4361df12": {
+    "file": "block-big-numbers.webp",
+    "width": 564,
+    "height": 797,
+    "sourceFormat": "png",
+    "kb": 41,
+    "masters": [
+      "Block Big Numbers",
+      "M21-List-Numbers"
+    ]
+  },
+  "23cfef758b720c47c4ce748eb814e40af47887c1": {
+    "file": "404-picture-2.webp",
+    "width": 738,
+    "height": 1113,
+    "sourceFormat": "png",
+    "kb": 74,
+    "masters": [
+      "404_picture",
+      "M10-Errors"
+    ]
+  },
+  "b0180a15c2a7ddcd56a152230ab9d93a8f71c5a7": {
+    "file": "m08-content-imageonly.webp",
+    "width": 1066,
+    "height": 1600,
+    "sourceFormat": "jpeg",
+    "kb": 126,
+    "masters": [
+      "M08-Content-Imageonly"
+    ]
+  },
+  "0f56f1b18ae071995c32c96e7690b4cf467708e5": {
+    "file": "m18-banners-full-screen-slider-foto-2.webp",
+    "width": 1719,
+    "height": 1296,
+    "sourceFormat": "png",
+    "kb": 93,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "c22e64dacd1afe065c97f91396c65c430e8af28b": {
+    "file": "modal-lightbox.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "jpeg",
+    "kb": 179,
+    "masters": [
+      "Modal_Lightbox",
+      "M30-Hero-Joselito-Lab",
+      "M16-Hero-Productdetail"
+    ]
+  },
+  "8960fc3506cbdc7b612e8197a2ef3aea13c99d60": {
+    "file": "m23-cards-gallery-2.webp",
+    "width": 1080,
+    "height": 721,
+    "sourceFormat": "jpeg",
+    "kb": 48,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  },
+  "95fa3e687ad6979cd012883e23d2bb7e007ea2b5": {
+    "file": "m30-hero-joselito-lab-2.webp",
+    "width": 1672,
+    "height": 941,
+    "sourceFormat": "png",
+    "kb": 38,
+    "masters": [
+      "M30-Hero-Joselito-Lab"
+    ]
+  },
+  "18deae34beff79e8efc78f0db6bc573916c69f40": {
+    "file": "m02-menu-2.webp",
+    "width": 2000,
+    "height": 1334,
+    "sourceFormat": "jpeg",
+    "kb": 138,
+    "masters": [
+      "M02-Menu"
+    ]
+  },
+  "1e170e936c1661a05c6d992532b11c0e04d08f4d": {
+    "file": "m18-banners-full-screen-slider-foto-1.webp",
+    "width": 960,
+    "height": 859,
+    "sourceFormat": "jpeg",
+    "kb": 131,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "bc2b8c80c74d7128d49f51d405aa7fadf680dd05": {
+    "file": "m32-list-archive-list-2.webp",
+    "width": 324,
+    "height": 349,
+    "sourceFormat": "jpeg",
+    "kb": 13,
+    "masters": [
+      "M32-List-ArchiveList"
+    ]
+  },
+  "e526e4023728c4640f86b641b12e882159a35883": {
+    "file": "block-address.webp",
+    "width": 1200,
+    "height": 816,
+    "sourceFormat": "png",
+    "kb": 11,
+    "masters": [
+      "Block Address",
+      "Sending Details",
+      "Visa"
+    ]
+  },
+  "5a274b241348a2a7ef8754389672a81f21a15e80": {
+    "file": "m18-banners-full-screen-slider-foto-2-2.webp",
+    "width": 2731,
+    "height": 4096,
+    "sourceFormat": "jpeg",
+    "kb": 684,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "088ecb1c7ce80d5a5a333dbe3bf7c4329c3e446c": {
+    "file": "modal-lightbox-2.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "jpeg",
+    "kb": 263,
+    "masters": [
+      "Modal_Lightbox"
+    ]
+  },
+  "ff73a0f67432600baca5491747ce186e8c73c0b3": {
+    "file": "modal-lightbox-3.webp",
+    "width": 1999,
+    "height": 2000,
+    "sourceFormat": "png",
+    "kb": 184,
+    "masters": [
+      "Modal_Lightbox"
+    ]
+  },
+  "5733d70588973756366c17628ccec29bfc3fbaf2": {
+    "file": "m08-content-imageonly-2.webp",
+    "width": 1439,
+    "height": 1920,
+    "sourceFormat": "jpeg",
+    "kb": 284,
+    "masters": [
+      "M08-Content-Imageonly"
+    ]
+  },
+  "b6732f31eb7aed43b04b8b535ce53b66729c382f": {
+    "file": "card-social-media.webp",
+    "width": 2000,
+    "height": 3000,
+    "sourceFormat": "png",
+    "kb": 702,
+    "masters": [
+      "Card-Social-media",
+      "M23-Cards-Gallery"
+    ]
+  },
+  "907d631c2db01d94d6c584be655eb69a187193ea": {
+    "file": "m02-menu-3.webp",
+    "width": 2000,
+    "height": 1333,
+    "sourceFormat": "jpeg",
+    "kb": 147,
+    "masters": [
+      "M02-Menu"
+    ]
+  },
+  "0aa037659d4f9beb5ae39b5720be81123444f026": {
+    "file": "m08-content-imageonly-3.webp",
+    "width": 1439,
+    "height": 1920,
+    "sourceFormat": "jpeg",
+    "kb": 219,
+    "masters": [
+      "M08-Content-Imageonly"
+    ]
+  },
+  "901a16aef738b23df47b9245acf62088e41a8a88": {
+    "file": "m23-cards-gallery-3.webp",
+    "width": 1080,
+    "height": 1350,
+    "sourceFormat": "jpeg",
+    "kb": 147,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  },
+  "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17": {
+    "file": "order-summary.webp",
+    "width": 1342,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 301,
+    "masters": [
+      "Order Summary",
+      "Order by Day",
+      "M27-Cards-Categories",
+      "M24-Cards-Productcarousel",
+      "M19-Card-Grid"
+    ]
+  },
+  "2a646817138cf9dcfe4e347fec21b9cc01507142": {
+    "file": "m18-banners-full-screen-slider-foto-1-2.webp",
+    "width": 2731,
+    "height": 4096,
+    "sourceFormat": "jpeg",
+    "kb": 430,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "ac8f992db815cb73779ab884d5e760303f1f9bf2": {
+    "file": "m30-hero-joselito-lab-3.webp",
+    "width": 1123,
+    "height": 1685,
+    "sourceFormat": "png",
+    "kb": 117,
+    "masters": [
+      "M30-Hero-Joselito-Lab"
+    ]
+  },
+  "81f9a90bc0d9d0c6c1bde3d8d02d03591a687fd8": {
+    "file": "order-summary-2.webp",
+    "width": 1333,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 436,
+    "masters": [
+      "Order Summary",
+      "Order by Day"
+    ]
+  },
+  "a0a606d1546a7315ebae04c08328f02738f2f5c1": {
+    "file": "m18-banners-full-screen-slider-foto-1-3.webp",
+    "width": 2000,
+    "height": 3000,
+    "sourceFormat": "png",
+    "kb": 146,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "5c41c4f0a506bd63ef6d49fcf487fd567946d15d": {
+    "file": "m14-hero-sectionheader-4.webp",
+    "width": 1084,
+    "height": 1445,
+    "sourceFormat": "png",
+    "kb": 129,
+    "masters": [
+      "M14-Hero-Sectionheader"
+    ]
+  },
+  "01e64032ea7aa325d1021146d0a73afadff08b42": {
+    "file": "m16-hero-productdetail-2.webp",
+    "width": 661,
+    "height": 832,
+    "sourceFormat": "png",
+    "kb": 40,
+    "masters": [
+      "M16-Hero-Productdetail"
+    ]
+  },
+  "ac8ff6856fe1c3302c30307e3489de64943bec68": {
+    "file": "m28-cards-accordion-2.webp",
+    "width": 410,
+    "height": 565,
+    "sourceFormat": "jpeg",
+    "kb": 23,
+    "masters": [
+      "M28-Cards-Accordion"
+    ]
+  },
+  "8f66016394231a9f51a27dcb9f33d303962a67c3": {
+    "file": "order-summary-3.webp",
+    "width": 1313,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 398,
+    "masters": [
+      "Order Summary",
+      "Order by Day",
+      "M27-Cards-Categories",
+      "M24-Cards-Productcarousel",
+      "M19-Card-Grid"
+    ]
+  },
+  "a8c5d80920066337b05be9515d83738d003ae4aa": {
+    "file": "m27-cards-categories.webp",
+    "width": 1325,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 336,
+    "masters": [
+      "M27-Cards-Categories"
+    ]
+  },
+  "018ecf9ab5278dbf0486763aaf5cf9e9920a0c0d": {
+    "file": "m18-banners-full-screen-slider-foto-2-3.webp",
+    "width": 582,
+    "height": 720,
+    "sourceFormat": "jpeg",
+    "kb": 43,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "b420128cee187dd6f9ba0a8420df8ef9e0e2ee1e": {
+    "file": "m06-navigation-secondarymenu.webp",
+    "width": 406,
+    "height": 542,
+    "sourceFormat": "jpeg",
+    "kb": 15,
+    "masters": [
+      "M06-Navigation-Secondarymenu"
+    ]
+  },
+  "3d69f3541935f63e1f96f487b9b26f8d1b087bc9": {
+    "file": "m14-hero-sectionheader-5.webp",
+    "width": 460,
+    "height": 422,
+    "sourceFormat": "png",
+    "kb": 57,
+    "masters": [
+      "M14-Hero-Sectionheader"
+    ]
+  },
+  "f1abf8f15f7e920fa3002e23c5f35a69bfc41a2f": {
+    "file": "m18-banners-full-screen-slider.webp",
+    "width": 450,
+    "height": 602,
+    "sourceFormat": "png",
+    "kb": 14,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "8bd8d10b181289cc0252cca72d15bbe5cb6dd4f8": {
+    "file": "m18-banners-full-screen-slider-foto-2-4.webp",
+    "width": 1333,
+    "height": 2000,
+    "sourceFormat": "jpeg",
+    "kb": 147,
+    "masters": [
+      "M18-Banners-Full Screen Slider"
+    ]
+  },
+  "05cee667c1bb5926a1c107d62a43e9070600cc15": {
+    "file": "card-carrusel.webp",
+    "width": 1080,
+    "height": 1350,
+    "sourceFormat": "jpeg",
+    "kb": 84,
+    "masters": [
+      "Card Carrusel",
+      "M25-Cards-Links"
+    ]
+  },
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb": {
+    "file": "toast.webp",
+    "width": 745,
+    "height": 931,
+    "sourceFormat": "png",
+    "kb": 27,
+    "masters": [
+      "Toast",
+      "M02-Menu",
+      "M13-Hero-Homepagehero",
+      "M25-Cards-Links",
+      "M07-Content-Text+Image",
+      "M09-ContentStack-Text+ Image"
+    ]
+  },
+  "7032b9e7ee4c4fa3bf8122ebb622cf01c12a8129": {
+    "file": "m23-cards-gallery-4.webp",
+    "width": 2000,
+    "height": 3000,
+    "sourceFormat": "png",
+    "kb": 612,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  },
+  "25e02e26b7682b8087a6754fab118adf59e3fb21": {
+    "file": "modal-lightbox-4.webp",
+    "width": 756,
+    "height": 900,
+    "sourceFormat": "jpeg",
+    "kb": 50,
+    "masters": [
+      "Modal_Lightbox",
+      "listbox_Item_Dropdown"
+    ]
+  },
+  "34012dddb67c1b79d880c003617312a619f87d89": {
+    "file": "m23-cards-gallery-5.webp",
+    "width": 1080,
+    "height": 720,
+    "sourceFormat": "jpeg",
+    "kb": 102,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  },
+  "f5eb552e2ca5a345e7607e6b35446c6be7419347": {
+    "file": "m23-cards-gallery-6.webp",
+    "width": 1080,
+    "height": 1350,
+    "sourceFormat": "jpeg",
+    "kb": 45,
+    "masters": [
+      "M23-Cards-Gallery"
+    ]
+  }
+}

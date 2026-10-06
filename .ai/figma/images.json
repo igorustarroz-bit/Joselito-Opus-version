@@ -1,0 +1,684 @@
+[
+ {
+  "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+  "name": "Card Product",
+  "masters": [
+   "Card Product",
+   "Order Summary",
+   "Order by Day",
+   "M27-Cards-Categories",
+   "M24-Cards-Productcarousel",
+   "M19-Card-Grid"
+  ],
+  "maxW": 405,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "05cee667c1bb5926a1c107d62a43e9070600cc15",
+  "name": "Card Carrusel",
+  "masters": [
+   "Card Carrusel",
+   "M25-Cards-Links"
+  ],
+  "maxW": 733,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "d2b83549275777f44f89992403207c57b9a72c0d",
+  "name": "Card Link",
+  "masters": [
+   "Card Link"
+  ],
+  "maxW": 432,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "b6732f31eb7aed43b04b8b535ce53b66729c382f",
+  "name": "Card-Social-media",
+  "masters": [
+   "Card-Social-media",
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 405,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "e526e4023728c4640f86b641b12e882159a35883",
+  "name": "Block Address",
+  "masters": [
+   "Block Address",
+   "Sending Details",
+   "Visa"
+  ],
+  "maxW": 40,
+  "pages": [
+   "📦 Components",
+   "🏷️ Brand Assets"
+  ]
+ },
+ {
+  "hash": "f18fd097a75decc4c4e3fd71baa9fbcc4361df12",
+  "name": "Block Big Numbers",
+  "masters": [
+   "Block Big Numbers",
+   "M21-List-Numbers"
+  ],
+  "maxW": 232,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "088ecb1c7ce80d5a5a333dbe3bf7c4329c3e446c",
+  "name": "Modal_Lightbox",
+  "masters": [
+   "Modal_Lightbox"
+  ],
+  "maxW": 48,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "ff73a0f67432600baca5491747ce186e8c73c0b3",
+  "name": "Modal_Lightbox",
+  "masters": [
+   "Modal_Lightbox"
+  ],
+  "maxW": 48,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "25e02e26b7682b8087a6754fab118adf59e3fb21",
+  "name": "Modal_Lightbox",
+  "masters": [
+   "Modal_Lightbox",
+   "listbox_Item_Dropdown"
+  ],
+  "maxW": 48,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "c22e64dacd1afe065c97f91396c65c430e8af28b",
+  "name": "Modal_Lightbox",
+  "masters": [
+   "Modal_Lightbox",
+   "M30-Hero-Joselito-Lab",
+   "M16-Hero-Productdetail"
+  ],
+  "maxW": 720,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "ffe8697778fc8deb05ecc972027730d68a184a6c",
+  "name": "mobile_menu_accordion",
+  "masters": [
+   "mobile_menu_accordion",
+   "M02-Menu"
+  ],
+  "maxW": 316,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "8f66016394231a9f51a27dcb9f33d303962a67c3",
+  "name": "Order Summary",
+  "masters": [
+   "Order Summary",
+   "Order by Day",
+   "M27-Cards-Categories",
+   "M24-Cards-Productcarousel",
+   "M19-Card-Grid"
+  ],
+  "maxW": 405,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "81f9a90bc0d9d0c6c1bde3d8d02d03591a687fd8",
+  "name": "Order Summary",
+  "masters": [
+   "Order Summary",
+   "Order by Day"
+  ],
+  "maxW": 234,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17",
+  "name": "Order Summary",
+  "masters": [
+   "Order Summary",
+   "Order by Day",
+   "M27-Cards-Categories",
+   "M24-Cards-Productcarousel",
+   "M19-Card-Grid"
+  ],
+  "maxW": 405,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "f7803a0587a650072e6bf2c812fc25efe3f2d610",
+  "name": "404_picture",
+  "masters": [
+   "404_picture"
+  ],
+  "maxW": 187,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "23cfef758b720c47c4ce748eb814e40af47887c1",
+  "name": "404_picture",
+  "masters": [
+   "404_picture",
+   "M10-Errors"
+  ],
+  "maxW": 186,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
+  "name": "Toast",
+  "masters": [
+   "Toast",
+   "M02-Menu",
+   "M13-Hero-Homepagehero",
+   "M25-Cards-Links",
+   "M07-Content-Text+Image",
+   "M09-ContentStack-Text+ Image"
+  ],
+  "maxW": 720,
+  "pages": [
+   "📦 Components",
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "99ad72551c2bb43ead01d135e290d0a20dab5c35",
+  "name": "Aspect Ratio",
+  "masters": [
+   "Aspect Ratio"
+  ],
+  "maxW": 320,
+  "pages": [
+   "📦 Components"
+  ]
+ },
+ {
+  "hash": "a8c5d80920066337b05be9515d83738d003ae4aa",
+  "name": "M27-Cards-Categories",
+  "masters": [
+   "M27-Cards-Categories"
+  ],
+  "maxW": 405,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49",
+  "name": "M03-Navigation-Footer EKOMI 1",
+  "masters": [
+   "M03-Navigation-Footer",
+   "Customer Award Ekomi"
+  ],
+  "maxW": 500,
+  "pages": [
+   "🧩 Raw Modules",
+   "🏷️ Brand Assets"
+  ]
+ },
+ {
+  "hash": "44e615aba734c2ba484afc9fb31e9b08faf8e015",
+  "name": "M02-Menu",
+  "masters": [
+   "M02-Menu"
+  ],
+  "maxW": 316,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "907d631c2db01d94d6c584be655eb69a187193ea",
+  "name": "M02-Menu",
+  "masters": [
+   "M02-Menu"
+  ],
+  "maxW": 316,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "18deae34beff79e8efc78f0db6bc573916c69f40",
+  "name": "M02-Menu",
+  "masters": [
+   "M02-Menu"
+  ],
+  "maxW": 316,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "ac8f992db815cb73779ab884d5e760303f1f9bf2",
+  "name": "M30-Hero-Joselito-Lab",
+  "masters": [
+   "M30-Hero-Joselito-Lab"
+  ],
+  "maxW": 643,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "5df2a892a49b6cc6795c6b1af7f833bf31e3c6a9",
+  "name": "M30-Hero-Joselito-Lab",
+  "masters": [
+   "M30-Hero-Joselito-Lab"
+  ],
+  "maxW": 798,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "95fa3e687ad6979cd012883e23d2bb7e007ea2b5",
+  "name": "M30-Hero-Joselito-Lab",
+  "masters": [
+   "M30-Hero-Joselito-Lab"
+  ],
+  "maxW": 210,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "c1336c98989e9f8c951d700cb5c6fd61d3eaa14d",
+  "name": "M17-Banners-Sectionbanner",
+  "masters": [
+   "M17-Banners-Sectionbanner"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "de6fed704c4d8bafdd86f740c752aea3cb47f3de",
+  "name": "M17-Banners-Sectionbanner",
+  "masters": [
+   "M17-Banners-Sectionbanner",
+   "M18-Banners-Full Screen Slider",
+   "M16-Hero-Productdetail"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "3d69f3541935f63e1f96f487b9b26f8d1b087bc9",
+  "name": "M14-Hero-Sectionheader",
+  "masters": [
+   "M14-Hero-Sectionheader"
+  ],
+  "maxW": 480,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "fb29c2196a901128ef19c17cc516873670f5a7ff",
+  "name": "M14-Hero-Sectionheader",
+  "masters": [
+   "M14-Hero-Sectionheader"
+  ],
+  "maxW": 480,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "02820c5e5172fb35c478d827351f0d0e75c0e68f",
+  "name": "M14-Hero-Sectionheader",
+  "masters": [
+   "M14-Hero-Sectionheader"
+  ],
+  "maxW": 560,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "5c41c4f0a506bd63ef6d49fcf487fd567946d15d",
+  "name": "M14-Hero-Sectionheader",
+  "masters": [
+   "M14-Hero-Sectionheader"
+  ],
+  "maxW": 560,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "4f1f7e96fc9113e6019e852a13aba5a354e5294f",
+  "name": "M14-Hero-Sectionheader",
+  "masters": [
+   "M14-Hero-Sectionheader"
+  ],
+  "maxW": 11,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "bc2b8c80c74d7128d49f51d405aa7fadf680dd05",
+  "name": "M32-List-ArchiveList",
+  "masters": [
+   "M32-List-ArchiveList"
+  ],
+  "maxW": 296,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "7cdd4de80df7207cd31c84eebe7748c3382afe8a",
+  "name": "M32-List-ArchiveList",
+  "masters": [
+   "M32-List-ArchiveList"
+  ],
+  "maxW": 296,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "a0a606d1546a7315ebae04c08328f02738f2f5c1",
+  "name": "M18-Banners-Full Screen Slider Foto 1",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 390,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "8bd8d10b181289cc0252cca72d15bbe5cb6dd4f8",
+  "name": "M18-Banners-Full Screen Slider Foto 2",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 390,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "1e170e936c1661a05c6d992532b11c0e04d08f4d",
+  "name": "M18-Banners-Full Screen Slider Foto 1",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "018ecf9ab5278dbf0486763aaf5cf9e9920a0c0d",
+  "name": "M18-Banners-Full Screen Slider Foto 2",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "0f56f1b18ae071995c32c96e7690b4cf467708e5",
+  "name": "M18-Banners-Full Screen Slider Foto 2",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "2a646817138cf9dcfe4e347fec21b9cc01507142",
+  "name": "M18-Banners-Full Screen Slider Foto 1",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "5a274b241348a2a7ef8754389672a81f21a15e80",
+  "name": "M18-Banners-Full Screen Slider Foto 2",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "f1abf8f15f7e920fa3002e23c5f35a69bfc41a2f",
+  "name": "M18-Banners-Full Screen Slider",
+  "masters": [
+   "M18-Banners-Full Screen Slider"
+  ],
+  "maxW": 210,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "b0180a15c2a7ddcd56a152230ab9d93a8f71c5a7",
+  "name": "M08-Content-Imageonly",
+  "masters": [
+   "M08-Content-Imageonly"
+  ],
+  "maxW": 1440,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "0aa037659d4f9beb5ae39b5720be81123444f026",
+  "name": "M08-Content-Imageonly",
+  "masters": [
+   "M08-Content-Imageonly"
+  ],
+  "maxW": 560,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "5733d70588973756366c17628ccec29bfc3fbaf2",
+  "name": "M08-Content-Imageonly",
+  "masters": [
+   "M08-Content-Imageonly"
+  ],
+  "maxW": 560,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "901a16aef738b23df47b9245acf62088e41a8a88",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 187,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "8960fc3506cbdc7b612e8197a2ef3aea13c99d60",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 296,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "f5eb552e2ca5a345e7607e6b35446c6be7419347",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 224,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "34012dddb67c1b79d880c003617312a619f87d89",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 342,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "d8ecc788ed606aeca65175de5f846fac5d1bb068",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 624,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "7032b9e7ee4c4fa3bf8122ebb622cf01c12a8129",
+  "name": "M23-Cards-Gallery",
+  "masters": [
+   "M23-Cards-Gallery"
+  ],
+  "maxW": 405,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "ff7cd014d789405b68041b059983fcbd231c54ad",
+  "name": "M22-NavigationDirectLink",
+  "masters": [
+   "M22-NavigationDirectLink"
+  ],
+  "maxW": 187,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "b420128cee187dd6f9ba0a8420df8ef9e0e2ee1e",
+  "name": "M06-Navigation-Secondarymenu",
+  "masters": [
+   "M06-Navigation-Secondarymenu"
+  ],
+  "maxW": 70,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "728ce3bd1fafc5a2139a205d243e1babb3dff732",
+  "name": "M16-Hero-Productdetail",
+  "masters": [
+   "M16-Hero-Productdetail"
+  ],
+  "maxW": 64,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "01e64032ea7aa325d1021146d0a73afadff08b42",
+  "name": "M16-Hero-Productdetail",
+  "masters": [
+   "M16-Hero-Productdetail"
+  ],
+  "maxW": 64,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "ac8ff6856fe1c3302c30307e3489de64943bec68",
+  "name": "M28-Cards-Accordion",
+  "masters": [
+   "M28-Cards-Accordion"
+  ],
+  "maxW": 404,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ },
+ {
+  "hash": "eebf288a348e1dd9ad144b0ec713ea1123710efb",
+  "name": "M28-Cards-Accordion",
+  "masters": [
+   "M28-Cards-Accordion"
+  ],
+  "maxW": 404,
+  "pages": [
+   "🧩 Raw Modules"
+  ]
+ }
+]

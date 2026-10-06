@@ -1,4 +1,6 @@
 import AspectRatio, { SIZES } from './AspectRatio';
+// Foto del máster de Figma (imageHash 99ad7255…), de maps/images.json
+import sample from '../../assets/images/aspect-ratio.webp';
 
 // Muestra de 320 px de ancho, como en el máster de Figma (el componente ocupa el 100% de su contenedor).
 const Sample = ({ children, height }) => <div style={{ width: 320, height }}>{children}</div>;
@@ -6,7 +8,7 @@ const Sample = ({ children, height }) => <div style={{ width: 320, height }}>{ch
 export default {
   title: 'Foundations/Aspect Ratio',
   component: AspectRatio,
-  args: { size: '16:9', alt: '' },
+  args: { size: '16:9', src: sample, alt: 'Cerdo ibérico en la dehesa' },
   argTypes: { size: { control: 'select', options: SIZES } },
   render: (args) => (
     <Sample height={args.size === 'Fill' ? 115 : undefined}>

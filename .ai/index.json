@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T15:33:23.118Z",
+  "generatedAt": "2026-10-06T15:46:02.687Z",
   "output": "react-storybook",
   "items": [
     {
@@ -38,7 +38,7 @@
       "name": "Generar tokens (npm run tokens) y documentarlos: primitivas, responsive/breakpoints, subtemas, tipografía, espaciados, grid, efectos"
     },
     {
-      "status": "doing",
+      "status": "done",
       "phase": "foundations",
       "kind": "foundation",
       "name": "Aspect Ratio",
@@ -48,7 +48,8 @@
       "variants": 8,
       "deps": [],
       "images": 8,
-      "key": "foundation:aspect-ratio"
+      "key": "foundation:aspect-ratio",
+      "builtFp": "65ff3023"
     },
     {
       "status": "done",
@@ -404,7 +405,7 @@
       "key": "brand:firma-massimiliano-alajmo"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "milestone",
       "kind": "milestone",
       "key": "milestone:images",
