@@ -1,0 +1,36 @@
+{
+  "source": "hanzo-template",
+  "level": "A",
+  "fileKey": "nANHdr2nKaFD6UCXAMND4s",
+  "fileName": "Design-To-code (copia de Joselito Library sobre la plantilla Hanzo)",
+  "pages": {
+    "foundations": "1:198",
+    "brandAssets": "51027:4238",
+    "components": "5027:345",
+    "modules": "53927:2121",
+    "moduleDocs": "58778:24648",
+    "templates": ["58080:18441", "58163:92020", "58080:16503", "58080:18442", "58080:18443", "58080:26824",
+      "58732:101326", "58732:108331", "58732:108332", "58732:108333",
+      "61471:111452", "61729:14172", "61729:14660",
+      "61843:18606", "62417:197057", "61934:100324", "61850:234599", "61850:234601", "61850:234598", "61850:234600", "61850:234597",
+      "62709:287496", "62709:310685", "62709:311429", "62709:312167"],
+    "ignore": ["7001:204", "7001:205", "50144:270", "58418:49706", "64295:286086", "1:199"]
+  },
+  "collections": { "base": ["Primitives"], "responsive": "Responsive", "theme": "Semantic-Color" },
+  "naming": {
+    "module": "^M\\d+",
+    "private": "^[._]|^z_|not to dev|wip",
+    "foundation": "^(aspect ratio|icon sizer)$",
+    "deviceProp": "Device", "mobileValue": "Mobile", "desktopValue": "Desktop"
+  },
+  "excludedTokens": "Always-(Black|White)",
+  "breakpoints": { "base": "XS - 390", "designDesktop": "XL - 1440" },
+  "subthemes": ["Light - White", "Light - Grey", "Dark - Red - Primary", "Dark - Black - Neutral"],
+  "styles": { "text": 29, "effect": 11, "grid": ["Main-Grid", "Layout/XXXL (1920)", "Layout/XXL (1620)", "Layout/XL (1440)", "Layout/LG (1024)", "Layout/M (768)", "Layout/SM (480)", "Layout/XS (390)"] },
+  "publishedLibrary": false,
+  "risks": [
+    "Los estilos de texto devuelven familias Georgia e Inter (no Euclid Circular B / SangBleu como el Joselito original): verificar en el volcado de variables qué tipografías usa esta copia antes de generar webfonts",
+    "Semantic-Color tiene 4 modos (sin Light-Yellow del Joselito original)",
+    "25 páginas de templates (Sprints 1-4): inventariarlas cuesta 1 llamada MCP por página"
+  ]
+}

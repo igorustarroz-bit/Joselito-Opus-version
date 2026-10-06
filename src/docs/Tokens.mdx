@@ -1,0 +1,53 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+import { ColorTokens, TypographyTokens, SizeTokens, Breakpoints, EffectTokens } from './TokenDocs';
+
+<Meta title="Tokens/Overview" />
+
+# Tokens
+
+Generados desde las variables y estilos de Figma con `npm run tokens`. No se editan a mano.
+Usa el selector **Subtema** y el de **viewport** para ver cómo cambian.
+
+## Colores semánticos (por subtema)
+
+<Unstyled>
+<ColorTokens role="theme" />
+</Unstyled>
+
+## Primitivas de color
+
+Solo de referencia: en componentes se usan **siempre** los semánticos.
+
+<Unstyled>
+<ColorTokens role="base" />
+</Unstyled>
+
+## Tipografía
+
+<Unstyled>
+<TypographyTokens />
+</Unstyled>
+
+## Breakpoints y grid
+
+<Unstyled>
+<Breakpoints />
+</Unstyled>
+
+## Espaciados
+
+<Unstyled>
+<SizeTokens match={/spac|gap|wrapper|gutter|padding|margin/} />
+</Unstyled>
+
+## Radios
+
+<Unstyled>
+<SizeTokens match={/corner|radius/} kind="radius" />
+</Unstyled>
+
+## Efectos
+
+<Unstyled>
+<EffectTokens />
+</Unstyled>

@@ -1,223 +1,135 @@
-# PLAN.md — Joselito Design System
+# PLAN.md — Joselito
 
-Estado del plan de trabajo. Marca cada elemento: `[ ]` pendiente · `[~]` en progreso · `[x]` completado.
-Orden obligatorio: **Tokens → Componentes → Módulos → Page Templates**.
-Las imágenes raster se descargan **justo después de los iconos** (v2 §14) → ver **Fase 2.5**.
+Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado · `[-]` fuera de alcance.
+Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
+Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-Cada elemento, al programarse, se lee de Figma con `get_design_context`, se traduce a tokens/estructura/responsive sin cambiar el diseño, se documenta en Storybook y se verifica el render contra la captura.
+**Progreso:** 1/107 hechos · 0 en curso · 0 bloqueados
 
----
+## Fase 0 — Setup
 
-## Fase 0 — Setup (arranque)
+- [x] Configuración del proyecto (hanzo.config.json, permisos, git, MCP, plan Figma) <!-- k:setup:config -->
+- [ ] Scaffold del perfil de salida (react-storybook) + despliegue <!-- k:setup:scaffold -->
+- [ ] Tipografías: Google Fonts si existen, fonts-raw/ si no (npm run fonts) <!-- k:setup:webfonts -->
 
-- [x] Vincular carpeta local + verificar `github-token.txt` y `fonts-raw/`
-- [x] Scaffold: React 19 + Vite 8 + Tailwind v4 + GSAP + Storybook 10 (verificado con build)
-- [x] Validar acceso a Figma MCP (librería no publicada → `use_figma`)
-- [x] Generar `CONTEXT.md` y `PLAN.md`
-- [x] Convertir fuentes `fonts-raw/` → `.woff2` en `public/fonts/` + `@font-face` (Euclid Circular B, SangBleu Empire) — otros cortes SangBleu (Kingdom/Republic/Sunrise/Versailles) pendientes de confirmar uso
-- [x] Commit + push inicial a GitHub
-- [x] Workflow de despliegue de Storybook a GitHub Pages (`.github/workflows/deploy.yml`)
-- [x] **Activar GitHub Pages en Settings → Pages → Source: GitHub Actions** (hecho por el usuario)
+## Fase 1 — Tokens (antes que cualquier componente)
 
-## Fase 1 — Tokens / Foundations (PRIORITARIO, antes de cualquier componente)
+- [ ] Volcado de variables y estilos (.ai/figma/variables.json) <!-- k:tokens:dump -->
+- [ ] Generar tokens (npm run tokens) y documentarlos: primitivas, responsive/breakpoints, subtemas, tipografía, espaciados, grid, efectos <!-- k:tokens:generate -->
 
-- [x] **Primitives** (134 vars, modo `Joselito`) — paleta base y escalas → `src/tokens/primitives.css` (custom properties) + doc Storybook `Tokens/Primitives`
-- [x] **Responsive** (132 vars, 7 breakpoints: XS-390, SM-480, M-768, LG-1024, XL-1440, XXL-1620, XXXL-1920) → breakpoints Tailwind + `src/tokens/responsive.css` + viewports Storybook + doc `Tokens/Responsive`. (Tipografías SZ/LH por breakpoint → paso Tipografía; tamaños de columna 1–12 → paso Grid)
-- [x] **Semantic-Color** base (72 roles bg/text/stroke × 5 modos → `data-theme`) en `src/tokens/semantic-color.css` + selector de subtema en Storybook + doc. (Grupos Button/Forms → con sus componentes)
-- [x] **Tipografía** — 29 estilos responsive (`.ts-*`) en `src/tokens/typography.css` + doc
-- [x] **Espaciados** — escalas fija (`fx`) y responsive (`sp`) como utilidades Tailwind + doc
-- [x] **Grid 12 columnas** — `.wrapper` + `.grid-12` con gutter/wrapper responsive + doc
-- [x] **Effect styles** — Elevation On-Light/On-Dark + Blur en `src/tokens/effects.css` + doc
-- [x] **Aspect Ratio** (foundation, 7 ratios) — componente React + story + doc
+## Fase 2 — Foundations
 
-Docs por token (Storybook): Intro · Demo · Tokens.
+- [ ] Aspect Ratio `50942:37236` — 8 variantes · 8 img <!-- k:foundation:aspect-ratio -->
 
-## Fase 2 — Brand Assets
+## Fase 2b — Iconos y brand assets
 
-- [x] **Icons** — 132 iconos SVGR (`currentColor`) en `src/assets/icons` + componente `Icon` con carga automática + galería
-- [x] **Icon Sizer** (XXS 12 · XS 16 · S 20 · M 24 · L 32) — integrado en el componente `Icon` (prop `size`)
-- [x] **Brand Logo** (horizontal + isotipo, `currentColor`) — componente `BrandLogo` + doc
-- [~] **Logo Grid** — es diagrama de construcción (guías), no componente de uso; documentado como referencia
-- [ ] ⚠️ Logos de terceros (UFV, Riu, Accenture, BBVA...) — **confirmar alcance** antes de programar (probablemente fuera de alcance)
+- [ ] Set de iconos (137) → SVGR/SVGO <!-- k:icons:set -->
+- [ ] Visa `63609:144103` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:visa -->
+- [ ] Brand Logo `58073:6883` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:brand-logo -->
+- [ ] Logo Grid `51027:8208` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-grid -->
+- [ ] Logo Riu `52007:6841` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-riu -->
+- [ ] Logo UFV `49722:3620` — 4 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-ufv -->
+- [ ] PEFC CERTIFICATE `58786:48814` — 3 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:pefc-certificate -->
+- [ ] Customer Award Ekomi `58786:48912` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:customer-award-ekomi -->
+- [ ] Logo_junta_de_castilla_y_leon `58799:2555` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-junta-de-castilla-y-leon -->
+- [ ] firma_ferran_adria `62303:284950` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-ferran-adria -->
+- [ ] firma_nou_manolín `62348:109683` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-nou-manolin -->
+- [ ] firma_eneko_atxa `62348:110429` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-eneko-atxa -->
+- [ ] firma_bittor_arginzoniz `62348:110843` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-bittor-arginzoniz -->
+- [ ] firma_yannick_alleno `62348:111288` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-yannick-alleno -->
+- [ ] firma_joaquim_wissler `62348:111452` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-joaquim-wissler -->
+- [ ] firma_seiji_yamamoto `62348:111667` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-seiji-yamamoto -->
+- [ ] firma_jonnie_boer `62348:111829` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-jonnie-boer -->
+- [ ] firma_massimiliano_alajmo `62348:111888` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-massimiliano-alajmo -->
 
-## Fase 2.5 — Hito de descarga de imágenes (raster) · tras iconos — ✅ COMPLETADO
+## Fase 2.5 — HITO de imágenes (justo después de los iconos; no se salta)
 
-> **Regla (Instrucciones v2 §14):** en cuanto están los **iconos**, se descargan de golpe
-> todas las imágenes **raster** del fichero, se optimizan a WebP y se dejan en
-> `src/assets/images`. Cada módulo cablea luego su imagen real al construirse (sin fase de
-> placeholder ni retrofit final). **No aplica a SVG** (esos van por el proceso estándar, §9 /
-> `docs/assets-workflow.md`). No se salta ni se pospone en silencio.
+- [ ] HITO: descarga de imágenes raster → WebP + maps/images.json (npm run images) — 242 img <!-- k:milestone:images -->
 
-Resuelto (2026-07-23). Todos los másters SÍ traían imágenes raster reales (incluidos Menu y
-SectionBanner, al contrario de lo anotado en sesiones previas). Se aplicaron **21 imágenes
-únicas** (3.4 MB en WebP) sobre los 15 módulos con imagen. Vía usada: **Claude in Chrome**
-(`download_assets` da las URLs → navegar a cada URL fuerza la descarga por `Content-Disposition:
-attachment` a `~/Downloads` → WebP `sharp` q82 → `src/assets/images/`). El SHA-1 de cada archivo
-coincide con el `imageHash` de Figma (verificado, 0 discrepancias). `build-storybook` OK.
+## Fase 3 — Componentes (ordenados: primero los que son base de otros)
 
-⚠️ **Nota de orden:** en este proyecto el hito se ejecutó *a posteriori* (tras la Fase 4, flujo
-v1) porque los módulos ya estaban construidos con placeholder. Desde **v2** el hito va **aquí**,
-justo tras los iconos, y los módulos ya nacen con su imagen real.
+- [ ] Button-Action-Link `49038:9486` — 12 variantes <!-- k:component:button-action-link -->
+- [ ] Button-Icon `49038:9364` — 65 variantes <!-- k:component:button-icon -->
+- [ ] Button `49038:9189` — 60 variantes <!-- k:component:button -->
+- [ ] Tag `49723:4763` — 9 variantes <!-- k:component:tag -->
+- [ ] Title `61387:120074` — 2 variantes <!-- k:component:title -->
+- [ ] NavButton `59214:48916` — 5 variantes <!-- k:component:nav-button -->
+- [ ] Checkboxes-Radios `49722:19804` — 20 variantes · autolayout 11/20 → análisis de geometría <!-- k:component:checkboxes-radios -->
+- [ ] InputQuantity `63264:120792` <!-- k:component:input-quantity -->
+- [ ] Card Product `61276:118038` — 4 variantes · 4 img · usa: Aspect Ratio, Button, Button-Action-Link, InputQuantity, Tag <!-- k:component:card-product -->
+- [ ] listbox_Item_Dropdown `49650:11827` — 7 variantes · 7 img · usa: Aspect Ratio, Checkboxes-Radios <!-- k:component:listbox-item-dropdown -->
+- [ ] Listbox `49650:12399` — usa: listbox_Item_Dropdown <!-- k:component:listbox -->
+- [ ] Input `49118:2300` — 28 variantes · usa: Listbox, listbox_Item_Dropdown <!-- k:component:input -->
+- [ ] menu-item-list `59289:58053` — 2 variantes <!-- k:component:menu-item-list -->
+- [ ] RowButtons `63609:144479` — 2 variantes · usa: Button <!-- k:component:row-buttons -->
+- [ ] Checkbox-Label `43246:12097` — 12 variantes · usa: Checkboxes-Radios <!-- k:component:checkbox-label -->
+- [ ] Stepper_for_toast `59964:130709` — 3 variantes · autolayout 0/3 → análisis de geometría <!-- k:component:stepper-for-toast -->
+- [ ] Divider `63480:2560` — autolayout 0/1 → análisis de geometría <!-- k:component:divider -->
+- [ ] Go_Back `63191:162092` — 2 variantes · usa: Button-Icon <!-- k:component:go-back -->
+- [ ] mobile_menu_accordion `58512:82775` — 3 variantes · 2 img · usa: Aspect Ratio, Button-Action-Link, menu-item-list <!-- k:component:mobile-menu-accordion -->
+- [ ] 404_picture `63681:482695` — 6 variantes · 6 img · usa: Aspect Ratio · autolayout 0/6 → análisis de geometría <!-- k:component:404-picture -->
+- [ ] accordion `57943:46054` — 2 variantes <!-- k:component:accordion -->
+- [ ] Add_to_list `63192:173727` — 2 variantes · usa: Button-Action-Link <!-- k:component:add-to-list -->
+- [ ] Alert `58786:10976` — 4 variantes · usa: Button-Action-Link <!-- k:component:alert -->
+- [ ] Block Address `63606:143410` — 1 img · usa: Visa <!-- k:component:block-address -->
+- [ ] Block Archive List `59966:84496` — 5 variantes <!-- k:component:block-archive-list -->
+- [ ] Block best price `59966:4909` <!-- k:component:block-best-price -->
+- [ ] Block Big Numbers `59966:84230` — 1 img · usa: Aspect Ratio <!-- k:component:block-big-numbers -->
+- [ ] Card Carrusel `58182:24262` — 2 variantes · 2 img · usa: Aspect Ratio, Button, Button-Action-Link <!-- k:component:card-carrusel -->
+- [ ] Card-Social-media `63911:364852` — 2 variantes · 2 img · usa: Aspect Ratio <!-- k:component:card-social-media -->
+- [ ] Checkbox-List `57947:46573` — 2 variantes · usa: Checkbox-Label, Checkboxes-Radios <!-- k:component:checkbox-list -->
+- [ ] Form `57947:46433` — usa: Button, Button-Action-Link, Checkbox-Label, Checkbox-List, Checkboxes-Radios, Input… <!-- k:component:form -->
+- [ ] InputAndButton `58786:21956` — 14 variantes · usa: Button-Icon <!-- k:component:input-and-button -->
+- [ ] subnavigation-item `59289:60784` — 2 variantes <!-- k:component:subnavigation-item -->
+- [ ] tab_primary `57943:37527` — 5 variantes <!-- k:component:tab-primary -->
+- [ ] tab_secondary `57943:45626` — 5 variantes <!-- k:component:tab-secondary -->
+- [ ] Toast `58182:23548` — 1 img · usa: Aspect Ratio, Button-Action-Link, Stepper_for_toast <!-- k:component:toast -->
+- [ ] Accordion `57943:46123` — usa: accordion <!-- k:component:accordion -->
+- [ ] Block Row Address `63609:148071` — usa: Button-Icon <!-- k:component:block-row-address -->
+- [ ] Card Link `58182:23781` — 1 img · usa: Aspect Ratio <!-- k:component:card-link -->
+- [ ] Input-Code `63264:50565` — 7 variantes <!-- k:component:input-code -->
+- [ ] Input-Phone `63309:351579` — 14 variantes <!-- k:component:input-phone -->
+- [ ] Modal_Lightbox `60581:102087` — 10 variantes · 11 img · usa: Alert, Aspect Ratio, Button, Button-Icon, Checkboxes-Radios, RowButtons… <!-- k:component:modal-lightbox -->
+- [ ] Order by Day `63559:58027` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Card Product, Tag <!-- k:component:order-by-day -->
+- [ ] Order Summary `63609:146051` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Card Product, Tag <!-- k:component:order-summary -->
+- [ ] Overlay `58786:13661` — autolayout 0/1 → análisis de geometría <!-- k:component:overlay -->
+- [ ] Placeholder-Text `57961:792` <!-- k:component:placeholder-text -->
+- [ ] row_2_input `57953:9134` — usa: Input <!-- k:component:row-2-input -->
+- [ ] row_3_input `57953:9192` — usa: Input <!-- k:component:row-3-input -->
+- [ ] Sending Details `63609:144166` — 2 variantes · 2 img · usa: Block Address, Visa <!-- k:component:sending-details -->
+- [ ] Tabs `57943:45783` — 2 variantes · usa: tab_primary, tab_secondary <!-- k:component:tabs -->
 
-Notas de mecánica (para futuras sesiones):
-- El sandbox NO tiene red a figma.com (curl→HTTP 000); la descarga real pasa por el navegador.
-- Chrome bloquea descargas por `blob`+`click()` sin gesto de usuario; **navegar** a la URL del
-  asset sí fuerza la descarga (attachment). Se usó `browser_batch` con varias `navigate`.
-- ⚠️ Bug a evitar: `new URL('../ruta', import.meta.url).pathname` deja `%20` literal cuando la
-  carpeta tiene espacios → escribe en ruta espuria. Resolver sin `.pathname` o con `decodeURIComponent`.
-- Con permiso de borrado concedido (Cowork `allow_cowork_file_delete`, pedido al arrancar),
-  `build-storybook` normal funciona en la carpeta; no hace falta compilar a un directorio externo.
+## Fase 4 — Módulos (100% ancho, grid de columnas del sistema, por breakpoint)
 
-- [x] **1. Inventario** — másters revisados con `use_figma`; 21 imágenes únicas mapeadas por `imageHash`/slot.
-- [x] **2. Descargar** los bytes vía Claude in Chrome (navegación a las URLs de `download_assets`). Solo raster.
-- [x] **3. Optimizar** (raster→WebP q82 con `sharp`) y colocar en `src/assets/images/`.
-- [x] **4. Cablear** cada imagen en su módulo (default de prop / `DEFAULT_ITEMS`, vía `AspectRatio`) + `build-storybook` (0 errores).
-- [x] **5. Publicar** (push a main) y cerrar el hito en PLAN.md/CONTEXT.md.
-
-Módulos cableados: SectionBanner, Hero (+badge del Toast), SectionHero, SectionHeader (3:4/1:1),
-ContentImageOnly (2), ContentTextImage, Timeline (H/V), Menu (cards + featured), CardsShowcase,
-CardsCategories (5), CardsGallery (3:4/1:1), CardsProductCarousel, CardsLinks, CardsAccordion (3),
-Toast. (La ilustración del footer ya estaba aplicada de antes.)
-
-## Fase 3 — Componentes
-
-Primero los `z_fragment_*` (base de otros), luego los `UI##`.
-
-Bases / fragments:
-- [x] z_fragment_tab_primary · z_fragment_tab_secondary → resueltos dentro de UI05-Tabs
-- [x] z_fragment_listbox_Item_Dropdown → resuelto dentro de UI07-Listbox
-- [x] z_fragment_row_2_input · z_fragment_row_3_input → resueltos dentro de UI11-Form
-- [x] z_fragment_accordion → resuelto dentro de UI13-Accordion
-- [ ] z_fragment-Table List Item · z_fragment_list_characteristic · z_fragment_list_BigNumbers · z_fragment-list-archive → piezas de los módulos List (se construyen con ellos)
-
-Componentes UI:
-- [x] UI01-Nav-Button — componente + estados + colores por subtema + doc
-- [x] UI02-Button (Primary/Secondary/Terciary · XS-L · estados) — componente + CSS estados + colores 5 subtemas + doc
-- [x] UI03-Button-Icon — componente cuadrado (3 tipos · XS-XL · estados) + doc
-- [x] UI04-Button-Action-Link — componente (enlace subrayado, estados) + doc
-- [x] UI05-Tabs — barra de pestañas (Primary/Secondary, estados) + doc
-- [x] UI06-Input — campo (Big/Small, estados default/filled/error/validated/disabled) + doc
-- [x] UI07-Listbox — lista de opciones desplegable (núcleo reutilizable) + doc
-- [x] UI08-Checkbox-List — lista de casillas (vertical/horizontal) + doc
-- [x] UI09-Checkbox-Label — casilla con etiqueta (m/s, indeterminado) + doc
-- [x] UI10-Checkboxes-Radios — Checkbox + Radio (estados hover/disabled/selected) + doc
-- [x] UI11-Form — contenedor de formulario (cabecera + campos + acciones) + doc
-- [x] UI12-Tag — componente (transaction/new/aseptic · L/XS) + doc
-- [x] UI13-Accordion — ítems desplegables (toggle Plus/Minus) + doc
-- [x] UI14-Placeholder-Text — componente de texto/slot base + doc
-- [x] Card Product — ficha de producto (compone AspectRatio, Button, Icon, ActionLink) + doc
-- [x] Card Link — tarjeta-enlace (imagen + título/subtítulo superpuestos) + doc
-- [x] Card Carrusel — tarjeta de carrusel (horizontal/vertical) + doc
-- [x] Title — encabezado de sección (título + enlace opcional) + doc
-
-Docs por componente (Storybook): Intro · Demo · Anatomía · Subtemas · Comportamiento · Variantes y tamaños · Tokens · Propiedades · Accesibilidad · Componentes relacionados.
-
-## Fase 4 — Módulos (contenedores 100% ancho, grid 12 col, versiones Desktop/Mobile)
-
-- [x] Navigation (header) — módulo header (enlaces + logo + acciones, light/dark, responsive) + doc
-- [x] Navigation / Secondary menu — módulo fila de categorías (responsive, activo subrayado) + doc
-- [x] Navigation / Breadcrumb — módulo enlace "volver" (responsive) + doc
-- [x] Navigation / PreviousNext — módulo anterior/siguiente (responsive) + doc
-- [x] Navigation / Footer — módulo footer **rehecho pixel-perfect** desde máster `58163:33397` (4 columnas + doble grupo, aside Empresa/Contacto/RRSS, newsletter, barra legal; acordeón en mobile) + doc. Ilustración real integrada (`src/assets/illustrations/footer-illustration.webp`, extraída del nodo `58182:4402`). Aviso: el máster trae la nota "Sing up for our newsletter" (typo de origen, replicado)
-- [x] Menu (mega-menú) — módulo overlay **pixel-perfect** desde máster `58182:4350` (5 variantes: Desktop/Product = lista + imagen + destacado · Desktop/About = 4 tarjetas · Mobile Default/Product/About = cabecera con cierre + acordeón CaretDown↔CaretUp + pie CUENTA/CESTA/idioma). Reutiliza Icon, BrandLogo, AspectRatio, ActionLink. Nota: réplica de la inconsistencia del máster (ítem resaltado "Paletas Gran Reserva" vs destacado "Regalos…"); imágenes como placeholders Neutral-1 (el máster no trae assets). Pendiente: verificación visual del usuario en Storybook local (sin navegador headless en el entorno) + doc
-- [x] Hero / Homepage hero — imagen a sangre + `Navigation` (subtema oscuro) + copy central (eyebrow + título SangBleu + `Button` primario) + `Toast` flotante; mobile con degradado y puntos de paginación. Máster `58182:4353`. Pendiente verificación visual en Pages + doc
-- [x] Hero / Section hero — máster **`58508:35830`** (el id del plan estaba obsoleto). 6 variantes (Desktop/Mobile × Full bleed / Margins / Small image): eyebrow Body/03 + título SangBleu Title/04 + imagen (16:9 desktop → 1:1 mobile en full-bleed/margins; 3:4 pequeña en small-image, reutiliza AspectRatio). Verificado en Pages (estilos computados). Notas: gaps/paddings 80/54px hardcodeados en máster (no ligados a variable); título usa token `ts-title-4` (34px en XS vs 36px del máster)
-- [x] Hero / Section header — máster **`58508:6679`** (id del plan 58163:39446 obsoleto). Módulo oscuro (`data-theme="dark-black-neutral"`), 4 variantes Desktop/Mobile × Big/Small: dos paneles (texto | imagen) lado a lado en desktop / apilados en mobile. Reutiliza ButtonIcon (atrás, secondary), Tag (aseptic) y AspectRatio (3:4 Big / 1:1 Small). `build-storybook` OK + push. Notas: gaps/paddings y ancho de imagen desktop (515px) hardcodeados en máster; botón atrás a 48px también en mobile (máster: 40px). Pendiente revisión visual del humano en Pages
-- [x] Content / Intro text — módulo intro centrado (eyebrow + título + cuerpo + cajas + botón) + doc
-- [x] Content / Title — etiqueta + título (SangBleu) + descripción + enlace (`ActionLink`); desktop fila título|aside, mobile apilado. Máster `58163:40029`. Nota: se omitió un botón con tokens ajenos (azul #0045ff). Pendiente verificación visual en Pages + doc
-- [x] Content / Text only — módulo texto (columnas / split, responsive) + doc
-- [x] Content / Image only — 1 imagen a sangre (fondo acento, botón play opcional) o 2 imágenes contiguas; `AspectRatio`. Máster `58163:40001`. Pendiente verificación visual en Pages + doc
-- [x] Content / Text + Image — variantes half/left/right (etiqueta + título SangBleu + cuerpo + `Button` secondary + nota al pie en half); responsive apilado. Máster `58363:34365`. Pendiente verificación visual en Pages + doc
-- [x] List — máster **`58468:60752`** (id del plan 58418:52924 obsoleto). Título centrado + ítems (título/descripción/número itálico); columnas con divisores en desktop, apilado con líneas en mobile. Espaciados con tokens `--sp-*`. `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [x] List / Timeline — máster `58363:35241` (6 variantes Desktop/Mobile × imagen Horizontal/Vertical/None). Banda art-directed: años gigantes de fondo (activo destacado), foto rotada y tarjeta blanca con nav (ButtonIcon). Fondo rojo (con imagen) u oscuro (None) por subtema. `build-storybook` OK + push. Aproximado en offsets/rotación decorativos — pendiente ajuste fino tras revisión en Pages
-- [x] List / Numbers — máster `58447:7252` (Desktop/Mobile). Título + filas cifra grande (SangBleu Title/03) | descripción (Body/05), líneas divisorias; desktop en fila, mobile apilado. Fondo gris claro (light-grey). `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [x] List / Archive table — máster `58418:53062` (Desktop/Mobile · Default/Hover). Título + entradas fecha | titular (SangBleu 24px), líneas divisorias; desktop fila, mobile apilado; filas enlazables con realce hover. `build-storybook` OK + push. Miniatura del estado Hover pendiente. Pendiente revisión visual en Pages
-- [x] Cards / Links — máster `58163:40143` (Desktop/Mobile). Cabecera (Title/04) + fila de CardLink (imagen 3:4 con overlay). Reutiliza Card Link. `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [x] Cards / Gallery — máster `58163:40311` (Desktop/Mobile · default/expanded). Cabecera + galería de CardProduct con ratio alterno 3:4/1:1 (escalonado); desktop slider horizontal, mobile 2 columnas. Reutiliza Card Product. `build-storybook` OK + push. Pendiente revisión visual en Pages
-- [x] Cards / Product carousel — máster `58163:83548` (Desktop/Mobile). Cabecera (antetítulo + "Explorar todos") + carrusel de CardProduct con badge/chips/estrellas/CTA; desktop 3 centradas, mobile scroll horizontal. Reutiliza Card Product. **Auditado**: corregido spacing mobile (gap 32, padding 40/24/64, tarjeta 281, antetítulo Body/03). `build-storybook` OK + push
-- [x] Cards / Showcase — máster `58182:4396` (Desktop Many/One · Mobile Many). Cabecera + carrusel de CardCarrusel (imagen 3:2 + título/desc/tags/CTA); type many (slides asomando) / one (única). Reutiliza Card Carrusel. **Auditado**: corregido mobile (tarjetas VERTICALES de 249px, padding 40/24/64) — antes salían horizontales a todo el ancho. `build-storybook` OK + push
-- [x] Cards / Categories — máster `58182:4401` (Desktop/Mobile × RRSS/Instagram). Feed social. **Auditado y rehecho**: prop `variant` (rrss/instagram). RRSS desktop = iconos en cabecera + handles; RRSS mobile = iconos abajo centrados + sin handles; Instagram = sin iconos + pie "SÍGUENOS/@cuenta". Antes solo variaba el set de iconos (incorrecto). Reutiliza Icon + AspectRatio. `build-storybook` OK + push
-- [x] Cards / Big Titles — máster `58182:24099` (nodo 58182:24098) → módulo `CardsBigTitles`. En Figma este nodo se **renombró** de "Cards / Accordion" a "Cards / Big Titles" (2026-07-27); el módulo se renombró en consecuencia (antes `CardsAccordion`). NO es un acordeón sino una **banda tipográfica** (palabras gigantes SangBleu rojo/blanco + fotos al fondo, subtema oscuro); construido fiel al nodo. El acordeón real es "Cards / Accordion" (`58512:9289`) → módulo `CardsAccordion`. `build-storybook` OK + push. Aproximado en offsets de fotos. Pendiente revisión en Pages
-- [x] Banners / Section banner — máster `58182:4380` (Desktop `58182:4378` / Mobile `58182:4379`). Cabecera (`Title`) + banner: imagen a sangre con velo `rgba(0,0,0,0.2)` y tarjeta blanca superpuesta (título SangBleu `Title/02` + cuerpo `Body/03` + botón terciary). Desktop: banner 720px, tarjeta 372px flotante a la derecha (`space-between`); mobile: apilado (imagen 4:3 → texto + botón, botón S). Reutiliza `Title`, `Button`. `build-storybook` OK + push. Notas: alto/ancho/paddings del banner y velo literales del máster; márgenes vía `--grid-wrapper`; imagen como placeholder. Pendiente revisión visual en Pages
-- [x] Form (módulo) — máster `58195:43756` (Desktop `58195:43767` / Mobile `58195:43777`, layout text-left). Columna de texto (antetítulo `Body/06` + título SangBleu `Title/04` + cuerpo `Body/05`) + componente `Form` (UI11): cabecera + fila de 2 inputs + 2 inputs + casilla + acciones CANCEL/ACCEPT. Reutiliza `Form`, `Input`, `CheckboxList`. Desktop 2 columnas (≥1024px, texto flexible máx 648 | form 405, space-between); mobile apilado. `build-storybook` OK + push. Notas: omitido el botón azul `#0045ff` (tipografía ajena Neue Haas, fuera de tokens); párrafo mobile unificado a `Body/05` (el máster usaba fuente ajena); fila de acciones alineada a la izquierda (override del default del componente Form); paddings verticales literales del máster. Pendiente revisión visual en Pages
-- [x] Toast — módulo aviso compacto (imagen + título/descripción) + doc
-
-## Fase 4.5 — (movido) → ver Fase 2.5
-
-El hito de imágenes pasó a ejecutarse **tras los iconos** (Instrucciones v2 §14). Su detalle,
-checklist y notas de mecánica están ahora en **Fase 2.5**. ✅ Completado (2026-07-23).
-
-## Fase 5 — Page Templates (SPRINT 1)
-
-- [x] **Home** — máster `58196:24000` (desktop) / `58153:29609` (mobile). Composición de 11 franjas en `src/templates/Home` (Home.jsx + story + doc MDX). Instancias de módulo: Hero, IntroText, SectionBanner ×2, CardsAccordion (oscuro), CardsShowcase, CardsCategories, Footer. ⚠️ 3 franjas a medida del máster (no son módulo guardado) mapeadas al módulo más cercano por decisión del equipo (2026-07-27): Title+3 fichas→`CardsGallery`; banda "Reserva·Vintage·Millésime"→`CardsAccordion` (dark-red-primary); carrusel de expertos→`CardsProductCarousel` (envuelto en dark-black-neutral). Aproximaciones anotadas, pendientes de revisión visual en Pages. `build-storybook` OK + push.
-- [x] **Origen: Nuestra Historia, La Dehesa** — página Figma `58080:16503` (2 templates).
-  - **Nuestra Historia** — máster `58367:40833` (desktop) / `58367:41051` (mobile). `src/templates/Origen/NuestraHistoria`. 8 franjas, **todas instancias de módulos** (Navigation, SectionHero full-bleed, IntroText, ContentTextImage ×2 con `type="right"`/`type="left"`, Timeline `dark-red-primary`, SectionBanner, Footer). Sin secciones a medida.
-  - **La Dehesa** — máster `58443:45016` (desktop) / `58443:45028` (mobile). `src/templates/Origen/LaDehesa`. 9 franjas: Navigation, SectionHero `small-image`, ContentImageOnly ×3 (uno con vídeo), IntroText ×2, Footer. ⚠️ 2 franjas a medida mapeadas al módulo más cercano: imagen grande+card→`ContentImageOnly count={2}`; feed social→`CardsCategories` instagram. Aproximaciones anotadas.
-  - `build-storybook` OK + push. Pendiente revisión visual en Pages.
-- [x] **Excelencia: Añadas, Curación, Manual de Corte** — página Figma `58080:18442` (🟠 WIP; por indicación del equipo se toma siempre el frame **más a la izquierda** de cada grupo). 3 templates en `src/templates/Excelencia`.
-  - **Añadas** — máster `58590:82913`. 9 franjas: Navigation, SectionHero full-bleed, IntroText, CardsAccordion (⚠️ aprox. del acordeón de producto real), ContentTextImage `right`, ContentTextImage `left` en `dark-red-primary`, Timeline `image="none"` oscuro, CardsShowcase, Footer.
-  - **Curación** — máster `58479:64263`. 6 franjas: Navigation, SectionHero full-bleed, IntroText, **ContentStack** (nuevo módulo), CardsShowcase, Footer.
-  - **Manual de Corte** — máster `58479:69902`. 8 franjas: Navigation, SectionHero small-image, ⚠️ fila nav→SecondaryMenu, IntroText, ContentStack `defaultActive=1`, PreviousNext, CardsShowcase, Footer.
-  - 🆕 **Módulo nuevo `ContentStack` (Content / Stack Text+Image)** construido para esta sección (máster set `58468:60216`): acordeón de pasos (fila abierta texto+imagen 3:4 + colapsadas número/título). jsx+css+story+doc. Mobile inferido (pendiente contraste). Pendiente: construir el **acordeón de producto real** (`58512:9289`) usado en Añadas.
-  - `build-storybook` OK + push. Pendiente revisión visual en Pages.
-- [x] **Compromisos: Sostenibilidad, Happy Pigs, Salud** — página Figma `58080:18443` (frame más a la izquierda de cada grupo). 3 templates en `src/templates/Compromisos`.
-  - **Sostenibilidad** — máster `58590:81784`. 9 franjas de módulos: Navigation, SectionHero small-image, ContentImageOnly, IntroText, ListNumbers, ContentTextImage `left`+`right` (con label), CardsShowcase, Footer.
-  - **Happy Pigs** — máster `58512:66765`. 7 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
-  - **Salud** — máster `58512:66781`. 10 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`, ⚠️ Main-Description→`List` (aprox.), ListNumbers, ContentTextImage `right`/`left`/`right`, CardsShowcase, Footer.
-  - `build-storybook` OK + push. Pendiente revisión visual en Pages.
-- [x] **Experiencias y eventos** — página Figma `58080:26824`, frame más a la izquierda `58509:40298`. `src/templates/ExperienciasEventos`. 8 franjas: Navigation, SectionHero full-bleed, ContentTextImage `right`/`left`/`right` (con CTA), IntroText, CardsShowcase, Footer. Nota: el máster usa imagen retrato 3:4 + botón M; el módulo renderiza 4:3 + botón S (diferencia de variante anotada).
-- [x] **Colecciones Premium** — página Figma `58080:28565`, frame más a la izquierda `58508:36015`. `src/templates/ColeccionesPremium`. 6 franjas: Navigation, SectionHero full-bleed, IntroText, ⚠️ índice de colecciones→`List` (aprox.), CardsShowcase, Footer.
-- Ambas: `build-storybook` OK + push. Pendiente revisión visual en Pages.
-
----
-
-### Próximo paso sugerido
-**SPRINT 1 de Page Templates COMPLETO** ✅ — Home, Origen (Nuestra Historia, La Dehesa),
-Excelencia (Añadas, Curación, Manual de Corte), Compromisos (Sostenibilidad, Happy Pigs,
-Salud), Experiencias y eventos, Colecciones Premium. Todas en `src/templates`, verificadas
-con `build-storybook` y publicadas. Fases 1–5 del proyecto completas.
-
-Pendientes técnicos:
-- [x] **Módulo acordeón de producto real** (máster `58512:9289`, "Cards / Accordion" en Figma)
-  construido (jsx+css+story+doc, Desktop+Mobile) y cableado en Añadas (franja 4).
-- [x] **Nomenclatura alineada con Figma (2026-07-27).** Figma renombró la banda tipográfica
-  homónima `58182:24099` de "Cards / Accordion" → "Cards / Big Titles", liberando el nombre
-  "Cards / Accordion" para el acordeón real `58512:9289`. En código se renombró en consecuencia:
-  el antiguo `CardsAccordion` (banda) → **`CardsBigTitles`**, y el antiguo `ProductAccordion`
-  (acordeón real) → **`CardsAccordion`**. Actualizados imports, stories (títulos Storybook:
-  "Cards · Big Titles" / "Cards · Accordion"), docs MDX, y las plantillas Home (usa la banda →
-  `CardsBigTitles`) y Añadas (usa el acordeón → `CardsAccordion`). Clases CSS internas
-  (`jl-typeband*` / `jl-pacc*`) sin cambios (no colisionan). `build-storybook` OK.
-- [x] **Variante `Type=Carrousel` del set "Cards / Accordion"** (`58512:9285` desktop /
-  `58512:9286` mobile) construida como **segundo modo del módulo `CardsAccordion`** (prop
-  `type="accordion" | "carrousel"`), no un módulo aparte. Verificado que NO es el
-  `CardsProductCarousel` existente (ese son tarjetas de producto uniformes, otro máster
-  `58163:83548`): el carrousel es la misma colección del acordeón en carril (ficha central +
-  vecinas asomando + flechas prev/next 56px, scroll-snap). Reutiliza la ficha `.jl-pacc__open`
-  (imagen 404/detalle 315 desktop; imagen 135/columna, ficha 326 mobile). Stories `Carrousel`
-  y `Carrousel · Mobile` + doc. `build-storybook` OK. Aprox.: el asomado queda dentro del
-  wrapper (no sangra al borde como el máster a 1440). Pendiente revisión visual en Pages.
-- [x] **Set nuevo "Accordion-Collapse"** (`58512:82775`, Close / Open 1 / Open 2): identificado
-  como la **sección desplegable del menú móvil** (fila "PRODUCTOS" → lista + destacado, o grid de
-  tarjetas), ya **cubierta funcionalmente dentro del módulo `Menu`** (acordeón mobile CaretDown/Up,
-  lista, `Featured`, grid). Figma solo lo ha extraído como componente reutilizable. Decisión del
-  equipo (2026-07-27): dejarlo como está; opcional extraerlo como fragment si se necesita reuso.
-- [x] **Colores de `CardsBigTitles`** corregidos a tokens semánticos (2026-07-27): palabras rojas
-  `--text-link`, blancas `--text-base` (antes el rojo era la primitiva `--color-primary-50`
-  hardcodeada). Cumple la regla de solo-tokens.
-- [x] **Mobile de `ContentStack`** contrastado contra el máster (`58468:60235`) y corregido:
-  el orden mobile ahora es texto → imagen → número (antes imagen y número iban invertidos);
-  desktop reimplementado con grid (texto arriba-izq, número abajo-izq, imagen derecha).
-- [ ] (Humano) Revisar en Pages las franjas ⚠️ mapeadas a módulo cercano (Home, La Dehesa,
-  Manual de Corte, Salud, Colecciones Premium) y decidir si se promueven a módulos propios.
-- [x] **Imágenes reales de página aplicadas a las plantillas** — descargadas por navegador
-  (Claude in Chrome, §14: sandbox sin red a figma.com) desde los másters de cada página,
-  optimizadas a WebP (máx 1600px, q82) en `src/assets/images` con prefijo `tpl-*`, y cableadas
-  como props: hero de las 11 plantillas + imágenes de página (La Dehesa: hero small + 2 image-only;
-  Sostenibilidad: hero small + image-only). Las imágenes internas de cada módulo siguen usando
-  los assets reales de la 1ª fase. Pendiente opcional: imágenes de franjas secundarias (los 3
-  Text+Image de Experiencias en retrato, el índice de Colecciones, franjas Text+Image de Añadas/
-  Happy Pigs/Salud) que hoy usan el asset por defecto del módulo.
-
-Pendiente opcional del Home: si se quiere fidelidad total, promover a módulos propios las 3
-franjas a medida (Title+fichas, banda Vintage, carrusel de expertos) y sustituir el mapeo.
+- [ ] M01-Navigation `58182:4143` — 6 variantes · usa: Brand Logo, NavButton <!-- k:module:m01-navigation -->
+- [ ] M02-Menu `58182:4350` — 5 variantes · 10 img · usa: Aspect Ratio, Brand Logo, Button-Action-Link, M01-Navigation, NavButton, menu-item-list… <!-- k:module:m02-menu -->
+- [ ] M06-Navigation-Secondarymenu `60634:75153` — 5 variantes · 1 img · usa: Aspect Ratio, M02-Menu, NavButton, menu-item-list, subnavigation-item <!-- k:module:m06-navigation-secondarymenu -->
+- [ ] M03-Navigation-Footer `58163:33397` — 2 variantes · 2 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Checkbox-Label, Checkboxes-Radios, Customer Award Ekomi… <!-- k:module:m03-navigation-footer -->
+- [ ] M04-Login `63727:483351` — 2 variantes · usa: Aspect Ratio, Brand Logo, Button, Divider, Form, Input… <!-- k:module:m04-login -->
+- [ ] M05-Filter-Secondary Menu `61276:141868` — 8 variantes · usa: Button, Button-Action-Link, Button-Icon, Checkboxes-Radios, Tag, listbox_Item_Dropdown <!-- k:module:m05-filter-secondary-menu -->
+- [ ] M07-Content-Text+Image `58363:34365` — 12 variantes · 12 img · usa: Aspect Ratio, Divider, RowButtons <!-- k:module:m07-content-text-image -->
+- [ ] M08-Content-Imageonly `59895:103739` — 6 variantes · 8 img · usa: Aspect Ratio · autolayout 5/6 → análisis de geometría <!-- k:module:m08-content-imageonly -->
+- [ ] M09-ContentStack-Text+ Image `58468:60216` — 7 variantes · 7 img · usa: Aspect Ratio, Button <!-- k:module:m09-content-stack-text-image -->
+- [ ] M10-Errors `63688:482735` — 2 variantes · 2 img · usa: 404_picture, Aspect Ratio, Button-Action-Link · autolayout 0/2 → análisis de geometría <!-- k:module:m10-errors -->
+- [ ] M11-Content-Textonly `58163:39972` — 5 variantes · usa: button <!-- k:module:m11-content-textonly -->
+- [ ] M12-Content-Introtext `58153:32094` — 2 variantes · usa: Button-Action-Link <!-- k:module:m12-content-introtext -->
+- [ ] M13-Hero-Homepagehero `58182:4353` — 4 variantes · 2 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton, Stepper_for_toast, Toast · autolayout 0/4 → análisis de geometría <!-- k:module:m13-hero-homepagehero -->
+- [ ] M14-Hero-Sectionheader `58508:6679` — 6 variantes · 9 img · usa: Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back, Tag… <!-- k:module:m14-hero-sectionheader -->
+- [ ] M15-Hero-Sectionhero `58508:35830` — 12 variantes · usa: Aspect Ratio, Brand Logo, Button-Action-Link, Button-Icon, M01-Navigation, NavButton · autolayout 4/12 → análisis de geometría <!-- k:module:m15-hero-sectionhero -->
+- [ ] M16-Hero-Productdetail `61365:56297` — 4 variantes · 11 img · usa: Add_to_list, Aspect Ratio, Brand Logo, Button, Button-Action-Link, Button-Icon… · autolayout 2/4 → análisis de geometría <!-- k:module:m16-hero-productdetail -->
+- [ ] M17-Banners-Sectionbanner `58182:4380` — 8 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Tag · autolayout 6/8 → análisis de geometría <!-- k:module:m17-banners-sectionbanner -->
+- [ ] M18-Banners-Full Screen Slider `59895:79904` — 14 variantes · 26 img · usa: Aspect Ratio, Button-Action-Link, Tag, Title · autolayout 2/14 → análisis de geometría <!-- k:module:m18-banners-full-screen-slider -->
+- [ ] M19-Card-Grid `61387:153548` — 2 variantes · 12 img · usa: Aspect Ratio, Card Product, Tag, Title <!-- k:module:m19-card-grid -->
+- [ ] M20-List `60186:9313` — 2 variantes · usa: Arrow, Arrow Dropdown, Block best price, Main_Secondary-Link, Title <!-- k:module:m20-list -->
+- [ ] M21-List-Numbers `58627:43781` — 2 variantes · 2 img · usa: Aspect Ratio, Block Big Numbers, Title <!-- k:module:m21-list-numbers -->
+- [ ] M22-NavigationDirectLink `60603:144636` — 8 variantes · 2 img · usa: Aspect Ratio, Button-Icon, Tag <!-- k:module:m22-navigation-direct-link -->
+- [ ] M23-Cards-Gallery `60054:12474` — 6 variantes · 16 img · usa: Aspect Ratio, Button-Icon, Card-Social-media, Title · autolayout 5/6 → análisis de geometría <!-- k:module:m23-cards-gallery -->
+- [ ] M24-Cards-Productcarousel `60286:43172` — 2 variantes · 7 img · usa: Arrow, Aspect Ratio, Card Product, Title <!-- k:module:m24-cards-productcarousel -->
+- [ ] M25-Cards-Links `58182:4396` — 4 variantes · 6 img · usa: Aspect Ratio, Button, Button-Action-Link, Card Carrusel, Title <!-- k:module:m25-cards-links -->
+- [ ] M26-Buscador `61439:232705` — 6 variantes · usa: Brand Logo, Button, Button-Action-Link, Button-Icon <!-- k:module:m26-buscador -->
+- [ ] M27-Cards-Categories `58163:40311` — 2 variantes · 6 img · usa: Aspect Ratio, Button-Icon, Card Product <!-- k:module:m27-cards-categories -->
+- [ ] M28-Cards-Accordion `58512:9289` — 5 variantes · 13 img · usa: */Overrides/Stars/Star, Aspect Ratio, Button, Button-Action-Link, Tag, Title <!-- k:module:m28-cards-accordion -->
+- [ ] M29-User-Profile `63559:53572` — 2 variantes · usa: M06-Navigation-Secondarymenu, menu-item-list <!-- k:module:m29-user-profile -->
+- [ ] M30-Hero-Joselito-Lab `63928:325885` — 2 variantes · 12 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton · autolayout 0/2 → análisis de geometría <!-- k:module:m30-hero-joselito-lab -->
+- [ ] M31-Navigation-PreviousNext `58464:36878` — 2 variantes · usa: Button-Icon <!-- k:module:m31-navigation-previous-next -->
+- [ ] M32-List-ArchiveList `59895:46608` — 2 variantes · 2 img · usa: Aspect Ratio, Block Archive List, Button, Title · autolayout 1/2 → análisis de geometría <!-- k:module:m32-list-archive-list -->

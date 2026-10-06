@@ -1,0 +1,18 @@
+/* Grid de columnas del sistema. Las variables vienen de la colección responsive de Figma
+   (nombres configurables en hanzo.config.json → grid). Cambian solas por breakpoint. */
+.wrapper {
+  width: 100%;
+  max-width: 1920px; /* token-audit-ignore */
+  margin-inline: auto;
+  padding-inline: var(--layout-grids-wrapper-default);
+  box-sizing: border-box;
+}
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 12), minmax(0, 1fr));
+  column-gap: var(--layout-grids-gutter);
+}
+/* El nº de columnas cambia por breakpoint si el Figma lo define (--grid-columns, de los grid styles:
+   p. ej. 6 en XS/SM, 8 en M, 12 desde LG). En breakpoints pequeños usa col-span-full o spans ≤ columnas.
+   Para colocar hijos: clases Tailwind col-span-N / col-start-N (ver grid-columns.mjs).
+   Ojo con el auto-flow: ordenar el DOM o fijar col-start/row-start explícitos. */

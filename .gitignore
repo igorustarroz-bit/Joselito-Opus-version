@@ -1,39 +1,12 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
 node_modules
 dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Storybook
 storybook-static
-
-# Nunca subir el token de GitHub
+*.log
+.DS_Store
+# Secretos: nunca se suben
 github-token.txt
-
-# Nunca subir el token de Figma (usado por scripts/figma-assets.mjs)
 figma-token.txt
-
-# Fuentes de origen (licenciadas) — no subir; las webfonts van en public/fonts
+# Fuentes licenciadas de origen (las webfonts van en public/fonts)
 fonts-raw/
-
-# capturas de verificación sueltas en la raíz
+# Capturas sueltas de verificación
 /*.png

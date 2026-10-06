@@ -1,0 +1,48 @@
+{
+  "$comment": "Configuración del proyecto design-to-code de Hanzo. Sustituye los puntos 1-4 de las antiguas instrucciones. Se sube al repo (no contiene secretos).",
+  "project": "Joselito-Opus-version",
+  "client": "Joselito",
+  "projectType": "web",
+  "docsLang": "es",
+  "output": "react-storybook",
+  "cms": "none",
+  "figma": {
+    "source": "hanzo-template",
+    "plan": "pro",
+    "seat": "full",
+    "files": [
+      {
+        "role": "main",
+        "key": "nANHdr2nKaFD6UCXAMND4s",
+        "url": "https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/Design-To-code?node-id=42880-1062"
+      }
+    ],
+    "collections": {},
+    "notes": "Copia de la librería Joselito basada en la plantilla Figma de Hanzo. Librería no publicada (usar use_figma, no search_design_system). Plan/asiento: se asume HanzoStudio (Pro, Full) — confirmar.",
+    "$collections": "Opcional: {\"theme\": \"Semantic-Color\", \"responsive\": \"Responsive\"} solo si la detección automática falla (Figma externo con nombres raros)."
+  },
+  "github": {
+    "repo": "https://github.com/igorustarroz-bit/Joselito-Opus-version",
+    "pages": "https://igorustarroz-bit.github.io/Joselito-Opus-version/"
+  },
+  "grid": {
+    "gutter": "--layout-grids-gutter",
+    "wrapper": "--layout-grids-wrapper-default",
+    "maxWidth": "1920px"
+  },
+  "paths": {
+    "tokens": "src/tokens",
+    "fonts": "public/fonts",
+    "fontsCss": "src/tokens/fonts.css",
+    "fontsGoogleCss": "src/tokens/fonts-google.css",
+    "fontsUrl": "/fonts",
+    "images": "src/assets/images",
+    "themesJs": null
+  },
+  "fonts": {
+    "$comment": "Google Fonts (online) si la familia está allí; fonts-raw/ solo si no. overrides fuerza la decisión por familia (necesario si no hay red para comprobarlo).",
+    "source": "auto",
+    "overrides": {},
+    "extra": {}
+  }
+}

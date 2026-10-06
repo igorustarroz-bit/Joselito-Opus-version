@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import svgr from 'vite-plugin-svgr';
 
-// SVGR: importa SVGs como componentes React (color por currentColor / token).
+// base './' para que el build funcione en GitHub Pages y abriendo dist/ en local
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()],
+  base: './',
+  plugins: [react(), tailwindcss(), svgr({ svgrOptions: { icon: true, replaceAttrValues: { '#000': 'currentColor', '#000000': 'currentColor' } } })],
+  resolve: { alias: { '@': '/src' } },
 });
