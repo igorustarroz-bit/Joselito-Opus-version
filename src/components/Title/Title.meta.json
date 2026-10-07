@@ -156,7 +156,12 @@
     "M25-Cards-Links"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "field": "title",
+      "notes": "El máster de Figma trae \"Lorem ipsum dolor sit amet cucuster\" como título de ejemplo; se usa tal cual como valor por defecto hasta tener contenido real."
+    }
+  ],
   "notes": [
     "Figma: la variante Mobile incluye el margen lateral del wrapper y un espacio superior (Spacers Responsive/11) dentro del propio componente; Desktop no. En código el componente no lleva márgenes: los pone el contenedor (.wrapper / módulo). Las stories lo muestran dentro de .wrapper.",
     "Figma: la separación entre antetítulo y enlace es un gap fijo de 1026 px (equivale a space-between) y el gap de 'Arrow+title' (16 px) no tiene variable.",
