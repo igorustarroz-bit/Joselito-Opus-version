@@ -1,0 +1,3 @@
+/* Add_to_list — Figma 63192:173727. Solo tokens. */
+.add-to-list { display: inline-flex; align-items: center; gap: var(--spacers-fixed-fx-2); }
+.add-to-list__text { color: var(--texts-neutral-1); white-space: nowrap; }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:58:56.668Z",
+  "generatedAt": "2026-10-07T06:58:56.792Z",
   "output": "react-storybook",
   "items": [
     {
@@ -748,11 +748,10 @@
       "deps": [],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:accordion",
-      "builtFp": "f56dabeb"
+      "key": "component:accordion"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Add_to_list",
@@ -765,7 +764,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:add-to-list"
+      "key": "component:add-to-list",
+      "builtFp": "6cdcd095"
     },
     {
       "status": "todo",

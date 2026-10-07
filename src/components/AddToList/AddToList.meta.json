@@ -1,0 +1,96 @@
+{
+  "name": "AddToList",
+  "kind": "component",
+  "title": "Add_to_list",
+  "figma": {
+    "nodeId": "63192:173727",
+    "name": "Add_to_list",
+    "fp": "4739ce45"
+  },
+  "description": "Acción de añadir un producto a la lista de deseos. Una vez añadido muestra la confirmación y la opción de quitarlo.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Added": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "AddedNo",
+      "title": "Added=No"
+    },
+    {
+      "story": "AddedYes",
+      "title": "Added=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "added / defaultAdded / onChange",
+      "figma": "Added",
+      "description": "Estado (controlado o no).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "addText / addedText / removeText",
+      "description": "Textos del enlace, la confirmación y quitar.",
+      "default": "textos del máster",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto de confirmación"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "confirmación–quitar"
+      }
+    ],
+    "typography": [
+      "ts-labels-01"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Button-Action-Link M (añadir / quitar)",
+    "Texto de confirmación Labels/01 (solo añadido)"
+  ],
+  "behavior": [
+    "Clic en añadir → muestra la confirmación; clic en quitar → vuelve al estado inicial."
+  ],
+  "content": [],
+  "a11y": [
+    "Región aria-live: el cambio se anuncia."
+  ],
+  "related": [
+    "Button-Action-Link",
+    "M16-Hero-Productdetail"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [],
+  "codePath": "src/components/AddToList/AddToList.jsx"
+}

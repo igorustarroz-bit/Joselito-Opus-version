@@ -1,0 +1,21 @@
+{
+ "id": "63192:173727",
+ "name": "Add_to_list",
+ "type": "COMPONENT_SET",
+ "fp": "4739ce45",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Added": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "No: BAL M 'AÑADIR A LA LISTA DE DESEOS'; Yes: 'AÑADIDO A LA LISTA DE DESEOS' Labels/01 Neutral 1 + BAL M 'quitar'; gap fx-2",
+ "deps": [
+  "Button-Action-Link"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

@@ -1,0 +1,81 @@
+{/* Generado por scripts/docs-generator.mjs desde AddToList.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './AddToList.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Add_to_list
+
+## Introducción
+
+Acción de añadir un producto a la lista de deseos. Una vez añadido muestra la confirmación y la opción de quitarlo.
+
+
+Figma: `Add_to_list` (`63192:173727`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Button-Action-Link M (añadir / quitar)
+- Texto de confirmación Labels/01 (solo añadido)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Clic en añadir → muestra la confirmación; clic en quitar → vuelve al estado inicial.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Added=No
+
+<Canvas of={Stories.AddedNo} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Added=Yes
+
+<Canvas of={Stories.AddedYes} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-neutral-1` | texto de confirmación |
+| spacing | `--spacers-fixed-fx-2` | confirmación–quitar |
+| typography | `ts-labels-01` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| added / defaultAdded / onChange | Estado (controlado o no). | false | boolean |
+| addText / addedText / removeText | Textos del enlace, la confirmación y quitar. | textos del máster | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Región aria-live: el cambio se anuncia.
+
+## Componentes relacionados
+
+- Button-Action-Link
+- M16-Hero-Productdetail
