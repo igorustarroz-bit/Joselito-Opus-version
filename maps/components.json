@@ -173,5 +173,30 @@
     "name": "MobileMenuAccordion",
     "path": "src/components/MobileMenuAccordion/MobileMenuAccordion.jsx",
     "fp": "e971587c"
+  },
+  "58182:24262": {
+    "name": "CardCarrusel",
+    "path": "src/components/CardCarrusel/CardCarrusel.jsx",
+    "fp": "8d288424"
+  },
+  "63911:364852": {
+    "name": "CardSocialMedia",
+    "path": "src/components/CardSocialMedia/CardSocialMedia.jsx",
+    "fp": "e0282eb1"
+  },
+  "58182:23781": {
+    "name": "CardLink",
+    "path": "src/components/CardLink/CardLink.jsx",
+    "fp": "7cdaf17a"
+  },
+  "58182:23548": {
+    "name": "Toast",
+    "path": "src/components/Toast/Toast.jsx",
+    "fp": "90c7e0b8"
+  },
+  "63681:482695": {
+    "name": "ErrorPicture",
+    "path": "src/components/ErrorPicture/ErrorPicture.jsx",
+    "fp": "aba22f68"
   }
 }

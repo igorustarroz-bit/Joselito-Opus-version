@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:06:33.395Z",
+  "generatedAt": "2026-10-07T07:10:18.150Z",
   "output": "react-storybook",
   "items": [
     {
@@ -850,7 +850,7 @@
       "builtFp": "d6b288db"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Card Carrusel",
@@ -865,7 +865,8 @@
       ],
       "images": 2,
       "autolayout": "2/2",
-      "key": "component:card-carrusel"
+      "key": "component:card-carrusel",
+      "builtFp": "ac1b3bc3"
     },
     {
       "status": "todo",

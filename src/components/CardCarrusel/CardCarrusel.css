@@ -1,0 +1,22 @@
+/* Card Carrusel — Figma 58182:24262. Solo tokens. Responsive por container query (700 px). */
+.card-carrusel { container-type: inline-size; width: 100%; color: var(--texts-base); }
+.card-carrusel__inner { display: flex; flex-direction: column; gap: var(--layout-grids-gutter); }
+.card-carrusel__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacers-fixed-fx-9); }
+.card-carrusel__texts { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); width: 100%; }
+.card-carrusel__head { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-4); }
+.card-carrusel__head p, .card-carrusel__title { margin: 0; }
+.card-carrusel__label, .card-carrusel__body { color: var(--texts-neutral-2); }
+.card-carrusel__buttons { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-3); }
+.card-carrusel__info { display: none; flex-direction: column; gap: var(--spacers-fixed-fx-2); margin: 0; }
+.card-carrusel__info dt { color: var(--texts-neutral-2); }
+.card-carrusel__info dd { margin: 0; color: var(--texts-base); }
+.card-carrusel__link--l { display: none; }
+@container (min-width: 700px) {
+  .card-carrusel__inner { flex-direction: row; align-items: stretch; }
+  .card-carrusel__img { flex: 0 0 45%; }
+  .card-carrusel__content { flex: 1 1 auto; justify-content: space-between; gap: var(--spacers-fixed-fx-11); padding-left: var(--spacers-fixed-fx-7); }
+  .card-carrusel__buttons { display: none; }
+  .card-carrusel__info { display: flex; }
+  .card-carrusel__link--s { display: none; }
+  .card-carrusel__link--l { display: inline-flex; }
+}

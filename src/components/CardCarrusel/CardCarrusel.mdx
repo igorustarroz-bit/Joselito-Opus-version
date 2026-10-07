@@ -1,0 +1,103 @@
+{/* Generado por scripts/docs-generator.mjs desde CardCarrusel.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CardCarrusel.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Card Carrusel
+
+## Introducción
+
+Tarjeta de tienda o restaurante para carruseles: foto, nombre, descripción, datos de contacto y enlace DESCUBRIR. Se adapta a su ancho: apilada (Mobile) o foto a la izquierda (Desktop).
+
+
+Figma: `Card Carrusel` (`58182:24262`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Foto Aspect Ratio 3:2
+- Nombre y descripción
+- Botones Terciary XS (estrecha) o teléfono/dirección (ancha)
+- Button-Action-Link DESCUBRIR (S estrecha, L ancha)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Container query a 700 px: por debajo apila (Mobile), por encima foto 45 % + contenido (Desktop).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-base` | nombre y datos |
+| color | `--texts-neutral-2` | descripción y etiquetas de datos |
+| spacing | `--layout-grids-gutter` | foto–contenido |
+| spacing | `--spacers-fixed-fx-9 / fx-11` | bloques (40 / 64 px) |
+| spacing | `--spacers-fixed-fx-6 / fx-4 / fx-3 / fx-2` | separaciones internas |
+| spacing | `--spacers-fixed-fx-7` | padding izquierdo del contenido (ancha) |
+| typography | `ts-title-03` |  |
+| typography | `ts-body-02` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| image / imageAlt | Foto 3:2. | foto del máster |  |
+| title | Nombre (Title/03). | "Joselitos Velázquez" | text |
+| showLabel | Antetítulo (oculto en el máster). | false | boolean |
+| label | Texto del antetítulo. | "Label" | text |
+| showBody | Descripción (Body/02, Neutral 2). | true | boolean |
+| body | Texto de la descripción. | texto del máster | text |
+| showPhoneEmail | Botones LLÁMANOS / VER EN MAPS (estrecha). | true | boolean |
+| showBody2 | Teléfono y dirección (ancha). | true | boolean |
+| phone / address | Datos de contacto. | del máster | text |
+| callHref / mapsHref | Destinos de los botones (por defecto tel: con el teléfono). | — | text |
+| showLink | Enlace DESCUBRIR. | true | boolean |
+| href | Destino de DESCUBRIR. | "#" | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- El nombre es h3; los datos son una lista de definición.
+
+## Componentes relacionados
+
+- M25-Cards-Links
+- Button
+- Button-Action-Link
+
+## Pendientes / placeholders
+
+- undefined: undefined

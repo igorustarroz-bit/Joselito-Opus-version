@@ -1,0 +1,195 @@
+{
+  "name": "CardCarrusel",
+  "kind": "component",
+  "title": "Card Carrusel",
+  "figma": {
+    "nodeId": "58182:24262",
+    "name": "Card Carrusel",
+    "fp": "8d288424"
+  },
+  "description": "Tarjeta de tienda o restaurante para carruseles: foto, nombre, descripción, datos de contacto y enlace DESCUBRIR. Se adapta a su ancho: apilada (Mobile) o foto a la izquierda (Desktop).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "image / imageAlt",
+      "description": "Foto 3:2.",
+      "default": "foto del máster",
+      "control": false
+    },
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Nombre (Title/03).",
+      "default": "\"Joselitos Velázquez\"",
+      "control": "text"
+    },
+    {
+      "name": "showLabel",
+      "figma": "Label",
+      "description": "Antetítulo (oculto en el máster).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "label",
+      "description": "Texto del antetítulo.",
+      "default": "\"Label\"",
+      "control": "text"
+    },
+    {
+      "name": "showBody",
+      "figma": "Show Body",
+      "description": "Descripción (Body/02, Neutral 2).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "body",
+      "description": "Texto de la descripción.",
+      "default": "texto del máster",
+      "control": "text"
+    },
+    {
+      "name": "showPhoneEmail",
+      "figma": "Show Phone/Email",
+      "description": "Botones LLÁMANOS / VER EN MAPS (estrecha).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBody2",
+      "figma": "Show Body2",
+      "description": "Teléfono y dirección (ancha).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "phone / address",
+      "description": "Datos de contacto.",
+      "default": "del máster",
+      "control": "text"
+    },
+    {
+      "name": "callHref / mapsHref",
+      "description": "Destinos de los botones (por defecto tel: con el teléfono).",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "showLink",
+      "figma": "Show Link",
+      "description": "Enlace DESCUBRIR.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "href",
+      "description": "Destino de DESCUBRIR.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "nombre y datos"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "descripción y etiquetas de datos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-gutter",
+        "usage": "foto–contenido"
+      },
+      {
+        "token": "--spacers-fixed-fx-9 / fx-11",
+        "usage": "bloques (40 / 64 px)"
+      },
+      {
+        "token": "--spacers-fixed-fx-6 / fx-4 / fx-3 / fx-2",
+        "usage": "separaciones internas"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "padding izquierdo del contenido (ancha)"
+      }
+    ],
+    "typography": [
+      "ts-title-03",
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Foto Aspect Ratio 3:2",
+    "Nombre y descripción",
+    "Botones Terciary XS (estrecha) o teléfono/dirección (ancha)",
+    "Button-Action-Link DESCUBRIR (S estrecha, L ancha)"
+  ],
+  "behavior": [
+    "Container query a 700 px: por debajo apila (Mobile), por encima foto 45 % + contenido (Desktop)."
+  ],
+  "content": [],
+  "a11y": [
+    "El nombre es h3; los datos son una lista de definición."
+  ],
+  "related": [
+    "M25-Cards-Links",
+    "Button",
+    "Button-Action-Link"
+  ],
+  "images": [
+    {
+      "hash": "05cee667c1bb5926a1c107d62a43e9070600cc15",
+      "usage": "foto"
+    }
+  ],
+  "placeholders": [
+    {
+      "field": "body",
+      "notes": "La descripción del máster es lorem ipsum; sustituir por contenido real."
+    }
+  ],
+  "notes": [
+    "Figma: gaps 40/24/16/12/64/8 px sin variable → FX-9, FX-6, FX-4, FX-3, FX-11, FX-2.",
+    "Figma: en Desktop el contenido mide 5 columnas (Cols Size/5cols); en código ocupa el resto del ancho tras la foto (45 %).",
+    "Figma: la descripción del máster es lorem ipsum."
+  ],
+  "codePath": "src/components/CardCarrusel/CardCarrusel.jsx"
+}

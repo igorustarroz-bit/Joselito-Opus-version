@@ -1,0 +1,38 @@
+{
+ "id": "58182:24262",
+ "name": "Card Carrusel",
+ "type": "COMPONENT_SET",
+ "fp": "8d288424",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Show Body": "BOOLEAN",
+  "Show Link": "BOOLEAN",
+  "Show Phone/Email": "BOOLEAN",
+  "Show Body2": "BOOLEAN",
+  "Label": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "spec": "Mobile V gap Gutter: AR 3:2 + (gap 40) [Title Title/03 + Body Body/02 N2 (gap 16); Button Terciary XS ×2 (gap 12)] + BAL S. Desktop H: AR 3:2 + contenido 5cols pl fx-7 gap 64: título/cuerpo + Teléfono/Dirección (Body/02) + BAL L",
+ "deps": [
+  "Aspect Ratio",
+  "Button",
+  "Button-Action-Link"
+ ],
+ "images": [
+  {
+   "hash": "05cee667c1bb5926a1c107d62a43e9070600cc15"
+  }
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps sin variable"
+   }
+  ]
+ }
+}
