@@ -62,7 +62,10 @@ const isFoundation = RE(naming.foundation, '^(aspect ratio|grid|icon sizer|space
 // ---------- 2. Clasificar ----------
 const items = [];
 const add = (it) => {
-  const key = it.key || `${it.kind}:${slug(it.name)}`;
+  let key = it.key || `${it.kind}:${slug(it.name)}`;
+  // Nombres que solo difieren en mayúsculas (p. ej. "accordion" y "Accordion") darían la misma clave:
+  // la segunda se desambigua con el nodeId para que cada máster tenga su propio estado.
+  if (items.some((i) => i.key === key)) key = `${key}--${String(it.nodeId || items.length).replace(':', '-')}`;
   const p = prevBy[key] || {};
   items.push({ status: 'todo', ...p, ...it, key,
     status: p.status || it.status || 'todo', notes: p.notes, codePath: p.codePath, builtFp: p.builtFp });

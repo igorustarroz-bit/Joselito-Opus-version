@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:14:04.001Z",
+  "generatedAt": "2026-10-07T12:56:25.584Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1009,7 +1009,7 @@
       "builtFp": "b0f178b6"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Accordion",
@@ -1022,7 +1022,8 @@
       ],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:accordion"
+      "key": "component:accordion--57943-46123",
+      "builtFp": "d25a66c5"
     },
     {
       "status": "done",
