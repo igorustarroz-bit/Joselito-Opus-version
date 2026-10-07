@@ -1,0 +1,69 @@
+{/* Generado por scripts/docs-generator.mjs desde Divider.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Divider.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Divider
+
+## Introducción
+
+Línea divisoria horizontal de 1 px a todo el ancho para separar bloques de contenido.
+
+
+Figma: `Divider` (`63480:2560`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Línea de 1 px
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Ocupa el ancho del contenedor.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Entre dos bloques
+
+<Canvas of={Stories.EntreContenido} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | línea |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Es un elemento hr (separador semántico).
+
+## Componentes relacionados
+
+- M07-Content-Text+Image
+- Form

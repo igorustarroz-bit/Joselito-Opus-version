@@ -1,0 +1,66 @@
+{
+  "name": "Divider",
+  "kind": "component",
+  "title": "Divider",
+  "figma": {
+    "nodeId": "63480:2560",
+    "name": "Divider",
+    "fp": "c85215ef"
+  },
+  "description": "Línea divisoria horizontal de 1 px a todo el ancho para separar bloques de contenido.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "EntreContenido",
+      "title": "Entre dos bloques"
+    }
+  ],
+  "props": [
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "línea"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Línea de 1 px"
+  ],
+  "behavior": [
+    "Ocupa el ancho del contenedor."
+  ],
+  "content": [],
+  "a11y": [
+    "Es un elemento hr (separador semántico)."
+  ],
+  "related": [
+    "M07-Content-Text+Image",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el máster es un rectángulo de 800 × 1 px sin autolayout; en código es un hr de ancho completo."
+  ],
+  "codePath": "src/components/Divider/Divider.jsx"
+}

@@ -1,0 +1,14 @@
+{
+ "id": "63480:2560",
+ "name": "Divider",
+ "type": "COMPONENT",
+ "fp": "c85215ef",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "rect 800×1 fill Strokes-Icons/Neutral 3",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
