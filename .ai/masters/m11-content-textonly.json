@@ -1,0 +1,56 @@
+{
+ "id": "58163:39972",
+ "name": "M11-Content-Textonly",
+ "type": "COMPONENT_SET",
+ "fp": "98588acc",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot 1": "SLOT",
+  "Slot 2": "SLOT",
+  "⌙ Title": "TEXT",
+  "⌙ Label": "TEXT",
+  "Show Slot 2": "BOOLEAN",
+  "Show Label": "BOOLEAN",
+  "Show Title": "BOOLEAN",
+  "Show Box Title": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Variant": [
+   "2-column",
+   "1-Center-Column",
+   "split",
+   "All",
+   "1-Left-Column"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Variant=split"
+  },
+  {
+   "name": "Device=Desktop, Variant=2-column"
+  },
+  {
+   "name": "Device=Desktop, Variant=1-Left-Column"
+  },
+  {
+   "name": "Device=Desktop, Variant=1-Center-Column"
+  },
+  {
+   "name": "Device=Mobile, Variant=All"
+  }
+ ],
+ "spec": "Desktop pad 120/Wrapper-Default. 2-column: [LABEL Body/03 Neutral 2 + Title/03 gap 16] gap 32 [Body 11cols: Slot1 5cols + Slot2 5cols, Body/04 Neutral 1]. split: LABEL gap 16 + fila space-between Title 5cols / Slot 6cols. 1-Left-Column: 5cols label/título/Slot (Body/03) gap 24. 1-Center-Column: 8cols centrado. Mobile All: pad fx-13/Wrapper-Default gap fx-6; Box Title gap 8; Body/04.",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "padding 120 y 299, gaps 16/136/8/60/32/144/24 sin variable"
+   }
+  ]
+ }
+}

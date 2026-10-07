@@ -1,0 +1,198 @@
+{
+  "name": "M11ContentTextonly",
+  "kind": "module",
+  "title": "M11-Content-Textonly",
+  "figma": {
+    "nodeId": "58163:39972",
+    "name": "M11-Content-Textonly",
+    "fp": "98588acc"
+  },
+  "description": "Bloque editorial solo de texto: etiqueta, título y uno o dos párrafos, en dos columnas, partido (título a un lado y texto al otro) o en una columna alineada a la izquierda o centrada.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Variant": [
+      "2-column",
+      "1-Center-Column",
+      "split",
+      "All",
+      "1-Left-Column"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "TwoColumn",
+      "title": "Device=Desktop, Variant=2-column"
+    },
+    {
+      "story": "Split",
+      "title": "Device=Desktop, Variant=split"
+    },
+    {
+      "story": "LeftColumn",
+      "title": "Device=Desktop, Variant=1-Left-Column"
+    },
+    {
+      "story": "CenterColumn",
+      "title": "Device=Desktop, Variant=1-Center-Column"
+    }
+  ],
+  "props": [
+    {
+      "name": "variant",
+      "figma": "Variant",
+      "description": "`2-column`, `split`, `1-Left-Column` o `1-Center-Column` (en móvil todas son una columna, Variant=All).",
+      "default": "2-column",
+      "control": "inline-radio"
+    },
+    {
+      "name": "label",
+      "figma": "⌙ Label",
+      "description": "Etiqueta.",
+      "default": "THIS IS A LABEL",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "figma": "⌙ Title",
+      "description": "Título.",
+      "default": "Lorem ipsum dolor sit amet consectetur.",
+      "control": "text"
+    },
+    {
+      "name": "showLabel",
+      "figma": "Show Label",
+      "description": "Muestra la etiqueta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showTitle",
+      "figma": "Show Title",
+      "description": "Muestra el título.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBoxTitle",
+      "figma": "Show Box Title",
+      "description": "Muestra el bloque de etiqueta y título.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showSlot2",
+      "figma": "Show Slot 2",
+      "description": "Segunda columna de texto (por defecto solo en 2-column).",
+      "default": "según variant",
+      "control": "boolean"
+    },
+    {
+      "name": "body / body2",
+      "description": "Textos de los párrafos.",
+      "default": "texto de relleno",
+      "control": "text"
+    },
+    {
+      "name": "slot1",
+      "figma": "Slot 1",
+      "description": "Contenido propio en lugar del primer párrafo.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "slot2",
+      "figma": "Slot 2",
+      "description": "Contenido propio en lugar del segundo párrafo.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiqueta"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "párrafos"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-16 / fx-13",
+        "usage": "padding vertical escritorio / móvil"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--spacers-fixed-fx-4 / fx-2",
+        "usage": "etiqueta-título"
+      },
+      {
+        "token": "--spacers-fixed-fx-7 / fx-6",
+        "usage": "cabecera-texto"
+      },
+      {
+        "token": "--layout-cols-size-5cols / 6cols / 8cols / 11cols",
+        "usage": "anchos de columna"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "Etiqueta Body/03 · título Title/03",
+    "Párrafos Body/04 (Body/03 en una columna)"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px; en móvil, una sola columna."
+  ],
+  "content": [
+    {
+      "field": "Párrafos",
+      "notes": "Admiten saltos de línea."
+    }
+  ],
+  "a11y": [
+    "Título como h2."
+  ],
+  "related": [
+    "M07-Content-Text+Image",
+    "M12-Content-Introtext"
+  ],
+  "images": [],
+  "placeholders": [
+    "Textos de relleno (lorem ipsum) copiados de Figma: pendientes del contenido real."
+  ],
+  "notes": [
+    "Figma: padding 120 px sin variable → FX-16 (124).",
+    "Figma: 1-Center-Column usa padding lateral fijo de 299 px; se centra con 8 columnas de rejilla.",
+    "Figma: separaciones 16/32/24/8/60 sin variable → FX-4/FX-7/FX-6/FX-2/FX-11.",
+    "Figma: el título de split (537) desborda su marco de 5 columnas (514,6)."
+  ],
+  "codePath": "src/modules/M11ContentTextonly/M11ContentTextonly.jsx"
+}

@@ -313,5 +313,10 @@
     "name": "M10Errors",
     "path": "src/modules/M10Errors/M10Errors.jsx",
     "fp": "4a9b4984"
+  },
+  "58163:39972": {
+    "name": "M11ContentTextonly",
+    "path": "src/modules/M11ContentTextonly/M11ContentTextonly.jsx",
+    "fp": "98588acc"
   }
 }

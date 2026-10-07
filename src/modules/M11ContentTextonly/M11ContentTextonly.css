@@ -1,0 +1,38 @@
+/* M11-Content-Textonly — Figma 58163:39972. Solo tokens. Escritorio desde 1024 px. */
+.m11-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-2);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacers-fixed-fx-13) var(--layout-grids-wrapper-default);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m11-text p, .m11-text h2 { margin: 0; }
+.m11-text__title { font-weight: inherit; }
+.m11-text__label { color: var(--texts-neutral-2); }
+.m11-text__body { color: var(--texts-neutral-1); white-space: pre-line; }
+.m11-text__inner, .m11-text__row { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
+.m11-text__box { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); }
+.m11-text__cols { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
+.m11-text__slot { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-9); }
+
+@media (min-width: 1024px) {
+  .m11-text { gap: var(--spacers-fixed-fx-4); padding: var(--spacers-fixed-fx-16) var(--layout-grids-wrapper-default); }
+  .m11-text__box { gap: var(--spacers-fixed-fx-4); }
+  /* 2-column */
+  .m11-text--2-column .m11-text__inner { gap: var(--spacers-fixed-fx-7); }
+  .m11-text--2-column .m11-text__title { max-width: var(--layout-cols-size-5cols); }
+  .m11-text--2-column .m11-text__cols { flex-direction: row; justify-content: space-between; gap: var(--spacers-fixed-fx-9); width: var(--layout-cols-size-11cols); }
+  .m11-text--2-column .m11-text__slot { width: var(--layout-cols-size-5cols); }
+  /* split */
+  .m11-text--split .m11-text__row { flex-direction: row; justify-content: space-between; gap: var(--spacers-fixed-fx-9); }
+  .m11-text--split .m11-text__title { width: var(--layout-cols-size-5cols); }
+  .m11-text--split .m11-text__cols { width: var(--layout-cols-size-6cols); }
+  /* 1 columna */
+  .m11-text--1-left-column .m11-text__inner { width: var(--layout-cols-size-5cols); }
+  .m11-text--1-left-column .m11-text__box, .m11-text--1-center-column .m11-text__box { gap: var(--spacers-fixed-fx-6); }
+  .m11-text--1-center-column { align-items: center; }
+  .m11-text--1-center-column .m11-text__inner { width: var(--layout-cols-size-8cols); }
+}
