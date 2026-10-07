@@ -1,0 +1,27 @@
+{
+ "id": "63911:364852",
+ "name": "Card-Social-media",
+ "type": "COMPONENT_SET",
+ "fp": "e0282eb1",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Tag": "TEXT",
+  "Show Tag": "BOOLEAN",
+  "Vertical": [
+   "Yes",
+   "No"
+  ]
+ },
+ "spec": "Yes: AR 3:4 + '@jamonjoselito' Body/03 N2, gap fx-7; No: AR 16:9, gap fx-13",
+ "deps": [
+  "Aspect Ratio"
+ ],
+ "images": [
+  {
+   "hash": "b6732f31eb7aed43b04b8b535ce53b66729c382f"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}

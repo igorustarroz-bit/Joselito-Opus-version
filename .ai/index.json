@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:10:18.150Z",
+  "generatedAt": "2026-10-07T07:10:18.326Z",
   "output": "react-storybook",
   "items": [
     {
@@ -869,7 +869,7 @@
       "builtFp": "ac1b3bc3"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Card-Social-media",
@@ -882,7 +882,8 @@
       ],
       "images": 2,
       "autolayout": "2/2",
-      "key": "component:card-social-media"
+      "key": "component:card-social-media",
+      "builtFp": "06f485d7"
     },
     {
       "status": "done",

@@ -1,0 +1,126 @@
+{
+  "name": "CardSocialMedia",
+  "kind": "component",
+  "title": "Card-Social-media",
+  "figma": {
+    "nodeId": "63911:364852",
+    "name": "Card-Social-media",
+    "fp": "e0282eb1"
+  },
+  "description": "Publicación de redes sociales para galerías (M23): foto vertical 3:4 u horizontal 16:9 con la cuenta debajo.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Vertical": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "VerticalYes",
+      "title": "Vertical=Yes"
+    },
+    {
+      "story": "VerticalNo",
+      "title": "Vertical=No"
+    }
+  ],
+  "props": [
+    {
+      "name": "vertical",
+      "figma": "Vertical",
+      "description": "3:4 (true) o 16:9 (false).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Foto.",
+      "default": "foto del máster",
+      "control": false
+    },
+    {
+      "name": "tag",
+      "figma": "Tag",
+      "description": "Cuenta (Body/03, Neutral 2).",
+      "default": "\"@jamonjoselito\"",
+      "control": "text"
+    },
+    {
+      "name": "showTag",
+      "figma": "Show Tag",
+      "description": "Muestra la cuenta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "href",
+      "description": "Enlace a la publicación.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-2",
+        "usage": "cuenta"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "foto–cuenta (vertical)"
+      },
+      {
+        "token": "--spacers-fixed-fx-13",
+        "usage": "foto–cuenta (horizontal, 80 px)"
+      }
+    ],
+    "typography": [
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Foto",
+    "Cuenta"
+  ],
+  "behavior": [
+    "Ancho de la columna."
+  ],
+  "content": [],
+  "a11y": [
+    "Con href es un enlace; la foto lleva alt."
+  ],
+  "related": [
+    "M23-Cards-Gallery"
+  ],
+  "images": [
+    {
+      "hash": "b6732f31eb7aed43b04b8b535ce53b66729c382f",
+      "usage": "foto"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: en Vertical=No la separación foto–texto es Spacers Fixed/fx-13 (80 px), mucho mayor que en vertical (32 px): se replica, pero parece un error. Avisar a diseño."
+  ],
+  "codePath": "src/components/CardSocialMedia/CardSocialMedia.jsx"
+}
