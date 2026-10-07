@@ -1,0 +1,196 @@
+{
+  "name": "M05FilterSecondaryMenu",
+  "kind": "module",
+  "title": "M05-Filter-Secondary Menu",
+  "figma": {
+    "nodeId": "61276:141868",
+    "name": "M05-Filter-Secondary Menu",
+    "fp": "91630370"
+  },
+  "description": "Barra de filtros de un listado: número de resultados, filtros aplicados con opción de quitarlos y accesos a Filtrar y Ordenar. Filtrar abre un panel lateral con opciones de radio y botones Borrar/Aplicar.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Status": [
+      "Default",
+      "Desplegado"
+    ],
+    "Filtros Aplicados": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "FiltersNo",
+      "title": "Device=Desktop, Status=Default, Filtros Aplicados=No"
+    },
+    {
+      "story": "FiltersYes",
+      "title": "Device=Desktop, Status=Default, Filtros Aplicados=Yes"
+    },
+    {
+      "story": "PanelNo",
+      "title": "Device=Desktop, Status=Desplegado, Filtros Aplicados=No"
+    },
+    {
+      "story": "PanelYes",
+      "title": "Device=Desktop, Status=Desplegado, Filtros Aplicados=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "`Default` (barra) o `Desplegado` (solo el panel, como en Figma).",
+      "default": "Default",
+      "control": "inline-radio"
+    },
+    {
+      "name": "applied / defaultApplied",
+      "figma": "Filtros Aplicados",
+      "description": "Filtros aplicados (etiquetas). Con alguno, Filtrar y Ordenar pasan a color de enlace.",
+      "default": "[]",
+      "control": "object"
+    },
+    {
+      "name": "onAppliedChange",
+      "description": "Se llama al aplicar, quitar o borrar filtros.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "count / countLabel",
+      "description": "Número de resultados y texto.",
+      "default": "84 productos",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "description": "Título del panel.",
+      "default": "Filtrar precio",
+      "control": "text"
+    },
+    {
+      "name": "options",
+      "figma": "Slot",
+      "description": "Opciones del panel (radio).",
+      "default": "5 rangos de precio",
+      "control": "object"
+    },
+    {
+      "name": "onSort",
+      "description": "Acción de Ordenar.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-2",
+        "usage": "número de resultados"
+      },
+      {
+        "token": "--button-nav-default-text",
+        "usage": "Filtrar y Ordenar"
+      },
+      {
+        "token": "--texts-link",
+        "usage": "Filtrar y Ordenar con filtros"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "bordes"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "padding vertical de la barra"
+      },
+      {
+        "token": "--layout-grids-wrapper-nav",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "resultados-filtros"
+      },
+      {
+        "token": "--layout-spacers-responsive-6",
+        "usage": "etiquetas-Borrar"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "Filtrar-Ordenar"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "paddings del panel"
+      },
+      {
+        "token": "--layout-cols-size-4cols",
+        "usage": "ancho del panel"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "Barra: resultados · Tag XS ×N · Button-Action-Link Borrar · Filtrar · Ordenar",
+    "Panel: título + Button-Icon · listbox_Item_Dropdown (radio) ×N · Button Borrar/Aplicar"
+  ],
+  "behavior": [
+    "Filtrar abre el panel como cajón lateral con Overlay; Esc o clic fuera lo cierran.",
+    "Aplicar está desactivado sin selección.",
+    "Por debajo de 768 px, las etiquetas pasan a una segunda línea y los botones del panel se apilan."
+  ],
+  "content": [
+    {
+      "field": "Etiquetas",
+      "notes": "Valor del filtro aplicado, en mayúsculas cortas."
+    }
+  ],
+  "a11y": [
+    "Panel con role dialog y radiogroup.",
+    "Filtrar con aria-haspopup y aria-expanded.",
+    "Las X de las etiquetas son botones con nombre."
+  ],
+  "related": [
+    "Tag",
+    "Button-Action-Link",
+    "Button-Icon",
+    "listbox_Item_Dropdown",
+    "Button",
+    "Overlay"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: separaciones 32, 12 y 8 px sin variable → FX-7, FX-3 y FX-2.",
+    "Figma: Filtrar y Ordenar son textos, no botones; en código son button.",
+    "Figma: el cierre del panel usa una flecha a la derecha (Button-Icon arrow-right).",
+    "Figma: el texto de los botones del panel está escrito 'AplicaR', 'borrar' y 'aplicar' (mayúsculas mezcladas); se normaliza a mayúsculas."
+  ],
+  "codePath": "src/modules/M05FilterSecondaryMenu/M05FilterSecondaryMenu.jsx"
+}

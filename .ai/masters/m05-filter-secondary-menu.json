@@ -1,0 +1,65 @@
+{
+ "id": "61276:141868",
+ "name": "M05-Filter-Secondary Menu",
+ "type": "COMPONENT_SET",
+ "fp": "91630370",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Status": [
+   "Default",
+   "Desplegado"
+  ],
+  "Filtros Aplicados": [
+   "Yes",
+   "No"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Status=Default, Filtros Aplicados=No"
+  },
+  {
+   "name": "Device=Mobile, Status=Default, Filtros Aplicados=Yes"
+  },
+  {
+   "name": "Device=Desktop, Status=Default, Filtros Aplicados=No"
+  },
+  {
+   "name": "Device=Desktop, Status=Default, Filtros Aplicados=Yes"
+  },
+  {
+   "name": "Device=Desktop, Status=Desplegado, Filtros Aplicados=No"
+  },
+  {
+   "name": "Device=Desktop, Status=Desplegado, Filtros Aplicados=Yes"
+  },
+  {
+   "name": "Device=Mobile, Status=Desplegado, Filtros Aplicados=No"
+  },
+  {
+   "name": "Device=Mobile, Status=Desplegado, Filtros Aplicados=Yes"
+  }
+ ],
+ "spec": "Barra 1440×64 pad fx-5/Wrapper-Nav, borde inf. Neutral 3: [84 productos Body/03 Neutral 2 · (Tag XS Aseptic con X ×2 gap fx-2 · Button-Action-Link S BORRAR) gap Resp/6] gap 32 · [Filtrar, Ordenar Body/03 Button/Nav/Default/Text o Texts/Link con filtros] gap fx-6. Mobile: tags en segunda línea. Panel 4cols×780: cabecera pad fx-4 (Body/03 + Button-Icon Terciary XS) gap Forms/L/Padding-R; lista listbox_Item_Dropdown Radio (pad fx-4/0) pad 0/fx-4/Resp/4; pie pad fx-4: Aplicar Primary S Disabled o [Borrar Secondary S · Aplicar Primary S] gap fx-2 (vertical en móvil).",
+ "deps": [
+  "Tag",
+  "Button-Action-Link",
+  "Button-Icon",
+  "listbox_Item_Dropdown",
+  "Button"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 202 (space-between), 32, 12, 8, 8 sin variable"
+   }
+  ]
+ }
+}

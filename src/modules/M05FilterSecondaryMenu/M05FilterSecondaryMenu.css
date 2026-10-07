@@ -1,0 +1,43 @@
+/* M05-Filter-Secondary Menu — Figma 61276:141868. Solo tokens. Escritorio desde 768 px. */
+.m05-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacers-fixed-fx-3) var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacers-fixed-fx-5) var(--layout-grids-wrapper-nav);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m05-filter__left { display: contents; }
+.m05-filter__count { color: var(--texts-neutral-2); }
+.m05-filter__applied { display: flex; flex-wrap: wrap; align-items: center; gap: var(--layout-spacers-responsive-6); order: 3; width: 100%; }
+.m05-filter__tags { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-2); margin: 0; padding: 0; list-style: none; }
+.m05-filter__actions { display: flex; gap: var(--spacers-fixed-fx-6); }
+.m05-filter__action { margin: 0; padding: 0; border: 0; background: none; color: var(--button-nav-default-text); cursor: pointer; }
+.m05-filter.has-filters .m05-filter__action { color: var(--texts-link); }
+.m05-filter__action:focus { outline: none; }
+.m05-filter__action:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+
+/* Panel */
+.m05-panel { display: flex; flex-direction: column; box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m05-panel__head { display: flex; align-items: center; gap: var(--layout-forms-l-padding-r); padding: var(--spacers-fixed-fx-4); }
+.m05-panel__title { flex: 1; }
+.m05-panel__list { display: flex; flex-direction: column; flex: 1; padding: 0 var(--spacers-fixed-fx-4) var(--layout-spacers-responsive-4); }
+.m05-panel__list .listbox-item { padding: var(--spacers-fixed-fx-4) 0; border-bottom: 1px solid var(--strokes-icons-neutral-3); }
+.m05-panel__list .listbox-item:last-child { border-bottom: 0; }
+.m05-panel__footer { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); padding: var(--spacers-fixed-fx-4); }
+.m05-panel__footer > * { width: 100%; }
+.m05-filter__drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 101; max-width: var(--layout-cols-size-4cols); overflow-y: auto; }
+
+@media (min-width: 768px) {
+  .m05-filter { flex-wrap: nowrap; }
+  .m05-filter__left { display: flex; align-items: center; gap: var(--spacers-fixed-fx-7); }
+  .m05-filter__applied { order: 0; width: auto; }
+  .m05-panel { width: var(--layout-cols-size-4cols); }
+  .m05-panel__footer { flex-direction: row; }
+  .m05-panel__footer > * { flex: 1; }
+}
