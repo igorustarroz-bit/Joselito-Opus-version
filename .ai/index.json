@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:33:48.170Z",
+  "generatedAt": "2026-10-07T06:37:02.025Z",
   "output": "react-storybook",
   "items": [
     {
@@ -458,7 +458,7 @@
       "builtFp": "205b8454"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Tag",
@@ -469,7 +469,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "9/9",
-      "key": "component:tag"
+      "key": "component:tag",
+      "builtFp": "2ab8d339"
     },
     {
       "status": "todo",

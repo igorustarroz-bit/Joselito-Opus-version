@@ -1,0 +1,204 @@
+{
+  "name": "Tag",
+  "kind": "component",
+  "title": "Tag",
+  "figma": {
+    "nodeId": "49723:4763",
+    "name": "Tag",
+    "fp": "592c7654"
+  },
+  "description": "Etiqueta corta para clasificar o destacar contenido: categorías y filtros (`Transaction`), novedades sobre fondo de acento (`New`, \"NUEVO\") o etiquetas neutras solo con borde (`Aseptic`). Opcionalmente lleva una X para quitarla (filtros activos). Ancho según el texto.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Size": [
+      "L",
+      "XS",
+      "XL"
+    ],
+    "Type": [
+      "Transaction",
+      "New",
+      "Aseptic"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "TransactionXL",
+      "title": "Size=XL, Type=Transaction"
+    },
+    {
+      "story": "TransactionL",
+      "title": "Size=L, Type=Transaction"
+    },
+    {
+      "story": "TransactionXS",
+      "title": "Size=XS, Type=Transaction"
+    },
+    {
+      "story": "NewXL",
+      "title": "Size=XL, Type=New"
+    },
+    {
+      "story": "NewL",
+      "title": "Size=L, Type=New"
+    },
+    {
+      "story": "NewXS",
+      "title": "Size=XS, Type=New"
+    },
+    {
+      "story": "AsepticXL",
+      "title": "Size=XL, Type=Aseptic"
+    },
+    {
+      "story": "AsepticL",
+      "title": "Size=L, Type=Aseptic"
+    },
+    {
+      "story": "AsepticXS",
+      "title": "Size=XS, Type=Aseptic"
+    },
+    {
+      "story": "ConRemove",
+      "title": "-> Remove = true (XL · L · XS)"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "description": "Texto de la etiqueta. Por defecto \"LABEL\" (\"NUEVO\" en New), como en el máster.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Transaction`, `New` o `Aseptic`.",
+      "default": "Transaction",
+      "control": "inline-radio"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "`XL` (46 px, Body/02), `L` (38 px, Labels/02) o `XS` (32 px, Labels/01).",
+      "default": "L",
+      "control": "inline-radio"
+    },
+    {
+      "name": "removable",
+      "figma": "-> Remove",
+      "description": "Muestra la X de quitar (no existe en New).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "onRemove",
+      "description": "Si se pasa, la X es un botón accesible que llama a esta función.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "removeLabel",
+      "description": "Prefijo del nombre accesible de la X (\"Quitar LABEL\").",
+      "default": "\"Quitar\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema (`data-theme`). Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo Transaction"
+      },
+      {
+        "token": "--backgrounds-accent-base",
+        "usage": "fondo New"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde Transaction y Aseptic"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto Transaction"
+      },
+      {
+        "token": "--texts-inverted",
+        "usage": "texto New"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "texto Aseptic"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2 / fx-3",
+        "usage": "padding XS / XL"
+      },
+      {
+        "token": "calc(fx-2 + fx-0)",
+        "usage": "padding de 10 px en L"
+      },
+      {
+        "token": "--layout-spacers-responsive-1/2, --spacers-fixed-fx-1/2",
+        "usage": "separación texto–X"
+      }
+    ],
+    "typography": [
+      "ts-body-02",
+      "ts-labels-02",
+      "ts-labels-01"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "No fija subtema; hereda del contenedor."
+  },
+  "anatomy": [
+    "Contenedor con borde interior de 1 px (Transaction, Aseptic)",
+    "Texto (Body/02 o Labels)",
+    "X opcional para quitar (12/16/20 px)"
+  ],
+  "behavior": [
+    "Sin estados de interacción propios: es informativa.",
+    "Con `removable` + `onRemove`, la X es un botón con foco visible.",
+    "Ancho según contenido, sin salto de línea."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "1–2 palabras. Se escribe tal cual (el máster usa mayúsculas: \"LABEL\", \"NUEVO\")."
+    }
+  ],
+  "a11y": [
+    "La X tiene nombre accesible \"Quitar (texto)\".",
+    "El color del texto cumple el contraste del subtema (tokens semánticos)."
+  ],
+  "related": [
+    "Card Product",
+    "M05-Filter-Secondary Menu",
+    "Button-Action-Link"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: padding 8/10/12 px sin variable → FX-2, FX-2 + FX-0 (10 px, no existe token) y FX-3. Avisar a diseño para ligarlos.",
+    "Figma: Type=New no tiene la propiedad Remove (sin X).",
+    "Figma: Transaction L tiene padding lateral 10 px y New/Aseptic L 8 px: se replica."
+  ],
+  "codePath": "src/components/Tag/Tag.jsx"
+}

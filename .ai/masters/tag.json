@@ -1,0 +1,11 @@
+{ "id": "49723:4763", "name": "Tag", "type": "COMPONENT_SET", "page": "📦 Components", "fp": "592c7654", "readAt": "2026-10-07T06:40:00Z",
+  "$note": "Digest compacto (lectura .ai/tmp/spec.js, misma huella que snippets/digest.js).",
+  "props": { "-> Remove": "BOOLEAN", "Size": ["L", "XS", "XL"], "Type": ["Transaction", "New", "Aseptic"] },
+  "variants": [
+    { "name": "Size=XS", "h": 32, "padding": 8, "text": "Labels/01", "x": 12 },
+    { "name": "Size=L", "h": 38, "padding": "10 (Transaction) · 10/8 (New, Aseptic)", "text": "Labels/02", "x": 16 },
+    { "name": "Size=XL", "h": 46, "padding": 12, "text": "Body/02", "x": 20 } ],
+  "types": { "Transaction": "fill Backgrounds/Base · stroke Strokes-Icons/Neutral 3 · text Texts/Neutral 1 · gap Spacers Responsive/1|2",
+             "New": "fill Backgrounds/Accent-Base · sin stroke · text Texts/Inverted · sin X", "Aseptic": "sin fill · stroke Neutral 3 · text Texts/Base · gap fx-1|fx-2" },
+  "texts": [ { "chars": "LABEL" }, { "chars": "NUEVO" } ], "deps": ["X"], "images": [],
+  "audit": { "errors": 0, "warns": 1, "items": [ { "sev": "warn", "code": "HARD_SPACING", "msg": "padding 8/10/12 px y gap 10 px (New) sin variable" } ] } }

@@ -1,0 +1,38 @@
+/* Tag — Figma 49723:4763. Solo tokens. Borde interior de 1 px (border + border-box). */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: fit-content;
+  gap: var(--tag-gap);
+  padding: var(--tag-pad-y) var(--tag-pad-x);
+  border: 1px solid var(--tag-stroke);
+  background: var(--tag-fill);
+  color: var(--tag-text);
+  white-space: nowrap;
+}
+/* Tamaños (Figma: XS 8 · L 10 vertical y 8–10 lateral · XL 12; 10 px no existe como token → FX-2 + FX-0) */
+.tag--xs { --tag-pad-y: var(--spacers-fixed-fx-2); --tag-pad-x: var(--spacers-fixed-fx-2); }
+.tag--l { --tag-pad-y: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)); --tag-pad-x: var(--spacers-fixed-fx-2); }
+.tag--xl { --tag-pad-y: var(--spacers-fixed-fx-3); --tag-pad-x: var(--spacers-fixed-fx-3); }
+.tag--transaction.tag--l { --tag-pad-x: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)); }
+
+/* Tipos */
+.tag--transaction { --tag-fill: var(--backgrounds-base); --tag-stroke: var(--strokes-icons-neutral-3); --tag-text: var(--texts-neutral-1); --tag-gap: var(--layout-spacers-responsive-1); }
+.tag--transaction.tag--xl { --tag-gap: var(--layout-spacers-responsive-2); }
+.tag--new { --tag-fill: var(--backgrounds-accent-base); --tag-stroke: transparent; --tag-text: var(--texts-inverted); --tag-gap: 0; }
+.tag--aseptic { --tag-fill: transparent; --tag-stroke: var(--strokes-icons-neutral-3); --tag-text: var(--texts-base); --tag-gap: var(--spacers-fixed-fx-1); }
+.tag--aseptic.tag--xl { --tag-gap: var(--spacers-fixed-fx-2); }
+
+.tag__remove {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+.tag__remove:focus { outline: none; }
+.tag__remove:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }

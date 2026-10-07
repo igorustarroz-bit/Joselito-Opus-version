@@ -28,5 +28,10 @@
     "name": "Button",
     "path": "src/components/Button/Button.jsx",
     "fp": "c16b8d3f"
+  },
+  "49723:4763": {
+    "name": "Tag",
+    "path": "src/components/Tag/Tag.jsx",
+    "fp": "592c7654"
   }
 }
