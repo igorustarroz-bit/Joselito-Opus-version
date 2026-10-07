@@ -1,0 +1,26 @@
+{
+ "id": "63609:148071",
+ "name": "Block Row Address",
+ "type": "COMPONENT_SET",
+ "fp": "c821785f",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Address": "TEXT",
+  "User": "TEXT",
+  "Device": [
+   "Desktop"
+  ],
+  "Type": [
+   "Horizontal"
+  ]
+ },
+ "spec": "V gap 8: fila (space-between) Title/01 + Button-Icon Terciary S ArrowRight; Body/04 Base + Body/04 Neutral 2",
+ "deps": [
+  "Button-Icon"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

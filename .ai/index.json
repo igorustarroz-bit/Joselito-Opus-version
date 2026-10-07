@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:17:45.210Z",
+  "generatedAt": "2026-10-07T07:17:45.335Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1024,7 +1024,7 @@
       "key": "component:accordion"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Block Row Address",
@@ -1037,7 +1037,8 @@
       ],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:block-row-address"
+      "key": "component:block-row-address",
+      "builtFp": "51731a73"
     },
     {
       "status": "done",

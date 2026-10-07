@@ -1,0 +1,6 @@
+/* Block Row Address — Figma 63609:148071. Solo tokens. */
+.block-row-address { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); width: 100%; color: var(--texts-base); }
+.block-row-address__head { display: flex; align-items: center; justify-content: space-between; gap: var(--spacers-fixed-fx-4); }
+.block-row-address__title { margin: 0; }
+.block-row-address__lines { display: flex; flex-direction: column; margin: 0; }
+.block-row-address__user { color: var(--texts-neutral-2); }

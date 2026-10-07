@@ -1,0 +1,120 @@
+{
+  "name": "BlockRowAddress",
+  "kind": "component",
+  "title": "Block Row Address",
+  "figma": {
+    "nodeId": "63609:148071",
+    "name": "Block Row Address",
+    "fp": "c821785f"
+  },
+  "description": "Fila de dirección guardada del área de cliente: calle con botón de acción, ciudad y titular.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop"
+    ],
+    "Type": [
+      "Horizontal"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopHorizontal",
+      "title": "Device=Desktop, Type=Horizontal"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Calle (Title/01).",
+      "default": "\"Gran Vía, 68 9 C\"",
+      "control": "text"
+    },
+    {
+      "name": "address",
+      "figma": "Address",
+      "description": "CP, ciudad, país (Body/04).",
+      "default": "\"28013 Madrid, Madrid, ES\"",
+      "control": "text"
+    },
+    {
+      "name": "user",
+      "figma": "User",
+      "description": "Titular (Body/04, Neutral 2).",
+      "default": "\"Elmer Fuud\"",
+      "control": "text"
+    },
+    {
+      "name": "href / onAction / actionLabel",
+      "description": "Acción del botón (Button-Icon Terciary S, ArrowRight).",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "calle y CP"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "titular"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "cabecera–líneas (8 px sin variable)"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "calle–botón (16 px sin variable)"
+      }
+    ],
+    "typography": [
+      "ts-title-01",
+      "ts-body-04"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Calle + Button-Icon",
+    "Ciudad",
+    "Titular"
+  ],
+  "behavior": [
+    "Ancho del contenedor; el botón queda a la derecha."
+  ],
+  "content": [],
+  "a11y": [
+    "El botón tiene nombre accesible con la calle."
+  ],
+  "related": [
+    "M-área de cliente",
+    "Block Address"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: gaps de 8 y 16 px sin variable → FX-2 y FX-4."
+  ],
+  "codePath": "src/components/BlockRowAddress/BlockRowAddress.jsx"
+}
