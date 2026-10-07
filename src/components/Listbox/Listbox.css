@@ -1,0 +1,10 @@
+/* Listbox — Figma 49650:12399. Solo tokens. */
+.listbox {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--spacers-fixed-fx-6);
+  border: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+}

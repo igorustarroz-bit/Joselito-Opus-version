@@ -1,0 +1,20 @@
+{
+ "id": "49650:12399",
+ "name": "Listbox",
+ "type": "COMPONENT",
+ "fp": "ae0f9e7a",
+ "$note": "Digest compacto.",
+ "props": {
+  "Slot": "SLOT"
+ },
+ "spec": "320 AL:V pad 0/fx-6, fill Backgrounds/Base, stroke Neutral 3 1 px; slot con 4 listbox_Item_Dropdown",
+ "deps": [
+  "listbox_Item_Dropdown"
+ ],
+ "images": [],
+ "audit": {
+  "errors": 0,
+  "warns": 0,
+  "items": []
+ }
+}

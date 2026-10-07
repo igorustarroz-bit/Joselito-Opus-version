@@ -1,0 +1,96 @@
+{
+  "name": "Listbox",
+  "kind": "component",
+  "title": "Listbox",
+  "figma": {
+    "nodeId": "49650:12399",
+    "name": "Listbox",
+    "fp": "ae0f9e7a"
+  },
+  "description": "Panel de lista desplegable (p. ej. el desplegable de un Input select): fondo base con borde fino y opciones listbox_Item_Dropdown apiladas.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "ConRadios",
+      "title": "Con radios (opciones como hijos)"
+    }
+  ],
+  "props": [
+    {
+      "name": "children",
+      "figma": "Slot",
+      "description": "Opciones (ListboxItem). Equivale al slot de Figma.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "items",
+      "description": "Alternativa a children: array de props de ListboxItem.",
+      "default": "—",
+      "control": "object"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible del grupo.",
+      "default": "\"Opciones\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "padding lateral"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Contenedor con borde de 1 px",
+    "Opciones apiladas (slot)"
+  ],
+  "behavior": [
+    "Ancho del contenedor; alto según el número de opciones."
+  ],
+  "content": [],
+  "a11y": [
+    "Grupo con aria-label; cada opción gestiona su propio input."
+  ],
+  "related": [
+    "listbox_Item_Dropdown",
+    "Input"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el máster usa un slot con cuatro instancias de listbox_Item_Dropdown sin control (Show Radio=false)."
+  ],
+  "codePath": "src/components/Listbox/Listbox.jsx"
+}

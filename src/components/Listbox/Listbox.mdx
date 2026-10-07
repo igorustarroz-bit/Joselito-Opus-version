@@ -1,0 +1,75 @@
+{/* Generado por scripts/docs-generator.mjs desde Listbox.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Listbox.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Listbox
+
+## Introducción
+
+Panel de lista desplegable (p. ej. el desplegable de un Input select): fondo base con borde fino y opciones listbox_Item_Dropdown apiladas.
+
+
+Figma: `Listbox` (`49650:12399`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Contenedor con borde de 1 px
+- Opciones apiladas (slot)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Ancho del contenedor; alto según el número de opciones.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Con radios (opciones como hijos)
+
+<Canvas of={Stories.ConRadios} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--strokes-icons-neutral-3` | borde |
+| spacing | `--spacers-fixed-fx-6` | padding lateral |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| children | Opciones (ListboxItem). Equivale al slot de Figma. | — |  |
+| items | Alternativa a children: array de props de ListboxItem. | — | object |
+| label | Nombre accesible del grupo. | "Opciones" | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Grupo con aria-label; cada opción gestiona su propio input.
+
+## Componentes relacionados
+
+- listbox_Item_Dropdown
+- Input

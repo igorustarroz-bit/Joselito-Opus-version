@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 35/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 36/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -58,7 +58,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] InputQuantity `63264:120792` <!-- k:component:input-quantity -->
 - [x] Card Product `61276:118038` — 4 variantes · 4 img · usa: Aspect Ratio, Button, Button-Action-Link, InputQuantity, Tag <!-- k:component:card-product -->
 - [x] listbox_Item_Dropdown `49650:11827` — 7 variantes · 7 img · usa: Aspect Ratio, Checkboxes-Radios <!-- k:component:listbox-item-dropdown -->
-- [ ] Listbox `49650:12399` — usa: listbox_Item_Dropdown <!-- k:component:listbox -->
+- [x] Listbox `49650:12399` — usa: listbox_Item_Dropdown <!-- k:component:listbox -->
 - [ ] Input `49118:2300` — 28 variantes · usa: Listbox, listbox_Item_Dropdown <!-- k:component:input -->
 - [ ] menu-item-list `59289:58053` — 2 variantes <!-- k:component:menu-item-list -->
 - [ ] RowButtons `63609:144479` — 2 variantes · usa: Button <!-- k:component:row-buttons -->

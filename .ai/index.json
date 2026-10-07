@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:49:02.619Z",
+  "generatedAt": "2026-10-07T06:49:29.846Z",
   "output": "react-storybook",
   "items": [
     {
@@ -572,7 +572,7 @@
       "builtFp": "d4c21780"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Listbox",
@@ -585,7 +585,8 @@
       ],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:listbox"
+      "key": "component:listbox",
+      "builtFp": "4b284e69"
     },
     {
       "status": "todo",
