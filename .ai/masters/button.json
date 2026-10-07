@@ -1,0 +1,30 @@
+{
+  "id": "49038:9189", "name": "Button", "type": "COMPONENT_SET", "page": "📦 Components", "pageId": "5027:345",
+  "fp": "c16b8d3f", "readAt": "2026-10-06T16:24:00.000Z",
+  "$note": "Digest compactado (respuesta del MCP limitada a 20 kB). fp calculado con la misma firma que snippets/digest.js.",
+  "description": "Hay tres tipos distintos de botones, con distintos usos y propiedades. De cara a simplificar su uso, se han definido tres componentes distintos.",
+  "props": { "Show Icon Right": "BOOLEAN", "Show Icon Left": "BOOLEAN", "Text": "TEXT", "Ico1": "INSTANCE_SWAP", "Ico2": "INSTANCE_SWAP", "Type": ["Primary", "Secondary", "Terciary"], "Size": ["L", "M", "S", "XS"], "State": ["Default", "Hover", "Focus", "Selected", "Disabled"] },
+  "variantCount": 60,
+  "deps": ["CalendarBlank", "ArrowRight"], "vectors": ["CalendarBlank", "ArrowRight"],
+  "tokens": {
+    "colors": ["Button/{Primary|Secondary|Terciary}/{Default|Hover|Focused|Selected|Disabled}/{Fill|Stroke|Text}"],
+    "sizes": ["Layout/Button/{L|M|S|XS}/Size", "Layout/Button/{L|M|S|XS}/Padding", "Layout/Button/XS/Min-Width"],
+    "spacing": ["Layout/Spacers Responsive/2"],
+    "radius": ["Layout/Corners/None"],
+    "textStyles": ["CTA/03 (L, M)", "CTA/02 (S)", "CTA/01 (XS)"]
+  },
+  "iconSize": { "L": 24, "M": 20, "S": 20, "XS": 16 },
+  "minWidth": { "L": 168, "M": 162, "S": 140, "XS": "56 (solo Primary, ligado a Layout/Button/XS/Min-Width)" },
+  "strokes": {
+    "Primary": "Hover y Focus con stroke 1px (M con grosor 0)",
+    "Secondary": "paints de stroke presentes pero grosor 0 en todas las variantes → sin borde visible",
+    "Terciary": "stroke 1px en todos los estados (M Selected grosor 0)"
+  },
+  "texts": [{ "layer": "Text", "chars": "Button", "style": "CTA/03" }], "images": [],
+  "audit": { "errors": 0, "warns": 4, "items": [
+    { "sev": "warn", "code": "HARD_SPACING", "msg": "Primary S Default: padding 13/20 px sin variable" },
+    { "sev": "warn", "code": "INCONSISTENT", "msg": "Secondary/Terciary L Default usan Layout/Button/M/Padding (24) en vez de L/Padding (32)" },
+    { "sev": "warn", "code": "HARD_MIN_WIDTH", "msg": "min-width 168/162/140 px sin variable (tokens Min-Width: L 168, M 110, S 96)" },
+    { "sev": "warn", "code": "INCONSISTENT", "msg": "grosor de stroke distinto entre tamaños del mismo estado (Primary Hover M = 0)" }
+  ] }
+}

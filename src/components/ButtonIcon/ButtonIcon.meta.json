@@ -1,0 +1,278 @@
+{
+  "name": "ButtonIcon",
+  "kind": "component",
+  "title": "Button-Icon",
+  "figma": {
+    "nodeId": "49038:9364",
+    "name": "Button-Icon",
+    "fp": "c3a02c4f"
+  },
+  "description": "Botón cuadrado que solo muestra un icono (por defecto una flecha). Se usa para acciones compactas: avanzar/retroceder en carruseles, cerrar, volver, enviar un campo… Tres tipos (Primary relleno, Secondary relleno con borde, Terciary solo borde) y cinco tamaños (XL solo en Primary). Es `<a>` con `href` y `<button>` sin él.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Primary",
+      "Secondary",
+      "Terciary"
+    ],
+    "Size": [
+      "XL",
+      "L",
+      "M",
+      "S",
+      "XS"
+    ],
+    "State": [
+      "Default",
+      "Hover",
+      "Selected",
+      "Disabled",
+      "Focussed"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "PrimaryDefault",
+      "title": "Type=Primary, Size=L, State=Default"
+    },
+    {
+      "story": "PrimaryHover",
+      "title": "Type=Primary, Size=L, State=Hover"
+    },
+    {
+      "story": "PrimaryFocussed",
+      "title": "Type=Primary, Size=L, State=Focussed"
+    },
+    {
+      "story": "PrimarySelected",
+      "title": "Type=Primary, Size=L, State=Selected"
+    },
+    {
+      "story": "PrimaryDisabled",
+      "title": "Type=Primary, Size=L, State=Disabled"
+    },
+    {
+      "story": "SecondaryDefault",
+      "title": "Type=Secondary, Size=L, State=Default"
+    },
+    {
+      "story": "SecondaryHover",
+      "title": "Type=Secondary, Size=L, State=Hover"
+    },
+    {
+      "story": "SecondaryFocussed",
+      "title": "Type=Secondary, Size=L, State=Focussed"
+    },
+    {
+      "story": "SecondarySelected",
+      "title": "Type=Secondary, Size=L, State=Selected"
+    },
+    {
+      "story": "SecondaryDisabled",
+      "title": "Type=Secondary, Size=L, State=Disabled"
+    },
+    {
+      "story": "TerciaryDefault",
+      "title": "Type=Terciary, Size=L, State=Default"
+    },
+    {
+      "story": "TerciaryHover",
+      "title": "Type=Terciary, Size=L, State=Hover"
+    },
+    {
+      "story": "TerciaryFocussed",
+      "title": "Type=Terciary, Size=L, State=Focussed"
+    },
+    {
+      "story": "TerciarySelected",
+      "title": "Type=Terciary, Size=L, State=Selected"
+    },
+    {
+      "story": "TerciaryDisabled",
+      "title": "Type=Terciary, Size=L, State=Disabled"
+    },
+    {
+      "story": "SizeXL",
+      "title": "Type=Primary, Size=XL, State=Default"
+    },
+    {
+      "story": "SizeL",
+      "title": "Type=Primary, Size=L, State=Default"
+    },
+    {
+      "story": "SizeM",
+      "title": "Type=Primary, Size=M, State=Default"
+    },
+    {
+      "story": "SizeS",
+      "title": "Type=Primary, Size=S, State=Default"
+    },
+    {
+      "story": "SizeXS",
+      "title": "Type=Primary, Size=XS, State=Default"
+    },
+    {
+      "story": "SecondarySizes",
+      "title": "Type=Secondary, Size=L · M · S · XS"
+    },
+    {
+      "story": "TerciarySizes",
+      "title": "Type=Terciary, Size=L · M · S · XS"
+    },
+    {
+      "story": "ComoEnlace",
+      "title": "Como enlace (con href)"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Primary` (relleno), `Secondary` (relleno + borde) o `Terciary` (solo borde).",
+      "default": "Primary",
+      "control": "inline-radio"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "Lado del cuadrado: XL 104 · L 64 · M 56 · S 48 · XS 40 px (tokens Layout/Button/TAMAÑO/Size, responsive). XL solo existe para Primary en Figma.",
+      "default": "L",
+      "control": "inline-radio"
+    },
+    {
+      "name": "icon",
+      "figma": "Instance",
+      "description": "Icono del set (Instance swap en Figma). En el máster: ArrowRight.",
+      "default": "arrow-right",
+      "control": "select"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible (`aria-label`). Obligatorio: el botón no tiene texto visible.",
+      "default": "\"Botón\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Si se pasa, se renderiza `<a>`; si no, `<button>`.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "State=Selected",
+      "description": "Estado seleccionado (toggle); se expone como `aria-pressed`.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "State=Disabled",
+      "description": "Desactiva el botón.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación: fuerza Hover o Focussed. En producción son estados nativos.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema (`data-theme`). Por defecto hereda el del contenedor.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-TIPO-ESTADO-fill",
+        "usage": "fondo (Primary y Secondary siempre; Terciary solo Selected y Disabled)"
+      },
+      {
+        "token": "--button-TIPO-ESTADO-stroke",
+        "usage": "borde de 1 px (Primary solo en Hover; Secondary salvo Disabled; Terciary salvo Disabled)"
+      },
+      {
+        "token": "--button-TIPO-ESTADO-icon",
+        "usage": "color del icono"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "contorno de foco con teclado"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-button-xl-size … --layout-button-xs-size",
+        "usage": "lado del cuadrado"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "separación del contorno de foco"
+      }
+    ],
+    "radius": [
+      "--layout-corners-none"
+    ],
+    "typography": []
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "No fija subtema: los tokens Button/* se adaptan al subtema del contenedor."
+  },
+  "anatomy": [
+    "Contenedor cuadrado (tamaño por token responsive, sin radio)",
+    "Borde interior de 1 px según tipo y estado",
+    "Icono centrado (32/24/24/20/16 px según tamaño)"
+  ],
+  "behavior": [
+    "Hover: tokens Button/TIPO/Hover (Primary gana un borde de 1 px).",
+    "Focus (teclado): tokens Button/TIPO/Focused + contorno de 1 px separado 4 px (:focus-visible).",
+    "Selected: estado de toggle por prop (`selected` → aria-pressed).",
+    "Disabled: tokens Button/TIPO/Disabled; sin borde; no recibe foco ni hover.",
+    "Tamaño fijo cuadrado; el icono no cambia de tamaño entre estados."
+  ],
+  "content": [
+    {
+      "field": "Icono",
+      "notes": "Un icono del set que exprese la acción (flecha, cerrar, etc.)."
+    },
+    {
+      "field": "Label",
+      "notes": "Texto para lectores de pantalla: verbo de la acción (\"Siguiente\", \"Cerrar\")."
+    }
+  ],
+  "a11y": [
+    "Siempre con `label` (aria-label): no hay texto visible.",
+    "Foco visible con teclado (:focus-visible).",
+    "`selected` se anuncia como botón pulsado (aria-pressed).",
+    "El icono es decorativo (aria-hidden)."
+  ],
+  "related": [
+    "Button",
+    "Button-Action-Link",
+    "Icon",
+    "Go_Back"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: Primary L y M en Default llevan el icono a 20 px y el resto de estados a 24 px (salta al pasar el ratón). Se usa 24 px en todos los estados. Avisar a diseño.",
+    "Figma: el padding horizontal (24/16/10/4 px) no está ligado a variable; no se usa porque el botón es cuadrado de tamaño fijo con el icono centrado.",
+    "Figma: Focussed no tiene indicador de foco visible. Se añade contorno :focus-visible (decisión de Igor, 2026-10-06, mismo criterio que Button-Action-Link). Avisar a diseño.",
+    "Figma: XL solo existe para Primary. En código cualquier tipo acepta XL (mismos tokens); usarlo solo con Primary.",
+    "Figma: hay un prototipo de hover en Terciary XS (MOUSE_ENTER/LEAVE); en código el hover es nativo para todos."
+  ],
+  "codePath": "src/components/ButtonIcon/ButtonIcon.jsx"
+}

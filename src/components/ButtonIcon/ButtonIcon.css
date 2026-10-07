@@ -1,0 +1,129 @@
+/* Button-Icon — Figma 49038:9364. Solo tokens (generado a partir del digest; ver ButtonIcon.meta.json).
+   Cuadrado de lado Layout/Button/<Size>/Size, sin radio (Corners/None), borde interior de 1 px
+   (border + border-box: no suma tamaño), icono centrado con el color Button/<Type>/<State>/Icon. */
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--bi-size);
+  height: var(--bi-size);
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--bi-stroke);
+  border-radius: var(--layout-corners-none);
+  background: var(--bi-fill);
+  color: var(--bi-icon);
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-icon--xl { --bi-size: var(--layout-button-xl-size); }
+.button-icon--l { --bi-size: var(--layout-button-l-size); }
+.button-icon--m { --bi-size: var(--layout-button-m-size); }
+.button-icon--s { --bi-size: var(--layout-button-s-size); }
+.button-icon--xs { --bi-size: var(--layout-button-xs-size); }
+
+/* Foco solo con teclado: tokens Focused + contorno (decisión de Igor, accesibilidad) */
+.button-icon:focus { outline: none; }
+.button-icon:focus-visible,
+.button-icon.is-focus {
+  outline: 1px solid var(--strokes-icons-base);
+  outline-offset: var(--spacers-fixed-fx-1);
+}
+
+/* Primary */
+.button-icon--primary {
+  --bi-fill: var(--button-primary-default-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-primary-default-icon);
+}
+.button-icon--primary:hover,
+.button-icon--primary.is-hover {
+  --bi-fill: var(--button-primary-hover-fill);
+  --bi-stroke: var(--button-primary-hover-stroke);
+  --bi-icon: var(--button-primary-hover-icon);
+}
+.button-icon--primary:focus-visible,
+.button-icon--primary.is-focus {
+  --bi-fill: var(--button-primary-focused-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-primary-focused-icon);
+}
+.button-icon--primary.is-selected,
+.button-icon--primary[aria-pressed='true'] {
+  --bi-fill: var(--button-primary-selected-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-primary-selected-icon);
+}
+.button-icon--primary:disabled,
+.button-icon--primary[aria-disabled='true'] {
+  --bi-fill: var(--button-primary-disabled-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-primary-disabled-icon);
+  cursor: not-allowed;
+}
+
+/* Secondary */
+.button-icon--secondary {
+  --bi-fill: var(--button-secondary-default-fill);
+  --bi-stroke: var(--button-secondary-default-stroke);
+  --bi-icon: var(--button-secondary-default-icon);
+}
+.button-icon--secondary:hover,
+.button-icon--secondary.is-hover {
+  --bi-fill: var(--button-secondary-hover-fill);
+  --bi-stroke: var(--button-secondary-hover-stroke);
+  --bi-icon: var(--button-secondary-hover-icon);
+}
+.button-icon--secondary:focus-visible,
+.button-icon--secondary.is-focus {
+  --bi-fill: var(--button-secondary-focused-fill);
+  --bi-stroke: var(--button-secondary-focused-stroke);
+  --bi-icon: var(--button-secondary-focused-icon);
+}
+.button-icon--secondary.is-selected,
+.button-icon--secondary[aria-pressed='true'] {
+  --bi-fill: var(--button-secondary-selected-fill);
+  --bi-stroke: var(--button-secondary-selected-stroke);
+  --bi-icon: var(--button-secondary-selected-icon);
+}
+.button-icon--secondary:disabled,
+.button-icon--secondary[aria-disabled='true'] {
+  --bi-fill: var(--button-secondary-disabled-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-secondary-disabled-icon);
+  cursor: not-allowed;
+}
+
+/* Terciary */
+.button-icon--terciary {
+  --bi-fill: transparent;
+  --bi-stroke: var(--button-terciary-default-stroke);
+  --bi-icon: var(--button-terciary-default-icon);
+}
+.button-icon--terciary:hover,
+.button-icon--terciary.is-hover {
+  --bi-fill: transparent;
+  --bi-stroke: var(--button-terciary-hover-stroke);
+  --bi-icon: var(--button-terciary-hover-icon);
+}
+.button-icon--terciary:focus-visible,
+.button-icon--terciary.is-focus {
+  --bi-fill: transparent;
+  --bi-stroke: var(--button-terciary-focused-stroke);
+  --bi-icon: var(--button-terciary-focused-icon);
+}
+.button-icon--terciary.is-selected,
+.button-icon--terciary[aria-pressed='true'] {
+  --bi-fill: var(--button-terciary-selected-fill);
+  --bi-stroke: var(--button-terciary-selected-stroke);
+  --bi-icon: var(--button-terciary-selected-icon);
+}
+.button-icon--terciary:disabled,
+.button-icon--terciary[aria-disabled='true'] {
+  --bi-fill: var(--button-terciary-disabled-fill);
+  --bi-stroke: transparent;
+  --bi-icon: var(--button-terciary-disabled-icon);
+  cursor: not-allowed;
+}

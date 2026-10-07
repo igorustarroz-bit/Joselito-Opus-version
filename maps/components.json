@@ -18,5 +18,10 @@
     "name": "ButtonActionLink",
     "path": "src/components/ButtonActionLink/ButtonActionLink.jsx",
     "fp": "b8ad2b00"
+  },
+  "49038:9364": {
+    "name": "ButtonIcon",
+    "path": "src/components/ButtonIcon/ButtonIcon.jsx",
+    "fp": "c3a02c4f"
   }
 }
