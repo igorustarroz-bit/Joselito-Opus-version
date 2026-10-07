@@ -1,0 +1,40 @@
+{
+ "id": "63264:50565",
+ "name": "Input-Code",
+ "type": "COMPONENT_SET",
+ "fp": "7ce54e3c",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Info": "BOOLEAN",
+  "Show 4": "BOOLEAN",
+  "Show 5": "BOOLEAN",
+  "Show 6": "BOOLEAN",
+  "⌙ Num1": "TEXT",
+  "⌙ Num2": "TEXT",
+  "⌙ Num3": "TEXT",
+  "⌙ Num4": "TEXT",
+  "⌙ Num5": "TEXT",
+  "⌙ Num6": "TEXT",
+  "Info": "TEXT",
+  "State": [
+   "Default",
+   "Hover",
+   "Focused",
+   "Filled",
+   "Error",
+   "Validated",
+   "Disabled"
+  ]
+ },
+ "spec": "Cols H gap fx-4: 6 × Input 40×40 (Forms/ESTADO fill/stroke, '1' Input-M/Text); Info gap Forms/L/Message-Distance",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 4/8 px sin variable (como Input)"
+   }
+  ]
+ }
+}

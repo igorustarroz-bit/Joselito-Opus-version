@@ -1,0 +1,18 @@
+/* Input-Code — Figma 63264:50565. Solo tokens (variables de color de Input por estado). */
+.input-code__cols { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-4); }
+.input-code__box {
+  box-sizing: border-box;
+  width: var(--spacers-fixed-fx-9);
+  height: var(--spacers-fixed-fx-9);
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--in-stroke);
+  border-radius: var(--layout-corners-none);
+  background: var(--in-fill);
+  color: var(--in-text);
+  text-align: center;
+  caret-color: var(--in-stroke);
+}
+.input-code__box:focus { outline: none; --in-stroke: var(--forms-focused-stroke); border-color: var(--forms-focused-stroke); }
+.input-code.is-forced-focus .input-code__box:first-child { border-color: var(--forms-focused-stroke); }
+.input-code__box:disabled { cursor: not-allowed; }

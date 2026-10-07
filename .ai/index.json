@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:15:21.666Z",
+  "generatedAt": "2026-10-07T07:15:21.790Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1057,7 +1057,7 @@
       "builtFp": "eebe8dde"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Input-Code",
@@ -1068,7 +1068,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "7/7",
-      "key": "component:input-code"
+      "key": "component:input-code",
+      "builtFp": "a7ff6594"
     },
     {
       "status": "done",

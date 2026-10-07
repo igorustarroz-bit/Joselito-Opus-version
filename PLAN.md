@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 63/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 64/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -87,7 +87,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [ ] Accordion `57943:46123` — usa: accordion <!-- k:component:accordion -->
 - [ ] Block Row Address `63609:148071` — usa: Button-Icon <!-- k:component:block-row-address -->
 - [x] Card Link `58182:23781` — 1 img · usa: Aspect Ratio <!-- k:component:card-link -->
-- [ ] Input-Code `63264:50565` — 7 variantes <!-- k:component:input-code -->
+- [x] Input-Code `63264:50565` — 7 variantes <!-- k:component:input-code -->
 - [x] Input-Phone `63309:351579` — 14 variantes <!-- k:component:input-phone -->
 - [ ] Modal_Lightbox `60581:102087` — 10 variantes · 11 img · usa: Alert, Aspect Ratio, Button, Button-Icon, Checkboxes-Radios, RowButtons… <!-- k:component:modal-lightbox -->
 - [ ] Order by Day `63559:58027` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Card Product, Tag <!-- k:component:order-by-day -->

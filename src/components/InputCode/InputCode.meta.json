@@ -1,0 +1,226 @@
+{
+  "name": "InputCode",
+  "kind": "component",
+  "title": "Input-Code",
+  "figma": {
+    "nodeId": "63264:50565",
+    "name": "Input-Code",
+    "fp": "7ce54e3c"
+  },
+  "description": "Código de verificación por casillas (SMS / correo): de 3 a 6 casillas de 40 px con avance automático y pegado del código completo.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "State": [
+      "Default",
+      "Hover",
+      "Focused",
+      "Filled",
+      "Error",
+      "Validated",
+      "Disabled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "StateDefault",
+      "title": "State=Default"
+    },
+    {
+      "story": "StateHover",
+      "title": "State=Hover"
+    },
+    {
+      "story": "StateFocused",
+      "title": "State=Focused"
+    },
+    {
+      "story": "StateFilled",
+      "title": "State=Filled"
+    },
+    {
+      "story": "StateError",
+      "title": "State=Error"
+    },
+    {
+      "story": "StateValidated",
+      "title": "State=Validated"
+    },
+    {
+      "story": "StateDisabled",
+      "title": "State=Disabled"
+    },
+    {
+      "story": "CuatroDigitos",
+      "title": "4 casillas (Show 5/6 = false)"
+    }
+  ],
+  "props": [
+    {
+      "name": "length",
+      "figma": "Show 4",
+      "description": "Número de casillas (Show 4/5/6 en Figma: de 3 a 6).",
+      "default": "6",
+      "control": "range"
+    },
+    {
+      "name": "length (Show 5)",
+      "figma": "Show 5",
+      "description": "Ver length.",
+      "default": "6",
+      "control": false
+    },
+    {
+      "name": "length (Show 6)",
+      "figma": "Show 6",
+      "description": "Ver length.",
+      "default": "6",
+      "control": false
+    },
+    {
+      "name": "value (dígito 1)",
+      "figma": "⌙ Num1",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value (dígito 2)",
+      "figma": "⌙ Num2",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value (dígito 3)",
+      "figma": "⌙ Num3",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value (dígito 4)",
+      "figma": "⌙ Num4",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value (dígito 5)",
+      "figma": "⌙ Num5",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value (dígito 6)",
+      "figma": "⌙ Num6",
+      "description": "Cada dígito del valor.",
+      "default": "\"\"",
+      "control": false
+    },
+    {
+      "name": "value / defaultValue / onChange / onComplete",
+      "description": "Código (controlado o no); onComplete al rellenar todas las casillas.",
+      "default": "\"\"",
+      "control": "text"
+    },
+    {
+      "name": "info",
+      "figma": "Info",
+      "description": "Mensaje.",
+      "default": "\"Message\"",
+      "control": "text"
+    },
+    {
+      "name": "showInfo",
+      "figma": "Show Info",
+      "description": "Muestra el mensaje.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "error / validated / disabled",
+      "description": "Estados.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible del grupo.",
+      "default": "\"Código de verificación\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--forms-ESTADO-fill / stroke / text / message",
+        "usage": "casillas y mensaje"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "casilla 40 × 40"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "entre casillas"
+      },
+      {
+        "token": "--layout-forms-l-message-distance",
+        "usage": "casillas–mensaje"
+      }
+    ],
+    "typography": [
+      "ts-forms-input-m-text",
+      "ts-forms-input-m-info"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Casillas 40 × 40",
+    "Mensaje"
+  ],
+  "behavior": [
+    "Escribir avanza a la siguiente casilla; Borrar vuelve a la anterior; ← → navegan.",
+    "Pegar un código lo reparte entre las casillas.",
+    "Completo → estado Filled y onComplete."
+  ],
+  "content": [],
+  "a11y": [
+    "Grupo con aria-label; cada casilla \"Dígito N\"; autocomplete one-time-code en la primera."
+  ],
+  "related": [
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: las propiedades Num1–Num6 son el contenido de cada casilla; en código es un único value."
+  ],
+  "codePath": "src/components/InputCode/InputCode.jsx"
+}
