@@ -283,5 +283,10 @@
     "name": "M03NavigationFooter",
     "path": "src/modules/M03NavigationFooter/M03NavigationFooter.jsx",
     "fp": "c856c2c7"
+  },
+  "63727:483351": {
+    "name": "M04Login",
+    "path": "src/modules/M04Login/M04Login.jsx",
+    "fp": "d5154ba4"
   }
 }

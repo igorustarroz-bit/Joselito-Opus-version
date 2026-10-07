@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:50:38.400Z",
+  "generatedAt": "2026-10-07T07:52:33.487Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1341,7 +1341,7 @@
       "builtFp": "eafb15fc"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M04-Login",
@@ -1362,7 +1362,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "module:m04-login"
+      "key": "module:m04-login",
+      "builtFp": "6fbed94c"
     },
     {
       "status": "todo",

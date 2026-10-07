@@ -1,0 +1,44 @@
+{
+ "id": "63727:483351",
+ "name": "M04-Login",
+ "type": "COMPONENT_SET",
+ "fp": "d5154ba4",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Photo": "BOOLEAN",
+  "Slot": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile"
+  },
+  {
+   "name": "Device=Desktop"
+  }
+ ],
+ "spec": "Desktop 1440×860 fila: Aspect Ratio Fill 720 (relleno VÍDEO) + Modal 720 centrado; Slot 406 gap fx-9: Form (Mi cuenta, descripción, input, CONTINUAR) · Divider · RowButtons (Shopify, Google). M01-Navigation Grey absoluta arriba. Mobile 390×844: M01 Grey, Modal pad 0/fx-6, Slot 342.",
+ "deps": [
+  "M01-Navigation",
+  "Form",
+  "Divider",
+  "RowButtons",
+  "Aspect Ratio"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "Device=Mobile itemSpacing 32"
+   },
+   {
+    "code": "VIDEO",
+    "msg": "Aspect Ratio con relleno de vídeo"
+   }
+  ]
+ }
+}

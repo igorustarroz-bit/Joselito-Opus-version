@@ -1,0 +1,108 @@
+{/* Generado por scripts/docs-generator.mjs desde M04Login.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M04Login.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M04-Login
+
+## Introducción
+
+Pantalla de acceso a la cuenta: formulario con email y botón de continuar, separador y accesos con proveedores. En escritorio, medio a pantalla partida a la izquierda; la cabecera M01 en modo Grey va por encima.
+
+
+Figma: `M04-Login` (`63727:483351`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- M01-Navigation Grey
+- Aspect Ratio Fill (escritorio)
+- Form (cabecera, Input, Button Primary)
+- Divider
+- RowButtons (2 × Button Secondary)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+La M01 interna usa el modo Grey (transparente).
+
+## Comportamiento
+
+- Breakpoint a 1024 px: por debajo se oculta el medio.
+- Ocupa al menos el alto de la pantalla y centra el formulario.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--backgrounds-neutral-1` | fondo del medio sin cargar |
+| spacing | `--spacers-fixed-fx-9` | entre formulario, separador y proveedores |
+| spacing | `--spacers-fixed-fx-6` | márgenes laterales móvil |
+| spacing | `--layout-cols-size-4cols-1-gutter` | ancho máximo del bloque |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| showPhoto | Muestra el medio a la izquierda (escritorio). | true | boolean |
+| media | Medio: type (video o image) y src. | vacío (ver placeholders) | object |
+| title / description | Cabecera del formulario. | Mi cuenta / Introduce tu correo… | text |
+| emailLabel | Etiqueta del campo de email. | Introduce tu correo electrónico | text |
+| submitText | Texto del botón principal. | CONTINUAR | text |
+| providers | Accesos alternativos (text, onClick). | Shopify, Google | object |
+| showNavigation | Incluye la M01-Navigation (Grey) por encima. | true | boolean |
+| onSubmit | Recibe el FormData del formulario. | — |  |
+| theme | Subtema. | light-white | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Proveedores |  | Dos accesos como máximo en una fila. |
+
+## Accesibilidad
+
+- Formulario real con campo de tipo email.
+- Botones con texto visible.
+
+## Componentes relacionados
+
+- Form
+- Input
+- Button
+- RowButtons
+- Divider
+- M01-Navigation
+
+## Pendientes / placeholders
+
+- undefined: undefined
