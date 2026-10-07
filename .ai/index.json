@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T08:07:21.112Z",
+  "generatedAt": "2026-10-07T08:09:25.302Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1495,7 +1495,7 @@
       "builtFp": "7e809aac"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M13-Hero-Homepagehero",
@@ -1513,7 +1513,8 @@
       ],
       "images": 2,
       "autolayout": "0/4",
-      "key": "module:m13-hero-homepagehero"
+      "key": "module:m13-hero-homepagehero",
+      "builtFp": "273776b0"
     },
     {
       "status": "todo",

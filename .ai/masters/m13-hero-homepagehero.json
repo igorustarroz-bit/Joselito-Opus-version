@@ -1,0 +1,55 @@
+{
+ "id": "58182:4353",
+ "name": "M13-Hero-Homepagehero",
+ "type": "COMPONENT_SET",
+ "fp": "27e3e167",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Toast": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile",
+   "Device4",
+   "Device5"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Device4"
+  },
+  {
+   "name": "Device=Device5"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Sin autolayout, modo oscuro. Desktop 1440×860: relleno VÍDEO + #00000033; degradado inferior 409 (transparente→negro); M01 Dark; contenido 8cols @299,301 (con Toast) o @299,529 (sin Toast): Body/03 + Title/05 gap fx-3, ArrowDown 32, gap fx-7; Toast 364 @1036,716. Mobile 390×800: contenido 342 @24,311 (con Toast) o @24,579; Toast al pie 390×152.",
+ "deps": [
+  "M01-Navigation",
+  "Toast",
+  "ArrowDown"
+ ],
+ "images": [
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "velo #00000033 sin variable"
+   },
+   {
+    "code": "VIDEO",
+    "msg": "fondo con relleno de vídeo"
+   },
+   {
+    "code": "NAMING",
+    "msg": "variantes Device4/Device5 sin nombre descriptivo"
+   }
+  ]
+ }
+}

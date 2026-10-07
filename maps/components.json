@@ -323,5 +323,10 @@
     "name": "M12ContentIntrotext",
     "path": "src/modules/M12ContentIntrotext/M12ContentIntrotext.jsx",
     "fp": "b5b93804"
+  },
+  "58182:4353": {
+    "name": "M13HeroHomepagehero",
+    "path": "src/modules/M13HeroHomepagehero/M13HeroHomepagehero.jsx",
+    "fp": "27e3e167"
   }
 }

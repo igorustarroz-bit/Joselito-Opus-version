@@ -1,0 +1,165 @@
+{
+  "name": "M13HeroHomepagehero",
+  "kind": "module",
+  "title": "M13-Hero-Homepagehero",
+  "figma": {
+    "nodeId": "58182:4353",
+    "name": "M13-Hero-Homepagehero",
+    "fp": "27e3e167"
+  },
+  "description": "Hero de portada a pantalla completa sobre vídeo: cabecera superpuesta, etiqueta, gran titular, flecha para bajar y un Toast destacado opcional.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile",
+      "Device4",
+      "Device5"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "DesktopNoToast",
+      "title": "Device=Device4"
+    },
+    {
+      "story": "MobileToast",
+      "title": "Device=Device5"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "showToast",
+      "figma": "Show Toast",
+      "description": "Muestra el Toast; con él, el titular se centra.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "toast",
+      "description": "Props del Toast (image, title, text, href…).",
+      "default": "Jaime Hayon x Joselito",
+      "control": "object"
+    },
+    {
+      "name": "label / title",
+      "description": "Etiqueta y titular.",
+      "default": "LUJO DEL TIEMPO / Nada excepcional ocurre deprisa",
+      "control": "text"
+    },
+    {
+      "name": "media",
+      "description": "Fondo: type (video o image), src y poster.",
+      "default": "vacío (ver placeholders)",
+      "control": "object"
+    },
+    {
+      "name": "showNavigation",
+      "description": "Incluye la M01-Navigation (Dark) superpuesta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "scrollTarget / onScroll",
+      "description": "Destino (selector) o acción de la flecha.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "dark-black-neutral",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "velo sobre el vídeo"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fin del degradado y fondo sin medio"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "textos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7 / fx-3",
+        "usage": "separaciones del contenido"
+      },
+      {
+        "token": "--spacers-fixed-fx-12 / fx-9",
+        "usage": "margen inferior escritorio / móvil"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "posición del Toast"
+      },
+      {
+        "token": "--layout-cols-size-8cols",
+        "usage": "ancho del titular"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "dark-black-neutral",
+    "supported": [
+      "dark-black-neutral"
+    ],
+    "notes": "Figma fija el modo oscuro; el Toast va en Light - White."
+  },
+  "anatomy": [
+    "Medio de fondo + velo + degradado",
+    "M01-Navigation Dark",
+    "Etiqueta Body/03 · titular Title/05 · ArrowDown",
+    "Toast"
+  ],
+  "behavior": [
+    "Ocupa al menos el alto de la pantalla.",
+    "La flecha desplaza a scrollTarget o llama a onScroll.",
+    "Breakpoint a 1024 px: el Toast pasa de ir al pie a flotar abajo a la derecha."
+  ],
+  "content": [
+    {
+      "field": "Titular",
+      "notes": "Hasta dos líneas."
+    }
+  ],
+  "a11y": [
+    "Titular como h1.",
+    "La flecha es un botón con nombre accesible.",
+    "El vídeo es decorativo (aria-hidden)."
+  ],
+  "related": [
+    "M01-Navigation",
+    "Toast",
+    "M15-Hero-Sectionhero"
+  ],
+  "images": [
+    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+  ],
+  "placeholders": [
+    "Vídeo de fondo: en Figma es un relleno de vídeo (dehesa al atardecer) que no se puede exportar; fondo vacío hasta recibirlo (prop media)."
+  ],
+  "notes": [
+    "Figma: velo negro al 20 % sin variable → Backgrounds/Overlay (30 %), la variable más cercana.",
+    "Figma: las variantes se llaman Device4 y Device5 (escritorio sin Toast y móvil con Toast); conviene renombrarlas.",
+    "Figma: la etiqueta dice 'LUJO DEL TIEMPO' en escritorio y 'EL LUJO DEL TIEMPO' en móvil.",
+    "Figma: sin autolayout; posiciones reinterpretadas con flex."
+  ],
+  "codePath": "src/modules/M13HeroHomepagehero/M13HeroHomepagehero.jsx"
+}
