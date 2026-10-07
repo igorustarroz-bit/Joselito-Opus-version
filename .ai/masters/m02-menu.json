@@ -1,0 +1,75 @@
+{
+ "id": "58182:4350",
+ "name": "M02-Menu",
+ "type": "COMPONENT_SET",
+ "fp": "33a1a101",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Photo": "BOOLEAN",
+  "Photo List": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Collapsed",
+   "Product",
+   "About"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=About"
+  },
+  {
+   "name": "Device=Mobile, Type=Collapsed"
+  },
+  {
+   "name": "Device=Mobile, Type=Product"
+  },
+  {
+   "name": "Device=Mobile, Type=About"
+  },
+  {
+   "name": "Device=Desktop, Type=Product"
+  }
+ ],
+ "spec": "Desktop 1440: M01-Navigation Light + panel. About: pad fx-7/fx-9/fx-11/fx-9, Photo List 4×(Aspect Ratio 3:2 + Body/03) gap 32 / 20. Product: pad fx-9, space-between; [lista 10 menu-item-list gap 4 · Aspect Ratio 3:4 70px] gap 34 (698) · destacado 316 (Body/03, Body/02 Neutral 2 gap 8; Button-Action-Link M gap 24). Mobile 390×800: barra 56 (X · Brand Logo · MagnifyingGlass+Bag gap 12), Collapse pad fx-6/fx-5/fx-9/fx-5 5×mobile_menu_accordion gap 4, Links + language pad fx-7/fx-6 (ENGLISH).",
+ "deps": [
+  "M01-Navigation",
+  "Aspect Ratio",
+  "X",
+  "MagnifyingGlass",
+  "Bag - Items",
+  "Brand Logo",
+  "mobile_menu_accordion",
+  "menu-item-list",
+  "Button-Action-Link"
+ ],
+ "images": [
+  "44e615aba734c2ba484afc9fb31e9b08faf8e015",
+  "907d631c2db01d94d6c584be655eb69a187193ea",
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
+  "18deae34beff79e8efc78f0db6bc573916c69f40"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 40 / 32 / 20 / 12 / 4 / 28 / 34 sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "barra móvil padding 12,5/24 sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "Links + language padding 32/24 sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 636 (space-between)"
+   }
+  ]
+ }
+}

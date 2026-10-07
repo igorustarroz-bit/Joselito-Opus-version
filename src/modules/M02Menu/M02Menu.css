@@ -1,0 +1,47 @@
+/* M02-Menu — Figma 58182:4350. Solo tokens. Escritorio desde 1024 px. */
+.m02-menu { width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m02-menu__desktop { display: none; }
+.m02-menu__mobile { display: flex; flex-direction: column; min-height: 100dvh; }
+
+/* Móvil */
+.m02-menu__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: var(--spacers-fixed-fx-10);
+  padding: 0 var(--layout-grids-wrapper-nav);
+}
+.m02-menu__tools { display: flex; gap: var(--spacers-fixed-fx-3); }
+.m02-menu__icon { display: inline-flex; margin: 0; padding: 0; border: 0; background: none; color: var(--strokes-icons-base); cursor: pointer; }
+.m02-menu__icon:focus { outline: none; }
+.m02-menu__icon:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+.m02-menu__logo { position: absolute; top: 50%; left: 50%; display: flex; transform: translate(-50%, -50%); color: var(--strokes-icons-base); }
+.m02-menu__sections { padding: var(--spacers-fixed-fx-6) var(--spacers-fixed-fx-5) var(--spacers-fixed-fx-9); }
+.m02-menu__accordions { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); }
+.m02-menu__language { margin-top: auto; padding: var(--spacers-fixed-fx-7) var(--spacers-fixed-fx-6) 0; }
+.m02-menu__language .mm-accordion { border-bottom: 0; }
+.m02-menu .mm-accordion__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacers-fixed-fx-5) var(--spacers-fixed-fx-3); overflow: visible; }
+.m02-menu .mm-accordion__photo { width: auto; min-width: 0; }
+.m02-menu .mm-accordion__feature-img { width: 100%; }
+
+/* Escritorio */
+.m02-menu__panel { box-sizing: border-box; padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-nav); }
+.m02-menu__panel--photos { padding-top: var(--spacers-fixed-fx-7); padding-bottom: var(--spacers-fixed-fx-11); }
+.m02-menu__photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--spacers-fixed-fx-7); margin: 0; padding: 0; list-style: none; }
+.m02-menu__photo { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-5); color: inherit; text-decoration: none; }
+.m02-menu__photo:focus { outline: none; }
+.m02-menu__photo:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+.m02-menu__panel--product { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--spacers-fixed-fx-9); }
+.m02-menu__group { display: flex; align-items: flex-start; gap: var(--spacers-fixed-fx-7); width: var(--layout-cols-size-6cols); }
+.m02-menu__links { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); flex: 1; margin: 0; padding: 0; list-style: none; }
+.m02-menu__thumb { width: var(--spacers-fixed-fx-12); }
+.m02-menu__feature { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacers-fixed-fx-6); width: var(--layout-cols-size-3cols); }
+.m02-menu__feature-texts { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); }
+.m02-menu__feature-text { margin: 0; color: var(--texts-neutral-2); }
+
+@media (min-width: 1024px) {
+  .m02-menu__desktop { display: block; }
+  .m02-menu__mobile { display: none; }
+}

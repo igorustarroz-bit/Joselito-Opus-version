@@ -1,0 +1,134 @@
+{/* Generado por scripts/docs-generator.mjs desde M02Menu.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M02Menu.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M02-Menu
+
+## Introducción
+
+Menú desplegable de la cabecera. En escritorio, la M01-Navigation con la sección activa y su panel: Product (categorías, foto y destacado) o About (fila de fotos). En móvil, pantalla completa con barra de cierre, acordeones por sección y selector de idioma.
+
+
+Figma: `M02-Menu` (`58182:4350`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Escritorio: M01-Navigation · panel Product (menu-item-list ×10 · Aspect Ratio 3:4 · título, texto y Button-Action-Link) o About (4 × Aspect Ratio 3:2 + título)
+- Móvil: barra (X · Brand Logo · MagnifyingGlass, Bag) · 5 × mobile_menu_accordion · acordeón de idioma
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+Figma solo tiene versión clara.
+
+## Comportamiento
+
+- Breakpoint a 1024 px.
+- En móvil los acordeones se abren y cierran de forma independiente.
+- En móvil el menú ocupa al menos el alto de la pantalla y el idioma queda al pie.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Product
+
+<Canvas of={Stories.DesktopProduct} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=About
+
+<Canvas of={Stories.DesktopAbout} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Collapsed
+
+<Canvas of={Stories.MobileCollapsed} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Product
+
+<Canvas of={Stories.MobileProduct} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=About
+
+<Canvas of={Stories.MobileAbout} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--texts-base` | títulos |
+| color | `--texts-neutral-2` | texto del destacado |
+| color | `--strokes-icons-base` | iconos y logo |
+| spacing | `--spacers-fixed-fx-9` | padding del panel Product, separación grupo-destacado |
+| spacing | `--spacers-fixed-fx-7` | padding superior About, entre fotos, lista-foto |
+| spacing | `--spacers-fixed-fx-11` | padding inferior About |
+| spacing | `--spacers-fixed-fx-5` | foto-título |
+| spacing | `--spacers-fixed-fx-1` | entre categorías y acordeones |
+| spacing | `--spacers-fixed-fx-6` | destacado-botón, padding móvil |
+| spacing | `--layout-grids-wrapper-nav` | márgenes laterales |
+| spacing | `--layout-cols-size-6cols / 3cols` | ancho del grupo de lista y del destacado |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Collapsed`, `Product` o `About`: panel de escritorio y acordeón abierto en móvil. | Product | inline-radio |
+| showPhoto | Muestra la foto 3:4 junto a la lista (Product, escritorio). | true | boolean |
+| photos | Fotos del panel About: image, title, href. | 4 fotos | object |
+| sections | Secciones del menú (escritorio: NavButton; móvil: acordeones). | Productos, Origen, Excelencia, Compromisos, Experiencias | object |
+| links | Categorías del panel Product (escritorio). | 10 categorías | object |
+| selectedLink | Categoría marcada con flecha. | Paletas Gran Reserva | text |
+| mobileLinks | Enlaces del acordeón Productos en móvil. | 9 categorías | object |
+| feature | Destacado: image, mobileImage, title, text, cta, href. | Regalos y Selecciones Especiales | object |
+| active / activeMobile | Índice de la sección activa en escritorio / abierta en móvil (por defecto lo marca type). | — | number |
+| language | Idioma mostrado al pie (móvil). | ENGLISH | text |
+| onClose / onSearch / onCart | Acciones de la barra móvil. | — |  |
+| homeHref | Destino del logo. | "/" | text |
+| theme | Subtema. | light-white | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Categorías |  | Hasta 10, una marcada (página actual). |
+| Fotos |  | 4 fotos 3:2 con título corto. |
+
+## Accesibilidad
+
+- Botones de la barra móvil con nombre accesible.
+- Acordeones con aria-expanded.
+- Categoría actual con aria-current.
+
+## Componentes relacionados
+
+- M01-Navigation
+- mobile_menu_accordion
+- menu-item-list
+- Button-Action-Link

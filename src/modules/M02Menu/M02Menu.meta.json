@@ -1,0 +1,238 @@
+{
+  "name": "M02Menu",
+  "kind": "module",
+  "title": "M02-Menu",
+  "figma": {
+    "nodeId": "58182:4350",
+    "name": "M02-Menu",
+    "fp": "33a1a101"
+  },
+  "description": "Menú desplegable de la cabecera. En escritorio, la M01-Navigation con la sección activa y su panel: Product (categorías, foto y destacado) o About (fila de fotos). En móvil, pantalla completa con barra de cierre, acordeones por sección y selector de idioma.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Collapsed",
+      "Product",
+      "About"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopProduct",
+      "title": "Device=Desktop, Type=Product"
+    },
+    {
+      "story": "DesktopAbout",
+      "title": "Device=Desktop, Type=About"
+    },
+    {
+      "story": "MobileCollapsed",
+      "title": "Device=Mobile, Type=Collapsed"
+    },
+    {
+      "story": "MobileProduct",
+      "title": "Device=Mobile, Type=Product"
+    },
+    {
+      "story": "MobileAbout",
+      "title": "Device=Mobile, Type=About"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Collapsed`, `Product` o `About`: panel de escritorio y acordeón abierto en móvil.",
+      "default": "Product",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showPhoto",
+      "figma": "Show Photo",
+      "description": "Muestra la foto 3:4 junto a la lista (Product, escritorio).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "photos",
+      "figma": "Photo List",
+      "description": "Fotos del panel About: image, title, href.",
+      "default": "4 fotos",
+      "control": "object"
+    },
+    {
+      "name": "sections",
+      "description": "Secciones del menú (escritorio: NavButton; móvil: acordeones).",
+      "default": "Productos, Origen, Excelencia, Compromisos, Experiencias",
+      "control": "object"
+    },
+    {
+      "name": "links",
+      "description": "Categorías del panel Product (escritorio).",
+      "default": "10 categorías",
+      "control": "object"
+    },
+    {
+      "name": "selectedLink",
+      "description": "Categoría marcada con flecha.",
+      "default": "Paletas Gran Reserva",
+      "control": "text"
+    },
+    {
+      "name": "mobileLinks",
+      "description": "Enlaces del acordeón Productos en móvil.",
+      "default": "9 categorías",
+      "control": "object"
+    },
+    {
+      "name": "feature",
+      "description": "Destacado: image, mobileImage, title, text, cta, href.",
+      "default": "Regalos y Selecciones Especiales",
+      "control": "object"
+    },
+    {
+      "name": "active / activeMobile",
+      "description": "Índice de la sección activa en escritorio / abierta en móvil (por defecto lo marca type).",
+      "default": "—",
+      "control": "number"
+    },
+    {
+      "name": "language",
+      "description": "Idioma mostrado al pie (móvil).",
+      "default": "ENGLISH",
+      "control": "text"
+    },
+    {
+      "name": "onClose / onSearch / onCart",
+      "description": "Acciones de la barra móvil.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "homeHref",
+      "description": "Destino del logo.",
+      "default": "\"/\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "light-white",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "títulos"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "texto del destacado"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "iconos y logo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "padding del panel Product, separación grupo-destacado"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "padding superior About, entre fotos, lista-foto"
+      },
+      {
+        "token": "--spacers-fixed-fx-11",
+        "usage": "padding inferior About"
+      },
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "foto-título"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "entre categorías y acordeones"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "destacado-botón, padding móvil"
+      },
+      {
+        "token": "--layout-grids-wrapper-nav",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--layout-cols-size-6cols / 3cols",
+        "usage": "ancho del grupo de lista y del destacado"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Figma solo tiene versión clara."
+  },
+  "anatomy": [
+    "Escritorio: M01-Navigation · panel Product (menu-item-list ×10 · Aspect Ratio 3:4 · título, texto y Button-Action-Link) o About (4 × Aspect Ratio 3:2 + título)",
+    "Móvil: barra (X · Brand Logo · MagnifyingGlass, Bag) · 5 × mobile_menu_accordion · acordeón de idioma"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px.",
+    "En móvil los acordeones se abren y cierran de forma independiente.",
+    "En móvil el menú ocupa al menos el alto de la pantalla y el idioma queda al pie."
+  ],
+  "content": [
+    {
+      "field": "Categorías",
+      "notes": "Hasta 10, una marcada (página actual)."
+    },
+    {
+      "field": "Fotos",
+      "notes": "4 fotos 3:2 con título corto."
+    }
+  ],
+  "a11y": [
+    "Botones de la barra móvil con nombre accesible.",
+    "Acordeones con aria-expanded.",
+    "Categoría actual con aria-current."
+  ],
+  "related": [
+    "M01-Navigation",
+    "mobile_menu_accordion",
+    "menu-item-list",
+    "Button-Action-Link"
+  ],
+  "images": [
+    "44e615aba734c2ba484afc9fb31e9b08faf8e015",
+    "18deae34beff79e8efc78f0db6bc573916c69f40",
+    "907d631c2db01d94d6c584be655eb69a187193ea",
+    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
+    "ffe8697778fc8deb05ecc972027730d68a184a6c"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: separaciones 40, 32, 20, 12, 4 y 28 px sin variable → FX-9, FX-7, FX-5, FX-3, FX-1 y FX-7 (la más cercana; 28 empata entre FX-6 y FX-7 → se usa FX-6 en el bloque de idioma como su padding lateral).",
+    "Figma: separación lista-foto 34 px sin variable → FX-7 (32, empate con FX-8 → la menor).",
+    "Figma: foto 3:4 de 70 px → FX-12 (72).",
+    "Figma: destacado de 316 px y lista de 315 px → columnas de la rejilla (3cols / 6cols).",
+    "Figma: en escritorio la sección activa de About es Origen y en móvil se abre Excelencia; se replica con active/activeMobile.",
+    "Figma: la M01 interna usa 'Productos' en lugar de 'Tienda' y 'Experiencia' sin s en la captura.",
+    "Figma: el padding lateral del panel es FX-9; se usa --layout-grids-wrapper-nav para alinearlo con la cabecera (40 px a 1440 igualmente)."
+  ],
+  "codePath": "src/modules/M02Menu/M02Menu.jsx"
+}

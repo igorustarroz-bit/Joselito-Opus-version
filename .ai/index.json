@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:37:17.941Z",
+  "generatedAt": "2026-10-07T07:41:11.086Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1271,7 +1271,7 @@
       "builtFp": "698b4bf3"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M02-Menu",
@@ -1290,7 +1290,8 @@
       ],
       "images": 10,
       "autolayout": "5/5",
-      "key": "module:m02-menu"
+      "key": "module:m02-menu",
+      "builtFp": "afcee56a"
     },
     {
       "status": "todo",
