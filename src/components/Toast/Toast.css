@@ -1,0 +1,16 @@
+/* Toast — Figma 58182:23548. Solo tokens. 343 × 104 px en Figma; ancho del contenedor. */
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: var(--spacers-fixed-fx-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+  text-decoration: none;
+}
+.toast__img { flex: 0 0 auto; width: var(--spacers-fixed-fx-13); }
+.toast__texts { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
+.toast__text { color: var(--texts-neutral-2); }
+.toast__steps { display: flex; flex-direction: column; align-self: stretch; justify-content: center; gap: var(--spacers-fixed-fx-1); padding: var(--spacers-fixed-fx-3); }

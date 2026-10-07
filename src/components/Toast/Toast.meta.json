@@ -1,0 +1,132 @@
+{
+  "name": "Toast",
+  "kind": "component",
+  "title": "Toast",
+  "figma": {
+    "nodeId": "58182:23548",
+    "name": "Toast",
+    "fp": "90c7e0b8"
+  },
+  "description": "Aviso flotante (p. ej. sobre el hero de la home) con foto, título, texto y un indicador de pasos para rotar varios avisos.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SegundoPaso",
+      "title": "Segundo aviso de tres"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título (Body/02).",
+      "default": "\"Jaime Hayon x Joselito\"",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto (Body/02, Neutral 2).",
+      "default": "\"Descubre la nueva colección Joselito Premium\"",
+      "control": "text"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Foto 1:1 de 80 px.",
+      "default": "foto del máster",
+      "control": false
+    },
+    {
+      "name": "steps / current",
+      "description": "Número de avisos y el actual (indicador Stepper_for_toast).",
+      "default": "3 / 0",
+      "control": "number"
+    },
+    {
+      "name": "href",
+      "description": "Enlace del aviso.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-base / --texts-neutral-2",
+        "usage": "título / texto"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "padding izquierdo y del indicador"
+      },
+      {
+        "token": "--spacers-fixed-fx-13",
+        "usage": "foto de 80 px"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "entre pasos"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Foto 1:1",
+    "Título y texto",
+    "Indicador vertical de pasos"
+  ],
+  "behavior": [
+    "El paso actual va 'en curso' y los anteriores 'completados'."
+  ],
+  "content": [],
+  "a11y": [
+    "role=status; el indicador se resume con aria-label."
+  ],
+  "related": [
+    "Stepper_for_toast",
+    "M13-Hero-Homepagehero"
+  ],
+  "images": [
+    {
+      "hash": "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
+      "usage": "foto"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: el indicador es un frame rotado −90° con steppers rotados 90°; en código es una columna.",
+    "Figma: hay un Button-Action-Link oculto (no se construye).",
+    "Figma: counterAxisSpacing de 16 px sin variable (sin efecto)."
+  ],
+  "codePath": "src/components/Toast/Toast.jsx"
+}

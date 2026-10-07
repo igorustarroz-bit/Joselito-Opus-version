@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:10:18.447Z",
+  "generatedAt": "2026-10-07T07:10:18.566Z",
   "output": "react-storybook",
   "items": [
     {
@@ -987,7 +987,7 @@
       "builtFp": "bd230d18"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Toast",
@@ -1002,7 +1002,8 @@
       ],
       "images": 1,
       "autolayout": "1/1",
-      "key": "component:toast"
+      "key": "component:toast",
+      "builtFp": "b0f178b6"
     },
     {
       "status": "todo",

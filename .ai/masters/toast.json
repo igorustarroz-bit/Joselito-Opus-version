@@ -1,0 +1,24 @@
+{
+ "id": "58182:23548",
+ "name": "Toast",
+ "type": "COMPONENT",
+ "fp": "90c7e0b8",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Text": "TEXT"
+ },
+ "spec": "343×104 AL:H gap fx-4 pl fx-3 fill Backgrounds/Base: AR 1:1 80 + Title/Description Body/02 + columna de 3 Stepper_for_toast (gap fx-1, pad fx-3)",
+ "deps": [
+  "Aspect Ratio",
+  "Stepper_for_toast"
+ ],
+ "images": [
+  {
+   "hash": "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}
