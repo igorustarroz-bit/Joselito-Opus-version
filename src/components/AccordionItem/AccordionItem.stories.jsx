@@ -1,7 +1,7 @@
 import AccordionItem from './AccordionItem';
 
 export default {
-  title: 'Components/accordion',
+  title: 'Components/accordion (elemento)',
   component: AccordionItem,
   parameters: { defaultTheme: 'light-white' },
   args: { title: 'item', subtitle: 'Text', showSubtitle: false },

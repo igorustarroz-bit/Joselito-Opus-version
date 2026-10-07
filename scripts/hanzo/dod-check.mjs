@@ -91,7 +91,7 @@ async function check(metaPath) {
   }
 
   // 4. Cobertura frente al digest
-  const digest = `.ai/masters/${ds}.json`;
+  const digest = m.figma?.digest || `.ai/masters/${ds}.json`; // figma.digest: override si dos másters comparten slug (accordion / Accordion)
   if (await exists(digest)) {
     const r = spawnSync(process.execPath, [path.join(HERE, 'figma-diff.mjs'), '--digest', digest, '--meta', metaPath], { encoding: 'utf8' });
     ok(r.status === 0, 'Cubre lo que tiene el máster de Figma (figma-diff)', r.status === 0 ? '' : r.stdout.trim().split('\n').slice(1, 6).join(' / '));

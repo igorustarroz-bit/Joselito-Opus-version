@@ -1,0 +1,18 @@
+{
+ "id": "57943:46123",
+ "name": "Accordion",
+ "type": "COMPONENT",
+ "fp": "99e81d2f",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT"
+ },
+ "spec": "Slot V gap 0 con 2 accordion (Open=No)",
+ "deps": [
+  "accordion"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

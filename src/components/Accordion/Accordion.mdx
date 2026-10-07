@@ -1,0 +1,68 @@
+{/* Generado por scripts/docs-generator.mjs desde Accordion.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Accordion.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Accordion
+
+## Introducción
+
+Lista de elementos desplegables (accordion) apilados: preguntas frecuentes, bloques del pie en móvil.
+
+
+Figma: `Accordion` (`57943:46123`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Elementos accordion (slot)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Cada elemento se abre y cierra de forma independiente.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Ejemplo con contenido
+
+<Canvas of={Stories.Preguntas} />
+
+  </div>
+</div>
+
+## Tokens
+
+_—_
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| items | Lista de objetos con title, content y props de accordion (o hijos AccordionItem). | 2 × item | object |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Cada cabecera es un botón con aria-expanded.
+
+## Componentes relacionados
+
+- accordion
+- M28-Cards-Accordion

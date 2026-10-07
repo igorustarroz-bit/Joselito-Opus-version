@@ -1,0 +1,65 @@
+{
+  "name": "Accordion",
+  "kind": "component",
+  "title": "Accordion",
+  "figma": {
+    "nodeId": "57943:46123",
+    "name": "Accordion",
+    "fp": "99e81d2f",
+    "digest": ".ai/masters/accordion-2.json"
+  },
+  "description": "Lista de elementos desplegables (accordion) apilados: preguntas frecuentes, bloques del pie en móvil.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Preguntas",
+      "title": "Ejemplo con contenido"
+    }
+  ],
+  "props": [
+    {
+      "name": "items",
+      "figma": "Slot",
+      "description": "Lista de objetos con title, content y props de accordion (o hijos AccordionItem).",
+      "default": "2 × item",
+      "control": "object"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {},
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Elementos accordion (slot)"
+  ],
+  "behavior": [
+    "Cada elemento se abre y cierra de forma independiente."
+  ],
+  "content": [],
+  "a11y": [
+    "Cada cabecera es un botón con aria-expanded."
+  ],
+  "related": [
+    "accordion",
+    "M28-Cards-Accordion"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [],
+  "codePath": "src/components/Accordion/Accordion.jsx"
+}
