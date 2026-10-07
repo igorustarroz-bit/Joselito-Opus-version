@@ -4,3 +4,5 @@
 .checkbox-label:hover .check-radio:not(:has(:disabled)) { --cr-stroke: var(--strokes-icons-accent-2); }
 .checkbox-label.is-disabled { color: var(--texts-neutral-2); cursor: not-allowed; }
 .checkbox-label.is-disabled-selected { color: var(--texts-neutral-1); }
+/* En Checkbox-Label, Disabled Selected pinta el check con Strokes-Icons/Neutral 1 (override del máster) */
+.checkbox-label .check-radio:has(:checked:disabled) { --cr-mark: var(--strokes-icons-neutral-1); }
