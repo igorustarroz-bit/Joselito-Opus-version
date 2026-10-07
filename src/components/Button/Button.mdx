@@ -1,0 +1,246 @@
+{/* Generado por scripts/docs-generator.mjs desde Button.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Button.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Button
+
+## Introducción
+
+Botón principal de acción con texto en mayúsculas y un icono opcional a cada lado. Tres tipos: Primary (relleno de acento), Secondary (relleno neutro) y Terciary (solo borde); cuatro tamaños. Ancho según el texto con un ancho mínimo por tamaño. Es `<a>` con `href` y `<button>` sin él.
+
+
+Figma: `Button` (`49038:9189`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Contenedor (alto fijo por tamaño, ancho según contenido con mínimo)
+- Icono izquierdo opcional
+- Texto en mayúsculas (CTA)
+- Icono derecho opcional
+- Borde interior de 1 px según tipo y estado
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+No fija subtema: los tokens Button/* se adaptan al subtema del contenedor.
+
+## Comportamiento
+
+- Hover: tokens Button/TIPO/Hover (Primary gana borde de 1 px).
+- Focus (teclado): tokens Button/TIPO/Focused + contorno de 1 px separado 4 px (:focus-visible).
+- Selected: toggle por prop (`selected` → aria-pressed).
+- Disabled: tokens Button/TIPO/Disabled; no recibe foco ni hover.
+- El texto no se parte (nowrap); el botón crece con el texto a partir del ancho mínimo.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L, State=Default
+
+<Canvas of={Stories.PrimaryDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L, State=Hover
+
+<Canvas of={Stories.PrimaryHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L, State=Focus
+
+<Canvas of={Stories.PrimaryFocus} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L, State=Selected
+
+<Canvas of={Stories.PrimarySelected} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L, State=Disabled
+
+<Canvas of={Stories.PrimaryDisabled} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L, State=Default
+
+<Canvas of={Stories.SecondaryDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L, State=Hover
+
+<Canvas of={Stories.SecondaryHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L, State=Focus
+
+<Canvas of={Stories.SecondaryFocus} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L, State=Selected
+
+<Canvas of={Stories.SecondarySelected} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L, State=Disabled
+
+<Canvas of={Stories.SecondaryDisabled} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L, State=Default
+
+<Canvas of={Stories.TerciaryDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L, State=Hover
+
+<Canvas of={Stories.TerciaryHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L, State=Focus
+
+<Canvas of={Stories.TerciaryFocus} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L, State=Selected
+
+<Canvas of={Stories.TerciarySelected} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L, State=Disabled
+
+<Canvas of={Stories.TerciaryDisabled} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Primary, Size=L · M · S · XS
+
+<Canvas of={Stories.PrimarySizes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Secondary, Size=L · M · S · XS
+
+<Canvas of={Stories.SecondarySizes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Terciary, Size=L · M · S · XS
+
+<Canvas of={Stories.TerciarySizes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show Icon Left + Show Icon Right
+
+<Canvas of={Stories.ConIconos} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Como enlace (con href)
+
+<Canvas of={Stories.ComoEnlace} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--button-TIPO-ESTADO-fill` | fondo (Terciary solo en Selected y Disabled) |
+| color | `--button-TIPO-ESTADO-stroke` | borde de 1 px (Primary en Hover y Focus; Terciary siempre; Secondary nunca) |
+| color | `--button-TIPO-ESTADO-text` | texto |
+| color | `--button-TIPO-ESTADO-icon` | iconos |
+| color | `--strokes-icons-base` | contorno de foco con teclado |
+| spacing | `--layout-button-TAMAÑO-size` | alto |
+| spacing | `--layout-button-TAMAÑO-padding` | padding lateral |
+| spacing | `--layout-button-TAMAÑO-min-width` | ancho mínimo |
+| spacing | `--layout-spacers-responsive-2` | separación texto–iconos |
+| spacing | `--spacers-fixed-fx-1` | separación del contorno de foco |
+| radius | `--layout-corners-none` |  |
+| typography | `ts-cta-03` |  |
+| typography | `ts-cta-02` |  |
+| typography | `ts-cta-01` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| text | Texto del botón (mayúsculas por el estilo CTA). | "Button" | text |
+| type | `Primary`, `Secondary` o `Terciary`. | Primary | inline-radio |
+| size | Alto 64/56/48/40 px (L/M/S/XS, tokens responsive Layout/Button). Texto CTA/03 en L y M, CTA/02 en S, CTA/01 en XS. | L | inline-radio |
+| showIconLeft | Muestra el icono izquierdo. | false | boolean |
+| showIconRight | Muestra el icono derecho. | false | boolean |
+| iconLeft | Icono izquierdo (Instance swap). En el máster: CalendarBlank. | calendar-blank | select |
+| iconRight | Icono derecho (Instance swap). En el máster: ArrowRight. | arrow-right | select |
+| href | Si se pasa, se renderiza `<a>`; si no, `<button>`. | — | text |
+| htmlType | Atributo `type` del `<button>` (`button`, `submit`, `reset`). | button | text |
+| selected | Estado seleccionado (toggle); se expone como `aria-pressed`. | false | boolean |
+| disabled | Desactiva el botón. | false | boolean |
+| state | Solo documentación: fuerza Hover o Focus. En producción son estados nativos. | — | select |
+| theme | Fija un subtema (`data-theme`). Por defecto hereda el del contenedor. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Texto |  | Verbo de acción corto (1–3 palabras). En el máster: "Button". |
+
+## Accesibilidad
+
+- Usa `href` cuando navega y `<button>` cuando ejecuta una acción.
+- Foco visible con teclado (:focus-visible).
+- `selected` se anuncia como botón pulsado (aria-pressed).
+- Los iconos son decorativos; el texto da el nombre accesible.
+
+## Componentes relacionados
+
+- Button-Icon
+- Button-Action-Link
+- RowButtons
+- Icon

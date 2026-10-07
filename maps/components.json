@@ -23,5 +23,10 @@
     "name": "ButtonIcon",
     "path": "src/components/ButtonIcon/ButtonIcon.jsx",
     "fp": "c3a02c4f"
+  },
+  "49038:9189": {
+    "name": "Button",
+    "path": "src/components/Button/Button.jsx",
+    "fp": "c16b8d3f"
   }
 }

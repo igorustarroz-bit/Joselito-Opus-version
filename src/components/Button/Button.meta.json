@@ -1,0 +1,311 @@
+{
+  "name": "Button",
+  "kind": "component",
+  "title": "Button",
+  "figma": {
+    "nodeId": "49038:9189",
+    "name": "Button",
+    "fp": "c16b8d3f"
+  },
+  "description": "Botón principal de acción con texto en mayúsculas y un icono opcional a cada lado. Tres tipos: Primary (relleno de acento), Secondary (relleno neutro) y Terciary (solo borde); cuatro tamaños. Ancho según el texto con un ancho mínimo por tamaño. Es `<a>` con `href` y `<button>` sin él.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Primary",
+      "Secondary",
+      "Terciary"
+    ],
+    "Size": [
+      "L",
+      "M",
+      "S",
+      "XS"
+    ],
+    "State": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Selected",
+      "Disabled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "PrimaryDefault",
+      "title": "Type=Primary, Size=L, State=Default"
+    },
+    {
+      "story": "PrimaryHover",
+      "title": "Type=Primary, Size=L, State=Hover"
+    },
+    {
+      "story": "PrimaryFocus",
+      "title": "Type=Primary, Size=L, State=Focus"
+    },
+    {
+      "story": "PrimarySelected",
+      "title": "Type=Primary, Size=L, State=Selected"
+    },
+    {
+      "story": "PrimaryDisabled",
+      "title": "Type=Primary, Size=L, State=Disabled"
+    },
+    {
+      "story": "SecondaryDefault",
+      "title": "Type=Secondary, Size=L, State=Default"
+    },
+    {
+      "story": "SecondaryHover",
+      "title": "Type=Secondary, Size=L, State=Hover"
+    },
+    {
+      "story": "SecondaryFocus",
+      "title": "Type=Secondary, Size=L, State=Focus"
+    },
+    {
+      "story": "SecondarySelected",
+      "title": "Type=Secondary, Size=L, State=Selected"
+    },
+    {
+      "story": "SecondaryDisabled",
+      "title": "Type=Secondary, Size=L, State=Disabled"
+    },
+    {
+      "story": "TerciaryDefault",
+      "title": "Type=Terciary, Size=L, State=Default"
+    },
+    {
+      "story": "TerciaryHover",
+      "title": "Type=Terciary, Size=L, State=Hover"
+    },
+    {
+      "story": "TerciaryFocus",
+      "title": "Type=Terciary, Size=L, State=Focus"
+    },
+    {
+      "story": "TerciarySelected",
+      "title": "Type=Terciary, Size=L, State=Selected"
+    },
+    {
+      "story": "TerciaryDisabled",
+      "title": "Type=Terciary, Size=L, State=Disabled"
+    },
+    {
+      "story": "PrimarySizes",
+      "title": "Type=Primary, Size=L · M · S · XS"
+    },
+    {
+      "story": "SecondarySizes",
+      "title": "Type=Secondary, Size=L · M · S · XS"
+    },
+    {
+      "story": "TerciarySizes",
+      "title": "Type=Terciary, Size=L · M · S · XS"
+    },
+    {
+      "story": "ConIconos",
+      "title": "Show Icon Left + Show Icon Right"
+    },
+    {
+      "story": "ComoEnlace",
+      "title": "Como enlace (con href)"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto del botón (mayúsculas por el estilo CTA).",
+      "default": "\"Button\"",
+      "control": "text"
+    },
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Primary`, `Secondary` o `Terciary`.",
+      "default": "Primary",
+      "control": "inline-radio"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "Alto 64/56/48/40 px (L/M/S/XS, tokens responsive Layout/Button). Texto CTA/03 en L y M, CTA/02 en S, CTA/01 en XS.",
+      "default": "L",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showIconLeft",
+      "figma": "Show Icon Left",
+      "description": "Muestra el icono izquierdo.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIconRight",
+      "figma": "Show Icon Right",
+      "description": "Muestra el icono derecho.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "iconLeft",
+      "figma": "Ico1",
+      "description": "Icono izquierdo (Instance swap). En el máster: CalendarBlank.",
+      "default": "calendar-blank",
+      "control": "select"
+    },
+    {
+      "name": "iconRight",
+      "figma": "Ico2",
+      "description": "Icono derecho (Instance swap). En el máster: ArrowRight.",
+      "default": "arrow-right",
+      "control": "select"
+    },
+    {
+      "name": "href",
+      "description": "Si se pasa, se renderiza `<a>`; si no, `<button>`.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "htmlType",
+      "description": "Atributo `type` del `<button>` (`button`, `submit`, `reset`).",
+      "default": "button",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "State=Selected",
+      "description": "Estado seleccionado (toggle); se expone como `aria-pressed`.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "State=Disabled",
+      "description": "Desactiva el botón.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación: fuerza Hover o Focus. En producción son estados nativos.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema (`data-theme`). Por defecto hereda el del contenedor.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-TIPO-ESTADO-fill",
+        "usage": "fondo (Terciary solo en Selected y Disabled)"
+      },
+      {
+        "token": "--button-TIPO-ESTADO-stroke",
+        "usage": "borde de 1 px (Primary en Hover y Focus; Terciary siempre; Secondary nunca)"
+      },
+      {
+        "token": "--button-TIPO-ESTADO-text",
+        "usage": "texto"
+      },
+      {
+        "token": "--button-TIPO-ESTADO-icon",
+        "usage": "iconos"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "contorno de foco con teclado"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-button-TAMAÑO-size",
+        "usage": "alto"
+      },
+      {
+        "token": "--layout-button-TAMAÑO-padding",
+        "usage": "padding lateral"
+      },
+      {
+        "token": "--layout-button-TAMAÑO-min-width",
+        "usage": "ancho mínimo"
+      },
+      {
+        "token": "--layout-spacers-responsive-2",
+        "usage": "separación texto–iconos"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "separación del contorno de foco"
+      }
+    ],
+    "radius": [
+      "--layout-corners-none"
+    ],
+    "typography": [
+      "ts-cta-03",
+      "ts-cta-02",
+      "ts-cta-01"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "No fija subtema: los tokens Button/* se adaptan al subtema del contenedor."
+  },
+  "anatomy": [
+    "Contenedor (alto fijo por tamaño, ancho según contenido con mínimo)",
+    "Icono izquierdo opcional",
+    "Texto en mayúsculas (CTA)",
+    "Icono derecho opcional",
+    "Borde interior de 1 px según tipo y estado"
+  ],
+  "behavior": [
+    "Hover: tokens Button/TIPO/Hover (Primary gana borde de 1 px).",
+    "Focus (teclado): tokens Button/TIPO/Focused + contorno de 1 px separado 4 px (:focus-visible).",
+    "Selected: toggle por prop (`selected` → aria-pressed).",
+    "Disabled: tokens Button/TIPO/Disabled; no recibe foco ni hover.",
+    "El texto no se parte (nowrap); el botón crece con el texto a partir del ancho mínimo."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "Verbo de acción corto (1–3 palabras). En el máster: \"Button\"."
+    }
+  ],
+  "a11y": [
+    "Usa `href` cuando navega y `<button>` cuando ejecuta una acción.",
+    "Foco visible con teclado (:focus-visible).",
+    "`selected` se anuncia como botón pulsado (aria-pressed).",
+    "Los iconos son decorativos; el texto da el nombre accesible."
+  ],
+  "related": [
+    "Button-Icon",
+    "Button-Action-Link",
+    "RowButtons",
+    "Icon"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el ancho mínimo (L 168, M 162, S 140 px) no está ligado a variable salvo en Primary XS. Se usan los tokens Layout/Button/TAMAÑO/Min-Width (L 168, M 110, S 96, XS 56): en M y S el botón puede quedar más estrecho que en Figma con textos cortos. Avisar a diseño para ligar o corregir el token.",
+    "Figma: Secondary y Terciary L Default usan el padding de M (24 px) y el resto de estados de L el de L (32 px). Se usa L/Padding en todos los estados para que el botón no cambie de ancho al pasar el ratón.",
+    "Figma: Primary S Default tiene padding 13/20 px sin variable. Se usa Layout/Button/S/Padding (20 px) con alto fijo S/Size.",
+    "Figma: Secondary tiene pintura de borde pero grosor 0 en todas las variantes → sin borde visible (se replica). Primary M Hover/Focus y Terciary M Selected tienen grosor 0 mientras que en L/S/XS es 1 px: se usa 1 px en todos los tamaños por coherencia.",
+    "Figma: Focus no muestra indicador propio más allá de los tokens Focused; se añade contorno :focus-visible (decisión de Igor, 2026-10-06). Avisar a diseño."
+  ],
+  "codePath": "src/components/Button/Button.jsx"
+}

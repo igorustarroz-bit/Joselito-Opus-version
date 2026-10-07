@@ -1,0 +1,147 @@
+/* Button — Figma 49038:9189. Solo tokens (generado a partir del digest; ver Button.meta.json).
+   Alto Layout/Button/TAMAÑO/Size, padding lateral Layout/Button/TAMAÑO/Padding, ancho mínimo
+   Layout/Button/TAMAÑO/Min-Width, separación Spacers Responsive/2, sin radio. Borde interior 1 px
+   (border + border-box: no suma alto). */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--layout-spacers-responsive-2);
+  box-sizing: border-box;
+  width: fit-content;
+  height: var(--b-size);
+  min-width: var(--b-min);
+  margin: 0;
+  padding: 0 var(--b-pad);
+  border: 1px solid var(--b-stroke);
+  border-radius: var(--layout-corners-none);
+  background: var(--b-fill);
+  color: var(--b-text);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.button .icon { color: var(--b-icon); }
+.button--l { --b-size: var(--layout-button-l-size); --b-pad: var(--layout-button-l-padding); --b-min: var(--layout-button-l-min-width); }
+.button--m { --b-size: var(--layout-button-m-size); --b-pad: var(--layout-button-m-padding); --b-min: var(--layout-button-m-min-width); }
+.button--s { --b-size: var(--layout-button-s-size); --b-pad: var(--layout-button-s-padding); --b-min: var(--layout-button-s-min-width); }
+.button--xs { --b-size: var(--layout-button-xs-size); --b-pad: var(--layout-button-xs-padding); --b-min: var(--layout-button-xs-min-width); }
+
+/* Foco solo con teclado: tokens Focused + contorno (decisión de Igor, accesibilidad) */
+.button:focus { outline: none; }
+.button:focus-visible,
+.button.is-focus {
+  outline: 1px solid var(--strokes-icons-base);
+  outline-offset: var(--spacers-fixed-fx-1);
+}
+
+/* Primary */
+.button--primary {
+  --b-fill: var(--button-primary-default-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-primary-default-text);
+  --b-icon: var(--button-primary-default-icon);
+}
+.button--primary:hover,
+.button--primary.is-hover {
+  --b-fill: var(--button-primary-hover-fill);
+  --b-stroke: var(--button-primary-hover-stroke);
+  --b-text: var(--button-primary-hover-text);
+  --b-icon: var(--button-primary-hover-icon);
+}
+.button--primary:focus-visible,
+.button--primary.is-focus {
+  --b-fill: var(--button-primary-focused-fill);
+  --b-stroke: var(--button-primary-focused-stroke);
+  --b-text: var(--button-primary-focused-text);
+  --b-icon: var(--button-primary-focused-icon);
+}
+.button--primary.is-selected,
+.button--primary[aria-pressed='true'] {
+  --b-fill: var(--button-primary-selected-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-primary-selected-text);
+  --b-icon: var(--button-primary-selected-icon);
+}
+.button--primary:disabled,
+.button--primary[aria-disabled='true'] {
+  --b-fill: var(--button-primary-disabled-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-primary-disabled-text);
+  --b-icon: var(--button-primary-disabled-icon);
+  cursor: not-allowed;
+}
+
+/* Secondary */
+.button--secondary {
+  --b-fill: var(--button-secondary-default-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-secondary-default-text);
+  --b-icon: var(--button-secondary-default-icon);
+}
+.button--secondary:hover,
+.button--secondary.is-hover {
+  --b-fill: var(--button-secondary-hover-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-secondary-hover-text);
+  --b-icon: var(--button-secondary-hover-icon);
+}
+.button--secondary:focus-visible,
+.button--secondary.is-focus {
+  --b-fill: var(--button-secondary-focused-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-secondary-focused-text);
+  --b-icon: var(--button-secondary-focused-icon);
+}
+.button--secondary.is-selected,
+.button--secondary[aria-pressed='true'] {
+  --b-fill: var(--button-secondary-selected-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-secondary-selected-text);
+  --b-icon: var(--button-secondary-selected-icon);
+}
+.button--secondary:disabled,
+.button--secondary[aria-disabled='true'] {
+  --b-fill: var(--button-secondary-disabled-fill);
+  --b-stroke: transparent;
+  --b-text: var(--button-secondary-disabled-text);
+  --b-icon: var(--button-secondary-disabled-icon);
+  cursor: not-allowed;
+}
+
+/* Terciary */
+.button--terciary {
+  --b-fill: transparent;
+  --b-stroke: var(--button-terciary-default-stroke);
+  --b-text: var(--button-terciary-default-text);
+  --b-icon: var(--button-terciary-default-icon);
+}
+.button--terciary:hover,
+.button--terciary.is-hover {
+  --b-fill: transparent;
+  --b-stroke: var(--button-terciary-hover-stroke);
+  --b-text: var(--button-terciary-hover-text);
+  --b-icon: var(--button-terciary-hover-icon);
+}
+.button--terciary:focus-visible,
+.button--terciary.is-focus {
+  --b-fill: transparent;
+  --b-stroke: var(--button-terciary-focused-stroke);
+  --b-text: var(--button-terciary-focused-text);
+  --b-icon: var(--button-terciary-focused-icon);
+}
+.button--terciary.is-selected,
+.button--terciary[aria-pressed='true'] {
+  --b-fill: var(--button-terciary-selected-fill);
+  --b-stroke: var(--button-terciary-selected-stroke);
+  --b-text: var(--button-terciary-selected-text);
+  --b-icon: var(--button-terciary-selected-icon);
+}
+.button--terciary:disabled,
+.button--terciary[aria-disabled='true'] {
+  --b-fill: var(--button-terciary-disabled-fill);
+  --b-stroke: var(--button-terciary-disabled-stroke);
+  --b-text: var(--button-terciary-disabled-text);
+  --b-icon: var(--button-terciary-disabled-icon);
+  cursor: not-allowed;
+}
