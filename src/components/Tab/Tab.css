@@ -1,0 +1,82 @@
+/* Tab — base de tab_primary (57943:37527) y tab_secondary (57943:45626). Solo tokens. */
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacers-fixed-fx-1);
+  margin: 0;
+  padding: var(--spacers-fixed-fx-6) var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-4);
+  border: 0;
+  background: var(--tab-fill);
+  box-shadow: inset 0 -1px 0 var(--tab-stroke);
+  color: var(--tab-text);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tab .icon { color: var(--tab-icon); }
+.tab:focus { outline: none; }
+.tab:focus-visible, .tab.is-focus { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(var(--spacers-fixed-fx-0) * -1); }
+.tab:disabled { cursor: not-allowed; }
+
+.tab--primary {
+  --tab-fill: var(--button-tab-primary-default-fill);
+  --tab-stroke: var(--button-tab-primary-default-stroke);
+  --tab-text: var(--button-tab-primary-default-text);
+  --tab-icon: var(--button-tab-primary-default-icon);
+}
+.tab--primary:hover, .tab--primary.is-hover {
+  --tab-fill: var(--button-tab-primary-hover-fill);
+  --tab-stroke: var(--button-tab-primary-hover-stroke);
+  --tab-text: var(--button-tab-primary-hover-text);
+  --tab-icon: var(--button-tab-primary-hover-icon);
+}
+.tab--primary:focus-visible, .tab--primary.is-focus {
+  --tab-fill: var(--button-tab-primary-focused-fill);
+  --tab-stroke: var(--button-tab-primary-focused-stroke);
+  --tab-text: var(--button-tab-primary-focused-text);
+  --tab-icon: var(--button-tab-primary-focused-icon);
+}
+.tab--primary.is-selected {
+  --tab-fill: var(--button-tab-primary-selected-fill);
+  --tab-stroke: var(--button-tab-primary-selected-stroke);
+  --tab-text: var(--button-tab-primary-selected-text);
+  --tab-icon: var(--button-tab-primary-selected-icon);
+}
+.tab--primary:disabled {
+  --tab-fill: var(--button-tab-primary-disabled-fill);
+  --tab-stroke: var(--button-tab-primary-disabled-stroke);
+  --tab-text: var(--button-tab-primary-disabled-text);
+  --tab-icon: var(--button-tab-primary-disabled-icon);
+}
+.tab--secondary {
+  --tab-fill: var(--button-tab-secondary-default-fill);
+  --tab-stroke: var(--button-tab-secondary-default-stroke);
+  --tab-text: var(--button-tab-secondary-default-text);
+  --tab-icon: var(--button-tab-secondary-default-icon);
+}
+.tab--secondary:hover, .tab--secondary.is-hover {
+  --tab-fill: var(--button-tab-secondary-hover-fill);
+  --tab-stroke: var(--button-tab-secondary-hover-stroke);
+  --tab-text: var(--button-tab-secondary-hover-text);
+  --tab-icon: var(--button-tab-secondary-hover-icon);
+}
+.tab--secondary:focus-visible, .tab--secondary.is-focus {
+  --tab-fill: var(--button-tab-secondary-focused-fill);
+  --tab-stroke: var(--button-tab-secondary-focused-stroke);
+  --tab-text: var(--button-tab-secondary-focused-text);
+  --tab-icon: var(--button-tab-secondary-focused-icon);
+}
+.tab--secondary.is-selected {
+  --tab-fill: var(--button-tab-secondary-selected-fill);
+  --tab-stroke: var(--button-tab-secondary-selected-stroke);
+  --tab-text: var(--button-tab-secondary-selected-text);
+  --tab-icon: var(--button-tab-secondary-selected-icon);
+}
+.tab--secondary:disabled {
+  --tab-fill: var(--button-tab-secondary-disabled-fill);
+  --tab-stroke: var(--button-tab-secondary-disabled-stroke);
+  --tab-text: var(--button-tab-secondary-disabled-text);
+  --tab-icon: var(--button-tab-secondary-disabled-icon);
+}
+/* tab_secondary Selected: texto Texts/Link e iconos Strokes-Icons/Accent-Base (como el máster) */
+.tab--secondary.is-selected { --tab-text: var(--texts-link); --tab-icon: var(--strokes-icons-accent-base); }

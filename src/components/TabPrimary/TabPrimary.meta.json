@@ -1,0 +1,166 @@
+{
+  "name": "TabPrimary",
+  "kind": "component",
+  "title": "tab_primary",
+  "figma": {
+    "nodeId": "57943:37527",
+    "name": "tab_primary",
+    "fp": "c798550d"
+  },
+  "description": "Pestaña principal: texto Body/03 con iconos de 16 px opcionales y trazo inferior; cinco estados con los tokens Button/Tab Primary. Se agrupa en Tabs.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Active": [
+      "No",
+      "Yes"
+    ],
+    "Type": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Selected",
+      "Disabled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "TypeDefault",
+      "title": "Active=No, Type=Default"
+    },
+    {
+      "story": "TypeHover",
+      "title": "Active=No, Type=Hover"
+    },
+    {
+      "story": "TypeFocus",
+      "title": "Active=No, Type=Focus"
+    },
+    {
+      "story": "TypeSelected",
+      "title": "Active=Yes, Type=Selected"
+    },
+    {
+      "story": "TypeDisabled",
+      "title": "Active=No, Type=Disabled"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto.",
+      "default": "\"item\"",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "Active",
+      "description": "Pestaña activa (aria-selected).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "Type=Disabled",
+      "description": "Desactivada.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIconLeft",
+      "figma": "Show Icon Left",
+      "description": "Icono izquierdo (CalendarBlank, 16 px).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "iconLeft",
+      "figma": "Icon Left",
+      "description": "Icono izquierdo (CalendarBlank, 16 px).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showIconRight",
+      "figma": "Show Icon Right",
+      "description": "Icono derecho (CaretDown, 16 px).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "iconRight",
+      "figma": "Icon Right",
+      "description": "Icono derecho (CaretDown, 16 px).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "Type",
+      "description": "Solo documentación: fuerza Hover o Focus.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-tab-primary-ESTADO-fill / stroke / text / icon",
+        "usage": "fondo, trazo inferior, texto e iconos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6 / fx-4",
+        "usage": "padding superior / resto"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "separación (4 px sin variable en Figma)"
+      }
+    ],
+    "typography": [
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Icono izquierdo 16 px",
+    "Texto Body/03",
+    "Icono derecho 16 px",
+    "Trazo inferior 1 px"
+  ],
+  "behavior": [
+    "Hover/Focus/Disabled nativos; seleccionada por prop.",
+    "Dentro de Tabs, las flechas mueven la selección."
+  ],
+  "content": [],
+  "a11y": [
+    "role=tab con aria-selected; foco visible."
+  ],
+  "related": [
+    "Tabs"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: la separación de 4 px no tiene variable → FX-1."
+  ],
+  "codePath": "src/components/TabPrimary/TabPrimary.jsx"
+}
