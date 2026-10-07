@@ -1,0 +1,43 @@
+{
+ "id": "58163:40311",
+ "name": "M27-Cards-Categories",
+ "type": "COMPONENT_SET",
+ "fp": "b049dd7f",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "List": "SLOT",
+  "Show Arrows": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Cabecera pad Resp/11/Wrapper-Default: 'Nuestros productos' Body/04 + 'Ver todos' Body/03 + CaretRight (space-between). Content pad Resp/11/Wrapper-Default gap 60 (54 móvil): List fila gap Grids/Gutter de 4 Card Product verticales 4cols (sin botón); flechas Button-Icon Terciary M en los extremos (space-between).",
+ "deps": [
+  "CaretRight",
+  "Card Product",
+  "Button-Icon"
+ ],
+ "images": [
+  "8f66016394231a9f51a27dcb9f33d303962a67c3",
+  "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+  "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17",
+  "a8c5d80920066337b05be9515d83738d003ae4aa"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 16/24/60/54 sin variable"
+   }
+  ]
+ }
+}

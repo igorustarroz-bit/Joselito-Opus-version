@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:00:23.719Z",
+  "generatedAt": "2026-10-07T12:02:01.242Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1788,7 +1788,7 @@
       "builtFp": "eadad876"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M27-Cards-Categories",
@@ -1803,7 +1803,8 @@
       ],
       "images": 6,
       "autolayout": "2/2",
-      "key": "module:m27-cards-categories"
+      "key": "module:m27-cards-categories",
+      "builtFp": "1bfb6ed4"
     },
     {
       "status": "todo",

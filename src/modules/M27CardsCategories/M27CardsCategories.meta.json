@@ -1,0 +1,137 @@
+{
+  "name": "M27CardsCategories",
+  "kind": "module",
+  "title": "M27-Cards-Categories",
+  "figma": {
+    "nodeId": "58163:40311",
+    "name": "M27-Cards-Categories",
+    "fp": "b049dd7f"
+  },
+  "description": "Carrusel de categorías de producto con cabecera, tarjetas desplazables y flechas anterior/siguiente.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "items",
+      "figma": "List",
+      "description": "Categorías: title, price, image, href.",
+      "default": "4 categorías",
+      "control": "object"
+    },
+    {
+      "name": "showArrows",
+      "figma": "Show Arrows",
+      "description": "Muestra las flechas.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showTitle",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "eyebrow / linkText / href",
+      "description": "Cabecera.",
+      "default": "Nuestros productos / Ver todos",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-gutter",
+        "usage": "entre tarjetas"
+      },
+      {
+        "token": "--layout-cols-size-4cols",
+        "usage": "ancho de tarjeta"
+      },
+      {
+        "token": "--layout-spacers-responsive-11",
+        "usage": "paddings verticales"
+      },
+      {
+        "token": "--spacers-fixed-fx-11 / fx-10",
+        "usage": "tarjetas-flechas"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cabecera (Title con enlace)",
+    "Card Product × N",
+    "Button-Icon ← →"
+  ],
+  "behavior": [
+    "Las flechas desplazan una tarjeta y se desactivan al llegar a los extremos.",
+    "También se desplaza con scroll/swipe (scroll-snap)."
+  ],
+  "content": [
+    {
+      "field": "Categorías",
+      "notes": "Nombre y precio 'desde'."
+    }
+  ],
+  "a11y": [
+    "Flechas con nombre accesible; la fila es enfocable."
+  ],
+  "related": [
+    "Card Product",
+    "Button-Icon",
+    "M24-Cards-Productcarousel"
+  ],
+  "images": [
+    "8f66016394231a9f51a27dcb9f33d303962a67c3",
+    "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+    "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17",
+    "a8c5d80920066337b05be9515d83738d003ae4aa"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: la cabecera está montada a mano (texto + CaretRight) en lugar de usar el máster Title; en código se usa Title.",
+    "Figma: separaciones 60/54 sin variable → FX-11/FX-10.",
+    "Figma: en escritorio caben 3 tarjetas y media; la cuarta queda cortada."
+  ],
+  "codePath": "src/modules/M27CardsCategories/M27CardsCategories.jsx"
+}

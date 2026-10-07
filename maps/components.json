@@ -393,5 +393,10 @@
     "name": "M26Buscador",
     "path": "src/modules/M26Buscador/M26Buscador.jsx",
     "fp": "7569808d"
+  },
+  "58163:40311": {
+    "name": "M27CardsCategories",
+    "path": "src/modules/M27CardsCategories/M27CardsCategories.jsx",
+    "fp": "b049dd7f"
   }
 }
