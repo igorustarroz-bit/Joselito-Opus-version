@@ -1,10 +1,10 @@
-/* Tamaños del máster Icon Sizer (Figma no los liga a variables) */
+/* Tamaños del máster Icon Sizer: Figma no los liga a variables; se usan los spacers fijos del mismo valor */
 .icon { display: inline-block; flex-shrink: 0; vertical-align: middle; }
-.icon--l { width: 32px; height: 32px; }
-.icon--m { width: 24px; height: 24px; }
-.icon--s { width: 20px; height: 20px; }
-.icon--xs { width: 16px; height: 16px; }
-.icon--xxs { width: 12px; height: 12px; }
+.icon--l { width: var(--spacers-fixed-fx-7); height: var(--spacers-fixed-fx-7); }
+.icon--m { width: var(--spacers-fixed-fx-6); height: var(--spacers-fixed-fx-6); }
+.icon--s { width: var(--spacers-fixed-fx-5); height: var(--spacers-fixed-fx-5); }
+.icon--xs { width: var(--spacers-fixed-fx-4); height: var(--spacers-fixed-fx-4); }
+.icon--xxs { width: var(--spacers-fixed-fx-3); height: var(--spacers-fixed-fx-3); }
 
 /* Punto de aviso de "Bag - Items" (Primary/50 en Figma) */
 .icon [class$="icon-accent"] { fill: var(--strokes-icons-accent-base); }
