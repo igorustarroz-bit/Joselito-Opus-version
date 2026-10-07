@@ -143,7 +143,8 @@
   "behavior": [
     "Breakpoint a 1024 px (LG): por debajo, versión móvil.",
     "El logo siempre queda centrado (absoluto).",
-    "Dark/Grey son transparentes: colocar sobre un hero."
+    "Dark/Grey son transparentes: colocar sobre un hero.",
+    "El paso a escritorio depende del ancho de la propia cabecera (container query, contenido ≥ 960 px ≈ viewport 1024): en contenedores estrechos se queda en móvil. El centro (FX-18) está reservado al logo y el gap del menú baja a FX-3 por debajo de 1200 px de contenido, para que el menú nunca pise el logo."
   ],
   "content": [
     {

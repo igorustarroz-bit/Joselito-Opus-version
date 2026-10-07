@@ -1,18 +1,18 @@
-/* M01-Navigation — Figma 58182:4143. Solo tokens. Móvil 56 px · escritorio (≥ 1024 px) 72 px (FX-12, Figma 70). */
+/* M01-Navigation — Figma 58182:4143. Solo tokens. Móvil 56 px · escritorio 72 px (FX-12, Figma 70).
+   El cambio a escritorio (contenido ≥ 960 px, es decir viewport ≥ 1024 con márgenes) depende del ancho de la propia cabecera (container query), no del viewport:
+   así no se monta el menú sobre el logo cuando la cabecera vive en un contenedor estrecho. */
 .m01-nav {
   position: relative;
-  display: flex;
-  align-items: center;
+  container: m01 / inline-size;
   box-sizing: border-box;
   width: 100%;
-  min-height: var(--spacers-fixed-fx-10);
   padding: 0 var(--layout-grids-wrapper-nav);
   background: var(--backgrounds-base);
   color: var(--texts-base);
 }
 .m01-nav--dark, .m01-nav--grey { background: transparent; }
 .m01-nav__desktop { display: none; }
-.m01-nav__mobile { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.m01-nav__mobile { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: var(--spacers-fixed-fx-10); }
 .m01-nav__tools { display: flex; gap: var(--spacers-fixed-fx-3); }
 .m01-nav__icon {
   display: inline-flex;
@@ -27,9 +27,13 @@
 .m01-nav__icon:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
 .m01-nav__logo { position: absolute; top: 50%; left: 50%; display: flex; transform: translate(-50%, -50%); color: var(--strokes-icons-base); }
 .m01-nav__list li { display: flex; }
-.m01-nav__list { display: flex; align-items: center; gap: var(--spacers-fixed-fx-5); margin: 0; padding: 0; list-style: none; }
-@media (min-width: 1024px) {
-  .m01-nav { min-height: var(--spacers-fixed-fx-12); padding: var(--spacers-fixed-fx-6) var(--layout-grids-wrapper-nav); }
+.m01-nav__list { display: flex; align-items: center; gap: var(--spacers-fixed-fx-3); margin: 0; padding: 0; list-style: none; white-space: nowrap; }
+/* Escritorio: el centro (FX-18) queda reservado para el logo; menú a la izquierda y utilidades a la derecha. */
+@container m01 (min-width: 960px) {
   .m01-nav__mobile { display: none; }
-  .m01-nav__desktop { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .m01-nav__desktop { display: grid; grid-template-columns: minmax(0, 1fr) var(--spacers-fixed-fx-18) minmax(0, 1fr); align-items: center; width: 100%; min-height: var(--spacers-fixed-fx-12); }
+  .m01-nav__desktop > .m01-nav__list:last-child { grid-column: 3; justify-self: end; }
+}
+@container m01 (min-width: 1200px) {
+  .m01-nav__list { gap: var(--spacers-fixed-fx-5); }
 }
