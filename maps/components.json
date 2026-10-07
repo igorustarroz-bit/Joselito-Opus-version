@@ -413,5 +413,10 @@
     "name": "M30HeroJoselitoLab",
     "path": "src/modules/M30HeroJoselitoLab/M30HeroJoselitoLab.jsx",
     "fp": "0237642c"
+  },
+  "58464:36878": {
+    "name": "M31NavigationPreviousNext",
+    "path": "src/modules/M31NavigationPreviousNext/M31NavigationPreviousNext.jsx",
+    "fp": "68f664e8"
   }
 }

@@ -1,0 +1,134 @@
+{
+  "name": "M31NavigationPreviousNext",
+  "kind": "module",
+  "title": "M31-Navigation-PreviousNext",
+  "figma": {
+    "nodeId": "58464:36878",
+    "name": "M31-Navigation-PreviousNext",
+    "fp": "68f664e8"
+  },
+  "description": "Navegación entre fichas con enlace a la anterior y a la siguiente, cada uno con flecha y título.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "previous",
+      "figma": "Title Left",
+      "description": "Ficha anterior {title, href}; null la oculta.",
+      "default": "Ara Malikian",
+      "control": "object"
+    },
+    {
+      "name": "next",
+      "figma": "Title Right",
+      "description": "Ficha siguiente {title, href}; null la oculta.",
+      "default": "Swarovski Edition",
+      "control": "object"
+    },
+    {
+      "name": "previousLabel",
+      "description": "Antetítulo izquierdo.",
+      "default": "ANTERIOR",
+      "control": "text"
+    },
+    {
+      "name": "nextLabel",
+      "description": "Antetítulo derecho.",
+      "default": "SIGUIENTE",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "light-white",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-2",
+        "usage": "antetítulo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separador"
+      },
+      {
+        "token": "--button-terciary-*",
+        "usage": "flecha"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "padding lateral y gap"
+      },
+      {
+        "token": "--spacers-fixed-fx-13",
+        "usage": "padding vertical de cada mitad"
+      },
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "gap de textos"
+      },
+      {
+        "token": "--layout-spacers-responsive-17",
+        "usage": "padding de textos"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-black-neutral",
+      "dark-red-primary"
+    ],
+    "notes": "Hereda el subtema del contenedor."
+  },
+  "anatomy": [
+    "Enlace anterior (flecha + antetítulo + título)",
+    "Enlace siguiente"
+  ],
+  "behavior": [
+    "Toda la mitad es clicable; al pasar el ratón la flecha toma el estado hover del Button-Icon Terciary.",
+    "En móvil los enlaces se apilan."
+  ],
+  "content": [
+    {
+      "field": "Títulos",
+      "notes": "Nombre de la ficha destino."
+    }
+  ],
+  "a11y": [
+    "Elemento nav con aria-label; rel=prev/next; la flecha es decorativa (no hay botón anidado dentro del enlace)."
+  ],
+  "related": [
+    "M22-Navigation-DirectLink"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: espaciados sin variable (40/24/80/48/8/32/36) → FX-9/FX-6/FX-13/FX-9/FX-2/FX-7/FX-8.",
+    "La flecha usa las clases de Button-Icon Terciary L sobre un span para no anidar un botón dentro del enlace."
+  ],
+  "codePath": "src/modules/M31NavigationPreviousNext/M31NavigationPreviousNext.jsx"
+}

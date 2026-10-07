@@ -1,0 +1,93 @@
+{/* Generado por scripts/docs-generator.mjs desde M31NavigationPreviousNext.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M31NavigationPreviousNext.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M31-Navigation-PreviousNext
+
+## Introducción
+
+Navegación entre fichas con enlace a la anterior y a la siguiente, cada uno con flecha y título.
+
+
+Figma: `M31-Navigation-PreviousNext` (`58464:36878`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Enlace anterior (flecha + antetítulo + título)
+- Enlace siguiente
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-black-neutral`, `dark-red-primary`
+
+Hereda el subtema del contenedor.
+
+## Comportamiento
+
+- Toda la mitad es clicable; al pasar el ratón la flecha toma el estado hover del Button-Icon Terciary.
+- En móvil los enlaces se apilan.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-neutral-2` | antetítulo |
+| color | `--strokes-icons-neutral-3` | separador |
+| color | `--button-terciary-*` | flecha |
+| spacing | `--spacers-fixed-fx-9` | padding lateral y gap |
+| spacing | `--spacers-fixed-fx-13` | padding vertical de cada mitad |
+| spacing | `--spacers-fixed-fx-2` | gap de textos |
+| spacing | `--layout-spacers-responsive-17` | padding de textos |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| previous | Ficha anterior {title, href}; null la oculta. | Ara Malikian | object |
+| next | Ficha siguiente {title, href}; null la oculta. | Swarovski Edition | object |
+| previousLabel | Antetítulo izquierdo. | ANTERIOR | text |
+| nextLabel | Antetítulo derecho. | SIGUIENTE | text |
+| theme | Subtema. | light-white | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Títulos |  | Nombre de la ficha destino. |
+
+## Accesibilidad
+
+- Elemento nav con aria-label; rel=prev/next; la flecha es decorativa (no hay botón anidado dentro del enlace).
+
+## Componentes relacionados
+
+- M22-Navigation-DirectLink

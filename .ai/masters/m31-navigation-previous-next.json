@@ -1,0 +1,36 @@
+{
+ "id": "58464:36878",
+ "name": "M31-Navigation-PreviousNext",
+ "type": "COMPONENT_SET",
+ "fp": "68f664e8",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title Left": "TEXT",
+  "Title Right": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile"
+  },
+  {
+   "name": "Device=Desktop"
+  }
+ ],
+ "spec": "Desktop 1440\u00d7236 padding 0/40: dos mitades de 680 con padding 80/0 y gap 48; Button-Icon Terciary L (64) con flecha + textos (Body/03 Neutral 2 'ANTERIOR'/'SIGUIENTE' y Title/03) con gap 8 y padding resp-17. Mobile: apilado.",
+ "deps": [
+  "Button-Icon"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings 40/24/80 y gaps 32/8/48/36 sin variable"
+   }
+  ]
+ }
+}

@@ -1,0 +1,19 @@
+/* M31-Navigation-PreviousNext — Figma 58464:36878. Solo tokens. Escritorio desde 1024 px. */
+.m31-nav { display: flex; flex-direction: column; box-sizing: border-box; width: 100%; border-top: 1px solid var(--strokes-icons-neutral-3); border-bottom: 1px solid var(--strokes-icons-neutral-3); background: var(--backgrounds-base); color: var(--texts-base); }
+.m31-nav__item { display: flex; align-items: center; gap: var(--spacers-fixed-fx-7); padding: var(--spacers-fixed-fx-9) var(--spacers-fixed-fx-6); color: inherit; text-decoration: none; }
+.m31-nav__item + .m31-nav__item { border-top: 1px solid var(--strokes-icons-neutral-3); }
+.m31-nav__item--next { flex-direction: row-reverse; text-align: right; }
+.m31-nav__texts { display: flex; flex: 1; flex-direction: column; gap: var(--spacers-fixed-fx-2); min-width: 0; }
+.m31-nav__label { color: var(--texts-neutral-2); }
+.m31-nav__icon { flex: 0 0 auto; }
+.m31-nav__item:hover .m31-nav__icon { background: var(--button-terciary-hover-fill); }
+.m31-nav__item:focus { outline: none; }
+.m31-nav__item:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+
+@media (min-width: 1024px) {
+  .m31-nav { flex-direction: row; justify-content: space-between; padding: 0 var(--spacers-fixed-fx-9); }
+  .m31-nav__item { flex: 1; gap: var(--spacers-fixed-fx-9); padding: var(--spacers-fixed-fx-13) 0; }
+  .m31-nav__item + .m31-nav__item { border-top: 0; border-left: 1px solid var(--strokes-icons-neutral-3); }
+  .m31-nav__item--prev .m31-nav__texts { padding-right: var(--layout-spacers-responsive-17); }
+  .m31-nav__item--next .m31-nav__texts { padding-left: var(--layout-spacers-responsive-17); }
+}

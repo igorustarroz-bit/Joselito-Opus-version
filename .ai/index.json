@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:08:55.664Z",
+  "generatedAt": "2026-10-07T12:11:40.734Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1867,7 +1867,7 @@
       "builtFp": "554e6275"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M31-Navigation-PreviousNext",
@@ -1880,7 +1880,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "module:m31-navigation-previous-next"
+      "key": "module:m31-navigation-previous-next",
+      "builtFp": "bcd49f76"
     },
     {
       "status": "todo",
