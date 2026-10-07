@@ -50,7 +50,7 @@ button.input__field { cursor: pointer; }
   outline: none;
   caret-color: var(--in-stroke);
 }
-.input:not(.is-floating) .input__control { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.input:not(.is-floating) > .input__field .input__control { position: absolute; width: 1px; height: 1px; opacity: 0; }
 .input__icon { flex: 0 0 auto; color: var(--in-icon); }
 .input__info { margin: 0; color: var(--in-msg); }
 .input__listbox { position: absolute; top: calc(var(--in-size) + var(--spacers-fixed-fx-2)); left: 0; z-index: 10; padding-inline: var(--spacers-fixed-fx-2); }
@@ -116,3 +116,6 @@ button.input__field { cursor: pointer; }
 }
 .input.is-disabled .input__field { cursor: not-allowed; }
 .input.no-cursor .input__control { caret-color: transparent; }
+.input--with-action .input__field { padding-right: 0; }
+.input__action { display: flex; align-self: stretch; margin-block: -1px; margin-right: -1px; }
+.input__action .button-icon { --bi-size: var(--in-size); }

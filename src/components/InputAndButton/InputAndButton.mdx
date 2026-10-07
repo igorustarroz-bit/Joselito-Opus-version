@@ -1,0 +1,104 @@
+{/* Generado por scripts/docs-generator.mjs desde InputAndButton.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './InputAndButton.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# InputAndButton
+
+## Introducción
+
+Campo de texto con un botón de enviar (flecha) pegado a la derecha, del alto del campo: newsletter, códigos de descuento, buscador simple. Mismos estados y tamaños que Input.
+
+
+Figma: `InputAndButton` (`58786:21956`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Input (sin padding derecho)
+- Button-Icon Primary del alto del campo
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- El botón ocupa el alto del campo (72 / 56 px) y se desactiva con el campo.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=Big (7 estados)
+
+<Canvas of={Stories.Big} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=Small (7 estados)
+
+<Canvas of={Stories.Small} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Ejemplo: newsletter
+
+<Canvas of={Stories.Newsletter} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--forms-ESTADO-*` | fondo, borde, etiqueta, texto, mensaje (como Input) |
+| spacing | `--layout-forms-l\|m-*` | alto, padding, distancias (como Input) |
+| typography | `ts-forms-input-m-*` |  |
+| typography | `ts-forms-input-s-*` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| size | `Big` o `Small` (como Input). | Big | inline-radio |
+| label | Etiqueta. | "Label" | text |
+| value / defaultValue / onChange | Valor (como Input). | "" | text |
+| info | Mensaje. | "Message" | text |
+| showInfo | Muestra el mensaje. | true | boolean |
+| showTypeCursor | Cursor de escritura visible. | true | boolean |
+| showIcon | Icono a la derecha. | false | boolean |
+| icon | Icono. | calendar-blank | text |
+| error / validated / disabled | Estados (como Input). | false | boolean |
+| state | Solo documentación. | — | select |
+| showButton | Muestra el botón. | true | boolean |
+| buttonLabel / buttonIcon / onSubmit | Nombre accesible, icono y acción del botón. | "Enviar" / arrow-right | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- El botón tiene nombre accesible.
+
+## Componentes relacionados
+
+- Input
+- Button-Icon
+- M03-Navigation-Footer
+
+## Pendientes / placeholders
+
+- undefined: undefined

@@ -18,6 +18,8 @@ export default function Input({
   type = 'Default',
   size = 'Big',
   label = 'Label',
+  emptyLabel,
+  action,
   value,
   defaultValue = '',
   onChange,
@@ -64,7 +66,7 @@ export default function Input({
 
   const set = (v) => { if (value === undefined) setInner(v); onChange?.(v); };
   const sz = size === 'Small' ? 's' : 'm';
-  const cls = ['input', `input--${size.toLowerCase()}`, `is-${st}`, floating ? 'is-floating' : '', state === 'Hover' ? 'is-hover' : '', showTypeCursor ? '' : 'no-cursor', className]
+  const cls = ['input', `input--${size.toLowerCase()}`, `is-${st}`, floating ? 'is-floating' : '', action ? 'input--with-action' : '', state === 'Hover' ? 'is-hover' : '', showTypeCursor ? '' : 'no-cursor', className]
     .filter(Boolean).join(' ');
   const selected = options.find((o) => (o.value ?? o.label) === current);
 
@@ -83,13 +85,14 @@ export default function Input({
       ) : (
         <label className="input__field" htmlFor={id}>
           <span className="input__texts">
-            <span className={`input__label ts-forms-input-${sz}-${floating ? 'label-in' : 'text'}`}>{label}</span>
+            <span className={`input__label ts-forms-input-${sz}-${floating ? 'label-in' : 'text'}`}>{floating ? label : (emptyLabel ?? label)}</span>
             <input id={id} className={`input__control ts-forms-input-${sz}-text`} type={inputType} name={name} value={current}
               placeholder={placeholder} disabled={isDisabled} aria-invalid={error || state === 'Error' || undefined}
               aria-describedby={showInfo ? `${id}-info` : undefined}
               onChange={(e) => set(e.target.value)} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)} />
           </span>
           {showIcon && <Icon name={icon} size="S" className="input__icon" />}
+          {action && <span className="input__action">{action}</span>}
         </label>
       )}
       {isDropdown && open && options.length > 0 && (

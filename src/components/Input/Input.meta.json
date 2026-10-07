@@ -82,6 +82,18 @@
       "control": "text"
     },
     {
+      "name": "emptyLabel",
+      "description": "Texto de la etiqueta cuando el campo está vacío, si es distinto del que flota (Input-Phone: \"Phone Num\" / \"Teléfono\").",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "action",
+      "description": "Elemento a la derecha pegado al borde (InputAndButton: Button-Icon a la altura del campo).",
+      "default": "—",
+      "control": false
+    },
+    {
       "name": "value / defaultValue / onChange",
       "figma": "Placeholder",
       "description": "Valor (controlado o no). En Figma el valor de ejemplo es \"Input text\".",

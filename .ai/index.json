@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:10:18.682Z",
+  "generatedAt": "2026-10-07T07:15:21.489Z",
   "output": "react-storybook",
   "items": [
     {
@@ -927,7 +927,7 @@
       "key": "component:form"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "InputAndButton",
@@ -940,7 +940,8 @@
       ],
       "images": 0,
       "autolayout": "14/14",
-      "key": "component:input-and-button"
+      "key": "component:input-and-button",
+      "builtFp": "af4342bb"
     },
     {
       "status": "done",

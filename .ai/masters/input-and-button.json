@@ -1,0 +1,46 @@
+{
+ "id": "58786:21956",
+ "name": "InputAndButton",
+ "type": "COMPONENT_SET",
+ "fp": "5c75157f",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Info": "BOOLEAN",
+  "Placeholder": "TEXT",
+  "Label": "TEXT",
+  "Info": "TEXT",
+  "Show Type Cursor": "BOOLEAN",
+  "Show Icon": "BOOLEAN",
+  "Instance": "INSTANCE_SWAP",
+  "Show Button": "BOOLEAN",
+  "Type": [
+   "Default"
+  ],
+  "Size": [
+   "Big",
+   "Small"
+  ],
+  "State": [
+   "Default",
+   "Hover",
+   "Focused",
+   "Filled",
+   "Error",
+   "Validated",
+   "Disabled"
+  ]
+ },
+ "spec": "Igual que Input Default + Button-Icon Primary L 72×72 a la derecha (padding derecho 0)",
+ "deps": [
+  "Button-Icon"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 4/8 px sin variable (como Input)"
+   }
+  ]
+ }
+}

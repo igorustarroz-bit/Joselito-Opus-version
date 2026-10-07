@@ -1,0 +1,190 @@
+{
+  "name": "InputAndButton",
+  "kind": "component",
+  "title": "InputAndButton",
+  "figma": {
+    "nodeId": "58786:21956",
+    "name": "InputAndButton",
+    "fp": "5c75157f"
+  },
+  "description": "Campo de texto con un botón de enviar (flecha) pegado a la derecha, del alto del campo: newsletter, códigos de descuento, buscador simple. Mismos estados y tamaños que Input.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Default"
+    ],
+    "Size": [
+      "Big",
+      "Small"
+    ],
+    "State": [
+      "Default",
+      "Hover",
+      "Focused",
+      "Filled",
+      "Error",
+      "Validated",
+      "Disabled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Big",
+      "title": "Size=Big (7 estados)"
+    },
+    {
+      "story": "Small",
+      "title": "Size=Small (7 estados)"
+    },
+    {
+      "story": "Newsletter",
+      "title": "Ejemplo: newsletter"
+    }
+  ],
+  "props": [
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "`Big` o `Small` (como Input).",
+      "default": "Big",
+      "control": "inline-radio"
+    },
+    {
+      "name": "label",
+      "figma": "Label",
+      "description": "Etiqueta.",
+      "default": "\"Label\"",
+      "control": "text"
+    },
+    {
+      "name": "value / defaultValue / onChange",
+      "figma": "Placeholder",
+      "description": "Valor (como Input).",
+      "default": "\"\"",
+      "control": "text"
+    },
+    {
+      "name": "info",
+      "figma": "Info",
+      "description": "Mensaje.",
+      "default": "\"Message\"",
+      "control": "text"
+    },
+    {
+      "name": "showInfo",
+      "figma": "Show Info",
+      "description": "Muestra el mensaje.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showTypeCursor",
+      "figma": "Show Type Cursor",
+      "description": "Cursor de escritura visible.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showIcon",
+      "figma": "Show Icon",
+      "description": "Icono a la derecha.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "icon",
+      "figma": "Instance",
+      "description": "Icono.",
+      "default": "calendar-blank",
+      "control": "text"
+    },
+    {
+      "name": "error / validated / disabled",
+      "description": "Estados (como Input).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "showButton",
+      "figma": "Show Button",
+      "description": "Muestra el botón.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "buttonLabel / buttonIcon / onSubmit",
+      "description": "Nombre accesible, icono y acción del botón.",
+      "default": "\"Enviar\" / arrow-right",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--forms-ESTADO-*",
+        "usage": "fondo, borde, etiqueta, texto, mensaje (como Input)"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-forms-l|m-*",
+        "usage": "alto, padding, distancias (como Input)"
+      }
+    ],
+    "typography": [
+      "ts-forms-input-m-*",
+      "ts-forms-input-s-*"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Input (sin padding derecho)",
+    "Button-Icon Primary del alto del campo"
+  ],
+  "behavior": [
+    "El botón ocupa el alto del campo (72 / 56 px) y se desactiva con el campo."
+  ],
+  "content": [],
+  "a11y": [
+    "El botón tiene nombre accesible."
+  ],
+  "related": [
+    "Input",
+    "Button-Icon",
+    "M03-Navigation-Footer"
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "field": "placeholder",
+      "notes": "No hay relleno: la palabra aparece por el atributo HTML placeholder heredado de Input."
+    }
+  ],
+  "notes": [
+    "Figma: el Button-Icon es Primary L (64 px) estirado a 72 × 72; en código toma el alto del campo (Layout/Forms/Size)."
+  ],
+  "codePath": "src/components/InputAndButton/InputAndButton.jsx"
+}

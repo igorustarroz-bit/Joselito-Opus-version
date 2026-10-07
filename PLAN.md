@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 61/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 62/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -79,7 +79,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Card-Social-media `63911:364852` — 2 variantes · 2 img · usa: Aspect Ratio <!-- k:component:card-social-media -->
 - [x] Checkbox-List `57947:46573` — 2 variantes · usa: Checkbox-Label, Checkboxes-Radios <!-- k:component:checkbox-list -->
 - [ ] Form `57947:46433` — usa: Button, Button-Action-Link, Checkbox-Label, Checkbox-List, Checkboxes-Radios, Input… <!-- k:component:form -->
-- [ ] InputAndButton `58786:21956` — 14 variantes · usa: Button-Icon <!-- k:component:input-and-button -->
+- [x] InputAndButton `58786:21956` — 14 variantes · usa: Button-Icon <!-- k:component:input-and-button -->
 - [x] subnavigation-item `59289:60784` — 2 variantes <!-- k:component:subnavigation-item -->
 - [x] tab_primary `57943:37527` — 5 variantes <!-- k:component:tab-primary -->
 - [x] tab_secondary `57943:45626` — 5 variantes <!-- k:component:tab-secondary -->

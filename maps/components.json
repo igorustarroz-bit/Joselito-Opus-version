@@ -198,5 +198,20 @@
     "name": "ErrorPicture",
     "path": "src/components/ErrorPicture/ErrorPicture.jsx",
     "fp": "aba22f68"
+  },
+  "58786:21956": {
+    "name": "InputAndButton",
+    "path": "src/components/InputAndButton/InputAndButton.jsx",
+    "fp": "5c75157f"
+  },
+  "63309:351579": {
+    "name": "InputPhone",
+    "path": "src/components/InputPhone/InputPhone.jsx",
+    "fp": "0a89fa81"
+  },
+  "63264:50565": {
+    "name": "InputCode",
+    "path": "src/components/InputCode/InputCode.jsx",
+    "fp": "7ce54e3c"
   }
 }
