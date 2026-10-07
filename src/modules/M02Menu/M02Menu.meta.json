@@ -228,12 +228,12 @@
   "notes": [
     "Figma: separaciones 40, 32, 20, 12, 4 y 28 px sin variable → FX-9, FX-7, FX-5, FX-3, FX-1 y FX-7 (la más cercana; 28 empata entre FX-6 y FX-7 → se usa FX-6 en el bloque de idioma como su padding lateral).",
     "Figma: separación lista-foto 34 px sin variable → FX-7 (32, empate con FX-8 → la menor).",
-    "Figma: foto 3:4 de 70 px → FX-12 (72).",
     "Figma: destacado de 316 px y lista de 315 px → columnas de la rejilla (3cols / 6cols).",
     "Figma: en escritorio la sección activa de About es Origen y en móvil se abre Excelencia; se replica con active/activeMobile.",
     "Figma: la M01 interna usa 'Productos' en lugar de 'Tienda' y 'Experiencia' sin s en la captura.",
     "Figma: el padding lateral del panel es FX-9; se usa --layout-grids-wrapper-nav para alinearlo con la cabecera (40 px a 1440 igualmente).",
-    "Figma: la foto del destacado en móvil (cocina) no está entre las imágenes exportadas del máster; se usa la del mobile_menu_accordion. Pendiente de exportar."
+    "Figma: la foto del destacado en móvil (cocina) no está entre las imágenes exportadas del máster; se usa la del mobile_menu_accordion. Pendiente de exportar.",
+    "Figma: la foto del panel Product mide 70 px (y hay otra de 316 px oculta en el destacado); en código se muestra a 3 columnas (316 px a 1440) porque a 70 px se ve diminuta. Confirmar con diseño."
   ],
   "codePath": "src/modules/M02Menu/M02Menu.jsx"
 }
