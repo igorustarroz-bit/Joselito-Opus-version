@@ -1,0 +1,116 @@
+{/* Generado por scripts/docs-generator.mjs desde Title.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Title.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Title
+
+## Introducción
+
+Cabecera de sección que encabeza carruseles y listados: antetítulo pequeño con un enlace "Ver todos" a la derecha y, debajo, el título grande. Ocupa todo el ancho de su contenedor.
+
+
+Figma: `Title` (`61387:120074`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Fila: antetítulo (izquierda) + enlace con CaretRight 20 px (derecha)
+- Título Title/03 (opcional)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema del módulo.
+
+## Comportamiento
+
+- El antetítulo y el enlace se reparten el ancho (space-between).
+- El título ocupa todo el ancho y salta de línea.
+- Responsive: los tamaños tipográficos y la separación vienen de tokens responsive.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Link = false
+
+<Canvas of={Stories.SinEnlace} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Title = false
+
+<Canvas of={Stories.SinTitulo} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-base` | antetítulo y título |
+| color | `--texts-neutral-1` | enlace |
+| spacing | `--layout-spacers-responsive-8` | separación fila–título |
+| spacing | `--spacers-fixed-fx-4` | separación mínima antetítulo–enlace |
+| typography | `ts-body-04` |  |
+| typography | `ts-body-03` |  |
+| typography | `ts-title-03` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| eyebrow | Antetítulo (Body/04). | "Nuestra colección" | text |
+| title | Título (Title/03). | "Lorem ipsum dolor sit amet cucuster" | text |
+| showTitle | Muestra el título grande. | true | boolean |
+| showLink | Muestra el enlace de la derecha. | true | boolean |
+| linkText | Texto del enlace (Body/03). | "Ver todos" | text |
+| href | Destino del enlace. | "#" | text |
+| as | Etiqueta del título (h2 por defecto) para mantener la jerarquía de la página. | h2 | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Antetítulo |  | 2–3 palabras ("Nuestra colección"). |
+| Título |  | Una frase corta; puede ocupar dos líneas en móvil. |
+| Enlace |  | "Ver todos" o similar. |
+
+## Accesibilidad
+
+- El título es un encabezado real (h2 por defecto; ajustable con `as`).
+- El enlace tiene foco visible.
+
+## Componentes relacionados
+
+- M18-Banners-Full Screen Slider
+- M23-Cards-Gallery
+- M25-Cards-Links

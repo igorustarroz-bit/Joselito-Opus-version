@@ -1,0 +1,166 @@
+{
+  "name": "Title",
+  "kind": "component",
+  "title": "Title",
+  "figma": {
+    "nodeId": "61387:120074",
+    "name": "Title",
+    "fp": "f4382fd2"
+  },
+  "description": "Cabecera de sección que encabeza carruseles y listados: antetítulo pequeño con un enlace \"Ver todos\" a la derecha y, debajo, el título grande. Ocupa todo el ancho de su contenedor.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    },
+    {
+      "story": "SinEnlace",
+      "title": "Link = false"
+    },
+    {
+      "story": "SinTitulo",
+      "title": "Title = false"
+    }
+  ],
+  "props": [
+    {
+      "name": "eyebrow",
+      "description": "Antetítulo (Body/04).",
+      "default": "\"Nuestra colección\"",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "description": "Título (Title/03).",
+      "default": "\"Lorem ipsum dolor sit amet cucuster\"",
+      "control": "text"
+    },
+    {
+      "name": "showTitle",
+      "figma": "Title",
+      "description": "Muestra el título grande.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showLink",
+      "figma": "Link",
+      "description": "Muestra el enlace de la derecha.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "linkText",
+      "description": "Texto del enlace (Body/03).",
+      "default": "\"Ver todos\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Destino del enlace.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "as",
+      "description": "Etiqueta del título (h2 por defecto) para mantener la jerarquía de la página.",
+      "default": "h2",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "antetítulo y título"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "enlace"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-8",
+        "usage": "separación fila–título"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación mínima antetítulo–enlace"
+      }
+    ],
+    "typography": [
+      "ts-body-04",
+      "ts-body-03",
+      "ts-title-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema del módulo."
+  },
+  "anatomy": [
+    "Fila: antetítulo (izquierda) + enlace con CaretRight 20 px (derecha)",
+    "Título Title/03 (opcional)"
+  ],
+  "behavior": [
+    "El antetítulo y el enlace se reparten el ancho (space-between).",
+    "El título ocupa todo el ancho y salta de línea.",
+    "Responsive: los tamaños tipográficos y la separación vienen de tokens responsive."
+  ],
+  "content": [
+    {
+      "field": "Antetítulo",
+      "notes": "2–3 palabras (\"Nuestra colección\")."
+    },
+    {
+      "field": "Título",
+      "notes": "Una frase corta; puede ocupar dos líneas en móvil."
+    },
+    {
+      "field": "Enlace",
+      "notes": "\"Ver todos\" o similar."
+    }
+  ],
+  "a11y": [
+    "El título es un encabezado real (h2 por defecto; ajustable con `as`).",
+    "El enlace tiene foco visible."
+  ],
+  "related": [
+    "M18-Banners-Full Screen Slider",
+    "M23-Cards-Gallery",
+    "M25-Cards-Links"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: la variante Mobile incluye el margen lateral del wrapper y un espacio superior (Spacers Responsive/11) dentro del propio componente; Desktop no. En código el componente no lleva márgenes: los pone el contenedor (.wrapper / módulo). Las stories lo muestran dentro de .wrapper.",
+    "Figma: la separación entre antetítulo y enlace es un gap fijo de 1026 px (equivale a space-between) y el gap de 'Arrow+title' (16 px) no tiene variable.",
+    "Figma: el texto del título del máster es de relleno (\"Lorem ipsum…\"); se mantiene como valor por defecto."
+  ],
+  "codePath": "src/components/Title/Title.jsx"
+}

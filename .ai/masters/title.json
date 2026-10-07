@@ -1,0 +1,7 @@
+{ "id": "61387:120074", "name": "Title", "type": "COMPONENT_SET", "page": "📦 Components", "fp": "f4382fd2", "readAt": "2026-10-07T06:50:00Z",
+  "$note": "Digest compacto (.ai/tmp/spec.js).",
+  "props": { "Title": "BOOLEAN", "Link": "BOOLEAN", "Device": ["Desktop", "Mobile"] },
+  "variants": [ { "name": "Device=Desktop", "w": 1280, "h": 112, "padding": 0 }, { "name": "Device=Mobile", "w": 390, "h": 160, "padding": "Spacers Responsive/11 · Grids/Wrapper-Default" } ],
+  "spec": "Columna gap Spacers Responsive/8: fila [Title 'Nuestra colección' Body/04 Texts/Base | Main_Secondary-Link 'Ver todos' Body/03 Texts/Neutral 1 + CaretRight 20] (gap 1026) + H2 Title/03 Texts/Base",
+  "texts": [{ "chars": "Nuestra colección" }, { "chars": "Perfil sensorial" }, { "chars": "Ver todos" }, { "chars": "Lorem ipsum dolor sit amet cucuster" }],
+  "deps": ["CaretRight"], "images": [], "audit": { "errors": 0, "warns": 2, "items": [ { "code": "HARD_SPACING", "msg": "itemSpacing 1026 y 16 sin variable" } ] } }

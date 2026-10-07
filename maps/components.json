@@ -38,5 +38,10 @@
     "name": "NavButton",
     "path": "src/components/NavButton/NavButton.jsx",
     "fp": "6ba11454"
+  },
+  "61387:120074": {
+    "name": "Title",
+    "path": "src/components/Title/Title.jsx",
+    "fp": "f4382fd2"
   }
 }

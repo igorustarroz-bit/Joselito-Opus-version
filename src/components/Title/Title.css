@@ -1,0 +1,26 @@
+/* Title — Figma 61387:120074. Solo tokens. Columna con separación Spacers Responsive/8; fila
+   superior con antetítulo a la izquierda y enlace a la derecha (space-between). */
+.title-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-spacers-responsive-8);
+  width: 100%;
+}
+.title-block__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacers-fixed-fx-4);
+}
+.title-block__eyebrow { margin: 0; color: var(--texts-base); }
+.title-block__link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--texts-neutral-1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.title-block__link:focus { outline: none; }
+.title-block__link:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+.title-block__title { margin: 0; color: var(--texts-base); }
