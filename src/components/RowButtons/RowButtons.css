@@ -1,0 +1,4 @@
+/* RowButtons — Figma 63609:144479. Solo tokens. */
+.row-buttons { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-4); }
+.row-buttons--vertical { flex-direction: column; gap: var(--spacers-fixed-fx-2); width: 100%; }
+.row-buttons--vertical > * { width: 100%; }

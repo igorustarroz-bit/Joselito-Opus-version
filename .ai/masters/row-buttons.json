@@ -1,0 +1,22 @@
+{
+ "id": "63609:144479",
+ "name": "RowButtons",
+ "type": "COMPONENT_SET",
+ "fp": "e94b5e34",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Vertical": [
+   "Yes",
+   "No"
+  ]
+ },
+ "spec": "Slot H gap fx-4 / V gap fx-2 (FH); Button Primary M + Secondary M",
+ "deps": [
+  "Button"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

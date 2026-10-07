@@ -1,0 +1,82 @@
+{/* Generado por scripts/docs-generator.mjs desde RowButtons.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './RowButtons.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# RowButtons
+
+## Introducción
+
+Grupo de dos botones (Primary + Secondary, tamaño M) en fila o apilados a todo el ancho. Se usa en modales, formularios y módulos de contenido.
+
+
+Figma: `RowButtons` (`63609:144479`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Slot de botones (Button)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- En fila los botones miden lo que su texto (mínimo por token) y saltan de línea si no caben.
+- Vertical: ocupan todo el ancho.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Vertical=No
+
+<Canvas of={Stories.VerticalNo} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Vertical=Yes
+
+<Canvas of={Stories.VerticalYes} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| spacing | `--spacers-fixed-fx-4` | separación en fila |
+| spacing | `--spacers-fixed-fx-2` | separación apilados |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| vertical | Apila los botones a todo el ancho. | false | boolean |
+| children | Botones propios (slot). Por defecto Primary M + Secondary M. | — |  |
+| primaryText / secondaryText | Textos de los botones por defecto. | "Button" | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Cada botón gestiona su accesibilidad.
+
+## Componentes relacionados
+
+- Button
+- Modal_Lightbox
+- M07-Content-Text+Image

@@ -1,0 +1,99 @@
+{
+  "name": "RowButtons",
+  "kind": "component",
+  "title": "RowButtons",
+  "figma": {
+    "nodeId": "63609:144479",
+    "name": "RowButtons",
+    "fp": "e94b5e34"
+  },
+  "description": "Grupo de dos botones (Primary + Secondary, tamaño M) en fila o apilados a todo el ancho. Se usa en modales, formularios y módulos de contenido.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Vertical": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "VerticalNo",
+      "title": "Vertical=No"
+    },
+    {
+      "story": "VerticalYes",
+      "title": "Vertical=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "vertical",
+      "figma": "Vertical",
+      "description": "Apila los botones a todo el ancho.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "children",
+      "figma": "Slot",
+      "description": "Botones propios (slot). Por defecto Primary M + Secondary M.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "primaryText / secondaryText",
+      "description": "Textos de los botones por defecto.",
+      "default": "\"Button\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación en fila"
+      },
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación apilados"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Slot de botones (Button)"
+  ],
+  "behavior": [
+    "En fila los botones miden lo que su texto (mínimo por token) y saltan de línea si no caben.",
+    "Vertical: ocupan todo el ancho."
+  ],
+  "content": [],
+  "a11y": [
+    "Cada botón gestiona su accesibilidad."
+  ],
+  "related": [
+    "Button",
+    "Modal_Lightbox",
+    "M07-Content-Text+Image"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [],
+  "codePath": "src/components/RowButtons/RowButtons.jsx"
+}

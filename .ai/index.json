@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:55:58.758Z",
+  "generatedAt": "2026-10-07T06:55:58.911Z",
   "output": "react-storybook",
   "items": [
     {
@@ -622,7 +622,7 @@
       "builtFp": "27fef8e8"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "RowButtons",
@@ -635,7 +635,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:row-buttons"
+      "key": "component:row-buttons",
+      "builtFp": "ffbb6cea"
     },
     {
       "status": "todo",

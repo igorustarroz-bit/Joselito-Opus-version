@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 38/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 39/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -61,7 +61,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Listbox `49650:12399` — usa: listbox_Item_Dropdown <!-- k:component:listbox -->
 - [x] Input `49118:2300` — 28 variantes · usa: Listbox, listbox_Item_Dropdown <!-- k:component:input -->
 - [x] menu-item-list `59289:58053` — 2 variantes <!-- k:component:menu-item-list -->
-- [ ] RowButtons `63609:144479` — 2 variantes · usa: Button <!-- k:component:row-buttons -->
+- [x] RowButtons `63609:144479` — 2 variantes · usa: Button <!-- k:component:row-buttons -->
 - [ ] Checkbox-Label `43246:12097` — 12 variantes · usa: Checkboxes-Radios <!-- k:component:checkbox-label -->
 - [ ] Stepper_for_toast `59964:130709` — 3 variantes · autolayout 0/3 → análisis de geometría <!-- k:component:stepper-for-toast -->
 - [ ] Divider `63480:2560` — autolayout 0/1 → análisis de geometría <!-- k:component:divider -->
