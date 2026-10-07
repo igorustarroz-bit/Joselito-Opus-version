@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:17:44.958Z",
+  "generatedAt": "2026-10-07T07:17:45.083Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1148,7 +1148,7 @@
       "key": "component:order-summary"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Overlay",
@@ -1159,7 +1159,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "0/1",
-      "key": "component:overlay"
+      "key": "component:overlay",
+      "builtFp": "4768eb43"
     },
     {
       "status": "todo",

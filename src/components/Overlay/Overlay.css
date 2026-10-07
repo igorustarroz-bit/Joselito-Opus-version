@@ -1,0 +1,3 @@
+/* Overlay — Figma 58786:13661. Solo tokens. */
+.overlay { position: absolute; inset: 0; background: var(--backgrounds-overlay); }
+.overlay--fixed { position: fixed; z-index: 100; }

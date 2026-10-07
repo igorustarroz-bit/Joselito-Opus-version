@@ -1,0 +1,65 @@
+{/* Generado por scripts/docs-generator.mjs desde Overlay.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Overlay.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Overlay
+
+## Introducción
+
+Capa oscura semitransparente a pantalla completa bajo modales, menús y carritos laterales.
+
+
+Figma: `Overlay` (`58786:13661`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Capa a pantalla completa
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Clic fuera del contenido o Esc → onClose.
+
+## Variantes y tamaños
+
+_—_
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-overlay` | capa (Opacity Black 30) |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| open | Visible. | true | boolean |
+| onClose | Clic en la capa o Esc. | — |  |
+| fixed | Fija a la ventana (true) o dentro del contenedor (false). | true | boolean |
+| children | Contenido encima (p. ej. el modal). | — |  |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- El contenido (modal) debe gestionar el foco; la capa no es enfocable.
+
+## Componentes relacionados
+
+- Modal_Lightbox
+- M02-Menu

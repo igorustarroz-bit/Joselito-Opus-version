@@ -1,0 +1,85 @@
+{
+  "name": "Overlay",
+  "kind": "component",
+  "title": "Overlay",
+  "figma": {
+    "nodeId": "58786:13661",
+    "name": "Overlay",
+    "fp": "8b112fa7"
+  },
+  "description": "Capa oscura semitransparente a pantalla completa bajo modales, menús y carritos laterales.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "open",
+      "description": "Visible.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "onClose",
+      "description": "Clic en la capa o Esc.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "fixed",
+      "description": "Fija a la ventana (true) o dentro del contenedor (false).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "children",
+      "description": "Contenido encima (p. ej. el modal).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "capa (Opacity Black 30)"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Capa a pantalla completa"
+  ],
+  "behavior": [
+    "Clic fuera del contenido o Esc → onClose."
+  ],
+  "content": [],
+  "a11y": [
+    "El contenido (modal) debe gestionar el foco; la capa no es enfocable."
+  ],
+  "related": [
+    "Modal_Lightbox",
+    "M02-Menu"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: un rectángulo de 390 × 844 sin autolayout; en código ocupa la ventana."
+  ],
+  "codePath": "src/components/Overlay/Overlay.jsx"
+}

@@ -1,0 +1,14 @@
+{
+ "id": "58786:13661",
+ "name": "Overlay",
+ "type": "COMPONENT",
+ "fp": "8b112fa7",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "390×844 rect fill Backgrounds/Overlay",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
