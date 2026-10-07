@@ -18,12 +18,14 @@ const SIZE = { Yes: [300, 200], No: [200, 200] };
 export default function BrandLogo({ horizontal = 'Yes', width, title = 'Joselito', className = '', ...rest }) {
   const name = horizontal === 'No' ? 'brand-logo-vertical' : 'brand-logo-horizontal';
   const Svg = LOGOS[name];
-  const [w] = SIZE[horizontal === 'No' ? 'No' : 'Yes'];
+  const [w, h] = SIZE[horizontal === 'No' ? 'No' : 'Yes'];
+  const width0 = width ?? w;
   const a11y = title ? { role: 'img', 'aria-label': title } : { 'aria-hidden': true };
   return (
     <Svg
       className={['brand-logo', `brand-logo--${horizontal === 'No' ? 'vertical' : 'horizontal'}`, className].filter(Boolean).join(' ')}
-      width={width ?? w}
+      width={width0}
+      height={typeof width0 === 'number' ? Math.round((width0 * h) / w) : undefined}
       focusable="false"
       {...a11y}
       {...rest}

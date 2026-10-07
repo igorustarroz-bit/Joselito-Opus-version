@@ -232,7 +232,8 @@
     "Figma: destacado de 316 px y lista de 315 px → columnas de la rejilla (3cols / 6cols).",
     "Figma: en escritorio la sección activa de About es Origen y en móvil se abre Excelencia; se replica con active/activeMobile.",
     "Figma: la M01 interna usa 'Productos' en lugar de 'Tienda' y 'Experiencia' sin s en la captura.",
-    "Figma: el padding lateral del panel es FX-9; se usa --layout-grids-wrapper-nav para alinearlo con la cabecera (40 px a 1440 igualmente)."
+    "Figma: el padding lateral del panel es FX-9; se usa --layout-grids-wrapper-nav para alinearlo con la cabecera (40 px a 1440 igualmente).",
+    "Figma: la foto del destacado en móvil (cocina) no está entre las imágenes exportadas del máster; se usa la del mobile_menu_accordion. Pendiente de exportar."
   ],
   "codePath": "src/modules/M02Menu/M02Menu.jsx"
 }
