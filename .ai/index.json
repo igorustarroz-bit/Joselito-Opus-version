@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:44:08.187Z",
+  "generatedAt": "2026-10-07T06:46:19.340Z",
   "output": "react-storybook",
   "items": [
     {
@@ -533,7 +533,7 @@
       "builtFp": "f8f0bc03"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Card Product",
@@ -550,7 +550,8 @@
       ],
       "images": 4,
       "autolayout": "4/4",
-      "key": "component:card-product"
+      "key": "component:card-product",
+      "builtFp": "cd80a7be"
     },
     {
       "status": "todo",

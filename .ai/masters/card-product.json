@@ -1,0 +1,8 @@
+{ "id": "61276:118038", "name": "Card Product", "type": "COMPONENT_SET", "page": "📦 Components", "fp": "fa62e141", "readAt": "2026-10-07T07:15:00Z",
+  "$note": "Digest compacto (.ai/tmp/spec.js).",
+  "props": { "Show Label": "BOOLEAN", "Show Button": "BOOLEAN", "Show Quantity": "BOOLEAN", "⌙ Show Price": "BOOLEAN", "⌙ Show Data": "BOOLEAN", "⌙ ⌙ Price": "TEXT", "Title": "TEXT", "⌙ ⌙ Data": "TEXT", "Show Datas": "BOOLEAN", "Show QuickCTA": "BOOLEAN", "Device": ["Desktop", "Mobile"], "Type": ["Vertical", "Horizontal"] },
+  "variants": [ { "name": "Device=Desktop, Type=Vertical", "w": 342 }, { "name": "Device=Mobile, Type=Vertical", "w": 234 }, { "name": "Device=Desktop, Type=Horizontal", "w": 463, "gap": "fx-7" }, { "name": "Device=Mobile, Type=Horizontal", "w": 463, "gap": "fx-6" } ],
+  "texts": [{ "chars": "Jamón Gran Reserva" }, { "chars": "380€" }, { "chars": "1.2kg" }, { "chars": "añadir al carrito" }],
+  "deps": ["Aspect Ratio", "Button-Action-Link", "Tag", "Button", "InputQuantity"],
+  "images": [{ "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d", "layer": "Aspect Ratio", "w": 342, "h": 456 }],
+  "audit": { "errors": 0, "warns": 1, "items": [ { "code": "HARD_SPACING", "msg": "Photo itemSpacing 8 sin variable" } ] } }

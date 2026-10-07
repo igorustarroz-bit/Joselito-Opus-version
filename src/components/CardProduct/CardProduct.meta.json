@@ -1,0 +1,269 @@
+{
+  "name": "CardProduct",
+  "kind": "component",
+  "title": "Card Product",
+  "figma": {
+    "nodeId": "61276:118038",
+    "name": "Card Product",
+    "fp": "fa62e141"
+  },
+  "description": "Tarjeta de producto para listados, carruseles y carrito: foto 3:4 con etiqueta y botón rápido opcionales, nombre, precio y/o peso, selector de cantidad opcional y enlace \"añadir al carrito\". Vertical (apilada) u horizontal (foto a la izquierda). Ocupa el ancho de su columna.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Vertical",
+      "Horizontal"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopVertical",
+      "title": "Device=Desktop, Type=Vertical"
+    },
+    {
+      "story": "MobileVertical",
+      "title": "Device=Mobile, Type=Vertical"
+    },
+    {
+      "story": "DesktopHorizontal",
+      "title": "Device=Desktop, Type=Horizontal"
+    },
+    {
+      "story": "MobileHorizontal",
+      "title": "Device=Mobile, Type=Horizontal"
+    },
+    {
+      "story": "Completa",
+      "title": "Todas las opciones activadas"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Vertical` u `Horizontal`.",
+      "default": "Vertical",
+      "control": "inline-radio"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Foto del producto (3:4) y su texto alternativo.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "href",
+      "description": "Si se pasa, el nombre enlaza a la ficha del producto.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Nombre del producto (Body/04).",
+      "default": "\"Jamón Gran Reserva\"",
+      "control": "text"
+    },
+    {
+      "name": "showDatas",
+      "figma": "Show Datas",
+      "description": "Muestra la fila de datos (precio/peso).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showPrice",
+      "figma": "⌙ Show Price",
+      "description": "Muestra el precio.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "price",
+      "figma": "⌙ ⌙ Price",
+      "description": "Precio.",
+      "default": "\"380€\"",
+      "control": "text"
+    },
+    {
+      "name": "showData",
+      "figma": "⌙ Show Data",
+      "description": "Muestra el peso u otro dato.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "data",
+      "figma": "⌙ ⌙ Data",
+      "description": "Dato (peso).",
+      "default": "\"1.2kg\"",
+      "control": "text"
+    },
+    {
+      "name": "showLabel",
+      "figma": "Show Label",
+      "description": "Etiqueta (Tag XS Transaction) sobre la foto.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "label",
+      "description": "Texto de la etiqueta.",
+      "default": "\"LABEL\"",
+      "control": "text"
+    },
+    {
+      "name": "showQuickCTA",
+      "figma": "Show QuickCTA",
+      "description": "Botón Primary S sobre la parte baja de la foto (solo Vertical).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "quickCTAText / onQuickCTA",
+      "description": "Texto y acción del botón rápido.",
+      "default": "\"Button\"",
+      "control": "text"
+    },
+    {
+      "name": "showQuantity",
+      "figma": "Show Quantity",
+      "description": "Selector de cantidad (InputQuantity).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "quantityProps",
+      "description": "Props para InputQuantity (value, onChange…).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "showButton",
+      "figma": "Show Button",
+      "description": "Enlace de acción (Button-Action-Link L).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "buttonText / onButton",
+      "description": "Texto y acción del enlace.",
+      "default": "\"añadir al carrito\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "nombre"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "precio y peso"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "separación foto–contenido (Desktop)"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "separación Horizontal en móvil; margen del CTA rápido"
+      },
+      {
+        "token": "--layout-spacers-responsive-7",
+        "usage": "separación info–enlace"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "separación precio–peso"
+      },
+      {
+        "token": "--spacers-fixed-fx-4 / fx-2",
+        "usage": "posición de la etiqueta (Vertical / Horizontal); margen superior de la cantidad"
+      }
+    ],
+    "typography": [
+      "ts-body-04"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Foto Aspect Ratio 3:4",
+    "Tag XS opcional (arriba a la izquierda)",
+    "Button Primary S opcional (abajo, a 24 px de los bordes)",
+    "Nombre (h3, Body/04)",
+    "Precio y/o peso (Body/04, Neutral 2)",
+    "InputQuantity opcional",
+    "Button-Action-Link L"
+  ],
+  "behavior": [
+    "Vertical: ancho de la columna; la foto mantiene 3:4.",
+    "Horizontal: foto de 140 px a la izquierda y contenido centrado verticalmente.",
+    "Device: en móvil la tarjeta horizontal separa foto y texto 24 px (FX-6); en escritorio 32 px (FX-7)."
+  ],
+  "content": [
+    {
+      "field": "Nombre",
+      "notes": "Nombre comercial del producto (1–2 líneas)."
+    },
+    {
+      "field": "Precio",
+      "notes": "Con símbolo de moneda (\"380€\")."
+    },
+    {
+      "field": "Foto",
+      "notes": "Proporción 3:4, producto sobre fondo neutro."
+    }
+  ],
+  "a11y": [
+    "El nombre es un encabezado (h3) y, con href, un enlace.",
+    "La foto necesita imageAlt descriptivo.",
+    "Botones y cantidad accesibles por teclado (componentes base)."
+  ],
+  "related": [
+    "Aspect Ratio",
+    "Tag",
+    "Button",
+    "Button-Action-Link",
+    "InputQuantity",
+    "M24-Cards-Productcarousel",
+    "M19-Card-Grid"
+  ],
+  "images": [
+    {
+      "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+      "usage": "foto de producto del máster"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: el ancho de la foto en Horizontal (140 px) no tiene variable.",
+    "Figma: el frame Photo tiene gap 8 px sin variable (irrelevante: un único hijo).",
+    "Figma: en Horizontal no existe el CTA rápido (QuickCTA); en código se ignora en ese tipo.",
+    "Device: la única diferencia entre Desktop y Mobile además del ancho es la separación en Horizontal (FX-7 / FX-6); se resuelve con breakpoint (768 px)."
+  ],
+  "codePath": "src/components/CardProduct/CardProduct.jsx"
+}

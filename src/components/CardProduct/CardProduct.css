@@ -1,0 +1,36 @@
+/* Card Product — Figma 61276:118038. Solo tokens. */
+.card-product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-7);
+  width: 100%;
+  color: var(--texts-base);
+}
+.card-product--horizontal { flex-direction: row; align-items: center; gap: var(--spacers-fixed-fx-6); }
+@media (min-width: 768px) {
+  .card-product--horizontal { gap: var(--spacers-fixed-fx-7); }
+}
+.card-product__photo { position: relative; width: 100%; }
+.card-product--horizontal .card-product__photo { flex: 0 0 auto; width: 140px; /* token-audit-ignore — Figma: foto de 140 px sin variable */ }
+.card-product__tag { position: absolute; top: var(--spacers-fixed-fx-4); left: var(--spacers-fixed-fx-4); }
+.card-product--horizontal .card-product__tag { top: var(--spacers-fixed-fx-2); left: var(--spacers-fixed-fx-2); }
+.card-product__quick {
+  position: absolute;
+  right: var(--spacers-fixed-fx-6);
+  bottom: var(--spacers-fixed-fx-6);
+  left: var(--spacers-fixed-fx-6);
+  width: auto;
+}
+.card-product__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--layout-spacers-responsive-7);
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.card-product__info { display: flex; flex-direction: column; width: 100%; }
+.card-product__title { margin: 0; color: var(--texts-base); font-weight: inherit; }
+.card-product__link { color: inherit; text-decoration: none; }
+.card-product__data { display: flex; gap: var(--spacers-fixed-fx-3); margin: 0; color: var(--texts-neutral-2); }
+.card-product__qty { padding-top: var(--spacers-fixed-fx-2); }

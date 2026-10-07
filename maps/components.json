@@ -53,5 +53,10 @@
     "name": "InputQuantity",
     "path": "src/components/InputQuantity/InputQuantity.jsx",
     "fp": "0a8b8965"
+  },
+  "61276:118038": {
+    "name": "CardProduct",
+    "path": "src/components/CardProduct/CardProduct.jsx",
+    "fp": "fa62e141"
   }
 }
