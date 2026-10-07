@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AddToList from '../../components/AddToList/AddToList';
 import AspectRatio from '../../components/AspectRatio/AspectRatio';
 import Button from '../../components/Button/Button';
@@ -40,6 +40,7 @@ export default function M16HeroProductdetail({ type = 'Producto', showCol2 = tru
   const [current, setCurrent] = useState(start);
   const track = useRef(null);
   const visibleCols = (cols ?? []).filter((_, i) => [true, showCol2, showCol3, showCol4][i]);
+  useEffect(() => { const el = track.current; if (el && start) el.scrollLeft = start * el.clientWidth; }, [start]);
   const onScroll = () => { const el = track.current; if (el) setCurrent(Math.round(el.scrollLeft / el.clientWidth)); };
   const isProduct = type === 'Producto';
   return (
@@ -59,7 +60,9 @@ export default function M16HeroProductdetail({ type = 'Producto', showCol2 = tru
         <div className="m16-detail__track" ref={track} onScroll={onScroll}>
           {images.map((src, i) => <AspectRatio key={i} className="m16-detail__slide" size="Fill" src={src} alt="" />)}
         </div>
-        <StepperForToast className="m16-detail__stepper" progress={(current + 1) / images.length} />
+        <div className="m16-detail__steps" aria-label={`Imagen ${current + 1} de ${images.length}`}>
+          {images.map((_, i) => <StepperForToast key={i} status={i === current ? 'Completed' : 'Not selected'} aria-hidden="true" />)}
+        </div>
       </div>
       <div className="m16-detail__info">
       <div className="m16-detail__head">
