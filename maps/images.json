@@ -610,5 +610,50 @@
     "masters": [
       "M23-Cards-Gallery"
     ]
+  },
+  "5902a501bdf9b4f5ca830d678e8e378f383690c4": {
+    "file": "video-hoja.webp",
+    "width": 201,
+    "height": 268,
+    "sourceFormat": "video-poster",
+    "kb": 0,
+    "masters": [
+      "M03-Navigation-Footer"
+    ],
+    "note": "Fotograma del relleno de vídeo capturado de Figma (el vídeo no se puede exportar)."
+  },
+  "a90b22a84909341040b4a854c06a4fb5f53aab62": {
+    "file": "video-hoja.webp",
+    "width": 201,
+    "height": 268,
+    "sourceFormat": "video-poster",
+    "kb": 0,
+    "masters": [
+      "M03-Navigation-Footer"
+    ],
+    "note": "Fotograma del relleno de vídeo capturado de Figma (el vídeo no se puede exportar)."
+  },
+  "3dac7b98194d980eefed06801f4741926a36a9aa": {
+    "file": "video-dehesa-aerea.webp",
+    "width": 1440,
+    "height": 800,
+    "sourceFormat": "video-poster",
+    "kb": 0,
+    "masters": [
+      "M04-Login",
+      "M15-Hero-Sectionhero"
+    ],
+    "note": "Fotograma del relleno de vídeo capturado de Figma (el vídeo no se puede exportar)."
+  },
+  "c2f9781d0eedc663e3b4e375b354c262dc74e3c1": {
+    "file": "video-dehesa-atardecer.webp",
+    "width": 856,
+    "height": 720,
+    "sourceFormat": "video-poster",
+    "kb": 0,
+    "masters": [
+      "M13-Hero-Homepagehero"
+    ],
+    "note": "Fotograma del relleno de vídeo capturado de Figma (el vídeo no se puede exportar)."
   }
 }

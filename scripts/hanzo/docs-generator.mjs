@@ -58,8 +58,14 @@ function sections(m, demo, variantBlock) {
   ].join('\n\n');
 }
 
+// MDX interpreta { } como expresiones JS y < > como JSX: en los textos del meta se pasan a entidades.
+// (el código entre `comillas invertidas` ya es literal en MDX y se deja tal cual).
+const mdxSafe = (v) => typeof v === 'string' ? v.split(/(`[^`]*`)/).map((part, i) => (i % 2 ? part : part.replace(/[{}<>]/g, (c) => `&#${c.charCodeAt(0)};`))).join('')
+  : Array.isArray(v) ? v.map(mdxSafe) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, mdxSafe(x)])) : v;
+
 async function genOne(file) {
-  const m = await readJson(file);
+  const raw = await readJson(file);
+  const m = PROFILE === 'react-storybook' ? mdxSafe(raw) : raw;
   if (!m.name) { console.warn(`⚠ ${file}: falta "name", se omite`); return null; }
   const dir = path.dirname(file);
   const variants = m.variants || [];

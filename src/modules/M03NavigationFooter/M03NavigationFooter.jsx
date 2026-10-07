@@ -6,6 +6,7 @@ import Icon from '../../components/Icon/Icon';
 import InputAndButton from '../../components/InputAndButton/InputAndButton';
 import MobileMenuAccordion from '../../components/MobileMenuAccordion/MobileMenuAccordion';
 import ekomi from '../../assets/images/m03-navigation-footer-ekomi-1.webp';
+import leafPoster from '../../assets/images/video-hoja.webp';
 import './M03NavigationFooter.css';
 
 const COLUMNS = [
@@ -63,13 +64,13 @@ export default function M03NavigationFooter({
   columns = COLUMNS, company = COMPANY, contact = CONTACT, social = SOCIAL, legal = LEGAL, quote = QUOTE,
   newsletterLabel = 'Date de alta en nuestra newsletter', privacyText = 'Acepto la política de privacidad',
   copyright = '© 1868 - 2026 Cárnicas Joselito S.A.', language = 'English', languages = ['Español', 'English'],
-  media, onSubscribe, theme, className = '', ...rest
+  media = { type: 'image', src: leafPoster }, onSubscribe, theme, className = '', ...rest
 }) {
   const [email, setEmail] = useState('');
   const groups = columns.flat();
   const mediaEl = (
     <AspectRatio className="m03-footer__media" size="3:4" src={media?.type === 'video' ? undefined : media?.src} alt="">
-      {media?.type === 'video' && <video className="aspect-ratio__media" src={media.src} autoPlay muted loop playsInline />}
+      {media?.type === 'video' && <video className="aspect-ratio__media" src={media.src} poster={media.poster} autoPlay muted loop playsInline />}
     </AspectRatio>
   );
   const newsletter = (

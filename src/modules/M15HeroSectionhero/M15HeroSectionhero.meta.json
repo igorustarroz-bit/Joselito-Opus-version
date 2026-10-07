@@ -123,7 +123,7 @@
     {
       "name": "media",
       "description": "Medio: type (video o image), src, poster.",
-      "default": "vacío (ver placeholders)",
+      "default": "fotograma de Figma",
       "control": "object"
     },
     {
@@ -209,15 +209,16 @@
     "M13-Hero-Homepagehero",
     "M14-Hero-Sectionheader"
   ],
-  "images": [],
-  "placeholders": [
-    "Medios: en Figma son rellenos de vídeo (dehesa aérea) que no se pueden exportar; marco vacío hasta recibirlos (prop media)."
+  "images": [
+    "3dac7b98194d980eefed06801f4741926a36a9aa"
   ],
+  "placeholders": [],
   "notes": [
     "Figma: velo #00000033 sin variable → Backgrounds/Overlay (30 %).",
     "Figma: medio horizontal de 245 px → 3 columnas; vertical 2 columnas.",
     "Figma: separaciones 48 y 8 sin variable → FX-9 y FX-2.",
-    "Figma: sin autolayout en las variantes con medio."
+    "Figma: sin autolayout en las variantes con medio.",
+    "Medio: en Figma es un relleno de vídeo que no se puede exportar; por defecto se muestra un fotograma capturado de Figma como imagen (prop media; con type video acepta src y poster)."
   ],
   "codePath": "src/modules/M15HeroSectionhero/M15HeroSectionhero.jsx"
 }

@@ -59,7 +59,7 @@
     {
       "name": "media",
       "description": "Fondo: type (video o image), src y poster.",
-      "default": "vacío (ver placeholders)",
+      "default": "fotograma de Figma",
       "control": "object"
     },
     {
@@ -150,16 +150,17 @@
     "M15-Hero-Sectionhero"
   ],
   "images": [
-    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
+    "c2f9781d0eedc663e3b4e375b354c262dc74e3c1"
   ],
-  "placeholders": [
-    "Vídeo de fondo: en Figma es un relleno de vídeo (dehesa al atardecer) que no se puede exportar; fondo vacío hasta recibirlo (prop media)."
-  ],
+  "placeholders": [],
   "notes": [
     "Figma: velo negro al 20 % sin variable → Backgrounds/Overlay (30 %), la variable más cercana.",
     "Figma: las variantes se llaman Device4 y Device5 (escritorio sin Toast y móvil con Toast); conviene renombrarlas.",
     "Figma: la etiqueta dice 'LUJO DEL TIEMPO' en escritorio y 'EL LUJO DEL TIEMPO' en móvil.",
-    "Figma: sin autolayout; posiciones reinterpretadas con flex."
+    "Figma: sin autolayout; posiciones reinterpretadas con flex.",
+    "Medio: en Figma es un relleno de vídeo que no se puede exportar; por defecto se muestra un fotograma capturado de Figma como imagen (prop media; con type video acepta src y poster).",
+    "El fotograma de la dehesa al atardecer sale de otro uso del mismo vídeo (M17 en la PDP), recortado sin la tarjeta."
   ],
   "codePath": "src/modules/M13HeroHomepagehero/M13HeroHomepagehero.jsx"
 }

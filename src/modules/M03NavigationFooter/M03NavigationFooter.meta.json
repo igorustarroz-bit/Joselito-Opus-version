@@ -85,7 +85,7 @@
     {
       "name": "media",
       "description": "Medio central: type (video o image) y src.",
-      "default": "vacío (ver placeholders)",
+      "default": "fotograma de Figma",
       "control": "object"
     },
     {
@@ -201,17 +201,18 @@
     "Brand Logo"
   ],
   "images": [
-    "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49"
+    "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49",
+    "5902a501bdf9b4f5ca830d678e8e378f383690c4",
+    "a90b22a84909341040b4a854c06a4fb5f53aab62"
   ],
-  "placeholders": [
-    "Medio central (hoja): en Figma es un relleno de vídeo que no se puede exportar; se deja el marco 3:4 vacío hasta recibir el vídeo (prop media)."
-  ],
+  "placeholders": [],
   "notes": [
     "Figma: muchos espaciados sin variable (80, 136, 38, 104, 26, 10…) → variable más cercana: FX-13, FX-16, FX-8, FX-14, FX-6, FX-2.",
     "Figma: iconos de redes a 28 px → tamaño M (24, empate con L → el menor).",
     "Figma: el medio central está posicionado de forma absoluta (x 619); se coloca al 43 % del ancho.",
     "Figma: los sellos se ven en gris en la captura y los SVG exportados están en color: confirmar tratamiento.",
-    "Figma: el máster de la lista de enlaces legales en móvil se llama 'Cookies Policy' en las capas."
+    "Figma: el máster de la lista de enlaces legales en móvil se llama 'Cookies Policy' en las capas.",
+    "Medio: en Figma es un relleno de vídeo que no se puede exportar; por defecto se muestra un fotograma capturado de Figma como imagen (prop media; con type video acepta src y poster)."
   ],
   "codePath": "src/modules/M03NavigationFooter/M03NavigationFooter.jsx"
 }

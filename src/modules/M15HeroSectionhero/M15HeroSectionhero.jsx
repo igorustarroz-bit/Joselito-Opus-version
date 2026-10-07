@@ -2,6 +2,7 @@ import AspectRatio from '../../components/AspectRatio/AspectRatio';
 import ButtonActionLink from '../../components/ButtonActionLink/ButtonActionLink';
 import GoBack from '../../components/GoBack/GoBack';
 import M01Navigation from '../M01Navigation/M01Navigation';
+import dehesaPoster from '../../assets/images/video-dehesa-aerea.webp';
 import './M15HeroSectionhero.css';
 
 export const IMAGES = ['Horizontal', 'Vertical', 'None - Producto', 'None'];
@@ -24,7 +25,7 @@ function Media({ media, size, className }) {
 export default function M15HeroSectionhero({
   image = 'Horizontal', status = 'Default', title = 'Seis Generaciones de Excelencia', subtitle = 'COLECCIONES JOSELITO',
   showLink = true, linkText = 'DESCUBRIR', href = '#', showBody = false, body = 'Seis generaciones dedicadas a criar, curar y seleccionar cada pieza con paciencia.',
-  showBack = false, backText = 'VOLVER', backHref = '#', media, showNavigation = true, theme, className = '', ...rest
+  showBack = false, backText = 'VOLVER', backHref = '#', media = { type: 'image', src: dehesaPoster }, showNavigation = true, theme, className = '', ...rest
 }) {
   const hasMedia = image === 'Horizontal' || image === 'Vertical';
   const expanded = hasMedia && status === 'Scroll Down';

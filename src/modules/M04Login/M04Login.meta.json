@@ -37,7 +37,7 @@
     {
       "name": "media",
       "description": "Medio: type (video o image) y src.",
-      "default": "vacío (ver placeholders)",
+      "default": "fotograma de Figma",
       "control": "object"
     },
     {
@@ -146,14 +146,15 @@
     "Divider",
     "M01-Navigation"
   ],
-  "images": [],
-  "placeholders": [
-    "Medio de escritorio: en Figma es un relleno de vídeo (paisaje de dehesa) que no se puede exportar; marco vacío hasta recibir el vídeo (prop media)."
+  "images": [
+    "3dac7b98194d980eefed06801f4741926a36a9aa"
   ],
+  "placeholders": [],
   "notes": [
     "Figma: separación de 32 px en móvil sin variable → FX-7.",
     "Figma: los botones de proveedores se interpretan como Button Secondary; confirmar tipo.",
-    "Figma: en escritorio la M01 Grey se superpone también al medio (texto sobre vídeo)."
+    "Figma: en escritorio la M01 Grey se superpone también al medio (texto sobre vídeo).",
+    "Medio: en Figma es un relleno de vídeo que no se puede exportar; por defecto se muestra un fotograma capturado de Figma como imagen (prop media; con type video acepta src y poster)."
   ],
   "codePath": "src/modules/M04Login/M04Login.jsx"
 }

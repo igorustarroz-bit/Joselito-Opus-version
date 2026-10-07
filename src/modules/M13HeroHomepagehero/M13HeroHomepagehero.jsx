@@ -1,6 +1,7 @@
 import Icon from '../../components/Icon/Icon';
 import Toast from '../../components/Toast/Toast';
 import M01Navigation from '../M01Navigation/M01Navigation';
+import sunsetPoster from '../../assets/images/video-dehesa-atardecer.webp';
 import './M13HeroHomepagehero.css';
 
 /**
@@ -9,7 +10,7 @@ import './M13HeroHomepagehero.css';
  * Con Toast el titular va centrado; sin él, al pie.
  */
 export default function M13HeroHomepagehero({
-  label = 'LUJO DEL TIEMPO', title = 'Nada excepcional ocurre deprisa', showToast = true, toast = {}, media,
+  label = 'LUJO DEL TIEMPO', title = 'Nada excepcional ocurre deprisa', showToast = true, toast = {}, media = { type: 'image', src: sunsetPoster },
   showNavigation = true, scrollTarget, onScroll, theme = 'dark-black-neutral', className = '', ...rest
 }) {
   const scroll = () => {

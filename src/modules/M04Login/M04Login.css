@@ -11,7 +11,7 @@
 .m04-login__providers > * { flex: 1; }
 
 @media (min-width: 1024px) {
-  .m04-login.has-photo .m04-login__media { display: block; flex: 1; }
+  .m04-login.has-photo .m04-login__media { display: block; flex: 1; height: auto; align-self: stretch; }
   .m04-login__modal { padding: 0; }
   .m04-login__slot { max-width: var(--layout-cols-size-4cols-1-gutter); }
 }
