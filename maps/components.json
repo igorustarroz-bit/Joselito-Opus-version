@@ -258,5 +258,10 @@
     "name": "OrderByDay",
     "path": "src/components/OrderByDay/OrderByDay.jsx",
     "fp": "c955e655"
+  },
+  "60581:102087": {
+    "name": "ModalLightbox",
+    "path": "src/components/ModalLightbox/ModalLightbox.jsx",
+    "fp": "ff14248e"
   }
 }

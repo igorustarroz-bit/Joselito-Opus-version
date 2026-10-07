@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:20:05.003Z",
+  "generatedAt": "2026-10-07T07:24:11.994Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1089,7 +1089,7 @@
       "builtFp": "75323c0d"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Modal_Lightbox",
@@ -1108,7 +1108,8 @@
       ],
       "images": 11,
       "autolayout": "10/10",
-      "key": "component:modal-lightbox"
+      "key": "component:modal-lightbox",
+      "builtFp": "f93618e9"
     },
     {
       "status": "done",

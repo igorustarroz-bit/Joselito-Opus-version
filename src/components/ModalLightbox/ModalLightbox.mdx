@@ -1,0 +1,150 @@
+{/* Generado por scripts/docs-generator.mjs desde ModalLightbox.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ModalLightbox.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Modal_Lightbox
+
+## Introducción
+
+Ventana emergente para avisos, selección de formato y vídeos: Basic (texto), Ticket (texto + botones), List (opciones + botones), Video (16:9 con cerrar) y Collapsed (barra de producto con "elige"). Puede usarse como modal real sobre Overlay.
+
+
+Figma: `Modal_Lightbox` (`60581:102087`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Cabecera: título + Button-Icon Terciary XS (X)
+- Cuerpo (slot): texto u opciones
+- Pie: RowButtons (Ticket, List)
+- Video: Aspect Ratio 16:9 + cerrar
+- Collapsed: foto 48 + nombre/precio + Button Primary S
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Modal: Esc, clic en el Overlay o X cierran; el foco queda dentro y vuelve al elemento anterior al cerrar.
+- List: selección única (radios).
+- Collapsed: en móvil (por debajo de 768 px) se oculta la foto.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Collapsed
+
+<Canvas of={Stories.DesktopCollapsed} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Basic
+
+<Canvas of={Stories.DesktopBasic} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Ticket
+
+<Canvas of={Stories.DesktopTicket} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=List
+
+<Canvas of={Stories.DesktopList} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Video
+
+<Canvas of={Stories.DesktopVideo} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Status=Basic
+
+<Canvas of={Stories.MobileBasic} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Status=Collapsed
+
+<Canvas of={Stories.MobileCollapsed} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Como modal real (Overlay)
+
+<Canvas of={Stories.ComoModal} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--strokes-icons-neutral-3` | bordes |
+| color | `--texts-base / --texts-neutral-2` | textos / precio |
+| spacing | `--spacers-fixed-fx-4 / fx-6 / fx-7 / fx-8` | paddings y separaciones |
+| spacing | `--layout-forms-l-padding-r` | título–cerrar |
+| spacing | `--layout-spacers-responsive-4` | barra Collapsed |
+| typography | `ts-body-03` |  |
+| typography | `ts-body-02` |  |
+| effects | `fx-elevation-on-light-m (Collapsed)` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| status | `Collapsed`, `Basic`, `Ticket`, `List` o `Video`. | Basic | inline-radio |
+| title | Título de la cabecera (Body/03). | "Title" | text |
+| text / children | Contenido (texto Body/02 por defecto) o hijos propios. | texto del máster | text |
+| options / name / value / onChange | Opciones de List (listbox_Item_Dropdown con descripción y radio). | 50 g … 200 g | object |
+| primaryText / secondaryText / onPrimary / onSecondary | Botones del pie (Ticket, List). | SEGUIR COMPRANDO / IR A LA CESTA | text |
+| video / poster | Vídeo (Video) e imagen previa. | imagen del máster | text |
+| product / onChoose | Datos de la barra Collapsed (image, name, price, cta). | Jamón Gran Reserva · 599,00 € | object |
+| showAlert | Muestra un Alert encima del contenido. | false | boolean |
+| modal / open / onClose | Modal real sobre Overlay (Esc, clic fuera y X cierran; foco atrapado). | false / true | boolean |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Texto |  | Mensaje breve; admite saltos de línea. |
+
+## Accesibilidad
+
+- role=dialog con aria-labelledby (título) y aria-modal en modo modal.
+- Botón de cierre con nombre accesible "Cerrar".
+
+## Componentes relacionados
+
+- Overlay
+- RowButtons
+- listbox_Item_Dropdown
+- Alert

@@ -1,0 +1,53 @@
+{
+ "id": "60581:102087",
+ "name": "Modal_Lightbox",
+ "type": "COMPONENT_SET",
+ "fp": "ff14248e",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Title": "TEXT",
+  "List": "SLOT",
+  "Show Alert": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Status": [
+   "Collapsed",
+   "Ticket",
+   "Basic",
+   "List",
+   "Video"
+  ]
+ },
+ "spec": "624 (342 móvil). Lightbox: borde Neutral 3, Header pad 16/16/16/24 borde inf. (Title Body/03 + Button-Icon Terciary XS X), Slot pad 16/24/32/24 gap fx-8 (texto Body/02 o 4 listbox_Item_Dropdown con descripción), Footer (Ticket/List) pad fx-4 borde sup. RowButtons. Video: AR 16:9 + X absoluto 24/24. Collapsed: barra pad fx-4 gap Responsive/4 sombra 0 2 11 10%: AR 1:1 48 + nombre (#211e1d) + precio Neutral 2 + Button Primary S 'elige'",
+ "deps": [
+  "Aspect Ratio",
+  "Button",
+  "Button-Icon",
+  "RowButtons",
+  "listbox_Item_Dropdown",
+  "Alert"
+ ],
+ "images": [
+  {
+   "hash": "ff73a0f67432600baca5491747ce186e8c73c0b3"
+  },
+  {
+   "hash": "c22e64dacd1afe065c97f91396c65c430e8af28b"
+  }
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "#211e1d"
+   },
+   {
+    "code": "HARD_EFFECT",
+    "msg": "sombra Main-Button"
+   }
+  ]
+ }
+}

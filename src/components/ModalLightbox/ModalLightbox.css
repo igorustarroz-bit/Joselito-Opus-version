@@ -1,0 +1,52 @@
+/* Modal_Lightbox — Figma 60581:102087. Solo tokens. 624 px de ancho máximo (342 en móvil). */
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 624px; /* token-audit-ignore — ancho del máster de Figma (sin variable) */
+  border: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-forms-l-padding-r);
+  padding: var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-6);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+}
+.modal__title { flex: 1 1 auto; margin: 0; }
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-8);
+  padding: var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-6) var(--spacers-fixed-fx-7);
+}
+.modal__text { margin: 0; white-space: pre-line; }
+.modal__list { display: flex; flex-direction: column; }
+.modal__footer { padding: var(--spacers-fixed-fx-4); border-top: 1px solid var(--strokes-icons-neutral-3); background: var(--backgrounds-base); }
+.modal__buttons > * { flex: 1 1 0; }
+.modal--video { border: 0; }
+.modal--video .modal__close { position: absolute; top: var(--spacers-fixed-fx-6); right: var(--spacers-fixed-fx-6); }
+.modal__video { display: block; width: 100%; aspect-ratio: 16 / 9; }
+.modal__center { display: flex; align-items: center; justify-content: center; min-height: 100%; padding: var(--spacers-fixed-fx-6); box-sizing: border-box; }
+
+.modal-collapsed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--layout-spacers-responsive-4);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 624px; /* token-audit-ignore — ancho del máster de Figma */
+  padding: var(--spacers-fixed-fx-4);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.modal-collapsed__info { display: flex; align-items: center; gap: var(--layout-spacers-responsive-4); min-width: 0; }
+.modal-collapsed__img { display: none; flex: 0 0 auto; width: calc(var(--spacers-fixed-fx-9) + var(--spacers-fixed-fx-2)); }
+.modal-collapsed__texts { display: flex; flex-direction: column; min-width: 0; }
+.modal-collapsed__price { color: var(--texts-neutral-2); }
+@media (min-width: 768px) { .modal-collapsed__img { display: block; } }

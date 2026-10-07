@@ -1,0 +1,222 @@
+{
+  "name": "ModalLightbox",
+  "kind": "component",
+  "title": "Modal_Lightbox",
+  "figma": {
+    "nodeId": "60581:102087",
+    "name": "Modal_Lightbox",
+    "fp": "ff14248e"
+  },
+  "description": "Ventana emergente para avisos, selección de formato y vídeos: Basic (texto), Ticket (texto + botones), List (opciones + botones), Video (16:9 con cerrar) y Collapsed (barra de producto con \"elige\"). Puede usarse como modal real sobre Overlay.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Status": [
+      "Collapsed",
+      "Ticket",
+      "Basic",
+      "List",
+      "Video"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopCollapsed",
+      "title": "Device=Desktop, Status=Collapsed"
+    },
+    {
+      "story": "DesktopBasic",
+      "title": "Device=Desktop, Status=Basic"
+    },
+    {
+      "story": "DesktopTicket",
+      "title": "Device=Desktop, Status=Ticket"
+    },
+    {
+      "story": "DesktopList",
+      "title": "Device=Desktop, Status=List"
+    },
+    {
+      "story": "DesktopVideo",
+      "title": "Device=Desktop, Status=Video"
+    },
+    {
+      "story": "MobileBasic",
+      "title": "Device=Mobile, Status=Basic"
+    },
+    {
+      "story": "MobileCollapsed",
+      "title": "Device=Mobile, Status=Collapsed"
+    },
+    {
+      "story": "ComoModal",
+      "title": "Como modal real (Overlay)"
+    }
+  ],
+  "props": [
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "`Collapsed`, `Basic`, `Ticket`, `List` o `Video`.",
+      "default": "Basic",
+      "control": "inline-radio"
+    },
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título de la cabecera (Body/03).",
+      "default": "\"Title\"",
+      "control": "text"
+    },
+    {
+      "name": "text / children",
+      "figma": "Slot",
+      "description": "Contenido (texto Body/02 por defecto) o hijos propios.",
+      "default": "texto del máster",
+      "control": "text"
+    },
+    {
+      "name": "options / name / value / onChange",
+      "figma": "List",
+      "description": "Opciones de List (listbox_Item_Dropdown con descripción y radio).",
+      "default": "50 g … 200 g",
+      "control": "object"
+    },
+    {
+      "name": "primaryText / secondaryText / onPrimary / onSecondary",
+      "description": "Botones del pie (Ticket, List).",
+      "default": "SEGUIR COMPRANDO / IR A LA CESTA",
+      "control": "text"
+    },
+    {
+      "name": "video / poster",
+      "description": "Vídeo (Video) e imagen previa.",
+      "default": "imagen del máster",
+      "control": "text"
+    },
+    {
+      "name": "product / onChoose",
+      "description": "Datos de la barra Collapsed (image, name, price, cta).",
+      "default": "Jamón Gran Reserva · 599,00 €",
+      "control": "object"
+    },
+    {
+      "name": "showAlert",
+      "figma": "Show Alert",
+      "description": "Muestra un Alert encima del contenido.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "modal / open / onClose",
+      "description": "Modal real sobre Overlay (Esc, clic fuera y X cierran; foco atrapado).",
+      "default": "false / true",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "bordes"
+      },
+      {
+        "token": "--texts-base / --texts-neutral-2",
+        "usage": "textos / precio"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4 / fx-6 / fx-7 / fx-8",
+        "usage": "paddings y separaciones"
+      },
+      {
+        "token": "--layout-forms-l-padding-r",
+        "usage": "título–cerrar"
+      },
+      {
+        "token": "--layout-spacers-responsive-4",
+        "usage": "barra Collapsed"
+      }
+    ],
+    "typography": [
+      "ts-body-03",
+      "ts-body-02"
+    ],
+    "effects": [
+      "fx-elevation-on-light-m (Collapsed)"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cabecera: título + Button-Icon Terciary XS (X)",
+    "Cuerpo (slot): texto u opciones",
+    "Pie: RowButtons (Ticket, List)",
+    "Video: Aspect Ratio 16:9 + cerrar",
+    "Collapsed: foto 48 + nombre/precio + Button Primary S"
+  ],
+  "behavior": [
+    "Modal: Esc, clic en el Overlay o X cierran; el foco queda dentro y vuelve al elemento anterior al cerrar.",
+    "List: selección única (radios).",
+    "Collapsed: en móvil (por debajo de 768 px) se oculta la foto."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "Mensaje breve; admite saltos de línea."
+    }
+  ],
+  "a11y": [
+    "role=dialog con aria-labelledby (título) y aria-modal en modo modal.",
+    "Botón de cierre con nombre accesible \"Cerrar\"."
+  ],
+  "related": [
+    "Overlay",
+    "RowButtons",
+    "listbox_Item_Dropdown",
+    "Alert"
+  ],
+  "images": [
+    {
+      "hash": "c22e64dacd1afe065c97f91396c65c430e8af28b",
+      "usage": "imagen del vídeo"
+    },
+    {
+      "hash": "ff73a0f67432600baca5491747ce186e8c73c0b3",
+      "usage": "foto de producto (Collapsed)"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: el nombre del producto en Collapsed usa #211E1D sin variable → Texts/Base.",
+    "Figma: la sombra de Collapsed (0 2 11 px, 10 %) no tiene estilo → Elevation On Light M (0 0 12 px, 10 %). Avisar a diseño.",
+    "Figma: el texto del cuerpo no tiene color ligado → Texts/Base.",
+    "Figma: gaps 10/12/16 px sin variable.",
+    "Figma: el ancho del modal (624 px) no tiene variable; en código es max-width con ancho completo por debajo.",
+    "Figma: la posición del Alert (Show Alert) no se pudo ver; se coloca encima de la cabecera."
+  ],
+  "codePath": "src/components/ModalLightbox/ModalLightbox.jsx"
+}
