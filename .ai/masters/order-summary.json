@@ -1,0 +1,32 @@
+{
+ "id": "63609:146051",
+ "name": "Order Summary",
+ "type": "COMPONENT_SET",
+ "fp": "743e6f94",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Slot Cards2": "SLOT",
+  "Labels 2": "SLOT",
+  "Property 1": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Property 2": [
+   "Vertical"
+  ]
+ },
+ "spec": "V gap 40: [Title/01 + Tag XS Aseptic '3 ARTÍCULOS'] + 4 Card Product Horizontal (gap fx-6) + Subtotal (pad 20, borde Neutral 3, filas Body/03 y nota Body/02 Neutral 2)",
+ "deps": [
+  "Tag",
+  "Card Product"
+ ],
+ "images": [
+  {
+   "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}

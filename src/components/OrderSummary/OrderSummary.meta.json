@@ -1,0 +1,142 @@
+{
+  "name": "OrderSummary",
+  "kind": "component",
+  "title": "Order Summary",
+  "figma": {
+    "nodeId": "63609:146051",
+    "name": "Order Summary",
+    "fp": "743e6f94"
+  },
+  "description": "Resumen de un pedido: fecha, etiquetas, productos en tarjetas horizontales y cuadro de totales (subtotal, descuentos, envío, total).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Property 1": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Property 2": [
+      "Vertical"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Property 1=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Property 1=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Fecha (Title/01).",
+      "default": "\"25 de julio\"",
+      "control": "text"
+    },
+    {
+      "name": "tags",
+      "figma": "Labels 2",
+      "description": "Etiquetas (Tag XS Aseptic).",
+      "default": "[\"3 ARTÍCULOS\"]",
+      "control": "object"
+    },
+    {
+      "name": "products",
+      "figma": "Slot Cards2",
+      "description": "Props de cada Card Product (horizontal).",
+      "default": "4 productos",
+      "control": "object"
+    },
+    {
+      "name": "rows",
+      "description": "Filas de totales (label, value, note, noteValue).",
+      "default": "las del máster",
+      "control": "object"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde de totales"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "detalle de descuento"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "entre bloques (40 px sin variable)"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "cabecera y productos"
+      },
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "padding de totales (20 px sin variable)"
+      },
+      {
+        "token": "--spacers-fixed-fx-2 / fx-1",
+        "usage": "filas"
+      }
+    ],
+    "typography": [
+      "ts-title-01",
+      "ts-body-03",
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cabecera: fecha + etiquetas",
+    "Card Product horizontales",
+    "Totales (lista de definición)"
+  ],
+  "behavior": [
+    "Ancho del contenedor; las Card Product se adaptan (separación FX-6 en móvil)."
+  ],
+  "content": [],
+  "a11y": [
+    "Título h2; totales en dl."
+  ],
+  "related": [
+    "Card Product",
+    "Tag",
+    "Sending Details"
+  ],
+  "images": [
+    {
+      "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+      "usage": "foto de producto"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: gaps 40/24/8/4 y padding 20 px sin variable → FX-9, FX-6, FX-2, FX-1, FX-5.",
+    "Figma: las propiedades se llaman \"Property 1/2\" (sin nombre).",
+    "Figma: el subtotal (307 €) − descuento (15 €) + envío (8 €) = 300 €: cuadra."
+  ],
+  "codePath": "src/components/OrderSummary/OrderSummary.jsx"
+}

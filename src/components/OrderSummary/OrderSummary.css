@@ -1,0 +1,11 @@
+/* Order Summary — Figma 63609:146051. Solo tokens. */
+.order-summary { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-9); width: 100%; color: var(--texts-base); }
+.order-summary__head { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
+.order-summary__title { margin: 0; }
+.order-summary__tags { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-2); }
+.order-summary__cards { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
+.order-summary__totals { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); margin: 0; padding: var(--spacers-fixed-fx-5); border: 1px solid var(--strokes-icons-neutral-3); }
+.order-summary__group { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); }
+.order-summary__row { display: flex; justify-content: space-between; gap: var(--spacers-fixed-fx-2); }
+.order-summary__row dd { margin: 0; }
+.order-summary__row--note { color: var(--texts-neutral-2); }

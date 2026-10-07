@@ -1,0 +1,91 @@
+{/* Generado por scripts/docs-generator.mjs desde OrderSummary.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './OrderSummary.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Order Summary
+
+## Introducción
+
+Resumen de un pedido: fecha, etiquetas, productos en tarjetas horizontales y cuadro de totales (subtotal, descuentos, envío, total).
+
+
+Figma: `Order Summary` (`63609:146051`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Cabecera: fecha + etiquetas
+- Card Product horizontales
+- Totales (lista de definición)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Ancho del contenedor; las Card Product se adaptan (separación FX-6 en móvil).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Property 1=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Property 1=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | borde de totales |
+| color | `--texts-neutral-2` | detalle de descuento |
+| spacing | `--spacers-fixed-fx-9` | entre bloques (40 px sin variable) |
+| spacing | `--spacers-fixed-fx-6` | cabecera y productos |
+| spacing | `--spacers-fixed-fx-5` | padding de totales (20 px sin variable) |
+| spacing | `--spacers-fixed-fx-2 / fx-1` | filas |
+| typography | `ts-title-01` |  |
+| typography | `ts-body-03` |  |
+| typography | `ts-body-02` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| title | Fecha (Title/01). | "25 de julio" | text |
+| tags | Etiquetas (Tag XS Aseptic). | ["3 ARTÍCULOS"] | object |
+| products | Props de cada Card Product (horizontal). | 4 productos | object |
+| rows | Filas de totales (label, value, note, noteValue). | las del máster | object |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Título h2; totales en dl.
+
+## Componentes relacionados
+
+- Card Product
+- Tag
+- Sending Details

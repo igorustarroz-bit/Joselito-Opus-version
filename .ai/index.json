@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:20:04.683Z",
+  "generatedAt": "2026-10-07T07:20:04.875Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1131,7 +1131,7 @@
       "key": "component:order-by-day"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Order Summary",
@@ -1147,7 +1147,8 @@
       ],
       "images": 8,
       "autolayout": "2/2",
-      "key": "component:order-summary"
+      "key": "component:order-summary",
+      "builtFp": "472f4195"
     },
     {
       "status": "done",
