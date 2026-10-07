@@ -1,0 +1,23 @@
+{
+ "id": "63191:162092",
+ "name": "Go_Back",
+ "type": "COMPONENT_SET",
+ "fp": "90cef362",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Text": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "spec": "Desktop: Button-Icon Terciary S ArrowLeft + texto Body/02 Texts/Base, gap fx-6; Mobile: XS, gap fx-5",
+ "deps": [
+  "Button-Icon",
+  "ArrowLeft"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

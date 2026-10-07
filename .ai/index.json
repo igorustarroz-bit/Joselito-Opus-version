@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:55:59.032Z",
+  "generatedAt": "2026-10-07T06:55:59.163Z",
   "output": "react-storybook",
   "items": [
     {
@@ -684,7 +684,7 @@
       "key": "component:divider"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Go_Back",
@@ -697,7 +697,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:go-back"
+      "key": "component:go-back",
+      "builtFp": "9ca5a9d0"
     },
     {
       "status": "todo",

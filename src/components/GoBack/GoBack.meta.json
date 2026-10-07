@@ -1,0 +1,108 @@
+{
+  "name": "GoBack",
+  "kind": "component",
+  "title": "Go_Back",
+  "figma": {
+    "nodeId": "63191:162092",
+    "name": "Go_Back",
+    "fp": "90cef362"
+  },
+  "description": "Enlace para volver a la sección anterior: botón cuadrado con flecha (Button-Icon Terciary) y el nombre de la sección. Se usa en cabeceras de páginas interiores.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Nombre de la sección a la que se vuelve (Body/02).",
+      "default": "\"TIENDAS Y RESTAURANTES\"",
+      "control": "text"
+    },
+    {
+      "name": "href / onClick",
+      "description": "Destino o acción del botón.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "label",
+      "description": "Prefijo del nombre accesible del botón.",
+      "default": "\"Volver\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "texto"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6 / fx-5",
+        "usage": "botón–texto (escritorio / móvil)"
+      },
+      {
+        "token": "--layout-button-s-size / xs-size",
+        "usage": "tamaño del botón (escritorio / móvil)"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Button-Icon Terciary con ArrowLeft",
+    "Texto Body/02"
+  ],
+  "behavior": [
+    "Escritorio: botón S (48 px) y separación 24 px; móvil (por debajo de 768 px): botón XS (40 px) y 20 px."
+  ],
+  "content": [],
+  "a11y": [
+    "El botón tiene nombre accesible \"Volver: …\"."
+  ],
+  "related": [
+    "Button-Icon",
+    "M14-Hero-Sectionheader"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: gap de 8 px del frame de texto sin variable (un único hijo, sin efecto)."
+  ],
+  "codePath": "src/components/GoBack/GoBack.jsx"
+}
