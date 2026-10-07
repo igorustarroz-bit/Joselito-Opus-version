@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:06:33.274Z",
+  "generatedAt": "2026-10-07T07:06:33.395Z",
   "output": "react-storybook",
   "items": [
     {
@@ -833,7 +833,7 @@
       "builtFp": "a4ba402c"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Block Big Numbers",
@@ -846,7 +846,8 @@
       ],
       "images": 1,
       "autolayout": "1/1",
-      "key": "component:block-big-numbers"
+      "key": "component:block-big-numbers",
+      "builtFp": "d6b288db"
     },
     {
       "status": "todo",

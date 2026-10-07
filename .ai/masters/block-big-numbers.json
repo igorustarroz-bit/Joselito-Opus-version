@@ -1,0 +1,19 @@
+{
+ "id": "59966:84230",
+ "name": "Block Big Numbers",
+ "type": "COMPONENT",
+ "fp": "eb75f2da",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "AL:V gap Responsive/6: '24%  Vitamina B' (SangBleu 36/44 sin estilo) + Body/04",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "NO_TEXT_STYLE",
+    "msg": "Header"
+   }
+  ]
+ }
+}

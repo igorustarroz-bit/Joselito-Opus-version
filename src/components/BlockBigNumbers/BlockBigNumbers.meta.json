@@ -1,0 +1,84 @@
+{
+  "name": "BlockBigNumbers",
+  "kind": "component",
+  "title": "Block Big Numbers",
+  "figma": {
+    "nodeId": "59966:84230",
+    "name": "Block Big Numbers",
+    "fp": "eb75f2da"
+  },
+  "description": "Cifra destacada con su explicación (valores nutricionales, datos de producción): número grande y una línea de texto.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "number",
+      "description": "Cifra y concepto (Title/03).",
+      "default": "\"24%  Vitamina B\"",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "description": "Explicación (Body/04).",
+      "default": "\"de la cantidad diaria recomendada.\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "textos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-6",
+        "usage": "separación"
+      }
+    ],
+    "typography": [
+      "ts-title-03",
+      "ts-body-04"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cifra grande",
+    "Texto explicativo"
+  ],
+  "behavior": [
+    "Ancho del contenedor."
+  ],
+  "content": [],
+  "a11y": [
+    "Texto plano."
+  ],
+  "related": [
+    "M09-ContentStack-Text+ Image"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: la cifra no tiene estilo de texto (SangBleu Empire 36/44, −0,5 px). Se usa Title/03 (36/44 en escritorio, fuente de títulos del proyecto). Avisar a diseño.",
+    "Figma: el máster incluye una imagen oculta (Aspect Ratio); no se construye."
+  ],
+  "codePath": "src/components/BlockBigNumbers/BlockBigNumbers.jsx"
+}

@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 55/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 56/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -74,7 +74,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Block Address `63606:143410` — 1 img · usa: Visa <!-- k:component:block-address -->
 - [x] Block Archive List `59966:84496` — 5 variantes <!-- k:component:block-archive-list -->
 - [x] Block best price `59966:4909` <!-- k:component:block-best-price -->
-- [ ] Block Big Numbers `59966:84230` — 1 img · usa: Aspect Ratio <!-- k:component:block-big-numbers -->
+- [x] Block Big Numbers `59966:84230` — 1 img · usa: Aspect Ratio <!-- k:component:block-big-numbers -->
 - [ ] Card Carrusel `58182:24262` — 2 variantes · 2 img · usa: Aspect Ratio, Button, Button-Action-Link <!-- k:component:card-carrusel -->
 - [ ] Card-Social-media `63911:364852` — 2 variantes · 2 img · usa: Aspect Ratio <!-- k:component:card-social-media -->
 - [x] Checkbox-List `57947:46573` — 2 variantes · usa: Checkbox-Label, Checkboxes-Radios <!-- k:component:checkbox-list -->

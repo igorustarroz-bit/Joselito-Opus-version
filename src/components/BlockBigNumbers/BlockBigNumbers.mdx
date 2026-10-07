@@ -1,0 +1,66 @@
+{/* Generado por scripts/docs-generator.mjs desde BlockBigNumbers.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './BlockBigNumbers.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Block Big Numbers
+
+## Introducción
+
+Cifra destacada con su explicación (valores nutricionales, datos de producción): número grande y una línea de texto.
+
+
+Figma: `Block Big Numbers` (`59966:84230`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Cifra grande
+- Texto explicativo
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Ancho del contenedor.
+
+## Variantes y tamaños
+
+_—_
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-base` | textos |
+| spacing | `--layout-spacers-responsive-6` | separación |
+| typography | `ts-title-03` |  |
+| typography | `ts-body-04` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| number | Cifra y concepto (Title/03). | "24%  Vitamina B" | text |
+| text | Explicación (Body/04). | "de la cantidad diaria recomendada." | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Texto plano.
+
+## Componentes relacionados
+
+- M09-ContentStack-Text+ Image
