@@ -28,7 +28,7 @@
 @media (min-width: 1024px) {
   .m22-row__main { padding: var(--spacers-fixed-fx-9) 0; }
   .m22-row__head { flex-direction: row; align-items: center; gap: 0; }
-  .m22-row__label { flex: 0 0 auto; width: var(--layout-cols-size-3cols); margin-right: var(--layout-cols-size-gutter1col); }
+  .m22-row .m22-row__label { flex: 0 0 auto; width: var(--layout-cols-size-3cols); margin-right: var(--layout-cols-size-gutter1col); }
   .m22-row__tag { display: inline-flex; }
   .m22-row__panel {
     flex-direction: row;

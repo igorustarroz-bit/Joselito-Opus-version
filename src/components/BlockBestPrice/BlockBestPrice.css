@@ -2,7 +2,9 @@
 .block-best-price {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--spacers-fixed-fx-2);
+  text-align: center;
   box-sizing: border-box;
   width: 100%;
   padding: var(--layout-spacers-responsive-8);
