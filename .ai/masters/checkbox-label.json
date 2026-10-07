@@ -1,0 +1,40 @@
+{
+ "id": "43246:12097",
+ "name": "Checkbox-Label",
+ "type": "COMPONENT_SET",
+ "fp": "f20f2623",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Label": "BOOLEAN",
+  "Text": "TEXT",
+  "Size": [
+   "Medium",
+   "Small"
+  ],
+  "Estado": [
+   "Default",
+   "Hover",
+   "Selected",
+   "Undefined",
+   "Disabled",
+   "Disabled Selected"
+  ],
+  "Selected": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "Medium: casilla 20 + Body/03 Texts/Neutral 1, gap fx-3; Small: casilla 16 + Body/02, gap 8",
+ "deps": [
+  "Checkboxes-Radios"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "Small gap 8"
+   }
+  ]
+ }
+}

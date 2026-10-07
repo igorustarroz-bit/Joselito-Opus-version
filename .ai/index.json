@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:55:58.911Z",
+  "generatedAt": "2026-10-07T06:55:59.032Z",
   "output": "react-storybook",
   "items": [
     {
@@ -639,7 +639,7 @@
       "builtFp": "ffbb6cea"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Checkbox-Label",
@@ -652,7 +652,8 @@
       ],
       "images": 0,
       "autolayout": "12/12",
-      "key": "component:checkbox-label"
+      "key": "component:checkbox-label",
+      "builtFp": "40292f87"
     },
     {
       "status": "todo",

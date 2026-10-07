@@ -65,6 +65,18 @@
       "control": "inline-radio"
     },
     {
+      "name": "size",
+      "description": "`Medium` (20 px) o `Small` (16 px, el que usa Checkbox-Label Small).",
+      "default": "Medium",
+      "control": "inline-radio"
+    },
+    {
+      "name": "indeterminate",
+      "description": "Estado indeterminado (Estado=Undefined de Checkbox-Label): se ve como marcado, igual que en Figma.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
       "name": "checked",
       "figma": "State=Selected",
       "description": "Marcado (controlado). También `defaultChecked` para no controlado.",

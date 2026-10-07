@@ -62,3 +62,8 @@
 
 /* Foco con teclado */
 .check-radio:has(:focus-visible) .check-radio__box { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+
+/* Tamaño Small (Checkbox-Label Small: 16 px) */
+.check-radio--small { width: var(--spacers-fixed-fx-4); height: var(--spacers-fixed-fx-4); }
+.check-radio__input:indeterminate + .check-radio__box .check-radio__check { visibility: visible; }
+.check-radio--checkbox:has(:indeterminate) { --cr-stroke: var(--strokes-icons-accent-4); --cr-mark: var(--backgrounds-accent-4); }

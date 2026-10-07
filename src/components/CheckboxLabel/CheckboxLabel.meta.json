@@ -1,0 +1,162 @@
+{
+  "name": "CheckboxLabel",
+  "kind": "component",
+  "title": "Checkbox-Label",
+  "figma": {
+    "nodeId": "43246:12097",
+    "name": "Checkbox-Label",
+    "fp": "f20f2623"
+  },
+  "description": "Casilla con su texto, toda clicable: aceptar condiciones, filtros, listas de opciones. Dos tamaños (Medium, Small) y seis estados.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Size": [
+      "Medium",
+      "Small"
+    ],
+    "Estado": [
+      "Default",
+      "Hover",
+      "Selected",
+      "Undefined",
+      "Disabled",
+      "Disabled Selected"
+    ],
+    "Selected": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Medium",
+      "title": "Size=Medium (6 estados)"
+    },
+    {
+      "story": "Small",
+      "title": "Size=Small (6 estados)"
+    },
+    {
+      "story": "Interactivo",
+      "title": "Interactivo"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto.",
+      "default": "\"Label\"",
+      "control": "text"
+    },
+    {
+      "name": "showLabel",
+      "figma": "Show Label",
+      "description": "Muestra el texto.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "`Medium` (casilla 20, Body/03) o `Small` (16, Body/02).",
+      "default": "Medium",
+      "control": "inline-radio"
+    },
+    {
+      "name": "checked / defaultChecked / onChange / name / value",
+      "figma": "Selected",
+      "description": "Estado de la casilla (input nativo).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "indeterminate",
+      "figma": "Estado=Undefined",
+      "description": "Estado indeterminado (se ve como marcado, igual que en Figma).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "Estado=Disabled",
+      "description": "Desactivado.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "Estado",
+      "description": "Solo documentación: fuerza un estado.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "texto desactivado"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-3 / fx-2",
+        "usage": "casilla–texto (Medium / Small)"
+      }
+    ],
+    "typography": [
+      "ts-body-03",
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Checkboxes-Radios (20 o 16 px)",
+    "Texto"
+  ],
+  "behavior": [
+    "Clic en el texto marca la casilla.",
+    "Hover sobre la etiqueta: la casilla muestra su hover.",
+    "Disabled: texto en Neutral 2."
+  ],
+  "content": [],
+  "a11y": [
+    "Input nativo dentro de label.",
+    "Foco visible en la casilla."
+  ],
+  "related": [
+    "Checkboxes-Radios",
+    "Checkbox-List",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: Undefined es visualmente igual que Selected; en código es el estado indeterminate nativo.",
+    "Figma: Disabled usa la casilla con Theme=Dark mientras el resto usa Light (sin diferencia visible en Disabled).",
+    "Figma: Disabled Selected deja el texto en Neutral 1 (no en Neutral 2 como Disabled): se replica.",
+    "Figma: la separación Small (8 px) no tiene variable → FX-2."
+  ],
+  "codePath": "src/components/CheckboxLabel/CheckboxLabel.jsx"
+}

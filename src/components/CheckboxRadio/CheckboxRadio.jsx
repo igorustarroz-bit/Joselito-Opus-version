@@ -15,6 +15,8 @@ export const TONES = ['Light', 'Dark'];
 export default function CheckboxRadio({
   type = 'Checkboxes',
   tone = 'Light',
+  size = 'Medium',
+  indeterminate = false,
   checked,
   defaultChecked,
   disabled = false,
@@ -30,11 +32,12 @@ export default function CheckboxRadio({
   const isChecked = forced ? /Selected/.test(state) && state !== 'Not Selected' : checked;
   const isDisabled = disabled || (forced && /Disabled/.test(state));
   const isRadio = type === 'Radio';
-  const cls = ['check-radio', `check-radio--${isRadio ? 'radio' : 'checkbox'}`, `check-radio--${tone.toLowerCase()}`,
+  const cls = ['check-radio', `check-radio--${isRadio ? 'radio' : 'checkbox'}`, `check-radio--${tone.toLowerCase()}`, size === 'Small' ? 'check-radio--small' : '',
     state === 'Hover' ? 'is-hover' : '', className].filter(Boolean).join(' ');
   return (
     <span className={cls} data-theme={theme}>
       <input
+        ref={(el) => { if (el) el.indeterminate = indeterminate; }}
         className="check-radio__input"
         type={isRadio ? 'radio' : 'checkbox'}
         name={name}
@@ -46,7 +49,7 @@ export default function CheckboxRadio({
         {...rest}
       />
       <span className="check-radio__box" aria-hidden="true">
-        {isRadio ? <span className="check-radio__dot" /> : <Icon name="check" size="XS" className="check-radio__check" />}
+        {isRadio ? <span className="check-radio__dot" /> : <Icon name="check" size={size === 'Small' ? 'XXS' : 'XS'} className="check-radio__check" />}
       </span>
     </span>
   );
