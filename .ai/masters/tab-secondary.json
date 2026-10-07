@@ -1,0 +1,39 @@
+{
+ "id": "57943:45626",
+ "name": "tab_secondary",
+ "type": "COMPONENT_SET",
+ "fp": "39e91fee",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Text": "TEXT",
+  "Show Icon Left": "BOOLEAN",
+  "Show Icon Right": "BOOLEAN",
+  "Icon Right": "INSTANCE_SWAP",
+  "Icon Left": "INSTANCE_SWAP",
+  "Active": [
+   "No",
+   "Yes"
+  ],
+  "Type": [
+   "Default",
+   "Hover",
+   "Focus",
+   "Selected",
+   "Disabled"
+  ]
+ },
+ "spec": "105×64 AL:H gap 4 pad fx-6/fx-4/fx-4/fx-4; fill/stroke inferior/text/icon Button/Tab Secondary/ESTADO; CalendarBlank + 'item' Body/03 + CaretDown 16",
+ "deps": [
+  "CalendarBlank",
+  "CaretDown"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gap 4"
+   }
+  ]
+ }
+}

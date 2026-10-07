@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:02:52.757Z",
+  "generatedAt": "2026-10-07T07:02:52.884Z",
   "output": "react-storybook",
   "items": [
     {
@@ -964,7 +964,7 @@
       "builtFp": "f2fe49e4"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "tab_secondary",
@@ -975,7 +975,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "5/5",
-      "key": "component:tab-secondary"
+      "key": "component:tab-secondary",
+      "builtFp": "bd230d18"
     },
     {
       "status": "todo",
