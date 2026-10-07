@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:02:53.258Z",
+  "generatedAt": "2026-10-07T07:06:32.864Z",
   "output": "react-storybook",
   "items": [
     {
@@ -703,7 +703,7 @@
       "builtFp": "9ca5a9d0"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "mobile_menu_accordion",
@@ -718,7 +718,8 @@
       ],
       "images": 2,
       "autolayout": "3/3",
-      "key": "component:mobile-menu-accordion"
+      "key": "component:mobile-menu-accordion",
+      "builtFp": "6807359c"
     },
     {
       "status": "todo",
@@ -748,8 +749,7 @@
       "deps": [],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:accordion",
-      "builtFp": "f56dabeb"
+      "key": "component:accordion"
     },
     {
       "status": "done",

@@ -1,0 +1,178 @@
+{
+  "name": "MobileMenuAccordion",
+  "kind": "component",
+  "title": "mobile_menu_accordion",
+  "figma": {
+    "nodeId": "58512:82775",
+    "name": "mobile_menu_accordion",
+    "fp": "e971587c"
+  },
+  "description": "Sección desplegable del menú en móvil: título con caret; al abrir muestra una lista de enlaces con una tarjeta destacada (Open 1) o una fila de fotos con título desplazable (Open 2).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "State": [
+      "Close",
+      "Open 1",
+      "Open 2"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "StateClose",
+      "title": "State=Close"
+    },
+    {
+      "story": "StateOpen1",
+      "title": "State=Open 1"
+    },
+    {
+      "story": "StateOpen2",
+      "title": "State=Open 2"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "description": "Título de la sección (Body/02).",
+      "default": "\"PRODUCTOS\"",
+      "control": "text"
+    },
+    {
+      "name": "content",
+      "figma": "State",
+      "description": "Contenido al abrir: `links` (Open 1) o `photos` (Open 2).",
+      "default": "links",
+      "control": "inline-radio"
+    },
+    {
+      "name": "links",
+      "figma": "Slot",
+      "description": "Enlaces (textos o objetos con text y href) como menu-item-list.",
+      "default": "enlaces del máster",
+      "control": "object"
+    },
+    {
+      "name": "feature",
+      "description": "Tarjeta destacada de Open 1 (image, title, text, href).",
+      "default": "la del máster",
+      "control": "object"
+    },
+    {
+      "name": "photos",
+      "figma": "Photo List",
+      "description": "Fotos de Open 2 (image, title, href).",
+      "default": "4 × Sostenibilidad",
+      "control": "object"
+    },
+    {
+      "name": "open / defaultOpen / onToggle",
+      "description": "Abierto (controlado o no).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde inferior"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "textos"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "texto de la tarjeta"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "caret"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4 / fx-6",
+        "usage": "padding (cerrado / abierto abajo)"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "cabecera–contenido"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "lista–tarjeta (40 px)"
+      },
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "foto–texto y entre fotos (20 px)"
+      },
+      {
+        "token": "--layout-spacers-responsive-1",
+        "usage": "entre enlaces"
+      }
+    ],
+    "typography": [
+      "ts-body-02",
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema del menú."
+  },
+  "anatomy": [
+    "Cabecera: título + CaretDown/CaretUp 20 px",
+    "Open 1: lista de menu-item-list + tarjeta (foto 4:3, título, texto)",
+    "Open 2: fila de fotos 3:2 con título, desplazable"
+  ],
+  "behavior": [
+    "Clic en la cabecera abre o cierra.",
+    "Open 2: la fila de fotos se desplaza en horizontal con scroll-snap."
+  ],
+  "content": [
+    {
+      "field": "Enlaces",
+      "notes": "Categorías del menú."
+    },
+    {
+      "field": "Tarjeta",
+      "notes": "Una categoría destacada con foto."
+    }
+  ],
+  "a11y": [
+    "Cabecera como botón con aria-expanded.",
+    "Las fotos llevan alt (vacío si son decorativas)."
+  ],
+  "related": [
+    "M02-Menu",
+    "menu-item-list",
+    "Aspect Ratio"
+  ],
+  "images": [
+    {
+      "hash": "ffe8697778fc8deb05ecc972027730d68a184a6c",
+      "usage": "foto de la tarjeta y de las fotos"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: padding 16/24 y gaps 50/60/40/20/12 px sin variable → FX-4, FX-6, space-between, FX-9, FX-5.",
+    "Figma: el ancho de la foto destacada (164 de 348 px) y de las fotos de Open 2 (161 px) se expresa en porcentaje del contenedor (48 % / 46 %).",
+    "Figma: Open 1 y Open 2 son dos contenidos distintos de la misma sección; en código se elige con `content`."
+  ],
+  "codePath": "src/components/MobileMenuAccordion/MobileMenuAccordion.jsx"
+}

@@ -148,5 +148,30 @@
     "name": "Accordion",
     "path": "src/components/Accordion/Accordion.jsx",
     "fp": "99e81d2f"
+  },
+  "63606:143410": {
+    "name": "BlockAddress",
+    "path": "src/components/BlockAddress/BlockAddress.jsx",
+    "fp": "504ab39a"
+  },
+  "59966:4909": {
+    "name": "BlockBestPrice",
+    "path": "src/components/BlockBestPrice/BlockBestPrice.jsx",
+    "fp": "f6494a93"
+  },
+  "59966:84230": {
+    "name": "BlockBigNumbers",
+    "path": "src/components/BlockBigNumbers/BlockBigNumbers.jsx",
+    "fp": "eb75f2da"
+  },
+  "59966:84496": {
+    "name": "BlockArchiveList",
+    "path": "src/components/BlockArchiveList/BlockArchiveList.jsx",
+    "fp": "edf45809"
+  },
+  "58512:82775": {
+    "name": "MobileMenuAccordion",
+    "path": "src/components/MobileMenuAccordion/MobileMenuAccordion.jsx",
+    "fp": "e971587c"
   }
 }

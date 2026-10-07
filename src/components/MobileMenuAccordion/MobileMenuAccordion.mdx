@@ -1,0 +1,111 @@
+{/* Generado por scripts/docs-generator.mjs desde MobileMenuAccordion.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './MobileMenuAccordion.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# mobile_menu_accordion
+
+## Introducción
+
+Sección desplegable del menú en móvil: título con caret; al abrir muestra una lista de enlaces con una tarjeta destacada (Open 1) o una fila de fotos con título desplazable (Open 2).
+
+
+Figma: `mobile_menu_accordion` (`58512:82775`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Cabecera: título + CaretDown/CaretUp 20 px
+- Open 1: lista de menu-item-list + tarjeta (foto 4:3, título, texto)
+- Open 2: fila de fotos 3:2 con título, desplazable
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema del menú.
+
+## Comportamiento
+
+- Clic en la cabecera abre o cierra.
+- Open 2: la fila de fotos se desplaza en horizontal con scroll-snap.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Close
+
+<Canvas of={Stories.StateClose} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Open 1
+
+<Canvas of={Stories.StateOpen1} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Open 2
+
+<Canvas of={Stories.StateOpen2} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | borde inferior |
+| color | `--texts-base` | textos |
+| color | `--texts-neutral-2` | texto de la tarjeta |
+| color | `--strokes-icons-base` | caret |
+| spacing | `--spacers-fixed-fx-4 / fx-6` | padding (cerrado / abierto abajo) |
+| spacing | `--spacers-fixed-fx-6` | cabecera–contenido |
+| spacing | `--spacers-fixed-fx-9` | lista–tarjeta (40 px) |
+| spacing | `--spacers-fixed-fx-5` | foto–texto y entre fotos (20 px) |
+| spacing | `--layout-spacers-responsive-1` | entre enlaces |
+| typography | `ts-body-02` |  |
+| typography | `ts-body-03` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| title | Título de la sección (Body/02). | "PRODUCTOS" | text |
+| content | Contenido al abrir: `links` (Open 1) o `photos` (Open 2). | links | inline-radio |
+| links | Enlaces (textos o objetos con text y href) como menu-item-list. | enlaces del máster | object |
+| feature | Tarjeta destacada de Open 1 (image, title, text, href). | la del máster | object |
+| photos | Fotos de Open 2 (image, title, href). | 4 × Sostenibilidad | object |
+| open / defaultOpen / onToggle | Abierto (controlado o no). | false | boolean |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Enlaces |  | Categorías del menú. |
+| Tarjeta |  | Una categoría destacada con foto. |
+
+## Accesibilidad
+
+- Cabecera como botón con aria-expanded.
+- Las fotos llevan alt (vacío si son decorativas).
+
+## Componentes relacionados
+
+- M02-Menu
+- menu-item-list
+- Aspect Ratio

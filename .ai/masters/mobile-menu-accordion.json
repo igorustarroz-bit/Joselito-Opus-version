@@ -1,0 +1,36 @@
+{
+ "id": "58512:82775",
+ "name": "mobile_menu_accordion",
+ "type": "COMPONENT_SET",
+ "fp": "e971587c",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Photo List": "SLOT",
+  "Slot": "SLOT",
+  "State": [
+   "Close",
+   "Open 1",
+   "Open 2"
+  ]
+ },
+ "spec": "Close 348×54 pad 16/0 borde inf. Neutral 3: 'PRODUCTOS' Body/02 + CaretDown 20. Open 1 gap 24 pad 16/24: lista menu-item-list (gap Responsive/1, pad fx-2) + Carrousel (gap 20) Aspect Ratio 4:3 164 + 'Regalos y Selecciones Especiales' Body/03 + texto Body/02 Neutral 2. Open 2: Photo List H gap 20 de [Aspect Ratio 3:2 161 + 'Sostenibilidad' Body/03]",
+ "deps": [
+  "CaretDown",
+  "CaretUp",
+  "menu-item-list",
+  "Aspect Ratio"
+ ],
+ "images": [
+  {
+   "hash": "ffe8697778fc8deb05ecc972027730d68a184a6c"
+  }
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "padding y gaps sin variable"
+   }
+  ]
+ }
+}
