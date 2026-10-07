@@ -1,0 +1,146 @@
+{
+  "name": "OrderByDay",
+  "kind": "component",
+  "title": "Order by Day",
+  "figma": {
+    "nodeId": "63559:58027",
+    "name": "Order by Day",
+    "fp": "c955e655"
+  },
+  "description": "Pedido del historial del cliente: fecha con acceso al detalle, etiquetas (nº de pedido, importe, estado), \"volver a comprar\" y los productos en tarjetas.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Horizontal"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopHorizontal",
+      "title": "Device=Desktop, Type=Horizontal"
+    },
+    {
+      "story": "MobileHorizontal",
+      "title": "Device=Mobile, Type=Horizontal"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Fecha (Title/01).",
+      "default": "\"25 de julio\"",
+      "control": "text"
+    },
+    {
+      "name": "tags",
+      "figma": "Labels",
+      "description": "Etiquetas.",
+      "default": "Pedido 876523 · 890 € · entregado",
+      "control": "object"
+    },
+    {
+      "name": "products",
+      "figma": "Slot Cards",
+      "description": "Props de cada Card Product (vertical).",
+      "default": "4 productos",
+      "control": "object"
+    },
+    {
+      "name": "showButton",
+      "figma": "Show Button",
+      "description": "Enlace \"volver a comprar\".",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "buttonText / onButton",
+      "description": "Texto y acción.",
+      "default": "\"volver a comprar\"",
+      "control": "text"
+    },
+    {
+      "name": "showButtonGo",
+      "figma": "Show Button Go",
+      "description": "Botón para ver el pedido.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "href",
+      "description": "Destino del botón.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "cabecera–productos"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "entre tarjetas"
+      },
+      {
+        "token": "--spacers-fixed-fx-6 / fx-4 / fx-2",
+        "usage": "separaciones de la cabecera (24/16/8 px sin variable)"
+      }
+    ],
+    "typography": [
+      "ts-title-01"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Fecha + Button-Icon Terciary S",
+    "Tags XS Aseptic + Button-Action-Link M",
+    "Fila de Card Product verticales"
+  ],
+  "behavior": [
+    "Escritorio: 4 tarjetas en columnas iguales. Móvil: fila desplazable (60 % por tarjeta, scroll-snap)."
+  ],
+  "content": [],
+  "a11y": [
+    "Título h2; botón con nombre accesible."
+  ],
+  "related": [
+    "Card Product",
+    "Tag",
+    "Button-Icon",
+    "Button-Action-Link"
+  ],
+  "images": [
+    {
+      "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+      "usage": "foto de producto"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: gaps 8/16/24 px sin variable → FX-2, FX-4, FX-6.",
+    "Figma: en Desktop las tarjetas usan la variante Mobile de Card Product (234 px)."
+  ],
+  "codePath": "src/components/OrderByDay/OrderByDay.jsx"
+}

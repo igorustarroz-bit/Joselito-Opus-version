@@ -1,0 +1,36 @@
+{
+ "id": "63559:58027",
+ "name": "Order by Day",
+ "type": "COMPONENT_SET",
+ "fp": "c955e655",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Labels": "SLOT",
+  "Slot Cards": "SLOT",
+  "Show Button": "BOOLEAN",
+  "Show Button Go": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Horizontal"
+  ]
+ },
+ "spec": "V gap fx-9: [fila Title/01 + Button-Icon Terciary S; fila (gap 24) Tags XS Aseptic (gap 8) + BAL M 'volver a comprar'] + Slot Cards H gap fx-7 (4 Card Product Vertical 234)",
+ "deps": [
+  "Button-Icon",
+  "Tag",
+  "Button-Action-Link",
+  "Card Product"
+ ],
+ "images": [
+  {
+   "hash": "3a99b63f1dd6caf13e3645384fc953748fd3899d"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}

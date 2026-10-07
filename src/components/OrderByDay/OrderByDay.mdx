@@ -1,0 +1,90 @@
+{/* Generado por scripts/docs-generator.mjs desde OrderByDay.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './OrderByDay.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Order by Day
+
+## Introducción
+
+Pedido del historial del cliente: fecha con acceso al detalle, etiquetas (nº de pedido, importe, estado), "volver a comprar" y los productos en tarjetas.
+
+
+Figma: `Order by Day` (`63559:58027`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Fecha + Button-Icon Terciary S
+- Tags XS Aseptic + Button-Action-Link M
+- Fila de Card Product verticales
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Escritorio: 4 tarjetas en columnas iguales. Móvil: fila desplazable (60 % por tarjeta, scroll-snap).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Horizontal
+
+<Canvas of={Stories.DesktopHorizontal} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Horizontal
+
+<Canvas of={Stories.MobileHorizontal} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| spacing | `--spacers-fixed-fx-9` | cabecera–productos |
+| spacing | `--spacers-fixed-fx-7` | entre tarjetas |
+| spacing | `--spacers-fixed-fx-6 / fx-4 / fx-2` | separaciones de la cabecera (24/16/8 px sin variable) |
+| typography | `ts-title-01` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| title | Fecha (Title/01). | "25 de julio" | text |
+| tags | Etiquetas. | Pedido 876523 · 890 € · entregado | object |
+| products | Props de cada Card Product (vertical). | 4 productos | object |
+| showButton | Enlace "volver a comprar". | true | boolean |
+| buttonText / onButton | Texto y acción. | "volver a comprar" | text |
+| showButtonGo | Botón para ver el pedido. | true | boolean |
+| href | Destino del botón. | — | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Título h2; botón con nombre accesible.
+
+## Componentes relacionados
+
+- Card Product
+- Tag
+- Button-Icon
+- Button-Action-Link

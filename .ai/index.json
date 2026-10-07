@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:20:04.875Z",
+  "generatedAt": "2026-10-07T07:20:05.003Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1111,7 +1111,7 @@
       "key": "component:modal-lightbox"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Order by Day",
@@ -1128,7 +1128,8 @@
       ],
       "images": 8,
       "autolayout": "2/2",
-      "key": "component:order-by-day"
+      "key": "component:order-by-day",
+      "builtFp": "11a6d6f4"
     },
     {
       "status": "done",
