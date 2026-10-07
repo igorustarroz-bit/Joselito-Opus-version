@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:17:44.766Z",
+  "generatedAt": "2026-10-07T07:17:44.958Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1193,7 +1193,7 @@
       "builtFp": "f04ada59"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "row_3_input",
@@ -1206,7 +1206,8 @@
       ],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:row-3-input"
+      "key": "component:row-3-input",
+      "builtFp": "e42e31ed"
     },
     {
       "status": "todo",

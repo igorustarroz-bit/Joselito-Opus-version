@@ -1,0 +1,16 @@
+{
+ "id": "57953:9192",
+ "name": "row_3_input",
+ "type": "COMPONENT",
+ "fp": "31c4f1aa",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "792×72 AL:H gap fx-4: 3 × Input Big (Show Info=false, fill)",
+ "deps": [
+  "Input"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
