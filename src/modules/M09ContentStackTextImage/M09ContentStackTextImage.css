@@ -1,0 +1,41 @@
+/* M09-ContentStack-Text+ Image — Figma 58468:60216. Solo tokens. Escritorio desde 1024 px. */
+.m09-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-spacers-responsive-10);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+  transition: background-color 0.2s ease;
+}
+.m09-stack.is-expanded { padding: var(--layout-spacers-responsive-14) var(--layout-grids-wrapper-default); }
+.m09-stack__main { display: contents; }
+.m09-stack.is-collapsed .m09-stack__main { display: flex; align-items: center; justify-content: space-between; gap: var(--spacers-fixed-fx-4); }
+.m09-stack__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--layout-spacers-responsive-6); }
+.m09-stack__texts { display: flex; flex-direction: column; gap: var(--layout-spacers-responsive-6); }
+.m09-stack__title { margin: 0; font-weight: inherit; }
+.m09-stack__title button { margin: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.m09-stack__title button:focus { outline: none; }
+.m09-stack__title button:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+.m09-stack__text { margin: 0; color: var(--texts-neutral-1); }
+.m09-stack__number { color: var(--texts-neutral-3); }
+.m09-stack.is-expanded .m09-stack__number { order: 3; }
+
+@media (min-width: 1024px) {
+  .m09-stack { padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default); }
+  .m09-stack.is-expanded {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: var(--spacers-fixed-fx-9);
+    padding: var(--layout-grids-wrapper-default);
+  }
+  .m09-stack.is-expanded .m09-stack__main { display: flex; flex-direction: column; justify-content: space-between; gap: var(--spacers-fixed-fx-11); width: var(--layout-cols-size-5cols); }
+  .m09-stack.is-expanded .m09-stack__content { gap: var(--layout-spacers-responsive-7); padding-right: var(--layout-spacers-responsive-13); }
+  .m09-stack__media { flex-shrink: 0; }
+  .has-image--vertical .m09-stack__media { width: var(--layout-cols-size-4cols); }
+  .has-image--horizontal .m09-stack__media { width: var(--layout-cols-size-5cols); align-self: flex-start; }
+}

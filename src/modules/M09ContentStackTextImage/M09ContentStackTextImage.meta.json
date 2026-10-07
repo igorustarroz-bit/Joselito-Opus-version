@@ -1,0 +1,201 @@
+{
+  "name": "M09ContentStackTextImage",
+  "kind": "module",
+  "title": "M09-ContentStack-Text+ Image",
+  "figma": {
+    "nodeId": "58468:60216",
+    "name": "M09-ContentStack-Text+ Image",
+    "fp": "ed94e485"
+  },
+  "description": "Elemento de una pila de contenidos desplegables: plegado muestra título y número; desplegado añade texto, botón e imagen. Se usan varios seguidos (ver historia Stack).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Image": [
+      "Horizontal",
+      "Vertical",
+      "None"
+    ],
+    "Mode": [
+      "Collapsed",
+      "Expanded",
+      "Collapsed Hover"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "VerticalExpanded",
+      "title": "Device=Desktop, Image=Vertical, Mode=Expanded"
+    },
+    {
+      "story": "HorizontalExpanded",
+      "title": "Device=Desktop, Image=Horizontal, Mode=Expanded"
+    },
+    {
+      "story": "Collapsed",
+      "title": "Device=Desktop, Image=None, Mode=Collapsed"
+    },
+    {
+      "story": "CollapsedHover",
+      "title": "Device=Desktop, Image=None, Mode=Collapsed Hover"
+    }
+  ],
+  "props": [
+    {
+      "name": "mode",
+      "figma": "Mode",
+      "description": "Fuerza `Collapsed`, `Expanded` o `Collapsed Hover` (documentación). Sin mode, el estado es interactivo.",
+      "default": "—",
+      "control": "inline-radio"
+    },
+    {
+      "name": "expanded / defaultExpanded / onToggle",
+      "description": "Estado desplegado (controlado / inicial) y aviso de cambio.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "image",
+      "figma": "Image",
+      "description": "`Vertical` (3:4), `Horizontal` (4:3) o `None`.",
+      "default": "Vertical",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showButton",
+      "figma": "-> Button",
+      "description": "Muestra el botón.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showDescription",
+      "figma": "-> Description",
+      "description": "Muestra el texto.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showNumber",
+      "figma": "-> Number",
+      "description": "Muestra el número.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "title / number / text",
+      "description": "Contenido.",
+      "default": "Salazón / 01 / …",
+      "control": "text"
+    },
+    {
+      "name": "buttonText / onButton",
+      "description": "Botón Secondary S.",
+      "default": "LOREM IPSUM",
+      "control": "text"
+    },
+    {
+      "name": "src / imageAlt",
+      "description": "Imagen.",
+      "default": "foto de ejemplo",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (en hover se usa dark-red-primary).",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo (rojo en hover vía subtema)"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto"
+      },
+      {
+        "token": "--texts-neutral-3",
+        "usage": "número"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde inferior"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "padding"
+      },
+      {
+        "token": "--layout-spacers-responsive-8 / 14",
+        "usage": "padding vertical plegado / desplegado móvil"
+      },
+      {
+        "token": "--layout-spacers-responsive-6 / 7 / 10 / 13",
+        "usage": "separaciones del contenido"
+      },
+      {
+        "token": "--layout-cols-size-5cols / 4cols",
+        "usage": "anchos"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-red-primary"
+    ],
+    "notes": "Collapsed Hover aplica dark-red-primary."
+  },
+  "anatomy": [
+    "Título Title/03 (botón) · número Title/03",
+    "Desplegado: texto Body/04 · Button Secondary S · Aspect Ratio"
+  ],
+  "behavior": [
+    "El título abre y cierra el elemento (aria-expanded).",
+    "Al pasar el ratón por un elemento plegado, cambia al subtema rojo.",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Una palabra o dos."
+    },
+    {
+      "field": "Número",
+      "notes": "Orden de la pila (01, 02…)."
+    }
+  ],
+  "a11y": [
+    "Título con botón y aria-expanded/aria-controls.",
+    "El número es decorativo (aria-hidden)."
+  ],
+  "related": [
+    "Button",
+    "Aspect Ratio",
+    "M07-Content-Text+Image"
+  ],
+  "images": [
+    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+  ],
+  "placeholders": [
+    "Texto del botón 'LOREM IPSUM' copiado de Figma: pendiente del texto real."
+  ],
+  "notes": [
+    "Figma: fondo #FFFFFF sin variable en Expanded → Backgrounds/Base.",
+    "Figma: separaciones 320/223/60/135 son repartos space-between; 48 → FX-9 (empate → la menor).",
+    "Figma: 'conversación de las piezas' en el texto de ejemplo parece una errata de 'conservación'.",
+    "Figma: el botón dice LOREM IPSUM (texto de relleno)."
+  ],
+  "codePath": "src/modules/M09ContentStackTextImage/M09ContentStackTextImage.jsx"
+}

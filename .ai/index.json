@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:59:13.647Z",
+  "generatedAt": "2026-10-07T08:01:17.910Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1424,7 +1424,7 @@
       "builtFp": "8f435678"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M09-ContentStack-Text+ Image",
@@ -1438,7 +1438,8 @@
       ],
       "images": 7,
       "autolayout": "7/7",
-      "key": "module:m09-content-stack-text-image"
+      "key": "module:m09-content-stack-text-image",
+      "builtFp": "e82f4782"
     },
     {
       "status": "todo",

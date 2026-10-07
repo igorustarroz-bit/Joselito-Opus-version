@@ -1,0 +1,69 @@
+{
+ "id": "58468:60216",
+ "name": "M09-ContentStack-Text+ Image",
+ "type": "COMPONENT_SET",
+ "fp": "ed94e485",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "-> Button": "BOOLEAN",
+  "-> Description": "BOOLEAN",
+  "-> Number": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Image": [
+   "Horizontal",
+   "Vertical",
+   "None"
+  ],
+  "Mode": [
+   "Collapsed",
+   "Expanded",
+   "Collapsed Hover"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Image=Vertical, Mode=Expanded"
+  },
+  {
+   "name": "Device=Desktop, Image=Horizontal, Mode=Expanded"
+  },
+  {
+   "name": "Device=Mobile, Image=Vertical, Mode=Expanded"
+  },
+  {
+   "name": "Device=Mobile, Image=Horizontal, Mode=Expanded"
+  },
+  {
+   "name": "Device=Desktop, Image=None, Mode=Collapsed"
+  },
+  {
+   "name": "Device=Desktop, Image=None, Mode=Collapsed Hover"
+  },
+  {
+   "name": "Device=Mobile, Image=None, Mode=Collapsed"
+  }
+ ],
+ "spec": "Expanded desktop: fila space-between pad Wrapper-Default, fill #FFF; columna 5cols space-between [Title/03 + Body/04 Neutral 1 gap Resp/6; Button Secondary S; gap Resp/7; pad-right Resp/13] y número Title/03 Neutral 3; Aspect Ratio 3:4 4cols o 4:3 5cols. Mobile: columna gap Resp/10, pad Resp/14/Wrapper-Default; imagen y número al final. Collapsed: pad Resp/8/Wrapper-Default, título y número space-between. Collapsed Hover: modo Dark - Red - Primary.",
+ "deps": [
+  "Button",
+  "Aspect Ratio"
+ ],
+ "images": [
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "fondo #ffffff en Expanded"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 320 / 223 / 60 / 135 (space-between), 48"
+   }
+  ]
+ }
+}

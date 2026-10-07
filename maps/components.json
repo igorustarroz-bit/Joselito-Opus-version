@@ -303,5 +303,10 @@
     "name": "M08ContentImageonly",
     "path": "src/modules/M08ContentImageonly/M08ContentImageonly.jsx",
     "fp": "5b2ede86"
+  },
+  "58468:60216": {
+    "name": "M09ContentStackTextImage",
+    "path": "src/modules/M09ContentStackTextImage/M09ContentStackTextImage.jsx",
+    "fp": "ed94e485"
   }
 }
