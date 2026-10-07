@@ -1,0 +1,43 @@
+{
+ "id": "63688:482735",
+ "name": "M10-Errors",
+ "type": "COMPONENT_SET",
+ "fp": "4a9b4984",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Description": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Sin autolayout. Desktop 1440×860 fondo Backgrounds/Base (modo oscuro): 404_picture 377×279 @536,265; bloque texto 515 @463,652 (Labels/02 Neutral 2 + Body/03 gap 24; Button-Action-Link L 'volver a inicio' gap 40) centrado. Mobile 390×844: picture 280×221 @55,312; texto 342 @24,592.",
+ "deps": [
+  "Button-Action-Link",
+  "404_picture"
+ ],
+ "images": [
+  "23cfef758b720c47c4ce748eb814e40af47887c1"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 40 / 24 sin variable"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "variantes sin autolayout"
+   }
+  ]
+ }
+}

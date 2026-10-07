@@ -1,0 +1,96 @@
+{/* Generado por scripts/docs-generator.mjs desde M10Errors.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M10Errors.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M10-Errors
+
+## Introducción
+
+Página de error a pantalla completa sobre fondo oscuro: ilustración del código de error y, debajo, título, explicación y enlace para volver al inicio.
+
+
+Figma: `M10-Errors` (`63688:482735`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- 404_picture
+- Título Labels/02 · descripción Body/03
+- Button-Action-Link L
+
+## Subtemas
+
+Subtema por defecto: `dark-black-neutral`
+
+Subtemas soportados: `dark-black-neutral`
+
+Figma fija un modo oscuro en el máster.
+
+## Comportamiento
+
+- Ocupa al menos el alto de la pantalla; la ilustración se centra en el espacio libre y el texto queda abajo.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo (subtema oscuro) |
+| color | `--texts-neutral-2` | título |
+| color | `--texts-base` | descripción |
+| spacing | `--spacers-fixed-fx-9` | textos-enlace |
+| spacing | `--spacers-fixed-fx-6` | título-descripción |
+| spacing | `--spacers-fixed-fx-13 / fx-14` | margen inferior escritorio / móvil |
+| spacing | `--layout-cols-size-4cols-1-gutter / 5cols` | ancho de la ilustración |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| title | Título corto (Labels/02, en mayúsculas). | Esta página no está aquí. | text |
+| description | Explicación. | Es posible que haya sido movida… | text |
+| type | Código de la ilustración (404_picture): 404, 500 o 300. | 404 | inline-radio |
+| linkText / href | Enlace de retorno. | VOLVER A INICIO / "/" | text |
+| theme | Subtema. | dark-black-neutral | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Título |  | Una frase breve. |
+| Descripción |  | Una o dos frases. |
+
+## Accesibilidad
+
+- Título como h1 (es la página).
+- La ilustración tiene role img con nombre.
+
+## Componentes relacionados
+
+- 404_picture
+- Button-Action-Link

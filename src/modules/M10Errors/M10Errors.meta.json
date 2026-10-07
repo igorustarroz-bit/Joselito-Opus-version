@@ -1,0 +1,142 @@
+{
+  "name": "M10Errors",
+  "kind": "module",
+  "title": "M10-Errors",
+  "figma": {
+    "nodeId": "63688:482735",
+    "name": "M10-Errors",
+    "fp": "4a9b4984"
+  },
+  "description": "Página de error a pantalla completa sobre fondo oscuro: ilustración del código de error y, debajo, título, explicación y enlace para volver al inicio.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [
+    "type"
+  ],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título corto (Labels/02, en mayúsculas).",
+      "default": "Esta página no está aquí.",
+      "control": "text"
+    },
+    {
+      "name": "description",
+      "figma": "Description",
+      "description": "Explicación.",
+      "default": "Es posible que haya sido movida…",
+      "control": "text"
+    },
+    {
+      "name": "type",
+      "description": "Código de la ilustración (404_picture): 404, 500 o 300.",
+      "default": "404",
+      "control": "inline-radio"
+    },
+    {
+      "name": "linkText / href",
+      "description": "Enlace de retorno.",
+      "default": "VOLVER A INICIO / \"/\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "dark-black-neutral",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo (subtema oscuro)"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "título"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "descripción"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "textos-enlace"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "título-descripción"
+      },
+      {
+        "token": "--spacers-fixed-fx-13 / fx-14",
+        "usage": "margen inferior escritorio / móvil"
+      },
+      {
+        "token": "--layout-cols-size-4cols-1-gutter / 5cols",
+        "usage": "ancho de la ilustración"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "dark-black-neutral",
+    "supported": [
+      "dark-black-neutral"
+    ],
+    "notes": "Figma fija un modo oscuro en el máster."
+  },
+  "anatomy": [
+    "404_picture",
+    "Título Labels/02 · descripción Body/03",
+    "Button-Action-Link L"
+  ],
+  "behavior": [
+    "Ocupa al menos el alto de la pantalla; la ilustración se centra en el espacio libre y el texto queda abajo."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Una frase breve."
+    },
+    {
+      "field": "Descripción",
+      "notes": "Una o dos frases."
+    }
+  ],
+  "a11y": [
+    "Título como h1 (es la página).",
+    "La ilustración tiene role img con nombre."
+  ],
+  "related": [
+    "404_picture",
+    "Button-Action-Link"
+  ],
+  "images": [
+    "23cfef758b720c47c4ce748eb814e40af47887c1"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: sin autolayout; posiciones absolutas reinterpretadas como columna centrada.",
+    "Figma: separaciones 40 y 24 sin variable → FX-9 y FX-6.",
+    "Figma: el texto del enlace está en minúsculas ('volver a inicio') y se muestra en mayúsculas por el estilo."
+  ],
+  "codePath": "src/modules/M10Errors/M10Errors.jsx"
+}
