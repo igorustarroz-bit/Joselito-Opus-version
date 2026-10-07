@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:06:33.035Z",
+  "generatedAt": "2026-10-07T07:06:33.156Z",
   "output": "react-storybook",
   "items": [
     {
@@ -803,7 +803,7 @@
       "builtFp": "f148035a"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Block Archive List",
@@ -814,7 +814,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "5/5",
-      "key": "component:block-archive-list"
+      "key": "component:block-archive-list",
+      "builtFp": "10631c65"
     },
     {
       "status": "todo",

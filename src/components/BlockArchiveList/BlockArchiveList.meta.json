@@ -1,0 +1,154 @@
+{
+  "name": "BlockArchiveList",
+  "kind": "component",
+  "title": "Block Archive List",
+  "figma": {
+    "nodeId": "59966:84496",
+    "name": "Block Archive List",
+    "fp": "edf45809"
+  },
+  "description": "Entrada del listado de archivo de colecciones (M32): etiqueta pequeña y nombre grande. Inactiva en gris claro; activa (hover o seleccionada) en negro.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Right",
+      "Left",
+      "fragmentM-List"
+    ],
+    "State": [
+      "Active",
+      "Inactive",
+      "Archive List - Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "LeftInactive",
+      "title": "Device=Desktop, Type=Left, State=Inactive"
+    },
+    {
+      "story": "LeftActive",
+      "title": "Device=Desktop, Type=Left, State=Active"
+    },
+    {
+      "story": "RightInactive",
+      "title": "Device=Desktop, Type=Right, State=Inactive"
+    },
+    {
+      "story": "RightActive",
+      "title": "Device=Desktop, Type=Right, State=Active"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile, Type=fragmentM-List"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Left` (etiqueta delante) o `Right` (etiqueta detrás). En móvil siempre apilado (fragmentM-List).",
+      "default": "Left",
+      "control": "inline-radio"
+    },
+    {
+      "name": "label",
+      "description": "Etiqueta (Body/03).",
+      "default": "\"Collection 2007\"",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "description": "Nombre (Title/05).",
+      "default": "\"Colección FSC\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Enlace a la colección.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "active",
+      "figma": "State",
+      "description": "Activa (en escritorio también al pasar el ratón).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-3",
+        "usage": "inactiva"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "activa"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiqueta en móvil"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "separación en escritorio (12 px sin variable)"
+      },
+      {
+        "token": "calc(fx-2 + fx-0)",
+        "usage": "separación en móvil (10 px)"
+      }
+    ],
+    "typography": [
+      "ts-body-03",
+      "ts-title-05"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Etiqueta",
+    "Nombre grande"
+  ],
+  "behavior": [
+    "Escritorio: hover/foco activa la entrada (gris → negro).",
+    "Móvil: apilada y siempre activa."
+  ],
+  "content": [],
+  "a11y": [
+    "Enlace con foco visible."
+  ],
+  "related": [
+    "M32-List-ArchiveList"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: separaciones 12/10 px sin variable.",
+    "Figma: el eje State mezcla estados y la variante móvil (\"Archive List - Mobile\"); en código el móvil se resuelve con breakpoint.",
+    "Figma: la transición de color es de código (0,2 s), no está en Figma."
+  ],
+  "codePath": "src/components/BlockArchiveList/BlockArchiveList.jsx"
+}

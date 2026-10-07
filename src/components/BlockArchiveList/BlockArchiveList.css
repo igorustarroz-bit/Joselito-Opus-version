@@ -1,0 +1,18 @@
+/* Block Archive List — Figma 59966:84496. Solo tokens. */
+.block-archive {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0));
+  color: var(--texts-base);
+  text-decoration: none;
+}
+.block-archive__label { color: var(--texts-neutral-2); }
+@media (min-width: 768px) {
+  .block-archive { flex-direction: row; align-items: flex-start; gap: var(--spacers-fixed-fx-3); color: var(--texts-neutral-3); transition: color 0.2s ease; }
+  .block-archive__label { color: inherit; }
+  .block-archive--right { flex-direction: row-reverse; justify-content: flex-end; align-items: center; }
+  .block-archive:hover, .block-archive.is-active, .block-archive:focus-visible { color: var(--texts-base); }
+}
+.block-archive:focus { outline: none; }
+.block-archive:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+@media (prefers-reduced-motion: reduce) { .block-archive { transition: none; } }

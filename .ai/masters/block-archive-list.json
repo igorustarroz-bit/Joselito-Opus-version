@@ -1,0 +1,34 @@
+{
+ "id": "59966:84496",
+ "name": "Block Archive List",
+ "type": "COMPONENT_SET",
+ "fp": "edf45809",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Right",
+   "Left",
+   "fragmentM-List"
+  ],
+  "State": [
+   "Active",
+   "Inactive",
+   "Archive List - Mobile"
+  ]
+ },
+ "spec": "Desktop H gap 12: Body/03 + Title/05 (Neutral 3 inactivo / Base activo); Right invertido; Mobile V gap 10: Body/03 Neutral 2 + Title/05 Base",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gap 12/10"
+   }
+  ]
+ }
+}

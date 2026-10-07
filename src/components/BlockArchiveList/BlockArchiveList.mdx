@@ -1,0 +1,109 @@
+{/* Generado por scripts/docs-generator.mjs desde BlockArchiveList.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './BlockArchiveList.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Block Archive List
+
+## Introducción
+
+Entrada del listado de archivo de colecciones (M32): etiqueta pequeña y nombre grande. Inactiva en gris claro; activa (hover o seleccionada) en negro.
+
+
+Figma: `Block Archive List` (`59966:84496`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Etiqueta
+- Nombre grande
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Escritorio: hover/foco activa la entrada (gris → negro).
+- Móvil: apilada y siempre activa.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Left, State=Inactive
+
+<Canvas of={Stories.LeftInactive} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Left, State=Active
+
+<Canvas of={Stories.LeftActive} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Right, State=Inactive
+
+<Canvas of={Stories.RightInactive} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Right, State=Active
+
+<Canvas of={Stories.RightActive} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=fragmentM-List
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-neutral-3` | inactiva |
+| color | `--texts-base` | activa |
+| color | `--texts-neutral-2` | etiqueta en móvil |
+| spacing | `--spacers-fixed-fx-3` | separación en escritorio (12 px sin variable) |
+| spacing | `calc(fx-2 + fx-0)` | separación en móvil (10 px) |
+| typography | `ts-body-03` |  |
+| typography | `ts-title-05` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Left` (etiqueta delante) o `Right` (etiqueta detrás). En móvil siempre apilado (fragmentM-List). | Left | inline-radio |
+| label | Etiqueta (Body/03). | "Collection 2007" | text |
+| title | Nombre (Title/05). | "Colección FSC" | text |
+| href | Enlace a la colección. | — | text |
+| active | Activa (en escritorio también al pasar el ratón). | false | boolean |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Enlace con foco visible.
+
+## Componentes relacionados
+
+- M32-List-ArchiveList
