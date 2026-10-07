@@ -1,0 +1,153 @@
+{
+  "name": "M28CardsAccordion",
+  "kind": "module",
+  "title": "M28-Cards-Accordion",
+  "figma": {
+    "nodeId": "58512:9289",
+    "name": "M28-Cards-Accordion",
+    "fp": "2f5563eb"
+  },
+  "description": "Colección destacada con cabecera: carrusel oscuro de tarjetas grandes con flechas, o acordeón claro con una tarjeta abierta y las demás como pestañas.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Carrousel",
+      "Accordion"
+    ],
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Carrousel",
+      "title": "Type=Carrousel, Device=Desktop"
+    },
+    {
+      "story": "Accordion",
+      "title": "Type=Accordion, Device=Desktop"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Carrousel` (oscuro) o `Accordion` (claro).",
+      "default": "Carrousel",
+      "control": "inline-radio"
+    },
+    {
+      "name": "items",
+      "description": "Tarjetas: title, short, image, text, tags, links, address, phone, stars.",
+      "default": "según type",
+      "control": "object"
+    },
+    {
+      "name": "defaultOpen",
+      "description": "Acordeón: índice abierto al inicio.",
+      "default": "0",
+      "control": "number"
+    },
+    {
+      "name": "eyebrow / title / linkText / href",
+      "description": "Cabecera.",
+      "default": "Nuestra colección / Elige el jamón…",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (por defecto según type).",
+      "default": "según type",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-2",
+        "usage": "bordes de tarjetas"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "estrellas"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "textos"
+      },
+      {
+        "token": "--texts-neutral-3",
+        "usage": "número de pestaña"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-11 / 9",
+        "usage": "padding y cabecera-contenido"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "padding de tarjeta y separaciones"
+      },
+      {
+        "token": "--layout-cols-size-8cols / 9cols / 4cols / 3cols",
+        "usage": "anchos"
+      },
+      {
+        "token": "--layout-grids-gutter",
+        "usage": "entre tarjetas del carrusel"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "dark-black-neutral",
+    "supported": [
+      "dark-black-neutral",
+      "light-white"
+    ],
+    "notes": "Carrousel oscuro, Accordion claro."
+  },
+  "anatomy": [
+    "Title (con título)",
+    "Tarjeta: Aspect Ratio 3:4 · Title/03 · estrellas · Body/03 · Tag XS · Button-Action-Link",
+    "Carrousel: Button-Icon ← →",
+    "Accordion: pestañas con texto vertical y número"
+  ],
+  "behavior": [
+    "Carrusel: tarjetas centradas con scroll-snap; flechas desplazan una tarjeta y se desactivan en los extremos.",
+    "Acordeón: pulsar una pestaña la abre (solo una abierta).",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Tarjetas",
+      "notes": "3 o 4."
+    }
+  ],
+  "a11y": [
+    "Pestañas como botones con aria-expanded.",
+    "Estrellas con nombre accesible."
+  ],
+  "related": [
+    "Title",
+    "Tag",
+    "Button-Action-Link",
+    "Button"
+  ],
+  "images": [
+    "ac8ff6856fe1c3302c30307e3489de64943bec68",
+    "eebf288a348e1dd9ad144b0ec713ea1123710efb"
+  ],
+  "placeholders": [
+    "Textos de relleno (lorem ipsum) y etiquetas 'LABEL' copiados de Figma."
+  ],
+  "notes": [
+    "Figma: el component set tiene errores (variante duplicada) y no expone propiedades.",
+    "Figma: las flechas están dibujadas con vectores en lugar de Button-Icon; en código se usa Button-Icon Terciary M.",
+    "Figma: paddings 68/80/48 y gaps 48/64/24/16/9 sin variable → FX-12/Wrapper/FX-9/FX-11/FX-6/FX-4/FX-2.",
+    "Figma: 'Caraterísticas' (errata) en el texto de ejemplo."
+  ],
+  "codePath": "src/modules/M28CardsAccordion/M28CardsAccordion.jsx"
+}

@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 101/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 102/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -128,7 +128,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M25-Cards-Links `58182:4396` — 4 variantes · 6 img · usa: Aspect Ratio, Button, Button-Action-Link, Card Carrusel, Title <!-- k:module:m25-cards-links -->
 - [x] M26-Buscador `61439:232705` — 6 variantes · usa: Brand Logo, Button, Button-Action-Link, Button-Icon <!-- k:module:m26-buscador -->
 - [x] M27-Cards-Categories `58163:40311` — 2 variantes · 6 img · usa: Aspect Ratio, Button-Icon, Card Product <!-- k:module:m27-cards-categories -->
-- [ ] M28-Cards-Accordion `58512:9289` — 5 variantes · 13 img · usa: */Overrides/Stars/Star, Aspect Ratio, Button, Button-Action-Link, Tag, Title <!-- k:module:m28-cards-accordion -->
+- [x] M28-Cards-Accordion `58512:9289` — 5 variantes · 13 img · usa: */Overrides/Stars/Star, Aspect Ratio, Button, Button-Action-Link, Tag, Title <!-- k:module:m28-cards-accordion -->
 - [ ] M29-User-Profile `63559:53572` — 2 variantes · usa: M06-Navigation-Secondarymenu, menu-item-list <!-- k:module:m29-user-profile -->
 - [ ] M30-Hero-Joselito-Lab `63928:325885` — 2 variantes · 12 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton · autolayout 0/2 → análisis de geometría <!-- k:module:m30-hero-joselito-lab -->
 - [ ] M31-Navigation-PreviousNext `58464:36878` — 2 variantes · usa: Button-Icon <!-- k:module:m31-navigation-previous-next -->

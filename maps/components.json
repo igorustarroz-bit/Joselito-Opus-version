@@ -398,5 +398,10 @@
     "name": "M27CardsCategories",
     "path": "src/modules/M27CardsCategories/M27CardsCategories.jsx",
     "fp": "b049dd7f"
+  },
+  "58512:9289": {
+    "name": "M28CardsAccordion",
+    "path": "src/modules/M28CardsAccordion/M28CardsAccordion.jsx",
+    "fp": "2f5563eb"
   }
 }

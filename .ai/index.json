@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:02:01.242Z",
+  "generatedAt": "2026-10-07T12:04:51.370Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1807,7 +1807,7 @@
       "builtFp": "1bfb6ed4"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M28-Cards-Accordion",
@@ -1825,7 +1825,8 @@
       ],
       "images": 13,
       "autolayout": "5/5",
-      "key": "module:m28-cards-accordion"
+      "key": "module:m28-cards-accordion",
+      "builtFp": "e84dc044"
     },
     {
       "status": "todo",

@@ -1,0 +1,60 @@
+{
+ "id": "58512:9289",
+ "name": "M28-Cards-Accordion",
+ "type": "COMPONENT_SET",
+ "fp": "2f5563eb",
+ "$note": "Digest compacto (.ai/tmp/spec.js). El set tiene errores en Figma (dos variantes 'Type=Carrousel, Device=Desktop'), sin definiciones de propiedades legibles.",
+ "props": {
+  "Type": [
+   "Carrousel",
+   "Accordion"
+  ],
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Type=Carrousel, Device=Desktop"
+  },
+  {
+   "name": "Type=Accordion, Device=Desktop"
+  },
+  {
+   "name": "Type=Carrousel, Device=Mobile"
+  },
+  {
+   "name": "Type=Accordion, Device=Mobile"
+  }
+ ],
+ "spec": "Columna pad Resp/11/Wrapper-Default gap Resp/9: Title (eyebrow, título Title/03, enlace). Carrousel (oscuro): tarjetas 8cols borde Neutral 2 pad 48 gap 48 [Aspect Ratio 3:4 404 · columna 315 space-between: Title/03, 3 estrellas, Body/03 Neutral 1, Tags XS gap 8 · Button-Action-Link L] gap Grids/Gutter; flechas 56 con borde Neutral 3 (space-between). Accordion (claro): tarjeta abierta 9cols (+ dirección, VER MAPA y teléfono, 2 DESCUBRIR) + pestañas 164 con texto vertical Body/04 y número Neutral 3; móvil: tarjeta + filas centradas.",
+ "deps": [
+  "Title",
+  "Aspect Ratio",
+  "*/Overrides/Stars/Star",
+  "Tag",
+  "Button-Action-Link",
+  "Button"
+ ],
+ "images": [
+  "ac8ff6856fe1c3302c30307e3489de64943bec68",
+  "eebf288a348e1dd9ad144b0ec713ea1123710efb"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "SET_ERRORS",
+    "msg": "Component set con errores (variante duplicada Type=Carrousel, Device=Desktop)"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings 68/80/48 y gaps 48/32/64/24/16/9 sin variable"
+   },
+   {
+    "code": "NO_COMPONENT",
+    "msg": "flechas dibujadas a mano (UI02-Button) en lugar de Button-Icon"
+   }
+  ]
+ }
+}

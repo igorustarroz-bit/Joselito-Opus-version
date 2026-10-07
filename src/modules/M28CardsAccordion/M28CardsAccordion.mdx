@@ -1,0 +1,105 @@
+{/* Generado por scripts/docs-generator.mjs desde M28CardsAccordion.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M28CardsAccordion.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M28-Cards-Accordion
+
+## Introducción
+
+Colección destacada con cabecera: carrusel oscuro de tarjetas grandes con flechas, o acordeón claro con una tarjeta abierta y las demás como pestañas.
+
+
+Figma: `M28-Cards-Accordion` (`58512:9289`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Title (con título)
+- Tarjeta: Aspect Ratio 3:4 · Title/03 · estrellas · Body/03 · Tag XS · Button-Action-Link
+- Carrousel: Button-Icon ← →
+- Accordion: pestañas con texto vertical y número
+
+## Subtemas
+
+Subtema por defecto: `dark-black-neutral`
+
+Subtemas soportados: `dark-black-neutral`, `light-white`
+
+Carrousel oscuro, Accordion claro.
+
+## Comportamiento
+
+- Carrusel: tarjetas centradas con scroll-snap; flechas desplazan una tarjeta y se desactivan en los extremos.
+- Acordeón: pulsar una pestaña la abre (solo una abierta).
+- Breakpoint a 1024 px.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Carrousel, Device=Desktop
+
+<Canvas of={Stories.Carrousel} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Accordion, Device=Desktop
+
+<Canvas of={Stories.Accordion} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-2` | bordes de tarjetas |
+| color | `--strokes-icons-neutral-3` | estrellas |
+| color | `--texts-neutral-1` | textos |
+| color | `--texts-neutral-3` | número de pestaña |
+| spacing | `--layout-spacers-responsive-11 / 9` | padding y cabecera-contenido |
+| spacing | `--spacers-fixed-fx-9` | padding de tarjeta y separaciones |
+| spacing | `--layout-cols-size-8cols / 9cols / 4cols / 3cols` | anchos |
+| spacing | `--layout-grids-gutter` | entre tarjetas del carrusel |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Carrousel` (oscuro) o `Accordion` (claro). | Carrousel | inline-radio |
+| items | Tarjetas: title, short, image, text, tags, links, address, phone, stars. | según type | object |
+| defaultOpen | Acordeón: índice abierto al inicio. | 0 | number |
+| eyebrow / title / linkText / href | Cabecera. | Nuestra colección / Elige el jamón… | text |
+| theme | Subtema (por defecto según type). | según type | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Tarjetas |  | 3 o 4. |
+
+## Accesibilidad
+
+- Pestañas como botones con aria-expanded.
+- Estrellas con nombre accesible.
+
+## Componentes relacionados
+
+- Title
+- Tag
+- Button-Action-Link
+- Button
+
+## Pendientes / placeholders
+
+- undefined: undefined

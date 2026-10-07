@@ -1,0 +1,85 @@
+/* M28-Cards-Accordion — Figma 58512:9289. Solo tokens. Escritorio desde 1024 px. */
+.m28-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-spacers-responsive-9);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  padding: var(--layout-spacers-responsive-11) var(--layout-grids-wrapper-default);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m28-cards ul { margin: 0; padding: 0; list-style: none; }
+
+/* Tarjeta */
+.m28-card { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); box-sizing: border-box; height: 100%; padding: var(--spacers-fixed-fx-4); border: 1px solid var(--strokes-icons-neutral-2); }
+.m28-card p, .m28-card h3 { margin: 0; }
+.m28-card__img { width: 60%; }
+.m28-card__body { display: flex; flex: 1; flex-direction: column; justify-content: space-between; gap: var(--spacers-fixed-fx-9); }
+.m28-card__texts { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacers-fixed-fx-6); }
+.m28-card__title { font-weight: inherit; }
+.m28-card__stars { display: inline-flex; gap: var(--spacers-fixed-fx-2); color: var(--strokes-icons-neutral-3); }
+.m28-card__contact { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); }
+.m28-card__address { color: var(--texts-neutral-1); white-space: pre-line; }
+.m28-card__contact-links { display: none; gap: var(--spacers-fixed-fx-6); }
+.m28-card__contact-buttons { display: flex; gap: var(--spacers-fixed-fx-2); }
+.m28-card__text { color: var(--texts-neutral-1); }
+.m28-card__tags { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-2); }
+.m28-card__links { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-6); }
+
+/* Carrusel */
+.m28-cards__track {
+  display: flex;
+  gap: var(--layout-grids-gutter);
+  margin: 0 calc(-1 * var(--layout-grids-wrapper-default)) !important;
+  padding: 0 var(--layout-grids-wrapper-default) !important;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--layout-grids-wrapper-default);
+  scrollbar-width: none;
+}
+.m28-cards__track::-webkit-scrollbar { display: none; }
+.m28-cards__track:focus { outline: none; }
+.m28-cards__track:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m28-cards__track > li { flex: 0 0 auto; width: var(--layout-cols-size-11cols); scroll-snap-align: start; }
+.m28-cards__arrows { display: flex; gap: var(--spacers-fixed-fx-4); }
+
+/* Acordeón */
+.m28-cards__accordion { display: flex; flex-direction: column; border: 1px solid var(--strokes-icons-neutral-2); }
+.m28-cards__accordion .m28-card { border: 0; }
+.m28-cards__accordion > li + li { border-top: 1px solid var(--strokes-icons-neutral-2); }
+.m28-cards__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: var(--spacers-fixed-fx-4);
+  border: 0;
+  background: none;
+  color: var(--texts-base);
+  cursor: pointer;
+}
+.m28-cards__tab:focus { outline: none; }
+.m28-cards__tab:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m28-cards__tab-index { display: none; color: var(--texts-neutral-3); }
+
+@media (min-width: 1024px) {
+  .m28-card { flex-direction: row; gap: var(--spacers-fixed-fx-9); padding: var(--spacers-fixed-fx-9); }
+  .m28-card__img { flex: 0 0 auto; width: var(--layout-cols-size-4cols); }
+  .m28-card__body { width: var(--layout-cols-size-3cols); }
+  .m28-card__contact-links { display: flex; }
+  .m28-card__contact-buttons { display: none; }
+  .m28-cards__track { scroll-snap-type: x mandatory; padding: 0 calc((100% - var(--layout-cols-size-8cols)) / 2) !important; }
+  .m28-cards__track > li { width: var(--layout-cols-size-8cols); scroll-snap-align: center; }
+  .m28-cards__arrows { justify-content: space-between; }
+  .m28-cards__accordion { flex-direction: row; }
+  .m28-cards__accordion > li { flex: 1; min-width: 0; }
+  .m28-cards__accordion > li.is-open { flex: 0 0 auto; width: var(--layout-cols-size-9cols); }
+  .m28-cards__accordion > li + li { border-top: 0; border-left: 1px solid var(--strokes-icons-neutral-2); }
+  .m28-cards__tab { flex-direction: column; justify-content: space-between; height: 100%; padding: var(--spacers-fixed-fx-9) var(--spacers-fixed-fx-4); }
+  .m28-cards__tab-name { writing-mode: vertical-rl; }
+  .m28-cards__tab-index { display: block; }
+}
