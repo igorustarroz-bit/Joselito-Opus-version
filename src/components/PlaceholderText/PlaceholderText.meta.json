@@ -1,0 +1,79 @@
+{
+  "name": "PlaceholderText",
+  "kind": "component",
+  "title": "Placeholder-Text",
+  "figma": {
+    "nodeId": "57961:792",
+    "name": "Placeholder-Text",
+    "fp": "a127a2a0"
+  },
+  "description": "Texto genérico Body/02 que Figma usa como relleno de slots y ejemplos.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto.",
+      "default": "\"Text\"",
+      "control": "text"
+    },
+    {
+      "name": "as",
+      "description": "Etiqueta HTML.",
+      "default": "p",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "texto"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Texto"
+  ],
+  "behavior": [
+    "Ancho del contenedor."
+  ],
+  "content": [],
+  "a11y": [
+    "Texto plano."
+  ],
+  "related": [
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "field": "nombre",
+      "notes": "El componente se llama así en Figma (Placeholder-Text); no es contenido pendiente."
+    }
+  ],
+  "notes": [],
+  "codePath": "src/components/PlaceholderText/PlaceholderText.jsx"
+}

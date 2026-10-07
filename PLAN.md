@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 67/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 68/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -93,7 +93,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [ ] Order by Day `63559:58027` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Card Product, Tag <!-- k:component:order-by-day -->
 - [ ] Order Summary `63609:146051` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Card Product, Tag <!-- k:component:order-summary -->
 - [x] Overlay `58786:13661` — autolayout 0/1 → análisis de geometría <!-- k:component:overlay -->
-- [ ] Placeholder-Text `57961:792` <!-- k:component:placeholder-text -->
+- [x] Placeholder-Text `57961:792` <!-- k:component:placeholder-text -->
 - [x] row_2_input `57953:9134` — usa: Input <!-- k:component:row-2-input -->
 - [x] row_3_input `57953:9192` — usa: Input <!-- k:component:row-3-input -->
 - [ ] Sending Details `63609:144166` — 2 variantes · 2 img · usa: Block Address, Visa <!-- k:component:sending-details -->

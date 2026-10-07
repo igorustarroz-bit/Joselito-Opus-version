@@ -1,0 +1,16 @@
+{
+ "id": "57961:792",
+ "name": "Placeholder-Text",
+ "type": "COMPONENT",
+ "fp": "a127a2a0",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Text": "TEXT"
+ },
+ "spec": "120×22 'Text' Body/02 Texts/Base (fill)",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
