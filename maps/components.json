@@ -338,5 +338,10 @@
     "name": "M15HeroSectionhero",
     "path": "src/modules/M15HeroSectionhero/M15HeroSectionhero.jsx",
     "fp": "4af1a845"
+  },
+  "61365:56297": {
+    "name": "M16HeroProductdetail",
+    "path": "src/modules/M16HeroProductdetail/M16HeroProductdetail.jsx",
+    "fp": "1a3749fa"
   }
 }

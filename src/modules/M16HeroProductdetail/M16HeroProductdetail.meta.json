@@ -1,0 +1,259 @@
+{
+  "name": "M16HeroProductdetail",
+  "kind": "module",
+  "title": "M16-Hero-Productdetail",
+  "figma": {
+    "nodeId": "61365:56297",
+    "name": "M16-Hero-Productdetail",
+    "fp": "1a3749fa"
+  },
+  "description": "Cabecera de ficha de producto o receta: galería con miniaturas a media pantalla y, al lado, título, descripción, etiquetas, datos clave, botones y lista de deseos. En móvil la galería es deslizable.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Producto",
+      "Receta"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Producto",
+      "title": "Device=Desktop, Type=Producto"
+    },
+    {
+      "story": "Receta",
+      "title": "Device=Desktop, Type=Receta"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Producto` o `Receta` (contenido de ejemplo y botones).",
+      "default": "Producto",
+      "control": "inline-radio"
+    },
+    {
+      "name": "title",
+      "figma": "Title Producto",
+      "description": "Título (admite salto de línea).",
+      "default": "según type",
+      "control": "text"
+    },
+    {
+      "name": "title (receta)",
+      "figma": "Title Receta",
+      "description": "Título en Receta (misma prop title).",
+      "default": "Tarta de manzana…",
+      "control": false
+    },
+    {
+      "name": "text",
+      "figma": "Text Product",
+      "description": "Descripción.",
+      "default": "según type",
+      "control": "text"
+    },
+    {
+      "name": "text (receta)",
+      "figma": "Text Receta",
+      "description": "Descripción en Receta (misma prop text; en Figma está oculta).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "cols",
+      "figma": "Col1",
+      "description": "Datos: label y value (hasta 4).",
+      "default": "Curación, Peso, Precio/Kg, Origen",
+      "control": "object"
+    },
+    {
+      "name": "cols[1]",
+      "figma": "Col2",
+      "description": "Segundo dato.",
+      "default": "8,20 kg",
+      "control": false
+    },
+    {
+      "name": "cols[2]",
+      "figma": "Col3",
+      "description": "Tercer dato.",
+      "default": "92€",
+      "control": false
+    },
+    {
+      "name": "cols[3]",
+      "figma": "Col4",
+      "description": "Cuarto dato.",
+      "default": "Guijuelo",
+      "control": false
+    },
+    {
+      "name": "showCol2",
+      "figma": "Show Col 2",
+      "description": "Muestra el segundo dato.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showCol3",
+      "figma": "Show Col 3",
+      "description": "Muestra el tercer dato.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showCol4",
+      "figma": "Show Col 4",
+      "description": "Muestra el cuarto dato.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "images / current",
+      "description": "Imágenes de la galería e índice inicial.",
+      "default": "3 imágenes",
+      "control": "object"
+    },
+    {
+      "name": "tags",
+      "description": "Etiquetas.",
+      "default": "SIN GLUTEN, SIN LACTOSA, 100% NATURAL",
+      "control": "object"
+    },
+    {
+      "name": "buttons",
+      "description": "Botones (el primero Primary).",
+      "default": "según type",
+      "control": "object"
+    },
+    {
+      "name": "notes / author",
+      "description": "Avisos de entrega (Producto) o autor (Receta).",
+      "default": "según type",
+      "control": "object"
+    },
+    {
+      "name": "back / backHref / onBack",
+      "description": "Volver.",
+      "default": "PRODUCTOS / RECETAS",
+      "control": "text"
+    },
+    {
+      "name": "showNavigation",
+      "description": "Incluye la M01 (Grey) en escritorio.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "light-white",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "descripción"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiquetas de datos y avisos"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separadores"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-6",
+        "usage": "entre bloques"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "entre datos"
+      },
+      {
+        "token": "--spacers-fixed-fx-2 / fx-5",
+        "usage": "etiquetas / botón-lista"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "avisos"
+      },
+      {
+        "token": "--layout-cols-size-4cols",
+        "usage": "ancho de la columna"
+      },
+      {
+        "token": "--spacers-fixed-fx-11",
+        "usage": "ancho de miniaturas"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "La M01 usa el modo Grey."
+  },
+  "anatomy": [
+    "Galería: Aspect Ratio + miniaturas 3:4 (escritorio) o carrusel + Stepper_for_toast (móvil)",
+    "Go_Back · Title/04 · Body/03 · Tag XS · datos",
+    "Button + Add_to_list",
+    "Avisos o autor"
+  ],
+  "behavior": [
+    "Las miniaturas cambian la imagen principal.",
+    "En móvil la galería se desliza (scroll-snap) y el indicador muestra la posición.",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Datos",
+      "notes": "Etiqueta corta y valor."
+    }
+  ],
+  "a11y": [
+    "Título como h1.",
+    "Miniaturas con aria-pressed.",
+    "Datos como lista de definición."
+  ],
+  "related": [
+    "Go_Back",
+    "Tag",
+    "Button",
+    "Add_to_list",
+    "Stepper_for_toast",
+    "M01-Navigation"
+  ],
+  "images": [
+    "de6fed704c4d8bafdd86f740c752aea3cb47f3de",
+    "728ce3bd1fafc5a2139a205d243e1babb3dff732",
+    "01e64032ea7aa325d1021146d0a73afadff08b42",
+    "c22e64dacd1afe065c97f91396c65c430e8af28b"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: separaciones 4/8/2,1/40/20/32 y paddings 12 sin variable → FX-1/FX-2/FX-0/FX-9/FX-5/FX-7/FX-3.",
+    "Figma: miniaturas de 64 px → FX-11.",
+    "Figma: la Receta reutiliza la misma imagen en las tres miniaturas.",
+    "Figma: textos de botones de Receta en minúsculas ('Ver video', 'Imprimir receta', 'Compartir') → mayúsculas; 'video' sin tilde.",
+    "Figma: el texto de Receta (Text Receta) habla del jamón y está oculto: revisar contenido."
+  ],
+  "codePath": "src/modules/M16HeroProductdetail/M16HeroProductdetail.jsx"
+}

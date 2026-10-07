@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T11:33:24.131Z",
+  "generatedAt": "2026-10-07T11:36:07.623Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1562,7 +1562,7 @@
       "builtFp": "95185793"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M16-Hero-Productdetail",
@@ -1585,7 +1585,8 @@
       ],
       "images": 11,
       "autolayout": "2/4",
-      "key": "module:m16-hero-productdetail"
+      "key": "module:m16-hero-productdetail",
+      "builtFp": "783bd7d0"
     },
     {
       "status": "todo",

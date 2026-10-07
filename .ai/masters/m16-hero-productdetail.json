@@ -1,0 +1,67 @@
+{
+ "id": "61365:56297",
+ "name": "M16-Hero-Productdetail",
+ "type": "COMPONENT_SET",
+ "fp": "1a3749fa",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title Producto": "TEXT",
+  "Title Receta": "TEXT",
+  "Text Product": "TEXT",
+  "Text Receta": "TEXT",
+  "Col1": "TEXT",
+  "Col2": "TEXT",
+  "Col3": "TEXT",
+  "Col4": "TEXT",
+  "Show Col 4": "BOOLEAN",
+  "Show Col 3": "BOOLEAN",
+  "Show Col 2": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Producto",
+   "Receta"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=Producto"
+  },
+  {
+   "name": "Device=Desktop, Type=Receta"
+  },
+  {
+   "name": "Device=Mobile, Type=Producto"
+  },
+  {
+   "name": "Device=Mobile, Type=Receta"
+  }
+ ],
+ "spec": "Desktop 1440×900 sin autolayout: galería 720 (Aspect Ratio Fill + 3 miniaturas 3:4 64 gap 4 @40,318), M01 Grey; columna 406 @845: Go_Back (pad-bottom fx-6) · Title/04 · Body/03 Neutral 1 (gap fx-7) · Tags XS ×3 gap 8 · Cols (Body/03 Neutral 2 + Base, gap 2,1; gap fx-9) [gap Resp/6] · gap Resp/8 · Button M Primary ancho completo + Add_to_list gap 20; pie Labels/01 Neutral 2. Receta: 3 botones (Primary + 2 Secondary), autor 'BY' + Button-Action-Link M. Mobile: título y datos, galería con Stepper_for_toast, resto y 3 avisos con borde (pad 12, gap 8).",
+ "deps": [
+  "Aspect Ratio",
+  "Go_Back",
+  "Tag",
+  "Button",
+  "Add_to_list",
+  "M01-Navigation",
+  "Button-Action-Link",
+  "Stepper_for_toast"
+ ],
+ "images": [
+  "de6fed704c4d8bafdd86f740c752aea3cb47f3de",
+  "728ce3bd1fafc5a2139a205d243e1babb3dff732",
+  "01e64032ea7aa325d1021146d0a73afadff08b42",
+  "c22e64dacd1afe065c97f91396c65c430e8af28b"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 4/8/2,1/40/20/32, paddings 12 sin variable"
+   }
+  ]
+ }
+}
