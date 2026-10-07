@@ -18,9 +18,9 @@
   -webkit-font-smoothing: antialiased;
 }
 .hzd *, .hzd *::before, .hzd *::after { box-sizing: border-box; }
-.hzd a { color: var(--hzd-accent); text-decoration: none; }
-.hzd a:hover { text-decoration: underline; }
-.hzd p { margin: 0 0 12px; }
+.hzd a:not(.hzd-demo a) { color: var(--hzd-accent); text-decoration: none; }
+.hzd a:not(.hzd-demo a):hover { text-decoration: underline; }
+.hzd p:not(.hzd-demo p) { margin: 0 0 12px; }
 
 /* Cabecera */
 .hzd-header { border-bottom: 1px solid var(--hzd-line); margin-bottom: 32px; }
@@ -61,6 +61,15 @@
 
 /* Demo: el lienzo de Storybook sin sombras, con borde fino */
 .hzd-demo .sbdocs-preview, .hzd-demo .docs-story { margin: 0; }
+/* La story NO hereda la tipografía ni los colores de la doc (Inter, 14 px, enlaces azules…): vuelve a la base
+   del proyecto (la misma que en la vista de story: preflight de Tailwind + body de index.css). */
+.hzd-demo .docs-story {
+  font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif); font-size: 16px; line-height: 1.5;
+  font-weight: 400; letter-spacing: normal; color: var(--texts-base); -webkit-font-smoothing: antialiased;
+  /* Franja reservada para «Show code / Copy code» (Storybook la pinta 40 px por encima del borde inferior):
+     sin ella, en módulos a sangre (layout fullscreen) los botones quedan encima del módulo. */
+  padding-bottom: 40px;
+}
 .hzd-demo .sbdocs-preview { box-shadow: none; border: 1px solid var(--hzd-line); border-radius: 8px; }
 
 /* Do / Don't */
