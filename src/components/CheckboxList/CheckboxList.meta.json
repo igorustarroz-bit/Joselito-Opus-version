@@ -1,0 +1,103 @@
+{
+  "name": "CheckboxList",
+  "kind": "component",
+  "title": "Checkbox-List",
+  "figma": {
+    "nodeId": "57947:46573",
+    "name": "Checkbox-List",
+    "fp": "ffd09677"
+  },
+  "description": "Lista de casillas con texto (Checkbox-Label), vertical u horizontal.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Vertical": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "VerticalYes",
+      "title": "Vertical=Yes"
+    },
+    {
+      "story": "VerticalNo",
+      "title": "Vertical=No"
+    }
+  ],
+  "props": [
+    {
+      "name": "vertical",
+      "figma": "Vertical",
+      "description": "Apila (FX-2) o pone en fila (FX-4).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "items",
+      "figma": "Slot",
+      "description": "Textos o props de Checkbox-Label (o hijos propios).",
+      "default": "[\"Label\"]",
+      "control": "object"
+    },
+    {
+      "name": "name",
+      "description": "Nombre común de los inputs.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible del grupo.",
+      "default": "\"Opciones\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación vertical"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación horizontal"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Checkbox-Label (slot)"
+  ],
+  "behavior": [
+    "Horizontal: salta de línea si no cabe."
+  ],
+  "content": [],
+  "a11y": [
+    "role=group con aria-label."
+  ],
+  "related": [
+    "Checkbox-Label",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [],
+  "codePath": "src/components/CheckboxList/CheckboxList.jsx"
+}

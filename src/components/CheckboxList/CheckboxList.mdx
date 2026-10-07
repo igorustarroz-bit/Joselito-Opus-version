@@ -1,0 +1,81 @@
+{/* Generado por scripts/docs-generator.mjs desde CheckboxList.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxList.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Checkbox-List
+
+## Introducción
+
+Lista de casillas con texto (Checkbox-Label), vertical u horizontal.
+
+
+Figma: `Checkbox-List` (`57947:46573`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Checkbox-Label (slot)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Horizontal: salta de línea si no cabe.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Vertical=Yes
+
+<Canvas of={Stories.VerticalYes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Vertical=No
+
+<Canvas of={Stories.VerticalNo} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| spacing | `--spacers-fixed-fx-2` | separación vertical |
+| spacing | `--spacers-fixed-fx-4` | separación horizontal |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| vertical | Apila (FX-2) o pone en fila (FX-4). | true | boolean |
+| items | Textos o props de Checkbox-Label (o hijos propios). | ["Label"] | object |
+| name | Nombre común de los inputs. | — | text |
+| label | Nombre accesible del grupo. | "Opciones" | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- role=group con aria-label.
+
+## Componentes relacionados
+
+- Checkbox-Label
+- Form

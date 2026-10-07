@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:02:53.004Z",
+  "generatedAt": "2026-10-07T07:02:53.125Z",
   "output": "react-storybook",
   "items": [
     {
@@ -879,7 +879,7 @@
       "key": "component:card-social-media"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Checkbox-List",
@@ -893,7 +893,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:checkbox-list"
+      "key": "component:checkbox-list",
+      "builtFp": "a575aed7"
     },
     {
       "status": "todo",

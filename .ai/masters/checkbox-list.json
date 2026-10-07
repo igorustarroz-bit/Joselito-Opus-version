@@ -1,0 +1,22 @@
+{
+ "id": "57947:46573",
+ "name": "Checkbox-List",
+ "type": "COMPONENT_SET",
+ "fp": "ffd09677",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Vertical": [
+   "Yes",
+   "No"
+  ]
+ },
+ "spec": "Slot V gap fx-2 / H gap 16 (variable)",
+ "deps": [
+  "Checkbox-Label"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
