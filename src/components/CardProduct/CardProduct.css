@@ -11,7 +11,7 @@
   .card-product--horizontal { gap: var(--spacers-fixed-fx-7); }
 }
 .card-product__photo { position: relative; width: 100%; }
-.card-product--horizontal .card-product__photo { flex: 0 0 auto; width: 140px; /* token-audit-ignore — Figma: foto de 140 px sin variable */ }
+.card-product--horizontal .card-product__photo { flex: 0 0 auto; width: var(--spacers-fixed-fx-17); /* Figma 140 px → FX-17 (148 px) */ }
 .card-product__tag { position: absolute; top: var(--spacers-fixed-fx-4); left: var(--spacers-fixed-fx-4); }
 .card-product--horizontal .card-product__tag { top: var(--spacers-fixed-fx-2); left: var(--spacers-fixed-fx-2); }
 .card-product__quick {

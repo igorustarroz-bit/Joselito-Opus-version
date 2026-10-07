@@ -13,7 +13,7 @@
 div.listbox-item { cursor: default; }
 .listbox-item:hover .check-radio:not(:has(:disabled)) { --cr-stroke: var(--strokes-icons-accent-2); }
 .listbox-item__content { display: flex; align-items: center; gap: var(--spacers-fixed-fx-4); flex: 1 1 auto; min-width: 0; }
-.listbox-item__img { flex: 0 0 auto; width: calc(var(--spacers-fixed-fx-9) + var(--spacers-fixed-fx-2)); }
+.listbox-item__img { flex: 0 0 auto; width: var(--spacers-fixed-fx-9); }
 .listbox-item__texts { display: flex; flex-direction: column; min-width: 0; }
 .listbox-item__label { color: var(--texts-base); }
 .listbox-item__desc { color: var(--texts-neutral-2); }

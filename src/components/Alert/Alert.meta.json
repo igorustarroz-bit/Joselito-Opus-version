@@ -154,7 +154,8 @@
     "Figma: el enlace usa Type=Hover de Button-Action-Link de forma fija (gris) → state Hover.",
     "Figma: el texto de la capa se llama \"© 2019. All rights r…\" (nombre heredado).",
     "Figma: \"Confirmar el idioma seleccionada\" tiene una errata (seleccionado); se mantiene como en el máster. Avisar a contenido.",
-    "Figma: el borde superior de 1 px no tiene color (invisible)."
+    "Figma: el borde superior de 1 px no tiene color (invisible).",
+    "Ajuste (Igor, 2026-10-07): 18 px → FX-4 (16 px) y 10 px → FX-2 (8 px), variables más cercanas."
   ],
   "codePath": "src/components/Alert/Alert.jsx"
 }

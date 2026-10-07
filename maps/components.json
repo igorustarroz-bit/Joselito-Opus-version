@@ -105,8 +105,8 @@
     "fp": "de77f3a7"
   },
   "57943:46054": {
-    "name": "AccordionItem",
-    "path": "src/components/AccordionItem/AccordionItem.jsx",
+    "name": "Accordion",
+    "path": "src/components/Accordion/Accordion.jsx",
     "fp": "12337231"
   },
   "63192:173727": {
@@ -145,8 +145,8 @@
     "fp": "ffd09677"
   },
   "57943:46123": {
-    "name": "Accordion",
-    "path": "src/components/Accordion/Accordion.jsx",
+    "name": "ListAccordion",
+    "path": "src/components/ListAccordion/ListAccordion.jsx",
     "fp": "99e81d2f"
   },
   "63606:143410": {

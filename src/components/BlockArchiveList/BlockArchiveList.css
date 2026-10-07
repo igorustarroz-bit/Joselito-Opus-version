@@ -2,7 +2,7 @@
 .block-archive {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0));
+  gap: var(--spacers-fixed-fx-2);
   color: var(--texts-base);
   text-decoration: none;
 }

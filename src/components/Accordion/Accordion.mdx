@@ -4,14 +4,14 @@ import * as Stories from './Accordion.stories';
 
 <Meta of={Stories} name="Doc" />
 
-# Accordion
+# accordion
 
 ## Introducción
 
-Lista de elementos desplegables (accordion) apilados: preguntas frecuentes, bloques del pie en móvil.
+Elemento desplegable de acordeón (preguntas frecuentes, pie de página en móvil): título con icono más/menos que muestra u oculta su contenido.
 
 
-Figma: `Accordion` (`57943:46123`)
+Figma: `accordion` (`57943:46054`)
 
 ## Demo
 
@@ -21,7 +21,9 @@ Figma: `Accordion` (`57943:46123`)
 
 ## Anatomía
 
-- Elementos accordion (slot)
+- Borde superior 1 px
+- Cabecera: título (+ subtítulo) e icono Plus/Minus 16 px
+- Contenido (slot)
 
 ## Subtemas
 
@@ -33,36 +35,66 @@ Hereda el subtema.
 
 ## Comportamiento
 
-- Cada elemento se abre y cierra de forma independiente.
+- Clic en la cabecera abre o cierra (Plus ↔ Minus).
 
 ## Variantes y tamaños
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
   <div style={{ flex: '1 1 320px', minWidth: 0 }}>
 
-### Ejemplo con contenido
+### Open=No
 
-<Canvas of={Stories.Preguntas} />
+<Canvas of={Stories.OpenNo} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Open=Yes
+
+<Canvas of={Stories.OpenYes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show Subtitle
+
+<Canvas of={Stories.ConSubtitulo} />
 
   </div>
 </div>
 
 ## Tokens
 
-_—_
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | borde superior |
+| color | `--texts-base` | título |
+| color | `--texts-neutral-1` | contenido y subtítulo |
+| color | `--strokes-icons-base` | icono |
+| spacing | `--spacers-fixed-fx-4` | padding vertical y separación cabecera–contenido |
+| spacing | `--spacers-fixed-fx-2` | título–icono |
+| typography | `ts-cta-link-footer-01` |  |
+| typography | `ts-body-01` |  |
+| typography | `ts-body-02` |  |
 
 ## Propiedades
 
 | Nombre | Descripción | Por defecto | Control |
 | --- | --- | --- | --- |
-| items | Lista de objetos con title, content y props de accordion (o hijos AccordionItem). | 2 × item | object |
+| title | Título (CTA-Link-Footer/01). | "item" | text |
+| showSubtitle | Muestra el subtítulo. | false | boolean |
+| subtitle | Subtítulo. | "Text" | text |
+| children | Contenido desplegable (slot). Por defecto el texto del máster (Body/02). | — |  |
+| open / defaultOpen / onToggle | Abierto (controlado o no). | false | boolean |
 | theme | Fija un subtema. Por defecto hereda. | — | text |
 
 ## Accesibilidad
 
-- Cada cabecera es un botón con aria-expanded.
+- Cabecera es un botón con aria-expanded y aria-controls.
+- Contenido con hidden cuando está cerrado.
 
 ## Componentes relacionados
 
-- accordion
+- list_accordion
+- M03-Navigation-Footer
 - M28-Cards-Accordion

@@ -54,9 +54,11 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 - Lecturas de Figma: el digest completo de másters grandes supera los 20 kB del MCP → se usa `.ai/tmp/spec.js` (misma huella fp que digest.js + árbol compacto) y se guarda un digest compacto en `.ai/masters/`.
 - Scripts de apoyo locales (ignorados en git, en `.ai/tmp/`): `push.sh` (commit con autor Igor + push con github-token.txt), `ship.sh` (DoD + build + plan + push), `commit.sh` (plan + commit sin push), `finish.py` (maps/components.json).
 - La VM local no permite borrar sin permiso → hay que conceder el permiso de borrado de la carpeta al empezar la sesión, o git deja `.lock` y objetos temporales.
-- `accordion` (elemento, 57943:46054) y `Accordion` (lista, 57943:46123) comparten clave de plan y slug: el digest de la lista es `.ai/masters/accordion-2.json` (override `figma.digest` en el meta, parche en `scripts/hanzo/dod-check.mjs`). En PLAN.md la lista sigue saliendo como pendiente aunque está hecha.
+- Nombres (Igor): el elemento es **accordion** (`src/components/Accordion`) y la lista **list_accordion** (`src/components/ListAccordion`). En Figma los másters siguen siendo `accordion` / `Accordion` y comparten clave de plan y slug: el digest de la lista es `.ai/masters/list-accordion.json` (override `figma.digest` en el meta, parche en `scripts/hanzo/dod-check.mjs`). En PLAN.md la lista sigue saliendo como pendiente aunque está hecha.
 - Responsive de componentes: Alert usa container query (se adapta a su propio ancho); Go_Back y Card Product usan media query a 768 px.
 - Mejoras detectadas en la skill: ver `.ai/tmp/notes-skill.md` (falso positivo "todo" en dod-check, MDX con < > { } en metas, slug CamelCase, límite 20 kB del digest).
+
+- 2026-10-07 — **Criterio de valores sin variable** (Igor): usar la variable más cercana, no sumas de tokens; en empate, la menor. Aplicado: 10 px → FX-2, 18 px → FX-4, 48 px → FX-9, 1,5 px → FX-0, 140 px → FX-17; ancho del modal (624/342 px) → Layout/Cols Size/6cols.
 
 ## 8. Sesiones
 - 2026-10-06, Igor + Claude — Fase 0 (config, scaffold, permisos, git) + Fase 1 (perfil del Figma) + Fase 2 parcial (inventario de Foundations, Brand Assets, Components, Raw Modules → PLAN.md, 107 elementos). ~9 llamadas MCP. Build de Storybook pendiente de tokens. Webfonts + volcado de variables (8 llamadas + 2 de verificación) → `npm run tokens` → build OK. Total sesión ≈ 19 llamadas MCP. **Siguiente:** Foundation `Aspect Ratio` → set de iconos → HITO de imágenes raster.

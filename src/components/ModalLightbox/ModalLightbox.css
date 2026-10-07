@@ -5,7 +5,7 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  max-width: 624px; /* token-audit-ignore — ancho del máster de Figma (sin variable) */
+  max-width: var(--layout-cols-size-6cols); /* 624 px en escritorio, 342 en móvil */
   border: 1px solid var(--strokes-icons-neutral-3);
   background: var(--backgrounds-base);
   color: var(--texts-base);
@@ -40,13 +40,13 @@
   gap: var(--layout-spacers-responsive-4);
   box-sizing: border-box;
   width: 100%;
-  max-width: 624px; /* token-audit-ignore — ancho del máster de Figma */
+  max-width: var(--layout-cols-size-6cols);
   padding: var(--spacers-fixed-fx-4);
   background: var(--backgrounds-base);
   color: var(--texts-base);
 }
 .modal-collapsed__info { display: flex; align-items: center; gap: var(--layout-spacers-responsive-4); min-width: 0; }
-.modal-collapsed__img { display: none; flex: 0 0 auto; width: calc(var(--spacers-fixed-fx-9) + var(--spacers-fixed-fx-2)); }
+.modal-collapsed__img { display: none; flex: 0 0 auto; width: var(--spacers-fixed-fx-9); }
 .modal-collapsed__texts { display: flex; flex-direction: column; min-width: 0; }
 .modal-collapsed__price { color: var(--texts-neutral-2); }
 @media (min-width: 768px) { .modal-collapsed__img { display: block; } }

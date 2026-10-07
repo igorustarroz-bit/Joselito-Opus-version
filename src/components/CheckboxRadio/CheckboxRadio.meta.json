@@ -188,7 +188,8 @@
     "Figma: Checkboxes Selected Disabled Light pinta el check con Backgrounds/Neutral-1 (casi blanco): se replica, pero el check apenas se ve. Avisar a diseño.",
     "Figma: la casilla marcada en Light usa Accent-4 (rosa claro) y el radio Accent-2: se replica tal cual.",
     "Figma: el eje Theme (Light/Dark) duplica lo que harían los subtemas; se expone como prop `tone`.",
-    "Figma: no hay estado Focus; se añade contorno con teclado."
+    "Figma: no hay estado Focus; se añade contorno con teclado.",
+    "Ajuste (Igor, 2026-10-07): punto del radio de 10 px → FX-2 (8 px), variable más cercana."
   ],
   "codePath": "src/components/CheckboxRadio/CheckboxRadio.jsx"
 }

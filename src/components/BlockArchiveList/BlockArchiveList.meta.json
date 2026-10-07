@@ -109,8 +109,8 @@
         "usage": "separación en escritorio (12 px sin variable)"
       },
       {
-        "token": "calc(fx-2 + fx-0)",
-        "usage": "separación en móvil (10 px)"
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación en móvil (8 px)"
       }
     ],
     "typography": [
@@ -148,7 +148,8 @@
   "notes": [
     "Figma: separaciones 12/10 px sin variable.",
     "Figma: el eje State mezcla estados y la variante móvil (\"Archive List - Mobile\"); en código el móvil se resuelve con breakpoint.",
-    "Figma: la transición de color es de código (0,2 s), no está en Figma."
+    "Figma: la transición de color es de código (0,2 s), no está en Figma.",
+    "Ajuste (Igor, 2026-10-07): separación móvil de 10 px → FX-2 (8 px)."
   ],
   "codePath": "src/components/BlockArchiveList/BlockArchiveList.jsx"
 }

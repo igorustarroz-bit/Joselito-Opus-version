@@ -1,2 +1,29 @@
-/* Accordion — Figma 57943:46123. Solo tokens. */
-.accordion { display: flex; flex-direction: column; width: 100%; }
+/* accordion — Figma 57943:46054. Solo tokens. Borde superior de 1 px, padding vertical FX-4. */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-4);
+  width: 100%;
+  padding: var(--spacers-fixed-fx-4) 0;
+  border-top: 1px solid var(--strokes-icons-neutral-3);
+}
+.accordion__head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-2);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--texts-base);
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__head .icon { color: var(--strokes-icons-base); }
+.accordion__head:focus { outline: none; }
+.accordion__head:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+.accordion__texts { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); flex: 1 1 auto; min-width: 0; }
+.accordion__subtitle { color: var(--texts-neutral-1); }
+.accordion__content { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-4); color: var(--texts-neutral-1); }
+.accordion__content[hidden] { display: none; }

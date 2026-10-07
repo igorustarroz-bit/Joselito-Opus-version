@@ -144,8 +144,8 @@
         "usage": "padding XS / XL"
       },
       {
-        "token": "calc(fx-2 + fx-0)",
-        "usage": "padding de 10 px en L"
+        "token": "--spacers-fixed-fx-2",
+        "usage": "padding de L (8 px)"
       },
       {
         "token": "--layout-spacers-responsive-1/2, --spacers-fixed-fx-1/2",
@@ -198,7 +198,8 @@
   "notes": [
     "Figma: padding 8/10/12 px sin variable → FX-2, FX-2 + FX-0 (10 px, no existe token) y FX-3. Avisar a diseño para ligarlos.",
     "Figma: Type=New no tiene la propiedad Remove (sin X).",
-    "Figma: Transaction L tiene padding lateral 10 px y New/Aseptic L 8 px: se replica."
+    "Figma: Transaction L tiene padding lateral 10 px y New/Aseptic L 8 px: se replica.",
+    "Ajuste (Igor, 2026-10-07): valores sin variable → variable más cercana; 10 px → FX-2 (8 px). En empate se toma la menor."
   ],
   "codePath": "src/components/Tag/Tag.jsx"
 }

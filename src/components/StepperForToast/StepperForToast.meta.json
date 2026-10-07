@@ -59,8 +59,8 @@
     ],
     "spacing": [
       {
-        "token": "calc(fx-0 × 0,75)",
-        "usage": "ancho 1,5 px"
+        "token": "--spacers-fixed-fx-0",
+        "usage": "ancho 2 px"
       },
       {
         "token": "--spacers-fixed-fx-6",
@@ -97,7 +97,8 @@
   "notes": [
     "Figma: el relleno usa #211E1D sin variable → Strokes-Icons/Base. Avisar a diseño.",
     "Figma: sin autolayout; el relleno es un rectángulo rotado −90°.",
-    "Figma: la propiedad se llama \"Property 1\" (sin nombre): conviene renombrarla a Status."
+    "Figma: la propiedad se llama \"Property 1\" (sin nombre): conviene renombrarla a Status.",
+    "Ajuste (Igor, 2026-10-07): ancho 2 px → FX-0 (2 px), variable más cercana."
   ],
   "codePath": "src/components/StepperForToast/StepperForToast.jsx"
 }

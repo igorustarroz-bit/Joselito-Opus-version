@@ -1,9 +1,9 @@
-/* Stepper_for_toast — Figma 59964:130709. Solo tokens. Barra de 1,5 × 24 px (FX-0 × 0,75 · FX-6). */
+/* Stepper_for_toast — Figma 59964:130709. Solo tokens. Barra de 2 × 24 px (FX-0 · FX-6; Figma 1,5 px). */
 .stepper-toast {
   position: relative;
   display: inline-block;
   flex: 0 0 auto;
-  width: calc(var(--spacers-fixed-fx-0) * 0.75);
+  width: var(--spacers-fixed-fx-0);
   height: var(--spacers-fixed-fx-6);
   overflow: hidden;
   background: var(--strokes-icons-neutral-3);

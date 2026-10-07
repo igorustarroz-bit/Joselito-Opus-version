@@ -216,7 +216,8 @@
     "Figma: el texto del cuerpo no tiene color ligado → Texts/Base.",
     "Figma: gaps 10/12/16 px sin variable.",
     "Figma: el ancho del modal (624 px) no tiene variable; en código es max-width con ancho completo por debajo.",
-    "Figma: la posición del Alert (Show Alert) no se pudo ver; se coloca encima de la cabecera."
+    "Figma: la posición del Alert (Show Alert) no se pudo ver; se coloca encima de la cabecera.",
+    "Ajuste (Igor, 2026-10-07): ancho 624 px → Layout/Cols Size/6cols (624 px escritorio, 342 px móvil: coincide con ambos másters); foto de Collapsed 48 px → FX-9 (40 px)."
   ],
   "codePath": "src/components/ModalLightbox/ModalLightbox.jsx"
 }

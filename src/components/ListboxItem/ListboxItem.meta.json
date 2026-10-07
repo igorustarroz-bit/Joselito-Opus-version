@@ -164,8 +164,8 @@
         "usage": "separación contenido–control"
       },
       {
-        "token": "calc(fx-9 + fx-2)",
-        "usage": "imagen de 48 px"
+        "token": "--spacers-fixed-fx-9",
+        "usage": "imagen (40 px)"
       }
     ],
     "typography": [
@@ -217,7 +217,8 @@
     "Figma: la separación imagen–texto (16 px) no tiene variable → FX-4.",
     "Figma: la fila tiene un trazo inferior de 1 px oculto (sin divisor visible): no se pinta.",
     "Figma: los ejes Status y Selected son redundantes (Selected=Yes solo con Status=Selected).",
-    "Figma: Size solo tiene Medium: no se expone."
+    "Figma: Size solo tiene Medium: no se expone.",
+    "Ajuste (Igor, 2026-10-07): imagen (40 px) → FX-9 (40 px), variable más cercana (empate 40/56 → la menor)."
   ],
   "codePath": "src/components/ListboxItem/ListboxItem.jsx"
 }

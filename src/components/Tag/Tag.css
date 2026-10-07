@@ -12,11 +12,11 @@
   color: var(--tag-text);
   white-space: nowrap;
 }
-/* Tamaños (Figma: XS 8 · L 10 vertical y 8–10 lateral · XL 12; 10 px no existe como token → FX-2 + FX-0) */
+/* Tamaños (Figma: XS 8 · L 10 · XL 12; 10 px → FX-2, la variable más cercana) */
 .tag--xs { --tag-pad-y: var(--spacers-fixed-fx-2); --tag-pad-x: var(--spacers-fixed-fx-2); }
-.tag--l { --tag-pad-y: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)); --tag-pad-x: var(--spacers-fixed-fx-2); }
+.tag--l { --tag-pad-y: var(--spacers-fixed-fx-2); --tag-pad-x: var(--spacers-fixed-fx-2); }
 .tag--xl { --tag-pad-y: var(--spacers-fixed-fx-3); --tag-pad-x: var(--spacers-fixed-fx-3); }
-.tag--transaction.tag--l { --tag-pad-x: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)); }
+.tag--transaction.tag--l { --tag-pad-x: var(--spacers-fixed-fx-2); }
 
 /* Tipos */
 .tag--transaction { --tag-fill: var(--backgrounds-base); --tag-stroke: var(--strokes-icons-neutral-3); --tag-text: var(--texts-neutral-1); --tag-gap: var(--layout-spacers-responsive-1); }

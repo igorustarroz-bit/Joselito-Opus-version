@@ -30,9 +30,9 @@
     justify-content: space-between;
     padding: var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-9);
   }
-  .alert--language .alert__inner { padding-block: calc(var(--spacers-fixed-fx-4) + var(--spacers-fixed-fx-0)); }
+  .alert--language .alert__inner { padding-block: var(--spacers-fixed-fx-4); }
   .alert__cta--inline { display: none; }
   .alert__cta--desktop { display: inline-flex; }
   .alert__main { gap: 0; }
-  .alert__select { gap: var(--spacers-fixed-fx-6); padding: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)) var(--spacers-fixed-fx-4); }
+  .alert__select { gap: var(--spacers-fixed-fx-6); padding: var(--spacers-fixed-fx-2) var(--spacers-fixed-fx-4); }
 }
