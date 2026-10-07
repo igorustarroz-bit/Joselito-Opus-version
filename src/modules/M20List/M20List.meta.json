@@ -1,0 +1,123 @@
+{
+  "name": "M20List",
+  "kind": "module",
+  "title": "M20-List",
+  "figma": {
+    "nodeId": "60186:9313",
+    "name": "M20-List",
+    "fp": "4326bb7e"
+  },
+  "description": "Lista de ventajas o datos destacados con cabecera: bloques con borde compartido en fila (escritorio) o en columna (móvil).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Property 1": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Property 1=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Property 1=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "showTitle",
+      "figma": "Titulo",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showExtraItem",
+      "figma": "-> Extra Item",
+      "description": "Añade un cuarto bloque.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "items / extraItem",
+      "description": "Bloques: title, text.",
+      "default": "3 × Mejor precio garantizado",
+      "control": "object"
+    },
+    {
+      "name": "eyebrow",
+      "description": "Texto de la cabecera.",
+      "default": "100 g de Jamón Joselito aportan",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-11",
+        "usage": "padding superior de la cabecera"
+      },
+      {
+        "token": "--layout-spacers-responsive-13 / 10",
+        "usage": "padding vertical de la lista (escritorio / móvil)"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title",
+    "Block best price × 3 (o 4)"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Bloques",
+      "notes": "Título en mayúsculas y texto corto."
+    }
+  ],
+  "a11y": [
+    "Lista semántica."
+  ],
+  "related": [
+    "Block best price",
+    "Title",
+    "M21-List-Numbers"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: padding lateral del título de 80 px sin variable → Wrapper-Default (80 a 1440).",
+    "Figma: separación de 44 px sin efecto (un solo hijo).",
+    "Figma: los bloques se solapan 1 px para compartir borde.",
+    "Figma: el texto de ejemplo repite la frase sin espacio tras el punto."
+  ],
+  "codePath": "src/modules/M20List/M20List.jsx"
+}

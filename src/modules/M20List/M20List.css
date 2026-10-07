@@ -1,0 +1,13 @@
+/* M20-List — Figma 60186:9313. Solo tokens. Escritorio desde 1024 px. */
+.m20-list { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m20-list__title { padding: var(--layout-spacers-responsive-11) var(--layout-grids-wrapper-default) 0; }
+.m20-list__items { display: flex; flex-direction: column; margin: 0; padding: var(--layout-spacers-responsive-10) var(--layout-grids-wrapper-default); list-style: none; }
+/* Bordes compartidos: en Figma separación de -1 px */
+.m20-list__items > li + li { margin-top: -1px; }
+.m20-list__items .block-best-price { height: 100%; }
+
+@media (min-width: 1024px) {
+  .m20-list__items { flex-direction: row; padding: var(--layout-spacers-responsive-13) var(--layout-grids-wrapper-default); }
+  .m20-list__items > li { flex: 1; min-width: 0; }
+  .m20-list__items > li + li { margin-top: 0; margin-left: -1px; }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "60186:9313",
+ "name": "M20-List",
+ "type": "COMPONENT_SET",
+ "fp": "4326bb7e",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "-> Extra Item": "BOOLEAN",
+  "Titulo": "BOOLEAN",
+  "Property 1": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Property 1=Desktop"
+  },
+  {
+   "name": "Property 1=Mobile"
+  }
+ ],
+ "spec": "Desktop: Title (sin título ni enlace) pad Resp/11/80; Main-Description pad Resp/13/Wrapper-Default: 3 Block best price en fila (gap -1). Mobile: pad Resp/10/Wrapper-Default, bloques en columna (gap -1).",
+ "deps": [
+  "Title",
+  "Block best price"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "padding lateral 80 en el título, gaps 8/44/-1 sin variable"
+   }
+  ]
+ }
+}

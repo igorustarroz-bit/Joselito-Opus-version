@@ -358,5 +358,10 @@
     "name": "M19CardGrid",
     "path": "src/modules/M19CardGrid/M19CardGrid.jsx",
     "fp": "465facbf"
+  },
+  "60186:9313": {
+    "name": "M20List",
+    "path": "src/modules/M20List/M20List.jsx",
+    "fp": "4326bb7e"
   }
 }
