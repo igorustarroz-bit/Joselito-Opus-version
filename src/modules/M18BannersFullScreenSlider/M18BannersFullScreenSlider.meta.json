@@ -1,0 +1,196 @@
+{
+  "name": "M18BannersFullScreenSlider",
+  "kind": "module",
+  "title": "M18-Banners-Full Screen Slider",
+  "figma": {
+    "nodeId": "59895:79904",
+    "name": "M18-Banners-Full Screen Slider",
+    "fp": "59980372"
+  },
+  "description": "Slider a pantalla completa con una palabra o fecha gigante por diapositiva (producto, generación, añada) sobre imagen de fondo, con texto, etiquetas y enlace; y versión clara de perfil sensorial con contador.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ],
+    "Type": [
+      "Añadas 1",
+      "Origen 1",
+      "Origen 2",
+      "Añadas 2",
+      "Producto 1",
+      "Producto 2",
+      "Perfil Sensorial"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Producto1",
+      "title": "Device=Desktop, Type=Producto 1"
+    },
+    {
+      "story": "Producto2",
+      "title": "Device=Desktop, Type=Producto 2"
+    },
+    {
+      "story": "Origen1",
+      "title": "Device=Desktop, Type=Origen 1"
+    },
+    {
+      "story": "Origen2",
+      "title": "Device=Desktop, Type=Origen 2"
+    },
+    {
+      "story": "Anadas1",
+      "title": "Device=Desktop, Type=Añadas 1"
+    },
+    {
+      "story": "Anadas2",
+      "title": "Device=Desktop, Type=Añadas 2"
+    },
+    {
+      "story": "PerfilSensorial",
+      "title": "Device=Desktop, Type=Perfil Sensorial"
+    }
+  ],
+  "props": [
+    {
+      "name": "kind",
+      "figma": "Type",
+      "description": "`Producto`, `Origen`, `Añadas` o `Perfil Sensorial` (en Figma, Type 1 y 2 son dos pasos del mismo slider).",
+      "default": "Producto",
+      "control": "inline-radio"
+    },
+    {
+      "name": "slides",
+      "description": "Diapositivas: word, label, image, imageMobile, text, tags, link.",
+      "default": "según kind",
+      "control": "object"
+    },
+    {
+      "name": "start / index / onChange",
+      "description": "Diapositiva inicial, controlada y aviso de cambio.",
+      "default": "según kind",
+      "control": "number"
+    },
+    {
+      "name": "label / title",
+      "description": "Etiqueta (oscuro) o título (Perfil Sensorial) por defecto.",
+      "default": "según kind",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (oscuro; light-grey en Perfil Sensorial).",
+      "default": "según kind",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-accent-base",
+        "usage": "etiqueta y palabras"
+      },
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "velo"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo y degradado"
+      },
+      {
+        "token": "--texts-neutral-3",
+        "usage": "palabras (Perfil Sensorial)"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto (Perfil Sensorial)"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-8",
+        "usage": "entre palabras"
+      },
+      {
+        "token": "--layout-spacers-responsive-10 / 13",
+        "usage": "Perfil Sensorial"
+      },
+      {
+        "token": "--spacers-fixed-fx-5 / fx-6 / fx-2",
+        "usage": "separaciones"
+      },
+      {
+        "token": "--layout-cols-size-4cols-1-gutter",
+        "usage": "ancho del texto"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "dark-black-neutral",
+    "supported": [
+      "dark-black-neutral",
+      "light-grey"
+    ],
+    "notes": "Figma fija el modo en cada Type."
+  },
+  "anatomy": [
+    "Imagen de fondo + velo + degradado",
+    "Etiqueta Body/03",
+    "Fila de palabras Title/08 (Title/07 en Perfil Sensorial)",
+    "Body/03 · Tag XS · Button-Action-Link L",
+    "Perfil Sensorial: Title + Aspect Ratio 3:4 + contador"
+  ],
+  "behavior": [
+    "Las palabras vecinas son botones que llevan a su diapositiva; la fila se desplaza para centrar la actual (0,6 s).",
+    "Flechas izquierda/derecha y deslizar en táctil cambian de diapositiva.",
+    "El fondo funde entre imágenes (0,8 s); sin animación con reduced motion.",
+    "En móvil se usa la imagen vertical si existe."
+  ],
+  "content": [
+    {
+      "field": "Palabra",
+      "notes": "Una palabra o un año."
+    },
+    {
+      "field": "Texto",
+      "notes": "Dos o tres líneas."
+    }
+  ],
+  "a11y": [
+    "La palabra actual es h2 con aria-live.",
+    "El slider es enfocable y responde a las flechas."
+  ],
+  "related": [
+    "Tag",
+    "Button-Action-Link",
+    "Title",
+    "M17-Banners-Sectionbanner"
+  ],
+  "images": [
+    "a0a606d1546a7315ebae04c08328f02738f2f5c1",
+    "8bd8d10b181289cc0252cca72d15bbe5cb6dd4f8",
+    "1e170e936c1661a05c6d992532b11c0e04d08f4d",
+    "018ecf9ab5278dbf0486763aaf5cf9e9920a0c0d",
+    "de6fed704c4d8bafdd86f740c752aea3cb47f3de",
+    "0f56f1b18ae071995c32c96e7690b4cf467708e5",
+    "2a646817138cf9dcfe4e347fec21b9cc01507142",
+    "5a274b241348a2a7ef8754389672a81f21a15e80",
+    "f1abf8f15f7e920fa3002e23c5f35a69bfc41a2f"
+  ],
+  "placeholders": [
+    "Textos de relleno (lorem ipsum) en Origen y Añadas copiados de Figma."
+  ],
+  "notes": [
+    "Figma: velos negros al 20/30/40 % sin variable → Backgrounds/Overlay.",
+    "Figma: sin autolayout; se reinterpreta como columna centrada.",
+    "Figma: la etiqueta de Añadas 2 dice 'AÑADA Iv' (errata).",
+    "Figma: el enlace dice 'DESCUBRir' (mayúsculas mezcladas).",
+    "Figma: en Origen 2 aparece '1989' repetido en la fila de fechas."
+  ],
+  "codePath": "src/modules/M18BannersFullScreenSlider/M18BannersFullScreenSlider.jsx"
+}

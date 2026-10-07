@@ -348,5 +348,10 @@
     "name": "M17BannersSectionbanner",
     "path": "src/modules/M17BannersSectionbanner/M17BannersSectionbanner.jsx",
     "fp": "942e61cd"
+  },
+  "59895:79904": {
+    "name": "M18BannersFullScreenSlider",
+    "path": "src/modules/M18BannersFullScreenSlider/M18BannersFullScreenSlider.jsx",
+    "fp": "59980372"
   }
 }

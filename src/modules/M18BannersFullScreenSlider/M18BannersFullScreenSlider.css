@@ -1,0 +1,65 @@
+/* M18-Banners-Full Screen Slider — Figma 59895:79904. Solo tokens. Escritorio desde 1024 px. */
+.m18-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacers-fixed-fx-5);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding: var(--spacers-fixed-fx-13) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-11);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+  text-align: center;
+}
+.m18-slider:focus { outline: none; }
+.m18-slider:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m18-slider p, .m18-slider h2 { margin: 0; }
+.m18-slider ol, .m18-slider ul { margin: 0; padding: 0; list-style: none; }
+
+/* Fondo */
+.m18-slider__bg { position: absolute; inset: 0; }
+.m18-slider__bg picture { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; }
+.m18-slider__bg picture.is-active { opacity: 1; }
+.m18-slider__bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Velo: Figma negro 20-40 % sin variable → Backgrounds/Overlay + degradado inferior hasta el fondo */
+.m18-slider__shade { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, var(--backgrounds-base) 100%), var(--backgrounds-overlay); }
+
+.m18-slider__label, .m18-slider__words, .m18-slider__content { position: relative; z-index: 1; }
+.m18-slider__label { color: var(--texts-accent-base); }
+
+/* Palabras */
+.m18-slider__words { align-self: stretch; margin: 0 calc(-1 * var(--layout-grids-wrapper-default)); }
+.m18-slider__track { display: flex; gap: var(--layout-spacers-responsive-8); width: max-content; transition: transform 0.6s ease; }
+.m18-slider__track li { white-space: nowrap; }
+.m18-slider__word { margin: 0; padding: 0; border: 0; background: none; color: var(--texts-accent-base); font: inherit; cursor: pointer; }
+.m18-slider__track li:not(.is-current) .m18-slider__word { opacity: 0.3; }
+.m18-slider__word:focus { outline: none; }
+.m18-slider__word:focus-visible { outline: 1px solid var(--strokes-icons-base); }
+.m18-slider__track h2.m18-slider__word { font-weight: inherit; cursor: default; }
+
+/* Contenido */
+.m18-slider__content { display: flex; flex-direction: column; align-items: center; gap: var(--spacers-fixed-fx-6); max-width: var(--layout-cols-size-4cols); }
+.m18-slider__text { white-space: pre-line; }
+.m18-slider__tags { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacers-fixed-fx-2); }
+
+/* Perfil sensorial */
+.m18-slider--sensorial { justify-content: flex-start; gap: var(--layout-spacers-responsive-10); min-height: 0; padding: 0 0 var(--layout-spacers-responsive-13); }
+.m18-slider__heading { align-self: stretch; text-align: left; }
+.m18-slider__picture { width: var(--layout-cols-size-5cols); }
+.m18-slider--sensorial .m18-slider__words { margin: 0; }
+.m18-slider--sensorial .m18-slider__word { color: var(--texts-neutral-3); }
+.m18-slider--sensorial .m18-slider__track li:not(.is-current) .m18-slider__word { opacity: 1; }
+.m18-slider--sensorial .is-current .m18-slider__word { color: var(--texts-base); }
+.m18-slider--sensorial .m18-slider__text { color: var(--texts-neutral-1); }
+@media (prefers-reduced-motion: reduce) { .m18-slider__track, .m18-slider__bg picture { transition: none; } }
+
+@media (min-width: 1024px) {
+  .m18-slider { padding-bottom: var(--spacers-fixed-fx-12); }
+  .m18-slider__content { max-width: var(--layout-cols-size-4cols-1-gutter); gap: var(--spacers-fixed-fx-6); }
+  .m18-slider--sensorial { padding-bottom: var(--layout-spacers-responsive-13); }
+  .m18-slider__picture { width: var(--layout-cols-size-2cols); }
+}

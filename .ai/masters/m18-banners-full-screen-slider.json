@@ -1,0 +1,100 @@
+{
+ "id": "59895:79904",
+ "name": "M18-Banners-Full Screen Slider",
+ "type": "COMPONENT_SET",
+ "fp": "59980372",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ],
+  "Type": [
+   "Añadas 1",
+   "Origen 1",
+   "Origen 2",
+   "Añadas 2",
+   "Producto 1",
+   "Producto 2",
+   "Perfil Sensorial"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Type=Producto 1"
+  },
+  {
+   "name": "Device=Mobile, Type=Origen 1"
+  },
+  {
+   "name": "Device=Desktop, Type=Origen 1"
+  },
+  {
+   "name": "Device=Desktop, Type=Producto 1"
+  },
+  {
+   "name": "Device=Desktop, Type=Añadas 1"
+  },
+  {
+   "name": "Device=Mobile, Type=Añadas 1"
+  },
+  {
+   "name": "Device=Mobile, Type=Producto 2"
+  },
+  {
+   "name": "Device=Mobile, Type=Origen 2"
+  },
+  {
+   "name": "Device=Desktop, Type=Origen 2"
+  },
+  {
+   "name": "Device=Desktop, Type=Producto 2"
+  },
+  {
+   "name": "Device=Desktop, Type=Añadas 2"
+  },
+  {
+   "name": "Device=Mobile, Type=Añadas 2"
+  },
+  {
+   "name": "Device=Desktop, Type=Perfil Sensorial"
+  },
+  {
+   "name": "Device=Mobile, Type=Perfil Sensorial"
+  }
+ ],
+ "spec": "Sin autolayout (modo oscuro): Foto 1 / Foto 2 (imagen + velo #00000033-66) + degradado; Label Body/03 Accent-Base centrado; 'Fechas' fila de Title/08 Accent-Base gap Resp/8, vecinas al 30 %; Content 407 (Body/03, Tags XS gap 8, Button-Action-Link L; gap 24/40). Variantes 1 y 2 = dos pasos de la animación. Perfil Sensorial (Light - Grey): Title + Aspect Ratio 3:4 210 + palabras Title/07 Neutral 3 (actual Base) + Body/03 Neutral 1 + contador '1 - 4'; gaps Resp/10, pad-bottom Resp/13.",
+ "deps": [
+  "Tag",
+  "Button-Action-Link",
+  "Title",
+  "Aspect Ratio"
+ ],
+ "images": [
+  "a0a606d1546a7315ebae04c08328f02738f2f5c1",
+  "8bd8d10b181289cc0252cca72d15bbe5cb6dd4f8",
+  "1e170e936c1661a05c6d992532b11c0e04d08f4d",
+  "018ecf9ab5278dbf0486763aaf5cf9e9920a0c0d",
+  "de6fed704c4d8bafdd86f740c752aea3cb47f3de",
+  "0f56f1b18ae071995c32c96e7690b4cf467708e5",
+  "2a646817138cf9dcfe4e347fec21b9cc01507142",
+  "5a274b241348a2a7ef8754389672a81f21a15e80",
+  "f1abf8f15f7e920fa3002e23c5f35a69bfc41a2f"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "velos #00000033 / #0000004d / #00000066 sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 20/40/24/8 sin variable"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "variantes oscuras sin autolayout"
+   }
+  ]
+ }
+}

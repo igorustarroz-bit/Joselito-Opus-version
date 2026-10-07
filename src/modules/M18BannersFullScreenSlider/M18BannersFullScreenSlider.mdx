@@ -1,0 +1,144 @@
+{/* Generado por scripts/docs-generator.mjs desde M18BannersFullScreenSlider.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M18BannersFullScreenSlider.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M18-Banners-Full Screen Slider
+
+## Introducción
+
+Slider a pantalla completa con una palabra o fecha gigante por diapositiva (producto, generación, añada) sobre imagen de fondo, con texto, etiquetas y enlace; y versión clara de perfil sensorial con contador.
+
+
+Figma: `M18-Banners-Full Screen Slider` (`59895:79904`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Imagen de fondo + velo + degradado
+- Etiqueta Body/03
+- Fila de palabras Title/08 (Title/07 en Perfil Sensorial)
+- Body/03 · Tag XS · Button-Action-Link L
+- Perfil Sensorial: Title + Aspect Ratio 3:4 + contador
+
+## Subtemas
+
+Subtema por defecto: `dark-black-neutral`
+
+Subtemas soportados: `dark-black-neutral`, `light-grey`
+
+Figma fija el modo en cada Type.
+
+## Comportamiento
+
+- Las palabras vecinas son botones que llevan a su diapositiva; la fila se desplaza para centrar la actual (0,6 s).
+- Flechas izquierda/derecha y deslizar en táctil cambian de diapositiva.
+- El fondo funde entre imágenes (0,8 s); sin animación con reduced motion.
+- En móvil se usa la imagen vertical si existe.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Producto 1
+
+<Canvas of={Stories.Producto1} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Producto 2
+
+<Canvas of={Stories.Producto2} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Origen 1
+
+<Canvas of={Stories.Origen1} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Origen 2
+
+<Canvas of={Stories.Origen2} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Añadas 1
+
+<Canvas of={Stories.Anadas1} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Añadas 2
+
+<Canvas of={Stories.Anadas2} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Perfil Sensorial
+
+<Canvas of={Stories.PerfilSensorial} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-accent-base` | etiqueta y palabras |
+| color | `--backgrounds-overlay` | velo |
+| color | `--backgrounds-base` | fondo y degradado |
+| color | `--texts-neutral-3` | palabras (Perfil Sensorial) |
+| color | `--texts-neutral-1` | texto (Perfil Sensorial) |
+| spacing | `--layout-spacers-responsive-8` | entre palabras |
+| spacing | `--layout-spacers-responsive-10 / 13` | Perfil Sensorial |
+| spacing | `--spacers-fixed-fx-5 / fx-6 / fx-2` | separaciones |
+| spacing | `--layout-cols-size-4cols-1-gutter` | ancho del texto |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| kind | `Producto`, `Origen`, `Añadas` o `Perfil Sensorial` (en Figma, Type 1 y 2 son dos pasos del mismo slider). | Producto | inline-radio |
+| slides | Diapositivas: word, label, image, imageMobile, text, tags, link. | según kind | object |
+| start / index / onChange | Diapositiva inicial, controlada y aviso de cambio. | según kind | number |
+| label / title | Etiqueta (oscuro) o título (Perfil Sensorial) por defecto. | según kind | text |
+| theme | Subtema (oscuro; light-grey en Perfil Sensorial). | según kind | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Palabra |  | Una palabra o un año. |
+| Texto |  | Dos o tres líneas. |
+
+## Accesibilidad
+
+- La palabra actual es h2 con aria-live.
+- El slider es enfocable y responde a las flechas.
+
+## Componentes relacionados
+
+- Tag
+- Button-Action-Link
+- Title
+- M17-Banners-Sectionbanner
+
+## Pendientes / placeholders
+
+- undefined: undefined
