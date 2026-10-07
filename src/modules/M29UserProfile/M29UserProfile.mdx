@@ -1,0 +1,97 @@
+{/* Generado por scripts/docs-generator.mjs desde M29UserProfile.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M29UserProfile.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M29-User-Profile
+
+## Introducción
+
+Área de cliente: menú de secciones (pedidos, lista de deseos, direcciones…) y contenido de la sección actual; en móvil el menú es un desplegable.
+
+
+Figma: `M29-User-Profile` (`63559:53572`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- menu-item-list × N (escritorio) / M06-Navigation-Secondarymenu Dropdown (móvil)
+- Title/01 + Body/03 (slot)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Breakpoint a 1024 px.
+- La sección actual se marca con flecha y aria-current.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| spacing | `--spacers-fixed-fx-11 / fx-13 / fx-15` | padding escritorio |
+| spacing | `--layout-cols-size-gutter1col` | menú-contenido |
+| spacing | `--layout-cols-size-3cols / 8cols` | anchos |
+| spacing | `--spacers-fixed-fx-9 / fx-6` | padding móvil |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| menu | Secciones: text, href. | Pedidos, Lista de deseos, Direcciones, Datos personales, Cerrar sesión | object |
+| selected | Sección actual. | Pedidos | text |
+| children | Contenido de la sección (sustituye a title/text). | — |  |
+| title / text | Contenido de ejemplo. | Placeholder / lorem ipsum | text |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Contenido |  | Lo aporta cada sección vía children. |
+
+## Accesibilidad
+
+- nav con aria-label 'Mi cuenta'.
+- Título de sección como h1.
+
+## Componentes relacionados
+
+- menu-item-list
+- M06-Navigation-Secondarymenu
+
+## Pendientes / placeholders
+
+- undefined: undefined

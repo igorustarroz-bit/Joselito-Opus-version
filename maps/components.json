@@ -403,5 +403,10 @@
     "name": "M28CardsAccordion",
     "path": "src/modules/M28CardsAccordion/M28CardsAccordion.jsx",
     "fp": "2f5563eb"
+  },
+  "63559:53572": {
+    "name": "M29UserProfile",
+    "path": "src/modules/M29UserProfile/M29UserProfile.jsx",
+    "fp": "4c367882"
   }
 }

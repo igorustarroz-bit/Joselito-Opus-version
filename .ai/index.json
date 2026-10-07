@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:04:51.370Z",
+  "generatedAt": "2026-10-07T12:06:50.359Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1829,7 +1829,7 @@
       "builtFp": "e84dc044"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M29-User-Profile",
@@ -1843,7 +1843,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "module:m29-user-profile"
+      "key": "module:m29-user-profile",
+      "builtFp": "ec913ba9"
     },
     {
       "status": "todo",

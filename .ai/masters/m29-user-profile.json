@@ -1,0 +1,37 @@
+{
+ "id": "63559:53572",
+ "name": "M29-User-Profile",
+ "type": "COMPONENT_SET",
+ "fp": "4c367882",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Menu": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Desktop fila pad fx-11/fx-13/fx-15/fx-13 gap 141: Menu 296 (5 menu-item-list, gap fx-1, Pedidos seleccionado) · Slot 843 gap fx-10: Title/01 'Placeholder' + Body/03. Mobile: M06 Dropdown cerrado + Slot pad fx-9/fx-6 gap fx-7.",
+ "deps": [
+  "menu-item-list",
+  "M06-Navigation-Secondarymenu"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gap 141 sin variable"
+   }
+  ]
+ }
+}

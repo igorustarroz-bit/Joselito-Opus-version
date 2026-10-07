@@ -1,0 +1,14 @@
+/* M29-User-Profile — Figma 63559:53572. Solo tokens. Escritorio desde 1024 px. */
+.m29-profile { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m29-profile__menu { display: none; }
+.m29-profile__menu ul { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); margin: 0; padding: 0; list-style: none; }
+.m29-profile__content { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-7); padding: var(--spacers-fixed-fx-9) var(--spacers-fixed-fx-6); }
+.m29-profile__title { margin: 0; font-weight: inherit; }
+.m29-profile__text { margin: 0; }
+
+@media (min-width: 1024px) {
+  .m29-profile { display: flex; gap: var(--layout-cols-size-gutter1col); padding: var(--spacers-fixed-fx-11) var(--spacers-fixed-fx-13) var(--spacers-fixed-fx-15); }
+  .m29-profile__mobile-nav { display: none; }
+  .m29-profile__menu { display: block; flex: 0 0 auto; width: var(--layout-cols-size-3cols); }
+  .m29-profile__content { gap: var(--spacers-fixed-fx-10); width: var(--layout-cols-size-8cols); padding: 0; }
+}
