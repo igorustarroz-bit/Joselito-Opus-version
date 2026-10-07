@@ -129,19 +129,83 @@ export function SizeTokens({ match = /spac|gap|wrapper|gutter|padding|margin/, k
   );
 }
 
+/* ---------- Breakpoints y rejilla (formato Wix: tablas + vista de cada rejilla a escala) ---------- */
+const grids = meta.grids || [];
+const bps = (meta.breakpoints || []).map((b, i, all) => {
+  const min = b.min ?? b.width, next = all[i + 1];
+  const max = next ? (next.min ?? next.width) - 1 : null;
+  const g = grids.find((x) => x.width === b.width) || grids.filter((x) => x.width <= b.width).at(-1) || {};
+  return { ...b, min, max, columns: g.columns, gutter: g.gutter, margin: g.margin };
+});
+const MAXW = Math.max(...bps.map((b) => b.width), 1);
+
+function GridPreview({ b }) {
+  // Frame de Figma a escala (el más ancho ocupa el 100 %): márgenes + columnas + gutters reales.
+  const pct = (px) => `${(px / b.width) * 100}%`;
+  return (
+    <div className="hzd-grid__frame" style={{ width: `${(b.width / MAXW) * 100}%` }}>
+      <div className="hzd-grid__cols" style={{ paddingInline: pct(b.margin || 0), columnGap: pct(b.gutter || 0), gridTemplateColumns: `repeat(${b.columns || 1}, 1fr)` }}>
+        {Array.from({ length: b.columns || 1 }, (_, i) => <span key={i} />)}
+      </div>
+    </div>
+  );
+}
+
 export function Breakpoints() {
   return (
-    <table>
-      <thead><tr><th>Breakpoint</th><th>Figma (frame)</th><th>Rango</th><th>Columnas</th></tr></thead>
-      <tbody>
-        {(meta.breakpoints || []).map((b, i, all) => {
-          const g = (meta.grids || []).filter((x) => x.width <= b.width).at(-1);
-          const min = b.min ?? b.width, next = all[i + 1];
-          const range = next ? `${min} – ${(next.min ?? next.width) - 1} px` : `${min} px +`;
-          return <tr key={b.name}><td><code>{i === 0 ? '(base)' : `${b.name}:`}</code></td><td>{b.label}</td><td>{range}</td><td>{g ? g.columns : '—'}</td></tr>;
-        })}
-      </tbody>
-    </table>
+    <div className="hzd hzd-grid">
+      <h2 className="hzd-h hzd-tok__h2">Rangos</h2>
+      <p className="hzd-muted">Cada modo de Figma se diseña en un frame (390, 768, 1440…), pero el cambio ocurre al <strong>inicio de su rango</strong>: es donde empiezan los <code className="hzd-tok__alias">@media</code>.</p>
+      <div className="hzd-grid__ranges">
+        {bps.map((b) => (
+          <div key={b.name} className="hzd-grid__range">
+            <div className="hzd-grid__range-name">{b.label.split(' ')[0]}</div>
+            <div className="hzd-grid__range-px">{b.max != null ? `${b.min}–${b.max}` : `${b.min}+`} px</div>
+          </div>
+        ))}
+      </div>
+      <div className="hzd-table-wrap hzd-tok__table">
+        <table className="hzd-table">
+          <thead><tr><th>Breakpoint</th><th>Prefijo</th><th>Rango</th><th>Frame de Figma</th><th>Columnas</th><th>Gutter</th><th>Margen</th></tr></thead>
+          <tbody>
+            {bps.map((b, i) => (
+              <tr key={b.name}>
+                <td><strong>{b.label.split(' ')[0]}</strong></td>
+                <td><code className="hzd-tok__name">{i === 0 ? '(base)' : `${b.name}:`}</code></td>
+                <td className="hzd-tok__value">{b.max != null ? `${b.min} – ${b.max} px` : `${b.min} px +`}</td>
+                <td className="hzd-tok__value">{b.width} px</td>
+                <td className="hzd-tok__value">{b.columns ?? '—'}</td>
+                <td className="hzd-tok__value">{b.gutter != null ? `${b.gutter} px` : '—'}</td>
+                <td className="hzd-tok__value">{b.margin != null ? `${b.margin} px` : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="hzd-h hzd-tok__h2">Rejilla por breakpoint</h2>
+      <p className="hzd-muted">Cada frame de Figma a escala con sus márgenes, columnas y gutters. Entre breakpoints las columnas son elásticas: se recalculan con el ancho real.</p>
+      {bps.map((b) => (
+        <section key={b.name} className="hzd-grid__item">
+          <h4 className="hzd-tok__group-title">{b.label.split(' ')[0]} <span className="hzd-muted">{b.width} px · {b.columns} columnas · gutter {b.gutter} px · margen {b.margin} px</span></h4>
+          <GridPreview b={b} />
+        </section>
+      ))}
+
+      <h2 className="hzd-h hzd-tok__h2">En código</h2>
+      <div className="hzd-table-wrap hzd-tok__table">
+        <table className="hzd-table">
+          <thead><tr><th>Uso</th><th>Código</th></tr></thead>
+          <tbody>
+            <tr><td>Contenedor con márgenes y rejilla del sistema</td><td><code className="hzd-tok__name">{'<div class="wrapper grid-12">'}</code></td></tr>
+            <tr><td>Colocar una pieza en sus columnas</td><td><code className="hzd-tok__name">grid-column: 1 / 7</code></td></tr>
+            <tr><td>Ancho completo en móvil y tablet</td><td><code className="hzd-tok__name">grid-column: 1 / -1</code></td></tr>
+            <tr><td>Media query de un rango</td><td><code className="hzd-tok__name">{`@media (min-width: ${bps.find((b) => b.columns === 12)?.min ?? 960}px)`}</code></td></tr>
+            <tr><td>Variables</td><td><code className="hzd-tok__name">--grid-columns</code> <code className="hzd-tok__name">{meta.fluidGrid?.gutter || '--layout-grids-gutter'}</code> <code className="hzd-tok__name">{meta.fluidGrid?.wrapper || '--layout-grids-wrapper-default'}</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 

@@ -142,3 +142,13 @@
 .hzd-tok__swatch { display: inline-block; width: 48px; height: 48px; border-radius: 6px; border: 1px solid var(--hzd-line); overflow: hidden; vertical-align: middle;
   background: repeating-conic-gradient(#e6e9ec 0 25%, #fff 0 50%) 0 0 / 12px 12px; }
 .hzd-tok__swatch > span { display: block; width: 100%; height: 100%; }
+
+/* Breakpoints y rejilla */
+.hzd-grid__ranges { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin: 16px 0 24px; }
+.hzd-grid__range { border: 1px solid var(--hzd-line); border-radius: 8px; padding: 12px 14px; }
+.hzd-grid__range-name { font-size: 20px; font-weight: 300; line-height: 1.5; }
+.hzd-grid__range-px { font-family: var(--hzd-mono); font-size: 12px; color: var(--hzd-ink-2); }
+.hzd-grid__item { margin: 0 0 24px; }
+.hzd-grid__frame { max-width: 100%; border: 1px solid var(--hzd-line); border-radius: 6px; background: #fff; overflow: hidden; }
+.hzd-grid__cols { display: grid; height: 72px; box-sizing: border-box; }
+.hzd-grid__cols > span { background: rgb(255 0 80 / 0.12); box-shadow: inset 1px 0 rgb(255 0 80 / 0.35), inset -1px 0 rgb(255 0 80 / 0.35); }

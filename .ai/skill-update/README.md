@@ -44,15 +44,17 @@ Los únicos marcadores son `{{CLIENT}}` (Welcome.mdx; `theme.js` ya lo tenía). 
 - Barra lateral con las **sangrías de Wix Design System** (medidas en su Storybook): ítems desde x = 14 px
   (`#storybook-explorer-tree { padding-left: 2px }`), texto de hojas y desplegables a 36 px, hijos a 54 px
   (las hojas ya no reservan hueco para el icono oculto).
-- `storySort`: Foundations empieza por Colores › Tipografía › Espaciados y radios › Efectos › Breakpoints y rejilla.
+- `storySort`: Foundations empieza por Colores › Tipografía › Espaciados y radios › Efectos › Layout.
 - El decorador marca `data-layout="fullscreen|padded"` en `.hz-story`.
 
 ### Foundations en páginas separadas (`src/docs/*.mdx` + `TokenDocs.jsx`)
 - `Colors.mdx` → **Foundations/Colores** con el formato de Wix: buscador; **Semánticos** con pestañas por
   subtema y valor `--primitiva → #hex`; **Primitivas** por familia; tablas Nombre · Valor · Vista (muestra
   48 px, cuadros para transparencias). Lee `tokens.json` + `tokens.meta.json`.
-- `Typography.mdx`, `Spacing.mdx` (espaciados sin letter-spacing + radios), `Effects.mdx`, `Layout.mdx`
-  (breakpoints por rango + columnas).
+- `Typography.mdx`, `Spacing.mdx` (espaciados sin letter-spacing + radios), `Effects.mdx`.
+- `Layout.mdx` → **Foundations/Layout**: tarjetas de rango (XS 0–400 px…), tabla Breakpoint ·
+  Prefijo · Rango · Frame de Figma · Columnas · Gutter · Margen, cada rejilla dibujada a escala (márgenes,
+  columnas y gutters reales de `tokens.meta.json → grids`) y tabla «En código».
 
 ### Scripts (`scripts/`) — fallos de la versión nueva de la skill
 - `lib.mjs`: `meta` ya no es flag booleano → `figma-diff --meta <ruta>` volvía a fallar y con él el paso 4

@@ -22,7 +22,7 @@ const preview = {
     backgrounds: { disable: true },
     // Doc de cada elemento = <DocPage> con pestañas (src/docs/DocKit.jsx): sin TOC lateral de Storybook.
     docs: { toc: false, theme: hanzoTheme },
-    // Barra lateral, SIEMPRE: Welcome › Foundations (Colores, Tipografía, Espaciados y radios, Efectos, Breakpoints y rejilla) › Brand Assets › Components › Modules ›
+    // Barra lateral, SIEMPRE: Welcome › Foundations (Colores, Tipografía, Espaciados y radios, Efectos, Layout) › Brand Assets › Components › Modules ›
     // Templates › resto; dentro de cada grupo, alfabético; dentro de cada elemento: Doc, Default y las demás
     // stories en el orden del fichero. (Función autocontenida: Storybook la serializa, no uses nada de fuera.)
     options: {
@@ -32,7 +32,7 @@ const preview = {
         if (top(a) !== top(b)) return top(a) - top(b);
         if (a.title !== b.title) {
           // Foundations: primero las páginas de tokens en este orden, luego el resto alfabético
-          const FOUND = ['colores', 'tipografía', 'espaciados y radios', 'efectos', 'breakpoints y rejilla'];
+          const FOUND = ['colores', 'tipografía', 'espaciados y radios', 'efectos', 'layout'];
           const tok = (e) => { const i = FOUND.indexOf((e.title.split('/')[1] || '').trim().toLowerCase()); return i < 0 ? FOUND.length : i; };
           return tok(a) - tok(b) || a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' });
         }

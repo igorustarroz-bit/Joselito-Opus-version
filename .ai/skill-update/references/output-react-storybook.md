@@ -49,7 +49,7 @@ maps/components.json · maps/images.json
   Templates; alfabético dentro de cada grupo; dentro de cada elemento: Doc, Default y el resto
   (`storySort` en `.storybook/preview.jsx`). **Foundations** empieza por las páginas de tokens, una por
   grupo y en este orden: `Foundations/Colores` · `Foundations/Tipografía` · `Foundations/Espaciados y
-  radios` · `Foundations/Efectos` · `Foundations/Breakpoints y rejilla` (`src/docs/Colors.mdx`,
+  radios` · `Foundations/Efectos` · `Foundations/Layout` (`src/docs/Colors.mdx`,
   `Typography.mdx`, `Spacing.mdx`, `Effects.mdx`, `Layout.mdx`; los bloques salen de `TokenDocs.jsx`), y
   después los foundations construidos (Aspect Ratio…). Títulos: `Foundations/<Nombre>`,
   `Brand Assets/<Nombre>`, `Components/<Nombre>`, `Modules/<Mxx Nombre>`, `Templates/<Nombre>`, con el
