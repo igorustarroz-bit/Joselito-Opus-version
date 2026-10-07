@@ -1,0 +1,5 @@
+- dod-check: la búsqueda de placeholders (\bTODO\b, case-insensitive) da falsos positivos con la palabra española "todo" en comentarios.
+- docs-generator: no escapa < > ni { } de los textos del meta → MDX roto (usar mayúsculas tipo TIPO/ESTADO).
+- digest.js: la respuesta de másters grandes (Button-Icon 65 variantes) supera el límite de 20 kB del MCP → hace falta un modo compacto (spec.js en .ai/tmp).
+- Slug de digest: CamelCase se separa con guiones (NavButton → nav-button, InputQuantity → input-quantity, RowButtons → row-buttons).
+- dod-check: dos másters con el mismo slug (accordion / Accordion) chocan en .ai/masters → añadido override figma.digest en el meta (parche local en scripts/hanzo/dod-check.mjs).
