@@ -263,5 +263,10 @@
     "name": "ModalLightbox",
     "path": "src/components/ModalLightbox/ModalLightbox.jsx",
     "fp": "ff14248e"
+  },
+  "58182:4143": {
+    "name": "M01Navigation",
+    "path": "src/modules/M01Navigation/M01Navigation.jsx",
+    "fp": "41eee26b"
   }
 }

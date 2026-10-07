@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 74/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 75/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -101,7 +101,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 ## Fase 4 — Módulos (100% ancho, grid de columnas del sistema, por breakpoint)
 
-- [ ] M01-Navigation `58182:4143` — 6 variantes · usa: Brand Logo, NavButton <!-- k:module:m01-navigation -->
+- [x] M01-Navigation `58182:4143` — 6 variantes · usa: Brand Logo, NavButton <!-- k:module:m01-navigation -->
 - [ ] M02-Menu `58182:4350` — 5 variantes · 10 img · usa: Aspect Ratio, Brand Logo, Button-Action-Link, M01-Navigation, NavButton, menu-item-list… <!-- k:module:m02-menu -->
 - [ ] M06-Navigation-Secondarymenu `60634:75153` — 5 variantes · 1 img · usa: Aspect Ratio, M02-Menu, NavButton, menu-item-list, subnavigation-item <!-- k:module:m06-navigation-secondarymenu -->
 - [ ] M03-Navigation-Footer `58163:33397` — 2 variantes · 2 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Checkbox-Label, Checkboxes-Radios, Customer Award Ekomi… <!-- k:module:m03-navigation-footer -->

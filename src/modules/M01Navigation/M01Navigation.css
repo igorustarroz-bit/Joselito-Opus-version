@@ -1,0 +1,35 @@
+/* M01-Navigation — Figma 58182:4143. Solo tokens. Móvil 56 px · escritorio (≥ 1024 px) 72 px (FX-12, Figma 70). */
+.m01-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--spacers-fixed-fx-10);
+  padding: 0 var(--layout-grids-wrapper-nav);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m01-nav--dark, .m01-nav--grey { background: transparent; }
+.m01-nav__desktop { display: none; }
+.m01-nav__mobile { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.m01-nav__tools { display: flex; gap: var(--spacers-fixed-fx-3); }
+.m01-nav__icon {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--strokes-icons-base);
+  cursor: pointer;
+}
+.m01-nav__icon:focus { outline: none; }
+.m01-nav__icon:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+.m01-nav__logo { position: absolute; top: 50%; left: 50%; display: flex; transform: translate(-50%, -50%); color: var(--strokes-icons-base); }
+.m01-nav__list li { display: flex; }
+.m01-nav__list { display: flex; align-items: center; gap: var(--spacers-fixed-fx-5); margin: 0; padding: 0; list-style: none; }
+@media (min-width: 1024px) {
+  .m01-nav { min-height: var(--spacers-fixed-fx-12); padding: var(--spacers-fixed-fx-6) var(--layout-grids-wrapper-nav); }
+  .m01-nav__mobile { display: none; }
+  .m01-nav__desktop { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+}

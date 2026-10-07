@@ -1,0 +1,180 @@
+{
+  "name": "M01Navigation",
+  "kind": "module",
+  "title": "M01-Navigation",
+  "figma": {
+    "nodeId": "58182:4143",
+    "name": "M01-Navigation",
+    "fp": "41eee26b"
+  },
+  "description": "Cabecera principal del sitio: en escritorio, menú de secciones a la izquierda, logo centrado y herramientas (Buscar, Cuenta, Cesta) a la derecha; en móvil, hamburguesa, logo y buscar/cesta. Tres modos: Light (fondo blanco), Dark y Grey (transparente, para ir sobre un hero).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Mode": [
+      "Dark",
+      "Light",
+      "Grey"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopLight",
+      "title": "Device=Desktop, Mode=Light"
+    },
+    {
+      "story": "DesktopDark",
+      "title": "Device=Desktop, Mode=Dark"
+    },
+    {
+      "story": "DesktopGrey",
+      "title": "Device=Desktop, Mode=Grey"
+    },
+    {
+      "story": "MobileLight",
+      "title": "Device=Mobile, Mode=Light"
+    },
+    {
+      "story": "MobileDark",
+      "title": "Device=Mobile, Mode=Dark"
+    },
+    {
+      "story": "MobileGrey",
+      "title": "Device=Mobile, Mode=Grey"
+    }
+  ],
+  "props": [
+    {
+      "name": "mode",
+      "figma": "Mode",
+      "description": "`Light`, `Dark` o `Grey`: fija el subtema (Light/Grey → Light - White, Dark → Dark - Black - Neutral) y el fondo (Dark y Grey transparentes).",
+      "default": "Light",
+      "control": "inline-radio"
+    },
+    {
+      "name": "menu",
+      "figma": "Menu",
+      "description": "Elementos del menú (props de NavButton).",
+      "default": "Tienda, Origen, Excelencia, Compromisos, Experiencias",
+      "control": "object"
+    },
+    {
+      "name": "tools",
+      "figma": "Tools",
+      "description": "Herramientas (props de NavButton).",
+      "default": "Buscar (con icono), Cuenta, Cesta (3)",
+      "control": "object"
+    },
+    {
+      "name": "cartCount",
+      "description": "Artículos en la cesta (nombre accesible del icono en móvil).",
+      "default": "3",
+      "control": "number"
+    },
+    {
+      "name": "onMenu / onSearch / onCart",
+      "description": "Acciones de los iconos en móvil.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "homeHref",
+      "description": "Destino del logo.",
+      "default": "\"/\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fuerza otro subtema (por defecto lo marca mode).",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo (Light)"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "iconos y logo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-nav",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "padding vertical escritorio"
+      },
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "entre elementos del menú"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "entre iconos móvil"
+      },
+      {
+        "token": "--spacers-fixed-fx-10 / --spacers-fixed-fx-12",
+        "usage": "alto móvil 56 / escritorio 72"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-black-neutral"
+    ],
+    "notes": "El modo fija el subtema en la raíz (Figma tiene modos explícitos por variante)."
+  },
+  "anatomy": [
+    "Escritorio: lista de NavButton (menú) · Brand Logo horizontal centrado · lista de NavButton (herramientas)",
+    "Móvil: icono Equals · Brand Logo · iconos MagnifyingGlass y Bag (24 px)"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px (LG): por debajo, versión móvil.",
+    "El logo siempre queda centrado (absoluto).",
+    "Dark/Grey son transparentes: colocar sobre un hero."
+  ],
+  "content": [
+    {
+      "field": "Menú",
+      "notes": "5 secciones principales."
+    },
+    {
+      "field": "Herramientas",
+      "notes": "Buscar, Cuenta, Cesta con contador."
+    }
+  ],
+  "a11y": [
+    "header con nav aria-label \"Principal\".",
+    "Iconos de móvil como botones con nombre accesible.",
+    "El logo enlaza al inicio con aria-label."
+  ],
+  "related": [
+    "NavButton",
+    "Brand Logo",
+    "M02-Menu",
+    "M13-Hero-Homepagehero"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: padding vertical de 12,5 px en móvil sin variable → el alto de 56 px se fija con FX-10 y el contenido se centra.",
+    "Figma: la separación de 409 px entre menú y herramientas es space-between.",
+    "Figma: el modo Grey usa el subtema Light - White sin fondo (para fondos grises); no hay subtema gris explícito.",
+    "Figma: el logo es absoluto y se sale del alto de la barra (84 px de alto en una barra de 56/70): se centra igual que en Figma.",
+    "Figma: alto de escritorio 70 px sin variable → FX-12 (72 px), la variable más cercana.",
+    "Figma: logo horizontal a 126 px de ancho (fijo, sin variable)."
+  ],
+  "codePath": "src/modules/M01Navigation/M01Navigation.jsx"
+}

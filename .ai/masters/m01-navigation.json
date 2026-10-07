@@ -1,0 +1,76 @@
+{
+ "id": "58182:4143",
+ "name": "M01-Navigation",
+ "type": "COMPONENT_SET",
+ "fp": "41eee26b",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Menu": "SLOT",
+  "Tools": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Mode": [
+   "Dark",
+   "Light",
+   "Grey"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Mode=Light",
+   "modes": {
+    "Responsive": "XS - 390",
+    "Semantic-Color": "Light - White"
+   }
+  },
+  {
+   "name": "Device=Mobile, Mode=Dark",
+   "modes": {
+    "Semantic-Color": "Dark - Black - Neutral"
+   }
+  },
+  {
+   "name": "Device=Mobile, Mode=Grey",
+   "modes": {
+    "Semantic-Color": "Light - White"
+   }
+  },
+  {
+   "name": "Device=Desktop, Mode=Light",
+   "modes": {
+    "Semantic-Color": "Light - White"
+   }
+  },
+  {
+   "name": "Device=Desktop, Mode=Dark",
+   "modes": {
+    "Semantic-Color": "Dark - Black - Neutral"
+   }
+  },
+  {
+   "name": "Device=Desktop, Mode=Grey",
+   "modes": {
+    "Semantic-Color": "Light - White"
+   }
+  }
+ ],
+ "spec": "Desktop 1440×70 pad 24/Wrapper-Nav, fila space-between: Menu (5 NavButton gap 20) · Tools (Buscar con icono, Cuenta, Cesta (3); gap 20) · Brand Logo horizontal absoluto centrado. Mobile 390×56 pad 12,5/Wrapper-Nav: Equals 24 · Brand Logo · [MagnifyingGlass, Bag] gap 12. Light fill Backgrounds/Base; Dark/Grey sin fill.",
+ "deps": [
+  "Equals",
+  "MagnifyingGlass",
+  "Bag",
+  "Brand Logo",
+  "NavButton"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "padding 12,5 y gaps 12/20/409"
+   }
+  ]
+ }
+}
