@@ -1,0 +1,26 @@
+/* M25-Cards-Links — Figma 58182:4396. Solo tokens. Escritorio desde 1024 px. */
+.m25-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-spacers-responsive-13);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--layout-spacers-responsive-11) 0 var(--layout-spacers-responsive-13);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m25-links--many { gap: var(--layout-spacers-responsive-11); }
+.m25-links__title { padding: 0 var(--layout-grids-wrapper-default); }
+.m25-links__track { display: flex; gap: var(--layout-cols-size-gutter1col); margin: 0; padding: 0 var(--layout-grids-wrapper-default); list-style: none; }
+.m25-links__track > li { flex: 1; min-width: 0; }
+.m25-links--many .m25-links__track { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--layout-grids-wrapper-default); scrollbar-width: none; }
+.m25-links--many .m25-links__track::-webkit-scrollbar { display: none; }
+.m25-links--many .m25-links__track > li { flex: 0 0 auto; width: var(--layout-cols-size-5cols); scroll-snap-align: start; }
+.m25-links__track:focus { outline: none; }
+.m25-links__track:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m25-links .card-carrusel__title { white-space: pre-line; }
+
+@media (min-width: 1024px) {
+  .m25-links--many { gap: var(--layout-spacers-responsive-13); }
+  .m25-links--many .m25-links__track > li { width: var(--layout-cols-size-9cols); }
+}

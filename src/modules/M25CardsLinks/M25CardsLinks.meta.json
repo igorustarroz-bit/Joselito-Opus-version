@@ -1,0 +1,133 @@
+{
+  "name": "M25CardsLinks",
+  "kind": "module",
+  "title": "M25-Cards-Links",
+  "figma": {
+    "nodeId": "58182:4396",
+    "name": "M25-Cards-Links",
+    "fp": "37456eea"
+  },
+  "description": "Tarjetas de tiendas y restaurantes con cabecera: una sola a todo el ancho o varias en una fila desplazable.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "One",
+      "Many"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Many",
+      "title": "Device=Desktop, Type=Many"
+    },
+    {
+      "story": "One",
+      "title": "Device=Desktop, Type=One"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`One` o `Many`.",
+      "default": "Many",
+      "control": "inline-radio"
+    },
+    {
+      "name": "items",
+      "description": "Props de cada Card Carrusel (title, image, body, phone, address, href…).",
+      "default": "Joselitos Velázquez, Kiosko",
+      "control": "object"
+    },
+    {
+      "name": "showTitle",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "eyebrow / linkText / href",
+      "description": "Cabecera.",
+      "default": "Tiendas y restaurantes / Ver todos",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-11 / 13",
+        "usage": "paddings y separación cabecera-tarjetas"
+      },
+      {
+        "token": "--layout-cols-size-gutter1col",
+        "usage": "entre tarjetas"
+      },
+      {
+        "token": "--layout-cols-size-9cols / 5cols",
+        "usage": "ancho de tarjeta en Many"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title (enlace)",
+    "Card Carrusel × N"
+  ],
+  "behavior": [
+    "Many: desplazamiento horizontal con scroll-snap.",
+    "La tarjeta cambia de disposición según su propio ancho (container query)."
+  ],
+  "content": [
+    {
+      "field": "Tiendas",
+      "notes": "Nombre en dos líneas como mucho."
+    }
+  ],
+  "a11y": [
+    "Lista con nombre (el de la cabecera)."
+  ],
+  "related": [
+    "Card Carrusel",
+    "Title"
+  ],
+  "images": [
+    "05cee667c1bb5926a1c107d62a43e9070600cc15",
+    "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+  ],
+  "placeholders": [
+    "Textos de relleno (lorem ipsum) en las tarjetas."
+  ],
+  "notes": [
+    "Figma: la tarjeta 'Kiosko' usa la misma foto que el Toast.",
+    "Figma: sin espaciados sueltos (todo con variables)."
+  ],
+  "codePath": "src/modules/M25CardsLinks/M25CardsLinks.jsx"
+}

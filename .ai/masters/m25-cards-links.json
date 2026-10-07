@@ -1,0 +1,43 @@
+{
+ "id": "58182:4396",
+ "name": "M25-Cards-Links",
+ "type": "COMPONENT_SET",
+ "fp": "37456eea",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "One",
+   "Many"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Type=Many"
+  },
+  {
+   "name": "Device=Mobile, Type=One"
+  },
+  {
+   "name": "Device=Desktop, Type=Many"
+  },
+  {
+   "name": "Device=Desktop, Type=One"
+  }
+ ],
+ "spec": "Columna pad Resp/11/Wrapper-Default/Resp/13, gap Resp/13 (Resp/11 en Many móvil): Title (Link) · One: Card Carrusel a todo el ancho · Many: fila gap Cols gutter1col de Card Carrusel 9cols (escritorio) / 5cols (móvil).",
+ "deps": [
+  "Title",
+  "Card Carrusel"
+ ],
+ "images": [
+  "05cee667c1bb5926a1c107d62a43e9070600cc15",
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+ ],
+ "audit": {
+  "items": []
+ }
+}

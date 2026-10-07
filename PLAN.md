@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 98/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 99/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -125,7 +125,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M22-NavigationDirectLink `60603:144636` — 8 variantes · 2 img · usa: Aspect Ratio, Button-Icon, Tag <!-- k:module:m22-navigation-direct-link -->
 - [x] M23-Cards-Gallery `60054:12474` — 6 variantes · 16 img · usa: Aspect Ratio, Button-Icon, Card-Social-media, Title · autolayout 5/6 → análisis de geometría <!-- k:module:m23-cards-gallery -->
 - [x] M24-Cards-Productcarousel `60286:43172` — 2 variantes · 7 img · usa: Arrow, Aspect Ratio, Card Product, Title <!-- k:module:m24-cards-productcarousel -->
-- [ ] M25-Cards-Links `58182:4396` — 4 variantes · 6 img · usa: Aspect Ratio, Button, Button-Action-Link, Card Carrusel, Title <!-- k:module:m25-cards-links -->
+- [x] M25-Cards-Links `58182:4396` — 4 variantes · 6 img · usa: Aspect Ratio, Button, Button-Action-Link, Card Carrusel, Title <!-- k:module:m25-cards-links -->
 - [ ] M26-Buscador `61439:232705` — 6 variantes · usa: Brand Logo, Button, Button-Action-Link, Button-Icon <!-- k:module:m26-buscador -->
 - [ ] M27-Cards-Categories `58163:40311` — 2 variantes · 6 img · usa: Aspect Ratio, Button-Icon, Card Product <!-- k:module:m27-cards-categories -->
 - [ ] M28-Cards-Accordion `58512:9289` — 5 variantes · 13 img · usa: */Overrides/Stars/Star, Aspect Ratio, Button, Button-Action-Link, Tag, Title <!-- k:module:m28-cards-accordion -->
