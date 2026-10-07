@@ -1,0 +1,47 @@
+{
+ "id": "63309:351579",
+ "name": "Input-Phone",
+ "type": "COMPONENT_SET",
+ "fp": "0a89fa81",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Info": "BOOLEAN",
+  "Phone Text": "TEXT",
+  "Label": "TEXT",
+  "Info": "TEXT",
+  "Show Type Cursor": "BOOLEAN",
+  "Show Icon": "BOOLEAN",
+  "Instance": "INSTANCE_SWAP",
+  "Code": "TEXT",
+  "Input Label": "TEXT",
+  "Type": [
+   "Default"
+  ],
+  "Size": [
+   "Big",
+   "Small"
+  ],
+  "State": [
+   "Default",
+   "Hover",
+   "Focused",
+   "Filled",
+   "Error",
+   "Validated",
+   "Disabled"
+  ]
+ },
+ "spec": "Fila gap fx-2: campo prefijo (hug) '+34' + CaretDown 20; campo número (fill) 'Phone Num'; Info",
+ "deps": [
+  "CaretDown"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 4/8 px sin variable (como Input)"
+   }
+  ]
+ }
+}

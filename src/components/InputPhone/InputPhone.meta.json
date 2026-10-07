@@ -1,0 +1,195 @@
+{
+  "name": "InputPhone",
+  "kind": "component",
+  "title": "Input-Phone",
+  "figma": {
+    "nodeId": "63309:351579",
+    "name": "Input-Phone",
+    "fp": "0a89fa81"
+  },
+  "description": "Campo de teléfono con selector de prefijo (+34) y número con etiqueta flotante. Mismos estados y tamaños que Input.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Default"
+    ],
+    "Size": [
+      "Big",
+      "Small"
+    ],
+    "State": [
+      "Default",
+      "Hover",
+      "Focused",
+      "Filled",
+      "Error",
+      "Validated",
+      "Disabled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Big",
+      "title": "Size=Big (7 estados)"
+    },
+    {
+      "story": "Small",
+      "title": "Size=Small (7 estados)"
+    }
+  ],
+  "props": [
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "`Big` o `Small` (como Input).",
+      "default": "Big",
+      "control": "inline-radio"
+    },
+    {
+      "name": "value / defaultValue / onChange",
+      "figma": "Placeholder",
+      "description": "Valor (como Input).",
+      "default": "\"\"",
+      "control": "text"
+    },
+    {
+      "name": "info",
+      "figma": "Info",
+      "description": "Mensaje.",
+      "default": "\"Message\"",
+      "control": "text"
+    },
+    {
+      "name": "showInfo",
+      "figma": "Show Info",
+      "description": "Muestra el mensaje.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showTypeCursor",
+      "figma": "Show Type Cursor",
+      "description": "Cursor de escritura visible.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showIcon",
+      "figma": "Show Icon",
+      "description": "Icono a la derecha.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "icon",
+      "figma": "Instance",
+      "description": "Icono.",
+      "default": "calendar-blank",
+      "control": "text"
+    },
+    {
+      "name": "error / validated / disabled",
+      "description": "Estados (como Input).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "label",
+      "figma": "Label",
+      "description": "Etiqueta flotante del número.",
+      "default": "\"Teléfono\"",
+      "control": "text"
+    },
+    {
+      "name": "inputLabel",
+      "figma": "Input Label",
+      "description": "Etiqueta con el campo vacío.",
+      "default": "\"Phone Num\"",
+      "control": "text"
+    },
+    {
+      "name": "code / defaultCode / onCodeChange / codes",
+      "figma": "Code",
+      "description": "Prefijo (select nativo).",
+      "default": "\"+34\"",
+      "control": "text"
+    },
+    {
+      "name": "defaultValue",
+      "figma": "Phone Text",
+      "description": "Número inicial. En el máster: 686 123 456.",
+      "default": "\"\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--forms-ESTADO-*",
+        "usage": "fondo, borde, etiqueta, texto, mensaje (como Input)"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-forms-l|m-*",
+        "usage": "alto, padding, distancias (como Input)"
+      }
+    ],
+    "typography": [
+      "ts-forms-input-m-*",
+      "ts-forms-input-s-*"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Selector de prefijo (+34 + CaretDown 20)",
+    "Input del número",
+    "Mensaje"
+  ],
+  "behavior": [
+    "El prefijo es un select nativo con la apariencia de Figma; el número usa Input (tel)."
+  ],
+  "content": [],
+  "a11y": [
+    "Select con aria-label \"Prefijo\"; input tel."
+  ],
+  "related": [
+    "Input",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "field": "placeholder",
+      "notes": "No hay relleno: la palabra aparece por el atributo HTML placeholder heredado de Input."
+    }
+  ],
+  "notes": [
+    "Figma: la separación prefijo–número (Spacers Fixed/fx-2) y el resto de medidas siguen Input.",
+    "Figma: Size=Small usa Forms/L/Label-In-Distance en vez de Forms/M: se usa la de M como en Input."
+  ],
+  "codePath": "src/components/InputPhone/InputPhone.jsx"
+}

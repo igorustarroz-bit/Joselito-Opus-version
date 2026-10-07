@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:15:21.489Z",
+  "generatedAt": "2026-10-07T07:15:21.666Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1071,7 +1071,7 @@
       "key": "component:input-code"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Input-Phone",
@@ -1082,7 +1082,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "14/14",
-      "key": "component:input-phone"
+      "key": "component:input-phone",
+      "builtFp": "75323c0d"
     },
     {
       "status": "todo",

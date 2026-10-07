@@ -1,0 +1,98 @@
+{/* Generado por scripts/docs-generator.mjs desde InputPhone.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './InputPhone.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Input-Phone
+
+## Introducción
+
+Campo de teléfono con selector de prefijo (+34) y número con etiqueta flotante. Mismos estados y tamaños que Input.
+
+
+Figma: `Input-Phone` (`63309:351579`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Selector de prefijo (+34 + CaretDown 20)
+- Input del número
+- Mensaje
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- El prefijo es un select nativo con la apariencia de Figma; el número usa Input (tel).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=Big (7 estados)
+
+<Canvas of={Stories.Big} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Size=Small (7 estados)
+
+<Canvas of={Stories.Small} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--forms-ESTADO-*` | fondo, borde, etiqueta, texto, mensaje (como Input) |
+| spacing | `--layout-forms-l\|m-*` | alto, padding, distancias (como Input) |
+| typography | `ts-forms-input-m-*` |  |
+| typography | `ts-forms-input-s-*` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| size | `Big` o `Small` (como Input). | Big | inline-radio |
+| value / defaultValue / onChange | Valor (como Input). | "" | text |
+| info | Mensaje. | "Message" | text |
+| showInfo | Muestra el mensaje. | true | boolean |
+| showTypeCursor | Cursor de escritura visible. | true | boolean |
+| showIcon | Icono a la derecha. | false | boolean |
+| icon | Icono. | calendar-blank | text |
+| error / validated / disabled | Estados (como Input). | false | boolean |
+| state | Solo documentación. | — | select |
+| label | Etiqueta flotante del número. | "Teléfono" | text |
+| inputLabel | Etiqueta con el campo vacío. | "Phone Num" | text |
+| code / defaultCode / onCodeChange / codes | Prefijo (select nativo). | "+34" | text |
+| defaultValue | Número inicial. En el máster: 686 123 456. | "" | text |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Select con aria-label "Prefijo"; input tel.
+
+## Componentes relacionados
+
+- Input
+- Form
+
+## Pendientes / placeholders
+
+- undefined: undefined

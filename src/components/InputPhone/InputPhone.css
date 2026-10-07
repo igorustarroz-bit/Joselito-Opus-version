@@ -1,0 +1,8 @@
+/* Input-Phone — Figma 63309:351579. Solo tokens (reutiliza las variables de Input). */
+.input-phone { display: flex; flex-direction: column; gap: var(--in-msg-gap); width: 100%; }
+.input-phone__row { display: flex; gap: var(--spacers-fixed-fx-2); }
+.input-phone__code { flex: 0 0 auto; width: auto; }
+.input-phone__code .input__field { position: relative; cursor: pointer; }
+.input-phone__code select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }
+.input-phone__code:has(select:focus-visible) .input__field { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+.input-phone__num { flex: 1 1 auto; min-width: 0; }
