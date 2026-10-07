@@ -48,8 +48,8 @@
 
 /* Perfil sensorial */
 .m18-slider--sensorial { justify-content: flex-start; gap: var(--layout-spacers-responsive-10); min-height: 0; padding: 0 0 var(--layout-spacers-responsive-13); }
-.m18-slider__heading { align-self: stretch; text-align: left; }
-.m18-slider__picture { width: var(--layout-cols-size-5cols); }
+.m18-slider__heading { align-self: stretch; box-sizing: border-box; padding: var(--layout-spacers-responsive-11) var(--layout-grids-wrapper-default) 0; text-align: left; }
+.m18-slider__picture { width: var(--layout-cols-size-3cols); }
 .m18-slider--sensorial .m18-slider__words { margin: 0; }
 .m18-slider--sensorial .m18-slider__word { color: var(--texts-neutral-3); }
 .m18-slider--sensorial .m18-slider__track li:not(.is-current) .m18-slider__word { opacity: 1; }
