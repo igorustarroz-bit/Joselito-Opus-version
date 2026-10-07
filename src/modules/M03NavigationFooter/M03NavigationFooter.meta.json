@@ -1,0 +1,217 @@
+{
+  "name": "M03NavigationFooter",
+  "kind": "module",
+  "title": "M03-Navigation-Footer",
+  "figma": {
+    "nodeId": "58163:33397",
+    "name": "M03-Navigation-Footer",
+    "fp": "c856c2c7"
+  },
+  "description": "Pie de página: columnas de enlaces, bloque de newsletter con frase destacada y medio central, empresa, contacto y redes, barra legal con selector de idioma y sellos de certificación. En móvil, las secciones van en acordeón.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "quote",
+      "figma": "Quote",
+      "description": "Frase destacada del bloque newsletter (admite salto de línea).",
+      "default": "Historias, novedades y experiencias…",
+      "control": "text"
+    },
+    {
+      "name": "columns",
+      "description": "Columnas de escritorio: lista de grupos (title, links).",
+      "default": "Productos · Sobre Joselito · Restaurantes y Experiencias · Atención al cliente",
+      "control": "object"
+    },
+    {
+      "name": "company",
+      "description": "Grupo Empresa.",
+      "default": "Prensa, Equipo, Investigación",
+      "control": "object"
+    },
+    {
+      "name": "contact",
+      "description": "title, phone, email.",
+      "default": "(+ 34) 923 580 375 · store@joselito.com",
+      "control": "object"
+    },
+    {
+      "name": "social",
+      "description": "Redes: icon, label, href.",
+      "default": "X, Facebook, Instagram",
+      "control": "object"
+    },
+    {
+      "name": "legal",
+      "description": "Enlaces legales.",
+      "default": "Condiciones de compra, Uso del sitio, Calidad, Canal ético",
+      "control": "object"
+    },
+    {
+      "name": "newsletterLabel / privacyText",
+      "description": "Textos del formulario.",
+      "default": "Date de alta… / Acepto la política de privacidad",
+      "control": "text"
+    },
+    {
+      "name": "copyright",
+      "description": "Texto de copyright.",
+      "default": "© 1868 - 2026 Cárnicas Joselito S.A.",
+      "control": "text"
+    },
+    {
+      "name": "language / languages",
+      "description": "Idioma actual y opciones.",
+      "default": "English / Español, English",
+      "control": "object"
+    },
+    {
+      "name": "media",
+      "description": "Medio central: type (video o image) y src.",
+      "default": "vacío (ver placeholders)",
+      "control": "object"
+    },
+    {
+      "name": "onSubscribe",
+      "description": "Se llama con el email al enviar.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "títulos y legal"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "enlaces"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "copyright y sellos"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separadores"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "iconos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-nav",
+        "usage": "márgenes laterales escritorio"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales móvil"
+      },
+      {
+        "token": "--spacers-fixed-fx-13 / fx-16",
+        "usage": "padding vertical de las columnas"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "entre columnas, entre enlaces legales y sellos"
+      },
+      {
+        "token": "--spacers-fixed-fx-5 / fx-3",
+        "usage": "título-lista / entre enlaces"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "entre grupos"
+      },
+      {
+        "token": "--spacers-fixed-fx-8 / fx-14",
+        "usage": "padding newsletter / frase-formulario"
+      },
+      {
+        "token": "--layout-cols-size-*",
+        "usage": "anchos de bloques"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Solo versión clara en Figma."
+  },
+  "anatomy": [
+    "Escritorio: Links (4 columnas) · Newsletter (frase Title/03, InputAndButton, Checkbox-Label · medio 3:4 · Empresa, Contacto, redes) · barra legal (copyright, enlaces, idioma) · sellos (PEFC, Junta, Ekomi)",
+    "Móvil: 7 mobile_menu_accordion + redes · newsletter + medio + contacto · legal + copyright + idioma · sellos en columna"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px.",
+    "El selector de idioma es un select nativo.",
+    "El formulario llama a onSubscribe con el email."
+  ],
+  "content": [
+    {
+      "field": "Columnas",
+      "notes": "Títulos en mayúsculas; enlaces cortos."
+    },
+    {
+      "field": "Frase",
+      "notes": "Dos a cuatro líneas."
+    }
+  ],
+  "a11y": [
+    "footer como región; títulos de grupo como h2.",
+    "Redes con nombre accesible.",
+    "Select de idioma con etiqueta oculta."
+  ],
+  "related": [
+    "InputAndButton",
+    "Checkbox-Label",
+    "mobile_menu_accordion",
+    "Brand Logo"
+  ],
+  "images": [
+    "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49"
+  ],
+  "placeholders": [
+    "Medio central (hoja): en Figma es un relleno de vídeo que no se puede exportar; se deja el marco 3:4 vacío hasta recibir el vídeo (prop media)."
+  ],
+  "notes": [
+    "Figma: muchos espaciados sin variable (80, 136, 38, 104, 26, 10…) → variable más cercana: FX-13, FX-16, FX-8, FX-14, FX-6, FX-2.",
+    "Figma: iconos de redes a 28 px → tamaño M (24, empate con L → el menor).",
+    "Figma: el medio central está posicionado de forma absoluta (x 619); se coloca al 43 % del ancho.",
+    "Figma: los sellos se ven en gris en la captura y los SVG exportados están en color: confirmar tratamiento.",
+    "Figma: el máster de la lista de enlaces legales en móvil se llama 'Cookies Policy' en las capas."
+  ],
+  "codePath": "src/modules/M03NavigationFooter/M03NavigationFooter.jsx"
+}

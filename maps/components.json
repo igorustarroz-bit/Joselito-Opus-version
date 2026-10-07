@@ -278,5 +278,10 @@
     "name": "M06NavigationSecondarymenu",
     "path": "src/modules/M06NavigationSecondarymenu/M06NavigationSecondarymenu.jsx",
     "fp": "6c167193"
+  },
+  "58163:33397": {
+    "name": "M03NavigationFooter",
+    "path": "src/modules/M03NavigationFooter/M03NavigationFooter.jsx",
+    "fp": "c856c2c7"
   }
 }

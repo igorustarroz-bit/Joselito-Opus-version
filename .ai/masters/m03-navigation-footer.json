@@ -1,0 +1,51 @@
+{
+ "id": "58163:33397",
+ "name": "M03-Navigation-Footer",
+ "type": "COMPONENT_SET",
+ "fp": "c856c2c7",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Quote": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Desktop 1440×1247: Links (pad 80/Wrapper-Nav/136, 4 Col 316 gap 32; título Body/02 + lista Body/03 Neutral 1 gap 12, grupo gap 20, col3 dos grupos gap 40; borde inf.) · Newsletter (pad 38/Wrapper-Nav, space-between: Title/03 432 + form 336 [Body/03, InputAndButton Small, Checkbox-Label Small] gap 104; Aspect Ratio 3:4 201 con relleno VÍDEO absoluto @619,115; Contacto 296: EMPRESA, CONTACTO, RRSS 28 gap 20) · language (pad 20, copyright Body/02 Neutral 2, legal gap 32 centrado, selector English + CaretDown pad 10/16 gap 26) · Logos (pad 20, PEFC, Junta, Ekomi 56 + Body/02 Neutral 2 gap 8/24; gap 32). Mobile 390: 7 mobile_menu_accordion gap 4 + RRSS (pad 40/24, gap 40); Newsletter pad 32/24/24 gap 64; legal (gap 16) + copyright; acordeón ENGLISH; logos en columna gap 24 pad 24.",
+ "deps": [
+  "InputAndButton",
+  "Checkbox-Label",
+  "XLogo",
+  "FacebookLogo",
+  "InstagramLogo",
+  "Aspect Ratio",
+  "CaretDown",
+  "PEFC CERTIFICATE",
+  "Logo_junta_de_castilla_y_leon",
+  "Customer Award Ekomi",
+  "mobile_menu_accordion"
+ ],
+ "images": [
+  "6b4261c171e6fdd788a21aa8c8ba3ac941bcfb49"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "Links pad 80/136, gaps 32/20/12/40; Newsletter pad 38, gaps 104/24/40/20; language pad 20, gaps 26/32, Form pad 10/16 — sin variable"
+   },
+   {
+    "code": "VIDEO",
+    "msg": "Aspect Ratio con relleno de vídeo (no exportable)"
+   }
+  ]
+ }
+}

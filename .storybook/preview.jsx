@@ -32,7 +32,7 @@ const preview = {
       const fallback = context.parameters.defaultTheme || meta.defaultTheme;
       const effective = !toolbar || toolbar === 'auto' ? fallback : toolbar;
       return (
-        <div data-theme={effective || undefined} style={{ background: 'var(--backgrounds-base)', color: 'var(--texts-base)', padding: 16, minHeight: '100%' }}>
+        <div data-theme={effective || undefined} style={{ background: 'var(--backgrounds-base)', color: 'var(--texts-base)', padding: context.parameters.layout === 'fullscreen' ? 0 : 16, minHeight: '100%' }}>
           <Story />
         </div>
       );
