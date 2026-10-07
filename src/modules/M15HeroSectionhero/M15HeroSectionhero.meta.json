@@ -1,0 +1,223 @@
+{
+  "name": "M15HeroSectionhero",
+  "kind": "module",
+  "title": "M15-Hero-Sectionhero",
+  "figma": {
+    "nodeId": "58508:35830",
+    "name": "M15-Hero-Sectionhero",
+    "fp": "4af1a845"
+  },
+  "description": "Cabecera de sección con título centrado y medio opcional: pequeño y centrado en reposo, a pantalla completa en el estado de scroll; o solo texto.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Image": [
+      "Horizontal",
+      "Vertical",
+      "None - Producto",
+      "None"
+    ],
+    "Status": [
+      "Default",
+      "Scroll Down"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "HorizontalDefault",
+      "title": "Device=Desktop, Image=Horizontal, Status=Default"
+    },
+    {
+      "story": "HorizontalScrollDown",
+      "title": "Device=Desktop, Image=Horizontal, Status=Scroll Down"
+    },
+    {
+      "story": "VerticalDefault",
+      "title": "Device=Desktop, Image=Vertical, Status=Default"
+    },
+    {
+      "story": "VerticalScrollDown",
+      "title": "Device=Desktop, Image=Vertical, Status=Scroll Down"
+    },
+    {
+      "story": "NoneProducto",
+      "title": "Device=Desktop, Image=None - Producto, Status=Default"
+    },
+    {
+      "story": "None",
+      "title": "Device=Desktop, Image=None, Status=Default"
+    }
+  ],
+  "props": [
+    {
+      "name": "image",
+      "figma": "Image",
+      "description": "`Horizontal`, `Vertical`, `None - Producto` o `None`.",
+      "default": "Horizontal",
+      "control": "inline-radio"
+    },
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "`Default` o `Scroll Down` (medio a pantalla completa y subtema oscuro).",
+      "default": "Default",
+      "control": "inline-radio"
+    },
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título.",
+      "default": "Seis Generaciones de Excelencia",
+      "control": "text"
+    },
+    {
+      "name": "subtitle",
+      "figma": "Subtitle",
+      "description": "Etiqueta sobre el título.",
+      "default": "COLECCIONES JOSELITO",
+      "control": "text"
+    },
+    {
+      "name": "showLink",
+      "figma": "Link",
+      "description": "Muestra el enlace.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBody",
+      "figma": "Bodycopy",
+      "description": "Muestra un párrafo bajo el título.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showBack",
+      "figma": "Back",
+      "description": "Muestra el enlace de volver.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "linkText / href",
+      "description": "Enlace.",
+      "default": "DESCUBRIR",
+      "control": "text"
+    },
+    {
+      "name": "body",
+      "description": "Texto del párrafo.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "backText / backHref",
+      "description": "Volver.",
+      "default": "VOLVER",
+      "control": "text"
+    },
+    {
+      "name": "media",
+      "description": "Medio: type (video o image), src, poster.",
+      "default": "vacío (ver placeholders)",
+      "control": "object"
+    },
+    {
+      "name": "showNavigation",
+      "description": "Incluye la M01 (con medio).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (por defecto según status).",
+      "default": "light-white / dark-black-neutral",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo y fin del degradado"
+      },
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "velo"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiqueta"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6 / fx-7",
+        "usage": "títulos-enlace"
+      },
+      {
+        "token": "--layout-spacers-responsive-3",
+        "usage": "etiqueta-título"
+      },
+      {
+        "token": "--layout-spacers-responsive-12 / 16",
+        "usage": "padding vertical sin medio"
+      },
+      {
+        "token": "--spacers-fixed-fx-12",
+        "usage": "margen inferior con medio"
+      },
+      {
+        "token": "--layout-cols-size-8cols / 6cols / 3cols / 2cols",
+        "usage": "anchos"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-black-neutral"
+    ],
+    "notes": "Scroll Down usa el modo oscuro."
+  },
+  "anatomy": [
+    "M01-Navigation (con medio)",
+    "Aspect Ratio (medio)",
+    "CTA/03 · Title/04 · Button-Action-Link L"
+  ],
+  "behavior": [
+    "El estado Scroll Down se controla desde fuera (p. ej. al hacer scroll).",
+    "Con medio ocupa al menos el alto de pantalla."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Una línea en escritorio."
+    }
+  ],
+  "a11y": [
+    "Título como h1.",
+    "El vídeo de fondo no tiene controles; debe ser decorativo."
+  ],
+  "related": [
+    "M01-Navigation",
+    "M13-Hero-Homepagehero",
+    "M14-Hero-Sectionheader"
+  ],
+  "images": [],
+  "placeholders": [
+    "Medios: en Figma son rellenos de vídeo (dehesa aérea) que no se pueden exportar; marco vacío hasta recibirlos (prop media)."
+  ],
+  "notes": [
+    "Figma: velo #00000033 sin variable → Backgrounds/Overlay (30 %).",
+    "Figma: medio horizontal de 245 px → 3 columnas; vertical 2 columnas.",
+    "Figma: separaciones 48 y 8 sin variable → FX-9 y FX-2.",
+    "Figma: sin autolayout en las variantes con medio."
+  ],
+  "codePath": "src/modules/M15HeroSectionhero/M15HeroSectionhero.jsx"
+}

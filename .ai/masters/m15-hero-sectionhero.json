@@ -1,0 +1,89 @@
+{
+ "id": "58508:35830",
+ "name": "M15-Hero-Sectionhero",
+ "type": "COMPONENT_SET",
+ "fp": "4af1a845",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Link": "BOOLEAN",
+  "Bodycopy": "BOOLEAN",
+  "Back": "BOOLEAN",
+  "Title": "TEXT",
+  "Subtitle": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Image": [
+   "Horizontal",
+   "Vertical",
+   "None - Producto",
+   "None"
+  ],
+  "Status": [
+   "Default",
+   "Scroll Down"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Image=Vertical, Status=Scroll Down"
+  },
+  {
+   "name": "Device=Desktop, Image=Vertical, Status=Default"
+  },
+  {
+   "name": "Device=Desktop, Image=Horizontal, Status=Default"
+  },
+  {
+   "name": "Device=Desktop, Image=Horizontal, Status=Scroll Down"
+  },
+  {
+   "name": "Device=Desktop, Image=None - Producto, Status=Default"
+  },
+  {
+   "name": "Device=Desktop, Image=None, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Image=Horizontal, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Image=Vertical, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Image=Horizontal, Status=Scroll Down"
+  },
+  {
+   "name": "Device=Mobile, Image=Vertical, Status=Scroll Down"
+  },
+  {
+   "name": "Device=Mobile, Image=None - Producto, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Image=None, Status=Default"
+  }
+ ],
+ "spec": "Sin autolayout en las variantes con medio. Default (modo claro): M01 Light, medio 4:3 245 o 3:4 2cols centrado (relleno VÍDEO), contenido 8cols al pie (CTA/03 Neutral 2 + Title/04 gap Resp/3; Button-Action-Link L; gap fx-6). Scroll Down (modo oscuro): medio a sangre + velo #00000033 + degradado, M01 Dark. None - Producto: Title/04 6cols pad Resp/16/Resp/12. None: pad Resp/12/Wrapper-Default, contenido gap fx-7.",
+ "deps": [
+  "Aspect Ratio",
+  "Button-Action-Link",
+  "M01-Navigation"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "Velado #00000033"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 48 y 8"
+   },
+   {
+    "code": "VIDEO",
+    "msg": "medios con relleno de vídeo"
+   }
+  ]
+ }
+}

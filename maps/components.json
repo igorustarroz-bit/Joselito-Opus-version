@@ -333,5 +333,10 @@
     "name": "M14HeroSectionheader",
     "path": "src/modules/M14HeroSectionheader/M14HeroSectionheader.jsx",
     "fp": "c614caad"
+  },
+  "58508:35830": {
+    "name": "M15HeroSectionhero",
+    "path": "src/modules/M15HeroSectionhero/M15HeroSectionhero.jsx",
+    "fp": "4af1a845"
   }
 }

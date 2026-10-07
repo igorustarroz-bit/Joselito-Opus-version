@@ -1,0 +1,41 @@
+/* M15-Hero-Sectionhero — Figma 58508:35830. Solo tokens. Escritorio desde 1024 px. */
+.m15-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  padding: var(--layout-spacers-responsive-12) var(--layout-grids-wrapper-default);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+  text-align: center;
+}
+.m15-hero p, .m15-hero h1 { margin: 0; }
+.m15-hero__title { font-weight: inherit; }
+.m15-hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--spacers-fixed-fx-6); width: 100%; }
+.m15-hero__titles { display: flex; flex-direction: column; gap: var(--layout-spacers-responsive-3); }
+.m15-hero__subtitle, .m15-hero__body { color: var(--texts-neutral-2); }
+
+/* Con medio: alto de pantalla, cabecera arriba, medio centrado y texto al pie */
+.m15-hero.has-media { justify-content: flex-end; min-height: 100dvh; padding-top: 0; padding-bottom: var(--spacers-fixed-fx-12); }
+.m15-hero__nav { position: absolute; top: 0; left: 0; z-index: 2; }
+.m15-hero__stage { display: flex; flex: 1; align-items: center; justify-content: center; width: 100%; padding: var(--spacers-fixed-fx-13) 0 var(--spacers-fixed-fx-11); }
+.m15-hero--horizontal .m15-hero__media { width: var(--layout-cols-size-6cols); }
+.m15-hero--vertical .m15-hero__media { width: var(--layout-cols-size-5cols); }
+.m15-hero__bg.aspect-ratio { position: absolute; inset: 0; height: 100%; }
+.m15-hero__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, var(--backgrounds-base) 100%), var(--backgrounds-overlay);
+}
+.m15-hero--none-producto { padding: var(--layout-spacers-responsive-16) var(--layout-grids-wrapper-default) var(--layout-spacers-responsive-12); }
+
+@media (min-width: 1024px) {
+  .m15-hero__content { width: var(--layout-cols-size-8cols); }
+  .m15-hero--none .m15-hero__content { gap: var(--spacers-fixed-fx-7); }
+  .m15-hero--none-producto .m15-hero__content { width: var(--layout-cols-size-6cols); }
+  .m15-hero--horizontal .m15-hero__media { width: var(--layout-cols-size-3cols); }
+  .m15-hero--vertical .m15-hero__media { width: var(--layout-cols-size-2cols); }
+}

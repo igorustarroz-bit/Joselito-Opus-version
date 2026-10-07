@@ -1,0 +1,138 @@
+{/* Generado por scripts/docs-generator.mjs desde M15HeroSectionhero.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M15HeroSectionhero.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M15-Hero-Sectionhero
+
+## Introducción
+
+Cabecera de sección con título centrado y medio opcional: pequeño y centrado en reposo, a pantalla completa en el estado de scroll; o solo texto.
+
+
+Figma: `M15-Hero-Sectionhero` (`58508:35830`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- M01-Navigation (con medio)
+- Aspect Ratio (medio)
+- CTA/03 · Title/04 · Button-Action-Link L
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `dark-black-neutral`
+
+Scroll Down usa el modo oscuro.
+
+## Comportamiento
+
+- El estado Scroll Down se controla desde fuera (p. ej. al hacer scroll).
+- Con medio ocupa al menos el alto de pantalla.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=Horizontal, Status=Default
+
+<Canvas of={Stories.HorizontalDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=Horizontal, Status=Scroll Down
+
+<Canvas of={Stories.HorizontalScrollDown} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=Vertical, Status=Default
+
+<Canvas of={Stories.VerticalDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=Vertical, Status=Scroll Down
+
+<Canvas of={Stories.VerticalScrollDown} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=None - Producto, Status=Default
+
+<Canvas of={Stories.NoneProducto} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Image=None, Status=Default
+
+<Canvas of={Stories.None} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo y fin del degradado |
+| color | `--backgrounds-overlay` | velo |
+| color | `--texts-neutral-2` | etiqueta |
+| spacing | `--spacers-fixed-fx-6 / fx-7` | títulos-enlace |
+| spacing | `--layout-spacers-responsive-3` | etiqueta-título |
+| spacing | `--layout-spacers-responsive-12 / 16` | padding vertical sin medio |
+| spacing | `--spacers-fixed-fx-12` | margen inferior con medio |
+| spacing | `--layout-cols-size-8cols / 6cols / 3cols / 2cols` | anchos |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| image | `Horizontal`, `Vertical`, `None - Producto` o `None`. | Horizontal | inline-radio |
+| status | `Default` o `Scroll Down` (medio a pantalla completa y subtema oscuro). | Default | inline-radio |
+| title | Título. | Seis Generaciones de Excelencia | text |
+| subtitle | Etiqueta sobre el título. | COLECCIONES JOSELITO | text |
+| showLink | Muestra el enlace. | true | boolean |
+| showBody | Muestra un párrafo bajo el título. | false | boolean |
+| showBack | Muestra el enlace de volver. | false | boolean |
+| linkText / href | Enlace. | DESCUBRIR | text |
+| body | Texto del párrafo. | — | text |
+| backText / backHref | Volver. | VOLVER | text |
+| media | Medio: type (video o image), src, poster. | vacío (ver placeholders) | object |
+| showNavigation | Incluye la M01 (con medio). | true | boolean |
+| theme | Subtema (por defecto según status). | light-white / dark-black-neutral | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Título |  | Una línea en escritorio. |
+
+## Accesibilidad
+
+- Título como h1.
+- El vídeo de fondo no tiene controles; debe ser decorativo.
+
+## Componentes relacionados
+
+- M01-Navigation
+- M13-Hero-Homepagehero
+- M14-Hero-Sectionheader
+
+## Pendientes / placeholders
+
+- undefined: undefined
