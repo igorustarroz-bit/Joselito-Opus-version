@@ -1,0 +1,41 @@
+{
+ "id": "61387:153548",
+ "name": "M19-Card-Grid",
+ "type": "COMPONENT_SET",
+ "fp": "465facbf",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Título": "BOOLEAN",
+  "Slot": "SLOT",
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Desktop: Title (Link, sin título) pad Resp/11/Wrapper-Default; Slot wrap gap Wrapper-Default pad Resp/11/Wrapper-Default con 6 Card Product verticales 4cols-1Gutter (sin botón; Label AGOTADO en 2). Mobile: Card Product 6cols, gap vertical Resp/18.",
+ "deps": [
+  "Title",
+  "Card Product"
+ ],
+ "images": [
+  "8f66016394231a9f51a27dcb9f33d303962a67c3",
+  "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+  "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 24 en cabecera"
+   }
+  ]
+ }
+}

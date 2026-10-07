@@ -1,0 +1,126 @@
+{
+  "name": "M19CardGrid",
+  "kind": "module",
+  "title": "M19-Card-Grid",
+  "figma": {
+    "nodeId": "61387:153548",
+    "name": "M19-Card-Grid",
+    "fp": "465facbf"
+  },
+  "description": "Rejilla de productos con cabecera y enlace a ver todos: tres columnas en escritorio, una en móvil.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "showTitle",
+      "figma": "Título",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "items",
+      "figma": "Slot",
+      "description": "Productos: title, price, image, soldOut, label, href.",
+      "default": "6 productos",
+      "control": "object"
+    },
+    {
+      "name": "children",
+      "description": "Contenido propio de la rejilla (li).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "eyebrow / linkText / href",
+      "description": "Cabecera.",
+      "default": "Contenido de la caja / Ver todos",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-11",
+        "usage": "paddings verticales"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes y separación entre tarjetas"
+      },
+      {
+        "token": "--layout-spacers-responsive-18",
+        "usage": "separación vertical en móvil"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title (enlace)",
+    "Card Product vertical × N"
+  ],
+  "behavior": [
+    "1 columna en móvil, 2 desde 768 px y 3 desde 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Productos",
+      "notes": "Múltiplos de 3 en escritorio."
+    }
+  ],
+  "a11y": [
+    "Lista de productos; el nombre de cada tarjeta es el enlace."
+  ],
+  "related": [
+    "Card Product",
+    "Title",
+    "M24-Cards-Productcarousel"
+  ],
+  "images": [
+    "8f66016394231a9f51a27dcb9f33d303962a67c3",
+    "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+    "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: separación de 24 px en la cabecera sin variable → FX-6.",
+    "Figma: en móvil los nombres son 'Chorizo Etxebarri x Joselito' y en escritorio 'Jamón Gran Reserva' sobre fotos de chorizo.",
+    "Código: se añade un paso de 2 columnas en tablet (768 px)."
+  ],
+  "codePath": "src/modules/M19CardGrid/M19CardGrid.jsx"
+}

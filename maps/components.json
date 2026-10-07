@@ -353,5 +353,10 @@
     "name": "M18BannersFullScreenSlider",
     "path": "src/modules/M18BannersFullScreenSlider/M18BannersFullScreenSlider.jsx",
     "fp": "59980372"
+  },
+  "61387:153548": {
+    "name": "M19CardGrid",
+    "path": "src/modules/M19CardGrid/M19CardGrid.jsx",
+    "fp": "465facbf"
   }
 }

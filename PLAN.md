@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 92/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 93/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -119,7 +119,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M16-Hero-Productdetail `61365:56297` — 4 variantes · 11 img · usa: Add_to_list, Aspect Ratio, Brand Logo, Button, Button-Action-Link, Button-Icon… · autolayout 2/4 → análisis de geometría <!-- k:module:m16-hero-productdetail -->
 - [x] M17-Banners-Sectionbanner `58182:4380` — 8 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Tag · autolayout 6/8 → análisis de geometría <!-- k:module:m17-banners-sectionbanner -->
 - [x] M18-Banners-Full Screen Slider `59895:79904` — 14 variantes · 26 img · usa: Aspect Ratio, Button-Action-Link, Tag, Title · autolayout 2/14 → análisis de geometría <!-- k:module:m18-banners-full-screen-slider -->
-- [ ] M19-Card-Grid `61387:153548` — 2 variantes · 12 img · usa: Aspect Ratio, Card Product, Tag, Title <!-- k:module:m19-card-grid -->
+- [x] M19-Card-Grid `61387:153548` — 2 variantes · 12 img · usa: Aspect Ratio, Card Product, Tag, Title <!-- k:module:m19-card-grid -->
 - [ ] M20-List `60186:9313` — 2 variantes · usa: Arrow, Arrow Dropdown, Block best price, Main_Secondary-Link, Title <!-- k:module:m20-list -->
 - [ ] M21-List-Numbers `58627:43781` — 2 variantes · 2 img · usa: Aspect Ratio, Block Big Numbers, Title <!-- k:module:m21-list-numbers -->
 - [ ] M22-NavigationDirectLink `60603:144636` — 8 variantes · 2 img · usa: Aspect Ratio, Button-Icon, Tag <!-- k:module:m22-navigation-direct-link -->
