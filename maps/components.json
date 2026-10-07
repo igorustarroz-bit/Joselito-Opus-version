@@ -43,5 +43,10 @@
     "name": "Title",
     "path": "src/components/Title/Title.jsx",
     "fp": "f4382fd2"
+  },
+  "49722:19804": {
+    "name": "CheckboxRadio",
+    "path": "src/components/CheckboxRadio/CheckboxRadio.jsx",
+    "fp": "6a1e6bef"
   }
 }

@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 31/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 32/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -54,7 +54,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Tag `49723:4763` — 9 variantes <!-- k:component:tag -->
 - [x] Title `61387:120074` — 2 variantes <!-- k:component:title -->
 - [x] NavButton `59214:48916` — 5 variantes <!-- k:component:nav-button -->
-- [ ] Checkboxes-Radios `49722:19804` — 20 variantes · autolayout 11/20 → análisis de geometría <!-- k:component:checkboxes-radios -->
+- [x] Checkboxes-Radios `49722:19804` — 20 variantes · autolayout 11/20 → análisis de geometría <!-- k:component:checkboxes-radios -->
 - [ ] InputQuantity `63264:120792` <!-- k:component:input-quantity -->
 - [ ] Card Product `61276:118038` — 4 variantes · 4 img · usa: Aspect Ratio, Button, Button-Action-Link, InputQuantity, Tag <!-- k:component:card-product -->
 - [ ] listbox_Item_Dropdown `49650:11827` — 7 variantes · 7 img · usa: Aspect Ratio, Checkboxes-Radios <!-- k:component:listbox-item-dropdown -->

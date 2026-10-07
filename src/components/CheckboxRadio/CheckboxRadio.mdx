@@ -1,0 +1,119 @@
+{/* Generado por scripts/docs-generator.mjs desde CheckboxRadio.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './CheckboxRadio.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Checkboxes-Radios
+
+## Introducción
+
+Control de selección de 20 px: casilla cuadrada (`Checkboxes`, selección múltiple) o círculo (`Radio`, selección única). Es un `<input>` nativo con la apariencia de Figma, así que funciona con teclado y formularios. Se combina con texto en Checkbox-Label.
+
+
+Figma: `Checkboxes-Radios` (`49722:19804`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Input nativo invisible (área de clic de 20 px)
+- Caja cuadrada o circular con borde de 1 px
+- Check de 12 px (Checkboxes) o punto (Radio)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Usa tone=Dark sobre subtemas oscuros (como en Figma).
+
+## Comportamiento
+
+- Click o espacio alternan el estado (nativo).
+- Hover cambia el borde a acento (sin efecto si está desactivado).
+- Radio: selección única entre los del mismo `name`.
+- Foco con teclado: contorno de 1 px.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Checkboxes, Theme=Light (todos los estados)
+
+<Canvas of={Stories.CheckboxesLight} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Checkboxes, Theme=Dark (todos los estados)
+
+<Canvas of={Stories.CheckboxesDark} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Radio, Theme=Light (todos los estados)
+
+<Canvas of={Stories.RadioLight} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Type=Radio, Theme=Dark (todos los estados)
+
+<Canvas of={Stories.RadioDark} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Grupo de radios interactivo
+
+<Canvas of={Stories.GrupoRadios} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-1 / neutral-2` | borde sin marcar (Light / Dark), desactivado |
+| color | `--strokes-icons-accent-2 / accent-4` | borde en hover (Light / Dark) |
+| color | `--strokes-icons-accent-4, --backgrounds-accent-4` | casilla marcada (borde y check) |
+| color | `--backgrounds-accent-2 / accent-4` | radio marcado (Light / Dark) |
+| color | `--backgrounds-neutral-1` | check en Selected Disabled (Light) |
+| spacing | `--spacers-fixed-fx-5` | tamaño 20 px |
+| spacing | `--spacers-fixed-fx-3` | punto del radio (12 px) |
+| radius | `--layout-corners-none` |  |
+| radius | `--layout-corners-rounded` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Checkboxes` o `Radio`. | Checkboxes | inline-radio |
+| tone | `Light` o `Dark` (eje Theme de Figma: cambia los tonos de borde y acento). | Light | inline-radio |
+| checked | Marcado (controlado). También `defaultChecked` para no controlado. | — | boolean |
+| disabled | Desactivado. | false | boolean |
+| name / value / onChange | Atributos estándar del input (agrupar radios, enviar formularios). | — |  |
+| state | Solo documentación: fuerza un estado de Figma. | — | select |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Input nativo: teclado, foco y lectores de pantalla funcionan solos.
+- Necesita etiqueta: úsalo dentro de Checkbox-Label o con aria-label.
+
+## Componentes relacionados
+
+- Checkbox-Label
+- Checkbox-List
+- listbox_Item_Dropdown
+- Form

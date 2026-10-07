@@ -1,0 +1,6 @@
+{ "id": "49722:19804", "name": "Checkboxes-Radios", "type": "COMPONENT_SET", "page": "📦 Components", "fp": "6a1e6bef", "readAt": "2026-10-07T07:00:00Z",
+  "$note": "Digest compacto (.ai/tmp/spec.js).",
+  "props": { "State": ["Not Selected", "Hover", "Selected Disabled", "Selected", "Disabled"], "Type": ["Checkboxes", "Radio"], "Theme": ["Dark", "Light"] },
+  "spec": { "Checkboxes": "20×20, borde 1 px centrado; Check 12 px en 4,4 (fill override)", "Radio": "20×20 círculo borde 1 px interior; punto 10 px en 5,5",
+    "colores": { "NotSelected": "Neutral 1 (L) / Neutral 2 (D)", "Hover": "Accent-2 (L) / Accent-4 (D)", "Selected": "Checkbox Accent-4; Radio Accent-2 (L) / Accent-4 (D)", "SelectedDisabled": "Neutral 1 (check L: Backgrounds/Neutral-1)", "Disabled": "Neutral 2" } },
+  "deps": ["Check"], "images": [], "audit": { "errors": 0, "warns": 3, "items": [ { "code": "HARD_SPACING", "msg": "itemSpacing 8/10 sin variable (irrelevante)" }, { "code": "HARD_RADIUS", "msg": "radio 100 sin variable" }, { "code": "BUG", "msg": "Radio Disabled Light = instancia de Selected Disabled" } ] } }

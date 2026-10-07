@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:40:19.608Z",
+  "generatedAt": "2026-10-07T06:42:25.009Z",
   "output": "react-storybook",
   "items": [
     {
@@ -503,7 +503,7 @@
       "builtFp": "4aed5032"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Checkboxes-Radios",
@@ -514,7 +514,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "11/20",
-      "key": "component:checkboxes-radios"
+      "key": "component:checkboxes-radios",
+      "builtFp": "d387ac9e"
     },
     {
       "status": "todo",

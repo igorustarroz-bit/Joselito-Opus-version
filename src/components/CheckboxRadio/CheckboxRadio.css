@@ -1,0 +1,64 @@
+/* Checkboxes-Radios — Figma 49722:19804. Solo tokens. 20 × 20 px. Input nativo encima (opacidad 0)
+   para conservar teclado, foco y accesibilidad; la caja dibuja el estado con :checked/:disabled. */
+.check-radio {
+  --cr-stroke: var(--strokes-icons-neutral-1);
+  --cr-mark: var(--backgrounds-accent-4);
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--spacers-fixed-fx-5);
+  height: var(--spacers-fixed-fx-5);
+}
+.check-radio--dark { --cr-stroke: var(--strokes-icons-neutral-2); }
+.check-radio__input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.check-radio__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--cr-stroke);
+  border-radius: var(--layout-corners-none);
+  color: var(--cr-mark);
+  pointer-events: none;
+}
+.check-radio--radio .check-radio__box { border-radius: var(--layout-corners-rounded); }
+.check-radio__check,
+.check-radio__dot { visibility: hidden; }
+.check-radio__dot {
+  width: var(--spacers-fixed-fx-3);
+  height: var(--spacers-fixed-fx-3);
+  border-radius: var(--layout-corners-rounded);
+  background: var(--cr-mark);
+}
+
+/* Hover (Checkboxes: Accent-2 en Light / Accent-4 en Dark; Radio: Accent-2 / Accent-4) */
+.check-radio:hover:not(:has(:disabled)),
+.check-radio.is-hover { --cr-stroke: var(--strokes-icons-accent-2); }
+.check-radio--dark:hover:not(:has(:disabled)),
+.check-radio--dark.is-hover { --cr-stroke: var(--strokes-icons-accent-4); }
+
+/* Seleccionado */
+.check-radio__input:checked + .check-radio__box .check-radio__check,
+.check-radio__input:checked + .check-radio__box .check-radio__dot { visibility: visible; }
+.check-radio--checkbox:has(:checked) { --cr-stroke: var(--strokes-icons-accent-4); --cr-mark: var(--backgrounds-accent-4); }
+.check-radio--radio.check-radio--light:has(:checked) { --cr-stroke: var(--backgrounds-accent-2); --cr-mark: var(--backgrounds-accent-2); }
+.check-radio--radio.check-radio--dark:has(:checked) { --cr-stroke: var(--backgrounds-accent-4); --cr-mark: var(--backgrounds-accent-4); }
+
+/* Desactivado / seleccionado desactivado */
+.check-radio:has(:disabled) { --cr-stroke: var(--strokes-icons-neutral-2); }
+.check-radio:has(:disabled) .check-radio__input { cursor: not-allowed; }
+.check-radio:has(:checked:disabled) { --cr-stroke: var(--strokes-icons-neutral-1); --cr-mark: var(--strokes-icons-neutral-1); }
+.check-radio--checkbox.check-radio--light:has(:checked:disabled) { --cr-mark: var(--backgrounds-neutral-1); }
+
+/* Foco con teclado */
+.check-radio:has(:focus-visible) .check-radio__box { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }

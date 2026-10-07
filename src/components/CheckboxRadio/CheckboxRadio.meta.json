@@ -1,0 +1,182 @@
+{
+  "name": "CheckboxRadio",
+  "kind": "component",
+  "title": "Checkboxes-Radios",
+  "figma": {
+    "nodeId": "49722:19804",
+    "name": "Checkboxes-Radios",
+    "fp": "6a1e6bef"
+  },
+  "description": "Control de selección de 20 px: casilla cuadrada (`Checkboxes`, selección múltiple) o círculo (`Radio`, selección única). Es un `<input>` nativo con la apariencia de Figma, así que funciona con teclado y formularios. Se combina con texto en Checkbox-Label.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "State": [
+      "Not Selected",
+      "Hover",
+      "Selected Disabled",
+      "Selected",
+      "Disabled"
+    ],
+    "Type": [
+      "Checkboxes",
+      "Radio"
+    ],
+    "Theme": [
+      "Dark",
+      "Light"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "CheckboxesLight",
+      "title": "Type=Checkboxes, Theme=Light (todos los estados)"
+    },
+    {
+      "story": "CheckboxesDark",
+      "title": "Type=Checkboxes, Theme=Dark (todos los estados)"
+    },
+    {
+      "story": "RadioLight",
+      "title": "Type=Radio, Theme=Light (todos los estados)"
+    },
+    {
+      "story": "RadioDark",
+      "title": "Type=Radio, Theme=Dark (todos los estados)"
+    },
+    {
+      "story": "GrupoRadios",
+      "title": "Grupo de radios interactivo"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Checkboxes` o `Radio`.",
+      "default": "Checkboxes",
+      "control": "inline-radio"
+    },
+    {
+      "name": "tone",
+      "figma": "Theme",
+      "description": "`Light` o `Dark` (eje Theme de Figma: cambia los tonos de borde y acento).",
+      "default": "Light",
+      "control": "inline-radio"
+    },
+    {
+      "name": "checked",
+      "figma": "State=Selected",
+      "description": "Marcado (controlado). También `defaultChecked` para no controlado.",
+      "default": "—",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "State=Disabled",
+      "description": "Desactivado.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "name / value / onChange",
+      "description": "Atributos estándar del input (agrupar radios, enviar formularios).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación: fuerza un estado de Figma.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-1 / neutral-2",
+        "usage": "borde sin marcar (Light / Dark), desactivado"
+      },
+      {
+        "token": "--strokes-icons-accent-2 / accent-4",
+        "usage": "borde en hover (Light / Dark)"
+      },
+      {
+        "token": "--strokes-icons-accent-4, --backgrounds-accent-4",
+        "usage": "casilla marcada (borde y check)"
+      },
+      {
+        "token": "--backgrounds-accent-2 / accent-4",
+        "usage": "radio marcado (Light / Dark)"
+      },
+      {
+        "token": "--backgrounds-neutral-1",
+        "usage": "check en Selected Disabled (Light)"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "tamaño 20 px"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "punto del radio (12 px)"
+      }
+    ],
+    "radius": [
+      "--layout-corners-none",
+      "--layout-corners-rounded"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Usa tone=Dark sobre subtemas oscuros (como en Figma)."
+  },
+  "anatomy": [
+    "Input nativo invisible (área de clic de 20 px)",
+    "Caja cuadrada o circular con borde de 1 px",
+    "Check de 12 px (Checkboxes) o punto (Radio)"
+  ],
+  "behavior": [
+    "Click o espacio alternan el estado (nativo).",
+    "Hover cambia el borde a acento (sin efecto si está desactivado).",
+    "Radio: selección única entre los del mismo `name`.",
+    "Foco con teclado: contorno de 1 px."
+  ],
+  "content": [],
+  "a11y": [
+    "Input nativo: teclado, foco y lectores de pantalla funcionan solos.",
+    "Necesita etiqueta: úsalo dentro de Checkbox-Label o con aria-label."
+  ],
+  "related": [
+    "Checkbox-Label",
+    "Checkbox-List",
+    "listbox_Item_Dropdown",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el punto del radio mide 10 px sin variable → se usa Spacers Fixed/fx-3 (12 px). Avisar a diseño.",
+    "Figma: Radio Disabled Light es una instancia de 'Selected Disabled' (se ve marcado): parece un error; en código Disabled es sin marcar.",
+    "Figma: Checkboxes Selected Disabled Light pinta el check con Backgrounds/Neutral-1 (casi blanco): se replica, pero el check apenas se ve. Avisar a diseño.",
+    "Figma: la casilla marcada en Light usa Accent-4 (rosa claro) y el radio Accent-2: se replica tal cual.",
+    "Figma: el eje Theme (Light/Dark) duplica lo que harían los subtemas; se expone como prop `tone`.",
+    "Figma: no hay estado Focus; se añade contorno con teclado."
+  ],
+  "codePath": "src/components/CheckboxRadio/CheckboxRadio.jsx"
+}
