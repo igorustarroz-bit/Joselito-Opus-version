@@ -1,0 +1,74 @@
+{
+ "id": "60054:12474",
+ "name": "M23-Cards-Gallery",
+ "type": "COMPONENT_SET",
+ "fp": "7a5da553",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Instagram Link": "BOOLEAN",
+  "Title": "BOOLEAN",
+  "Slot 1": "SLOT",
+  "Slot 2": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Default",
+   "Carrousel",
+   "Carrousel - No text"
+  ],
+  "Leyenda": [
+   "Yes",
+   "No"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=Carrousel, Leyenda=Yes"
+  },
+  {
+   "name": "Device=Desktop, Type=Carrousel - No text, Leyenda=No"
+  },
+  {
+   "name": "Device=Mobile, Type=Carrousel, Leyenda=Yes"
+  },
+  {
+   "name": "Device=Mobile, Type=Carrousel - No text, Leyenda=No"
+  },
+  {
+   "name": "Device=Desktop, Type=Default, Leyenda=Yes"
+  },
+  {
+   "name": "Device=Mobile, Type=Default, Leyenda=Yes"
+  }
+ ],
+ "spec": "Carrousel: Title (Link) pad 64/Wrapper-Default; galería pad 112/0/132, Slot 1 fila gap Cols gutter1col pad 0/80: Card-Social-media vertical 2cols / horizontal 3cols alternas (alineadas abajo); 'SÍGUENOS' Labels/02 Neutral 2 + '@JAMONJOSELITO' Labels/02 Base, pad-bottom 64. Default (visor): Slot 2 [Aspect Ratio 3:4 4cols al 30 % · 3:2 6cols · 3:4 4cols al 30 %] gap 252; Button-Icon Terciary S (cierre) arriba; flechas Primary M a los lados; leyenda Labels/01 Neutral 2 + contador '1 / 12'.",
+ "deps": [
+  "Title",
+  "Card-Social-media",
+  "Aspect Ratio",
+  "Button-Icon"
+ ],
+ "images": [
+  "901a16aef738b23df47b9245acf62088e41a8a88",
+  "8960fc3506cbdc7b612e8197a2ef3aea13c99d60",
+  "f5eb552e2ca5a345e7607e6b35446c6be7419347",
+  "34012dddb67c1b79d880c003617312a619f87d89",
+  "b6732f31eb7aed43b04b8b535ce53b66729c382f",
+  "d8ecc788ed606aeca65175de5f846fac5d1bb068",
+  "7032b9e7ee4c4fa3bf8122ebb622cf01c12a8129"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings 64/112/132/80/40/88 y gaps 16/131/252/80 sin variable"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "visor sin autolayout"
+   }
+  ]
+ }
+}

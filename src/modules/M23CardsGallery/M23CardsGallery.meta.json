@@ -1,0 +1,186 @@
+{
+  "name": "M23CardsGallery",
+  "kind": "module",
+  "title": "M23-Cards-Gallery",
+  "figma": {
+    "nodeId": "60054:12474",
+    "name": "M23-Cards-Gallery",
+    "fp": "7a5da553"
+  },
+  "description": "Galería de imágenes de redes sociales en carrusel horizontal, con cabecera, enlace a la cuenta y visor a pantalla completa al pulsar una imagen.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Default",
+      "Carrousel",
+      "Carrousel - No text"
+    ],
+    "Leyenda": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Carrousel",
+      "title": "Device=Desktop, Type=Carrousel, Leyenda=Yes"
+    },
+    {
+      "story": "CarrouselSinTexto",
+      "title": "Device=Desktop, Type=Carrousel - No text, Leyenda=No"
+    },
+    {
+      "story": "Visor",
+      "title": "Device=Desktop, Type=Default, Leyenda=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Carrousel`, `Carrousel - No text` (sin etiquetas, Leyenda=No) o `Default` (visor).",
+      "default": "Carrousel",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showTitle",
+      "figma": "Title",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showInstagram",
+      "figma": "Instagram Link",
+      "description": "Muestra 'Síguenos @cuenta'.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "items",
+      "figma": "Slot 1",
+      "description": "Imágenes: image, tag, vertical, alt, caption (también alimentan el visor, Slot 2).",
+      "default": "7 imágenes",
+      "control": "object"
+    },
+    {
+      "name": "items (visor)",
+      "figma": "Slot 2",
+      "description": "El visor usa las mismas imágenes.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "eyebrow / linkText / href",
+      "description": "Cabecera.",
+      "default": "La dehesa en imágenes / Ver todos",
+      "control": "text"
+    },
+    {
+      "name": "followLabel / account / accountHref",
+      "description": "Enlace a la cuenta.",
+      "default": "SÍGUENOS / @JAMONJOSELITO",
+      "control": "text"
+    },
+    {
+      "name": "openOnClick",
+      "description": "Las tarjetas abren el visor.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo y visor"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "Síguenos y leyenda"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-cols-size-gutter1col",
+        "usage": "entre tarjetas"
+      },
+      {
+        "token": "--layout-cols-size-2cols / 3cols / 4cols / 6cols",
+        "usage": "anchos de tarjetas e imágenes del visor"
+      },
+      {
+        "token": "--spacers-fixed-fx-15 / fx-16 / fx-11",
+        "usage": "paddings verticales"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "El visor usa Light - White."
+  },
+  "anatomy": [
+    "Title (enlace)",
+    "Card-Social-media × N en fila desplazable",
+    "Síguenos + cuenta",
+    "Visor: Button-Icon (cierre), 3 × Aspect Ratio, 2 × Button-Icon (flechas), leyenda y contador"
+  ],
+  "behavior": [
+    "El carrusel se desplaza con scroll horizontal (scroll-snap).",
+    "Pulsar o Enter en una tarjeta abre el visor; Esc lo cierra y las flechas del teclado cambian de imagen.",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Etiqueta",
+      "notes": "@usuario de la publicación."
+    }
+  ],
+  "a11y": [
+    "Las tarjetas son botones con nombre.",
+    "El visor es un diálogo modal con contador anunciado."
+  ],
+  "related": [
+    "Card-Social-media",
+    "Title",
+    "Button-Icon",
+    "Modal-Lightbox"
+  ],
+  "images": [
+    "901a16aef738b23df47b9245acf62088e41a8a88",
+    "8960fc3506cbdc7b612e8197a2ef3aea13c99d60",
+    "f5eb552e2ca5a345e7607e6b35446c6be7419347",
+    "34012dddb67c1b79d880c003617312a619f87d89",
+    "b6732f31eb7aed43b04b8b535ce53b66729c382f",
+    "d8ecc788ed606aeca65175de5f846fac5d1bb068",
+    "7032b9e7ee4c4fa3bf8122ebb622cf01c12a8129"
+  ],
+  "placeholders": [
+    "Leyenda del visor de relleno ('EGESTAS NULLA TORTOT PULVINAR')."
+  ],
+  "notes": [
+    "Figma: paddings 64/112/132/40/88 y gaps 16/131/252 sin variable → FX-11/FX-15/FX-16/FX-9/FX-13/FX-4; entre imágenes del visor 2 columnas.",
+    "Figma: el contador dice '1 / 12' con 3 imágenes en el visor y 5 en el carrusel.",
+    "Figma: la quinta tarjeta del carrusel no tiene imagen propia.",
+    "Código: en móvil las tarjetas usan 4 y 5 columnas para que se vean dos a la vez."
+  ],
+  "codePath": "src/modules/M23CardsGallery/M23CardsGallery.jsx"
+}

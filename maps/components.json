@@ -373,5 +373,10 @@
     "name": "M22NavigationDirectLink",
     "path": "src/modules/M22NavigationDirectLink/M22NavigationDirectLink.jsx",
     "fp": "a5b4b2d3"
+  },
+  "60054:12474": {
+    "name": "M23CardsGallery",
+    "path": "src/modules/M23CardsGallery/M23CardsGallery.jsx",
+    "fp": "7a5da553"
   }
 }

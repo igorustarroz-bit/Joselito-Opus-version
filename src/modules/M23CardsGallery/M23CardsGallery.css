@@ -1,0 +1,66 @@
+/* M23-Cards-Gallery — Figma 60054:12474. Solo tokens. Escritorio desde 1024 px. */
+.m23-gallery { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m23-gallery__title { padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-default) 0; }
+.m23-gallery__track {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--layout-cols-size-gutter1col);
+  margin: 0;
+  padding: var(--spacers-fixed-fx-11) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-14);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--layout-grids-wrapper-default);
+  scrollbar-width: none;
+  list-style: none;
+}
+.m23-gallery__track::-webkit-scrollbar { display: none; }
+.m23-gallery--no-text .m23-gallery__track { align-items: flex-start; }
+.m23-gallery__track > li { flex: 0 0 auto; scroll-snap-align: start; }
+.m23-gallery__track > li.is-vertical { width: var(--layout-cols-size-4cols); }
+.m23-gallery__track > li.is-horizontal { width: var(--layout-cols-size-5cols); }
+.m23-gallery__track [role='button'] { cursor: zoom-in; }
+.m23-gallery__track [role='button']:focus { outline: none; }
+.m23-gallery__track [role='button']:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+.m23-gallery__follow { display: flex; flex-direction: column; align-items: center; margin: 0; padding-bottom: var(--spacers-fixed-fx-11); text-align: center; }
+.m23-gallery__follow span { color: var(--texts-neutral-2); }
+.m23-gallery__follow a { color: var(--texts-base); text-decoration: none; }
+.m23-gallery__follow a:focus { outline: none; }
+.m23-gallery__follow a:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
+
+/* Visor */
+.m23-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacers-fixed-fx-9);
+  box-sizing: border-box;
+  padding: var(--spacers-fixed-fx-4) 0 var(--spacers-fixed-fx-4);
+  overflow: hidden;
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m23-lightbox.is-inline { position: relative; inset: auto; z-index: auto; min-height: 100dvh; }
+.m23-lightbox__stage { display: flex; align-items: center; justify-content: center; gap: var(--layout-cols-size-gutter1col); box-sizing: border-box; width: 100%; padding: 0 var(--layout-grids-wrapper-default); }
+.m23-lightbox__current { flex: 0 0 auto; width: 100%; }
+.m23-lightbox__side { display: none; flex: 0 0 auto; opacity: 0.3; }
+.m23-lightbox__arrows { display: flex; justify-content: space-between; width: 100%; box-sizing: border-box; padding: 0 var(--layout-grids-wrapper-default); order: 4; }
+.m23-lightbox__caption { display: flex; flex-direction: column; align-items: center; gap: var(--spacers-fixed-fx-1); margin: 0; text-align: center; }
+.m23-lightbox__caption span:first-child { color: var(--texts-neutral-2); }
+
+@media (min-width: 1024px) {
+  .m23-gallery__title { padding-top: var(--spacers-fixed-fx-11); }
+  .m23-gallery__track { padding: var(--spacers-fixed-fx-15) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-16); }
+  .m23-gallery__track > li.is-vertical { width: var(--layout-cols-size-2cols); }
+  .m23-gallery__track > li.is-horizontal { width: var(--layout-cols-size-3cols); }
+  .m23-gallery__follow { padding-bottom: var(--spacers-fixed-fx-11); }
+  .m23-lightbox { padding: var(--spacers-fixed-fx-9) 0; }
+  .m23-lightbox__stage { gap: var(--layout-cols-size-2cols); padding: 0; }
+  .m23-lightbox__current { width: var(--layout-cols-size-6cols); }
+  .m23-lightbox__side { display: block; width: var(--layout-cols-size-4cols); }
+  .m23-lightbox__arrows { position: absolute; top: 50%; left: 0; padding: 0 var(--layout-grids-wrapper-default); transform: translateY(-50%); pointer-events: none; }
+  .m23-lightbox__arrows > * { pointer-events: auto; }
+}
