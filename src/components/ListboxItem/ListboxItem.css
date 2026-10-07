@@ -1,0 +1,30 @@
+/* listbox_Item_Dropdown — Figma 49650:11827. Solo tokens. Fila de 56 px: padding vertical FX-4,
+   separación contenido–control FX-5; contenido con separación FX-4 (16 px sin variable en Figma). */
+.listbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-5);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacers-fixed-fx-4) 0;
+  color: var(--texts-base);
+  cursor: pointer;
+}
+div.listbox-item { cursor: default; }
+.listbox-item:hover .check-radio:not(:has(:disabled)) { --cr-stroke: var(--strokes-icons-accent-2); }
+.listbox-item__content { display: flex; align-items: center; gap: var(--spacers-fixed-fx-4); flex: 1 1 auto; min-width: 0; }
+.listbox-item__img { flex: 0 0 auto; width: calc(var(--spacers-fixed-fx-9) + var(--spacers-fixed-fx-2)); }
+.listbox-item__texts { display: flex; flex-direction: column; min-width: 0; }
+.listbox-item__label { color: var(--texts-base); }
+.listbox-item__desc { color: var(--texts-neutral-2); }
+.listbox-item__delete {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--strokes-icons-base);
+  cursor: pointer;
+}
+.listbox-item__delete:focus { outline: none; }
+.listbox-item__delete:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }

@@ -1,0 +1,56 @@
+{
+ "id": "49650:11827",
+ "name": "listbox_Item_Dropdown",
+ "type": "COMPONENT_SET",
+ "fp": "04f76417",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "-> Description": "BOOLEAN",
+  "-> Image": "BOOLEAN",
+  "Show Radio": "BOOLEAN",
+  "Text": "TEXT",
+  "Description": "TEXT",
+  "Size": [
+   "Medium"
+  ],
+  "Status": [
+   "Default",
+   "Hover",
+   "Selected"
+  ],
+  "Selection": [
+   "Radio Button",
+   "Checkbox",
+   "Delete"
+  ],
+  "Selected": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "314×56 AL:H gap fx-5 pad fx-4/0; Content (gap 16) [Aspect Ratio 1:1 48 oculto, Label Body/03 Texts/Base, Description Body/03 Texts/Neutral 2 oculta]; Checkboxes-Radios 20 o X 20; trazo inferior oculto",
+ "texts": [
+  {
+   "chars": "Label"
+  },
+  {
+   "chars": "Description"
+  }
+ ],
+ "deps": [
+  "Checkboxes-Radios",
+  "X",
+  "Aspect Ratio"
+ ],
+ "images": [],
+ "audit": {
+  "errors": 0,
+  "warns": 1,
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "Content itemSpacing 16"
+   }
+  ]
+ }
+}

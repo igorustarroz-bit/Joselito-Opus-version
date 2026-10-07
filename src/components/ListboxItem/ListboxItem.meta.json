@@ -1,0 +1,223 @@
+{
+  "name": "ListboxItem",
+  "kind": "component",
+  "title": "listbox_Item_Dropdown",
+  "figma": {
+    "nodeId": "49650:11827",
+    "name": "listbox_Item_Dropdown",
+    "fp": "04f76417"
+  },
+  "description": "Opción de una lista desplegable o de filtros: texto con descripción e imagen opcionales y, a la derecha, un radio (selección única), una casilla (múltiple) o una X para eliminar. Con radio o casilla toda la fila es clicable.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Size": [
+      "Medium"
+    ],
+    "Status": [
+      "Default",
+      "Hover",
+      "Selected"
+    ],
+    "Selection": [
+      "Radio Button",
+      "Checkbox",
+      "Delete"
+    ],
+    "Selected": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "RadioDefault",
+      "title": "Status=Default, Selection=Radio Button"
+    },
+    {
+      "story": "RadioHover",
+      "title": "Status=Hover, Selection=Radio Button"
+    },
+    {
+      "story": "RadioSelected",
+      "title": "Status=Selected, Selection=Radio Button, Selected=Yes"
+    },
+    {
+      "story": "CheckboxDefault",
+      "title": "Status=Default, Selection=Checkbox"
+    },
+    {
+      "story": "CheckboxHover",
+      "title": "Status=Hover, Selection=Checkbox"
+    },
+    {
+      "story": "CheckboxSelected",
+      "title": "Status=Selected, Selection=Checkbox, Selected=Yes"
+    },
+    {
+      "story": "Delete",
+      "title": "Status=Default, Selection=Delete"
+    },
+    {
+      "story": "ConImagenYDescripcion",
+      "title": "-> Image + -> Description"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto de la opción (Body/03).",
+      "default": "\"Label\"",
+      "control": "text"
+    },
+    {
+      "name": "showDescription",
+      "figma": "-> Description",
+      "description": "Muestra la descripción (Body/03, Neutral 2).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "description",
+      "figma": "Description",
+      "description": "Texto de la descripción.",
+      "default": "\"Description\"",
+      "control": "text"
+    },
+    {
+      "name": "showImage",
+      "figma": "-> Image",
+      "description": "Muestra una imagen cuadrada de 48 px a la izquierda.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Imagen y texto alternativo.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "selection",
+      "figma": "Selection",
+      "description": "`Radio Button`, `Checkbox` o `Delete`.",
+      "default": "Radio Button",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showControl",
+      "figma": "Show Radio",
+      "description": "Muestra el control de la derecha.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "checked / defaultChecked / onChange / name / value",
+      "figma": "Selected",
+      "description": "Estado del radio o la casilla (input nativo).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "onDelete",
+      "description": "Acción de la X (Selection=Delete).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "Solo documentación: fuerza Hover o Selected.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "texto"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "descripción"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "X de eliminar"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "padding vertical; separación imagen–texto"
+      },
+      {
+        "token": "--spacers-fixed-fx-5",
+        "usage": "separación contenido–control"
+      },
+      {
+        "token": "calc(fx-9 + fx-2)",
+        "usage": "imagen de 48 px"
+      }
+    ],
+    "typography": [
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Imagen 1:1 de 48 px (opcional)",
+    "Texto y descripción (opcional)",
+    "Control: Checkboxes-Radios o X de 20 px"
+  ],
+  "behavior": [
+    "Hover sobre la fila: el control pasa a su estado Hover.",
+    "Clic en la fila marca el radio o alterna la casilla (label nativo).",
+    "Delete: la X ejecuta onDelete."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "Nombre de la opción."
+    },
+    {
+      "field": "Descripción",
+      "notes": "Opcional, una línea."
+    }
+  ],
+  "a11y": [
+    "Radio/casilla: input nativo con toda la fila como etiqueta.",
+    "X con nombre accesible \"Eliminar\" + texto."
+  ],
+  "related": [
+    "Listbox",
+    "Checkboxes-Radios",
+    "Input"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: la separación imagen–texto (16 px) no tiene variable → FX-4.",
+    "Figma: la fila tiene un trazo inferior de 1 px oculto (sin divisor visible): no se pinta.",
+    "Figma: los ejes Status y Selected son redundantes (Selected=Yes solo con Status=Selected).",
+    "Figma: Size solo tiene Medium: no se expone."
+  ],
+  "codePath": "src/components/ListboxItem/ListboxItem.jsx"
+}

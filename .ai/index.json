@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:46:19.340Z",
+  "generatedAt": "2026-10-07T06:49:02.619Z",
   "output": "react-storybook",
   "items": [
     {
@@ -554,7 +554,7 @@
       "builtFp": "cd80a7be"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "listbox_Item_Dropdown",
@@ -568,7 +568,8 @@
       ],
       "images": 7,
       "autolayout": "7/7",
-      "key": "component:listbox-item-dropdown"
+      "key": "component:listbox-item-dropdown",
+      "builtFp": "d4c21780"
     },
     {
       "status": "todo",
