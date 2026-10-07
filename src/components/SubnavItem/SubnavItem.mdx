@@ -1,0 +1,98 @@
+{/* Generado por scripts/docs-generator.mjs desde SubnavItem.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './SubnavItem.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# subnavigation-item
+
+## Introducción
+
+Elemento de la subnavegación de sección (M06): texto Body/03; el actual va en color de acento con subrayado.
+
+
+Figma: `subnavigation-item` (`59289:60784`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Icono opcional
+- Texto Body/03
+- Caret opcional
+- Subrayado 1 px (seleccionado)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Seleccionado: color de acento y subrayado.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Selected=No
+
+<Canvas of={Stories.SelectedNo} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Selected=Yes
+
+<Canvas of={Stories.SelectedYes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show Icon + Show Caret
+
+<Canvas of={Stories.ConIconoYCaret} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--button-nav-default-text` | texto |
+| color | `--texts-accent-base` | texto seleccionado |
+| color | `--strokes-icons-accent-base` | subrayado seleccionado |
+| spacing | `--spacers-fixed-fx-2` | separación |
+| spacing | `--spacers-fixed-fx-4` | padding inferior |
+| typography | `ts-body-03` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| text | Texto. | "Tienda" | text |
+| href | Destino. | "#" | text |
+| selected | Sección actual (acento + subrayado, aria-current). | false | boolean |
+| showIcon | Icono izquierdo (20 px). | false | boolean |
+| icon | Icono izquierdo (20 px). | false | boolean |
+| showCaret | Caret derecho (20 px). | false | boolean |
+| caret | Caret derecho (20 px). | false | boolean |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Enlace con aria-current en la sección actual.
+
+## Componentes relacionados
+
+- M06-Navigation-Secondarymenu
+- NavButton

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:58:56.914Z",
+  "generatedAt": "2026-10-07T07:02:52.589Z",
   "output": "react-storybook",
   "items": [
     {
@@ -934,7 +934,7 @@
       "key": "component:input-and-button"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "subnavigation-item",
@@ -945,7 +945,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:subnavigation-item"
+      "key": "component:subnavigation-item",
+      "builtFp": "586ba0d1"
     },
     {
       "status": "todo",

@@ -1,0 +1,24 @@
+{
+ "id": "59289:60784",
+ "name": "subnavigation-item",
+ "type": "COMPONENT_SET",
+ "fp": "c1dc645d",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Text": "TEXT",
+  "Ico": "INSTANCE_SWAP",
+  "Show Icon": "BOOLEAN",
+  "Caret": "INSTANCE_SWAP",
+  "Show Caret": "BOOLEAN",
+  "Selected": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "52×40 AL:H gap fx-2 pb fx-4; Body/03 Button/Nav/Default/Text; Yes: Texts/Accent-Base + trazo inferior Strokes-Icons/Accent-Base",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

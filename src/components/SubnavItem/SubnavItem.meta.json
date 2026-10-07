@@ -1,0 +1,151 @@
+{
+  "name": "SubnavItem",
+  "kind": "component",
+  "title": "subnavigation-item",
+  "figma": {
+    "nodeId": "59289:60784",
+    "name": "subnavigation-item",
+    "fp": "c1dc645d"
+  },
+  "description": "Elemento de la subnavegación de sección (M06): texto Body/03; el actual va en color de acento con subrayado.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Selected": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SelectedNo",
+      "title": "Selected=No"
+    },
+    {
+      "story": "SelectedYes",
+      "title": "Selected=Yes"
+    },
+    {
+      "story": "ConIconoYCaret",
+      "title": "Show Icon + Show Caret"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto.",
+      "default": "\"Tienda\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Destino.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "Selected",
+      "description": "Sección actual (acento + subrayado, aria-current).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIcon",
+      "figma": "Show Icon",
+      "description": "Icono izquierdo (20 px).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "icon",
+      "figma": "Ico",
+      "description": "Icono izquierdo (20 px).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showCaret",
+      "figma": "Show Caret",
+      "description": "Caret derecho (20 px).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "caret",
+      "figma": "Caret",
+      "description": "Caret derecho (20 px).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-nav-default-text",
+        "usage": "texto"
+      },
+      {
+        "token": "--texts-accent-base",
+        "usage": "texto seleccionado"
+      },
+      {
+        "token": "--strokes-icons-accent-base",
+        "usage": "subrayado seleccionado"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "padding inferior"
+      }
+    ],
+    "typography": [
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Icono opcional",
+    "Texto Body/03",
+    "Caret opcional",
+    "Subrayado 1 px (seleccionado)"
+  ],
+  "behavior": [
+    "Seleccionado: color de acento y subrayado."
+  ],
+  "content": [],
+  "a11y": [
+    "Enlace con aria-current en la sección actual."
+  ],
+  "related": [
+    "M06-Navigation-Secondarymenu",
+    "NavButton"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: no hay estado hover."
+  ],
+  "codePath": "src/components/SubnavItem/SubnavItem.jsx"
+}
