@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T11:55:03.148Z",
+  "generatedAt": "2026-10-07T11:56:30.566Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1727,7 +1727,7 @@
       "builtFp": "da8fe300"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M24-Cards-Productcarousel",
@@ -1743,7 +1743,8 @@
       ],
       "images": 7,
       "autolayout": "2/2",
-      "key": "module:m24-cards-productcarousel"
+      "key": "module:m24-cards-productcarousel",
+      "builtFp": "7e995df7"
     },
     {
       "status": "todo",

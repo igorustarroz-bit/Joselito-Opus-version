@@ -1,0 +1,91 @@
+{/* Generado por scripts/docs-generator.mjs desde M24CardsProductcarousel.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M24CardsProductcarousel.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M24-Cards-Productcarousel
+
+## Introducción
+
+Carrusel horizontal de productos con cabecera y enlace a ver todos.
+
+
+Figma: `M24-Cards-Productcarousel` (`60286:43172`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Title (enlace)
+- Card Product vertical × N
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Desplazamiento horizontal con scroll-snap; la fila es enfocable para usar las flechas del teclado.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| spacing | `--layout-cols-size-gutter1col / --layout-grids-gutter` | entre tarjetas (escritorio / móvil) |
+| spacing | `--layout-cols-size-4cols / 5cols` | ancho de tarjeta |
+| spacing | `--spacers-fixed-fx-9 / fx-11 / fx-12` | paddings |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| items | Productos: title, price, image, label, href. | 6 productos | object |
+| children | Contenido propio de la fila (li). | — |  |
+| showTitle | Muestra la cabecera. | true | boolean |
+| eyebrow / linkText / href | Cabecera. | Nuestra selección / Ver todos | text |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Productos |  | Al menos 4 para que funcione como carrusel en escritorio. |
+
+## Accesibilidad
+
+- La fila tiene nombre (el de la cabecera).
+
+## Componentes relacionados
+
+- Card Product
+- M19-Card-Grid

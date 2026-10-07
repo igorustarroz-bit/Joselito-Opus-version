@@ -1,0 +1,127 @@
+{
+  "name": "M24CardsProductcarousel",
+  "kind": "module",
+  "title": "M24-Cards-Productcarousel",
+  "figma": {
+    "nodeId": "60286:43172",
+    "name": "M24-Cards-Productcarousel",
+    "fp": "ac922dfb"
+  },
+  "description": "Carrusel horizontal de productos con cabecera y enlace a ver todos.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "items",
+      "figma": "List",
+      "description": "Productos: title, price, image, label, href.",
+      "default": "6 productos",
+      "control": "object"
+    },
+    {
+      "name": "children",
+      "description": "Contenido propio de la fila (li).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "showTitle",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "eyebrow / linkText / href",
+      "description": "Cabecera.",
+      "default": "Nuestra selección / Ver todos",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-cols-size-gutter1col / --layout-grids-gutter",
+        "usage": "entre tarjetas (escritorio / móvil)"
+      },
+      {
+        "token": "--layout-cols-size-4cols / 5cols",
+        "usage": "ancho de tarjeta"
+      },
+      {
+        "token": "--spacers-fixed-fx-9 / fx-11 / fx-12",
+        "usage": "paddings"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title (enlace)",
+    "Card Product vertical × N"
+  ],
+  "behavior": [
+    "Desplazamiento horizontal con scroll-snap; la fila es enfocable para usar las flechas del teclado."
+  ],
+  "content": [
+    {
+      "field": "Productos",
+      "notes": "Al menos 4 para que funcione como carrusel en escritorio."
+    }
+  ],
+  "a11y": [
+    "La fila tiene nombre (el de la cabecera)."
+  ],
+  "related": [
+    "Card Product",
+    "M19-Card-Grid"
+  ],
+  "images": [
+    "8f66016394231a9f51a27dcb9f33d303962a67c3",
+    "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+    "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: paddings 64/68/80/40/24 y gaps 16/48/32 sin variable → FX-11/FX-12/Wrapper/FX-9/FX-6/FX-4/FX-9/FX-7.",
+    "Figma: el plan menciona flechas (Arrow) pero no aparecen en las variantes."
+  ],
+  "codePath": "src/modules/M24CardsProductcarousel/M24CardsProductcarousel.jsx"
+}

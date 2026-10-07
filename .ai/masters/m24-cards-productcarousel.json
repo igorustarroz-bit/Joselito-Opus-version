@@ -1,0 +1,40 @@
+{
+ "id": "60286:43172",
+ "name": "M24-Cards-Productcarousel",
+ "type": "COMPONENT_SET",
+ "fp": "ac922dfb",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "List": "SLOT",
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Desktop: Title (Link) pad 64/Wrapper-Default; carrusel pad 68/80; List fila gap Cols gutter1col de Card Product verticales 4cols (sin botón). Mobile: Title pad 40/Wrapper-Default; carrusel pad 40/24/64, Card Product 5cols gap Grids/Gutter.",
+ "deps": [
+  "Title",
+  "Card Product"
+ ],
+ "images": [
+  "8f66016394231a9f51a27dcb9f33d303962a67c3",
+  "3a99b63f1dd6caf13e3645384fc953748fd3899d",
+  "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings 64/68/80/40/24 y gaps 16/48/32 sin variable"
+   }
+  ]
+ }
+}

@@ -1,0 +1,24 @@
+/* M24-Cards-Productcarousel — Figma 60286:43172. Solo tokens. Escritorio desde 1024 px. */
+.m24-carousel { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m24-carousel__title { padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-default) 0; }
+.m24-carousel__track {
+  display: flex;
+  gap: var(--layout-grids-gutter);
+  margin: 0;
+  padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-11);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--layout-grids-wrapper-default);
+  scrollbar-width: none;
+  list-style: none;
+}
+.m24-carousel__track::-webkit-scrollbar { display: none; }
+.m24-carousel__track:focus { outline: none; }
+.m24-carousel__track:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m24-carousel__track > li { flex: 0 0 auto; width: var(--layout-cols-size-5cols); scroll-snap-align: start; }
+
+@media (min-width: 1024px) {
+  .m24-carousel__title { padding-top: var(--spacers-fixed-fx-11); }
+  .m24-carousel__track { gap: var(--layout-cols-size-gutter1col); padding: var(--spacers-fixed-fx-12) var(--layout-grids-wrapper-default); }
+  .m24-carousel__track > li { width: var(--layout-cols-size-4cols); }
+}

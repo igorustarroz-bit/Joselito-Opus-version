@@ -378,5 +378,10 @@
     "name": "M23CardsGallery",
     "path": "src/modules/M23CardsGallery/M23CardsGallery.jsx",
     "fp": "7a5da553"
+  },
+  "60286:43172": {
+    "name": "M24CardsProductcarousel",
+    "path": "src/modules/M24CardsProductcarousel/M24CardsProductcarousel.jsx",
+    "fp": "ac922dfb"
   }
 }
