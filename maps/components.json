@@ -33,5 +33,10 @@
     "name": "Tag",
     "path": "src/components/Tag/Tag.jsx",
     "fp": "592c7654"
+  },
+  "59214:48916": {
+    "name": "NavButton",
+    "path": "src/components/NavButton/NavButton.jsx",
+    "fp": "6ba11454"
   }
 }

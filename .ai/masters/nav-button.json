@@ -1,0 +1,6 @@
+{ "id": "59214:48916", "name": "NavButton", "type": "COMPONENT_SET", "page": "📦 Components", "fp": "6ba11454", "readAt": "2026-10-07T06:50:00Z",
+  "$note": "Digest compacto (.ai/tmp/spec.js, misma huella que snippets/digest.js).",
+  "props": { "Text": "TEXT", "Ico": "INSTANCE_SWAP", "Show Icon": "BOOLEAN", "Caret": "INSTANCE_SWAP", "Show Caret": "BOOLEAN", "State": ["Default", "Selected", "Hover", "Focus", "Disable"], "Selected": ["No", "Yes"] },
+  "variants": ["State=Default, Selected=No", "State=Hover, Selected=No", "State=Focus, Selected=No", "State=Selected, Selected=Yes", "State=Disable, Selected=No"],
+  "spec": "AL horizontal, gap Spacers Fixed/fx-2, sin padding; texto Body/02 centrado con Button/Nav/ESTADO/Text; trazo inferior interior 1 px (solo Selected con color Button/Nav/Selected/Icon); iconos 20 px ocultos (MagnifyingGlass, CaretDown)",
+  "texts": [{ "chars": "Item", "style": "Body/02" }], "deps": ["MagnifyingGlass", "CaretDown"], "images": [], "audit": { "errors": 0, "warns": 0, "items": [] } }

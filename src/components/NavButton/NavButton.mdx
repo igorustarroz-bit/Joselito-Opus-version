@@ -1,0 +1,140 @@
+{/* Generado por scripts/docs-generator.mjs desde NavButton.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './NavButton.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# NavButton
+
+## Introducción
+
+Elemento de la navegación principal (cabecera y menús): texto Body/02 con icono a la izquierda y caret a la derecha opcionales. El seleccionado (página actual) se marca con color de acento y un subrayado de 1 px.
+
+
+Figma: `NavButton` (`59214:48916`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Icono opcional (20 px)
+- Texto Body/02
+- Caret opcional (20 px)
+- Subrayado inferior de 1 px (solo Selected)
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema de la cabecera.
+
+## Comportamiento
+
+- Hover y Focus cambian el color del texto (tokens Button/Nav).
+- Focus con teclado añade contorno (decisión de Igor).
+- Selected: color de acento y subrayado; en enlaces se anuncia como página actual.
+- Ancho según el texto, sin padding propio (lo pone el contenedor).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Default, Selected=No
+
+<Canvas of={Stories.StateDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Hover, Selected=No
+
+<Canvas of={Stories.StateHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Focus, Selected=No
+
+<Canvas of={Stories.StateFocus} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Selected, Selected=Yes
+
+<Canvas of={Stories.StateSelected} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### State=Disable, Selected=No
+
+<Canvas of={Stories.StateDisable} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show Icon + Show Caret
+
+<Canvas of={Stories.ConIconoYCaret} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Como enlace de la página actual
+
+<Canvas of={Stories.ComoEnlace} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--button-nav-ESTADO-text` | texto |
+| color | `--button-nav-ESTADO-icon` | iconos y subrayado (Selected) |
+| color | `--strokes-icons-base` | contorno de foco |
+| spacing | `--spacers-fixed-fx-2` | separación texto–iconos |
+| spacing | `--spacers-fixed-fx-1` | separación del contorno de foco |
+| typography | `ts-body-02` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| text | Texto del elemento. | "Item" | text |
+| href | Si se pasa, `<a>`; si no, `<button>`. | — | text |
+| selected | Página o sección actual: color de acento + subrayado; `aria-current=page` en enlaces. | false | boolean |
+| disabled | Desactivado. | false | boolean |
+| showIcon | Muestra el icono izquierdo (20 px). | false | boolean |
+| icon | Icono izquierdo. En el máster: MagnifyingGlass. | magnifying-glass | select |
+| showCaret | Muestra el caret derecho (20 px), p. ej. para desplegables. | false | boolean |
+| caret | Icono derecho. En el máster: CaretDown. | caret-down | select |
+| state | Solo documentación: fuerza Hover o Focus. | — | select |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Texto |  | Nombre corto de sección (1–2 palabras). |
+
+## Accesibilidad
+
+- Usa `href` para navegar; la sección actual lleva aria-current=page.
+- Foco visible con teclado.
+- Iconos decorativos.
+
+## Componentes relacionados
+
+- M01-Navigation
+- M02-Menu
+- Button-Action-Link

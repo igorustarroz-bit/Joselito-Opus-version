@@ -1,0 +1,46 @@
+/* NavButton — Figma 59214:48916. Solo tokens. Trazo inferior interior de 1 px: solo visible en
+   Selected (Button/Nav/Selected/Icon); se pinta con box-shadow inset para no sumar altura. */
+.nav-button {
+  --nb-text: var(--button-nav-default-text);
+  --nb-icon: var(--button-nav-default-icon);
+  --nb-line: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacers-fixed-fx-2);
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: inset 0 -1px 0 var(--nb-line);
+  color: var(--nb-text);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav-button .icon { color: var(--nb-icon); }
+.nav-button:hover,
+.nav-button.is-hover { --nb-text: var(--button-nav-hover-text); --nb-icon: var(--button-nav-hover-icon); }
+.nav-button:focus { outline: none; }
+.nav-button:focus-visible,
+.nav-button.is-focus {
+  --nb-text: var(--button-nav-focused-text);
+  --nb-icon: var(--button-nav-focused-icon);
+  outline: 1px solid var(--strokes-icons-base);
+  outline-offset: var(--spacers-fixed-fx-1);
+}
+.nav-button.is-selected,
+.nav-button[aria-current='page'] {
+  --nb-text: var(--button-nav-selected-text);
+  --nb-icon: var(--button-nav-selected-icon);
+  --nb-line: var(--button-nav-selected-icon);
+}
+.nav-button:disabled,
+.nav-button[aria-disabled='true'] {
+  --nb-text: var(--button-nav-disabled-text);
+  --nb-icon: var(--button-nav-disabled-icon);
+  --nb-line: transparent;
+  cursor: not-allowed;
+}

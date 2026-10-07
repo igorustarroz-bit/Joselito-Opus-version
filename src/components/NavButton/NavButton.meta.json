@@ -1,0 +1,201 @@
+{
+  "name": "NavButton",
+  "kind": "component",
+  "title": "NavButton",
+  "figma": {
+    "nodeId": "59214:48916",
+    "name": "NavButton",
+    "fp": "6ba11454"
+  },
+  "description": "Elemento de la navegación principal (cabecera y menús): texto Body/02 con icono a la izquierda y caret a la derecha opcionales. El seleccionado (página actual) se marca con color de acento y un subrayado de 1 px.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "State": [
+      "Default",
+      "Selected",
+      "Hover",
+      "Focus",
+      "Disable"
+    ],
+    "Selected": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "StateDefault",
+      "title": "State=Default, Selected=No"
+    },
+    {
+      "story": "StateHover",
+      "title": "State=Hover, Selected=No"
+    },
+    {
+      "story": "StateFocus",
+      "title": "State=Focus, Selected=No"
+    },
+    {
+      "story": "StateSelected",
+      "title": "State=Selected, Selected=Yes"
+    },
+    {
+      "story": "StateDisable",
+      "title": "State=Disable, Selected=No"
+    },
+    {
+      "story": "ConIconoYCaret",
+      "title": "Show Icon + Show Caret"
+    },
+    {
+      "story": "ComoEnlace",
+      "title": "Como enlace de la página actual"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto del elemento.",
+      "default": "\"Item\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Si se pasa, `<a>`; si no, `<button>`.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "Selected",
+      "description": "Página o sección actual: color de acento + subrayado; `aria-current=page` en enlaces.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "disabled",
+      "figma": "State=Disable",
+      "description": "Desactivado.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIcon",
+      "figma": "Show Icon",
+      "description": "Muestra el icono izquierdo (20 px).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "icon",
+      "figma": "Ico",
+      "description": "Icono izquierdo. En el máster: MagnifyingGlass.",
+      "default": "magnifying-glass",
+      "control": "select"
+    },
+    {
+      "name": "showCaret",
+      "figma": "Show Caret",
+      "description": "Muestra el caret derecho (20 px), p. ej. para desplegables.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "caret",
+      "figma": "Caret",
+      "description": "Icono derecho. En el máster: CaretDown.",
+      "default": "caret-down",
+      "control": "select"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Solo documentación: fuerza Hover o Focus.",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-nav-ESTADO-text",
+        "usage": "texto"
+      },
+      {
+        "token": "--button-nav-ESTADO-icon",
+        "usage": "iconos y subrayado (Selected)"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "contorno de foco"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación texto–iconos"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "separación del contorno de foco"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema de la cabecera."
+  },
+  "anatomy": [
+    "Icono opcional (20 px)",
+    "Texto Body/02",
+    "Caret opcional (20 px)",
+    "Subrayado inferior de 1 px (solo Selected)"
+  ],
+  "behavior": [
+    "Hover y Focus cambian el color del texto (tokens Button/Nav).",
+    "Focus con teclado añade contorno (decisión de Igor).",
+    "Selected: color de acento y subrayado; en enlaces se anuncia como página actual.",
+    "Ancho según el texto, sin padding propio (lo pone el contenedor)."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "Nombre corto de sección (1–2 palabras)."
+    }
+  ],
+  "a11y": [
+    "Usa `href` para navegar; la sección actual lleva aria-current=page.",
+    "Foco visible con teclado.",
+    "Iconos decorativos."
+  ],
+  "related": [
+    "M01-Navigation",
+    "M02-Menu",
+    "Button-Action-Link"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: todas las variantes tienen trazo inferior de 1 px pero solo Selected tiene color (Button/Nav/Selected/Icon). Se pinta con box-shadow inset (no suma altura).",
+    "Figma: los ejes State y Selected son redundantes (Selected=Yes solo con State=Selected). En código basta `selected`.",
+    "Figma: Focus no tiene indicador visible propio; se añade contorno :focus-visible."
+  ],
+  "codePath": "src/components/NavButton/NavButton.jsx"
+}

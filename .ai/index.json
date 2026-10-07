@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:37:02.025Z",
+  "generatedAt": "2026-10-07T06:39:24.526Z",
   "output": "react-storybook",
   "items": [
     {
@@ -487,7 +487,7 @@
       "key": "component:title"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "NavButton",
@@ -498,7 +498,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "5/5",
-      "key": "component:nav-button"
+      "key": "component:nav-button",
+      "builtFp": "4aed5032"
     },
     {
       "status": "todo",
