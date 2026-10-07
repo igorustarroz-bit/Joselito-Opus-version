@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:43:29.375Z",
+  "generatedAt": "2026-10-07T07:45:47.418Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1294,7 +1294,7 @@
       "builtFp": "afcee56a"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M06-Navigation-Secondarymenu",
@@ -1311,7 +1311,8 @@
       ],
       "images": 1,
       "autolayout": "5/5",
-      "key": "module:m06-navigation-secondarymenu"
+      "key": "module:m06-navigation-secondarymenu",
+      "builtFp": "e61c3f4c"
     },
     {
       "status": "todo",

@@ -1,0 +1,65 @@
+/* M06-Navigation-Secondarymenu — Figma 60634:75153. Solo tokens. Escritorio desde 1024 px. */
+.m06-nav { width: 100%; box-sizing: border-box; background: var(--backgrounds-base); color: var(--texts-base); }
+
+/* One line */
+.m06-nav--one-line {
+  display: flex;
+  padding: var(--layout-spacers-responsive-5) 0 0 var(--layout-grids-wrapper-default);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.m06-nav__items { display: flex; gap: var(--spacers-fixed-fx-5); margin: 0; padding: 0; list-style: none; }
+
+/* Dropdown — móvil */
+.m06-nav__desktop { display: none; }
+.m06-nav__mobile { border-bottom: 1px solid var(--strokes-icons-neutral-3); }
+.m06-nav__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: var(--spacers-fixed-fx-5) var(--layout-grids-wrapper-default);
+  border: 0;
+  background: var(--backgrounds-base);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.m06-nav__head .icon { color: var(--strokes-icons-base); }
+.m06-nav__head:focus { outline: none; }
+.m06-nav__head:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m06-nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-2);
+  margin: 0;
+  padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default);
+  border-top: 1px solid var(--strokes-icons-neutral-3);
+  list-style: none;
+}
+.m06-nav__links[hidden] { display: none; }
+.m06-nav__link { width: 100%; padding: var(--spacers-fixed-fx-2) 0; }
+
+/* Dropdown — escritorio */
+.m06-nav__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-9);
+  padding: var(--layout-grids-gutter) 0 var(--spacers-fixed-fx-6) var(--layout-spacers-responsive-8);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+}
+.m06-nav__panel { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--spacers-fixed-fx-9); padding: var(--spacers-fixed-fx-9) var(--layout-spacers-responsive-8); }
+.m06-nav__panel[hidden] { display: none; }
+.m06-nav__panel-links { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); margin: 0; padding: 0; list-style: none; }
+.m06-nav__panel-img { width: var(--spacers-fixed-fx-12); }
+
+@media (min-width: 1024px) {
+  .m06-nav--one-line { justify-content: center; padding: var(--spacers-fixed-fx-6) 0 0; }
+  .m06-nav--one-line .m06-nav__items { gap: var(--spacers-fixed-fx-7); }
+  .m06-nav__desktop { display: block; }
+  .m06-nav__mobile { display: none; }
+}

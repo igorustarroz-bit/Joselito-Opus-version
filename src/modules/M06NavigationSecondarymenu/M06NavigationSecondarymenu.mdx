@@ -1,0 +1,131 @@
+{/* Generado por scripts/docs-generator.mjs desde M06NavigationSecondarymenu.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M06NavigationSecondarymenu.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M06-Navigation-Secondarymenu
+
+## Introducción
+
+Menú secundario de una sección. One line: fila de subnavegación (centrada en escritorio, desplazable en móvil). Dropdown: en escritorio, filtros con caret que despliegan un panel con lista y foto; en móvil, un título con +/− que despliega los enlaces.
+
+
+Figma: `M06-Navigation-Secondarymenu` (`60634:75153`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- One line: subnavigation-item × N
+- Dropdown escritorio: NavButton con caret × 2 · panel (menu-item-list × N · Aspect Ratio 3:4)
+- Dropdown móvil: título Body/04 + Plus/Minus · menu-item-list × N
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+Hereda el subtema de la página.
+
+## Comportamiento
+
+- Breakpoint a 1024 px.
+- En móvil, la fila One line se desplaza en horizontal.
+- El primer filtro de escritorio y el título de móvil abren y cierran el desplegable.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=One line, Open=No
+
+<Canvas of={Stories.DesktopOneLine} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Dropdown, Open=Yes
+
+<Canvas of={Stories.DesktopDropdownOpen} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=One line, Open=No
+
+<Canvas of={Stories.MobileOneLine} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Dropdown, Open=No
+
+<Canvas of={Stories.MobileDropdownClosed} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Dropdown, Open=Yes
+
+<Canvas of={Stories.MobileDropdownOpen} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--strokes-icons-neutral-3` | bordes |
+| color | `--texts-base` | título |
+| spacing | `--spacers-fixed-fx-7 / fx-5` | entre elementos de la fila (escritorio / móvil) |
+| spacing | `--spacers-fixed-fx-6` | padding superior One line escritorio |
+| spacing | `--layout-spacers-responsive-5` | padding superior One line móvil |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales móvil |
+| spacing | `--layout-spacers-responsive-8` | padding del desplegable |
+| spacing | `--spacers-fixed-fx-9` | entre filtros, padding del panel |
+| spacing | `--layout-grids-gutter` | padding superior de la barra de filtros |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `One line` o `Dropdown`. | One line | inline-radio |
+| open / defaultOpen | Desplegado (controlado / inicial). | false | boolean |
+| showMenu | Muestra el panel desplegable en escritorio (Dropdown). | true | boolean |
+| items | Elementos de la fila One line (texto o text, href). | Todos, Jamones, Paletas… | object |
+| selected | Elemento activo de la fila. | Todos | text |
+| title | Título del desplegable en móvil. | Todos los productos | text |
+| links | Enlaces del desplegable en móvil. | 8 categorías | object |
+| filters | Filtros del desplegable en escritorio (text, disabled, onClick); el primero abre el panel. | TODOS LOS CHEFS, TODAS LAS COCINAS | object |
+| panelLinks / panelSelected / panelImage | Contenido del panel de escritorio. | chefs, Ferran Adrià, foto | object |
+| onToggle | Se llama al abrir o cerrar. | — |  |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Fila |  | Etiquetas cortas (una o dos palabras). |
+
+## Accesibilidad
+
+- nav con aria-label "Secundario".
+- Desplegables con aria-expanded y aria-controls.
+- Elemento activo con aria-current.
+
+## Componentes relacionados
+
+- subnavigation-item
+- menu-item-list
+- NavButton
+- M02-Menu
+- M29-User-Profile

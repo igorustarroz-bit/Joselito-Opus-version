@@ -1,0 +1,69 @@
+{
+ "id": "60634:75153",
+ "name": "M06-Navigation-Secondarymenu",
+ "type": "COMPONENT_SET",
+ "fp": "6c167193",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show M02-Menu": "BOOLEAN",
+  "Slot": "SLOT",
+  "Slot 2": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "One line",
+   "Dropdown"
+  ],
+  "Open": [
+   "Yes",
+   "No"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Type=Dropdown, Open=No"
+  },
+  {
+   "name": "Device=Mobile, Type=Dropdown, Open=Yes"
+  },
+  {
+   "name": "Device=Desktop, Type=One line, Open=No"
+  },
+  {
+   "name": "Device=Mobile, Type=One line, Open=No"
+  },
+  {
+   "name": "Device=Desktop, Type=Dropdown, Open=Yes"
+  }
+ ],
+ "spec": "One line desktop 1440×64 pad-top 24, Slot 10 subnavigation-item gap 32 centrado, borde inferior Neutral 3. Mobile 390×60 pad-top Resp/5, pad-left Wrapper-Default, gap 20. Dropdown mobile: Content/Title 68 (Body/04 + Plus/Minus) pad fx-5/Wrapper-Default fill #fff; Slot 2: 8 menu-item-list (pad fx-2) gap fx-2 pad Resp/8/Wrapper-Default. Dropdown desktop: barra NavButton con caret (TODOS LOS CHEFS, TODAS LAS COCINAS Disable) gap fx-9 pad Gutter/0/fx-6/Resp/8 + M02-Menu Product (chefs + foto).",
+ "deps": [
+  "Plus",
+  "Minus",
+  "menu-item-list",
+  "subnavigation-item",
+  "NavButton",
+  "M02-Menu"
+ ],
+ "images": [
+  "b420128cee187dd6f9ba0a8420df8ef9e0e2ee1e"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "Content / Title y Slot 2 fill #ffffff"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 202 (space-between)"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "One line paddingTop 24, itemSpacing 32 / 20"
+   }
+  ]
+ }
+}

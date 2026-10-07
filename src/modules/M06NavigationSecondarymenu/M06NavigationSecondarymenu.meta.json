@@ -1,0 +1,214 @@
+{
+  "name": "M06NavigationSecondarymenu",
+  "kind": "module",
+  "title": "M06-Navigation-Secondarymenu",
+  "figma": {
+    "nodeId": "60634:75153",
+    "name": "M06-Navigation-Secondarymenu",
+    "fp": "6c167193"
+  },
+  "description": "Menú secundario de una sección. One line: fila de subnavegación (centrada en escritorio, desplazable en móvil). Dropdown: en escritorio, filtros con caret que despliegan un panel con lista y foto; en móvil, un título con +/− que despliega los enlaces.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "One line",
+      "Dropdown"
+    ],
+    "Open": [
+      "Yes",
+      "No"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopOneLine",
+      "title": "Device=Desktop, Type=One line, Open=No"
+    },
+    {
+      "story": "DesktopDropdownOpen",
+      "title": "Device=Desktop, Type=Dropdown, Open=Yes"
+    },
+    {
+      "story": "MobileOneLine",
+      "title": "Device=Mobile, Type=One line, Open=No"
+    },
+    {
+      "story": "MobileDropdownClosed",
+      "title": "Device=Mobile, Type=Dropdown, Open=No"
+    },
+    {
+      "story": "MobileDropdownOpen",
+      "title": "Device=Mobile, Type=Dropdown, Open=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`One line` o `Dropdown`.",
+      "default": "One line",
+      "control": "inline-radio"
+    },
+    {
+      "name": "open / defaultOpen",
+      "figma": "Open",
+      "description": "Desplegado (controlado / inicial).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showMenu",
+      "figma": "Show M02-Menu",
+      "description": "Muestra el panel desplegable en escritorio (Dropdown).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "items",
+      "figma": "Slot",
+      "description": "Elementos de la fila One line (texto o text, href).",
+      "default": "Todos, Jamones, Paletas…",
+      "control": "object"
+    },
+    {
+      "name": "selected",
+      "description": "Elemento activo de la fila.",
+      "default": "Todos",
+      "control": "text"
+    },
+    {
+      "name": "title",
+      "description": "Título del desplegable en móvil.",
+      "default": "Todos los productos",
+      "control": "text"
+    },
+    {
+      "name": "links",
+      "figma": "Slot 2",
+      "description": "Enlaces del desplegable en móvil.",
+      "default": "8 categorías",
+      "control": "object"
+    },
+    {
+      "name": "filters",
+      "description": "Filtros del desplegable en escritorio (text, disabled, onClick); el primero abre el panel.",
+      "default": "TODOS LOS CHEFS, TODAS LAS COCINAS",
+      "control": "object"
+    },
+    {
+      "name": "panelLinks / panelSelected / panelImage",
+      "description": "Contenido del panel de escritorio.",
+      "default": "chefs, Ferran Adrià, foto",
+      "control": "object"
+    },
+    {
+      "name": "onToggle",
+      "description": "Se llama al abrir o cerrar.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "bordes"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "título"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7 / fx-5",
+        "usage": "entre elementos de la fila (escritorio / móvil)"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "padding superior One line escritorio"
+      },
+      {
+        "token": "--layout-spacers-responsive-5",
+        "usage": "padding superior One line móvil"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales móvil"
+      },
+      {
+        "token": "--layout-spacers-responsive-8",
+        "usage": "padding del desplegable"
+      },
+      {
+        "token": "--spacers-fixed-fx-9",
+        "usage": "entre filtros, padding del panel"
+      },
+      {
+        "token": "--layout-grids-gutter",
+        "usage": "padding superior de la barra de filtros"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "One line: subnavigation-item × N",
+    "Dropdown escritorio: NavButton con caret × 2 · panel (menu-item-list × N · Aspect Ratio 3:4)",
+    "Dropdown móvil: título Body/04 + Plus/Minus · menu-item-list × N"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px.",
+    "En móvil, la fila One line se desplaza en horizontal.",
+    "El primer filtro de escritorio y el título de móvil abren y cierran el desplegable."
+  ],
+  "content": [
+    {
+      "field": "Fila",
+      "notes": "Etiquetas cortas (una o dos palabras)."
+    }
+  ],
+  "a11y": [
+    "nav con aria-label \"Secundario\".",
+    "Desplegables con aria-expanded y aria-controls.",
+    "Elemento activo con aria-current."
+  ],
+  "related": [
+    "subnavigation-item",
+    "menu-item-list",
+    "NavButton",
+    "M02-Menu",
+    "M29-User-Profile"
+  ],
+  "images": [
+    "b420128cee187dd6f9ba0a8420df8ef9e0e2ee1e"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: fondo #FFFFFF sin variable en el desplegable móvil → Backgrounds/Base.",
+    "Figma: separaciones 32 y 20 px y padding superior 24 sin variable → FX-7, FX-5 y FX-6.",
+    "Figma: el panel de escritorio es una instancia de M02-Menu (Product) con el contenido cambiado (lista de chefs y foto a la derecha); se reconstruye con menu-item-list y Aspect Ratio.",
+    "Figma: no existe la variante Desktop · Dropdown · Open=No; en código es la barra de filtros sin panel."
+  ],
+  "codePath": "src/modules/M06NavigationSecondarymenu/M06NavigationSecondarymenu.jsx"
+}

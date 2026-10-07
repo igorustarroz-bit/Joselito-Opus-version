@@ -273,5 +273,10 @@
     "name": "M02Menu",
     "path": "src/modules/M02Menu/M02Menu.jsx",
     "fp": "33a1a101"
+  },
+  "60634:75153": {
+    "name": "M06NavigationSecondarymenu",
+    "path": "src/modules/M06NavigationSecondarymenu/M06NavigationSecondarymenu.jsx",
+    "fp": "6c167193"
   }
 }
