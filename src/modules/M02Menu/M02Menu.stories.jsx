@@ -9,7 +9,7 @@ export default {
 };
 
 export const Default = {};
-/** Device=Desktop (desde 1024 px) · Type=Product: lista de categorías, foto y destacado. */
+/** Device=Desktop (desde 960 px) · Type=Product: lista de categorías, foto y destacado. */
 export const DesktopProduct = {};
 /** Device=Desktop · Type=About: fila de cuatro fotos con título. */
 export const DesktopAbout = { args: { type: 'About' } };

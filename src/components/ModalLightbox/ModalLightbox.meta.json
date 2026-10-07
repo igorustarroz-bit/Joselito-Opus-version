@@ -181,7 +181,7 @@
   "behavior": [
     "Modal: Esc, clic en el Overlay o X cierran; el foco queda dentro y vuelve al elemento anterior al cerrar.",
     "List: selección única (radios).",
-    "Collapsed: en móvil (por debajo de 768 px) se oculta la foto."
+    "Collapsed: en móvil (por debajo de 481 px) se oculta la foto."
   ],
   "content": [
     {

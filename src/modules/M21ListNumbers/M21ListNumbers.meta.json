@@ -92,7 +92,7 @@
     "Block Big Numbers × N"
   ],
   "behavior": [
-    "Breakpoint a 1024 px; las líneas verticales llegan de arriba abajo, cabecera incluida."
+    "Breakpoint a 960 px; las líneas verticales llegan de arriba abajo, cabecera incluida."
   ],
   "content": [
     {

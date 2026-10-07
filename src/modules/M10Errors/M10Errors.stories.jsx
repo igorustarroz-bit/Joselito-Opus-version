@@ -9,7 +9,7 @@ export default {
 };
 
 export const Default = {};
-/** Device=Desktop (desde 1024 px). */
+/** Device=Desktop (desde 960 px). */
 export const Desktop = {};
 /** Device=Mobile (ver con el viewport XS). */
 export const Mobile = {};

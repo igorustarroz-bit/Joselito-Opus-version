@@ -1,4 +1,4 @@
-/* M06-Navigation-Secondarymenu — Figma 60634:75153. Solo tokens. Escritorio desde 1024 px. */
+/* M06-Navigation-Secondarymenu — Figma 60634:75153. Solo tokens. Escritorio desde 960 px. */
 .m06-nav { width: 100%; box-sizing: border-box; background: var(--backgrounds-base); color: var(--texts-base); }
 
 /* One line */
@@ -57,7 +57,7 @@
 .m06-nav__panel-links { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-1); margin: 0; padding: 0; list-style: none; }
 .m06-nav__panel-img { width: var(--spacers-fixed-fx-12); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m06-nav--one-line { justify-content: center; padding: var(--spacers-fixed-fx-6) 0 0; }
   .m06-nav--one-line .m06-nav__items { gap: var(--spacers-fixed-fx-7); }
   .m06-nav__desktop { display: block; }

@@ -3,7 +3,7 @@ import './GoBack.css';
 
 /**
  * Volver atrás: Button-Icon Terciary con flecha a la izquierda + texto de la sección anterior (Body/02).
- * Escritorio: botón S y separación FX-6; móvil (<768 px): botón XS y separación FX-5.
+ * Escritorio: botón S y separación FX-6; móvil (< 481 px): botón XS y separación FX-5.
  */
 export default function GoBack({ text = 'TIENDAS Y RESTAURANTES', href = '#', label = 'Volver', onClick, theme, className = '', ...rest }) {
   return (

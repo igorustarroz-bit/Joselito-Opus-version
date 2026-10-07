@@ -1,5 +1,5 @@
 /* M01-Navigation — Figma 58182:4143. Solo tokens. Móvil 56 px · escritorio 72 px (FX-12, Figma 70).
-   El cambio a escritorio (contenido ≥ 960 px, es decir viewport ≥ 1024 con márgenes) depende del ancho de la propia cabecera (container query), no del viewport:
+   El cambio a escritorio (contenido ≥ 880 px, es decir viewport ≥ 944: el rango L empieza en 960) depende del ancho de la propia cabecera (container query), no del viewport:
    así no se monta el menú sobre el logo cuando la cabecera vive en un contenedor estrecho. */
 .m01-nav {
   position: relative;
@@ -28,11 +28,18 @@
 .m01-nav__logo { position: absolute; top: 50%; left: 50%; display: flex; transform: translate(-50%, -50%); color: var(--strokes-icons-base); }
 .m01-nav__list li { display: flex; }
 .m01-nav__list { display: flex; align-items: center; gap: var(--spacers-fixed-fx-3); margin: 0; padding: 0; list-style: none; white-space: nowrap; }
-/* Escritorio: el centro (FX-18) queda reservado para el logo; menú a la izquierda y utilidades a la derecha. */
-@container m01 (min-width: 960px) {
+/* Escritorio: el centro queda reservado para el logo; menú a la izquierda y utilidades a la derecha.
+   Comportamiento líquido: con el ancho justo (inicio del rango L) se estrechan el gap y el hueco del logo. */
+.m01-nav__desktop { --m01-center: var(--spacers-fixed-fx-17); }
+@container m01 (min-width: 880px) {
   .m01-nav__mobile { display: none; }
-  .m01-nav__desktop { display: grid; grid-template-columns: minmax(0, 1fr) var(--spacers-fixed-fx-18) minmax(0, 1fr); align-items: center; width: 100%; min-height: var(--spacers-fixed-fx-12); }
+  .m01-nav__desktop { display: grid; grid-template-columns: minmax(0, 1fr) var(--m01-center) minmax(0, 1fr); align-items: center; width: 100%; min-height: var(--spacers-fixed-fx-12); }
   .m01-nav__desktop > .m01-nav__list:last-child { grid-column: 3; justify-self: end; }
+  .m01-nav__list { gap: var(--spacers-fixed-fx-2); }
+}
+@container m01 (min-width: 1000px) {
+  .m01-nav__desktop { --m01-center: var(--spacers-fixed-fx-18); }
+  .m01-nav__list { gap: var(--spacers-fixed-fx-3); }
 }
 @container m01 (min-width: 1200px) {
   .m01-nav__list { gap: var(--spacers-fixed-fx-5); }

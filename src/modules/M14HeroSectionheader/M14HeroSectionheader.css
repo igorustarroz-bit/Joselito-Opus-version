@@ -1,4 +1,4 @@
-/* M14-Hero-Sectionheader — Figma 58508:6679. Solo tokens. Escritorio desde 1024 px. */
+/* M14-Hero-Sectionheader — Figma 58508:6679. Solo tokens. Escritorio desde 960 px. */
 .m14-header { display: flex; flex-direction: column; box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m14-header p, .m14-header h1 { margin: 0; }
 .m14-header__main {
@@ -20,10 +20,10 @@
 .m14-header__buttons > :first-child { grid-column: 1 / -1; }
 .m14-header__buttons > * { width: 100%; }
 .m14-header__media { position: relative; display: flex; align-items: center; justify-content: center; padding: var(--layout-grids-wrapper-default); }
-.m14-header__media .aspect-ratio { width: 100%; }
+.m14-header__media > .aspect-ratio { width: 100%; }
 .m14-header__toast { position: absolute; right: var(--spacers-fixed-fx-9); bottom: var(--spacers-fixed-fx-9); left: var(--spacers-fixed-fx-9); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m14-header { flex-direction: row; }
   .m14-header__main {
     flex: 1;
@@ -38,6 +38,6 @@
   .m14-header__buttons { display: flex; flex-wrap: wrap; }
   .m14-header__buttons > * { width: auto; }
   .m14-header__media { flex: 1; }
-  .m14-header__media .aspect-ratio { width: var(--layout-cols-size-5cols); }
+  .m14-header__media > .aspect-ratio { width: var(--layout-cols-size-5cols); }
   .m14-header__toast { left: auto; width: var(--layout-cols-size-4cols-1-gutter); }
 }

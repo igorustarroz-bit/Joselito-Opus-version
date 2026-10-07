@@ -263,7 +263,7 @@
     "Figma: el ancho de la foto en Horizontal (140 px) no tiene variable.",
     "Figma: el frame Photo tiene gap 8 px sin variable (irrelevante: un único hijo).",
     "Figma: en Horizontal no existe el CTA rápido (QuickCTA); en código se ignora en ese tipo.",
-    "Device: la única diferencia entre Desktop y Mobile además del ancho es la separación en Horizontal (FX-7 / FX-6); se resuelve con breakpoint (768 px).",
+    "Device: la única diferencia entre Desktop y Mobile además del ancho es la separación en Horizontal (FX-7 / FX-6); se resuelve con breakpoint (481 px).",
     "Ajuste (Igor, 2026-10-07): foto horizontal 140 px → FX-17 (148 px), variable más cercana."
   ],
   "codePath": "src/components/CardProduct/CardProduct.jsx"

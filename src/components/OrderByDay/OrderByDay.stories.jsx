@@ -6,5 +6,5 @@ export default { title: 'Components/Order by Day', component: OrderByDay, parame
 
 export const Default = { decorators: [(Story) => <div style={{ width: 774, maxWidth: '100%' }}><Story /></div>] };
 export const DesktopHorizontal = { decorators: [(Story) => <div style={{ width: 774, maxWidth: '100%' }}><Story /></div>] };
-/** Device=Mobile: las tarjetas se desplazan en horizontal (por debajo de 768 px). */
+/** Device=Mobile: las tarjetas se desplazan en horizontal (por debajo de 481 px). */
 export const MobileHorizontal = { decorators: [(Story) => <div style={{ width: 390 }}><Story /></div>] };

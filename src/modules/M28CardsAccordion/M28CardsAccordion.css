@@ -1,4 +1,4 @@
-/* M28-Cards-Accordion — Figma 58512:9289. Solo tokens. Escritorio desde 1024 px. */
+/* M28-Cards-Accordion — Figma 58512:9289. Solo tokens. Escritorio desde 960 px. */
 .m28-cards {
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
 .m28-cards__tab:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
 .m28-cards__tab-index { display: none; color: var(--texts-neutral-3); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m28-card { flex-direction: row; gap: var(--spacers-fixed-fx-9); padding: var(--spacers-fixed-fx-9); }
   .m28-card__img { flex: 0 0 auto; width: var(--layout-cols-size-4cols); }
   .m28-card__body { width: var(--layout-cols-size-3cols); }

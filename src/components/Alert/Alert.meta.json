@@ -7,7 +7,7 @@
     "name": "Alert",
     "fp": "019882cf"
   },
-  "description": "Barra de aviso a ancho completo: mensaje con acción (suscripción) o confirmación del idioma con selector. Se adapta a su propio ancho: fila desde 768 px, apilada por debajo.",
+  "description": "Barra de aviso a ancho completo: mensaje con acción (suscripción) o confirmación del idioma con selector. Se adapta a su propio ancho: fila desde 481 px, apilada por debajo.",
   "defaultStory": "Default",
   "variantAxes": {
     "Device": [
@@ -134,7 +134,7 @@
     "Button-Action-Link S con aspecto Hover"
   ],
   "behavior": [
-    "Responsive por container query: fila (space-between) desde 768 px de ancho; apilada por debajo.",
+    "Responsive por container query: fila (space-between) desde 481 px de ancho; apilada por debajo.",
     "El selector de idioma es un select nativo (accesible) con la apariencia de Figma."
   ],
   "content": [],

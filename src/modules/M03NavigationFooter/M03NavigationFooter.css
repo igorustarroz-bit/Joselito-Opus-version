@@ -1,4 +1,4 @@
-/* M03-Navigation-Footer — Figma 58163:33397. Solo tokens. Escritorio desde 1024 px. */
+/* M03-Navigation-Footer — Figma 58163:33397. Solo tokens. Escritorio desde 960 px. */
 .m03-footer { width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m03-footer__desktop { display: none; }
 .m03-footer ul { margin: 0; padding: 0; list-style: none; }
@@ -45,7 +45,7 @@
 .m03-footer__copy { color: var(--texts-neutral-2); }
 
 /* Escritorio */
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m03-footer__mobile { display: none; }
   .m03-footer__desktop { display: block; }
   .m03-footer__links {

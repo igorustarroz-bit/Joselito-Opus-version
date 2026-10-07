@@ -125,24 +125,16 @@
         "usage": "márgenes laterales"
       },
       {
-        "token": "--layout-cols-size-wrapper1-col",
-        "usage": "margen del lado de la imagen vertical"
-      },
-      {
-        "token": "--layout-cols-size-6cols / 5cols",
-        "usage": "anchos de imagen y texto"
-      },
-      {
-        "token": "--spacers-fixed-fx-9 / fx-10",
-        "usage": "separación imagen-texto"
-      },
-      {
         "token": "--spacers-fixed-fx-6 / fx-7",
         "usage": "separaciones del texto"
       },
       {
         "token": "--layout-spacers-responsive-15 / fx-16",
         "usage": "padding del texto en Half"
+      },
+      {
+        "token": "--grid-columns / --layout-grids-gutter",
+        "usage": "rejilla de columnas (separación entre piezas = columnas libres)"
       }
     ]
   },
@@ -160,7 +152,7 @@
     "Half: Divider + nota Body/02"
   ],
   "behavior": [
-    "Breakpoint a 1024 px; en móvil se apila en el orden del contenido (Right: texto primero)."
+    "Escritorio desde 960 px (inicio del rango L): rejilla de 12 columnas del sistema; cada pieza ocupa las columnas de Figma (ver Layout). En móvil y tablet se apila en el orden del contenido (Right: texto primero)."
   ],
   "content": [
     {
@@ -187,9 +179,61 @@
   "placeholders": [],
   "notes": [
     "Figma: padding 112 px sin variable → FX-15 (112).",
-    "Figma: separación imagen-texto 48 px → FX-9 (empate con FX-10 → la menor); 52 px en Half → FX-10.",
     "Figma: separaciones del texto 40/24/20/32 sin variable → FX-9/FX-6/FX-5/FX-7.",
-    "Figma: los textos de ejemplo tienen nombres de capa en inglés de otro proyecto ('Dos Cielos Madrid by…', 'Presided over by…')."
+    "Figma: los textos de ejemplo tienen nombres de capa en inglés de otro proyecto ('Dos Cielos Madrid by…', 'Presided over by…').",
+    "Figma: la separación imagen-texto es space-between con gap 48; en código la separan columnas libres de la rejilla, como indica la guía «Módulos por layout».",
+    "Vertical: el margen extra de una columna va en el lado del texto (Left: col 12 libre; Right: col 1 libre)."
   ],
-  "codePath": "src/modules/M07ContentTextImage/M07ContentTextImage.jsx"
+  "codePath": "src/modules/M07ContentTextImage/M07ContentTextImage.jsx",
+  "layout": {
+    "type": "Columnas (Left/Right) · A sangre (Half)",
+    "grid": "12 columnas desde 960 px (rango L); en móvil y tablet se apila a ancho completo.",
+    "columns": [
+      {
+        "variant": "Left · Horizontal",
+        "piece": "Imagen 4:3",
+        "columns": "1–6"
+      },
+      {
+        "variant": "Left · Horizontal",
+        "piece": "Texto",
+        "columns": "8–12 (7 libre)"
+      },
+      {
+        "variant": "Right · Horizontal",
+        "piece": "Texto",
+        "columns": "1–5 (6 libre)"
+      },
+      {
+        "variant": "Right · Horizontal",
+        "piece": "Imagen 4:3",
+        "columns": "7–12"
+      },
+      {
+        "variant": "Left · Vertical",
+        "piece": "Imagen 3:4",
+        "columns": "1–5"
+      },
+      {
+        "variant": "Left · Vertical",
+        "piece": "Texto",
+        "columns": "7–11 (6 y 12 libres)"
+      },
+      {
+        "variant": "Right · Vertical",
+        "piece": "Texto",
+        "columns": "2–6 (1 y 7 libres)"
+      },
+      {
+        "variant": "Right · Vertical",
+        "piece": "Imagen 3:4",
+        "columns": "8–12"
+      },
+      {
+        "variant": "Half-Left / Half-Right",
+        "piece": "Imagen / texto",
+        "columns": "50 % / 50 % a sangre; texto centrado en su mitad (no alineado a columnas)"
+      }
+    ]
+  }
 }

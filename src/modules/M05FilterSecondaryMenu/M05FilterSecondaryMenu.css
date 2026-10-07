@@ -1,4 +1,4 @@
-/* M05-Filter-Secondary Menu — Figma 61276:141868. Solo tokens. Escritorio desde 768 px. */
+/* M05-Filter-Secondary Menu — Figma 61276:141868. Solo tokens. Escritorio desde 481 px. */
 .m05-filter {
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +33,7 @@
 .m05-panel__footer > * { width: 100%; }
 .m05-filter__drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 101; max-width: var(--layout-cols-size-4cols); overflow-y: auto; }
 
-@media (min-width: 768px) {
+@media (min-width: 481px) {
   .m05-filter { flex-wrap: nowrap; }
   .m05-filter__left { display: flex; align-items: center; gap: var(--spacers-fixed-fx-7); }
   .m05-filter__applied { order: 0; width: auto; }

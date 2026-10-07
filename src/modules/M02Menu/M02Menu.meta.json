@@ -192,7 +192,7 @@
     "Móvil: barra (X · Brand Logo · MagnifyingGlass, Bag) · 5 × mobile_menu_accordion · acordeón de idioma"
   ],
   "behavior": [
-    "Breakpoint a 1024 px.",
+    "Breakpoint a 960 px.",
     "En móvil los acordeones se abren y cierran de forma independiente.",
     "En móvil el menú ocupa al menos el alto de la pantalla y el idioma queda al pie."
   ],

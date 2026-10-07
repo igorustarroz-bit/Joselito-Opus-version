@@ -1,4 +1,4 @@
-/* M13-Hero-Homepagehero — Figma 58182:4353. Solo tokens. Escritorio desde 1024 px. */
+/* M13-Hero-Homepagehero — Figma 58182:4353. Solo tokens. Escritorio desde 960 px. */
 .m13-hero {
   position: relative;
   display: flex;
@@ -36,7 +36,7 @@
 .m13-hero.has-toast::before { content: ''; flex: 1; }
 .m13-hero.has-toast .m13-hero__content { flex: 1; justify-content: center; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m13-hero { padding: var(--spacers-fixed-fx-12) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-12); }
   .m13-hero__content { align-self: center; width: var(--layout-cols-size-8cols); }
   .m13-hero.has-toast { justify-content: center; padding-bottom: var(--spacers-fixed-fx-12); }

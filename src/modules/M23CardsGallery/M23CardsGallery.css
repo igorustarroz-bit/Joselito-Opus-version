@@ -1,4 +1,4 @@
-/* M23-Cards-Gallery — Figma 60054:12474. Solo tokens. Escritorio desde 1024 px. */
+/* M23-Cards-Gallery — Figma 60054:12474. Solo tokens. Escritorio desde 960 px. */
 .m23-gallery { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m23-gallery__title { padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-default) 0; }
 .m23-gallery__track {
@@ -51,7 +51,7 @@
 .m23-lightbox__caption { display: flex; flex-direction: column; align-items: center; gap: var(--spacers-fixed-fx-1); margin: 0; text-align: center; }
 .m23-lightbox__caption span:first-child { color: var(--texts-neutral-2); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m23-gallery__title { padding-top: var(--spacers-fixed-fx-11); }
   .m23-gallery__track { padding: var(--spacers-fixed-fx-15) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-16); }
   .m23-gallery__track > li.is-vertical { width: var(--layout-cols-size-2cols); }

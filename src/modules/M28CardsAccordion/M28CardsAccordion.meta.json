@@ -118,7 +118,7 @@
   "behavior": [
     "Carrusel: tarjetas centradas con scroll-snap; flechas desplazan una tarjeta y se desactivan en los extremos.",
     "Acordeón: pulsar una pestaña la abre (solo una abierta).",
-    "Breakpoint a 1024 px."
+    "Breakpoint a 960 px."
   ],
   "content": [
     {

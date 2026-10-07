@@ -81,7 +81,7 @@ export default function M18BannersFullScreenSlider({ kind = 'Producto', slides, 
         <div className="m18-slider__bg" aria-hidden="true">
           {list.map((s, i) => s.image && (
             <picture key={i} className={i === current || (!slide.image && s.image === bg) ? 'is-active' : ''}>
-              {s.imageMobile && <source media="(max-width: 1023px)" srcSet={s.imageMobile} />}
+              {s.imageMobile && <source media="(max-width: 959px)" srcSet={s.imageMobile} />}
               <img src={s.image} alt="" />
             </picture>
           ))}

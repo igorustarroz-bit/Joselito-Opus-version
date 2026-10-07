@@ -146,7 +146,7 @@
   "behavior": [
     "El carrusel se desplaza con scroll horizontal (scroll-snap).",
     "Pulsar o Enter en una tarjeta abre el visor; Esc lo cierra y las flechas del teclado cambian de imagen.",
-    "Breakpoint a 1024 px."
+    "Breakpoint a 960 px."
   ],
   "content": [
     {

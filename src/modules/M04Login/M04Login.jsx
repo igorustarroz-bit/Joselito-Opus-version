@@ -11,7 +11,7 @@ import './M04Login.css';
 const PROVIDERS = [{ text: 'ENTRA CON SHOPIFY' }, { text: 'ENTRA CON GOOGLE' }];
 
 /**
- * Pantalla de acceso. Escritorio (desde 1024 px): medio a la izquierda (mitad de la pantalla) y el
+ * Pantalla de acceso. Escritorio (desde 960 px): medio a la izquierda (mitad de la pantalla) y el
  * formulario centrado a la derecha, con la M01-Navigation (Grey) por encima. Móvil: solo el formulario.
  */
 export default function M04Login({

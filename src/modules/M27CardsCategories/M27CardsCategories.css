@@ -1,4 +1,4 @@
-/* M27-Cards-Categories — Figma 58163:40311. Solo tokens. Escritorio desde 1024 px. */
+/* M27-Cards-Categories — Figma 58163:40311. Solo tokens. Escritorio desde 960 px. */
 .m27-categories { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m27-categories__title { padding: var(--layout-spacers-responsive-11) var(--layout-grids-wrapper-default) 0; }
 .m27-categories__content { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-10); padding: var(--layout-spacers-responsive-11) 0; }
@@ -19,6 +19,6 @@
 .m27-categories__track > li { flex: 0 0 auto; width: var(--layout-cols-size-4cols); scroll-snap-align: start; }
 .m27-categories__arrows { display: flex; justify-content: space-between; padding: 0 var(--layout-grids-wrapper-default); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m27-categories__content { gap: var(--spacers-fixed-fx-11); }
 }

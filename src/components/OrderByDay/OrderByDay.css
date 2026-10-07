@@ -15,4 +15,4 @@
   list-style: none;
   overflow-x: auto;
 }
-@media (max-width: 767px) { .order-by-day__cards { grid-auto-columns: 60%; scroll-snap-type: x mandatory; } .order-by-day__cards > li { scroll-snap-align: start; } }
+@media (max-width: 480.98px) { .order-by-day__cards { grid-auto-columns: 60%; scroll-snap-type: x mandatory; } .order-by-day__cards > li { scroll-snap-align: start; } }

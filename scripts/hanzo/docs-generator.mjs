@@ -27,11 +27,11 @@ const LANG = args.lang || cfg.docsLang || 'es';
 const T = {
   es: { intro: 'Introducción', demo: 'Demo', anatomy: 'Anatomía', themes: 'Subtemas', behavior: 'Comportamiento', variants: 'Variantes y tamaños',
     tokens: 'Tokens', props: 'Propiedades', content: 'Guía de contenido', a11y: 'Accesibilidad', related: 'Componentes relacionados',
-    name: 'Nombre', desc: 'Descripción', def: 'Por defecto', control: 'Control', field: 'Campo', max: 'Límite', notes: 'Notas', usage: 'Uso',
+    layout: 'Layout y columnas', layoutType: 'Tipo (guía «Módulos por layout»)', variant: 'Variante', piece: 'Pieza', columns: 'Columnas', name: 'Nombre', desc: 'Descripción', def: 'Por defecto', control: 'Control', field: 'Campo', max: 'Límite', notes: 'Notas', usage: 'Uso',
     defaultTheme: 'Subtema por defecto', supported: 'Subtemas soportados', placeholders: 'Pendientes / placeholders', figma: 'Figma', none: '—' },
   en: { intro: 'Introduction', demo: 'Demo', anatomy: 'Anatomy', themes: 'Subthemes', behavior: 'Behavior', variants: 'Variants and sizes',
     tokens: 'Tokens', props: 'Properties', content: 'Content guidelines', a11y: 'Accessibility', related: 'Related components',
-    name: 'Name', desc: 'Description', def: 'Default', control: 'Control', field: 'Field', max: 'Limit', notes: 'Notes', usage: 'Usage',
+    layout: 'Layout and columns', layoutType: 'Type', variant: 'Variant', piece: 'Piece', columns: 'Columns', name: 'Name', desc: 'Description', def: 'Default', control: 'Control', field: 'Field', max: 'Limit', notes: 'Notes', usage: 'Usage',
     defaultTheme: 'Default subtheme', supported: 'Supported subthemes', placeholders: 'Pending / placeholders', figma: 'Figma', none: '—' },
 }[LANG];
 
@@ -49,6 +49,8 @@ function sections(m, demo, variantBlock) {
     `## ${T.themes}`, m.subthemes ? `${T.defaultTheme}: \`${m.subthemes.default ?? 'inherit'}\`\n\n${T.supported}: ${(m.subthemes.supported || []).map((s) => `\`${s}\``).join(', ') || T.none}\n\n${m.subthemes.notes || ''}` : `_${T.none}_`,
     `## ${T.behavior}`, Array.isArray(m.behavior) ? list(m.behavior) : (m.behavior || `_${T.none}_`),
     `## ${T.variants}`, variantBlock,
+    ...(m.layout ? [`## ${T.layout}`, `${T.layoutType}: **${m.layout.type || '—'}**${m.layout.grid ? `\n\n${m.layout.grid}` : ''}`,
+      ...(m.layout.columns?.length ? [table([T.variant, T.piece, T.columns], m.layout.columns.map((c) => [c.variant || '', c.piece || '', c.columns || '']))] : [])] : []),
     `## ${T.tokens}`, table([T.name, 'Token', T.usage], tokenRows),
     `## ${T.props}`, table([T.name, T.desc, T.def, T.control], (m.props || []).map((p) => [p.name, p.description, p.default ?? '', p.control || p.type || ''])),
     ...(m.content?.length ? [`## ${T.content}`, table([T.field, T.max, T.notes], m.content.map((c) => [c.field, c.maxChars ? `${c.maxChars}` : '', c.notes || '']))] : []),

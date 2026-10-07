@@ -1,4 +1,4 @@
-/* M09-ContentStack-Text+ Image — Figma 58468:60216. Solo tokens. Escritorio desde 1024 px. */
+/* M09-ContentStack-Text+ Image — Figma 58468:60216. Solo tokens. Escritorio desde 960 px. */
 .m09-stack {
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 .m09-stack__number { color: var(--texts-neutral-3); }
 .m09-stack.is-expanded .m09-stack__number { order: 3; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m09-stack { padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default); }
   .m09-stack.is-expanded {
     flex-direction: row;

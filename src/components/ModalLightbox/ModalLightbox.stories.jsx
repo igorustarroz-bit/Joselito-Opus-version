@@ -17,7 +17,7 @@ export const DesktopBasic = { args: { status: 'Basic' } };
 export const DesktopTicket = { args: { status: 'Ticket' } };
 export const DesktopList = { args: { status: 'List' } };
 export const DesktopVideo = { args: { status: 'Video' } };
-/** Device=Mobile: 342 px de ancho (la barra Collapsed oculta la foto por debajo de 768 px). */
+/** Device=Mobile: 342 px de ancho (la barra Collapsed oculta la foto por debajo de 481 px). */
 export const MobileBasic = { args: { status: 'Basic' }, decorators: [(Story) => <div style={{ width: 342 }}><Story /></div>] };
 export const MobileCollapsed = { args: { status: 'Collapsed' }, decorators: [(Story) => <div style={{ width: 342 }}><Story /></div>] };
 

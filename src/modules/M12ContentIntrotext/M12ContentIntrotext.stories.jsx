@@ -8,7 +8,7 @@ export default {
 };
 
 export const Default = {};
-/** Device=Desktop (desde 1024 px): cajas en fila. */
+/** Device=Desktop (desde 960 px): cajas en fila. */
 export const Desktop = {};
 /** Device=Mobile (ver con el viewport XS): cajas apiladas. */
 export const Mobile = {};

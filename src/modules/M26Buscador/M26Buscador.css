@@ -1,4 +1,4 @@
-/* M26-Buscador — Figma 61439:232705. Solo tokens. Escritorio desde 1024 px. */
+/* M26-Buscador — Figma 61439:232705. Solo tokens. Escritorio desde 960 px. */
 .m26-search { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m26-search__top { display: flex; justify-content: flex-end; padding: var(--layout-spacers-responsive-8) var(--layout-spacers-responsive-8) 0; }
 .m26-search__field {
@@ -30,7 +30,7 @@
 .m26-search__label { color: var(--texts-neutral-1); text-transform: uppercase; }
 .m26-search__clear { display: none; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m26-search__top { justify-content: center; }
   .m26-search__list { gap: var(--layout-spacers-responsive-3); }
   .m26-search__clear { display: inline-flex; }

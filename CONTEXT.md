@@ -31,6 +31,7 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 - [ ] Imágenes de las páginas de templates (Sprints 1-4) aún sin inventariar: hacerlo (images.js por página) al empezar la Fase 5 y repetir la misma vía.
 
 ## 7. Decisiones y notas
+- 2026-10-07 — **Breakpoints por rangos** (Igor, doc de layout de Figma `51284:8588`): XS –400 · SM 401–480 · M 481–959 · L 960–1279 · XL 1280–1619 · XXL 1620–1919 · XXXL 1920+ (hanzo.config.json → breakpoints). Módulos: escritorio desde 960. **Columnas elásticas** (grid.fluid) y módulos colocados por columnas sobre la rejilla del sistema (`meta.layout`); piloto M07. Toolbar «Columnas» en Storybook.
 - 2026-10-06 — **Arranque desde cero sobre `main`** (decisión de Igor): se vació el contenido del proyecto anterior (Joselito sobre `Joselito-Library` xtL6cbqN…, flujo v1/v2) para testar la skill desde cero. El historial completo sigue en git (último commit del proyecto anterior: `37da1b1`).
 - 2026-10-06 — Figma `Design-To-code` (`nANHdr2nKaFD6UCXAMND4s`): copia de Joselito basada en la plantilla Hanzo → `figma.source = hanzo-template`, nivel A. Librería no publicada → `use_figma` en solo lectura.
 - 2026-10-06 — Plan Figma: se asume HanzoStudio (Pro, asiento Full) — `whoami` no indica el team del fichero; confirmar.

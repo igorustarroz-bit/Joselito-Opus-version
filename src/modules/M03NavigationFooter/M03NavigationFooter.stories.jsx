@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = {};
-/** Device=Desktop (desde 1024 px): columnas de enlaces, newsletter, barra legal y sellos. */
+/** Device=Desktop (desde 960 px): columnas de enlaces, newsletter, barra legal y sellos. */
 export const Desktop = {};
 /** Device=Mobile (ver con el viewport XS): secciones en acordeón. */
 export const Mobile = {};

@@ -11,7 +11,7 @@ export default {
 
 const onHero = (Story) => <div style={{ background: `center / cover url(${hero})`, minHeight: 200 }}><Story /></div>;
 export const Default = {};
-/** Device=Desktop (desde 1024 px) · Mode=Light */
+/** Device=Desktop (desde 960 px) · Mode=Light */
 export const DesktopLight = {};
 export const DesktopDark = { args: { mode: 'Dark' }, decorators: [onHero] };
 export const DesktopGrey = { args: { mode: 'Grey' }, decorators: [(Story) => <div style={{ background: 'var(--backgrounds-neutral-1)' }}><Story /></div>] };

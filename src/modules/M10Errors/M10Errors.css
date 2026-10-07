@@ -1,4 +1,4 @@
-/* M10-Errors — Figma 63688:482735. Solo tokens. Escritorio desde 1024 px. */
+/* M10-Errors — Figma 63688:482735. Solo tokens. Escritorio desde 960 px. */
 .m10-errors {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 .m10-errors__title { margin: 0; color: var(--texts-neutral-2); text-transform: uppercase; font-weight: inherit; }
 .m10-errors__desc { margin: 0; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m10-errors { padding-bottom: var(--spacers-fixed-fx-13); }
   .m10-errors__picture { width: var(--layout-cols-size-4cols-1-gutter); padding-bottom: var(--spacers-fixed-fx-11); }
   .m10-errors__content { max-width: none; }

@@ -9,7 +9,7 @@ export default {
 };
 
 export const Default = {};
-/** Device=Desktop (desde 1024 px) · Type=One line: fila centrada de subnavigation-item. */
+/** Device=Desktop (desde 960 px) · Type=One line: fila centrada de subnavigation-item. */
 export const DesktopOneLine = {};
 /** Device=Desktop · Type=Dropdown · Open=Yes: filtros con caret y panel con lista y foto. */
 export const DesktopDropdownOpen = { args: { type: 'Dropdown', defaultOpen: true } };

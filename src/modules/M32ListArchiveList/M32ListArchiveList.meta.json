@@ -108,7 +108,7 @@
   ],
   "behavior": [
     "Al pasar el ratón o enfocar una entrada se vuelve activa y, si trae images, se muestran sus fotos.",
-    "Por debajo de 1024 px la lista se apila con separadores y las fotos se ocultan."
+    "Por debajo de 960 px la lista se apila con separadores y las fotos se ocultan."
   ],
   "content": [
     {
@@ -133,7 +133,7 @@
     "Figma: gap 12 sin variable → FX-3.",
     "Figma: la propiedad se llama 'Property 1' en vez de 'Device'.",
     "Figma: en móvil las etiquetas dicen 'Collection 2020' y en escritorio 'Collection 2008'.",
-    "El bloque cambia a fila desde 768; el módulo fuerza la pila hasta 1024."
+    "El bloque cambia a fila desde 481; el módulo fuerza la pila hasta 960."
   ],
   "codePath": "src/modules/M32ListArchiveList/M32ListArchiveList.jsx"
 }

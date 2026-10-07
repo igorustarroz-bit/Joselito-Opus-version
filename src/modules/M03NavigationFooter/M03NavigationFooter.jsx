@@ -56,7 +56,7 @@ function Seals() {
 }
 
 /**
- * Pie de página. Escritorio (desde 1024 px): cuatro columnas de enlaces; newsletter con frase destacada,
+ * Pie de página. Escritorio (desde 960 px): cuatro columnas de enlaces; newsletter con frase destacada,
  * hoja animada y empresa/contacto/redes; barra legal con idioma; sellos. Móvil: secciones en acordeón.
  * `media` = vídeo o imagen central (en Figma es un relleno de vídeo).
  */

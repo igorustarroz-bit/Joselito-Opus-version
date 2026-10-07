@@ -165,7 +165,7 @@
     "Aspect Ratio 3:4"
   ],
   "behavior": [
-    "Breakpoint a 1024 px: en móvil se apila y los botones ocupan el ancho (el primero solo, el resto en dos columnas)."
+    "Breakpoint a 960 px: en móvil se apila y los botones ocupan el ancho (el primero solo, el resto en dos columnas)."
   ],
   "content": [
     {

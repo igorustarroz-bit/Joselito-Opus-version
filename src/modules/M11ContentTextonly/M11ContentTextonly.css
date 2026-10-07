@@ -1,4 +1,4 @@
-/* M11-Content-Textonly — Figma 58163:39972. Solo tokens. Escritorio desde 1024 px. */
+/* M11-Content-Textonly — Figma 58163:39972. Solo tokens. Escritorio desde 960 px. */
 .m11-text {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 .m11-text__cols { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
 .m11-text__slot { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-9); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m11-text { gap: var(--spacers-fixed-fx-4); padding: var(--spacers-fixed-fx-16) var(--layout-grids-wrapper-default); }
   .m11-text__box { gap: var(--spacers-fixed-fx-4); }
   /* 2-column */

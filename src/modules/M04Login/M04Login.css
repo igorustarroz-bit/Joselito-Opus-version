@@ -1,4 +1,4 @@
-/* M04-Login — Figma 63727:483351. Solo tokens. Escritorio desde 1024 px. */
+/* M04-Login — Figma 63727:483351. Solo tokens. Escritorio desde 960 px. */
 .m04-login { position: relative; display: flex; box-sizing: border-box; width: 100%; min-height: 100dvh; background: var(--backgrounds-base); color: var(--texts-base); }
 .m04-login__nav { position: absolute; top: 0; left: 0; z-index: 1; }
 .m04-login__media { display: none; background: var(--backgrounds-neutral-1); }
@@ -7,10 +7,10 @@
 .m04-login__form .form__header { align-items: center; text-align: center; }
 .m04-login__form .form__inputs { gap: var(--spacers-fixed-fx-7); }
 .m04-login__submit { width: 100%; }
-.m04-login__providers { flex-wrap: nowrap; }
-.m04-login__providers > * { flex: 1; }
+.m04-login__providers { flex-wrap: wrap; }
+.m04-login__providers > * { flex: 1 1 auto; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m04-login.has-photo .m04-login__media { display: block; flex: 1; height: auto; align-self: stretch; }
   .m04-login__modal { padding: 0; }
   .m04-login__slot { max-width: var(--layout-cols-size-4cols-1-gutter); }

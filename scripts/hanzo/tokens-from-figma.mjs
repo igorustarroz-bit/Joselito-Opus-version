@@ -108,20 +108,28 @@ for (const c of cols.filter((c) => c.role === 'base')) {
   block(':root', c.vars.map((v) => `${cssName[`${c.name}::${v[0]}`]}: ${fmt(v[1], v[0], valuesFor(c, v)[0])};`));
 }
 
+// Rango de cada breakpoint: el modo de Figma se llama por el ancho de su frame de ejemplo (1024, 1440…),
+// pero el cambio de valores ocurre donde empieza su RANGO (hanzo.config.json → breakpoints: {"1024": 960}).
+const bpMin = (w) => Number(cfg.breakpoints?.[String(w)] ?? w);
+// Columnas elásticas (hanzo.config.json → grid.fluid): los anchos "N columnas" se calculan con la rejilla
+// real (ancho disponible − márgenes − gutters) en lugar de fijar el px del frame de ejemplo.
+const FLUID = cfg.grid?.fluid ? new RegExp(cfg.grid.fluidVars || 'Cols Size/|Viewport-width/Size') : null;
+const isFluid = (p) => FLUID && FLUID.test(p);
 const breakpoints = [];
 if (responsive) {
   const order = responsive.modes.map((m, i) => ({ m, i, w: modeWidth(m) })).sort((a, b) => a.w - b.w);
-  for (const o of order) breakpoints.push({ name: slug(String(o.m).split(/\s*-\s*/)[0]) || `bp${o.w}`, label: o.m, width: o.w });
+  for (const o of order) breakpoints.push({ name: slug(String(o.m).split(/\s*-\s*/)[0]) || `bp${o.w}`, label: o.m, width: o.w, min: bpMin(o.w) });
   L.push(`/* ${responsive.name} — mobile-first. Base: ${order[0].m}. */`);
   order.forEach((o, k) => {
     const lines = [];
     for (const v of responsive.vars) {
+      if (isFluid(v[0])) continue;
       const vals = valuesFor(responsive, v);
       const cur = fmt(v[1], v[0], vals[o.i]);
       if (k === 0 || cur !== fmt(v[1], v[0], vals[order[k - 1].i])) lines.push(`${cssName[`${responsive.name}::${v[0]}`]}: ${cur};`);
     }
     if (k === 0) block(':root', lines);
-    else if (lines.length) { L.push(`@media (min-width: ${o.w}px) {`); block(':root', lines, '  '); L.push('}', ''); }
+    else if (lines.length) { L.push(`@media (min-width: ${bpMin(o.w)}px) {${bpMin(o.w) !== o.w ? ` /* ${o.m}: rango desde ${bpMin(o.w)} px */` : ''}`); block(':root', lines, '  '); L.push('}', ''); }
   });
 }
 
@@ -133,8 +141,46 @@ if (grids.length) {
   grids.forEach((g, k) => {
     const lines = [`--grid-columns: ${g.col.count};`, `--grid-gutter: ${g.col.gutter}px;`, `--grid-margin: ${g.col.offset || 0}px;`];
     if (k === 0) block(':root', lines);
-    else { L.push(`@media (min-width: ${g.w}px) {`); block(':root', lines, '  '); L.push('}', ''); }
+    else { L.push(`@media (min-width: ${bpMin(g.w)}px) {`); block(':root', lines, '  '); L.push('}', ''); }
   });
+}
+
+// Columnas elásticas: una sola definición con calc() que se apoya en --grid-columns, el margen y el gutter
+// de cada breakpoint. Se valida contra los valores de Figma en el ancho de cada frame de ejemplo.
+if (FLUID && responsive) {
+  const gName = (cfg.grid?.gutter || '--layout-grids-gutter'), wName = (cfg.grid?.wrapper || '--layout-grids-wrapper-default');
+  const full = `(var(--grid-width) - 2 * var(${wName}))`;
+  const cols = (n) => `min(var(--grid-col) * ${n} + var(${gName}) * ${n - 1}, ${full})`;
+  const formula = (p) => {
+    let m;
+    if (/Viewport-width\/Size$/.test(p)) return { css: 'var(--grid-width)', js: (W) => W };
+    if ((m = p.match(/(\d+)cols?-(\d+)-?gutter$/i))) return { css: `calc(${cols(+m[1])} - var(${gName}) * ${m[2]})`, js: (W, u, g, w) => Math.min(u * m[1] + g * (m[1] - 1), W - 2 * w) - g * m[2] };
+    if ((m = p.match(/gutter(\d+)cols?$/i))) return { css: `calc(${cols(+m[1])} + var(${gName}) * 2)`, js: (W, u, g, w) => Math.min(u * m[1] + g * (m[1] - 1), W - 2 * w) + 2 * g };
+    if ((m = p.match(/wrapper(\d+)-?cols?$/i))) return { css: `calc(var(${wName}) + ${cols(+m[1])} + var(${gName}))`, js: (W, u, g, w) => w + Math.min(u * m[1] + g * (m[1] - 1), W - 2 * w) + g };
+    if ((m = p.match(/(\d+)cols?$/i))) return { css: `calc(${cols(+m[1])})`, js: (W, u, g, w) => Math.min(u * m[1] + g * (m[1] - 1), W - 2 * w) };
+    return null;
+  };
+  const varOf = (re) => responsive.vars.find((v) => re.test(v[0]));
+  const gV = varOf(/Grids\/Gutter$/), wV = varOf(/Grids\/Wrapper-Default$/);
+  const lines = [`--grid-col: calc((var(--grid-width) - 2 * var(${wName}) - (var(--grid-columns) - 1) * var(${gName})) / var(--grid-columns));`];
+  for (const v of responsive.vars.filter((v) => isFluid(v[0]))) {
+    const f = formula(v[0]);
+    if (!f) { warnings.push(`Columna elástica sin fórmula para ${v[0]}: se deja fija`); continue; }
+    responsive.modes.forEach((mode, i) => {
+      const W = modeWidth(mode), g = valuesFor(responsive, gV)[i], w = valuesFor(responsive, wV)[i];
+      const n = grids.find((x) => x.w === W)?.col?.count || 12; const u = (W - 2 * w - (n - 1) * g) / n;
+      const want = valuesFor(responsive, v)[i], got = f.js(W, u, g, w);
+      if (typeof want === 'number' && Math.abs(want - got) > 1) warnings.push(`${v[0]} en ${mode}: Figma ${want} ≠ rejilla ${got.toFixed(1)}`);
+    });
+    lines.push(`${cssName[`${responsive.name}::${v[0]}`]}: ${f.css};`);
+  }
+  L.push('/* Columnas elásticas (grid.fluid): calculadas con la rejilla real; validadas contra Figma.',
+    '   --grid-width = ancho de la página (100vw). Dentro de un contenedor (container-type: inline-size), un hijo',
+    '   con [data-grid-scope] recalcula las columnas con el ancho de ese contenedor (sin barra de scroll; p. ej. Storybook). */',
+    "@property --grid-width { syntax: '<length>'; inherits: true; initial-value: 0px; }");
+  block(':root', ['--grid-width: 100vw;']);
+  block('[data-grid-scope]', ['--grid-width: 100cqw;']);
+  block(':root, [data-grid-scope]', lines);
 }
 
 const themes = [];
@@ -206,7 +252,7 @@ if (!args['no-tailwind']) {
     '/* Solo colores semánticos: los colores se aplican siempre vía tokens semánticos. */', '', '@theme inline {'];
   if (breakpoints.length) {
     W.push('  --breakpoint-*: initial;');
-    for (const b of breakpoints.slice(1)) W.push(`  --breakpoint-${b.name}: ${b.width}px;`);
+    for (const b of breakpoints.slice(1)) W.push(`  --breakpoint-${b.name}: ${b.min ?? b.width}px;`);
   }
   for (const c of cols) for (const [p, t] of c.vars) {
     const n = cssName[`${c.name}::${p}`];

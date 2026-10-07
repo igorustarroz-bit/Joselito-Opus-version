@@ -3,10 +3,10 @@
 
 @theme inline {
   --breakpoint-*: initial;
-  --breakpoint-sm: 480px;
-  --breakpoint-m: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1440px;
+  --breakpoint-sm: 401px;
+  --breakpoint-m: 481px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1620px;
   --breakpoint-xxxl: 1920px;
   --font-title: var(--tipography-font-family-title);

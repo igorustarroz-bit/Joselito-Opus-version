@@ -59,7 +59,7 @@
     "3 × Input"
   ],
   "behavior": [
-    "Columnas iguales desde 768 px; apilados por debajo."
+    "Columnas iguales desde 481 px; apilados por debajo."
   ],
   "content": [],
   "a11y": [
@@ -72,7 +72,7 @@
   "images": [],
   "placeholders": [],
   "notes": [
-    "Figma: no hay variante móvil; se apilan por debajo de 768 px (propuesta)."
+    "Figma: no hay variante móvil; se apilan por debajo de 481 px (propuesta)."
   ],
   "codePath": "src/components/Row3Input/Row3Input.jsx"
 }

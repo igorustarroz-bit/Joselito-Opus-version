@@ -1,4 +1,4 @@
-/* M02-Menu — Figma 58182:4350. Solo tokens. Escritorio desde 1024 px. */
+/* M02-Menu — Figma 58182:4350. Solo tokens. Escritorio desde 960 px. */
 .m02-menu { width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m02-menu__desktop { display: none; }
 .m02-menu__mobile { display: flex; flex-direction: column; min-height: 100dvh; }
@@ -42,7 +42,7 @@
 .m02-menu__feature-texts { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-2); }
 .m02-menu__feature-text { margin: 0; color: var(--texts-neutral-2); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m02-menu__desktop { display: block; }
   .m02-menu__mobile { display: none; }
 }

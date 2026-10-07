@@ -2,7 +2,7 @@
 .go-back { display: flex; align-items: center; gap: var(--spacers-fixed-fx-5); width: 100%; color: var(--texts-base); }
 .go-back .button-icon { --bi-size: var(--layout-button-xs-size); }
 .go-back__text { min-width: 0; }
-@media (min-width: 768px) {
+@media (min-width: 481px) {
   .go-back { gap: var(--spacers-fixed-fx-6); }
   .go-back .button-icon { --bi-size: var(--layout-button-s-size); }
 }

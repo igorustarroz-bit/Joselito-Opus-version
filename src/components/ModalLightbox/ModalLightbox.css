@@ -49,4 +49,4 @@
 .modal-collapsed__img { display: none; flex: 0 0 auto; width: var(--spacers-fixed-fx-9); }
 .modal-collapsed__texts { display: flex; flex-direction: column; min-width: 0; }
 .modal-collapsed__price { color: var(--texts-neutral-2); }
-@media (min-width: 768px) { .modal-collapsed__img { display: block; } }
+@media (min-width: 481px) { .modal-collapsed__img { display: block; } }

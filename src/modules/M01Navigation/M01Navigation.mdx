@@ -34,10 +34,10 @@ El modo fija el subtema en la raíz (Figma tiene modos explícitos por variante)
 
 ## Comportamiento
 
-- Breakpoint a 1024 px (LG): por debajo, versión móvil.
+- Breakpoint a 960 px (LG): por debajo, versión móvil.
 - El logo siempre queda centrado (absoluto).
 - Dark/Grey son transparentes: colocar sobre un hero.
-- El paso a escritorio depende del ancho de la propia cabecera (container query, contenido ≥ 960 px ≈ viewport 1024): en contenedores estrechos se queda en móvil. El centro (FX-18) está reservado al logo y el gap del menú baja a FX-3 por debajo de 1200 px de contenido, para que el menú nunca pise el logo.
+- El paso a escritorio depende del ancho de la propia cabecera (container query, contenido ≥ 880 px, que coincide con el inicio del rango L a 960): en contenedores estrechos se queda en móvil. El centro está reservado al logo (FX-17, FX-18 desde 1000 px de contenido) y el gap del menú crece con el ancho (FX-2 → FX-3 → FX-5), para que el menú nunca pise el logo.
 
 ## Variantes y tamaños
 

@@ -95,7 +95,7 @@
     "Card Product vertical × N"
   ],
   "behavior": [
-    "1 columna en móvil, 2 desde 768 px y 3 desde 1024 px."
+    "1 columna en móvil, 2 desde 481 px y 3 desde 960 px."
   ],
   "content": [
     {
@@ -120,7 +120,7 @@
   "notes": [
     "Figma: separación de 24 px en la cabecera sin variable → FX-6.",
     "Figma: en móvil los nombres son 'Chorizo Etxebarri x Joselito' y en escritorio 'Jamón Gran Reserva' sobre fotos de chorizo.",
-    "Código: se añade un paso de 2 columnas en tablet (768 px)."
+    "Código: se añade un paso de 2 columnas en tablet (desde 481 px)."
   ],
   "codePath": "src/modules/M19CardGrid/M19CardGrid.jsx"
 }

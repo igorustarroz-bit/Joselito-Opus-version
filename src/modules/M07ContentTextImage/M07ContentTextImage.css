@@ -1,4 +1,4 @@
-/* M07-Content-Text+Image — Figma 58363:34365. Solo tokens. Escritorio desde 1024 px. */
+/* M07-Content-Text+Image — Figma 58363:34365. Solo tokens. Escritorio desde 960 px. */
 .m07-content {
   display: flex;
   flex-direction: column;
@@ -22,20 +22,28 @@
 .m07-content--half { padding: 0; gap: 0; }
 .m07-content--half .m07-content__text { padding: var(--spacers-fixed-fx-6) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-10); }
 
-@media (min-width: 1024px) {
+/* Escritorio (rango L, desde 960 px): rejilla del sistema (--grid-columns = 12) y cada pieza en sus columnas de Figma.
+   Left·H: imagen 1–6 · texto 8–12 · Right·H: texto 1–5 · imagen 7–12
+   Left·V: imagen 1–5 · texto 7–11 · Right·V: texto 2–6 · imagen 8–12   (las columnas libres separan las piezas) */
+@media (min-width: 960px) {
   .m07-content {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    column-gap: var(--layout-grids-gutter);
     align-items: center;
-    justify-content: space-between;
-    gap: var(--spacers-fixed-fx-9);
     padding: var(--spacers-fixed-fx-15) var(--layout-grids-wrapper-default);
   }
-  .m07-content--horizontal .m07-content__media { width: var(--layout-cols-size-6cols); }
-  .m07-content--vertical .m07-content__media { width: var(--layout-cols-size-5cols); }
-  .m07-content--vertical.is-left { padding-left: var(--layout-cols-size-wrapper1-col); }
-  .m07-content--vertical.is-right { padding-right: var(--layout-cols-size-wrapper1-col); }
-  .m07-content__text { width: var(--layout-cols-size-5cols); }
-  .m07-content--half { align-items: stretch; gap: 0; padding: 0; }
+  .m07-content > * { grid-row: 1; }
+  .m07-content--horizontal.is-left .m07-content__media { grid-column: 1 / 7; }
+  .m07-content--horizontal.is-left .m07-content__text { grid-column: 8 / 13; }
+  .m07-content--horizontal.is-right .m07-content__text { grid-column: 1 / 6; }
+  .m07-content--horizontal.is-right .m07-content__media { grid-column: 7 / 13; }
+  .m07-content--vertical.is-left .m07-content__media { grid-column: 1 / 6; }
+  .m07-content--vertical.is-left .m07-content__text { grid-column: 7 / 12; }
+  .m07-content--vertical.is-right .m07-content__text { grid-column: 2 / 7; }
+  .m07-content--vertical.is-right .m07-content__media { grid-column: 8 / 13; }
+  /* Half (a sangre): mitad y mitad del viewport, sin columnas; el texto se centra en su mitad. */
+  .m07-content--half { display: flex; flex-direction: row; align-items: stretch; gap: 0; padding: 0; }
   .m07-content--half .m07-content__media { flex: 1; width: 50%; }
   .m07-content--half .m07-content__text {
     flex: 1;

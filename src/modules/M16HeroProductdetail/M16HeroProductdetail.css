@@ -1,4 +1,4 @@
-/* M16-Hero-Productdetail — Figma 61365:56297. Solo tokens. Escritorio desde 1024 px. */
+/* M16-Hero-Productdetail — Figma 61365:56297. Solo tokens. Escritorio desde 960 px. */
 .m16-detail {
   position: relative;
   display: grid;
@@ -46,7 +46,7 @@
 .m16-detail__thumbs button:focus { outline: none; }
 .m16-detail__thumbs button:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m16-detail { grid-template-columns: 1fr 1fr; grid-template-areas: 'gallery info'; min-height: 100dvh; }
   .m16-detail__nav { display: flex; position: absolute; top: 0; left: 0; z-index: 2; }
   .m16-detail__gallery { aspect-ratio: auto; border-right: 1px solid var(--strokes-icons-neutral-3); }

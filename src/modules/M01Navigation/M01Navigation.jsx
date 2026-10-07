@@ -10,7 +10,7 @@ const MENU = [{ text: 'Tienda' }, { text: 'Origen' }, { text: 'Excelencia' }, { 
 const TOOLS = [{ text: 'Buscar', showIcon: true }, { text: 'Cuenta' }, { text: 'Cesta (3)' }];
 
 /**
- * Cabecera principal. Escritorio (desde 1024 px): menú a la izquierda, logo centrado y herramientas
+ * Cabecera principal. Escritorio (desde 960 px): menú a la izquierda, logo centrado y herramientas
  * (Buscar, Cuenta, Cesta) a la derecha. Móvil: hamburguesa, logo centrado, buscar y cesta.
  * `mode` = eje Mode de Figma (fija el subtema; Dark y Grey sin fondo para ir sobre un hero).
  */

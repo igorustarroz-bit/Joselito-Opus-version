@@ -35,7 +35,7 @@ Hereda el subtema de la página.
 
 ## Comportamiento
 
-- Breakpoint a 1024 px; en móvil se apila en el orden del contenido (Right: texto primero).
+- Escritorio desde 960 px (inicio del rango L): rejilla de 12 columnas del sistema; cada pieza ocupa las columnas de Figma (ver Layout). En móvil y tablet se apila en el orden del contenido (Right: texto primero).
 
 ## Variantes y tamaños
 
@@ -84,6 +84,24 @@ Hereda el subtema de la página.
   </div>
 </div>
 
+## Layout y columnas
+
+Tipo (guía «Módulos por layout»): **Columnas (Left/Right) · A sangre (Half)**
+
+12 columnas desde 960 px (rango L); en móvil y tablet se apila a ancho completo.
+
+| Variante | Pieza | Columnas |
+| --- | --- | --- |
+| Left · Horizontal | Imagen 4:3 | 1–6 |
+| Left · Horizontal | Texto | 8–12 (7 libre) |
+| Right · Horizontal | Texto | 1–5 (6 libre) |
+| Right · Horizontal | Imagen 4:3 | 7–12 |
+| Left · Vertical | Imagen 3:4 | 1–5 |
+| Left · Vertical | Texto | 7–11 (6 y 12 libres) |
+| Right · Vertical | Texto | 2–6 (1 y 7 libres) |
+| Right · Vertical | Imagen 3:4 | 8–12 |
+| Half-Left / Half-Right | Imagen / texto | 50 % / 50 % a sangre; texto centrado en su mitad (no alineado a columnas) |
+
 ## Tokens
 
 | Nombre | Token | Uso |
@@ -93,11 +111,9 @@ Hereda el subtema de la página.
 | color | `--strokes-icons-neutral-3` | borde inferior |
 | spacing | `--spacers-fixed-fx-15` | padding vertical escritorio |
 | spacing | `--layout-grids-wrapper-default` | márgenes laterales |
-| spacing | `--layout-cols-size-wrapper1-col` | margen del lado de la imagen vertical |
-| spacing | `--layout-cols-size-6cols / 5cols` | anchos de imagen y texto |
-| spacing | `--spacers-fixed-fx-9 / fx-10` | separación imagen-texto |
 | spacing | `--spacers-fixed-fx-6 / fx-7` | separaciones del texto |
 | spacing | `--layout-spacers-responsive-15 / fx-16` | padding del texto en Half |
+| spacing | `--grid-columns / --layout-grids-gutter` | rejilla de columnas (separación entre piezas = columnas libres) |
 
 ## Propiedades
 

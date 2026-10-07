@@ -1,4 +1,4 @@
-/* M12-Content-Introtext — Figma 58153:32094. Solo tokens. Escritorio desde 1024 px. */
+/* M12-Content-Introtext — Figma 58153:32094. Solo tokens. Escritorio desde 960 px. */
 .m12-intro {
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
 .m12-intro__box a:focus { outline: none; }
 .m12-intro__box a:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m12-intro { padding: var(--layout-spacers-responsive-16) var(--layout-grids-wrapper-default); }
   .m12-intro__inner { gap: var(--layout-spacers-responsive-6); width: var(--layout-cols-size-8cols); }
   .m12-intro__texts { align-self: center; gap: var(--spacers-fixed-fx-6); width: var(--layout-cols-size-6cols); }

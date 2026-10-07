@@ -1,4 +1,4 @@
-/* M15-Hero-Sectionhero — Figma 58508:35830. Solo tokens. Escritorio desde 1024 px. */
+/* M15-Hero-Sectionhero — Figma 58508:35830. Solo tokens. Escritorio desde 960 px. */
 .m15-hero {
   position: relative;
   display: flex;
@@ -32,7 +32,7 @@
 }
 .m15-hero--none-producto { padding: var(--layout-spacers-responsive-16) var(--layout-grids-wrapper-default) var(--layout-spacers-responsive-12); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m15-hero__content { width: var(--layout-cols-size-8cols); }
   .m15-hero--none .m15-hero__content { gap: var(--spacers-fixed-fx-7); }
   .m15-hero--none-producto .m15-hero__content { width: var(--layout-cols-size-6cols); }

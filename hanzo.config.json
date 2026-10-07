@@ -28,7 +28,8 @@
   "grid": {
     "gutter": "--layout-grids-gutter",
     "wrapper": "--layout-grids-wrapper-default",
-    "maxWidth": "1920px"
+    "maxWidth": "1920px",
+    "fluid": true
   },
   "paths": {
     "tokens": "src/tokens",
@@ -47,5 +48,15 @@
       "Georgia": "system"
     },
     "extra": {}
+  },
+  "breakpoints": {
+    "$comment": "Inicio del rango de cada modo responsive (documentación de layout de Figma, node 51284:8588): XS –400 · SM 401–480 · M 481–959 · L 960–1279 · XL 1280–1619 · XXL 1620–1919 · XXXL 1920+.",
+    "390": 0,
+    "480": 401,
+    "768": 481,
+    "1024": 960,
+    "1440": 1280,
+    "1620": 1620,
+    "1920": 1920
   }
 }

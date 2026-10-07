@@ -1,4 +1,4 @@
-/* M25-Cards-Links — Figma 58182:4396. Solo tokens. Escritorio desde 1024 px. */
+/* M25-Cards-Links — Figma 58182:4396. Solo tokens. Escritorio desde 960 px. */
 .m25-links {
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 .m25-links__track:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
 .m25-links .card-carrusel__title { white-space: pre-line; }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m25-links--many { gap: var(--layout-spacers-responsive-13); }
   .m25-links--many .m25-links__track > li { width: var(--layout-cols-size-9cols); }
 }

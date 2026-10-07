@@ -1,4 +1,4 @@
-/* M21-List-Numbers — Figma 58627:43781. Solo tokens. Escritorio desde 1024 px. */
+/* M21-List-Numbers — Figma 58627:43781. Solo tokens. Escritorio desde 960 px. */
 .m21-numbers {
   position: relative;
   box-sizing: border-box;
@@ -12,7 +12,7 @@
 .m21-numbers__list > li { display: flex; justify-content: center; padding: var(--layout-spacers-responsive-17) var(--layout-grids-wrapper-default); }
 .m21-numbers__list > li + li { border-top: 1px solid var(--strokes-icons-neutral-3); }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m21-numbers { display: grid; grid-template-columns: repeat(var(--m21-cols, 3), minmax(0, 1fr)); }
   .m21-numbers__title { grid-column: 1 / -1; grid-row: 1; }
   .m21-numbers__list { display: contents; }

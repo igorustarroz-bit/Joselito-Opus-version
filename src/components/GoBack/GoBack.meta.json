@@ -89,7 +89,7 @@
     "Texto Body/02"
   ],
   "behavior": [
-    "Escritorio: botón S (48 px) y separación 24 px; móvil (por debajo de 768 px): botón XS (40 px) y 20 px."
+    "Escritorio: botón S (48 px) y separación 24 px; móvil (por debajo de 481 px): botón XS (40 px) y 20 px."
   ],
   "content": [],
   "a11y": [

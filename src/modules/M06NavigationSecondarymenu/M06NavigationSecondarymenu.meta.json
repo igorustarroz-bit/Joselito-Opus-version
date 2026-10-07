@@ -178,7 +178,7 @@
     "Dropdown móvil: título Body/04 + Plus/Minus · menu-item-list × N"
   ],
   "behavior": [
-    "Breakpoint a 1024 px.",
+    "Breakpoint a 960 px.",
     "En móvil, la fila One line se desplaza en horizontal.",
     "El primer filtro de escritorio y el título de móvil abren y cierran el desplegable."
   ],

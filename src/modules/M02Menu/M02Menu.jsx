@@ -30,7 +30,7 @@ const PHOTOS = [
 const ACTIVE = { Collapsed: [-1, -1], Product: [0, 0], About: [1, 2] };
 
 /**
- * Menú desplegable de la cabecera. Escritorio (desde 1024 px): M01-Navigation con la sección activa y,
+ * Menú desplegable de la cabecera. Escritorio (desde 960 px): M01-Navigation con la sección activa y,
  * debajo, el panel de la sección (Product: lista de enlaces + foto + destacado; About: fila de fotos).
  * Móvil: barra con cierre, logo, buscar y cesta; acordeones por sección y selector de idioma al final.
  */

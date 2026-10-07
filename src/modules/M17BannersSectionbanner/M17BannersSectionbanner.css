@@ -1,4 +1,4 @@
-/* M17-Banners-Sectionbanner — Figma 58182:4380. Solo tokens. Escritorio desde 1024 px. */
+/* M17-Banners-Sectionbanner — Figma 58182:4380. Solo tokens. Escritorio desde 960 px. */
 .m17-banner { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
 .m17-banner p, .m17-banner h2 { margin: 0; }
 .m17-banner ul { margin: 0; padding: 0; list-style: none; }
@@ -37,7 +37,7 @@
 .m17-banner--animated-product.is-animated .m17-banner__shade, .m17-banner--animated-product.is-animated .m17-banner__content { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .m17-banner--animated-product, .m17-banner__shade, .m17-banner__content { transition: none !important; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m17-banner--borders { padding: var(--layout-grids-wrapper-default); }
   .m17-banner--borders .m17-banner__frame { flex-direction: row; justify-content: flex-end; align-items: flex-end; padding: var(--spacers-fixed-fx-9); aspect-ratio: 16 / 9; overflow: hidden; }
   .m17-banner--borders .m17-banner__media.aspect-ratio { position: absolute; aspect-ratio: auto; height: 100%; }

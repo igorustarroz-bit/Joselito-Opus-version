@@ -7,7 +7,7 @@
   color: var(--texts-base);
 }
 .card-product--horizontal { flex-direction: row; align-items: center; gap: var(--spacers-fixed-fx-6); }
-@media (min-width: 768px) {
+@media (min-width: 481px) {
   .card-product--horizontal { gap: var(--spacers-fixed-fx-7); }
 }
 .card-product__photo { position: relative; width: 100%; }

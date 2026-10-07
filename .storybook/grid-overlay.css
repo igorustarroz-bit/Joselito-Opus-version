@@ -1,0 +1,4 @@
+/* Superposición de columnas (toolbar «Columnas»): la misma rejilla que usan los módulos (.wrapper + .grid-12). */
+.sb-grid-overlay { position: absolute; inset: 0; z-index: 9999; pointer-events: none; }
+.sb-grid-overlay .wrapper { height: 100%; max-width: none; grid-template-rows: 100%; grid-auto-rows: 0; overflow: hidden; }
+.sb-grid-overlay span { background: rgba(226, 54, 54, 0.1); box-shadow: inset 1px 0 rgba(226, 54, 54, 0.35), inset -1px 0 rgba(226, 54, 54, 0.35); }

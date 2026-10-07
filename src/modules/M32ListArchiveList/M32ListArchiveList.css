@@ -1,14 +1,14 @@
-/* M32-List-ArchiveList — Figma 59895:46608. Solo tokens. Escritorio desde 1024 px. */
+/* M32-List-ArchiveList — Figma 59895:46608. Solo tokens. Escritorio desde 960 px. */
 .m32-archive { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); border-bottom: 1px solid var(--strokes-icons-neutral-3); padding: var(--layout-spacers-responsive-10) var(--layout-grids-wrapper-default); }
 .m32-archive__inner { display: flex; flex-direction: column; gap: var(--layout-spacers-responsive-15); }
 .m32-archive__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .m32-archive__pic { display: none; }
-/* Móvil y tableta: bloques apilados con separador (el bloque cambia a fila desde 768; aquí se fuerza la pila). */
-@media (max-width: 1023.98px) {
+/* Móvil y tableta: bloques apilados con separador (el bloque cambia a fila desde 481; aquí se fuerza la pila). */
+@media (max-width: 959.98px) {
   .m32-archive .block-archive { flex-direction: column; align-items: stretch; gap: var(--spacers-fixed-fx-2); color: var(--texts-base); padding: var(--layout-spacers-responsive-3) 0 var(--layout-spacers-responsive-4); border-top: 1px solid var(--strokes-icons-neutral-3); }
   .m32-archive .block-archive .block-archive__label { color: var(--texts-neutral-2); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .m32-archive__inner { display: grid; gap: 0; position: relative; }
   .m32-archive__inner > * { grid-area: 1 / 1; }
   .m32-archive__heading { align-self: start; }
