@@ -1,0 +1,68 @@
+{
+ "id": "60603:144636",
+ "name": "M22-NavigationDirectLink",
+ "type": "COMPONENT_SET",
+ "fp": "a5b4b2d3",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Sold Out": "BOOLEAN",
+  "Arrow": "BOOLEAN",
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ],
+  "Type": [
+   "Deploy",
+   "Direct Link"
+  ],
+  "State": [
+   "Default",
+   "Hover",
+   "Deployed"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=Direct Link, State=Default"
+  },
+  {
+   "name": "Device=Mobile, Type=Direct Link, State=Default"
+  },
+  {
+   "name": "Device=Mobile, Type=Deploy, State=Default"
+  },
+  {
+   "name": "Device=Desktop, Type=Direct Link, State=Hover"
+  },
+  {
+   "name": "Device=Desktop, Type=Deploy, State=Default"
+  },
+  {
+   "name": "Device=Desktop, Type=Deploy, State=Hover"
+  },
+  {
+   "name": "Device=Desktop, Type=Deploy, State=Deployed"
+  },
+  {
+   "name": "Device=Mobile, Type=Deploy, State=Deployed"
+  }
+ ],
+ "spec": "Desktop 1440×128 pad 0/Wrapper-Default: fila pad fx-9 gap Resp/6: [Labels/02 Neutral 2 296 · gap 141 · Title/02] · Tag XL Aseptic 'SOLD OUT' · Button-Icon Primary S (Direct Link) o Terciary S +/− (Deploy). Hover: modo Dark - Red - Primary. Deployed: texto Body/03 + Aspect Ratio 3:4 (gap 47/24). Mobile: etiqueta sobre título.",
+ "deps": [
+  "Tag",
+  "Button-Icon",
+  "Aspect Ratio",
+  "M22-NavigationDirectLink"
+ ],
+ "images": [
+  "ff7cd014d789405b68041b059983fcbd231c54ad"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 141/24/47 sin variable"
+   }
+  ]
+ }
+}

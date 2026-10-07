@@ -1,0 +1,130 @@
+{/* Generado por scripts/docs-generator.mjs desde M22NavigationDirectLink.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M22NavigationDirectLink.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M22-NavigationDirectLink
+
+## Introducción
+
+Fila de listado con etiqueta y título: enlace directo (flecha, SOLD OUT opcional) o desplegable con texto e imagen. Se resalta en rojo al pasar el ratón.
+
+
+Figma: `M22-NavigationDirectLink` (`60603:144636`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Labels/02 · Title/02
+- Tag XL (SOLD OUT)
+- Button-Icon (flecha o +/−)
+- Desplegado: Body/03 + Aspect Ratio 3:4
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `dark-red-primary`
+
+Hover usa dark-red-primary.
+
+## Comportamiento
+
+- Toda la fila es clicable (el área del botón se extiende).
+- Deploy abre y cierra con aria-expanded.
+- Breakpoint a 1024 px.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Direct Link, State=Default
+
+<Canvas of={Stories.DirectLink} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Direct Link, State=Hover
+
+<Canvas of={Stories.DirectLinkHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Deploy, State=Default
+
+<Canvas of={Stories.Deploy} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Deploy, State=Hover
+
+<Canvas of={Stories.DeployHover} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Deploy, State=Deployed
+
+<Canvas of={Stories.Deployed} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo (rojo en hover) |
+| color | `--texts-neutral-2` | etiqueta |
+| color | `--strokes-icons-neutral-3` | separador |
+| spacing | `--spacers-fixed-fx-9 / fx-4` | padding vertical escritorio / móvil |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
+| spacing | `--layout-spacers-responsive-6` | entre elementos de la fila |
+| spacing | `--layout-cols-size-3cols + gutter1col` | columna de la etiqueta |
+| spacing | `--layout-cols-size-5cols / 2cols` | texto e imagen desplegados |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Direct Link` o `Deploy`. | Direct Link | inline-radio |
+| state | Fuerza `Default`, `Hover` o `Deployed` (documentación). Sin state es interactivo. | — | inline-radio |
+| soldOut | Etiqueta SOLD OUT (Direct Link, escritorio). | true | boolean |
+| showArrow | Muestra la flecha (Direct Link). | true | boolean |
+| label / title | Etiqueta y título. | COLECCIÓN 2018 / Fernando Bellver | text |
+| href | Destino (Direct Link). | # | text |
+| text / image / imageAlt | Contenido desplegado (Deploy). | texto e imagen de ejemplo | text |
+| open / defaultOpen / onToggle | Estado del desplegable. | false | boolean |
+| soldOutText | Texto de la etiqueta. | SOLD OUT | text |
+| theme | Subtema (en hover dark-red-primary). | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Título |  | Nombre corto. |
+
+## Accesibilidad
+
+- El botón o enlace lleva el nombre de la fila.
+- Título como h3 (va dentro de una sección).
+
+## Componentes relacionados
+
+- Tag
+- Button-Icon
+- Aspect Ratio
+
+## Pendientes / placeholders
+
+- undefined: undefined

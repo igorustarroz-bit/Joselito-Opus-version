@@ -1,0 +1,42 @@
+/* M22-NavigationDirectLink — Figma 60603:144636. Solo tokens. Escritorio desde 1024 px. */
+.m22-row {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--layout-grids-wrapper-default);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+  transition: background-color 0.2s ease;
+}
+.m22-row p, .m22-row h3 { margin: 0; }
+.m22-row__title { font-weight: inherit; }
+.m22-row__main { display: flex; align-items: center; gap: var(--layout-spacers-responsive-6); padding: var(--spacers-fixed-fx-4) 0; }
+.m22-row__head { display: flex; flex: 1; flex-direction: column; gap: var(--spacers-fixed-fx-1); min-width: 0; }
+.m22-row__label { color: var(--texts-neutral-2); }
+.m22-row__tag { display: none; }
+/* Toda la fila es clicable: el área del botón o enlace se extiende a la fila */
+.m22-row__icon { position: static; }
+.m22-row__icon::after { content: ''; position: absolute; inset: 0; }
+.m22-row--deploy.is-open .m22-row__icon::after { bottom: auto; height: var(--spacers-fixed-fx-14); }
+.m22-row__link:focus { outline: none; }
+.m22-row__link:focus-visible::after { outline: 1px solid var(--strokes-icons-base); outline-offset: calc(-1 * var(--spacers-fixed-fx-1)); }
+.m22-row__panel { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); padding-bottom: var(--spacers-fixed-fx-4); }
+.m22-row__panel[hidden] { display: none; }
+.m22-row__img { width: var(--layout-cols-size-3cols); }
+
+@media (min-width: 1024px) {
+  .m22-row__main { padding: var(--spacers-fixed-fx-9) 0; }
+  .m22-row__head { flex-direction: row; align-items: center; gap: 0; }
+  .m22-row__label { flex: 0 0 auto; width: var(--layout-cols-size-3cols); margin-right: var(--layout-cols-size-gutter1col); }
+  .m22-row__tag { display: inline-flex; }
+  .m22-row__panel {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: calc(var(--layout-cols-size-3cols) + var(--layout-cols-size-gutter1col));
+    padding-bottom: var(--spacers-fixed-fx-9);
+  }
+  .m22-row__text { width: var(--layout-cols-size-5cols); }
+  .m22-row__img { width: var(--layout-cols-size-2cols); }
+}

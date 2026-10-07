@@ -1,0 +1,200 @@
+{
+  "name": "M22NavigationDirectLink",
+  "kind": "module",
+  "title": "M22-NavigationDirectLink",
+  "figma": {
+    "nodeId": "60603:144636",
+    "name": "M22-NavigationDirectLink",
+    "fp": "a5b4b2d3"
+  },
+  "description": "Fila de listado con etiqueta y título: enlace directo (flecha, SOLD OUT opcional) o desplegable con texto e imagen. Se resalta en rojo al pasar el ratón.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ],
+    "Type": [
+      "Deploy",
+      "Direct Link"
+    ],
+    "State": [
+      "Default",
+      "Hover",
+      "Deployed"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DirectLink",
+      "title": "Device=Desktop, Type=Direct Link, State=Default"
+    },
+    {
+      "story": "DirectLinkHover",
+      "title": "Device=Desktop, Type=Direct Link, State=Hover"
+    },
+    {
+      "story": "Deploy",
+      "title": "Device=Desktop, Type=Deploy, State=Default"
+    },
+    {
+      "story": "DeployHover",
+      "title": "Device=Desktop, Type=Deploy, State=Hover"
+    },
+    {
+      "story": "Deployed",
+      "title": "Device=Desktop, Type=Deploy, State=Deployed"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Direct Link` o `Deploy`.",
+      "default": "Direct Link",
+      "control": "inline-radio"
+    },
+    {
+      "name": "state",
+      "figma": "State",
+      "description": "Fuerza `Default`, `Hover` o `Deployed` (documentación). Sin state es interactivo.",
+      "default": "—",
+      "control": "inline-radio"
+    },
+    {
+      "name": "soldOut",
+      "figma": "Sold Out",
+      "description": "Etiqueta SOLD OUT (Direct Link, escritorio).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showArrow",
+      "figma": "Arrow",
+      "description": "Muestra la flecha (Direct Link).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "label / title",
+      "description": "Etiqueta y título.",
+      "default": "COLECCIÓN 2018 / Fernando Bellver",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Destino (Direct Link).",
+      "default": "#",
+      "control": "text"
+    },
+    {
+      "name": "text / image / imageAlt",
+      "description": "Contenido desplegado (Deploy).",
+      "default": "texto e imagen de ejemplo",
+      "control": "text"
+    },
+    {
+      "name": "open / defaultOpen / onToggle",
+      "description": "Estado del desplegable.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "soldOutText",
+      "description": "Texto de la etiqueta.",
+      "default": "SOLD OUT",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (en hover dark-red-primary).",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo (rojo en hover)"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiqueta"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separador"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-9 / fx-4",
+        "usage": "padding vertical escritorio / móvil"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--layout-spacers-responsive-6",
+        "usage": "entre elementos de la fila"
+      },
+      {
+        "token": "--layout-cols-size-3cols + gutter1col",
+        "usage": "columna de la etiqueta"
+      },
+      {
+        "token": "--layout-cols-size-5cols / 2cols",
+        "usage": "texto e imagen desplegados"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-red-primary"
+    ],
+    "notes": "Hover usa dark-red-primary."
+  },
+  "anatomy": [
+    "Labels/02 · Title/02",
+    "Tag XL (SOLD OUT)",
+    "Button-Icon (flecha o +/−)",
+    "Desplegado: Body/03 + Aspect Ratio 3:4"
+  ],
+  "behavior": [
+    "Toda la fila es clicable (el área del botón se extiende).",
+    "Deploy abre y cierra con aria-expanded.",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Nombre corto."
+    }
+  ],
+  "a11y": [
+    "El botón o enlace lleva el nombre de la fila.",
+    "Título como h3 (va dentro de una sección)."
+  ],
+  "related": [
+    "Tag",
+    "Button-Icon",
+    "Aspect Ratio"
+  ],
+  "images": [
+    "ff7cd014d789405b68041b059983fcbd231c54ad"
+  ],
+  "placeholders": [
+    "Texto desplegado de relleno (lorem ipsum) copiado de Figma."
+  ],
+  "notes": [
+    "Figma: separación de 141 px entre etiqueta y título → columna de 3cols + gutter.",
+    "Figma: gaps 24/47 sin variable → FX-6/FX-9.",
+    "Figma: el máster se usa a sí mismo como dependencia (instancia anidada)."
+  ],
+  "codePath": "src/modules/M22NavigationDirectLink/M22NavigationDirectLink.jsx"
+}

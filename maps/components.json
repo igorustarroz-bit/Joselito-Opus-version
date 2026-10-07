@@ -368,5 +368,10 @@
     "name": "M21ListNumbers",
     "path": "src/modules/M21ListNumbers/M21ListNumbers.jsx",
     "fp": "25bf605b"
+  },
+  "60603:144636": {
+    "name": "M22NavigationDirectLink",
+    "path": "src/modules/M22NavigationDirectLink/M22NavigationDirectLink.jsx",
+    "fp": "a5b4b2d3"
   }
 }
