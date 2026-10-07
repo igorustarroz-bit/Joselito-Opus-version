@@ -1,0 +1,118 @@
+{
+  "name": "M21ListNumbers",
+  "kind": "module",
+  "title": "M21-List-Numbers",
+  "figma": {
+    "nodeId": "58627:43781",
+    "name": "M21-List-Numbers",
+    "fp": "25bf605b"
+  },
+  "description": "Cifras destacadas en columnas separadas por líneas verticales (escritorio) o apiladas (móvil), con cabecera opcional.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "showTitle",
+      "figma": "Titulo",
+      "description": "Muestra la cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "items",
+      "description": "Cifras: number y text.",
+      "default": "100.000+, +500.000, +/-3",
+      "control": "object"
+    },
+    {
+      "name": "eyebrow",
+      "description": "Texto de la cabecera.",
+      "default": "100 g de Jamón Joselito aportan",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separadores y borde"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-17",
+        "usage": "padding vertical de cada cifra"
+      },
+      {
+        "token": "--layout-spacers-responsive-11",
+        "usage": "padding superior de la cabecera"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title",
+    "Block Big Numbers × N"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px; las líneas verticales llegan de arriba abajo, cabecera incluida."
+  ],
+  "content": [
+    {
+      "field": "Cifra",
+      "notes": "Número corto con unidad o signo."
+    }
+  ],
+  "a11y": [
+    "Lista semántica."
+  ],
+  "related": [
+    "Block Big Numbers",
+    "M20-List"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: la cabecera dice '100 g de Jamón Joselito aportan' pero las cifras hablan de hectáreas y árboles (contenido de otro bloque).",
+    "Figma: 'hectareas' sin tilde en la primera cifra.",
+    "Figma: las líneas verticales son elementos sueltos; en código son bordes de las celdas."
+  ],
+  "codePath": "src/modules/M21ListNumbers/M21ListNumbers.jsx"
+}

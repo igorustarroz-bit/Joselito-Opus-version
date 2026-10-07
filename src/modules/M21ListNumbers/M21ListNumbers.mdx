@@ -1,0 +1,90 @@
+{/* Generado por scripts/docs-generator.mjs desde M21ListNumbers.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M21ListNumbers.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M21-List-Numbers
+
+## Introducción
+
+Cifras destacadas en columnas separadas por líneas verticales (escritorio) o apiladas (móvil), con cabecera opcional.
+
+
+Figma: `M21-List-Numbers` (`58627:43781`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Title
+- Block Big Numbers × N
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Breakpoint a 1024 px; las líneas verticales llegan de arriba abajo, cabecera incluida.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop
+
+<Canvas of={Stories.Desktop} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile
+
+<Canvas of={Stories.Mobile} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | separadores y borde |
+| color | `--backgrounds-base` | fondo |
+| spacing | `--layout-spacers-responsive-17` | padding vertical de cada cifra |
+| spacing | `--layout-spacers-responsive-11` | padding superior de la cabecera |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| showTitle | Muestra la cabecera. | true | boolean |
+| items | Cifras: number y text. | 100.000+, +500.000, +/-3 | object |
+| eyebrow | Texto de la cabecera. | 100 g de Jamón Joselito aportan | text |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Cifra |  | Número corto con unidad o signo. |
+
+## Accesibilidad
+
+- Lista semántica.
+
+## Componentes relacionados
+
+- Block Big Numbers
+- M20-List

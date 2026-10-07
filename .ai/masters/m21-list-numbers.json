@@ -1,0 +1,36 @@
+{
+ "id": "58627:43781",
+ "name": "M21-List-Numbers",
+ "type": "COMPONENT_SET",
+ "fp": "25bf605b",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Titulo": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile"
+  },
+  {
+   "name": "Device=Desktop"
+  }
+ ],
+ "spec": "Desktop 1440×496, borde Neutral 3: Title (sin título ni enlace) pad Resp/11/Wrapper-Default; Content: 3 celdas 480×404 pad Resp/17/Wrapper-Default con Block Big Numbers centrado; líneas verticales Neutral 3 a toda altura en x 480 y 960. Mobile: celdas apiladas 390×190 con bordes entre ellas.",
+ "deps": [
+  "Title",
+  "Block Big Numbers"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 8/-1/35 sin variable (sin efecto)"
+   }
+  ]
+ }
+}
