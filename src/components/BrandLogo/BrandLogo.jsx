@@ -39,5 +39,5 @@ export function Logo({ name, width, title, className = '', ...rest }) {
   if (!Svg) return null;
   const a11y = title ? { role: 'img', 'aria-label': title } : { 'aria-hidden': true };
   const kind = name.startsWith('firma-') ? 'signature' : MONO(name) ? 'mono' : 'color';
-  return <Svg className={['logo', `logo--${kind}`, className].filter(Boolean).join(' ')} width={width} focusable="false" {...a11y} {...rest} />;
+  return <Svg className={["logo", `logo--${kind}`, className].filter(Boolean).join(" ")} width={width} height={undefined} focusable="false" {...a11y} {...rest} />;
 }

@@ -76,7 +76,7 @@ export default function M03NavigationFooter({
     <form className="m03-footer__form" onSubmit={(e) => { e.preventDefault(); onSubscribe?.(email); }}>
       <p className="m03-footer__label ts-body-03">{newsletterLabel}</p>
       <div className="m03-footer__fields">
-        <InputAndButton size="Small" label="Email" onChange={(e) => setEmail(e.target.value)} onSubmit={() => onSubscribe?.(email)} />
+        <InputAndButton size="Small" label="Email" showInfo={false} onChange={(e) => setEmail(e.target.value)} onSubmit={() => onSubscribe?.(email)} />
         <CheckboxLabel size="Small" text={privacyText} />
       </div>
     </form>
