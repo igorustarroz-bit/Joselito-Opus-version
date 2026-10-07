@@ -29,7 +29,7 @@
 .m13-hero__down { display: inline-flex; margin: 0; padding: 0; border: 0; background: none; color: var(--strokes-icons-base); cursor: pointer; }
 .m13-hero__down:focus { outline: none; }
 .m13-hero__down:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }
-.m13-hero__toast { position: relative; z-index: 1; margin-top: var(--spacers-fixed-fx-4); }
+.m13-hero__toast { position: relative; z-index: 1; margin-top: var(--spacers-fixed-fx-4); text-align: left; }
 
 /* Con Toast: titular centrado y toast al pie */
 .m13-hero.has-toast { justify-content: space-between; padding-bottom: var(--layout-grids-wrapper-default); }

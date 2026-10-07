@@ -1,0 +1,200 @@
+{
+  "name": "M14HeroSectionheader",
+  "kind": "module",
+  "title": "M14-Hero-Sectionheader",
+  "figma": {
+    "nodeId": "58508:6679",
+    "name": "M14-Hero-Sectionheader",
+    "fp": "c614caad"
+  },
+  "description": "Cabecera de sección a media pantalla: volver, título grande, texto, enlaces y botones a la izquierda; imagen vertical a la derecha. Tres presentaciones: tienda o restaurante (rojo), experiencia (oscuro) y cocinero (gris con firma).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Property": [
+      "Experiencias",
+      "Tiendas y Restaurantes",
+      "Cocinero"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "TiendasYRestaurantes",
+      "title": "Device=Desktop, Property=Tiendas y Restaurantes"
+    },
+    {
+      "story": "Experiencias",
+      "title": "Device=Desktop, Property=Experiencias"
+    },
+    {
+      "story": "Cocinero",
+      "title": "Device=Desktop, Property=Cocinero"
+    }
+  ],
+  "props": [
+    {
+      "name": "property",
+      "figma": "Property",
+      "description": "`Tiendas y Restaurantes`, `Experiencias` o `Cocinero`: fija subtema y contenido de ejemplo.",
+      "default": "Tiendas y Restaurantes",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showLabels",
+      "figma": "Show Labels",
+      "description": "Muestra la etiqueta sobre el título.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showButton",
+      "figma": "Show Button",
+      "description": "Muestra los botones.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showToast",
+      "figma": "Show toast",
+      "description": "Muestra un Toast sobre la imagen.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "toast",
+      "description": "Props del Toast.",
+      "default": "—",
+      "control": "object"
+    },
+    {
+      "name": "title / label / text / back",
+      "description": "Textos (sustituyen a los del preset).",
+      "default": "según property",
+      "control": "text"
+    },
+    {
+      "name": "links / buttons",
+      "description": "Enlaces (Button-Action-Link) y botones (el primero Primary, el resto Terciary).",
+      "default": "según property",
+      "control": "object"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Imagen 3:4.",
+      "default": "según property",
+      "control": "text"
+    },
+    {
+      "name": "signature",
+      "description": "Nombre del logo de firma (firma-…).",
+      "default": "firma-ferran-adria en Cocinero",
+      "control": "text"
+    },
+    {
+      "name": "backHref / onBack",
+      "description": "Destino o acción de volver.",
+      "default": "#",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema (por defecto el del preset).",
+      "default": "según property",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo (según subtema)"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "título y etiqueta"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separador"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "padding de las mitades"
+      },
+      {
+        "token": "--layout-spacers-responsive-4",
+        "usage": "aire a la derecha del texto"
+      },
+      {
+        "token": "--layout-spacers-responsive-6 / 9 / 18 / 8",
+        "usage": "separaciones verticales"
+      },
+      {
+        "token": "--spacers-fixed-fx-6 / fx-2",
+        "usage": "entre enlaces / botones"
+      },
+      {
+        "token": "--layout-cols-size-5cols",
+        "usage": "ancho de la imagen"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "dark-red-primary",
+    "supported": [
+      "dark-red-primary",
+      "dark-black-neutral",
+      "light-grey"
+    ],
+    "notes": "Figma fija un modo distinto por Property."
+  },
+  "anatomy": [
+    "Go_Back",
+    "Etiqueta · Title/07 (+ firma) · Body/03 · Button-Action-Link",
+    "Button Primary + Terciary",
+    "Aspect Ratio 3:4"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px: en móvil se apila y los botones ocupan el ancho (el primero solo, el resto en dos columnas)."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Dos líneas cortas."
+    }
+  ],
+  "a11y": [
+    "Título como h1.",
+    "La firma tiene nombre accesible."
+  ],
+  "related": [
+    "Go_Back",
+    "Button",
+    "Button-Action-Link",
+    "M15-Hero-Sectionhero"
+  ],
+  "images": [
+    "02820c5e5172fb35c478d827351f0d0e75c0e68f",
+    "fb29c2196a901128ef19c17cc516873670f5a7ff",
+    "5c41c4f0a506bd63ef6d49fcf487fd567946d15d"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: LABEL sin estilo de texto → Labels/02 en mayúsculas.",
+    "Figma: separaciones 10/40/24/8 sin variable → FX-2/FX-9/FX-6/FX-2.",
+    "Figma: la imagen mide 480 px (560 en Cocinero) → 5 columnas.",
+    "Figma: Experiencias usa 'TIENDAS Y RESTAURANTES' como volver (parece un copia-pega).",
+    "Figma: textos de botones en minúsculas ('carta', 'vinos', 'Comprar') → mayúsculas."
+  ],
+  "codePath": "src/modules/M14HeroSectionheader/M14HeroSectionheader.jsx"
+}

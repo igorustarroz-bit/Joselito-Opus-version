@@ -1,0 +1,43 @@
+/* M14-Hero-Sectionheader — Figma 58508:6679. Solo tokens. Escritorio desde 1024 px. */
+.m14-header { display: flex; flex-direction: column; box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m14-header p, .m14-header h1 { margin: 0; }
+.m14-header__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-spacers-responsive-18);
+  padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+}
+.m14-header__body { display: flex; flex-direction: column; gap: var(--layout-spacers-responsive-9); }
+.m14-header__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--layout-spacers-responsive-6); }
+.m14-header__label { text-transform: uppercase; }
+.m14-header__heading { position: relative; }
+.m14-header__title { font-weight: inherit; }
+.m14-header__signature { position: absolute; top: 55%; left: 40%; width: var(--layout-cols-size-2cols); pointer-events: none; }
+.m14-header__text { color: var(--texts-neutral-1); white-space: pre-line; }
+.m14-header__links { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-6); }
+.m14-header__buttons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacers-fixed-fx-2); }
+.m14-header__buttons > :first-child { grid-column: 1 / -1; }
+.m14-header__buttons > * { width: 100%; }
+.m14-header__media { position: relative; display: flex; align-items: center; justify-content: center; padding: var(--layout-grids-wrapper-default); }
+.m14-header__media .aspect-ratio { width: 100%; }
+.m14-header__toast { position: absolute; right: var(--spacers-fixed-fx-9); bottom: var(--spacers-fixed-fx-9); left: var(--spacers-fixed-fx-9); }
+
+@media (min-width: 1024px) {
+  .m14-header { flex-direction: row; }
+  .m14-header__main {
+    flex: 1;
+    justify-content: space-between;
+    gap: var(--spacers-fixed-fx-9);
+    padding: var(--layout-grids-wrapper-default);
+    border-right: 1px solid var(--strokes-icons-neutral-3);
+    border-bottom: 0;
+  }
+  .m14-header__main > * { margin-right: var(--layout-spacers-responsive-4); }
+  .m14-header__content { padding-right: var(--spacers-fixed-fx-6); }
+  .m14-header__buttons { display: flex; flex-wrap: wrap; }
+  .m14-header__buttons > * { width: auto; }
+  .m14-header__media { flex: 1; }
+  .m14-header__media .aspect-ratio { width: var(--layout-cols-size-5cols); }
+  .m14-header__toast { left: auto; width: var(--layout-cols-size-4cols-1-gutter); }
+}

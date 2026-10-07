@@ -1,0 +1,66 @@
+{
+ "id": "58508:6679",
+ "name": "M14-Hero-Sectionheader",
+ "type": "COMPONENT_SET",
+ "fp": "c614caad",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Labels": "BOOLEAN",
+  "Show toast": "BOOLEAN",
+  "Show Button": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Property": [
+   "Experiencias",
+   "Tiendas y Restaurantes",
+   "Cocinero"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Property=Tiendas y Restaurantes"
+  },
+  {
+   "name": "Device=Desktop, Property=Experiencias"
+  },
+  {
+   "name": "Device=Desktop, Property=Cocinero"
+  },
+  {
+   "name": "Device=Mobile, Property=Tiendas y Restaurantes"
+  },
+  {
+   "name": "Device=Mobile, Property=Experiencias"
+  },
+  {
+   "name": "Device=Mobile, Property=Cocinero"
+  }
+ ],
+ "spec": "Desktop 1440×800: dos mitades pad Wrapper-Default; izquierda (borde Neutral 3) columna space-between pad-right Resp/4: Go_Back · [Content gap Resp/6 pad-right fx-6: LABEL (sin estilo) · Title/07 · Body/03 Neutral 1 · enlaces Button-Action-Link L gap 24] gap Resp/9 [Button M Primary + Terciary gap fx-2]; derecha Aspect Ratio 3:4 480 (560 en Cocinero). Cocinero: firma absoluta 230 @224,158. Modos: Tiendas = Dark - Red - Primary, Experiencias = Dark - Black - Neutral, Cocinero = Light - Grey. Mobile: pad Resp/8/Wrapper-Default, gap Resp/18; botones en columna; imagen debajo.",
+ "deps": [
+  "Go_Back",
+  "Button-Action-Link",
+  "Button",
+  "Aspect Ratio",
+  "firma_ferran_adria"
+ ],
+ "images": [
+  "02820c5e5172fb35c478d827351f0d0e75c0e68f",
+  "fb29c2196a901128ef19c17cc516873670f5a7ff",
+  "5c41c4f0a506bd63ef6d49fcf487fd567946d15d"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 10/40/24/8 sin variable"
+   },
+   {
+    "code": "NO_TEXT_STYLE",
+    "msg": "LABEL sin estilo de texto"
+   }
+  ]
+ }
+}

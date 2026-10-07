@@ -328,5 +328,10 @@
     "name": "M13HeroHomepagehero",
     "path": "src/modules/M13HeroHomepagehero/M13HeroHomepagehero.jsx",
     "fp": "27e3e167"
+  },
+  "58508:6679": {
+    "name": "M14HeroSectionheader",
+    "path": "src/modules/M14HeroSectionheader/M14HeroSectionheader.jsx",
+    "fp": "c614caad"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T08:09:25.302Z",
+  "generatedAt": "2026-10-07T08:12:24.491Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1517,7 +1517,7 @@
       "builtFp": "273776b0"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M14-Hero-Sectionheader",
@@ -1536,7 +1536,8 @@
       ],
       "images": 9,
       "autolayout": "6/6",
-      "key": "module:m14-hero-sectionheader"
+      "key": "module:m14-hero-sectionheader",
+      "builtFp": "f8f154c4"
     },
     {
       "status": "todo",

@@ -1,0 +1,113 @@
+{/* Generado por scripts/docs-generator.mjs desde M14HeroSectionheader.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M14HeroSectionheader.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M14-Hero-Sectionheader
+
+## Introducción
+
+Cabecera de sección a media pantalla: volver, título grande, texto, enlaces y botones a la izquierda; imagen vertical a la derecha. Tres presentaciones: tienda o restaurante (rojo), experiencia (oscuro) y cocinero (gris con firma).
+
+
+Figma: `M14-Hero-Sectionheader` (`58508:6679`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Go_Back
+- Etiqueta · Title/07 (+ firma) · Body/03 · Button-Action-Link
+- Button Primary + Terciary
+- Aspect Ratio 3:4
+
+## Subtemas
+
+Subtema por defecto: `dark-red-primary`
+
+Subtemas soportados: `dark-red-primary`, `dark-black-neutral`, `light-grey`
+
+Figma fija un modo distinto por Property.
+
+## Comportamiento
+
+- Breakpoint a 1024 px: en móvil se apila y los botones ocupan el ancho (el primero solo, el resto en dos columnas).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Property=Tiendas y Restaurantes
+
+<Canvas of={Stories.TiendasYRestaurantes} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Property=Experiencias
+
+<Canvas of={Stories.Experiencias} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Property=Cocinero
+
+<Canvas of={Stories.Cocinero} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo (según subtema) |
+| color | `--texts-base` | título y etiqueta |
+| color | `--texts-neutral-1` | texto |
+| color | `--strokes-icons-neutral-3` | separador |
+| spacing | `--layout-grids-wrapper-default` | padding de las mitades |
+| spacing | `--layout-spacers-responsive-4` | aire a la derecha del texto |
+| spacing | `--layout-spacers-responsive-6 / 9 / 18 / 8` | separaciones verticales |
+| spacing | `--spacers-fixed-fx-6 / fx-2` | entre enlaces / botones |
+| spacing | `--layout-cols-size-5cols` | ancho de la imagen |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| property | `Tiendas y Restaurantes`, `Experiencias` o `Cocinero`: fija subtema y contenido de ejemplo. | Tiendas y Restaurantes | inline-radio |
+| showLabels | Muestra la etiqueta sobre el título. | true | boolean |
+| showButton | Muestra los botones. | true | boolean |
+| showToast | Muestra un Toast sobre la imagen. | false | boolean |
+| toast | Props del Toast. | — | object |
+| title / label / text / back | Textos (sustituyen a los del preset). | según property | text |
+| links / buttons | Enlaces (Button-Action-Link) y botones (el primero Primary, el resto Terciary). | según property | object |
+| image / imageAlt | Imagen 3:4. | según property | text |
+| signature | Nombre del logo de firma (firma-…). | firma-ferran-adria en Cocinero | text |
+| backHref / onBack | Destino o acción de volver. | # | text |
+| theme | Subtema (por defecto el del preset). | según property | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Título |  | Dos líneas cortas. |
+
+## Accesibilidad
+
+- Título como h1.
+- La firma tiene nombre accesible.
+
+## Componentes relacionados
+
+- Go_Back
+- Button
+- Button-Action-Link
+- M15-Hero-Sectionhero

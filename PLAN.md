@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 87/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 88/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -114,7 +114,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M11-Content-Textonly `58163:39972` — 5 variantes · usa: button <!-- k:module:m11-content-textonly -->
 - [x] M12-Content-Introtext `58153:32094` — 2 variantes · usa: Button-Action-Link <!-- k:module:m12-content-introtext -->
 - [x] M13-Hero-Homepagehero `58182:4353` — 4 variantes · 2 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton, Stepper_for_toast, Toast · autolayout 0/4 → análisis de geometría <!-- k:module:m13-hero-homepagehero -->
-- [ ] M14-Hero-Sectionheader `58508:6679` — 6 variantes · 9 img · usa: Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back, Tag… <!-- k:module:m14-hero-sectionheader -->
+- [x] M14-Hero-Sectionheader `58508:6679` — 6 variantes · 9 img · usa: Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back, Tag… <!-- k:module:m14-hero-sectionheader -->
 - [ ] M15-Hero-Sectionhero `58508:35830` — 12 variantes · usa: Aspect Ratio, Brand Logo, Button-Action-Link, Button-Icon, M01-Navigation, NavButton · autolayout 4/12 → análisis de geometría <!-- k:module:m15-hero-sectionhero -->
 - [ ] M16-Hero-Productdetail `61365:56297` — 4 variantes · 11 img · usa: Add_to_list, Aspect Ratio, Brand Logo, Button, Button-Action-Link, Button-Icon… · autolayout 2/4 → análisis de geometría <!-- k:module:m16-hero-productdetail -->
 - [ ] M17-Banners-Sectionbanner `58182:4380` — 8 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Tag · autolayout 6/8 → análisis de geometría <!-- k:module:m17-banners-sectionbanner -->
