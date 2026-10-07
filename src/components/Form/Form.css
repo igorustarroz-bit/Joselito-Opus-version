@@ -1,0 +1,7 @@
+/* Form — Figma 57947:46433. Solo tokens. */
+.form { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); width: 100%; margin: 0; }
+.form__header { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-4); padding-bottom: var(--spacers-fixed-fx-4); }
+.form__title { margin: 0; color: var(--texts-base); }
+.form__desc, .form__client { margin: 0; color: var(--texts-neutral-1); }
+.form__inputs { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-4); }
+.form__buttons { padding-top: var(--spacers-fixed-fx-4); }

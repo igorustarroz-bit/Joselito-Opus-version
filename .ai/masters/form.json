@@ -1,0 +1,27 @@
+{
+ "id": "57947:46433",
+ "name": "Form",
+ "type": "COMPONENT",
+ "fp": "7a67b6f5",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Inputs": "SLOT",
+  "Show Header": "BOOLEAN",
+  "Show Description": "BOOLEAN",
+  "Show Checkbox": "BOOLEAN",
+  "Show Button Row": "BOOLEAN",
+  "Title": "TEXT",
+  "Description": "TEXT",
+  "Show Client": "BOOLEAN"
+ },
+ "spec": "502 AL:V gap fx-6: Header (gap fx-4, pb fx-4: Title/01 + Body/03 Neutral 1), Client oculto, Inputs (gap fx-4, 2 Input), Checkbox-List, RowButtons (pt fx-4)",
+ "deps": [
+  "Input",
+  "Checkbox-List",
+  "RowButtons"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

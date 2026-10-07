@@ -243,5 +243,20 @@
     "name": "SendingDetails",
     "path": "src/components/SendingDetails/SendingDetails.jsx",
     "fp": "c0a0e5f9"
+  },
+  "57947:46433": {
+    "name": "Form",
+    "path": "src/components/Form/Form.jsx",
+    "fp": "7a67b6f5"
+  },
+  "63609:146051": {
+    "name": "OrderSummary",
+    "path": "src/components/OrderSummary/OrderSummary.jsx",
+    "fp": "743e6f94"
+  },
+  "63559:58027": {
+    "name": "OrderByDay",
+    "path": "src/components/OrderByDay/OrderByDay.jsx",
+    "fp": "c955e655"
   }
 }

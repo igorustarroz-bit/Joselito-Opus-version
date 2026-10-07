@@ -1,0 +1,169 @@
+{
+  "name": "Form",
+  "kind": "component",
+  "title": "Form",
+  "figma": {
+    "nodeId": "57947:46433",
+    "name": "Form",
+    "fp": "7a67b6f5"
+  },
+  "description": "Formulario genérico: título y descripción, cliente identificado opcional, campos, casillas y botones. Base de login, registro, contacto y checkout.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Contacto",
+      "title": "Ejemplo: datos de contacto"
+    },
+    {
+      "story": "ConCliente",
+      "title": "Show Client"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título (Title/01).",
+      "default": "\"Title Form\"",
+      "control": "text"
+    },
+    {
+      "name": "description",
+      "figma": "Description",
+      "description": "Descripción (Body/03).",
+      "default": "\"Description\"",
+      "control": "text"
+    },
+    {
+      "name": "showHeader",
+      "figma": "Show Header",
+      "description": "Cabecera.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showDescription",
+      "figma": "Show Description",
+      "description": "Descripción.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showClient",
+      "figma": "Show Client",
+      "description": "Cliente identificado (correo).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "client",
+      "description": "Texto del cliente.",
+      "default": "\"cliente@ejemplo.es\"",
+      "control": "text"
+    },
+    {
+      "name": "inputs",
+      "figma": "Inputs",
+      "description": "Campos (props de Input) o hijos propios (slot).",
+      "default": "2 × Label",
+      "control": "object"
+    },
+    {
+      "name": "showCheckbox",
+      "figma": "Show Checkbox",
+      "description": "Checkbox-List.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "checkboxes",
+      "description": "Textos de las casillas.",
+      "default": "[\"Label\"]",
+      "control": "object"
+    },
+    {
+      "name": "showButtonRow",
+      "figma": "Show Button Row",
+      "description": "Fila de botones (Primary envía, Secondary cancela).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "primaryText / secondaryText / onSubmit / onCancel",
+      "description": "Textos y acciones.",
+      "default": "\"Button\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "título"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "descripción y cliente"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "entre bloques"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "cabecera, campos y botones"
+      }
+    ],
+    "typography": [
+      "ts-title-01",
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cabecera",
+    "Cliente (opcional)",
+    "Campos (slot)",
+    "Checkbox-List",
+    "RowButtons"
+  ],
+  "behavior": [
+    "Ancho del contenedor; el botón Primary es submit."
+  ],
+  "content": [],
+  "a11y": [
+    "Es un form real; el título es h2; los campos tienen etiqueta."
+  ],
+  "related": [
+    "Input",
+    "Checkbox-List",
+    "RowButtons",
+    "M04-Login"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el estilo del texto del cliente no se pudo leer (capa oculta) → Body/03 Neutral 1.",
+    "Figma: hay un texto lorem ipsum oculto dentro del máster (no se construye)."
+  ],
+  "codePath": "src/components/Form/Form.jsx"
+}
