@@ -1,0 +1,22 @@
+{
+ "id": "59289:58053",
+ "name": "menu-item-list",
+ "type": "COMPONENT_SET",
+ "fp": "bfde73d4",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Text": "TEXT",
+  "Selected": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "AL:H gap fx-2; No: 'Producto' Body/03 Button/Nav/Hover/Text; Yes: ArrowRight 20 (Button/Nav/Default/Icon) + texto Button/Nav/Default/Text",
+ "deps": [
+  "ArrowRight"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}

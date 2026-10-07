@@ -1,0 +1,14 @@
+/* menu-item-list — Figma 59289:58053. Solo tokens. */
+.menu-item-list {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-2);
+  color: var(--button-nav-hover-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.menu-item-list.is-selected { color: var(--button-nav-default-text); }
+.menu-item-list.is-selected .icon { color: var(--button-nav-default-icon); }
+.menu-item-list:hover { color: var(--button-nav-default-text); }
+.menu-item-list:focus { outline: none; }
+.menu-item-list:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }

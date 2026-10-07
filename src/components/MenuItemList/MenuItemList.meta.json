@@ -1,0 +1,113 @@
+{
+  "name": "MenuItemList",
+  "kind": "component",
+  "title": "menu-item-list",
+  "figma": {
+    "nodeId": "59289:58053",
+    "name": "menu-item-list",
+    "fp": "bfde73d4"
+  },
+  "description": "Elemento de las listas de los submenús (M02-Menu): texto Body/03; el seleccionado lleva una flecha delante y color más intenso.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Selected": [
+      "No",
+      "Yes"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SelectedNo",
+      "title": "Selected=No"
+    },
+    {
+      "story": "SelectedYes",
+      "title": "Selected=Yes"
+    }
+  ],
+  "props": [
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto.",
+      "default": "\"Producto\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Destino.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "selected",
+      "figma": "Selected",
+      "description": "Elemento actual: flecha (ArrowRight 20) y color Button/Nav/Default; aria-current.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--button-nav-hover-text",
+        "usage": "texto sin seleccionar"
+      },
+      {
+        "token": "--button-nav-default-text / icon",
+        "usage": "texto e icono seleccionado; hover"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "flecha–texto"
+      }
+    ],
+    "typography": [
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Flecha ArrowRight 20 px (solo seleccionado)",
+    "Texto Body/03"
+  ],
+  "behavior": [
+    "Hover: pasa al color del seleccionado (Button/Nav/Default).",
+    "Seleccionado: flecha delante."
+  ],
+  "content": [],
+  "a11y": [
+    "Enlace con aria-current en el elemento actual.",
+    "Foco visible."
+  ],
+  "related": [
+    "M02-Menu",
+    "mobile_menu_accordion",
+    "NavButton"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: no hay estado hover; en código el hover usa el color del seleccionado (Button/Nav/Default) para dar respuesta al ratón.",
+    "Figma: Selected=No tiene un trazo inferior de 1 px sin color (no visible)."
+  ],
+  "codePath": "src/components/MenuItemList/MenuItemList.jsx"
+}

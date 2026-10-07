@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:52:17.932Z",
+  "generatedAt": "2026-10-07T06:55:58.758Z",
   "output": "react-storybook",
   "items": [
     {
@@ -607,7 +607,7 @@
       "builtFp": "ed597a3d"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "menu-item-list",
@@ -618,7 +618,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "2/2",
-      "key": "component:menu-item-list"
+      "key": "component:menu-item-list",
+      "builtFp": "27fef8e8"
     },
     {
       "status": "todo",
