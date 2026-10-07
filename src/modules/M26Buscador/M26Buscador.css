@@ -1,0 +1,38 @@
+/* M26-Buscador — Figma 61439:232705. Solo tokens. Escritorio desde 1024 px. */
+.m26-search { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m26-search__top { display: flex; justify-content: flex-end; padding: var(--layout-spacers-responsive-8) var(--layout-spacers-responsive-8) 0; }
+.m26-search__field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-2);
+  margin: 0 var(--layout-grids-wrapper-default);
+  padding: var(--layout-spacers-responsive-8) 0 var(--layout-spacers-responsive-7);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+}
+.m26-search__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.m26-search__input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--texts-base);
+  caret-color: var(--strokes-icons-neutral-2);
+  appearance: none;
+}
+.m26-search__input::placeholder { color: var(--texts-neutral-3); }
+.m26-search__input::-webkit-search-cancel-button { display: none; }
+.m26-search__input:focus { outline: none; }
+.m26-search__field:focus-within { border-bottom-color: var(--strokes-icons-base); }
+.m26-search__recent { display: flex; align-items: center; justify-content: space-between; gap: var(--layout-spacers-responsive-5); padding: var(--layout-spacers-responsive-8) var(--layout-grids-wrapper-default); }
+.m26-search__list { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacers-fixed-fx-2); }
+.m26-search__label { color: var(--texts-neutral-1); text-transform: uppercase; }
+.m26-search__clear { display: none; }
+
+@media (min-width: 1024px) {
+  .m26-search__top { justify-content: center; }
+  .m26-search__list { gap: var(--layout-spacers-responsive-3); }
+  .m26-search__clear { display: inline-flex; }
+  .m26-search__go { display: none; }
+}

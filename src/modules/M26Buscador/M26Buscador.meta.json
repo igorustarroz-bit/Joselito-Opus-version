@@ -1,0 +1,172 @@
+{
+  "name": "M26Buscador",
+  "kind": "module",
+  "title": "M26-Buscador",
+  "figma": {
+    "nodeId": "61439:232705",
+    "name": "M26-Buscador",
+    "fp": "7569808d"
+  },
+  "description": "Panel de búsqueda con campo grande, botón de cierre y búsquedas recientes.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ],
+    "Status": [
+      "Default",
+      "Typing",
+      "Filled"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Vacio",
+      "title": "Device=Desktop, Status=Default"
+    },
+    {
+      "story": "Typing",
+      "title": "Device=Desktop, Status=Typing"
+    },
+    {
+      "story": "Filled",
+      "title": "Device=Desktop, Status=Filled"
+    }
+  ],
+  "props": [
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "Fuerza el estado de Figma: Typing ('Embutid') o Filled ('Jamón'); Default o vacío = interactivo.",
+      "default": "—",
+      "control": "inline-radio"
+    },
+    {
+      "name": "showRecent",
+      "figma": "Recientes",
+      "description": "Muestra las búsquedas recientes.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "value / defaultValue / onChange",
+      "description": "Texto del campo.",
+      "default": "''",
+      "control": "text"
+    },
+    {
+      "name": "onSearch",
+      "description": "Se llama al enviar (Enter, flecha o una reciente).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "onClose",
+      "description": "Acción del cierre.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "recent / defaultRecent / onRecentChange",
+      "description": "Búsquedas recientes (el botón BORRAR las vacía).",
+      "default": "JAMÓN, LONCHEADO, EMBUTIDO",
+      "control": "object"
+    },
+    {
+      "name": "placeholder / recentLabel",
+      "description": "Textos.",
+      "default": "Buscar / Búsquedas recientes",
+      "control": "text"
+    },
+    {
+      "name": "autoFocus",
+      "description": "Enfoca el campo al montarse.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-3",
+        "usage": "placeholder"
+      },
+      {
+        "token": "--strokes-icons-neutral-2",
+        "usage": "cursor"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "línea del campo"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "etiqueta de recientes"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-8 / 7",
+        "usage": "paddings verticales"
+      },
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes laterales"
+      },
+      {
+        "token": "--layout-spacers-responsive-3 / 5",
+        "usage": "entre recientes"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Button-Icon (cierre)",
+    "Campo Title/04 + Button-Action-Link BORRAR",
+    "Labels/01 + Button-Action-Link × N · Button BORRAR / Button-Icon flecha"
+  ],
+  "behavior": [
+    "Enter o la flecha lanzan onSearch.",
+    "Las recientes rellenan el campo y buscan.",
+    "BORRAR del campo lo vacía y devuelve el foco."
+  ],
+  "content": [
+    {
+      "field": "Recientes",
+      "notes": "Palabras sueltas en mayúsculas."
+    }
+  ],
+  "a11y": [
+    "role search, campo con etiqueta oculta.",
+    "Cierre y flecha con nombre accesible."
+  ],
+  "related": [
+    "Button-Icon",
+    "Button-Action-Link",
+    "Button",
+    "M01-Navigation"
+  ],
+  "images": [],
+  "placeholders": [
+    "Falso positivo del DoD: 'placeholder' es el atributo HTML del campo de búsqueda ('Buscar'), no contenido de relleno."
+  ],
+  "notes": [
+    "Figma: separaciones 8/10/12 sin variable → FX-2/FX-2/FX-3.",
+    "Figma: el cursor de Typing es un vector; en código es el caret real del campo (Neutral 2)."
+  ],
+  "codePath": "src/modules/M26Buscador/M26Buscador.jsx"
+}

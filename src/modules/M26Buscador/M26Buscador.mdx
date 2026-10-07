@@ -1,0 +1,114 @@
+{/* Generado por scripts/docs-generator.mjs desde M26Buscador.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M26Buscador.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M26-Buscador
+
+## Introducción
+
+Panel de búsqueda con campo grande, botón de cierre y búsquedas recientes.
+
+
+Figma: `M26-Buscador` (`61439:232705`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Button-Icon (cierre)
+- Campo Title/04 + Button-Action-Link BORRAR
+- Labels/01 + Button-Action-Link × N · Button BORRAR / Button-Icon flecha
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Enter o la flecha lanzan onSearch.
+- Las recientes rellenan el campo y buscan.
+- BORRAR del campo lo vacía y devuelve el foco.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Default
+
+<Canvas of={Stories.Vacio} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Typing
+
+<Canvas of={Stories.Typing} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Status=Filled
+
+<Canvas of={Stories.Filled} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-neutral-3` | placeholder |
+| color | `--strokes-icons-neutral-2` | cursor |
+| color | `--strokes-icons-neutral-3` | línea del campo |
+| color | `--texts-neutral-1` | etiqueta de recientes |
+| spacing | `--layout-spacers-responsive-8 / 7` | paddings verticales |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
+| spacing | `--layout-spacers-responsive-3 / 5` | entre recientes |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| status | Fuerza el estado de Figma: Typing ('Embutid') o Filled ('Jamón'); Default o vacío = interactivo. | — | inline-radio |
+| showRecent | Muestra las búsquedas recientes. | true | boolean |
+| value / defaultValue / onChange | Texto del campo. | '' | text |
+| onSearch | Se llama al enviar (Enter, flecha o una reciente). | — |  |
+| onClose | Acción del cierre. | — |  |
+| recent / defaultRecent / onRecentChange | Búsquedas recientes (el botón BORRAR las vacía). | JAMÓN, LONCHEADO, EMBUTIDO | object |
+| placeholder / recentLabel | Textos. | Buscar / Búsquedas recientes | text |
+| autoFocus | Enfoca el campo al montarse. | false | boolean |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Recientes |  | Palabras sueltas en mayúsculas. |
+
+## Accesibilidad
+
+- role search, campo con etiqueta oculta.
+- Cierre y flecha con nombre accesible.
+
+## Componentes relacionados
+
+- Button-Icon
+- Button-Action-Link
+- Button
+- M01-Navigation
+
+## Pendientes / placeholders
+
+- undefined: undefined

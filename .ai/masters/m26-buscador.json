@@ -1,0 +1,54 @@
+{
+ "id": "61439:232705",
+ "name": "M26-Buscador",
+ "type": "COMPONENT_SET",
+ "fp": "7569808d",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Recientes": "BOOLEAN",
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ],
+  "Status": [
+   "Default",
+   "Typing",
+   "Filled"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Status=Default"
+  },
+  {
+   "name": "Device=Desktop, Status=Typing"
+  },
+  {
+   "name": "Device=Desktop, Status=Filled"
+  },
+  {
+   "name": "Device=Mobile, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Status=Typing"
+  },
+  {
+   "name": "Device=Mobile, Status=Filled"
+  }
+ ],
+ "spec": "Cierre Button-Icon Terciary XS (centrado en escritorio, a la derecha en móvil) pad Resp/8; campo pad Resp/8/0/Resp/7 con borde inferior Neutral 3: Title/04 (placeholder 'Buscar' Neutral 3; Typing con cursor Neutral 2) + Button-Action-Link M 'BORRAR'; recientes pad Resp/8/Wrapper-Default: Labels/01 Neutral 1 + Button-Action-Link M × 3 (gap Resp/3) · Button Terciary XS 'BORRAR' (escritorio) / Button-Icon flecha (móvil).",
+ "deps": [
+  "Button-Icon",
+  "Button-Action-Link",
+  "Button"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 8/10/12 sin variable"
+   }
+  ]
+ }
+}

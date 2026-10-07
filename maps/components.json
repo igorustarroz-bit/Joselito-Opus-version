@@ -388,5 +388,10 @@
     "name": "M25CardsLinks",
     "path": "src/modules/M25CardsLinks/M25CardsLinks.jsx",
     "fp": "37456eea"
+  },
+  "61439:232705": {
+    "name": "M26Buscador",
+    "path": "src/modules/M26Buscador/M26Buscador.jsx",
+    "fp": "7569808d"
   }
 }
