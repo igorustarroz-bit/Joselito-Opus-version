@@ -1,0 +1,143 @@
+{
+  "name": "BlockAddress",
+  "kind": "component",
+  "title": "Block Address",
+  "figma": {
+    "nodeId": "63606:143410",
+    "name": "Block Address",
+    "fp": "504ab39a"
+  },
+  "description": "Bloque de dirección para checkout y pedidos: título, dirección en varias líneas y, opcionalmente, la tarjeta de pago con su logo.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SinTarjeta",
+      "title": "Show CreditCard = false"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título (Body/03).",
+      "default": "\"Dirección de facturación\"",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Dirección; los saltos de línea se respetan.",
+      "default": "dirección del máster",
+      "control": "text"
+    },
+    {
+      "name": "showText",
+      "figma": "Show Text",
+      "description": "Muestra la dirección.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "card",
+      "figma": "Card",
+      "description": "Texto de la tarjeta.",
+      "default": "\"Visa ···· 4242\"",
+      "control": "text"
+    },
+    {
+      "name": "showCreditCard",
+      "figma": "Show CreditCard",
+      "description": "Muestra la tarjeta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "cardLogo / cardLogoAlt",
+      "description": "Logo de la tarjeta (por defecto Visa) y su alternativo.",
+      "default": "Visa",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "borde superior"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "título y tarjeta"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "dirección"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "padding vertical"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación"
+      },
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "logo–texto (8 px sin variable)"
+      }
+    ],
+    "typography": [
+      "ts-body-03",
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Borde superior",
+    "Título",
+    "Dirección",
+    "Logo de tarjeta 40 px + texto"
+  ],
+  "behavior": [
+    "Ancho del contenedor."
+  ],
+  "content": [],
+  "a11y": [
+    "El logo tiene texto alternativo."
+  ],
+  "related": [
+    "Sending Details",
+    "Order Summary",
+    "Block Row Address"
+  ],
+  "images": [
+    {
+      "hash": "e526e4023728c4640f86b641b12e882159a35883",
+      "usage": "logo Visa"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: el logo Visa es una imagen raster (ya avisado en Brand assets).",
+    "Figma: separación logo–texto 8 px sin variable → FX-2."
+  ],
+  "codePath": "src/components/BlockAddress/BlockAddress.jsx"
+}

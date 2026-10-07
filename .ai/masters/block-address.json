@@ -1,0 +1,26 @@
+{
+ "id": "63606:143410",
+ "name": "Block Address",
+ "type": "COMPONENT",
+ "fp": "504ab39a",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Text": "TEXT",
+  "Card": "TEXT",
+  "Show CreditCard": "BOOLEAN",
+  "Show Text": "BOOLEAN"
+ },
+ "spec": "342 AL:V gap fx-4 pad fx-6/0, borde sup. Neutral 3; Title Body/03 Base; Text Body/02 Neutral 1; CreditCard gap 8: Visa 40 + texto Body/03",
+ "deps": [
+  "Visa"
+ ],
+ "images": [
+  {
+   "hash": "e526e4023728c4640f86b641b12e882159a35883"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}

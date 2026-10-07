@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:06:32.864Z",
+  "generatedAt": "2026-10-07T07:06:33.035Z",
   "output": "react-storybook",
   "items": [
     {
@@ -786,7 +786,7 @@
       "builtFp": "64811aec"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Block Address",
@@ -799,7 +799,8 @@
       ],
       "images": 1,
       "autolayout": "1/1",
-      "key": "component:block-address"
+      "key": "component:block-address",
+      "builtFp": "f148035a"
     },
     {
       "status": "todo",

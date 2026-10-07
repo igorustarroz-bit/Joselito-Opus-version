@@ -1,0 +1,86 @@
+{/* Generado por scripts/docs-generator.mjs desde BlockAddress.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './BlockAddress.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Block Address
+
+## Introducción
+
+Bloque de dirección para checkout y pedidos: título, dirección en varias líneas y, opcionalmente, la tarjeta de pago con su logo.
+
+
+Figma: `Block Address` (`63606:143410`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Borde superior
+- Título
+- Dirección
+- Logo de tarjeta 40 px + texto
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Ancho del contenedor.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Show CreditCard = false
+
+<Canvas of={Stories.SinTarjeta} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | borde superior |
+| color | `--texts-base` | título y tarjeta |
+| color | `--texts-neutral-1` | dirección |
+| spacing | `--spacers-fixed-fx-6` | padding vertical |
+| spacing | `--spacers-fixed-fx-4` | separación |
+| spacing | `--spacers-fixed-fx-2` | logo–texto (8 px sin variable) |
+| typography | `ts-body-03` |  |
+| typography | `ts-body-02` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| title | Título (Body/03). | "Dirección de facturación" | text |
+| text | Dirección; los saltos de línea se respetan. | dirección del máster | text |
+| showText | Muestra la dirección. | true | boolean |
+| card | Texto de la tarjeta. | "Visa ···· 4242" | text |
+| showCreditCard | Muestra la tarjeta. | true | boolean |
+| cardLogo / cardLogoAlt | Logo de la tarjeta (por defecto Visa) y su alternativo. | Visa |  |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- El logo tiene texto alternativo.
+
+## Componentes relacionados
+
+- Sending Details
+- Order Summary
+- Block Row Address
