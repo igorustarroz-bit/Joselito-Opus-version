@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:42:25.009Z",
+  "generatedAt": "2026-10-07T06:44:08.187Z",
   "output": "react-storybook",
   "items": [
     {
@@ -518,7 +518,7 @@
       "builtFp": "d387ac9e"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "InputQuantity",
@@ -529,7 +529,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:input-quantity"
+      "key": "component:input-quantity",
+      "builtFp": "f8f0bc03"
     },
     {
       "status": "todo",

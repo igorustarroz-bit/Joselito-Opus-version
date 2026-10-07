@@ -35,8 +35,8 @@
 .check-radio__check,
 .check-radio__dot { visibility: hidden; }
 .check-radio__dot {
-  width: var(--spacers-fixed-fx-3);
-  height: var(--spacers-fixed-fx-3);
+  width: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0));
+  height: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0));
   border-radius: var(--layout-corners-rounded);
   background: var(--cr-mark);
 }

@@ -1,0 +1,155 @@
+{
+  "name": "InputQuantity",
+  "kind": "component",
+  "title": "InputQuantity",
+  "figma": {
+    "nodeId": "63264:120792",
+    "name": "InputQuantity",
+    "fp": "0a8b8965"
+  },
+  "description": "Selector de cantidad para carrito y fichas de producto: botón menos, número y botón más sobre fondo neutro. Funciona solo (no controlado) o controlado por el padre, y respeta un mínimo y un máximo.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "SinMenos",
+      "title": "Show Minus = false"
+    },
+    {
+      "story": "SinMas",
+      "title": "Show Plus = false"
+    },
+    {
+      "story": "EnElMaximo",
+      "title": "En el máximo (+ desactivado)"
+    }
+  ],
+  "props": [
+    {
+      "name": "value / defaultValue",
+      "figma": "Num",
+      "description": "Cantidad (controlada) o inicial (no controlada). En el máster: 1.",
+      "default": "1",
+      "control": "number"
+    },
+    {
+      "name": "min / max",
+      "description": "Límites; los botones se desactivan al alcanzarlos.",
+      "default": "1 / 99",
+      "control": "number"
+    },
+    {
+      "name": "onChange",
+      "description": "Recibe la nueva cantidad.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "showMinus",
+      "figma": "Show Minus",
+      "description": "Muestra el botón menos.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showPlus",
+      "figma": "Show Plus",
+      "description": "Muestra el botón más.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible del grupo.",
+      "default": "\"Cantidad\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-neutral-1",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "número"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "iconos"
+      },
+      {
+        "token": "--strokes-icons-neutral-2",
+        "usage": "icono desactivado (código)"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "alto 32 px"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "padding lateral"
+      },
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Botón menos (icono Minus 12 px)",
+    "Número",
+    "Botón más (icono Plus 12 px)"
+  ],
+  "behavior": [
+    "Click en − / + resta o suma uno dentro de [min, max].",
+    "En el límite el botón correspondiente se desactiva (gris).",
+    "El número se anuncia a lectores de pantalla al cambiar (aria-live)."
+  ],
+  "content": [
+    {
+      "field": "Número",
+      "notes": "Entero; por defecto 1."
+    }
+  ],
+  "a11y": [
+    "Botones con nombre accesible (\"Restar uno\", \"Sumar uno\").",
+    "Grupo con aria-label.",
+    "Foco visible con teclado."
+  ],
+  "related": [
+    "Card Product",
+    "Order Summary"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el número no tiene estilo de texto (Euclid Circular A 14/140 %, mayúsculas). Se usa Body/02 (14/22). Avisar a diseño.",
+    "Figma: alto de 32 px sin variable → Spacers Fixed/fx-7 (32 px).",
+    "Figma: no hay estado desactivado de los botones; en código se atenúan con Strokes-Icons/Neutral 2 al llegar a min/max."
+  ],
+  "codePath": "src/components/InputQuantity/InputQuantity.jsx"
+}

@@ -171,7 +171,7 @@
   "images": [],
   "placeholders": [],
   "notes": [
-    "Figma: el punto del radio mide 10 px sin variable → se usa Spacers Fixed/fx-3 (12 px). Avisar a diseño.",
+    "Figma: el punto del radio mide 10 px sin variable → se usa FX-2 + FX-0 (10 px, no existe token de 10). Avisar a diseño.",
     "Figma: Radio Disabled Light es una instancia de 'Selected Disabled' (se ve marcado): parece un error; en código Disabled es sin marcar.",
     "Figma: Checkboxes Selected Disabled Light pinta el check con Backgrounds/Neutral-1 (casi blanco): se replica, pero el check apenas se ve. Avisar a diseño.",
     "Figma: la casilla marcada en Light usa Accent-4 (rosa claro) y el radio Accent-2: se replica tal cual.",

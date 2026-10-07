@@ -1,0 +1,5 @@
+{ "id": "63264:120792", "name": "InputQuantity", "type": "COMPONENT", "page": "📦 Components", "fp": "0a8b8965", "readAt": "2026-10-07T07:05:00Z",
+  "$note": "Digest compacto (.ai/tmp/spec.js).",
+  "props": { "Show Minus": "BOOLEAN", "Show Plus": "BOOLEAN", "Num": "TEXT" },
+  "spec": "85×32 AL:H gap fx-4, pad 0/fx-3, fill Backgrounds/Neutral-1; Minus 12 · '1' (Euclid 14/140 % sin estilo, Texts/Base) · Plus 12 (Strokes-Icons/Base)",
+  "texts": [{ "chars": "1" }], "deps": ["Minus", "Plus"], "images": [], "audit": { "errors": 1, "warns": 0, "items": [ { "code": "NO_TEXT_STYLE", "msg": "número sin estilo de texto" } ] } }

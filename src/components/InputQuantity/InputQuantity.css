@@ -1,0 +1,27 @@
+/* InputQuantity — Figma 63264:120792. Solo tokens. Alto 32 px (FX-7), padding lateral FX-3,
+   separación FX-4, fondo Backgrounds/Neutral-1, iconos de 12 px con Strokes-Icons/Base. */
+.input-quantity {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+  height: var(--spacers-fixed-fx-7);
+  padding: 0 var(--spacers-fixed-fx-3);
+  background: var(--backgrounds-neutral-1);
+  color: var(--texts-base);
+}
+.input-quantity__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--strokes-icons-base);
+  cursor: pointer;
+}
+.input-quantity__btn:disabled { color: var(--strokes-icons-neutral-2); cursor: not-allowed; }
+.input-quantity__btn:focus { outline: none; }
+.input-quantity__btn:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+.input-quantity__num { text-align: center; text-transform: uppercase; }

@@ -48,5 +48,10 @@
     "name": "CheckboxRadio",
     "path": "src/components/CheckboxRadio/CheckboxRadio.jsx",
     "fp": "6a1e6bef"
+  },
+  "63264:120792": {
+    "name": "InputQuantity",
+    "path": "src/components/InputQuantity/InputQuantity.jsx",
+    "fp": "0a8b8965"
   }
 }
