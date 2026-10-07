@@ -1,0 +1,47 @@
+/* M07-Content-Text+Image — Figma 58363:34365. Solo tokens. Escritorio desde 1024 px. */
+.m07-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-10);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacers-fixed-fx-6) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-10);
+  border-bottom: 1px solid var(--strokes-icons-neutral-3);
+  background: var(--backgrounds-base);
+  color: var(--texts-base);
+}
+.m07-content__media { width: 100%; }
+.m07-content__text { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-7); }
+.m07-content__slot { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); }
+.m07-content__label, .m07-content__title, .m07-content__body, .m07-content__note { margin: 0; }
+.m07-content__label, .m07-content__note { color: var(--texts-neutral-2); }
+.m07-content__title { font-weight: inherit; }
+.m07-content__body { color: var(--texts-neutral-1); }
+
+/* Half en móvil: imagen a sangre */
+.m07-content--half { padding: 0; gap: 0; }
+.m07-content--half .m07-content__text { padding: var(--spacers-fixed-fx-6) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-10); }
+
+@media (min-width: 1024px) {
+  .m07-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacers-fixed-fx-9);
+    padding: var(--spacers-fixed-fx-15) var(--layout-grids-wrapper-default);
+  }
+  .m07-content--horizontal .m07-content__media { width: var(--layout-cols-size-6cols); }
+  .m07-content--vertical .m07-content__media { width: var(--layout-cols-size-5cols); }
+  .m07-content--vertical.is-left { padding-left: var(--layout-cols-size-wrapper1-col); }
+  .m07-content--vertical.is-right { padding-right: var(--layout-cols-size-wrapper1-col); }
+  .m07-content__text { width: var(--layout-cols-size-5cols); }
+  .m07-content--half { align-items: stretch; gap: 0; padding: 0; }
+  .m07-content--half .m07-content__media { flex: 1; width: 50%; }
+  .m07-content--half .m07-content__text {
+    flex: 1;
+    justify-content: center;
+    gap: var(--spacers-fixed-fx-10);
+    width: 50%;
+    padding: var(--layout-spacers-responsive-15) var(--spacers-fixed-fx-16);
+  }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "58363:34365",
+ "name": "M07-Content-Text+Image",
+ "type": "COMPONENT_SET",
+ "fp": "5b6ec0d3",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Left",
+   "Right",
+   "Half-Left",
+   "Half-Right"
+  ],
+  "Image Format": [
+   "Horizontal",
+   "Vertical"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=Left, Image Format=Horizontal"
+  },
+  {
+   "name": "Device=Desktop, Type=Right, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Desktop, Type=Right, Image Format=Horizontal"
+  },
+  {
+   "name": "Device=Desktop, Type=Left, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Desktop, Type=Half-Left, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Desktop, Type=Half-Right, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Mobile, Type=Left, Image Format=Horizontal"
+  },
+  {
+   "name": "Device=Mobile, Type=Right, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Mobile, Type=Right, Image Format=Horizontal"
+  },
+  {
+   "name": "Device=Mobile, Type=Left, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Mobile, Type=Half-Left, Image Format=Vertical"
+  },
+  {
+   "name": "Device=Mobile, Type=Half-Right, Image Format=Vertical"
+  }
+ ],
+ "spec": "Desktop Left/Right: fila space-between gap 48, pad 112/Wrapper-Default (Vertical: lado de la imagen Wrapper1Col); imagen 4:3 6cols o 3:4 5cols; Slot 5cols: LABEL Body/03 Neutral 2, Title/03, Body/03 Neutral 1 (gap 24). Half: imagen 3:4 720 a sangre + texto 720 pad Resp/15/fx-16, gap 52, con Divider y nota Body/02 Neutral 2. Mobile: columna gap fx-10 pad fx-6/Wrapper-Default/fx-10. Borde inferior Neutral 3.",
+ "deps": [
+  "Aspect Ratio",
+  "Divider"
+ ],
+ "images": [
+  "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "padding 112, gaps 48 / 40 / 24 / 20 / 52 / 32 sin variable"
+   }
+  ]
+ }
+}

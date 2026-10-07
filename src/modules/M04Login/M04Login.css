@@ -3,7 +3,7 @@
 .m04-login__nav { position: absolute; top: 0; left: 0; z-index: 1; }
 .m04-login__media { display: none; background: var(--backgrounds-neutral-1); }
 .m04-login__modal { display: flex; flex: 1; align-items: center; justify-content: center; padding: 0 var(--spacers-fixed-fx-6); }
-.m04-login__slot { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-9); width: 100%; max-width: var(--layout-cols-size-4cols-1-gutter); }
+.m04-login__slot { display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-9); width: 100%; }
 .m04-login__form .form__header { align-items: center; text-align: center; }
 .m04-login__form .form__inputs { gap: var(--spacers-fixed-fx-7); }
 .m04-login__submit { width: 100%; }
@@ -13,4 +13,5 @@
 @media (min-width: 1024px) {
   .m04-login.has-photo .m04-login__media { display: block; flex: 1; }
   .m04-login__modal { padding: 0; }
+  .m04-login__slot { max-width: var(--layout-cols-size-4cols-1-gutter); }
 }

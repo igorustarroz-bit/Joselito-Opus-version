@@ -293,5 +293,10 @@
     "name": "M05FilterSecondaryMenu",
     "path": "src/modules/M05FilterSecondaryMenu/M05FilterSecondaryMenu.jsx",
     "fp": "91630370"
+  },
+  "58363:34365": {
+    "name": "M07ContentTextImage",
+    "path": "src/modules/M07ContentTextImage/M07ContentTextImage.jsx",
+    "fp": "5b6ec0d3"
   }
 }

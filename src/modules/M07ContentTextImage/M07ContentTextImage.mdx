@@ -1,0 +1,130 @@
+{/* Generado por scripts/docs-generator.mjs desde M07ContentTextImage.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M07ContentTextImage.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M07-Content-Text+Image
+
+## Introducción
+
+Bloque editorial de texto (etiqueta, título y párrafo) junto a una imagen, a izquierda o derecha, con imagen horizontal o vertical, o a media pantalla a sangre con nota bibliográfica.
+
+
+Figma: `M07-Content-Text+Image` (`58363:34365`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Aspect Ratio (4:3 o 3:4)
+- Texto: etiqueta Body/03 · título Title/03 · párrafo Body/03
+- Half: Divider + nota Body/02
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`
+
+Hereda el subtema de la página.
+
+## Comportamiento
+
+- Breakpoint a 1024 px; en móvil se apila en el orden del contenido (Right: texto primero).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Left, Image Format=Horizontal
+
+<Canvas of={Stories.LeftHorizontal} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Right, Image Format=Horizontal
+
+<Canvas of={Stories.RightHorizontal} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Left, Image Format=Vertical
+
+<Canvas of={Stories.LeftVertical} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Right, Image Format=Vertical
+
+<Canvas of={Stories.RightVertical} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Half-Left, Image Format=Vertical
+
+<Canvas of={Stories.HalfLeft} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Half-Right, Image Format=Vertical
+
+<Canvas of={Stories.HalfRight} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-neutral-2` | etiqueta y nota |
+| color | `--texts-neutral-1` | párrafo |
+| color | `--strokes-icons-neutral-3` | borde inferior |
+| spacing | `--spacers-fixed-fx-15` | padding vertical escritorio |
+| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
+| spacing | `--layout-cols-size-wrapper1-col` | margen del lado de la imagen vertical |
+| spacing | `--layout-cols-size-6cols / 5cols` | anchos de imagen y texto |
+| spacing | `--spacers-fixed-fx-9 / fx-10` | separación imagen-texto |
+| spacing | `--spacers-fixed-fx-6 / fx-7` | separaciones del texto |
+| spacing | `--layout-spacers-responsive-15 / fx-16` | padding del texto en Half |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | Lado de la imagen: `Left`, `Right`, `Half-Left`, `Half-Right` (media pantalla a sangre). | Left | inline-radio |
+| imageFormat | `Horizontal` (4:3) o `Vertical` (3:4). Half siempre vertical. | Horizontal | inline-radio |
+| label / title / text | Contenido del bloque de texto. | THIS IS A LABEL / Declarado el mejor jamón del mundo / … | text |
+| note | Nota o referencia bajo un separador. | — | text |
+| image / imageAlt | Imagen y texto alternativo. | foto de ejemplo | text |
+| children | Sustituye el contenido de texto. | — |  |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Título |  | Una o dos líneas. |
+| Párrafo |  | Hasta unas 60 palabras. |
+
+## Accesibilidad
+
+- Título como h2.
+- La imagen necesita imageAlt si aporta información.
+
+## Componentes relacionados
+
+- Aspect Ratio
+- Divider
+- M09-ContentStack-Text+ Image
