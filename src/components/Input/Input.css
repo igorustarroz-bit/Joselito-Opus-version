@@ -1,0 +1,118 @@
+/* Input — Figma 49118:2300. Solo tokens. Big → Layout/Forms/L + estilos Forms/Input-M;
+   Small → Layout/Forms/M + estilos Forms/Input-S. Colores Forms/ESTADO/*. */
+.input {
+  --in-size: var(--layout-forms-l-size);
+  --in-pad-l: var(--layout-forms-l-padding-l);
+  --in-pad-r: var(--layout-forms-l-padding-r);
+  --in-label-gap: var(--layout-forms-l-label-in-distance);
+  --in-msg-gap: var(--layout-forms-l-message-distance);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--in-msg-gap);
+  width: 100%;
+}
+.input--small {
+  --in-size: var(--layout-forms-m-size);
+  --in-pad-l: var(--layout-forms-m-padding-l);
+  --in-pad-r: var(--layout-forms-m-padding-r);
+  --in-label-gap: var(--layout-forms-m-label-in-distance);
+  --in-msg-gap: var(--layout-forms-m-message-distance);
+}
+.input__field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-2);
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--in-size);
+  margin: 0;
+  padding: 0 var(--in-pad-r) 0 var(--in-pad-l);
+  border: 1px solid var(--in-stroke);
+  border-radius: var(--layout-corners-none);
+  background: var(--in-fill);
+  color: var(--in-text);
+  font: inherit;
+  text-align: left;
+  cursor: text;
+}
+button.input__field { cursor: pointer; }
+.input__texts { display: flex; flex-direction: column; justify-content: center; gap: var(--in-label-gap); flex: 1 1 auto; min-width: 0; }
+.input__label { color: var(--in-label); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.input__control,
+.input__value {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--in-text);
+  outline: none;
+  caret-color: var(--in-stroke);
+}
+.input:not(.is-floating) .input__control { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.input__icon { flex: 0 0 auto; color: var(--in-icon); }
+.input__info { margin: 0; color: var(--in-msg); }
+.input__listbox { position: absolute; top: calc(var(--in-size) + var(--spacers-fixed-fx-2)); left: 0; z-index: 10; }
+.input__field:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+
+.input.is-default {
+  --in-fill: var(--forms-default-fill);
+  --in-stroke: var(--forms-default-stroke);
+  --in-label: var(--forms-default-label-in);
+  --in-text: var(--forms-default-text);
+  --in-msg: var(--forms-default-message);
+  --in-icon: var(--forms-default-icon);
+}
+.input.is-default:hover,
+.input.is-default.is-hover,
+.input.is-hover {
+  --in-fill: var(--forms-hover-fill);
+  --in-stroke: var(--forms-hover-stroke);
+  --in-label: var(--forms-hover-label-in);
+  --in-text: var(--forms-hover-text);
+  --in-msg: var(--forms-hover-message);
+  --in-icon: var(--forms-hover-icon);
+}
+.input.is-focused {
+  --in-fill: var(--forms-focused-fill);
+  --in-stroke: var(--forms-focused-stroke);
+  --in-label: var(--forms-focused-label-in);
+  --in-text: var(--forms-focused-text);
+  --in-msg: var(--forms-focused-message);
+  --in-icon: var(--forms-focused-icon);
+}
+.input.is-filled {
+  --in-fill: var(--forms-filled-fill);
+  --in-stroke: var(--forms-filled-stroke);
+  --in-label: var(--forms-filled-label-in);
+  --in-text: var(--forms-filled-text);
+  --in-msg: var(--forms-filled-message);
+  --in-icon: var(--forms-filled-icon);
+}
+.input.is-error {
+  --in-fill: var(--forms-error-fill);
+  --in-stroke: var(--forms-error-stroke);
+  --in-label: var(--forms-error-label-in);
+  --in-text: var(--forms-error-text);
+  --in-msg: var(--forms-error-message);
+  --in-icon: var(--forms-error-icon);
+}
+.input.is-validated {
+  --in-fill: var(--forms-validated-fill);
+  --in-stroke: var(--forms-validated-stroke);
+  --in-label: var(--forms-validated-label-in);
+  --in-text: var(--forms-validated-text);
+  --in-msg: var(--forms-validated-message);
+  --in-icon: var(--forms-validated-icon);
+}
+.input.is-disabled {
+  --in-fill: var(--forms-disabled-fill);
+  --in-stroke: var(--forms-disabled-stroke);
+  --in-label: var(--forms-disabled-label-in);
+  --in-text: var(--forms-disabled-text);
+  --in-msg: var(--forms-disabled-message);
+  --in-icon: var(--forms-disabled-icon);
+}
+.input.is-disabled .input__field { cursor: not-allowed; }
+.input.no-cursor .input__control { caret-color: transparent; }

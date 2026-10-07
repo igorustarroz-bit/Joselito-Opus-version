@@ -1,0 +1,63 @@
+{
+ "id": "49118:2300",
+ "name": "Input",
+ "type": "COMPONENT_SET",
+ "fp": "eeeb2076",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Info": "BOOLEAN",
+  "Placeholder": "TEXT",
+  "Label": "TEXT",
+  "Info": "TEXT",
+  "Show Type Cursor": "BOOLEAN",
+  "Extra Filter": "BOOLEAN",
+  "Show Icon": "BOOLEAN",
+  "Instance": "INSTANCE_SWAP",
+  "Show CaretDown": "BOOLEAN",
+  "Type": [
+   "Default",
+   "Dropdown"
+  ],
+  "Size": [
+   "Big",
+   "Small"
+  ],
+  "State": [
+   "Default",
+   "Hover",
+   "Focused",
+   "Filled",
+   "Error",
+   "Validated",
+   "Disabled"
+  ]
+ },
+ "spec": "Big 320×94: campo h Layout/Forms/L/Size, pad Forms/L Padding-L/R, fill/stroke Forms/ESTADO; Text (gap Label-In-Distance) Label (Input-M/Label-In o Input-M/Text si vacío) + valor Input-M/Text; Info Input-M/Info, gap Message-Distance. Small: Layout/Forms/M + estilos Input-S. Dropdown: CaretDown 16 (Forms/ESTADO/Icon); Focused abre Listbox en y=80 (alto+8).",
+ "texts": [
+  {
+   "chars": "Label"
+  },
+  {
+   "chars": "Input text"
+  },
+  {
+   "chars": "Message"
+  }
+ ],
+ "deps": [
+  "CaretDown",
+  "CalendarBlank",
+  "Listbox"
+ ],
+ "images": [],
+ "audit": {
+  "errors": 0,
+  "warns": 4,
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 4/8 px sin variable"
+   }
+  ]
+ }
+}

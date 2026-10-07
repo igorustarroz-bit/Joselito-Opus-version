@@ -68,5 +68,10 @@
     "name": "Listbox",
     "path": "src/components/Listbox/Listbox.jsx",
     "fp": "ae0f9e7a"
+  },
+  "49118:2300": {
+    "name": "Input",
+    "path": "src/components/Input/Input.jsx",
+    "fp": "eeeb2076"
   }
 }
