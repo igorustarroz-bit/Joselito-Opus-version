@@ -1,0 +1,55 @@
+{
+ "id": "59895:103739",
+ "name": "M08-Content-Imageonly",
+ "type": "COMPONENT_SET",
+ "fp": "5b2ede86",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Split",
+   "Full Screen",
+   "Borders"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop, Type=Full Screen"
+  },
+  {
+   "name": "Device=Desktop, Type=Split"
+  },
+  {
+   "name": "Device=Mobile, Type=Split"
+  },
+  {
+   "name": "Device=Mobile, Type=Borders"
+  },
+  {
+   "name": "Device=Mobile, Type=Full Screen"
+  },
+  {
+   "name": "Device=Desktop, Type=Borders"
+  }
+ ],
+ "spec": "Full Screen: Aspect Ratio Fill 1440×810 (móvil 9:16 390). Borders: pad Wrapper-Default, 16:9 (móvil 9:16), borde Neutral 3. Split: 2 marcos 720 pad Wrapper-Default con Aspect Ratio 3:4 y bordes Neutral 3 (móvil apilados).",
+ "deps": [
+  "Aspect Ratio"
+ ],
+ "images": [
+  "b0180a15c2a7ddcd56a152230ab9d93a8f71c5a7",
+  "0aa037659d4f9beb5ae39b5720be81123444f026",
+  "5733d70588973756366c17628ccec29bfc3fbaf2"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "itemSpacing 10 (un solo hijo, sin efecto)"
+   }
+  ]
+ }
+}

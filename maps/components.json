@@ -298,5 +298,10 @@
     "name": "M07ContentTextImage",
     "path": "src/modules/M07ContentTextImage/M07ContentTextImage.jsx",
     "fp": "5b6ec0d3"
+  },
+  "59895:103739": {
+    "name": "M08ContentImageonly",
+    "path": "src/modules/M08ContentImageonly/M08ContentImageonly.jsx",
+    "fp": "5b2ede86"
   }
 }

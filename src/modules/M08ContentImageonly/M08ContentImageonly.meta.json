@@ -1,0 +1,120 @@
+{
+  "name": "M08ContentImageonly",
+  "kind": "module",
+  "title": "M08-Content-Imageonly",
+  "figma": {
+    "nodeId": "59895:103739",
+    "name": "M08-Content-Imageonly",
+    "fp": "5b2ede86"
+  },
+  "description": "Bloque solo de imagen: a pantalla completa, con márgenes o dividido en dos imágenes verticales.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Split",
+      "Full Screen",
+      "Borders"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "FullScreen",
+      "title": "Device=Desktop, Type=Full Screen"
+    },
+    {
+      "story": "Borders",
+      "title": "Device=Desktop, Type=Borders"
+    },
+    {
+      "story": "Split",
+      "title": "Device=Desktop, Type=Split"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Full Screen`, `Borders` o `Split`.",
+      "default": "Full Screen",
+      "control": "inline-radio"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Imagen de Full Screen y Borders.",
+      "default": "foto de ejemplo",
+      "control": "text"
+    },
+    {
+      "name": "images",
+      "description": "Las dos imágenes de Split (src, alt).",
+      "default": "2 fotos",
+      "control": "object"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "bordes"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes de Borders y Split"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "Aspect Ratio (Fill 16:9 / 9:16) o 2 × Aspect Ratio 3:4"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px: la proporción pasa de 9:16 a 16:9 y Split se pone en fila."
+  ],
+  "content": [
+    {
+      "field": "Imagen",
+      "notes": "Horizontal para escritorio; el recorte vertical en móvil es central."
+    }
+  ],
+  "a11y": [
+    "Pasa alt si la imagen aporta información; si es decorativa, vacío."
+  ],
+  "related": [
+    "Aspect Ratio",
+    "M07-Content-Text+Image"
+  ],
+  "images": [
+    "b0180a15c2a7ddcd56a152230ab9d93a8f71c5a7",
+    "0aa037659d4f9beb5ae39b5720be81123444f026",
+    "5733d70588973756366c17628ccec29bfc3fbaf2"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: Full Screen y Borders cambian de proporción entre escritorio (16:9) y móvil (9:16); en código se hace con CSS.",
+    "Figma: itemSpacing de 10 px sin variable en marcos con un solo hijo (no afecta)."
+  ],
+  "codePath": "src/modules/M08ContentImageonly/M08ContentImageonly.jsx"
+}

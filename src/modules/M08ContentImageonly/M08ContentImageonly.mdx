@@ -1,0 +1,94 @@
+{/* Generado por scripts/docs-generator.mjs desde M08ContentImageonly.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './M08ContentImageonly.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# M08-Content-Imageonly
+
+## Introducción
+
+Bloque solo de imagen: a pantalla completa, con márgenes o dividido en dos imágenes verticales.
+
+
+Figma: `M08-Content-Imageonly` (`59895:103739`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Aspect Ratio (Fill 16:9 / 9:16) o 2 × Aspect Ratio 3:4
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`
+
+Hereda el subtema de la página.
+
+## Comportamiento
+
+- Breakpoint a 1024 px: la proporción pasa de 9:16 a 16:9 y Split se pone en fila.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Full Screen
+
+<Canvas of={Stories.FullScreen} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Borders
+
+<Canvas of={Stories.Borders} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Split
+
+<Canvas of={Stories.Split} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--strokes-icons-neutral-3` | bordes |
+| spacing | `--layout-grids-wrapper-default` | márgenes de Borders y Split |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Full Screen`, `Borders` o `Split`. | Full Screen | inline-radio |
+| image / imageAlt | Imagen de Full Screen y Borders. | foto de ejemplo | text |
+| images | Las dos imágenes de Split (src, alt). | 2 fotos | object |
+| theme | Subtema. | — | text |
+
+## Guía de contenido
+
+| Campo | Límite | Notas |
+| --- | --- | --- |
+| Imagen |  | Horizontal para escritorio; el recorte vertical en móvil es central. |
+
+## Accesibilidad
+
+- Pasa alt si la imagen aporta información; si es decorativa, vacío.
+
+## Componentes relacionados
+
+- Aspect Ratio
+- M07-Content-Text+Image

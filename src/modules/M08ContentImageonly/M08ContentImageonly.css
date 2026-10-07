@@ -1,0 +1,12 @@
+/* M08-Content-Imageonly — Figma 59895:103739. Solo tokens. Escritorio desde 1024 px. */
+.m08-content { display: flex; flex-direction: column; box-sizing: border-box; width: 100%; background: var(--backgrounds-base); }
+.m08-content__media.aspect-ratio { height: auto; aspect-ratio: 9 / 16; }
+.m08-content--borders { padding: var(--layout-grids-wrapper-default); border-bottom: 1px solid var(--strokes-icons-neutral-3); }
+.m08-content__half { padding: var(--layout-grids-wrapper-default); border-bottom: 1px solid var(--strokes-icons-neutral-3); }
+
+@media (min-width: 1024px) {
+  .m08-content__media.aspect-ratio { aspect-ratio: 16 / 9; }
+  .m08-content--split { flex-direction: row; }
+  .m08-content__half { flex: 1; }
+  .m08-content__half + .m08-content__half { border-left: 1px solid var(--strokes-icons-neutral-3); }
+}

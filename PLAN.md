@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 81/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 82/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -108,7 +108,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M04-Login `63727:483351` — 2 variantes · usa: Aspect Ratio, Brand Logo, Button, Divider, Form, Input… <!-- k:module:m04-login -->
 - [x] M05-Filter-Secondary Menu `61276:141868` — 8 variantes · usa: Button, Button-Action-Link, Button-Icon, Checkboxes-Radios, Tag, listbox_Item_Dropdown <!-- k:module:m05-filter-secondary-menu -->
 - [x] M07-Content-Text+Image `58363:34365` — 12 variantes · 12 img · usa: Aspect Ratio, Divider, RowButtons <!-- k:module:m07-content-text-image -->
-- [ ] M08-Content-Imageonly `59895:103739` — 6 variantes · 8 img · usa: Aspect Ratio · autolayout 5/6 → análisis de geometría <!-- k:module:m08-content-imageonly -->
+- [x] M08-Content-Imageonly `59895:103739` — 6 variantes · 8 img · usa: Aspect Ratio · autolayout 5/6 → análisis de geometría <!-- k:module:m08-content-imageonly -->
 - [ ] M09-ContentStack-Text+ Image `58468:60216` — 7 variantes · 7 img · usa: Aspect Ratio, Button <!-- k:module:m09-content-stack-text-image -->
 - [ ] M10-Errors `63688:482735` — 2 variantes · 2 img · usa: 404_picture, Aspect Ratio, Button-Action-Link · autolayout 0/2 → análisis de geometría <!-- k:module:m10-errors -->
 - [ ] M11-Content-Textonly `58163:39972` — 5 variantes · usa: button <!-- k:module:m11-content-textonly -->
