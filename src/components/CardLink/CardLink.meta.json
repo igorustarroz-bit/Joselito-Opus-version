@@ -1,0 +1,105 @@
+{
+  "name": "CardLink",
+  "kind": "component",
+  "title": "Card Link",
+  "figma": {
+    "nodeId": "58182:23781",
+    "name": "Card Link",
+    "fp": "7cdaf17a"
+  },
+  "description": "Tarjeta enlace con foto 3:4 a sangre y el nombre y el precio superpuestos en la parte inferior.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "image / imageAlt",
+      "description": "Foto 3:4.",
+      "default": "foto del máster",
+      "control": false
+    },
+    {
+      "name": "title",
+      "description": "Nombre (Title/02).",
+      "default": "\"Jamón Gran Reserva\"",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "description": "Precio o subtítulo (Body/02).",
+      "default": "\"Desde 380€\"",
+      "control": "text"
+    },
+    {
+      "name": "href",
+      "description": "Destino.",
+      "default": "\"#\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "textos"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "margen de los textos (32 px sin variable)"
+      },
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "título–precio"
+      }
+    ],
+    "typography": [
+      "ts-title-02",
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Foto 3:4",
+    "Textos superpuestos abajo"
+  ],
+  "behavior": [
+    "Toda la tarjeta es un enlace."
+  ],
+  "content": [],
+  "a11y": [
+    "Foco visible; la foto lleva alt."
+  ],
+  "related": [
+    "M25-Cards-Links"
+  ],
+  "images": [
+    {
+      "hash": "d2b83549275777f44f89992403207c57b9a72c0d",
+      "usage": "foto"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: padding 32 y gap 8 px sin variable → FX-7 y FX-2.",
+    "Figma: el texto es Texts/Base (negro) sobre la foto: según la imagen puede faltar contraste. Avisar a diseño."
+  ],
+  "codePath": "src/components/CardLink/CardLink.jsx"
+}

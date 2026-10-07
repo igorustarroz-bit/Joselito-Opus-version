@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:10:18.326Z",
+  "generatedAt": "2026-10-07T07:10:18.447Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1037,7 +1037,7 @@
       "key": "component:block-row-address"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Card Link",
@@ -1050,7 +1050,8 @@
       ],
       "images": 1,
       "autolayout": "1/1",
-      "key": "component:card-link"
+      "key": "component:card-link",
+      "builtFp": "eebe8dde"
     },
     {
       "status": "todo",

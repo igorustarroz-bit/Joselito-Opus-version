@@ -1,0 +1,14 @@
+/* Card Link — Figma 58182:23781. Solo tokens. */
+.card-link { position: relative; display: block; width: 100%; color: var(--texts-base); text-decoration: none; }
+.card-link__texts {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-2);
+  padding: 0 var(--spacers-fixed-fx-7) var(--spacers-fixed-fx-7);
+}
+.card-link:focus { outline: none; }
+.card-link:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-1); }

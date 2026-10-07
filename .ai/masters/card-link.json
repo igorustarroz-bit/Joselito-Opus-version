@@ -1,0 +1,25 @@
+{
+ "id": "58182:23781",
+ "name": "Card Link",
+ "type": "COMPONENT",
+ "fp": "7cdaf17a",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "432×576 AR 3:4; frame absoluto abajo pad 0/32/32/32 gap 8: Title/02 + Body/02 Texts/Base",
+ "deps": [
+  "Aspect Ratio"
+ ],
+ "images": [
+  {
+   "hash": "d2b83549275777f44f89992403207c57b9a72c0d"
+  }
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "32/8"
+   }
+  ]
+ }
+}
