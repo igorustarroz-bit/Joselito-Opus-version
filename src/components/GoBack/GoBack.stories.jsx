@@ -1,8 +1,11 @@
 import GoBack from './GoBack';
 
+import meta from './GoBack.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Components/Go_Back',
-  component: GoBack,
+  component: GoBack, argTypes: argTypesFromMeta(meta),
   parameters: { defaultTheme: 'light-white' },
   args: { text: 'TIENDAS Y RESTAURANTES', href: '#' },
 };

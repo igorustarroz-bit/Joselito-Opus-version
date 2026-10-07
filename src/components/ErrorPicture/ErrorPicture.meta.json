@@ -47,6 +47,71 @@
       "title": "Device=Mobile, Type=300"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (377 × 279) y de móvil (280 × 221). En código es la misma composición escalada al ancho del contenedor.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop404"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile404"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Código de error que se muestra en cifras gigantes; cambia los dígitos y la foto central.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "404",
+          "description": "Página no encontrada."
+        },
+        {
+          "value": "500",
+          "description": "Error del servidor; foto cuadrada."
+        },
+        {
+          "value": "300",
+          "description": "Pendiente de revisar con diseño (¿301?)."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsala como ilustración principal de las páginas de error (`M10-Errors`).",
+    "do": [
+      "Elige el tipo según el error real de la página (404 no encontrada, 500 error del servidor).",
+      "Deja que escale con su contenedor: mantiene la composición en cualquier ancho.",
+      "Acompáñala del título y el texto de ayuda del módulo de error."
+    ],
+    "dont": [
+      "No la uses como imagen decorativa fuera de páginas de error.",
+      "No uses el tipo 300 sin confirmarlo con diseño: no es un código de error habitual.",
+      "No cambies la foto por una de otra proporción (2:3; 1:1 en el 500)."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -114,7 +179,12 @@
       "usage": "foto 2:3 (404, 300)"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: sin autolayout; posiciones absolutas. En código se expresan en % del máster Desktop y la cifra en unidades de contenedor (48,8 cqw ≈ 184/377): el móvil es la misma composición escalada.",
     "Figma: en Mobile las cifras no tienen estilo de texto (143/136 px sueltos). Avisar a diseño.",

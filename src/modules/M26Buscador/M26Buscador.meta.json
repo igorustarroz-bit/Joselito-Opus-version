@@ -35,6 +35,79 @@
       "title": "Device=Desktop, Status=Filled"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint: en escritorio un botón borra el historial; en móvil una flecha lanza la búsqueda; para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Mobile"
+        },
+        {
+          "value": "Desktop",
+          "story": "Vacio"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Estado del campo. En uso real cambia solo al escribir; aquí se fuerza para documentar.",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Campo vacío con \"Buscar\".",
+          "story": "Vacio"
+        },
+        {
+          "value": "Typing",
+          "description": "Escribiendo, con el cursor visible.",
+          "story": "Typing"
+        },
+        {
+          "value": "Filled",
+          "description": "Texto completo con BORRAR para vaciarlo.",
+          "story": "Filled"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como panel de búsqueda que se abre desde la cabecera, con campo grande y búsquedas recientes.",
+    "do": [
+      "Recientes como palabras sueltas en mayúsculas.",
+      "Ábrelo con el foco en el campo (`autoFocus`).",
+      "Ábrelo desde la lupa de `M01-Navigation`."
+    ],
+    "dont": [
+      "No lo uses como filtro dentro de un listado.",
+      "No metas resultados de búsqueda en el panel: solo recientes.",
+      "No quites el botón de cierre."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "status",
@@ -54,7 +127,7 @@
       "name": "value / defaultValue / onChange",
       "description": "Texto del campo.",
       "default": "''",
-      "control": "text"
+      "control": false
     },
     {
       "name": "onSearch",
@@ -72,13 +145,13 @@
       "name": "recent / defaultRecent / onRecentChange",
       "description": "Búsquedas recientes (el botón BORRAR las vacía).",
       "default": "JAMÓN, LONCHEADO, EMBUTIDO",
-      "control": "object"
+      "control": false
     },
     {
       "name": "placeholder / recentLabel",
       "description": "Textos.",
       "default": "Buscar / Búsquedas recientes",
-      "control": "text"
+      "control": false
     },
     {
       "name": "autoFocus",
@@ -162,7 +235,11 @@
   ],
   "images": [],
   "placeholders": [
-    "Falso positivo del DoD: 'placeholder' es el atributo HTML del campo de búsqueda ('Buscar'), no contenido de relleno."
+    "Falso positivo del DoD: 'placeholder' es el atributo HTML del campo de búsqueda ('Buscar'), no contenido de relleno.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: separaciones 8/10/12 sin variable → FX-2/FX-2/FX-3.",

@@ -1,6 +1,9 @@
 import Divider from './Divider';
 
-export default { title: 'Components/Divider', component: Divider, parameters: { defaultTheme: 'light-white' } };
+import meta from './Divider.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
+export default { title: 'Components/Divider', component: Divider, argTypes: argTypesFromMeta(meta), parameters: { defaultTheme: 'light-white' } };
 
 export const Default = {};
 /** Entre dos bloques de texto. */

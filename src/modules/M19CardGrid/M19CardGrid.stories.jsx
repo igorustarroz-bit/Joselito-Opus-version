@@ -1,8 +1,11 @@
 import M19CardGrid from './M19CardGrid';
 
+import meta from './M19CardGrid.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M19-Card-Grid',
-  component: M19CardGrid,
+  component: M19CardGrid, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showTitle: true },
 };

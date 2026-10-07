@@ -2,60 +2,302 @@
   "name": "ButtonActionLink",
   "kind": "component",
   "title": "Button-Action-Link",
-  "figma": { "nodeId": "49038:9486", "name": "Button-Action-Link", "fp": "b8ad2b00" },
+  "figma": {
+    "nodeId": "49038:9486",
+    "name": "Button-Action-Link",
+    "fp": "b8ad2b00"
+  },
   "description": "Enlace de acción: texto en mayúsculas con subrayado de 1 px y un icono opcional a cada lado. Se usa para acciones secundarias dentro de tarjetas, módulos y menús (\"Ver más\", \"Añadir\"…). Es `<a>` cuando lleva `href` y `<button>` cuando no. Ancho según contenido.",
   "defaultStory": "Default",
-  "variantAxes": { "Type": ["Default", "Hover", "Focus", "Disabled"], "Size": ["L", "M", "S"], "Status": ["Default"] },
+  "variantAxes": {
+    "Type": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Disabled"
+    ],
+    "Size": [
+      "L",
+      "M",
+      "S"
+    ],
+    "Status": [
+      "Default"
+    ]
+  },
   "codeOnlyAxes": [],
   "variants": [
-    { "story": "DefaultL", "title": "Type=Default, Size=L" },
-    { "story": "HoverL", "title": "Type=Hover, Size=L" },
-    { "story": "FocusL", "title": "Type=Focus, Size=L" },
-    { "story": "DisabledL", "title": "Type=Disabled, Size=L" },
-    { "story": "DefaultM", "title": "Type=Default, Size=M" },
-    { "story": "HoverM", "title": "Type=Hover, Size=M" },
-    { "story": "FocusM", "title": "Type=Focus, Size=M" },
-    { "story": "DisabledM", "title": "Type=Disabled, Size=M" },
-    { "story": "DefaultS", "title": "Type=Default, Size=S" },
-    { "story": "HoverS", "title": "Type=Hover, Size=S" },
-    { "story": "FocusS", "title": "Type=Focus, Size=S" },
-    { "story": "DisabledS", "title": "Type=Disabled, Size=S" },
-    { "story": "ConIconos", "title": "Show Icon Left + Show Icon Right" },
-    { "story": "ComoEnlace", "title": "Como enlace (con href)" }
+    {
+      "story": "DefaultL",
+      "title": "Type=Default, Size=L"
+    },
+    {
+      "story": "HoverL",
+      "title": "Type=Hover, Size=L"
+    },
+    {
+      "story": "FocusL",
+      "title": "Type=Focus, Size=L"
+    },
+    {
+      "story": "DisabledL",
+      "title": "Type=Disabled, Size=L"
+    },
+    {
+      "story": "DefaultM",
+      "title": "Type=Default, Size=M"
+    },
+    {
+      "story": "HoverM",
+      "title": "Type=Hover, Size=M"
+    },
+    {
+      "story": "FocusM",
+      "title": "Type=Focus, Size=M"
+    },
+    {
+      "story": "DisabledM",
+      "title": "Type=Disabled, Size=M"
+    },
+    {
+      "story": "DefaultS",
+      "title": "Type=Default, Size=S"
+    },
+    {
+      "story": "HoverS",
+      "title": "Type=Hover, Size=S"
+    },
+    {
+      "story": "FocusS",
+      "title": "Type=Focus, Size=S"
+    },
+    {
+      "story": "DisabledS",
+      "title": "Type=Disabled, Size=S"
+    },
+    {
+      "story": "ConIconos",
+      "title": "Show Icon Left + Show Icon Right"
+    },
+    {
+      "story": "ComoEnlace",
+      "title": "Como enlace (con href)"
+    }
+  ],
+  "axes": [
+    {
+      "name": "Type",
+      "prop": "state",
+      "description": "Estado de interacción. En producción Hover y Focus son nativos; en Storybook se fuerzan con `state` y Disabled con `disabled`.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover",
+          "description": "Texto y subrayado pasan a gris."
+        },
+        {
+          "value": "Focus",
+          "description": "Solo con teclado: añade un contorno de 1 px separado 4 px."
+        },
+        {
+          "value": "Disabled",
+          "description": "Texto y subrayado en gris claro, sin interacción."
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Tamaño del texto: L (CTA/03, 14 px), M (CTA/02, 12 px) y S (CTA/01, 12 px compacto).",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "L",
+          "description": "Tamaño por defecto, el que usan `Card Product` y los módulos."
+        },
+        {
+          "value": "M"
+        },
+        {
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "description": "Eje de Figma con un único valor (Default); no cambia nada y no se expone en código.",
+      "story": "AxisStatus",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Único valor: es el enlace en su estado por defecto."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para acciones secundarias dentro de tarjetas, módulos y menús (\"Ver más\", \"Añadir\").",
+    "do": [
+      "Escribe un verbo de acción corto, de 1 a 3 palabras.",
+      "Pasa `href` cuando navega (se pinta como enlace) y omítelo cuando ejecuta una acción (botón).",
+      "Usa iconos solo como apoyo: son decorativos y el texto da el nombre accesible."
+    ],
+    "dont": [
+      "No lo uses para la acción principal: para eso está `Button`.",
+      "No pongas textos largos: no se parten en varias líneas.",
+      "No uses solo un icono: para eso existe `Button-Icon`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
   ],
   "props": [
-    { "name": "text", "figma": "Text", "description": "Texto del enlace (se muestra en mayúsculas por el estilo CTA).", "default": "\"Button\"", "control": "text" },
-    { "name": "size", "figma": "Size", "description": "Tamaño: `L` (CTA/03, 14 px), `M` (CTA/02, 12 px), `S` (CTA/01, 12 px compacto).", "default": "L", "control": "inline-radio" },
-    { "name": "href", "description": "Si se pasa, se renderiza como `<a>`; si no, como `<button>`.", "default": "—", "control": "text" },
-    { "name": "disabled", "figma": "Type=Disabled", "description": "Desactiva el enlace (texto y subrayado en gris, sin interacción).", "default": "false", "control": "boolean" },
-    { "name": "showIconLeft", "figma": "Show Icon Left", "description": "Muestra el icono izquierdo.", "default": "false", "control": "boolean" },
-    { "name": "showIconRight", "figma": "Show Icon Right", "description": "Muestra el icono derecho.", "default": "false", "control": "boolean" },
-    { "name": "iconLeft", "description": "Nombre del icono izquierdo (set de iconos). En Figma: Star.", "default": "star", "control": "select" },
-    { "name": "iconRight", "description": "Nombre del icono derecho (set de iconos). En Figma: ArrowRight.", "default": "arrow-right", "control": "select" },
-    { "name": "state", "figma": "Type", "description": "Solo documentación: fuerza la apariencia de `Hover` o `Focus`. En producción los estados son nativos (:hover, :focus-visible).", "default": "—", "control": "select" },
-    { "name": "theme", "description": "Fija un subtema (`data-theme`). Por defecto hereda el del contenedor.", "default": "—", "control": "text" }
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto del enlace (se muestra en mayúsculas por el estilo CTA).",
+      "default": "\"Button\"",
+      "control": "text"
+    },
+    {
+      "name": "size",
+      "figma": "Size",
+      "description": "Tamaño: `L` (CTA/03, 14 px), `M` (CTA/02, 12 px), `S` (CTA/01, 12 px compacto).",
+      "default": "L",
+      "control": "inline-radio"
+    },
+    {
+      "name": "href",
+      "description": "Si se pasa, se renderiza como `<a>`; si no, como `<button>`.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "disabled",
+      "figma": "Type=Disabled",
+      "description": "Desactiva el enlace (texto y subrayado en gris, sin interacción).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIconLeft",
+      "figma": "Show Icon Left",
+      "description": "Muestra el icono izquierdo.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showIconRight",
+      "figma": "Show Icon Right",
+      "description": "Muestra el icono derecho.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "iconLeft",
+      "description": "Nombre del icono izquierdo (set de iconos). En Figma: Star.",
+      "default": "star",
+      "control": "select"
+    },
+    {
+      "name": "iconRight",
+      "description": "Nombre del icono derecho (set de iconos). En Figma: ArrowRight.",
+      "default": "arrow-right",
+      "control": "select"
+    },
+    {
+      "name": "state",
+      "figma": "Type",
+      "description": "Solo documentación: fuerza la apariencia de `Hover` o `Focus`. En producción los estados son nativos (:hover, :focus-visible).",
+      "default": "—",
+      "control": "select"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema (`data-theme`). Por defecto hereda el del contenedor.",
+      "default": "—",
+      "control": "text"
+    }
   ],
   "tokens": {
     "color": [
-      { "token": "--button-link-primary-default-text", "usage": "texto (Default y Focus)" },
-      { "token": "--strokes-icons-base", "usage": "subrayado (Default)" },
-      { "token": "--texts-neutral-1", "usage": "texto (Hover)" },
-      { "token": "--strokes-icons-neutral-1", "usage": "subrayado (Hover)" },
-      { "token": "--button-link-primary-default-stroke", "usage": "subrayado y contorno de foco (Focus)" },
-      { "token": "--texts-neutral-3", "usage": "texto (Disabled)" },
-      { "token": "--strokes-icons-neutral-2", "usage": "subrayado (Disabled)" }
+      {
+        "token": "--button-link-primary-default-text",
+        "usage": "texto (Default y Focus)"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "subrayado (Default)"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "texto (Hover)"
+      },
+      {
+        "token": "--strokes-icons-neutral-1",
+        "usage": "subrayado (Hover)"
+      },
+      {
+        "token": "--button-link-primary-default-stroke",
+        "usage": "subrayado y contorno de foco (Focus)"
+      },
+      {
+        "token": "--texts-neutral-3",
+        "usage": "texto (Disabled)"
+      },
+      {
+        "token": "--strokes-icons-neutral-2",
+        "usage": "subrayado (Disabled)"
+      }
     ],
     "spacing": [
-      { "token": "--layout-spacers-responsive-2", "usage": "separación texto–iconos (L, M)" },
-      { "token": "--layout-spacers-responsive-1", "usage": "separación texto–iconos (S)" },
-      { "token": "--spacers-fixed-fx-1", "usage": "espacio bajo el texto (L) y separación del contorno de foco" },
-      { "token": "--spacers-fixed-fx-0", "usage": "espacio bajo el texto (M)" }
+      {
+        "token": "--layout-spacers-responsive-2",
+        "usage": "separación texto–iconos (L, M)"
+      },
+      {
+        "token": "--layout-spacers-responsive-1",
+        "usage": "separación texto–iconos (S)"
+      },
+      {
+        "token": "--spacers-fixed-fx-1",
+        "usage": "espacio bajo el texto (L) y separación del contorno de foco"
+      },
+      {
+        "token": "--spacers-fixed-fx-0",
+        "usage": "espacio bajo el texto (M)"
+      }
     ],
-    "typography": ["ts-cta-03", "ts-cta-02", "ts-cta-01"]
+    "typography": [
+      "ts-cta-03",
+      "ts-cta-02",
+      "ts-cta-01"
+    ]
   },
   "subthemes": {
     "default": "light-white",
-    "supported": ["light-white", "light-grey", "dark-red-primary", "dark-black-neutral"],
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
     "notes": "No fija subtema: texto y subrayado salen de tokens semánticos y se adaptan al subtema del contenedor."
   },
   "anatomy": [
@@ -71,16 +313,29 @@
     "Ancho según contenido (fit-content); el texto no se parte (nowrap)."
   ],
   "content": [
-    { "field": "Texto", "notes": "Verbo de acción corto (1–3 palabras). En el máster: \"Button\"." }
+    {
+      "field": "Texto",
+      "notes": "Verbo de acción corto (1–3 palabras). En el máster: \"Button\"."
+    }
   ],
   "a11y": [
     "Usa `href` cuando navega (enlace) y sin `href` cuando ejecuta una acción (botón).",
     "Foco visible con teclado (:focus-visible).",
     "Los iconos son decorativos (aria-hidden); el texto da el nombre accesible."
   ],
-  "related": ["Button", "Button-Icon", "Card Product", "Icon"],
+  "related": [
+    "Button",
+    "Button-Icon",
+    "Card Product",
+    "Icon"
+  ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el espacio bajo el texto (4 px en L, 2 px en M) no está ligado a variable → se usa Spacers Fixed FX-1 / FX-0 (mismo valor). Avisar a diseño.",
     "Figma: Focus es visualmente idéntico a Default. Se añade un contorno :focus-visible por accesibilidad (decisión de Igor, 2026-10-06). Avisar a diseño para que lo incorpore al máster.",

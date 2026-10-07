@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import M09ContentStackTextImage, { IMAGES, MODES } from './M09ContentStackTextImage';
 
+import meta from './M09ContentStackTextImage.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M09-ContentStack-Text+ Image',
   component: M09ContentStackTextImage,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { image: 'Vertical', showButton: true, showDescription: true, showNumber: true },
-  argTypes: { image: { control: 'inline-radio', options: IMAGES }, mode: { control: 'inline-radio', options: MODES } },
+  argTypes: argTypesFromMeta(meta, { image: { control: 'inline-radio', options: IMAGES }, mode: { control: 'inline-radio', options: MODES } }),
 };
 
 export const Default = { args: { mode: 'Expanded' } };

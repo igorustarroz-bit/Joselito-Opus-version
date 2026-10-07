@@ -1,8 +1,11 @@
 import M03NavigationFooter from './M03NavigationFooter';
 
+import meta from './M03NavigationFooter.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M03-Navigation-Footer',
-  component: M03NavigationFooter,
+  component: M03NavigationFooter, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
 };
 

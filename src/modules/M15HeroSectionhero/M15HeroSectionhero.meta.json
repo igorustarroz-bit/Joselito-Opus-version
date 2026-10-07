@@ -52,6 +52,106 @@
       "title": "Device=Desktop, Image=None, Status=Default"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "HorizontalDefault"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Image",
+      "prop": "image",
+      "description": "Formato del medio bajo el título, o sin medio.",
+      "options": [
+        {
+          "value": "Horizontal",
+          "description": "Medio horizontal de 3 columnas.",
+          "story": "HorizontalDefault"
+        },
+        {
+          "value": "Vertical",
+          "description": "Medio vertical de 2 columnas.",
+          "story": "VerticalDefault"
+        },
+        {
+          "value": "None - Producto",
+          "description": "Sin medio, versión para páginas de producto.",
+          "story": "NoneProducto"
+        },
+        {
+          "value": "None",
+          "description": "Solo texto.",
+          "story": "None"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Estado del hero: medio pequeño en reposo o a pantalla completa con subtema oscuro al hacer scroll.",
+      "options": [
+        {
+          "value": "Default",
+          "story": "HorizontalDefault"
+        },
+        {
+          "value": "Scroll Down",
+          "description": "Se activa desde fuera, al hacer scroll.",
+          "story": "HorizontalScrollDown"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como cabecera de sección con título centrado y, si hace falta, un medio que se amplía al hacer scroll.",
+    "do": [
+      "Mantén el título en una línea en escritorio.",
+      "Usa el medio como decorativo: el vídeo no tiene controles.",
+      "Usa None - Producto o None cuando la página no tenga imagen de cabecera."
+    ],
+    "dont": [
+      "No uses Scroll Down como estado fijo: lo controla la página al hacer scroll.",
+      "No pongas varios h1: el título ya lo es."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Fotograma de Figma como imagen por defecto (el vídeo no se puede exportar desde Figma)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "image",
@@ -106,7 +206,7 @@
       "name": "linkText / href",
       "description": "Enlace.",
       "default": "DESCUBRIR",
-      "control": "text"
+      "control": false
     },
     {
       "name": "body",
@@ -118,7 +218,7 @@
       "name": "backText / backHref",
       "description": "Volver.",
       "default": "VOLVER",
-      "control": "text"
+      "control": false
     },
     {
       "name": "media",
@@ -212,7 +312,12 @@
   "images": [
     "3dac7b98194d980eefed06801f4741926a36a9aa"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: velo #00000033 sin variable → Backgrounds/Overlay (30 %).",
     "Figma: medio horizontal de 245 px → 3 columnas; vertical 2 columnas.",

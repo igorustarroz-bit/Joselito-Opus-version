@@ -1,82 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde Toast.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde Toast.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './Toast.stories';
+import meta from './Toast.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# Toast
-
-## Introducción
-
-Aviso flotante (p. ej. sobre el hero de la home) con foto, título, texto y un indicador de pasos para rotar varios avisos.
-
-
-Figma: `Toast` (`58182:23548`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Foto 1:1
-- Título y texto
-- Indicador vertical de pasos
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- El paso actual va 'en curso' y los anteriores 'completados'.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Segundo aviso de tres
-
-<Canvas of={Stories.SegundoPaso} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--backgrounds-base` | fondo |
-| color | `--texts-base / --texts-neutral-2` | título / texto |
-| spacing | `--spacers-fixed-fx-4` | separación |
-| spacing | `--spacers-fixed-fx-3` | padding izquierdo y del indicador |
-| spacing | `--spacers-fixed-fx-13` | foto de 80 px |
-| spacing | `--spacers-fixed-fx-1` | entre pasos |
-| typography | `ts-body-02` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| title | Título (Body/02). | "Jaime Hayon x Joselito" | text |
-| text | Texto (Body/02, Neutral 2). | "Descubre la nueva colección Joselito Premium" | text |
-| image / imageAlt | Foto 1:1 de 80 px. | foto del máster |  |
-| steps / current | Número de avisos y el actual (indicador Stepper_for_toast). | 3 / 0 | number |
-| href | Enlace del aviso. | — | text |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- role=status; el indicador se resume con aria-label.
-
-## Componentes relacionados
-
-- Stepper_for_toast
-- M13-Hero-Homepagehero
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=58182-23548","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/Toast/Toast.jsx"}} />

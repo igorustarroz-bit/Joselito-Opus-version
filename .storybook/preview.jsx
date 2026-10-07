@@ -1,10 +1,12 @@
 import '../src/index.css';
 import './grid-overlay.css';
 import meta from '../src/tokens/tokens.meta.json';
+import { hanzoTheme } from './theme';
 
-// Viewports = breakpoints de la colección responsive de Figma (tokens.meta.json, regenerado con npm run tokens)
+// Viewports = breakpoints de la colección responsive de Figma (tokens.meta.json, regenerado con npm run tokens).
+// Se muestran en el ancho del frame de Figma (buen punto de muestra); los @media empiezan en el inicio de rango (b.min).
 const viewports = Object.fromEntries((meta.breakpoints || []).map((b) => [b.name, {
-  name: b.label, styles: { width: `${b.width}px`, height: b.width < 768 ? '844px' : '900px' }, type: b.width < 768 ? 'mobile' : b.width < 1200 ? 'tablet' : 'desktop',
+  name: `${b.label}${b.min != null ? ` (desde ${b.min}px)` : ''}`, styles: { width: `${b.width}px`, height: b.width < 768 ? '844px' : '900px' }, type: b.width < 768 ? 'mobile' : b.width < 1200 ? 'tablet' : 'desktop',
 }]));
 
 // Subtemas = modos de la colección de tema (data-theme). "auto" = el default del elemento
@@ -18,33 +20,51 @@ const preview = {
     viewport: { options: viewports },
     layout: 'padded',
     backgrounds: { disable: true },
-    docs: { toc: true },
+    // Doc de cada elemento = <DocPage> con pestañas (src/docs/DocKit.jsx): sin TOC lateral de Storybook.
+    docs: { toc: false, theme: hanzoTheme },
+    // Barra lateral, SIEMPRE: Welcome › Foundations (Tokens primero) › Brand Assets › Components › Modules ›
+    // Templates › resto; dentro de cada grupo, alfabético; dentro de cada elemento: Doc, Default y las demás
+    // stories en el orden del fichero. (Función autocontenida: Storybook la serializa, no uses nada de fuera.)
+    options: {
+      storySort: (a, b) => {
+        const ORDER = ['welcome', 'foundations', 'brand assets', 'components', 'modules', 'templates'];
+        const top = (e) => { const i = ORDER.indexOf(e.title.split('/')[0].trim().toLowerCase()); return i < 0 ? ORDER.length : i; };
+        if (top(a) !== top(b)) return top(a) - top(b);
+        if (a.title !== b.title) {
+          const tok = (e) => (/^foundations\/tokens/i.test(e.title) ? 0 : 1);
+          return tok(a) - tok(b) || a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' });
+        }
+        const rank = (e) => (e.type === 'docs' ? 0 : e.name === 'Default' ? 1 : 2);
+        return rank(a) - rank(b);
+      },
+    },
   },
   initialGlobals: { theme: 'auto', grid: 'off' },
   globalTypes: {
-    grid: {
-      description: 'Superponer las columnas del sistema (grid styles de Figma)',
-      toolbar: { title: 'Columnas', icon: 'grid', items: [{ value: 'off', title: 'Columnas: ocultas' }, { value: 'on', title: 'Columnas: visibles' }], dynamicTitle: true },
-    },
     theme: {
       description: 'Subtema',
       toolbar: { title: 'Subtema', icon: 'paintbrush', items: Object.entries(themes).map(([value, title]) => ({ value, title })), dynamicTitle: true },
     },
+    // Superposición de columnas: sin toolbar aquí (sería un desplegable). El botón de icono (toggle)
+    // vive en .storybook/manager.js. Para capturas: iframe.html?id=<story>&globals=grid:on
+    grid: { description: 'Columnas de la rejilla (on/off)' },
   },
   decorators: [
     (Story, context) => {
       const toolbar = context.globals.theme;
       const fallback = context.parameters.defaultTheme || meta.defaultTheme;
       const effective = !toolbar || toolbar === 'auto' ? fallback : toolbar;
-      // Contenedor + [data-grid-scope]: las columnas elásticas se calculan con el ancho real del lienzo
-      // (sin barra de scroll y también en las páginas Doc, donde el lienzo es más estrecho que la ventana).
+      const fullscreen = context.parameters.layout === 'fullscreen';
+      // Contenedor (container-type) + [data-grid-scope]: las columnas elásticas (--grid-width) miden el
+      // ancho real del lienzo (sin barra de scroll y también en las páginas Doc, más estrechas).
       return (
-        <div style={{ containerType: 'inline-size', minHeight: '100%' }}>
-          <div data-grid-scope="" data-theme={effective || undefined} style={{ position: 'relative', background: 'var(--backgrounds-base)', color: 'var(--texts-base)', padding: context.parameters.layout === 'fullscreen' ? 0 : 16, minHeight: '100%' }}>
+        <div style={{ containerType: 'inline-size' }}>
+          <div data-grid-scope data-theme={effective || undefined} className="hz-story"
+            style={{ background: 'var(--backgrounds-base)', color: 'var(--texts-base)', padding: fullscreen ? 0 : 16, minHeight: '100%' }}>
             <Story />
             {context.globals.grid === 'on' && (
-              <div aria-hidden="true" className="sb-grid-overlay">
-                <div className="wrapper grid-12">{Array.from({ length: 12 }, (_, i) => <span key={i} />)}</div>
+              <div className="wrapper grid-12 hz-grid-overlay" aria-hidden="true">
+                {Array.from({ length: 12 }, (_, i) => <span key={i} />)}
               </div>
             )}
           </div>

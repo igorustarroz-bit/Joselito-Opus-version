@@ -1,6 +1,9 @@
 import SendingDetails from './SendingDetails';
 
-export default { title: 'Components/Sending Details', component: SendingDetails, parameters: { defaultTheme: 'light-white' } };
+import meta from './SendingDetails.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
+export default { title: 'Components/Sending Details', component: SendingDetails, argTypes: argTypesFromMeta(meta), parameters: { defaultTheme: 'light-white' } };
 
 export const Default = { decorators: [(Story) => <div style={{ width: 693, maxWidth: '100%' }}><Story /></div>] };
 /** Device=Desktop: dos columnas cuando el bloque mide 600 px o más. */

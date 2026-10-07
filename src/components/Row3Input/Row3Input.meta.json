@@ -17,6 +17,42 @@
       "title": "Ejemplo con etiquetas reales"
     }
   ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para poner tres campos cortos relacionados en una fila, como código postal, ciudad y país.",
+    "do": [
+      "Campos de longitud parecida y relacionados entre sí.",
+      "Úsalo dentro de `Form`.",
+      "Puede mezclar campos de texto y `Dropdown` de `Input`."
+    ],
+    "dont": [
+      "No lo uses para campos largos (dirección, correo): usa un `Input` solo o `Row2Input`.",
+      "No cuentes con que se vea en fila en móvil: por debajo de 481 px se apilan.",
+      "No pongas mensajes de ayuda: la fila los oculta."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "fields",
@@ -70,7 +106,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: no hay variante móvil; se apilan por debajo de 481 px (propuesta)."
   ],

@@ -1,5 +1,9 @@
 import Input, { TYPES, SIZES, STATES } from './Input';
 
+import meta from './Input.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 const OPTIONS = [{ label: 'Jamón' }, { label: 'Paleta' }, { label: 'Embutidos' }, { label: 'Lotes' }];
 
 export default {
@@ -7,7 +11,7 @@ export default {
   component: Input,
   parameters: { defaultTheme: 'light-white' },
   args: { type: 'Default', size: 'Big', label: 'Label', info: 'Message', showInfo: true, showIcon: false, options: OPTIONS },
-  argTypes: { type: { control: 'inline-radio', options: TYPES }, size: { control: 'inline-radio', options: SIZES }, state: { control: 'select', options: [undefined, ...STATES] } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES }, size: { control: 'inline-radio', options: SIZES }, state: { control: 'select', options: [undefined, ...STATES] } }),
   decorators: [(Story) => <div style={{ width: 320, minHeight: 120 }}><Story /></div>],
 };
 
@@ -32,3 +36,26 @@ export const Interactivo = { args: { info: 'Escribe tu correo', inputType: 'emai
 export const DesplegableAbierto = { args: { type: 'Dropdown', label: 'Categoría' }, decorators: [(Story) => <div style={{ minHeight: 360 }}><Story /></div>] };
 /** Show Icon (CalendarBlank). */
 export const ConIcono = { args: { showIcon: true, label: 'Fecha' } };
+
+/** Eje «Type»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisType = axisStory(Input, [
+  { label: "Default", story: DefaultBig },
+  { label: "Dropdown", story: DropdownBig },
+], { name: "Eje · Type" });
+
+/** Eje «Size»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisSize = axisStory(Input, [
+  { label: "Big", story: DefaultBig },
+  { label: "Small", story: DefaultSmall },
+], { name: "Eje · Size" });
+
+/** Eje «State»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisState = axisStory(Input, [
+  { label: "Default", args: {"state":"Default"} },
+  { label: "Hover", args: {"state":"Hover"} },
+  { label: "Focused", args: {"state":"Focused","defaultValue":"Input text"} },
+  { label: "Filled", args: {"state":"Filled","defaultValue":"Input text"} },
+  { label: "Error", args: {"state":"Error","defaultValue":"Input text"} },
+  { label: "Validated", args: {"state":"Validated","defaultValue":"Input text"} },
+  { label: "Disabled", args: {"state":"Disabled"} },
+], { name: "Eje · State" });

@@ -1,100 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde Accordion.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde Accordion.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './Accordion.stories';
+import meta from './Accordion.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# accordion
-
-## Introducción
-
-Elemento desplegable de acordeón (preguntas frecuentes, pie de página en móvil): título con icono más/menos que muestra u oculta su contenido.
-
-
-Figma: `accordion` (`57943:46054`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Borde superior 1 px
-- Cabecera: título (+ subtítulo) e icono Plus/Minus 16 px
-- Contenido (slot)
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Clic en la cabecera abre o cierra (Plus ↔ Minus).
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Open=No
-
-<Canvas of={Stories.OpenNo} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Open=Yes
-
-<Canvas of={Stories.OpenYes} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Show Subtitle
-
-<Canvas of={Stories.ConSubtitulo} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--strokes-icons-neutral-3` | borde superior |
-| color | `--texts-base` | título |
-| color | `--texts-neutral-1` | contenido y subtítulo |
-| color | `--strokes-icons-base` | icono |
-| spacing | `--spacers-fixed-fx-4` | padding vertical y separación cabecera–contenido |
-| spacing | `--spacers-fixed-fx-2` | título–icono |
-| typography | `ts-cta-link-footer-01` |  |
-| typography | `ts-body-01` |  |
-| typography | `ts-body-02` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| title | Título (CTA-Link-Footer/01). | "item" | text |
-| showSubtitle | Muestra el subtítulo. | false | boolean |
-| subtitle | Subtítulo. | "Text" | text |
-| children | Contenido desplegable (slot). Por defecto el texto del máster (Body/02). | — |  |
-| open / defaultOpen / onToggle | Abierto (controlado o no). | false | boolean |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Cabecera es un botón con aria-expanded y aria-controls.
-- Contenido con hidden cuando está cerrado.
-
-## Componentes relacionados
-
-- list_accordion
-- M03-Navigation-Footer
-- M28-Cards-Accordion
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=57943-46054","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/Accordion/Accordion.jsx"}} />

@@ -42,7 +42,7 @@ const tokMeta = await readJson(`${P.tokens}/tokens.meta.json`, { themes: [] });
 const vars = {
   PROJECT: cfg.project || path.basename(process.cwd()), CLIENT: cfg.client || 'Proyecto', LANG: cfg.docsLang || 'es', OUTPUT: profile,
   REPO: cfg.github?.repo || '', PAGES_URL: cfg.github?.pages || '', SKILL_SCRIPTS: 'scripts/hanzo',
-  GRID_GUTTER: cfg.grid?.gutter || '--layout-grids-gutter', GRID_WRAPPER: cfg.grid?.wrapper || '--layout-grids-wrapper-default', GRID_MAX: cfg.grid?.maxWidth || '1920px',
+  GRID_GUTTER: cfg.grid?.gutter || '--layout-grids-gutter', GRID_WRAPPER: cfg.grid?.wrapper || '--layout-grids-wrapper-default',
   THEMES_JSON: JSON.stringify((tokMeta.themes || []).map((t) => ({ slug: t.slug, name: t.name }))),
 };
 const fill = (s) => s.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => (k in vars ? vars[k] : m));
@@ -74,7 +74,17 @@ for (const f of ['CONTEXT.md', 'CHANGELOG.md']) {
   if (await exists(f)) { skipped.push(f); continue; }
   await writeFile(f, fill(await fs.readFile(path.join(SKILL, 'assets/common', f), 'utf8'))); created.push(f);
 }
-for (const d of ['.ai/masters', '.ai/figma/inventory', '.ai/layout']) await fs.mkdir(d, { recursive: true });
+// Carpetas obligatorias del perfil, creadas explícitamente: al instalar la skill los .gitkeep
+// pueden perderse y, p. ej., Storybook falla si no existe public/
+const DIRS = {
+  'react-storybook': ['public/fonts', 'src/tokens', 'src/components', 'src/modules', 'src/templates', 'src/assets/icons', 'src/assets/logos', 'src/assets/illustrations', 'src/assets/images', 'maps'],
+  'html-static': ['css/tokens', 'css/components', 'components', 'pages', 'docs', 'meta', 'js', 'assets/icons', 'assets/images', 'fonts', 'maps'],
+  shopify: ['assets', 'config', 'layout', 'locales', 'sections', 'snippets', 'blocks', 'templates', 'docs', 'meta', 'maps'],
+}[profile] || [];
+for (const d of [...DIRS, '.ai/masters', '.ai/figma/inventory', '.ai/layout']) {
+  await fs.mkdir(d, { recursive: true });
+  if (!d.startsWith('.ai') && !(await fs.readdir(d)).length) await fs.writeFile(path.join(d, '.gitkeep'), '');
+}
 
 console.log(`✓ Scaffold ${profile}: ${created.length} ficheros creados${skipped.length ? `, ${skipped.length} ya existían (no tocados${args.force ? '' : '; --force para sobrescribir'})` : ''}`);
 for (const c of created) console.log(`  + ${c}`);

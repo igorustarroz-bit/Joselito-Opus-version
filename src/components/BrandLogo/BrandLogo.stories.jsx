@@ -1,10 +1,14 @@
 import BrandLogo, { HORIZONTAL, LOGO_NAMES, Logo } from './BrandLogo';
 
+import meta from './BrandLogo.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 export default {
   title: 'Brand Assets/Brand Logo',
   component: BrandLogo,
   args: { horizontal: 'Yes', title: 'Joselito' },
-  argTypes: { horizontal: { control: 'inline-radio', options: HORIZONTAL }, width: { control: { type: 'number', min: 40, max: 600 } } },
+  argTypes: argTypesFromMeta(meta, { horizontal: { control: 'inline-radio', options: HORIZONTAL }, width: { control: { type: 'number', min: 40, max: 600 } } }),
 };
 
 export const Default = {};
@@ -29,3 +33,9 @@ export const Galeria = { render: () => grid(LOGO_NAMES.filter((n) => !n.startsWi
 
 /** Firmas de chefs (9). Color `--texts-accent-base`. */
 export const Firmas = { render: () => grid(LOGO_NAMES.filter((n) => n.startsWith('firma-'))) };
+
+/** Eje «Horizontal»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisHorizontal = axisStory(BrandLogo, [
+  { label: "Yes", story: HorizontalYes },
+  { label: "No", story: HorizontalNo },
+], { name: "Eje · Horizontal" });

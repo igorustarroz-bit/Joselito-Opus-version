@@ -2,7 +2,10 @@ import Form from './Form';
 import Row2Input from '../Row2Input/Row2Input';
 import Input from '../Input/Input';
 
-export default { title: 'Components/Form', component: Form, parameters: { defaultTheme: 'light-white' }, decorators: [(Story) => <div style={{ width: 502, maxWidth: '100%' }}><Story /></div>] };
+import meta from './Form.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
+export default { title: 'Components/Form', component: Form, argTypes: argTypesFromMeta(meta), parameters: { defaultTheme: 'light-white' }, decorators: [(Story) => <div style={{ width: 502, maxWidth: '100%' }}><Story /></div>] };
 
 export const Default = {};
 /** Ejemplo real: datos de contacto. */

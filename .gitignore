@@ -12,3 +12,5 @@ fonts-raw/
 /*.png
 .ai/logos-sheet.png
 .ai/tmp/
+# Contador personal de llamadas a Figma
+.ai/mcp-usage.json

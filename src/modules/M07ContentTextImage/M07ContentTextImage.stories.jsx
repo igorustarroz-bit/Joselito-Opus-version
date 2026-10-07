@@ -1,5 +1,8 @@
 import M07ContentTextImage, { FORMATS, TYPES } from './M07ContentTextImage';
 
+import meta from './M07ContentTextImage.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 const HALF = { title: 'En Joselito solo hacemos productos 100% naturales',
   text: 'Productos procedentes de cerdos criados en libertad y alimentados de manera natural, su consumo es bueno para el corazón. Su alto contenido de ácido oleico en los jamones Joselito permite reducir el colesterol y los triglicéridos. Todo ello convierte al jamón Joselito en un lujo gastronómico que también puede formar parte de una dieta equilibrada.',
   note: '(Mayoral, P. et al. The Journal of nutrition, health and aging 2003; 7(2): 84-89.)' };
@@ -9,7 +12,7 @@ export default {
   component: M07ContentTextImage,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'Left', imageFormat: 'Horizontal' },
-  argTypes: { type: { control: 'inline-radio', options: TYPES }, imageFormat: { control: 'inline-radio', options: FORMATS } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES }, imageFormat: { control: 'inline-radio', options: FORMATS } }),
 };
 
 export const Default = {};

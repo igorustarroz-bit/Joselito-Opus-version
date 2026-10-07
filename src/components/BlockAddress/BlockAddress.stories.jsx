@@ -1,6 +1,9 @@
 import BlockAddress from './BlockAddress';
 
-export default { title: 'Components/Block Address', component: BlockAddress, parameters: { defaultTheme: 'light-white' }, decorators: [(Story) => <div style={{ width: 342, maxWidth: '100%' }}><Story /></div>] };
+import meta from './BlockAddress.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
+export default { title: 'Components/Block Address', component: BlockAddress, argTypes: argTypesFromMeta(meta), parameters: { defaultTheme: 'light-white' }, decorators: [(Story) => <div style={{ width: 342, maxWidth: '100%' }}><Story /></div>] };
 
 export const Default = {};
 /** Show CreditCard = false (dirección de envío). */

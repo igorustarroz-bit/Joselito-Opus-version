@@ -59,6 +59,125 @@
       "title": "Show Icon"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Campo de texto libre o desplegable que abre un Listbox de opciones.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Texto libre (email, teléfono, contraseña…)."
+        },
+        {
+          "value": "Dropdown",
+          "description": "Elegir una opción de una lista cerrada."
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Alto del campo y estilos de texto: Big (72 px) o Small (56 px).",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "Big",
+          "description": "Formularios principales."
+        },
+        {
+          "value": "Small",
+          "description": "Filtros y espacios compactos."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estados del campo. Hover, foco y relleno salen solos al interactuar; Error y Validated se activan por prop; aquí se fuerzan para documentarlos.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Vacío: la etiqueta ocupa el sitio del valor."
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Focused",
+          "description": "La etiqueta flota arriba."
+        },
+        {
+          "value": "Filled"
+        },
+        {
+          "value": "Error",
+          "description": "Valor incorrecto: el mensaje explica el motivo."
+        },
+        {
+          "value": "Validated",
+          "description": "Valor comprobado y correcto."
+        },
+        {
+          "value": "Disabled",
+          "description": "Campo no editable."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para pedir un dato de texto en formularios (`Default`) o para elegir una opción de una lista corta (`Dropdown`).",
+    "do": [
+      "Etiqueta de 1–3 palabras con el nombre del dato; el mensaje inferior, una sola línea de ayuda o motivo del error.",
+      "Usa `Big` en formularios principales y `Small` en filtros o formularios compactos.",
+      "Combínalo en filas con `row_2_input` / `row_3_input` o con un botón con `InputAndButton`."
+    ],
+    "dont": [
+      "No uses el placeholder como etiqueta: la etiqueta ya ocupa ese sitio cuando el campo está vacío.",
+      "No uses `Dropdown` para selecciones múltiples: el Listbox es de selección única.",
+      "No escribas mensajes de error genéricos: explica qué falla y cómo corregirlo."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "InputAndButton (+ Input con action y emptyLabel)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "El desplegable abierto sin valor mantiene la etiqueta grande",
+        "Listbox con padding FX-2 como en Figma"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Input (etiqueta flotante, 7 estados, Big/Small, Dropdown con Listbox)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -98,13 +217,13 @@
       "figma": "Placeholder",
       "description": "Valor (controlado o no). En Figma el valor de ejemplo es \"Input text\".",
       "default": "\"\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "inputType / name / placeholder",
       "description": "Atributos del input nativo (email, tel, password…).",
       "default": "text",
-      "control": "text"
+      "control": false
     },
     {
       "name": "info",
@@ -303,6 +422,10 @@
     {
       "field": "placeholder",
       "notes": "No es contenido de relleno: es el atributo HTML `placeholder` del input (opcional). El valor de ejemplo del máster (\"Input text\") solo se usa en las stories."
+    },
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
     }
   ],
   "notes": [

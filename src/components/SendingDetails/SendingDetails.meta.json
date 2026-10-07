@@ -26,6 +26,49 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio o de móvil del mismo diseño. En código no es una prop: el elemento se adapta solo por breakpoint: aquí con container query, dos columnas desde 600 px de ancho del bloque y una por debajo.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en la confirmación y el detalle del pedido para resumir envío, facturación, pago y fecha.",
+    "do": [
+      "Usa un `BlockAddress` por dato.",
+      "Pon títulos distintos a cada bloque (envío, facturación, pago, fecha)."
+    ],
+    "dont": [
+      "No repitas \"Dirección de facturación\" en todos los bloques como en el máster.",
+      "No lo uses para editar direcciones: es solo resumen."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "title",
@@ -96,7 +139,12 @@
       "usage": "logo Visa"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: los bloques de pago y fecha repiten el título \"Dirección de facturación\" (parece un error de contenido; debería ser \"Método de pago\" y \"Fecha de entrega\"). Avisar a diseño.",
     "Figma: gap 24 px sin variable → FX-6."

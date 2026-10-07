@@ -26,6 +26,60 @@
       "title": "Vertical=No"
     }
   ],
+  "axes": [
+    {
+      "name": "Vertical",
+      "prop": "vertical",
+      "description": "Disposición de las casillas: apiladas (separación FX-2) o en fila (FX-4) que salta de línea si no cabe.",
+      "story": "AxisVertical",
+      "options": [
+        {
+          "value": "Yes",
+          "description": "Apiladas; la opción por defecto."
+        },
+        {
+          "value": "No",
+          "description": "En fila; para pocas opciones cortas."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para agrupar varias casillas (`Checkbox-Label`) relacionadas en un formulario o filtro.",
+    "do": [
+      "Etiquetas cortas y paralelas entre sí.",
+      "Vertical para listas largas o textos de más de una palabra; horizontal para 2–4 opciones breves.",
+      "Dale un nombre accesible al grupo (`label`)."
+    ],
+    "dont": [
+      "No lo uses para elegir una sola opción entre varias.",
+      "No mezcles casillas sin relación en el mismo grupo.",
+      "No uses la versión horizontal con textos largos: saltará de línea."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Checkbox-List"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "vertical",
@@ -97,7 +151,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [],
   "codePath": "src/components/CheckboxList/CheckboxList.jsx"
 }

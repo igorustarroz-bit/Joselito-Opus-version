@@ -55,6 +55,103 @@
       "title": "Device=Desktop, Type=Perfil Sensorial"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint y en móvil usa la imagen vertical si existe; para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Mobile"
+        },
+        {
+          "value": "Desktop",
+          "story": "Anadas1"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "kind",
+      "description": "Contenido del slider. Cada tipo tiene dos variantes en Figma (1 y 2) que son dos pasos del mismo slider; en código se elige con `kind` y la diapositiva con `start`.",
+      "options": [
+        {
+          "value": "Añadas 1",
+          "description": "Añadas por año, con etiquetas.",
+          "story": "Anadas1"
+        },
+        {
+          "value": "Origen 1",
+          "description": "Generaciones de la familia por año.",
+          "story": "Origen1"
+        },
+        {
+          "value": "Origen 2",
+          "story": "Origen2"
+        },
+        {
+          "value": "Añadas 2",
+          "story": "Anadas2"
+        },
+        {
+          "value": "Producto 1",
+          "description": "Gamas de producto (Reserva, Millésime, Vintage).",
+          "story": "Producto1"
+        },
+        {
+          "value": "Producto 2",
+          "story": "Producto2"
+        },
+        {
+          "value": "Perfil Sensorial",
+          "description": "Versión clara con imagen pequeña y contador.",
+          "story": "PerfilSensorial"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para recorrer a pantalla completa una serie de productos, generaciones o añadas con una palabra o fecha gigante por diapositiva.",
+    "do": [
+      "Una sola palabra o un año por diapositiva.",
+      "Texto de dos o tres líneas, con etiquetas y un enlace si aplica.",
+      "Si hay imagen vertical, añádela para móvil (`imageMobile`)."
+    ],
+    "dont": [
+      "No escribas frases en la palabra gigante.",
+      "No uses imágenes sin velo ni con mucho detalle detrás del texto.",
+      "No lo uses para galerías de fotos sin texto."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M18: márgenes del título y tamaño de la imagen en Perfil Sensorial"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "kind",
@@ -73,13 +170,13 @@
       "name": "start / index / onChange",
       "description": "Diapositiva inicial, controlada y aviso de cambio.",
       "default": "según kind",
-      "control": "number"
+      "control": false
     },
     {
       "name": "label / title",
       "description": "Etiqueta (oscuro) o título (Perfil Sensorial) por defecto.",
       "default": "según kind",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -183,7 +280,11 @@
     "f1abf8f15f7e920fa3002e23c5f35a69bfc41a2f"
   ],
   "placeholders": [
-    "Textos de relleno (lorem ipsum) en Origen y Añadas copiados de Figma."
+    "Textos de relleno (lorem ipsum) en Origen y Añadas copiados de Figma.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: velos negros al 20/30/40 % sin variable → Backgrounds/Overlay.",

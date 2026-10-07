@@ -58,11 +58,13 @@ export function SizeTokens({ match = /spac|gap|wrapper|gutter|padding|margin/, k
 export function Breakpoints() {
   return (
     <table>
-      <thead><tr><th>Breakpoint</th><th>Figma</th><th>Desde</th><th>Columnas</th></tr></thead>
+      <thead><tr><th>Breakpoint</th><th>Figma (frame)</th><th>Rango</th><th>Columnas</th></tr></thead>
       <tbody>
-        {(meta.breakpoints || []).map((b, i) => {
+        {(meta.breakpoints || []).map((b, i, all) => {
           const g = (meta.grids || []).filter((x) => x.width <= b.width).at(-1);
-          return <tr key={b.name}><td><code>{i === 0 ? '(base)' : `${b.name}:`}</code></td><td>{b.label}</td><td>{b.width}px</td><td>{g ? g.columns : '—'}</td></tr>;
+          const min = b.min ?? b.width, next = all[i + 1];
+          const range = next ? `${min} – ${(next.min ?? next.width) - 1} px` : `${min} px +`;
+          return <tr key={b.name}><td><code>{i === 0 ? '(base)' : `${b.name}:`}</code></td><td>{b.label}</td><td>{range}</td><td>{g ? g.columns : '—'}</td></tr>;
         })}
       </tbody>
     </table>

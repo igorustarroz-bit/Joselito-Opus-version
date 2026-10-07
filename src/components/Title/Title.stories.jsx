@@ -1,8 +1,11 @@
 import Title from './Title';
 
+import meta from './Title.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Components/Title',
-  component: Title,
+  component: Title, argTypes: argTypesFromMeta(meta),
   parameters: { defaultTheme: 'light-white', layout: 'fullscreen' },
   args: { eyebrow: 'Nuestra colección', title: 'Lorem ipsum dolor sit amet cucuster', showTitle: true, showLink: true, linkText: 'Ver todos', href: '#' },
   decorators: [(Story) => <div className="wrapper"><Story /></div>],

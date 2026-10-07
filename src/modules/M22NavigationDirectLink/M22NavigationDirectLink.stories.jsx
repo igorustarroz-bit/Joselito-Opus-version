@@ -1,11 +1,14 @@
 import M22NavigationDirectLink, { STATES, TYPES } from './M22NavigationDirectLink';
 
+import meta from './M22NavigationDirectLink.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M22-NavigationDirectLink',
   component: M22NavigationDirectLink,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'Direct Link', soldOut: true, showArrow: true },
-  argTypes: { type: { control: 'inline-radio', options: TYPES }, state: { control: 'inline-radio', options: STATES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES }, state: { control: 'inline-radio', options: STATES } }),
 };
 
 export const Default = {};

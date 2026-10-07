@@ -26,6 +26,63 @@
       "title": "Property 1=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Property 1",
+      "description": "En Figma hace de eje de dispositivo: escritorio con bloques en fila y móvil en columna. En código se adapta por breakpoint a 960 px.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para destacar ventajas o datos clave en bloques cortos con una cabecera común.",
+    "do": [
+      "Usa 3 bloques, o 4 con el bloque extra.",
+      "Título en mayúsculas y texto corto en cada bloque."
+    ],
+    "dont": [
+      "No lo uses para pasos numerados: usa `M21-List-Numbers`.",
+      "No metas textos largos en los bloques."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Con cuarto bloque",
+      "description": "Añade un cuarto bloque cuando hay cuatro ventajas que destacar.",
+      "story": "ConExtra"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "showTitle",
@@ -45,7 +102,7 @@
       "name": "items / extraItem",
       "description": "Bloques: title, text.",
       "default": "3 × Mejor precio garantizado",
-      "control": "object"
+      "control": false
     },
     {
       "name": "eyebrow",
@@ -112,7 +169,12 @@
     "M21-List-Numbers"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: padding lateral del título de 80 px sin variable → Wrapper-Default (80 a 1440).",
     "Figma: separación de 44 px sin efecto (un solo hijo).",

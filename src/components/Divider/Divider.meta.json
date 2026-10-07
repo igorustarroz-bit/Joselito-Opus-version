@@ -17,6 +17,33 @@
       "title": "Entre dos bloques"
     }
   ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para separar bloques de contenido relacionados dentro de un mismo contenedor.",
+    "do": [
+      "Úsalo entre secciones de un formulario o entre bloques de texto.",
+      "Deja que ocupe todo el ancho del contenedor."
+    ],
+    "dont": [
+      "No lo uses para separar módulos de página: ya tienen su propio espaciado.",
+      "No lo encadenes con bordes de otros componentes (doble línea)."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "theme",
@@ -58,7 +85,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el máster es un rectángulo de 800 × 1 px sin autolayout; en código es un hr de ancho completo."
   ],

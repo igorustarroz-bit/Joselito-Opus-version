@@ -5,8 +5,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 // Flags booleanos: nunca consumen el siguiente argumento
-const BOOL = new Set(['build', 'all', 'fp', 'drift', 'next', 'keys', 'force', 'json', 'strict', 'dry-run', 'no-tailwind',
-  'update-scripts', 'rest', 'webp', 'no-optimize', 'help']);
+// [parche Joselito] 'meta' NO es booleano: figma-diff usa --meta <ruta> (grid-columns lo trata aparte)
+const BOOL = new Set(['build', 'all', 'fp', 'drift', 'next', 'keys', 'force', 'json', 'strict', 'dry-run', 'no-tailwind', 'no-fluid', 'measure', 'overflow', 'write',
+  'update-scripts', 'status', 'rest', 'webp', 'no-optimize', 'help']);
 
 /** Parsea argv en { _: [posicionales], flag: valor|true }. Soporta --k=v y --k v. */
 export function parseArgs(argv = process.argv.slice(2)) {

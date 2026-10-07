@@ -1,8 +1,11 @@
 import M04Login from './M04Login';
 
+import meta from './M04Login.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M04-Login',
-  component: M04Login,
+  component: M04Login, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showPhoto: true },
 };

@@ -1,11 +1,14 @@
 import M05FilterSecondaryMenu, { STATUSES } from './M05FilterSecondaryMenu';
 
+import meta from './M05FilterSecondaryMenu.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M05-Filter-Secondary Menu',
   component: M05FilterSecondaryMenu,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { status: 'Default', count: 84 },
-  argTypes: { status: { control: 'inline-radio', options: STATUSES } },
+  argTypes: argTypesFromMeta(meta, { status: { control: 'inline-radio', options: STATUSES } }),
 };
 
 const tall = (Story) => <div style={{ display: 'flex', height: 780 }}><Story /></div>;

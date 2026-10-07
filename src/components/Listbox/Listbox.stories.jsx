@@ -1,9 +1,12 @@
 import Listbox from './Listbox';
 import ListboxItem from '../ListboxItem/ListboxItem';
 
+import meta from './Listbox.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Components/Listbox',
-  component: Listbox,
+  component: Listbox, argTypes: argTypesFromMeta(meta),
   parameters: { defaultTheme: 'light-white' },
   decorators: [(Story) => <div style={{ width: 320 }}><Story /></div>],
 };

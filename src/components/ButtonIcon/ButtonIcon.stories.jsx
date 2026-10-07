@@ -1,18 +1,22 @@
 import ButtonIcon, { TYPES, SIZES, STATES } from './ButtonIcon';
 import { ICON_NAMES } from '../Icon/Icon';
 
+import meta from './ButtonIcon.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 export default {
   title: 'Components/Button-Icon',
   component: ButtonIcon,
   parameters: { defaultTheme: 'light-white' },
   args: { type: 'Primary', size: 'L', icon: 'arrow-right', label: 'Siguiente', selected: false, disabled: false },
-  argTypes: {
+  argTypes: argTypesFromMeta(meta, {
     type: { control: 'inline-radio', options: TYPES },
     size: { control: 'inline-radio', options: SIZES },
     state: { control: 'select', options: [undefined, ...STATES] },
     icon: { control: 'select', options: ICON_NAMES },
     href: { control: 'text' },
-  },
+  }),
 };
 
 export const Default = {};
@@ -47,3 +51,28 @@ export const TerciarySizes = { render: (args) => (<div style={{ display: 'flex',
 
 /** Como enlace (`href`): se renderiza `<a>`. */
 export const ComoEnlace = { args: { href: '#', type: 'Secondary' } };
+
+/** Eje «Type»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisType = axisStory(ButtonIcon, [
+  { label: "Primary", story: SizeXL, args: {"type":"Primary","size":"L"} },
+  { label: "Secondary", story: SecondaryDefault },
+  { label: "Terciary", story: TerciaryDefault },
+], { name: "Eje · Type" });
+
+/** Eje «Size»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisSize = axisStory(ButtonIcon, [
+  { label: "XL", story: SizeXL },
+  { label: "L", story: PrimaryDefault },
+  { label: "M", story: SizeM },
+  { label: "S", story: SizeS },
+  { label: "XS", story: SizeXS },
+], { name: "Eje · Size" });
+
+/** Eje «State»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisState = axisStory(ButtonIcon, [
+  { label: "Default", story: SizeXL, args: {"size":"L"} },
+  { label: "Hover", story: PrimaryHover },
+  { label: "Selected", story: PrimarySelected },
+  { label: "Disabled", story: PrimaryDisabled },
+  { label: "Focussed", story: PrimaryFocussed },
+], { name: "Eje · State" });

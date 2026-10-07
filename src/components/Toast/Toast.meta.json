@@ -17,6 +17,34 @@
       "title": "Segundo aviso de tres"
     }
   ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para un aviso flotante destacado, por ejemplo sobre el hero de la home, que puede rotar entre varios mensajes.",
+    "do": [
+      "Usa título y texto breves.",
+      "Enlaza el aviso a su destino.",
+      "Usa el indicador de pasos solo con 2 o más avisos."
+    ],
+    "dont": [
+      "No lo uses para errores o confirmaciones del sistema.",
+      "No pongas más de tres avisos en rotación."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "title",
@@ -42,7 +70,7 @@
       "name": "steps / current",
       "description": "Número de avisos y el actual (indicador Stepper_for_toast).",
       "default": "3 / 0",
-      "control": "number"
+      "control": false
     },
     {
       "name": "href",
@@ -122,7 +150,12 @@
       "usage": "foto"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el indicador es un frame rotado −90° con steppers rotados 90°; en código es una columna.",
     "Figma: hay un Button-Action-Link oculto (no se construye).",

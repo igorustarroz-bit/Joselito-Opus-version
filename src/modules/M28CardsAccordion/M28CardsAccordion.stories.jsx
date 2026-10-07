@@ -1,11 +1,14 @@
 import M28CardsAccordion, { TYPES } from './M28CardsAccordion';
 
+import meta from './M28CardsAccordion.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M28-Cards-Accordion',
   component: M28CardsAccordion,
   parameters: { layout: 'fullscreen' },
   args: { type: 'Carrousel' },
-  argTypes: { type: { control: 'inline-radio', options: TYPES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES } }),
 };
 
 export const Default = {};

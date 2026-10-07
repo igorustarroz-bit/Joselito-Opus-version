@@ -1,67 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde PlaceholderText.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde PlaceholderText.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './PlaceholderText.stories';
+import meta from './PlaceholderText.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# Placeholder-Text
-
-## Introducción
-
-Texto genérico Body/02 que Figma usa como relleno de slots y ejemplos.
-
-
-Figma: `Placeholder-Text` (`57961:792`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Texto
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Ancho del contenedor.
-
-## Variantes y tamaños
-
-_—_
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--texts-base` | texto |
-| typography | `ts-body-02` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| text | Texto. | "Text" | text |
-| as | Etiqueta HTML. | p | text |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Texto plano.
-
-## Componentes relacionados
-
-- Form
-
-## Pendientes / placeholders
-
-- undefined: undefined
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=57961-792","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/PlaceholderText/PlaceholderText.jsx"}} />

@@ -1,11 +1,14 @@
 import M02Menu, { TYPES } from './M02Menu';
 
+import meta from './M02Menu.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M02-Menu',
   component: M02Menu,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'Product', showPhoto: true },
-  argTypes: { type: { control: 'inline-radio', options: TYPES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES } }),
 };
 
 export const Default = {};

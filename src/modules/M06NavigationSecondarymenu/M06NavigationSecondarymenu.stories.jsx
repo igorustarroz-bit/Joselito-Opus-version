@@ -1,11 +1,14 @@
 import M06NavigationSecondarymenu, { TYPES } from './M06NavigationSecondarymenu';
 
+import meta from './M06NavigationSecondarymenu.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M06-Navigation-Secondarymenu',
   component: M06NavigationSecondarymenu,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'One line', showMenu: true },
-  argTypes: { type: { control: 'inline-radio', options: TYPES }, open: { control: 'boolean' } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES }, open: { control: 'boolean' } }),
 };
 
 export const Default = {};

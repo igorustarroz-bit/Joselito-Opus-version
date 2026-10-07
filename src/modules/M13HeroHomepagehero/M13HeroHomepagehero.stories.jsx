@@ -1,8 +1,11 @@
 import M13HeroHomepagehero from './M13HeroHomepagehero';
 
+import meta from './M13HeroHomepagehero.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M13-Hero-Homepagehero',
-  component: M13HeroHomepagehero,
+  component: M13HeroHomepagehero, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'dark-black-neutral' },
   args: { showToast: true },
 };

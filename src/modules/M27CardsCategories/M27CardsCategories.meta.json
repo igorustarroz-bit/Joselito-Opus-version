@@ -26,6 +26,63 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para presentar las categorías de producto en un carrusel con cabecera.",
+    "do": [
+      "Pon en cada categoría nombre y precio \"desde\".",
+      "Muestra las flechas en escritorio para indicar que hay más tarjetas."
+    ],
+    "dont": [
+      "No lo uses para productos individuales: usa `M24-Cards-Productcarousel`.",
+      "No metas tan pocas categorías que no haga falta desplazar: usa `M19-Card-Grid`."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Sin flechas",
+      "description": "Carrusel que se desplaza solo con scroll o swipe.",
+      "story": "SinFlechas"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "items",
@@ -51,7 +108,7 @@
       "name": "eyebrow / linkText / href",
       "description": "Cabecera.",
       "default": "Nuestros productos / Ver todos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -127,7 +184,12 @@
     "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17",
     "a8c5d80920066337b05be9515d83738d003ae4aa"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: la cabecera está montada a mano (texto + CaretRight) en lugar de usar el máster Title; en código se usa Title.",
     "Figma: separaciones 60/54 sin variable → FX-11/FX-10.",

@@ -1,8 +1,11 @@
 import M27CardsCategories from './M27CardsCategories';
 
+import meta from './M27CardsCategories.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M27-Cards-Categories',
-  component: M27CardsCategories,
+  component: M27CardsCategories, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showTitle: true, showArrows: true },
 };

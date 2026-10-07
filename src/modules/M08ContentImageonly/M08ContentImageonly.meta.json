@@ -35,6 +35,78 @@
       "title": "Device=Desktop, Type=Split"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio o de móvil del mismo diseño. En código no es una prop: el elemento se adapta solo por breakpoint a 960 px: Full Screen y Borders pasan de 16:9 a 9:16 y Split se apila.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Split"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Composición: imagen a sangre, con márgenes o dos imágenes verticales.",
+      "options": [
+        {
+          "value": "Split",
+          "description": "Dos imágenes 3:4, cada una en media pantalla.",
+          "story": "Split"
+        },
+        {
+          "value": "Full Screen",
+          "description": "Por defecto; máximo impacto.",
+          "story": "FullScreen"
+        },
+        {
+          "value": "Borders",
+          "description": "Con los márgenes del wrapper.",
+          "story": "Borders"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para dar respiro visual entre módulos con una o dos imágenes sin texto.",
+    "do": [
+      "Usa imágenes horizontales; en móvil el recorte vertical es central.",
+      "Usa Split para dos fotos que dialogan.",
+      "Pon alt si la imagen aporta información."
+    ],
+    "dont": [
+      "No pongas imágenes con texto incrustado.",
+      "No encadenes varios seguidos."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -47,7 +119,7 @@
       "name": "image / imageAlt",
       "description": "Imagen de Full Screen y Borders.",
       "default": "foto de ejemplo",
-      "control": "text"
+      "control": false
     },
     {
       "name": "images",
@@ -111,7 +183,12 @@
     "0aa037659d4f9beb5ae39b5720be81123444f026",
     "5733d70588973756366c17628ccec29bfc3fbaf2"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: Full Screen y Borders cambian de proporción entre escritorio (16:9) y móvil (9:16); en código se hace con CSS.",
     "Figma: itemSpacing de 10 px sin variable en marcos con un solo hijo (no afecta)."

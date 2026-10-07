@@ -55,6 +55,70 @@
       "title": "4 casillas (Show 5/6 = false)"
     }
   ],
+  "axes": [
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estado del campo. Hover, foco y relleno son nativos; Error, Validated y Disabled se activan por props. En Storybook se fuerzan con `state`.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Focused",
+          "description": "Casilla activa mientras se escribe."
+        },
+        {
+          "value": "Filled",
+          "description": "Todas las casillas rellenas."
+        },
+        {
+          "value": "Error",
+          "description": "Código incorrecto; acompáñalo de un mensaje."
+        },
+        {
+          "value": "Validated",
+          "description": "Código correcto."
+        },
+        {
+          "value": "Disabled",
+          "description": "Sin interacción, p. ej. mientras se reenvía el código."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para pedir un código de verificación enviado por SMS o correo.",
+    "do": [
+      "Ajusta el número de casillas (de 3 a 6) a la longitud real del código.",
+      "Usa el mensaje para indicar dónde se envió el código o explicar el error.",
+      "Reacciona a `onComplete` para validar en cuanto se rellenan todas las casillas."
+    ],
+    "dont": [
+      "No lo uses para textos o contraseñas: es solo para códigos cortos.",
+      "No dejes el estado Error sin mensaje que explique qué ha fallado."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "length",
@@ -123,7 +187,7 @@
       "name": "value / defaultValue / onChange / onComplete",
       "description": "Código (controlado o no); onComplete al rellenar todas las casillas.",
       "default": "\"\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "info",
@@ -143,7 +207,7 @@
       "name": "error / validated / disabled",
       "description": "Estados.",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "state",
@@ -218,7 +282,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: las propiedades Num1–Num6 son el contenido de cada casilla; en código es un único value."
   ],

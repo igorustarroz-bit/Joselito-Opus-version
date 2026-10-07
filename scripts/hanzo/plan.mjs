@@ -19,6 +19,7 @@
  *   npm run plan -- --set <key>=done --fp   además guarda builtFp = fp actual (tras construir)
  *   npm run plan -- --drift             solo informa de másters que cambiaron en Figma desde que se construyeron
  *   npm run plan -- --next              imprime el siguiente elemento pendiente
+ *   npm run plan -- --status            resumen legible por fases ("dónde estamos"), para enseñar al usuario
  */
 
 import fs from 'node:fs/promises';
@@ -63,7 +64,7 @@ const isFoundation = RE(naming.foundation, '^(aspect ratio|grid|icon sizer|space
 const items = [];
 const add = (it) => {
   let key = it.key || `${it.kind}:${slug(it.name)}`;
-  // Nombres que solo difieren en mayúsculas (p. ej. "accordion" y "Accordion") darían la misma clave:
+  // [parche Joselito] Nombres que solo difieren en mayúsculas (accordion / Accordion) darían la misma clave:
   // la segunda se desambigua con el nodeId para que cada máster tenga su propio estado.
   if (items.some((i) => i.key === key)) key = `${key}--${String(it.nodeId || items.length).replace(':', '-')}`;
   const p = prevBy[key] || {};
@@ -88,7 +89,8 @@ for (const pg of pages) {
   for (const m of pg.masters) {
     if (isPrivate.test(m.name) || isPrivate.test(m.section || '')) continue;
     let kind;
-    if (role === 'brandAssets') kind = m.vectorsOnly && /icon/i.test(m.section || m.name) ? 'icon' : 'brand';
+    // Brand Assets: TODO máster vectorial (iconos, logos, certificaciones, firmas…) va al paso de vectores
+    if (role === 'brandAssets') kind = m.vectorsOnly && !m.images ? 'icon' : 'brand';
     else if (role === 'foundations' || isFoundation.test(m.name)) kind = 'foundation';
     else if (role === 'modules' || isModuleName.test(m.name)) kind = 'module';
     else kind = 'component';
@@ -99,8 +101,18 @@ for (const pg of pages) {
 const icons = masters.filter((m) => m.kind === 'icon');
 const iconNames = new Set(icons.map((m) => m.name));
 for (const m of masters.filter((m) => m.kind === 'foundation')) add({ phase: 'foundations', kind: 'foundation', name: m.name, nodeId: m.id, pageId: m.pageId, fp: m.fp, variants: m.variants, deps: m.deps, images: m.images });
-if (icons.length) add({ phase: 'brand', kind: 'icons', key: 'icons:set', name: `Set de iconos (${icons.length}) → SVGR/SVGO`, count: icons.length, nodeIds: icons.map((i) => i.id), fp: crypto.createHash('sha1').update(icons.map((i) => `${i.name}:${i.fp}`).join('|')).digest('hex').slice(0, 8) });
-for (const m of masters.filter((m) => m.kind === 'brand')) add({ phase: 'brand', kind: 'brand', name: m.name, nodeId: m.id, pageId: m.pageId, fp: m.fp, variants: m.variants, note: 'confirmar alcance (logos de terceros, certificaciones…)' });
+if (icons.length) {
+  const bySection = {};
+  for (const i of icons) bySection[i.section || 'Sin sección'] = (bySection[i.section || 'Sin sección'] || 0) + 1;
+  add({ phase: 'brand', kind: 'icons', key: 'icons:set',
+    name: `Vectores de Brand Assets (${icons.length} másters) → SVG optimizado (SVGO/SVGR)`,
+    note: Object.entries(bySection).map(([s, n]) => `${s}: ${n}`).join(' · '),
+    count: icons.length, nodeIds: icons.map((i) => i.id), sections: bySection,
+    fp: crypto.createHash('sha1').update(icons.map((i) => `${i.name}:${i.fp}`).join('|')).digest('hex').slice(0, 8) });
+}
+// Brand assets NO vectoriales (imagen raster o texto sin contornear): uno a uno
+for (const m of masters.filter((m) => m.kind === 'brand')) add({ phase: 'brand', kind: 'brand', name: m.name, nodeId: m.id, pageId: m.pageId, fp: m.fp, variants: m.variants, images: m.images,
+  note: m.images ? 'brand asset con imagen raster (su imagen va en el hito de imágenes)' : 'brand asset con texto sin contornear: pedir a diseño que lo vectorice o construirlo como componente' });
 add({ phase: 'milestone', kind: 'milestone', key: 'milestone:images', name: 'HITO: descarga de imágenes raster → WebP + maps/images.json (npm run images)', images: masters.reduce((a, m) => a + (m.images || 0), 0) });
 
 // Orden topológico por dependencias dentro de cada grupo
@@ -185,7 +197,7 @@ await writeJson('.ai/index.json', { generatedAt: new Date().toISOString(), outpu
 const BOX = { todo: ' ', doing: '~', done: 'x', blocked: '!', skip: '-' };
 const PH = [
   ['setup', 'Fase 0 — Setup'], ['tokens', 'Fase 1 — Tokens (antes que cualquier componente)'],
-  ['foundations', 'Fase 2 — Foundations'], ['brand', 'Fase 2b — Iconos y brand assets'],
+  ['foundations', 'Fase 2 — Foundations'], ['brand', 'Fase 2b — Vectores de Brand Assets (iconos, logos, certificaciones, firmas…)'],
   ['milestone', 'Fase 2.5 — HITO de imágenes (justo después de los iconos; no se salta)'],
   ['components', 'Fase 3 — Componentes (ordenados: primero los que son base de otros)'],
   ['modules', 'Fase 4 — Módulos (100% ancho, grid de columnas del sistema, por breakpoint)'],
@@ -215,6 +227,33 @@ if (removed.length) out.push('## ⚠ Ya no existen en Figma', '', ...removed.map
 await writeFile('PLAN.md', out.join('\n'));
 
 const next = items.find((i) => i.status === 'doing') || items.find((i) => i.status === 'todo');
+if (args.status) {
+  // Vista para el usuario: las 6 etapas que se explican en la intro (references/communication.md)
+  const STAGES = [
+    ['1. Preparación', ['setup']],
+    ['2. Análisis del Figma y plan', []],
+    ['3. Estilos base (tokens y foundations)', ['tokens', 'foundations']],
+    ['4. Iconos, logos e imágenes', ['brand', 'milestone']],
+    ['5. Componentes y módulos', ['components', 'modules']],
+    ['6. Páginas y flujos', ['templates', 'flows']],
+  ];
+  const live = items.filter((i) => i.status !== 'skip');
+  const done = live.filter((i) => i.status === 'done').length;
+  console.log(`Progreso de ${cfg.client || cfg.project || 'el proyecto'}: ${done}/${live.length} elementos (${Math.round((done / Math.max(1, live.length)) * 100)}%)`);
+  for (const [title, phases] of STAGES) {
+    const l = live.filter((i) => phases.includes(i.phase));
+    if (!phases.length) { console.log(`✅ ${title} — hecho (PLAN.md)`); continue; }
+    if (!l.length) continue;
+    const d = l.filter((i) => i.status === 'done').length;
+    const here = next && phases.includes(next.phase);
+    const sub = phases.length > 1 ? ' · ' + phases.map((ph) => { const x = l.filter((i) => i.phase === ph); return x.length ? `${PH.find((p) => p[0] === ph)[1].replace(/^Fase [\d.b]+ — /, '').replace(/\s*\(.*\)$/, '')} ${x.filter((i) => i.status === 'done').length}/${x.length}` : null; }).filter(Boolean).join(', ') : '';
+    const icon = d === l.length ? '✅' : here ? '👉' : d ? '🟡' : '⬜';
+    console.log(`${icon} ${title} — ${d}/${l.length}${sub}${here ? '   ← estamos aquí' : ''}`);
+  }
+  console.log(next ? `Siguiente: ${next.name}` : 'Plan completo 🎉');
+  if (drift.length) console.log(`⚠ ${drift.length} elemento(s) ya hechos han cambiado en Figma`);
+  process.exit(0);
+}
 if (args.next) { console.log(next ? `${next.key}\t${next.name}${next.nodeId ? `\t${next.nodeId}` : ''}` : 'Plan completo'); process.exit(0); }
 console.log(`✓ Plan: ${items.length} elementos (${masters.length} másters de ${pages.length} páginas) → PLAN.md + .ai/index.json`);
 console.log(`  Siguiente: ${next ? next.name : '—'}`);

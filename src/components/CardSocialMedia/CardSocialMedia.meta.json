@@ -26,6 +26,52 @@
       "title": "Vertical=No"
     }
   ],
+  "axes": [
+    {
+      "name": "Vertical",
+      "prop": "vertical",
+      "description": "Proporción de la foto: vertical 3:4 u horizontal 16:9.",
+      "story": "AxisVertical",
+      "options": [
+        {
+          "value": "Yes",
+          "description": "Por defecto; publicaciones y stories verticales."
+        },
+        {
+          "value": "No",
+          "description": "Para fotos apaisadas. La separación foto–texto es mayor (80 px), pendiente de revisar con diseño."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para mostrar publicaciones de redes sociales en una galería (M23).",
+    "do": [
+      "Enlaza cada tarjeta a la publicación original.",
+      "Usa la misma orientación en las tarjetas de una fila.",
+      "Mantén la cuenta visible para dar contexto."
+    ],
+    "dont": [
+      "No lo uses como tarjeta de producto o de contenido: usa la card correspondiente.",
+      "No pongas fotos que dependan del texto para entenderse sin alt."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "vertical",
@@ -118,7 +164,12 @@
       "usage": "foto"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: en Vertical=No la separación foto–texto es Spacers Fixed/fx-13 (80 px), mucho mayor que en vertical (32 px): se replica, pero parece un error. Avisar a diseño."
   ],

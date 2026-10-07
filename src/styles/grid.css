@@ -1,5 +1,11 @@
 /* Grid de columnas del sistema. Las variables vienen de la colección responsive de Figma
    (nombres configurables en hanzo.config.json → grid). Cambian solas por breakpoint. */
+
+/* Raíz de la app: contenedor + scope de rejilla, para que las columnas elásticas (--grid-width)
+   midan el ancho real sin la barra de scroll (100vw la incluye en Windows).
+   <body><div class="grid-root"><div data-grid-scope>…</div></div></body> */
+.grid-root { container-type: inline-size; }
+
 .wrapper {
   width: 100%;
   max-width: none; /* Sin tope: por encima de 1920 la rejilla sigue estirándose (decisión de Igor, 7-oct) */

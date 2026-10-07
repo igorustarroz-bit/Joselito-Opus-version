@@ -30,6 +30,74 @@
       "title": "Device=Desktop, Type=One"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint y cada tarjeta cambia de disposición según su propio ancho.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "One"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Número de tarjetas y cómo se colocan.",
+      "options": [
+        {
+          "value": "One",
+          "description": "Una tarjeta ancha a todo el ancho (foto a la izquierda).",
+          "story": "One"
+        },
+        {
+          "value": "Many",
+          "description": "Fila desplazable donde asoma la siguiente tarjeta.",
+          "story": "Many"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para presentar tiendas y restaurantes con una cabecera y enlace a «Ver todos»: una sola tarjeta o varias en fila desplazable.",
+    "do": [
+      "Usa `One` cuando haya un único local que destacar y `Many` para dos o más.",
+      "Nombres de local en dos líneas como mucho y textos reales en lugar del lorem ipsum.",
+      "Enlaza la cabecera al listado completo de tiendas."
+    ],
+    "dont": [
+      "No lo uses para productos ni contenido editorial: las tarjetas (`Card Carrusel`) están pensadas para locales.",
+      "No uses `Many` con una sola tarjeta: queda una fila desplazable vacía.",
+      "No quites la cabecera si hay varias tarjetas: da nombre a la lista."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -54,7 +122,7 @@
       "name": "eyebrow / linkText / href",
       "description": "Cabecera.",
       "default": "Tiendas y restaurantes / Ver todos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -123,7 +191,11 @@
     "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
   ],
   "placeholders": [
-    "Textos de relleno (lorem ipsum) en las tarjetas."
+    "Textos de relleno (lorem ipsum) en las tarjetas.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: la tarjeta 'Kiosko' usa la misma foto que el Toast.",

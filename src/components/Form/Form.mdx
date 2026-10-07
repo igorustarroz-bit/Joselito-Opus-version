@@ -1,98 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde Form.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde Form.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './Form.stories';
+import meta from './Form.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# Form
-
-## Introducción
-
-Formulario genérico: título y descripción, cliente identificado opcional, campos, casillas y botones. Base de login, registro, contacto y checkout.
-
-
-Figma: `Form` (`57947:46433`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Cabecera
-- Cliente (opcional)
-- Campos (slot)
-- Checkbox-List
-- RowButtons
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Ancho del contenedor; el botón Primary es submit.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Ejemplo: datos de contacto
-
-<Canvas of={Stories.Contacto} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Show Client
-
-<Canvas of={Stories.ConCliente} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--texts-base` | título |
-| color | `--texts-neutral-1` | descripción y cliente |
-| spacing | `--spacers-fixed-fx-6` | entre bloques |
-| spacing | `--spacers-fixed-fx-4` | cabecera, campos y botones |
-| typography | `ts-title-01` |  |
-| typography | `ts-body-03` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| title | Título (Title/01). | "Title Form" | text |
-| description | Descripción (Body/03). | "Description" | text |
-| showHeader | Cabecera. | true | boolean |
-| showDescription | Descripción. | true | boolean |
-| showClient | Cliente identificado (correo). | false | boolean |
-| client | Texto del cliente. | "cliente@ejemplo.es" | text |
-| inputs | Campos (props de Input) o hijos propios (slot). | 2 × Label | object |
-| showCheckbox | Checkbox-List. | true | boolean |
-| checkboxes | Textos de las casillas. | ["Label"] | object |
-| showButtonRow | Fila de botones (Primary envía, Secondary cancela). | true | boolean |
-| primaryText / secondaryText / onSubmit / onCancel | Textos y acciones. | "Button" | text |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Es un form real; el título es h2; los campos tienen etiqueta.
-
-## Componentes relacionados
-
-- Input
-- Checkbox-List
-- RowButtons
-- M04-Login
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=57947-46433","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/Form/Form.jsx"}} />

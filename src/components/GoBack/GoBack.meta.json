@@ -26,6 +26,56 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (botón de 48 px, separación 24 px) y de móvil (botón de 40 px, separación 20 px). En código se adapta por breakpoint (481 px).",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en la cabecera de páginas interiores para volver a la sección anterior.",
+    "do": [
+      "Escribe el nombre de la sección a la que se vuelve (\"TIENDAS Y RESTAURANTES\").",
+      "Colócalo arriba, en cabeceras como `M14-Hero-Sectionheader`."
+    ],
+    "dont": [
+      "No lo uses como navegación entre fichas: para eso está `M31-Navigation-PreviousNext`.",
+      "No pongas textos genéricos como \"Atrás\": el nombre de la sección orienta mejor."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "text",
@@ -38,7 +88,7 @@
       "name": "href / onClick",
       "description": "Destino o acción del botón.",
       "default": "\"#\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "label",
@@ -100,7 +150,12 @@
     "M14-Hero-Sectionheader"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: gap de 8 px del frame de texto sin variable (un único hijo, sin efecto)."
   ],

@@ -1,12 +1,15 @@
 import M01Navigation, { MODES } from './M01Navigation';
 import hero from '../../assets/images/m14-hero-sectionheader.webp';
 
+import meta from './M01Navigation.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M01-Navigation',
   component: M01Navigation,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { mode: 'Light' },
-  argTypes: { mode: { control: 'inline-radio', options: MODES } },
+  argTypes: argTypesFromMeta(meta, { mode: { control: 'inline-radio', options: MODES } }),
 };
 
 const onHero = (Story) => <div style={{ background: `center / cover url(${hero})`, minHeight: 200 }}><Story /></div>;

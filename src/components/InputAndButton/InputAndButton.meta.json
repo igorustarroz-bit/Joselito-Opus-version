@@ -42,6 +42,96 @@
       "title": "Ejemplo: newsletter"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "description": "Solo existe el tipo Default en Figma (campo de texto). No cambia nada; se mantiene por coherencia con `Input`.",
+      "options": [
+        {
+          "value": "Default",
+          "story": "Default"
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Alto del campo y del botón (72 o 56 px), igual que en `Input`.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "Big",
+          "description": "Por defecto."
+        },
+        {
+          "value": "Small",
+          "description": "Espacios reducidos, como el pie."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estados del campo, como en `Input`. Hover y foco son nativos; error, validado y desactivado se activan por prop. Desactivado también desactiva el botón.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Vacío, con la etiqueta dentro."
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Focused",
+          "description": "Escribiendo: la etiqueta sube."
+        },
+        {
+          "value": "Filled"
+        },
+        {
+          "value": "Error",
+          "description": "Valor no válido; el mensaje explica el error."
+        },
+        {
+          "value": "Validated",
+          "description": "Valor correcto o enviado."
+        },
+        {
+          "value": "Disabled"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo cuando un único campo se envía al momento: newsletter, código de descuento o buscador simple.",
+    "do": [
+      "Etiqueta clara de lo que se pide (p. ej. \"Tu correo electrónico\").",
+      "Da al botón un nombre accesible que describa la acción (`buttonLabel`).",
+      "Usa el mensaje inferior para ayuda, error o confirmación."
+    ],
+    "dont": [
+      "No lo uses dentro de un formulario de varios campos: usa `Input` y el botón del `Form`.",
+      "No cambies la flecha por un icono que no signifique enviar.",
+      "No lo uses para búsquedas con panel y recientes: usa `M26-Buscador`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "size",
@@ -62,7 +152,7 @@
       "figma": "Placeholder",
       "description": "Valor (como Input).",
       "default": "\"\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "info",
@@ -103,7 +193,7 @@
       "name": "error / validated / disabled",
       "description": "Estados (como Input).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "state",
@@ -123,7 +213,7 @@
       "name": "buttonLabel / buttonIcon / onSubmit",
       "description": "Nombre accesible, icono y acción del botón.",
       "default": "\"Enviar\" / arrow-right",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -181,6 +271,10 @@
     {
       "field": "placeholder",
       "notes": "No hay relleno: la palabra aparece por el atributo HTML placeholder heredado de Input."
+    },
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
     }
   ],
   "notes": [

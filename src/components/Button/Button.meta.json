@@ -112,6 +112,115 @@
       "title": "Como enlace (con href)"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Jerarquía visual del botón: de más a menos énfasis.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Primary",
+          "description": "Acción principal, relleno de acento."
+        },
+        {
+          "value": "Secondary",
+          "description": "Acción alternativa, relleno neutro."
+        },
+        {
+          "value": "Terciary",
+          "description": "Acción de menor peso, solo borde."
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Alto del botón (64/56/48/40 px) y estilo de texto: CTA/03 en L y M, CTA/02 en S y CTA/01 en XS. Cada tamaño tiene un ancho mínimo.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "L",
+          "description": "Por defecto; heros y acciones destacadas."
+        },
+        {
+          "value": "M",
+          "description": "Formularios y bloques de contenido."
+        },
+        {
+          "value": "S",
+          "description": "Espacios reducidos."
+        },
+        {
+          "value": "XS",
+          "description": "Acciones compactas dentro de tarjetas o filas."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estados de interacción. Hover y foco son nativos (aquí se fuerzan para documentar); Selected funciona como toggle y Disabled bloquea el botón.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover",
+          "description": "Al pasar el ratón; Primary gana un borde de 1 px."
+        },
+        {
+          "value": "Focus",
+          "description": "Foco con teclado: contorno de 1 px separado 4 px."
+        },
+        {
+          "value": "Selected",
+          "description": "Botón conmutable activo (se anuncia como pulsado)."
+        },
+        {
+          "value": "Disabled",
+          "description": "Acción no disponible; no recibe foco ni hover."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para las acciones principales de una pantalla o módulo: comprar, reservar, enviar un formulario.",
+    "do": [
+      "Texto de 1–3 palabras con un verbo de acción.",
+      "Un solo `Primary` por bloque; acompáñalo de `Secondary` o `Terciary` para las acciones secundarias (en `RowButtons`).",
+      "Pon `href` cuando navega (se pinta como enlace) y déjalo sin `href` cuando ejecuta una acción."
+    ],
+    "dont": [
+      "No lo uses para enlaces de texto dentro de un párrafo o listados: usa `Button-Action-Link`.",
+      "No lo uses solo con icono: para eso está `Button-Icon`.",
+      "No escribas textos largos: el texto no se parte y el botón crece."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Button (Primary/Secondary/Terciary × L–XS × 5 estados + iconos)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "text",
@@ -299,7 +408,12 @@
     "Icon"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el ancho mínimo (L 168, M 162, S 140 px) no está ligado a variable salvo en Primary XS. Se usan los tokens Layout/Button/TAMAÑO/Min-Width (L 168, M 110, S 96, XS 56): en M y S el botón puede quedar más estrecho que en Figma con textos cortos. Avisar a diseño para ligar o corregir el token.",
     "Figma: Secondary y Terciary L Default usan el padding de M (24 px) y el resto de estados de L el de L (32 px). Se usa L/Padding en todos los estados para que el botón no cambie de ancho al pasar el ratón.",

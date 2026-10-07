@@ -1,71 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde Row2Input.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde Row2Input.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './Row2Input.stories';
+import meta from './Row2Input.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# row_2_input
-
-## Introducción
-
-Fila de 2 campos de formulario (Input Big sin mensaje) que se reparten el ancho; en móvil se apilan.
-
-
-Figma: `row_2_input` (`57953:9134`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- 2 × Input
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Columnas iguales desde 481 px; apilados por debajo.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Ejemplo con etiquetas reales
-
-<Canvas of={Stories.NombreApellidos} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| spacing | `--spacers-fixed-fx-4` | separación |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| fields | Props de cada Input (2). | 2 × Label | object |
-| children | Campos propios. | — |  |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Cada Input con su etiqueta.
-
-## Componentes relacionados
-
-- Input
-- Form
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=57953-9134","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/Row2Input/Row2Input.jsx"}} />

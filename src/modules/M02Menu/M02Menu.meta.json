@@ -43,6 +43,94 @@
       "title": "Device=Mobile, Type=About"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "DesktopProduct"
+        },
+        {
+          "value": "Mobile",
+          "story": "MobileCollapsed"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Qué sección está abierta: en escritorio cambia el panel bajo la cabecera; en móvil, qué acordeón aparece abierto.",
+      "options": [
+        {
+          "value": "Collapsed",
+          "description": "Todo cerrado (solo tiene sentido en móvil).",
+          "story": "MobileCollapsed"
+        },
+        {
+          "value": "Product",
+          "description": "Catálogo: lista de categorías, foto y destacado.",
+          "story": "DesktopProduct"
+        },
+        {
+          "value": "About",
+          "description": "Secciones de marca: fila de fotos con título.",
+          "story": "DesktopAbout"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como menú desplegable de la cabecera: panel por sección en escritorio y menú a pantalla completa en móvil.",
+    "do": [
+      "Hasta 10 categorías en el panel Product, con la actual marcada.",
+      "Usa About con 4 fotos 3:2 de título corto para secciones de marca.",
+      "Mantén las mismas secciones que `M01-Navigation`."
+    ],
+    "dont": [
+      "No lo uses como navegación de una sección: usa `M06-Navigation-Secondarymenu`.",
+      "No metas más de un destacado en el panel Product.",
+      "No añadas textos largos en las fotos del panel About."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M02-Menu: foto del panel Product a 3 columnas (en Figma 70 px) y lista que no se comprime"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M02 ajuste de la lista"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -99,7 +187,7 @@
       "name": "active / activeMobile",
       "description": "Índice de la sección activa en escritorio / abierta en móvil (por defecto lo marca type).",
       "default": "—",
-      "control": "number"
+      "control": false
     },
     {
       "name": "language",
@@ -224,7 +312,12 @@
     "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
     "ffe8697778fc8deb05ecc972027730d68a184a6c"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separaciones 40, 32, 20, 12, 4 y 28 px sin variable → FX-9, FX-7, FX-5, FX-3, FX-1 y FX-7 (la más cercana; 28 empata entre FX-6 y FX-7 → se usa FX-6 en el bloque de idioma como su padding lateral).",
     "Figma: separación lista-foto 34 px sin variable → FX-7 (32, empate con FX-8 → la menor).",

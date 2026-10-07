@@ -17,6 +17,42 @@
       "title": "Ejemplo con etiquetas reales"
     }
   ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en formularios para colocar dos datos relacionados en la misma fila (p. ej. nombre y apellidos).",
+    "do": [
+      "Empareja campos cortos y relacionados que se rellenan seguidos.",
+      "Combínalo con `row_3_input` e `Input` sueltos dentro de un `Form` para mantener la rejilla.",
+      "Cuenta con que en móvil (menos de 481 px) los campos se apilan."
+    ],
+    "dont": [
+      "No metas campos que necesiten mensaje de ayuda o error largo: los `Input` de la fila van sin mensaje.",
+      "No juntes en la misma fila datos que no tienen relación entre sí.",
+      "No añadas un tercer campo: usa `row_3_input`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "fields",
@@ -70,7 +106,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: no hay variante móvil; se apilan por debajo de 481 px (propuesta)."
   ],

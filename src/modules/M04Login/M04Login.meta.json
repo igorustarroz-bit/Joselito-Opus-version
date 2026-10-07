@@ -26,6 +26,73 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio o de móvil del mismo diseño. En código no es una prop: el elemento se adapta solo por breakpoint a 960 px; por debajo se oculta el medio y solo queda el formulario.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como pantalla de acceso o registro a la cuenta con email y accesos alternativos.",
+    "do": [
+      "Pide solo el email en el primer paso.",
+      "Usa como máximo dos proveedores en la fila.",
+      "Usa un medio de marca (vídeo o foto) en escritorio."
+    ],
+    "dont": [
+      "No añadas más campos al formulario: crea otro paso.",
+      "No uses un medio con texto importante: la cabecera se superpone."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica",
+        "Botones ajustados en móvil"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Fotograma de Figma como imagen por defecto (el vídeo no se puede exportar desde Figma)",
+        "Medio con alto completo"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M04 ancho en móvil"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "showPhoto",
@@ -45,7 +112,7 @@
       "figma": "Slot",
       "description": "Cabecera del formulario.",
       "default": "Mi cuenta / Introduce tu correo…",
-      "control": "text"
+      "control": false
     },
     {
       "name": "emailLabel",
@@ -149,7 +216,12 @@
   "images": [
     "3dac7b98194d980eefed06801f4741926a36a9aa"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separación de 32 px en móvil sin variable → FX-7.",
     "Figma: los botones de proveedores se interpretan como Button Secondary; confirmar tipo.",

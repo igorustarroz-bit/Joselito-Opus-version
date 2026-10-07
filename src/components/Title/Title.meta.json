@@ -34,6 +34,71 @@
       "title": "Title = false"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint con tipografía y separaciones responsive; los márgenes laterales los pone el contenedor.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para encabezar carruseles y listados con un antetítulo, un enlace \"Ver todos\" y el título.",
+    "do": [
+      "Mantén el antetítulo en 2–3 palabras y el título en una frase corta.",
+      "Ajusta la etiqueta con `as` para respetar la jerarquía de la página (h2 por defecto).",
+      "Déjalo dentro del contenedor del módulo: no lleva márgenes propios."
+    ],
+    "dont": [
+      "No lo uses como título de página: para eso están los heros.",
+      "No pongas un enlace si no hay a dónde ir: ocúltalo."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Accordion (elemento desplegable)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Docs(Title): anotar el texto de ejemplo del máster como placeholder"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Title (antetítulo + enlace + título, Desktop/Mobile)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "eyebrow",
@@ -160,6 +225,10 @@
     {
       "field": "title",
       "notes": "El máster de Figma trae \"Lorem ipsum dolor sit amet cucuster\" como título de ejemplo; se usa tal cual como valor por defecto hasta tener contenido real."
+    },
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
     }
   ],
   "notes": [

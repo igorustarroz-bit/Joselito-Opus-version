@@ -2,12 +2,16 @@ import { useState } from 'react';
 import ModalLightbox, { STATUSES } from './ModalLightbox';
 import Button from '../Button/Button';
 
+import meta from './ModalLightbox.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 export default {
   title: 'Components/Modal_Lightbox',
   component: ModalLightbox,
   parameters: { defaultTheme: 'light-white' },
   args: { status: 'Basic', title: 'Title' },
-  argTypes: { status: { control: 'inline-radio', options: STATUSES } },
+  argTypes: argTypesFromMeta(meta, { status: { control: 'inline-radio', options: STATUSES } }),
   decorators: [(Story) => <div style={{ width: 624, maxWidth: '100%' }}><Story /></div>],
 };
 
@@ -33,3 +37,12 @@ export const ComoModal = {
     );
   },
 };
+
+/** Eje «Status»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisStatus = axisStory(ModalLightbox, [
+  { label: "Collapsed", story: DesktopCollapsed },
+  { label: "Ticket", story: DesktopTicket },
+  { label: "Basic", story: DesktopBasic },
+  { label: "List", story: DesktopList },
+  { label: "Video", story: DesktopVideo },
+], { name: "Eje · Status" });

@@ -49,6 +49,115 @@
       "title": "Grupo de radios interactivo"
     }
   ],
+  "axes": [
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estado del control. En producción marcado, hover y desactivado son nativos; en Storybook se fuerzan con `state`.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Not Selected"
+        },
+        {
+          "value": "Hover",
+          "description": "El borde pasa a color de acento."
+        },
+        {
+          "value": "Selected Disabled",
+          "description": "Marcado pero sin interacción. En Light el check apenas se ve (pendiente con diseño)."
+        },
+        {
+          "value": "Selected"
+        },
+        {
+          "value": "Disabled",
+          "description": "Sin marcar y sin interacción."
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Forma y comportamiento: casilla cuadrada con check (selección múltiple) o círculo con punto (selección única).",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Checkboxes",
+          "description": "Varias opciones combinables."
+        },
+        {
+          "value": "Radio",
+          "description": "Una sola opción entre las del mismo grupo."
+        }
+      ]
+    },
+    {
+      "name": "Theme",
+      "prop": "tone",
+      "description": "Tono del control para fondo claro u oscuro: cambia los colores de borde y acento. En código es la prop `tone`.",
+      "story": "AxisTheme",
+      "options": [
+        {
+          "value": "Dark",
+          "description": "Sobre fondos oscuros."
+        },
+        {
+          "value": "Light",
+          "description": "Sobre fondos claros; es el valor por defecto."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para que el usuario marque opciones: casilla para selección múltiple, radio para elegir una sola.",
+    "do": [
+      "Acompáñalo siempre de texto con `Checkbox-Label` o, si va solo, con `aria-label`.",
+      "Agrupa los radios de una misma pregunta con el mismo `name`.",
+      "Usa el tamaño Small (16 px) solo dentro de `Checkbox-Label` Small."
+    ],
+    "dont": [
+      "No uses Radio para opciones que se pueden combinar: usa Checkboxes.",
+      "No uses el tono Dark para resolver fondos oscuros si basta con el subtema del contenedor."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Checkbox-Label (Medium/Small × 6 estados) + Checkboxes-Radios con size e indeterminate"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "InputQuantity (+ radio de Checkboxes-Radios a 10 px)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -181,7 +290,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el punto del radio mide 10 px sin variable → se usa FX-2 + FX-0 (10 px, no existe token de 10). Avisar a diseño.",
     "Figma: Radio Disabled Light es una instancia de 'Selected Disabled' (se ve marcado): parece un error; en código Disabled es sin marcar.",

@@ -1,96 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde M25CardsLinks.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde M25CardsLinks.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './M25CardsLinks.stories';
+import meta from './M25CardsLinks.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# M25-Cards-Links
-
-## Introducción
-
-Tarjetas de tiendas y restaurantes con cabecera: una sola a todo el ancho o varias en una fila desplazable.
-
-
-Figma: `M25-Cards-Links` (`58182:4396`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Title (enlace)
-- Card Carrusel × N
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Many: desplazamiento horizontal con scroll-snap.
-- La tarjeta cambia de disposición según su propio ancho (container query).
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Device=Desktop, Type=Many
-
-<Canvas of={Stories.Many} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Device=Desktop, Type=One
-
-<Canvas of={Stories.One} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--backgrounds-base` | fondo |
-| spacing | `--layout-spacers-responsive-11 / 13` | paddings y separación cabecera-tarjetas |
-| spacing | `--layout-cols-size-gutter1col` | entre tarjetas |
-| spacing | `--layout-cols-size-9cols / 5cols` | ancho de tarjeta en Many |
-| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| type | `One` o `Many`. | Many | inline-radio |
-| items | Props de cada Card Carrusel (title, image, body, phone, address, href…). | Joselitos Velázquez, Kiosko | object |
-| showTitle | Muestra la cabecera. | true | boolean |
-| eyebrow / linkText / href | Cabecera. | Tiendas y restaurantes / Ver todos | text |
-| theme | Subtema. | — | text |
-
-## Guía de contenido
-
-| Campo | Límite | Notas |
-| --- | --- | --- |
-| Tiendas |  | Nombre en dos líneas como mucho. |
-
-## Accesibilidad
-
-- Lista con nombre (el de la cabecera).
-
-## Componentes relacionados
-
-- Card Carrusel
-- Title
-
-## Pendientes / placeholders
-
-- undefined: undefined
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=58182-4396","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/modules/M25CardsLinks/M25CardsLinks.jsx"}} />

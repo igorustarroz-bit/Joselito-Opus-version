@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import remarkGfm from 'remark-gfm';
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
@@ -8,6 +9,7 @@ const config = {
     '@storybook/addon-links',
   ],
   framework: { name: '@storybook/react-vite', options: {} },
-  staticDirs: ['../public'],
+  // public/ es opcional: si no existe, Storybook no debe fallar
+  staticDirs: fs.existsSync(new URL('../public', import.meta.url)) ? ['../public'] : [],
 };
 export default config;

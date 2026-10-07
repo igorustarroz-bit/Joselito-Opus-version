@@ -45,6 +45,75 @@
       "title": "Active=No, Type=Disabled"
     }
   ],
+  "axes": [
+    {
+      "name": "Active",
+      "prop": "selected",
+      "description": "Indica si la pestaña es la seleccionada (`selected`, aria-selected).",
+      "story": "AxisActive",
+      "options": [
+        {
+          "value": "No"
+        },
+        {
+          "value": "Yes",
+          "description": "La vista que se está mostrando."
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "state",
+      "description": "Estado visual de la pestaña. Hover, Focus y Disabled son nativos; en Storybook se fuerzan con `state` o `disabled`. Selected equivale a Active=Yes.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Focus"
+        },
+        {
+          "value": "Selected",
+          "description": "Pestaña activa."
+        },
+        {
+          "value": "Disabled",
+          "description": "Vista no disponible."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsala como pestaña para cambiar entre vistas de un mismo contenido, siempre agrupada en `Tabs`.",
+    "do": [
+      "Agrúpala en `Tabs` para tener la navegación con flechas.",
+      "Usa textos cortos y los iconos solo si ayudan a identificar la pestaña."
+    ],
+    "dont": [
+      "No la uses sola ni como enlace de navegación entre páginas.",
+      "No marques más de una pestaña activa a la vez."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "text",
@@ -158,7 +227,12 @@
     "Tabs"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: la separación de 4 px no tiene variable → FX-1."
   ],

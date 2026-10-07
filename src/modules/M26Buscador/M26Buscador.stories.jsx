@@ -1,11 +1,14 @@
 import M26Buscador, { STATUSES } from './M26Buscador';
 
+import meta from './M26Buscador.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M26-Buscador',
   component: M26Buscador,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showRecent: true },
-  argTypes: { status: { control: 'inline-radio', options: STATUSES } },
+  argTypes: argTypesFromMeta(meta, { status: { control: 'inline-radio', options: STATUSES } }),
 };
 
 export const Default = {};

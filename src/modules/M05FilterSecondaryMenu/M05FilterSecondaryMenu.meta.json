@@ -42,6 +42,90 @@
       "title": "Device=Desktop, Status=Desplegado, Filtros Aplicados=Yes"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint: por debajo de 481 px las etiquetas pasan a una segunda línea y los botones del panel se apilan.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "FiltersYes"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Barra de filtros o panel de filtro abierto. En uso real el panel se abre como cajón lateral al pulsar Filtrar.",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Barra con resultados, filtros y accesos.",
+          "story": "FiltersYes"
+        },
+        {
+          "value": "Desplegado",
+          "description": "Panel con opciones y botones Borrar/Aplicar.",
+          "story": "PanelYes"
+        }
+      ]
+    },
+    {
+      "name": "Filtros Aplicados",
+      "description": "Si hay filtros activos: aparecen las etiquetas con X y Borrar, y Filtrar/Ordenar pasan a color de enlace. En el panel, marca la opción y activa Aplicar.",
+      "options": [
+        {
+          "value": "Yes",
+          "description": "Hay al menos un filtro activo.",
+          "story": "FiltersYes"
+        },
+        {
+          "value": "No",
+          "description": "Listado sin filtrar; en el panel, Aplicar desactivado.",
+          "story": "FiltersNo"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo encima de un listado de productos para mostrar el número de resultados, los filtros aplicados y los accesos a Filtrar y Ordenar.",
+    "do": [
+      "Muestra los filtros aplicados como etiquetas cortas en mayúsculas, cada una con su X para quitarla.",
+      "Colócalo justo encima de la rejilla de productos que filtra.",
+      "Mantén las opciones del panel como lista de selección única (radio), p. ej. rangos de precio."
+    ],
+    "dont": [
+      "No lo uses en páginas sin listado: no tiene sentido sin resultados que filtrar.",
+      "No metas muchas etiquetas aplicadas: ofrece «Borrar» para limpiar de golpe.",
+      "No uses el panel para formularios largos: es un cajón de opciones con Borrar/Aplicar."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "status",
@@ -55,7 +139,7 @@
       "figma": "Filtros Aplicados",
       "description": "Filtros aplicados (etiquetas). Con alguno, Filtrar y Ordenar pasan a color de enlace.",
       "default": "[]",
-      "control": "object"
+      "control": false
     },
     {
       "name": "onAppliedChange",
@@ -67,7 +151,7 @@
       "name": "count / countLabel",
       "description": "Número de resultados y texto.",
       "default": "84 productos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "title",
@@ -185,7 +269,12 @@
     "Overlay"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separaciones 32, 12 y 8 px sin variable → FX-7, FX-3 y FX-2.",
     "Figma: Filtrar y Ordenar son textos, no botones; en código son button.",

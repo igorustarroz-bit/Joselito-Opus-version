@@ -35,6 +35,87 @@
       "title": "Device=Desktop, Property=Cocinero"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint (960 px): en móvil se apila y los botones ocupan el ancho; para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Experiencias"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Property",
+      "prop": "property",
+      "description": "Presentación según el tipo de página: fija subtema y contenido de ejemplo.",
+      "options": [
+        {
+          "value": "Experiencias",
+          "description": "Experiencias y eventos; fondo oscuro.",
+          "story": "Experiencias"
+        },
+        {
+          "value": "Tiendas y Restaurantes",
+          "description": "Ficha de tienda o restaurante; fondo rojo, con dirección, enlaces y tres botones.",
+          "story": "TiendasYRestaurantes"
+        },
+        {
+          "value": "Cocinero",
+          "description": "Perfil de cocinero; fondo gris con firma junto al nombre.",
+          "story": "Cocinero"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como cabecera de una página de detalle (tienda, restaurante, experiencia o cocinero) con imagen vertical a la derecha.",
+    "do": [
+      "Título de dos líneas cortas.",
+      "Un botón Primary para la acción principal; el resto como Terciary.",
+      "Incluye siempre el volver (`Go_Back`) a la sección padre."
+    ],
+    "dont": [
+      "No lo uses como hero de portada: usa `M15-Hero-Sectionhero` o `M13-Hero-Homepagehero`.",
+      "No pongas más de tres botones.",
+      "No cambies el subtema de cada presentación: va fijado por `property`."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Con aviso sobre la imagen",
+      "description": "Muestra un `Toast` superpuesto a la imagen para destacar un mensaje.",
+      "story": "ConToast"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica",
+        "Toast ajustado en móvil"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "property",
@@ -74,19 +155,19 @@
       "name": "title / label / text / back",
       "description": "Textos (sustituyen a los del preset).",
       "default": "según property",
-      "control": "text"
+      "control": false
     },
     {
       "name": "links / buttons",
       "description": "Enlaces (Button-Action-Link) y botones (el primero Primary, el resto Terciary).",
       "default": "según property",
-      "control": "object"
+      "control": false
     },
     {
       "name": "image / imageAlt",
       "description": "Imagen 3:4.",
       "default": "según property",
-      "control": "text"
+      "control": false
     },
     {
       "name": "signature",
@@ -98,7 +179,7 @@
       "name": "backHref / onBack",
       "description": "Destino o acción de volver.",
       "default": "#",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -188,7 +269,12 @@
     "fb29c2196a901128ef19c17cc516873670f5a7ff",
     "5c41c4f0a506bd63ef6d49fcf487fd567946d15d"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: LABEL sin estilo de texto → Labels/02 en mayúsculas.",
     "Figma: separaciones 10/40/24/8 sin variable → FX-2/FX-9/FX-6/FX-2.",

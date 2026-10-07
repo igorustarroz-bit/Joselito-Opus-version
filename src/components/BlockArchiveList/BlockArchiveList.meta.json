@@ -48,6 +48,105 @@
       "title": "Device=Mobile, Type=fragmentM-List"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código no es una prop: por debajo de 481 px la entrada se apila con la etiqueta encima y siempre activa.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "RightActive"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Posición de la etiqueta respecto al nombre. En móvil siempre se apila (fragmentM-List), sea cual sea el tipo.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Right",
+          "description": "Etiqueta detrás del nombre."
+        },
+        {
+          "value": "Left",
+          "description": "Etiqueta delante del nombre."
+        },
+        {
+          "value": "fragmentM-List",
+          "description": "Versión apilada de móvil; en código se resuelve por breakpoint."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "active",
+      "description": "Inactiva en gris claro; activa (hover, foco o seleccionada) en negro. «Archive List - Mobile» no es un estado: es la variante móvil, que en código sale por breakpoint (ver la story `Mobile` con viewport XS).",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Active",
+          "description": "Colección seleccionada o en hover."
+        },
+        {
+          "value": "Inactive",
+          "description": "Resto de entradas del listado."
+        },
+        {
+          "value": "Archive List - Mobile",
+          "description": "Variante móvil: se ve reduciendo el viewport, no con una prop."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como cada entrada del listado de archivo de colecciones (`M32-List-ArchiveList`): año o colección y nombre grande.",
+    "do": [
+      "Alterna `Left` y `Right` dentro del listado para crear el ritmo del archivo.",
+      "Enlaza cada entrada a su colección (`href`): toda la entrada es clicable con foco visible.",
+      "Marca como activa la colección seleccionada; en escritorio el hover ya la activa."
+    ],
+    "dont": [
+      "No lo uses fuera del listado de archivo: el nombre en Title/05 es demasiado grande para navegación normal.",
+      "No pongas textos largos en la etiqueta: es un dato breve (p. ej. «Collection 2007»).",
+      "No dejes todas las entradas activas a la vez en escritorio: se pierde el contraste gris/negro."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -144,7 +243,12 @@
     "M32-List-ArchiveList"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separaciones 12/10 px sin variable.",
     "Figma: el eje State mezcla estados y la variante móvil (\"Archive List - Mobile\"); en código el móvil se resuelve con breakpoint.",

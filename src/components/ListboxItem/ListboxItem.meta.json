@@ -63,6 +63,110 @@
       "title": "-> Image + -> Description"
     }
   ],
+  "axes": [
+    {
+      "name": "Size",
+      "description": "Solo existe Medium; no se expone en código.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "Medium"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Apariencia del control: hover sobre la fila y seleccionado. En producción salen solos de la interacción.",
+      "story": "AxisStatus",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Selected"
+        }
+      ]
+    },
+    {
+      "name": "Selection",
+      "prop": "selection",
+      "description": "Control de la derecha: radio (una opción), casilla (varias) o X para eliminar.",
+      "story": "AxisSelection",
+      "options": [
+        {
+          "value": "Radio Button",
+          "description": "Selección única."
+        },
+        {
+          "value": "Checkbox",
+          "description": "Selección múltiple."
+        },
+        {
+          "value": "Delete",
+          "description": "Quitar un elemento ya elegido."
+        }
+      ]
+    },
+    {
+      "name": "Selected",
+      "description": "Si la opción está marcada. Es redundante con Status=Selected.",
+      "story": "AxisSelected",
+      "options": [
+        {
+          "value": "No"
+        },
+        {
+          "value": "Yes"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como opción dentro de una lista desplegable o de filtros.",
+    "do": [
+      "Usa radio para selección única y casilla para múltiple.",
+      "Usa Delete en listas de elementos ya elegidos.",
+      "Limita la descripción a una línea."
+    ],
+    "dont": [
+      "No mezcles radios y casillas en la misma lista.",
+      "No lo uses fuera de un `Listbox` o lista de filtros."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Arreglada la página de documentación (caracteres especiales en los textos)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "text",
@@ -212,7 +316,12 @@
     "Input"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: la separación imagen–texto (16 px) no tiene variable → FX-4.",
     "Figma: la fila tiene un trazo inferior de 1 px oculto (sin divisor visible): no se pinta.",

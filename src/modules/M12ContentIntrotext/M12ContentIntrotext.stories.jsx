@@ -1,8 +1,11 @@
 import M12ContentIntrotext from './M12ContentIntrotext';
 
+import meta from './M12ContentIntrotext.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M12-Content-Introtext',
-  component: M12ContentIntrotext,
+  component: M12ContentIntrotext, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showLabel: true, showTitle: true, showBody: true, showBoxes: true, showButton: true },
 };

@@ -1,10 +1,13 @@
 import M31NavigationPreviousNext from './M31NavigationPreviousNext';
 
+import meta from './M31NavigationPreviousNext.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M31-Navigation-PreviousNext',
   component: M31NavigationPreviousNext,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
-  argTypes: { previous: { control: 'object' }, next: { control: 'object' } },
+  argTypes: argTypesFromMeta(meta, { previous: { control: 'object' }, next: { control: 'object' } }),
 };
 
 export const Default = {};

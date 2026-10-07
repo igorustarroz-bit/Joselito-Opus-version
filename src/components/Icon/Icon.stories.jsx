@@ -1,10 +1,14 @@
 import Icon, { SIZES, ICON_NAMES } from './Icon';
 
+import meta from './Icon.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 export default {
   title: 'Brand Assets/Icon',
   component: Icon,
   args: { name: 'star', size: 'M' },
-  argTypes: { size: { control: 'select', options: SIZES }, name: { control: 'select', options: ICON_NAMES } },
+  argTypes: argTypesFromMeta(meta, { size: { control: 'select', options: SIZES }, name: { control: 'select', options: ICON_NAMES } }),
 };
 
 export const Default = {};
@@ -28,3 +32,12 @@ export const Galeria = {
     </div>
   ),
 };
+
+/** Eje «Size»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisSize = axisStory(Icon, [
+  { label: "L", story: SizeL },
+  { label: "M", story: SizeM },
+  { label: "S", story: SizeS },
+  { label: "XS", story: SizeXS },
+  { label: "XXS", story: SizeXXS },
+], { name: "Eje · Size" });

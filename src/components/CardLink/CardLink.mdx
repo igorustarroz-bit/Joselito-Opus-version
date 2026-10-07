@@ -1,69 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde CardLink.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde CardLink.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './CardLink.stories';
+import meta from './CardLink.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# Card Link
-
-## Introducción
-
-Tarjeta enlace con foto 3:4 a sangre y el nombre y el precio superpuestos en la parte inferior.
-
-
-Figma: `Card Link` (`58182:23781`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Foto 3:4
-- Textos superpuestos abajo
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Toda la tarjeta es un enlace.
-
-## Variantes y tamaños
-
-_—_
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--texts-base` | textos |
-| spacing | `--spacers-fixed-fx-7` | margen de los textos (32 px sin variable) |
-| spacing | `--spacers-fixed-fx-2` | título–precio |
-| typography | `ts-title-02` |  |
-| typography | `ts-body-02` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| image / imageAlt | Foto 3:4. | foto del máster |  |
-| title | Nombre (Title/02). | "Jamón Gran Reserva" | text |
-| text | Precio o subtítulo (Body/02). | "Desde 380€" | text |
-| href | Destino. | "#" | text |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Foco visible; la foto lleva alt.
-
-## Componentes relacionados
-
-- M25-Cards-Links
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=58182-23781","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/CardLink/CardLink.jsx"}} />

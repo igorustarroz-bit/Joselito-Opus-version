@@ -42,6 +42,102 @@
       "title": "Interactivo"
     }
   ],
+  "axes": [
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Tamaño de casilla y texto: Medium (casilla 20 px, Body/03) o Small (16 px, Body/02).",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "Medium",
+          "description": "Formularios y aceptación de condiciones."
+        },
+        {
+          "value": "Small",
+          "description": "Filtros y listas compactas."
+        }
+      ]
+    },
+    {
+      "name": "Estado",
+      "prop": "state",
+      "description": "Estados de interacción de la casilla. En uso real salen solos (hover, marcado, disabled); aquí se fuerzan para documentarlos.",
+      "story": "AxisEstado",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Selected"
+        },
+        {
+          "value": "Undefined",
+          "description": "Selección parcial de un grupo (indeterminado); se ve como marcado."
+        },
+        {
+          "value": "Disabled",
+          "description": "Opción no disponible: texto en Neutral 2."
+        },
+        {
+          "value": "Disabled Selected",
+          "description": "Marcada y bloqueada."
+        }
+      ]
+    },
+    {
+      "name": "Selected",
+      "description": "Si la casilla está marcada o no. En código es el estado del input nativo.",
+      "story": "AxisSelected",
+      "options": [
+        {
+          "value": "No"
+        },
+        {
+          "value": "Yes"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para opciones que el usuario marca o desmarca con texto clicable: aceptar condiciones, filtros o listas de opciones.",
+    "do": [
+      "Usa `Medium` en formularios y `Small` en filtros o listas densas.",
+      "Escribe el texto como una afirmación clara (p. ej. «Acepto la política de privacidad»).",
+      "Agrupa varias opciones relacionadas con `Checkbox-List`."
+    ],
+    "dont": [
+      "No lo uses para elegir una sola opción entre varias excluyentes: usa radios (`Checkboxes-Radios`).",
+      "No ocultes el texto salvo que el contexto explique la casilla.",
+      "No uses el estado Undefined como «marcado»: es solo para selecciones parciales de un grupo."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Check visible en Disabled Selected (override Neutral 1 del máster)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "text",
@@ -151,7 +247,12 @@
     "Form"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: Undefined es visualmente igual que Selected; en código es el estado indeterminate nativo.",
     "Figma: Disabled usa la casilla con Theme=Dark mientras el resto usa Light (sin diferencia visible en Disabled).",

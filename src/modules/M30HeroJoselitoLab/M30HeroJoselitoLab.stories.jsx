@@ -1,8 +1,11 @@
 import M30HeroJoselitoLab from './M30HeroJoselitoLab';
 
+import meta from './M30HeroJoselitoLab.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M30-Hero-Joselito-Lab',
-  component: M30HeroJoselitoLab,
+  component: M30HeroJoselitoLab, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
 };
 

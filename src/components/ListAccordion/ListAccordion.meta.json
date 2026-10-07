@@ -18,6 +18,35 @@
       "title": "Ejemplo con contenido"
     }
   ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para apilar varios `accordion`: preguntas frecuentes o bloques del pie en móvil.",
+    "do": [
+      "Títulos cortos que anticipen el contenido.",
+      "Abre por defecto solo el elemento más relevante, si acaso.",
+      "Úsalo dentro de `M28-Cards-Accordion` o en columnas estrechas."
+    ],
+    "dont": [
+      "No lo uses con un solo elemento: usa `accordion` suelto.",
+      "No escondas en él información crítica que el usuario debe ver sí o sí.",
+      "No anides listas de acordeones dentro de otra."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "items",
@@ -59,7 +88,12 @@
     "M28-Cards-Accordion"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Nombres (Igor, 2026-10-07): la lista se llama list_accordion en código; en Figma el máster sigue llamándose \"Accordion\" (choca con \"accordion\" en el plan y en los slugs)."
   ],

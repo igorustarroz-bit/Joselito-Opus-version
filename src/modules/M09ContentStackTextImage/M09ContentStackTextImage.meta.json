@@ -44,6 +44,108 @@
       "title": "Device=Desktop, Image=None, Mode=Collapsed Hover"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint (960 px); se ve reduciendo el viewport.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "HorizontalExpanded"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Image",
+      "prop": "image",
+      "description": "Formato de la imagen que aparece al desplegar el elemento.",
+      "options": [
+        {
+          "value": "Horizontal",
+          "description": "Foto 4:3.",
+          "story": "HorizontalExpanded"
+        },
+        {
+          "value": "Vertical",
+          "description": "Foto 3:4.",
+          "story": "VerticalExpanded"
+        },
+        {
+          "value": "None",
+          "description": "Solo texto y botón.",
+          "story": "Collapsed"
+        }
+      ]
+    },
+    {
+      "name": "Mode",
+      "prop": "mode",
+      "description": "Estado del elemento. En uso real cambia solo: el título abre y cierra, y el hover sobre un plegado pasa al subtema rojo.",
+      "options": [
+        {
+          "value": "Collapsed",
+          "description": "Solo título y número.",
+          "story": "Collapsed"
+        },
+        {
+          "value": "Expanded",
+          "description": "Añade texto, botón e imagen.",
+          "story": "HorizontalExpanded"
+        },
+        {
+          "value": "Collapsed Hover",
+          "description": "Plegado con el ratón encima: subtema Dark - Red - Primary.",
+          "story": "CollapsedHover"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en pilas de contenidos desplegables para contar un proceso o una serie de pasos numerados (p. ej. Salazón, Lavado, Secado, Bodega).",
+    "do": [
+      "Apila varios elementos seguidos y deja desplegado solo uno a la vez.",
+      "Usa títulos de una o dos palabras y numera en orden (01, 02…).",
+      "Elige la imagen vertical u horizontal según la foto; usa `None` si el paso no necesita imagen."
+    ],
+    "dont": [
+      "No uses un único elemento suelto: para un bloque de texto e imagen usa `M07-Content-Text+Image`.",
+      "No dejes el botón con «LOREM IPSUM»: pon un texto de acción real u ocúltalo.",
+      "No metas textos largos en el desplegado: es un párrafo breve por paso."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Pila de pasos",
+      "description": "Varios elementos seguidos donde solo uno está desplegado a la vez.",
+      "story": "Stack"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "mode",
@@ -56,7 +158,7 @@
       "name": "expanded / defaultExpanded / onToggle",
       "description": "Estado desplegado (controlado / inicial) y aviso de cambio.",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "image",
@@ -90,19 +192,19 @@
       "name": "title / number / text",
       "description": "Contenido.",
       "default": "Salazón / 01 / …",
-      "control": "text"
+      "control": false
     },
     {
       "name": "buttonText / onButton",
       "description": "Botón Secondary S.",
       "default": "LOREM IPSUM",
-      "control": "text"
+      "control": false
     },
     {
       "name": "src / imageAlt",
       "description": "Imagen.",
       "default": "foto de ejemplo",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -189,7 +291,11 @@
     "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb"
   ],
   "placeholders": [
-    "Texto del botón 'LOREM IPSUM' copiado de Figma: pendiente del texto real."
+    "Texto del botón 'LOREM IPSUM' copiado de Figma: pendiente del texto real.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: fondo #FFFFFF sin variable en Expanded → Backgrounds/Base.",

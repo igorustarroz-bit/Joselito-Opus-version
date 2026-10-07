@@ -1,8 +1,11 @@
 import M20List from './M20List';
 
+import meta from './M20List.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M20-List',
-  component: M20List,
+  component: M20List, argTypes: argTypesFromMeta(meta),
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { showTitle: true, showExtraItem: false },
 };

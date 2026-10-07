@@ -41,6 +41,86 @@
       "title": "Device=Desktop, Variant=1-Center-Column"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint a 960 px; en móvil todas las variantes son una columna.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "TwoColumn"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Variant",
+      "prop": "variant",
+      "description": "Distribución del texto en la rejilla.",
+      "options": [
+        {
+          "value": "2-column",
+          "description": "Título arriba y dos columnas de párrafos.",
+          "story": "TwoColumn"
+        },
+        {
+          "value": "1-Center-Column",
+          "description": "Una columna centrada de 8 columnas de rejilla.",
+          "story": "CenterColumn"
+        },
+        {
+          "value": "split",
+          "description": "Título a un lado y texto al otro.",
+          "story": "Split"
+        },
+        {
+          "value": "All",
+          "description": "Versión de móvil: todo en una columna. No es un valor de `variant`; se obtiene en el breakpoint móvil."
+        },
+        {
+          "value": "1-Left-Column",
+          "description": "Una columna alineada a la izquierda.",
+          "story": "LeftColumn"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para bloques editoriales solo de texto: etiqueta, título y uno o dos párrafos.",
+    "do": [
+      "Usa 2-column para textos largos y una columna (izquierda o centrada) para textos breves.",
+      "Usa split cuando el título deba leerse junto al texto."
+    ],
+    "dont": [
+      "No lo uses si el contenido lleva imagen: usa `M07-Content-Text+Image`.",
+      "No metas párrafos muy largos en 1-Center-Column."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "variant",
@@ -95,7 +175,7 @@
       "name": "body / body2",
       "description": "Textos de los párrafos.",
       "default": "texto de relleno",
-      "control": "text"
+      "control": false
     },
     {
       "name": "slot1",
@@ -186,7 +266,11 @@
   ],
   "images": [],
   "placeholders": [
-    "Textos de relleno (lorem ipsum) copiados de Figma: pendientes del contenido real."
+    "Textos de relleno (lorem ipsum) copiados de Figma: pendientes del contenido real.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: padding 120 px sin variable → FX-16 (124).",

@@ -1,84 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde CardSocialMedia.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde CardSocialMedia.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './CardSocialMedia.stories';
+import meta from './CardSocialMedia.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# Card-Social-media
-
-## Introducción
-
-Publicación de redes sociales para galerías (M23): foto vertical 3:4 u horizontal 16:9 con la cuenta debajo.
-
-
-Figma: `Card-Social-media` (`63911:364852`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Foto
-- Cuenta
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Ancho de la columna.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Vertical=Yes
-
-<Canvas of={Stories.VerticalYes} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Vertical=No
-
-<Canvas of={Stories.VerticalNo} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--texts-neutral-2` | cuenta |
-| spacing | `--spacers-fixed-fx-7` | foto–cuenta (vertical) |
-| spacing | `--spacers-fixed-fx-13` | foto–cuenta (horizontal, 80 px) |
-| typography | `ts-body-03` |  |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| vertical | 3:4 (true) o 16:9 (false). | true | boolean |
-| image / imageAlt | Foto. | foto del máster |  |
-| tag | Cuenta (Body/03, Neutral 2). | "@jamonjoselito" | text |
-| showTag | Muestra la cuenta. | true | boolean |
-| href | Enlace a la publicación. | — | text |
-| theme | Fija un subtema. Por defecto hereda. | — | text |
-
-## Accesibilidad
-
-- Con href es un enlace; la foto lleva alt.
-
-## Componentes relacionados
-
-- M23-Cards-Gallery
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=63911-364852","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/components/CardSocialMedia/CardSocialMedia.jsx"}} />

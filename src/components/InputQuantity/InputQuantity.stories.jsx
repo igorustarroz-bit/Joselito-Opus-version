@@ -1,8 +1,11 @@
 import InputQuantity from './InputQuantity';
 
+import meta from './InputQuantity.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Components/InputQuantity',
-  component: InputQuantity,
+  component: InputQuantity, argTypes: argTypesFromMeta(meta),
   parameters: { defaultTheme: 'light-white' },
   args: { defaultValue: 1, min: 1, max: 99, showMinus: true, showPlus: true },
 };

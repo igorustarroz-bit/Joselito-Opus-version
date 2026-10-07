@@ -26,6 +26,63 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (3 columnas) y de móvil (1 columna). En código se adapta por breakpoint, con un paso intermedio de 2 columnas desde 481 px.",
+      "options": [
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        },
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para mostrar un listado de productos en rejilla con cabecera y enlace a ver todos.",
+    "do": [
+      "Usa múltiplos de 3 productos para completar filas en escritorio.",
+      "Usa la cabecera con enlace cuando haya un listado completo al que llevar."
+    ],
+    "dont": [
+      "No lo uses para pocos productos en recorrido horizontal: usa `M24-Cards-Productcarousel`.",
+      "No mezcles tarjetas horizontales: la rejilla usa `Card Product` vertical."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Sin cabecera",
+      "description": "Rejilla de productos sin título ni enlace, para cuando la página ya tiene encabezado.",
+      "story": "SinTitulo"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "showTitle",
@@ -51,7 +108,7 @@
       "name": "eyebrow / linkText / href",
       "description": "Cabecera.",
       "default": "Contenido de la caja / Ver todos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -116,7 +173,12 @@
     "3a99b63f1dd6caf13e3645384fc953748fd3899d",
     "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separación de 24 px en la cabecera sin variable → FX-6.",
     "Figma: en móvil los nombres son 'Chorizo Etxebarri x Joselito' y en escritorio 'Jamón Gran Reserva' sobre fotos de chorizo.",

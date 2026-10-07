@@ -26,6 +26,56 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio o de móvil del mismo diseño. En código no es una prop: el elemento se adapta solo por breakpoint: en escritorio cada tarjeta ocupa 4 columnas y en móvil 5, para que asome la siguiente.",
+      "options": [
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        },
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para mostrar una selección de productos en una fila desplazable con acceso a ver todos.",
+    "do": [
+      "Pon al menos 4 productos.",
+      "Enlaza \"Ver todos\" al listado completo."
+    ],
+    "dont": [
+      "No lo uses para el catálogo completo: usa `M19-Card-Grid`.",
+      "No mezcles tarjetas de otro tipo que `CardProduct`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "items",
@@ -50,7 +100,7 @@
       "name": "eyebrow / linkText / href",
       "description": "Cabecera.",
       "default": "Nuestra selección / Ver todos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -118,7 +168,12 @@
     "3a99b63f1dd6caf13e3645384fc953748fd3899d",
     "64d66e9875dd3151eec00d5a0b49eb8cd92d8f17"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: paddings 64/68/80/40/24 y gaps 16/48/32 sin variable → FX-11/FX-12/Wrapper/FX-9/FX-6/FX-4/FX-9/FX-7.",
     "Figma: el plan menciona flechas (Arrow) pero no aparecen en las variantes."

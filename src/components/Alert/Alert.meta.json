@@ -38,6 +38,81 @@
       "title": "Device=Mobile, Type=Language"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (en fila: mensaje a la izquierda, acción a la derecha) y móvil (apilada). En código se adapta al ancho de la propia barra (container query): en fila desde 768 px.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "DesktopDefault"
+        },
+        {
+          "value": "Mobile",
+          "story": "MobileDefault"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Qué acción acompaña al mensaje: un enlace de suscripción o un selector de idioma con botón de confirmar.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Mensaje + enlace SUBCRÍBETE."
+        },
+        {
+          "value": "Language",
+          "description": "Mensaje + selector de idioma (select nativo) + CONFIRMAR."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para un aviso breve a ancho completo encima de la cabecera o del pie: invitar a suscribirse o confirmar el idioma.",
+    "do": [
+      "Mensaje de una sola frase con una única acción (`Button-Action-Link`).",
+      "Usa `Language` cuando el idioma detectado puede no ser el correcto y el usuario debe confirmarlo.",
+      "Colócalo pegado a `M01-Navigation` o `M03-Navigation-Footer`, a ancho completo."
+    ],
+    "dont": [
+      "No lo uses para errores de formulario ni confirmaciones de una acción.",
+      "No apiles varias barras de aviso a la vez.",
+      "No metas más de una acción ni textos largos de varias líneas."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -56,7 +131,7 @@
       "name": "buttonText / onAction",
       "description": "Texto y acción del enlace.",
       "default": "—",
-      "control": "text"
+      "control": false
     },
     {
       "name": "showButton",
@@ -148,7 +223,12 @@
     "M03-Navigation-Footer"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: paddings 16/18/40/24, gaps 140/32/26/12/10 px sin variable → FX-4, FX-4+FX-0, FX-9, FX-6, space-between, FX-6, FX-3, FX-2+FX-0.",
     "Figma: el enlace usa Type=Hover de Button-Action-Link de forma fija (gris) → state Hover.",

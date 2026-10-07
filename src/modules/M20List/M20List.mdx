@@ -1,91 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde M20List.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde M20List.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './M20List.stories';
+import meta from './M20List.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# M20-List
-
-## Introducción
-
-Lista de ventajas o datos destacados con cabecera: bloques con borde compartido en fila (escritorio) o en columna (móvil).
-
-
-Figma: `M20-List` (`60186:9313`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Title
-- Block best price × 3 (o 4)
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Breakpoint a 960 px.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Property 1=Desktop
-
-<Canvas of={Stories.Desktop} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Property 1=Mobile
-
-<Canvas of={Stories.Mobile} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--backgrounds-base` | fondo |
-| spacing | `--layout-spacers-responsive-11` | padding superior de la cabecera |
-| spacing | `--layout-spacers-responsive-13 / 10` | padding vertical de la lista (escritorio / móvil) |
-| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| showTitle | Muestra la cabecera. | true | boolean |
-| showExtraItem | Añade un cuarto bloque. | false | boolean |
-| items / extraItem | Bloques: title, text. | 3 × Mejor precio garantizado | object |
-| eyebrow | Texto de la cabecera. | 100 g de Jamón Joselito aportan | text |
-| theme | Subtema. | — | text |
-
-## Guía de contenido
-
-| Campo | Límite | Notas |
-| --- | --- | --- |
-| Bloques |  | Título en mayúsculas y texto corto. |
-
-## Accesibilidad
-
-- Lista semántica.
-
-## Componentes relacionados
-
-- Block best price
-- Title
-- M21-List-Numbers
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=60186-9313","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/modules/M20List/M20List.jsx"}} />

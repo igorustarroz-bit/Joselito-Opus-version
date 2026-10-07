@@ -21,7 +21,11 @@
     "docs": "node scripts/hanzo/docs-generator.mjs --all",
     "diff": "node scripts/hanzo/figma-diff.mjs",
     "drift": "node scripts/hanzo/plan.mjs --drift",
-    "grid": "node scripts/hanzo/grid-columns.mjs"
+    "grid": "node scripts/hanzo/grid-columns.mjs",
+    "mcp": "node scripts/hanzo/mcp-usage.mjs",
+    "breakpoints": "node scripts/hanzo/breakpoints.mjs",
+    "layout": "node scripts/hanzo/layout-check.mjs --measure --all",
+    "overflow": "node scripts/hanzo/layout-check.mjs --overflow"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -42,6 +46,8 @@
     "vite": "^7.0.0",
     "vite-plugin-svgr": "^4.3.0",
     "wawoff2": "^2.0.1",
-    "@storybook/addon-links": "^10.0.0"
+    "@storybook/addon-links": "^10.0.0",
+    "playwright": "^1.55.0",
+    "@storybook/icons": "^1.4.0"
   }
 }

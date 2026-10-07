@@ -1,11 +1,14 @@
 import M23CardsGallery, { TYPES } from './M23CardsGallery';
 
+import meta from './M23CardsGallery.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M23-Cards-Gallery',
   component: M23CardsGallery,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'Carrousel', showTitle: true, showInstagram: true },
-  argTypes: { type: { control: 'inline-radio', options: TYPES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES } }),
 };
 
 export const Default = {};

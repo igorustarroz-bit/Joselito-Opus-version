@@ -1,95 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde M27CardsCategories.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde M27CardsCategories.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './M27CardsCategories.stories';
+import meta from './M27CardsCategories.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# M27-Cards-Categories
-
-## Introducción
-
-Carrusel de categorías de producto con cabecera, tarjetas desplazables y flechas anterior/siguiente.
-
-
-Figma: `M27-Cards-Categories` (`58163:40311`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Cabecera (Title con enlace)
-- Card Product × N
-- Button-Icon ← →
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Las flechas desplazan una tarjeta y se desactivan al llegar a los extremos.
-- También se desplaza con scroll/swipe (scroll-snap).
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Device=Desktop
-
-<Canvas of={Stories.Desktop} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Device=Mobile
-
-<Canvas of={Stories.Mobile} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--backgrounds-base` | fondo |
-| spacing | `--layout-grids-gutter` | entre tarjetas |
-| spacing | `--layout-cols-size-4cols` | ancho de tarjeta |
-| spacing | `--layout-spacers-responsive-11` | paddings verticales |
-| spacing | `--spacers-fixed-fx-11 / fx-10` | tarjetas-flechas |
-| spacing | `--layout-grids-wrapper-default` | márgenes laterales |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| items | Categorías: title, price, image, href. | 4 categorías | object |
-| showArrows | Muestra las flechas. | true | boolean |
-| showTitle | Muestra la cabecera. | true | boolean |
-| eyebrow / linkText / href | Cabecera. | Nuestros productos / Ver todos | text |
-| theme | Subtema. | — | text |
-
-## Guía de contenido
-
-| Campo | Límite | Notas |
-| --- | --- | --- |
-| Categorías |  | Nombre y precio 'desde'. |
-
-## Accesibilidad
-
-- Flechas con nombre accesible; la fila es enfocable.
-
-## Componentes relacionados
-
-- Card Product
-- Button-Icon
-- M24-Cards-Productcarousel
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=58163-40311","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/modules/M27CardsCategories/M27CardsCategories.jsx"}} />

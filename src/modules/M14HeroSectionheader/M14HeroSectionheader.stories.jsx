@@ -1,11 +1,14 @@
 import M14HeroSectionheader, { PROPERTIES } from './M14HeroSectionheader';
 
+import meta from './M14HeroSectionheader.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M14-Hero-Sectionheader',
   component: M14HeroSectionheader,
   parameters: { layout: 'fullscreen' },
   args: { property: 'Tiendas y Restaurantes', showLabels: true, showButton: true, showToast: false },
-  argTypes: { property: { control: 'inline-radio', options: PROPERTIES } },
+  argTypes: argTypesFromMeta(meta, { property: { control: 'inline-radio', options: PROPERTIES } }),
 };
 
 export const Default = {};

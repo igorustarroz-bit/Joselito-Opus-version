@@ -1,95 +1,10 @@
-{/* Generado por scripts/docs-generator.mjs desde M32ListArchiveList.meta.json. Editar el meta.json y regenerar. */}
-import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+{/* Generado por scripts/hanzo/docs-generator.mjs desde M32ListArchiveList.meta.json. No editar: edita el meta.json
+   (la página lo lee en vivo) y regenera solo si cambian nombre, rutas o enlaces. Kit: src/docs/DocKit.jsx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DocPage } from '@/docs/DocKit';
 import * as Stories from './M32ListArchiveList.stories';
+import meta from './M32ListArchiveList.meta.json';
 
 <Meta of={Stories} name="Doc" />
 
-# M32-List-ArchiveList
-
-## Introducción
-
-Archivo de colecciones pasadas: lista de nombres grandes; el elemento activo se resalta y muestra sus fotos a los lados.
-
-
-Figma: `M32-List-ArchiveList` (`59895:46608`)
-
-## Demo
-
-<Canvas of={Stories.Default} />
-
-<Controls of={Stories.Default} />
-
-## Anatomía
-
-- Title (antetítulo)
-- Lista de Block Archive List
-- Dos fotos 3:4 (solo escritorio)
-
-## Subtemas
-
-Subtema por defecto: `light-white`
-
-Subtemas soportados: `light-white`, `light-grey`, `dark-black-neutral`
-
-Hereda el subtema.
-
-## Comportamiento
-
-- Al pasar el ratón o enfocar una entrada se vuelve activa y, si trae images, se muestran sus fotos.
-- Por debajo de 960 px la lista se apila con separadores y las fotos se ocultan.
-
-## Variantes y tamaños
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Property 1=Desktop
-
-<Canvas of={Stories.Desktop} />
-
-  </div>
-  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
-
-### Property 1=Mobile
-
-<Canvas of={Stories.Mobile} />
-
-  </div>
-</div>
-
-## Tokens
-
-| Nombre | Token | Uso |
-| --- | --- | --- |
-| color | `--texts-neutral-3` | nombres inactivos (escritorio) |
-| color | `--texts-base` | activo |
-| color | `--strokes-icons-neutral-3` | separadores |
-| spacing | `--layout-spacers-responsive-10` | padding vertical |
-| spacing | `--layout-spacers-responsive-15` | gap título-lista (móvil) |
-| spacing | `--spacers-fixed-fx-3` | gap de la lista |
-| spacing | `--layout-cols-size-10cols / 3cols` | ancho lista / fotos |
-
-## Propiedades
-
-| Nombre | Descripción | Por defecto | Control |
-| --- | --- | --- | --- |
-| heading | Antetítulo (Title sin título ni enlace). | Colecciones pasadas | text |
-| items | Entradas (label, title, href e images opcional); la etiqueta alterna izquierda/derecha. | 11 colecciones | object |
-| images | Dos fotos (src y alt) por defecto si la entrada activa no trae las suyas. | 2 fotos de Ara Malikian | object |
-| initialActive | Índice activo inicial. | 5 | number |
-| theme | Subtema. | light-white | text |
-
-## Guía de contenido
-
-| Campo | Límite | Notas |
-| --- | --- | --- |
-| Entradas |  | Año/colección y nombre del artista o edición. |
-
-## Accesibilidad
-
-- Lista ul con enlaces; las fotos son decorativas (alt vacío por defecto).
-
-## Componentes relacionados
-
-- M20-List
-- M31-Navigation-PreviousNext
+<DocPage meta={meta} stories={Stories} lang="es" links={{"figma":"https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/?node-id=59895-46608","code":"https://github.com/igorustarroz-bit/Joselito-Opus-version/blob/main/src/modules/M32ListArchiveList/M32ListArchiveList.jsx"}} />

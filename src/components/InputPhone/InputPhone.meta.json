@@ -38,6 +38,93 @@
       "title": "Size=Small (7 estados)"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "description": "Solo hay un tipo; no es una prop en código.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Default"
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Altura del campo, igual que en `Input`.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "Big",
+          "description": "Por defecto."
+        },
+        {
+          "value": "Small",
+          "description": "Formularios compactos."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Los mismos estados que `Input`. Hover y foco son nativos; error, validado y desactivado van por prop.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Focused"
+        },
+        {
+          "value": "Filled"
+        },
+        {
+          "value": "Error",
+          "description": "Número no válido; el mensaje explica el error."
+        },
+        {
+          "value": "Validated"
+        },
+        {
+          "value": "Disabled",
+          "description": "También desactiva el selector de prefijo."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en formularios cuando pidas un teléfono y necesites el prefijo de país.",
+    "do": [
+      "Usa el mismo tamaño que el resto de `Input` del formulario.",
+      "Usa el mensaje para indicar el formato o el error.",
+      "Deja +34 como prefijo por defecto."
+    ],
+    "dont": [
+      "No lo uses para otros números (código postal, DNI): usa `Input`.",
+      "No ocultes el mensaje de error en el estado Error."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "size",
@@ -51,7 +138,7 @@
       "figma": "Placeholder",
       "description": "Valor (como Input).",
       "default": "\"\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "info",
@@ -92,7 +179,7 @@
       "name": "error / validated / disabled",
       "description": "Estados (como Input).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "state",
@@ -120,7 +207,7 @@
       "figma": "Code",
       "description": "Prefijo (select nativo).",
       "default": "\"+34\"",
-      "control": "text"
+      "control": false
     },
     {
       "name": "defaultValue",
@@ -185,6 +272,10 @@
     {
       "field": "placeholder",
       "notes": "No hay relleno: la palabra aparece por el atributo HTML placeholder heredado de Input."
+    },
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
     }
   ],
   "notes": [

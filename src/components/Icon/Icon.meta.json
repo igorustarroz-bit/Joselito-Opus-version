@@ -45,6 +45,77 @@
       "title": "Galería — los 136 iconos (L)"
     }
   ],
+  "axes": [
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Tamaño del Icon Sizer: L 32 · M 24 · S 20 · XS 16 · XXS 12 px. El trazo escala con el icono.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "L",
+          "description": "Botones grandes y destacados."
+        },
+        {
+          "value": "M",
+          "description": "Por defecto."
+        },
+        {
+          "value": "S"
+        },
+        {
+          "value": "XS"
+        },
+        {
+          "value": "XXS",
+          "description": "Solo para indicadores muy pequeños."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para reforzar acciones y etiquetas con un icono del set de Brand Assets.",
+    "do": [
+      "Usa siempre un icono del set (ver la galería).",
+      "Deja que herede el color del texto del contenedor.",
+      "Pasa `title` si el icono es la única pista de su significado."
+    ],
+    "dont": [
+      "No añadas SVG sueltos fuera del set.",
+      "No lo uses como botón por sí solo: envuélvelo en `ButtonIcon`.",
+      "No cambies el tamaño fuera de los cinco del Icon Sizer."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Icon: tamaños con spacers fijos en lugar de px literales"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Set de 136 iconos + componente Icon (Icon Sizer L/M/S/XS/XXS)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "name",
@@ -116,7 +187,12 @@
     "Input"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Tamaños del Icon Sizer en px literales: Figma no los liga a variables (token-audit da 10 avisos explicados).",
     "Nombres duplicados en Figma: MapPin (49026:6648 → `map-pin`, 49864:3114 → `map-pin-2`, con remates redondeados), Quotes (`quotes`, `quotes-2`) y House (`house`, `house-2`). Avisar a diseño para renombrarlos.",

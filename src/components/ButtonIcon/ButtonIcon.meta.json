@@ -125,6 +125,114 @@
       "title": "Como enlace (con href)"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Peso visual del botón: relleno, relleno con borde o solo borde.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Primary",
+          "description": "Acción principal; relleno sólido."
+        },
+        {
+          "value": "Secondary",
+          "description": "Acción secundaria; relleno con borde."
+        },
+        {
+          "value": "Terciary",
+          "description": "Solo borde; para carruseles y acciones discretas."
+        }
+      ]
+    },
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Lado del cuadrado: XL 104 · L 64 · M 56 · S 48 · XS 40 px. El icono escala con el tamaño.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "XL",
+          "description": "Solo con Primary."
+        },
+        {
+          "value": "L"
+        },
+        {
+          "value": "M"
+        },
+        {
+          "value": "S"
+        },
+        {
+          "value": "XS",
+          "description": "Para acciones dentro de filas o campos."
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Hover, foco y desactivado son nativos; Selected es un estado de conmutación (aria-pressed).",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Default"
+        },
+        {
+          "value": "Hover"
+        },
+        {
+          "value": "Selected",
+          "description": "Para botones que activan o desactivan algo."
+        },
+        {
+          "value": "Disabled"
+        },
+        {
+          "value": "Focussed",
+          "description": "Solo con teclado: añade un contorno separado 4 px."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para acciones compactas que se entienden solo con un icono: avanzar o retroceder en carruseles, cerrar, volver o enviar un campo.",
+    "do": [
+      "Pon siempre un `label` con el verbo de la acción (\"Siguiente\", \"Cerrar\").",
+      "Usa Primary para la acción principal y Terciary sobre imágenes o en carruseles.",
+      "Usa el mismo tamaño para botones que van juntos."
+    ],
+    "dont": [
+      "No lo uses si la acción necesita texto para entenderse: usa `Button`.",
+      "No uses XL con Secondary ni Terciary (solo existe en Primary).",
+      "No mezcles iconos que no sean del set de `Icon`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Button-Icon (Primary/Secondary/Terciary × XL–XS × 5 estados)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -266,7 +374,12 @@
     "Go_Back"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: Primary L y M en Default llevan el icono a 20 px y el resto de estados a 24 px (salta al pasar el ratón). Se usa 24 px en todos los estados. Avisar a diseño.",
     "Figma: el padding horizontal (24/16/10/4 px) no está ligado a variable; no se usa porque el botón es cuadrado de tamaño fijo con el icono centrado.",

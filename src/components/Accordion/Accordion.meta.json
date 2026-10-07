@@ -30,6 +30,67 @@
       "title": "Show Subtitle"
     }
   ],
+  "axes": [
+    {
+      "name": "Open",
+      "description": "Estado cerrado o abierto. El usuario lo cambia con un clic en la cabecera; el icono pasa de más a menos.",
+      "story": "AxisOpen",
+      "options": [
+        {
+          "value": "No",
+          "description": "Por defecto: solo título."
+        },
+        {
+          "value": "Yes",
+          "description": "Muestra el contenido; úsalo abierto de inicio solo para el elemento más relevante."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para contenido secundario que el usuario abre a demanda, como preguntas frecuentes o el pie de página en móvil.",
+    "do": [
+      "Agrupa varios en un `ListAccordion` para listas de preguntas.",
+      "Usa títulos cortos que anticipen el contenido.",
+      "Activa el subtítulo solo si aporta contexto (fecha, categoría)."
+    ],
+    "dont": [
+      "No escondas información imprescindible para la tarea.",
+      "No esperes animación de apertura: es instantánea.",
+      "No metas otro acordeón dentro del contenido."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)",
+        "Separados `accordion` (elemento) y `list_accordion` (lista)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Accordion (lista de accordion) + override figma.digest en dod-check por colisión de slug"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "title",
@@ -64,7 +125,7 @@
       "figma": "Open",
       "description": "Abierto (controlado o no).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "theme",
@@ -137,7 +198,12 @@
     "M28-Cards-Accordion"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el estilo del subtítulo no se pudo leer (capa oculta, 18 px de alto) → Body/01 (12/18).",
     "Figma: no hay animación de apertura; en código es instantánea.",

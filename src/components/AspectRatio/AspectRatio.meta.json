@@ -56,6 +56,88 @@
       "title": "Size=Fill"
     }
   ],
+  "axes": [
+    {
+      "name": "Size",
+      "prop": "size",
+      "description": "Fija la proporción del marco; la imagen se recorta centrada para cubrirlo. `Fill` no impone proporción y ocupa alto y ancho del contenedor.",
+      "story": "AxisSize",
+      "options": [
+        {
+          "value": "16:9",
+          "description": "Vídeos y medios horizontales panorámicos."
+        },
+        {
+          "value": "9:16",
+          "description": "Formato vertical tipo story."
+        },
+        {
+          "value": "4:3"
+        },
+        {
+          "value": "3:4",
+          "description": "Foto de producto en `Card Product`."
+        },
+        {
+          "value": "3:2",
+          "description": "En código es 3:2 exacto; en Figma la muestra mide 320×207."
+        },
+        {
+          "value": "2:3"
+        },
+        {
+          "value": "1:1"
+        },
+        {
+          "value": "Fill",
+          "description": "Cuando el contenedor ya define el alto (fondos, medios a pantalla completa)."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como marco de cualquier foto o vídeo del sistema para fijar su proporción.",
+    "do": [
+      "Elige la proporción según el contenido y el layout: 4:3 o 3:4 en módulos editoriales, 3:4 en `Card Product`, 16:9 en vídeo.",
+      "Pon un `alt` descriptivo si la imagen aporta información y `alt` vacío si es decorativa.",
+      "Usa carga `eager` solo en imágenes above the fold."
+    ],
+    "dont": [
+      "No fijes el ancho del marco: lo da la columna del contenedor y el alto sale de la proporción.",
+      "No uses `Fill` si el contenedor no tiene un alto definido.",
+      "No coloques imágenes sueltas fuera de un Aspect Ratio."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "HITO de imágenes raster (58 WebP verificadas por SHA-1) + foto real en Aspect Ratio"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Aspect Ratio (Size 16:9, 9:16, 4:3, 3:4, 3:2, 2:3, 1:1, Fill)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "size",
@@ -86,7 +168,7 @@
       "name": "children",
       "description": "Contenido alternativo a `src` (vídeo, iframe…); se ajusta igual que la imagen.",
       "default": "—",
-      "control": "none"
+      "control": false
     }
   ],
   "tokens": {
@@ -136,7 +218,12 @@
   "images": [
     "99ad72551c2bb43ead01d135e290d0a20dab5c35"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "En Figma la variante 3:2 mide 320×207 (proporción 1,546), no 320×213: se implementa 3:2 exacto (decisión de Igor, 2026-10-06). Avisar a diseño.",
     "La auditoría del digest marca NO_DEVICE_PROP/NO_THEME_MODE porque el set mide más de 1200 px de ancho: falso positivo (es un componente, no un módulo)."

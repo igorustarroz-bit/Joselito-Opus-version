@@ -1,15 +1,19 @@
 import CheckboxRadio, { TYPES, STATES, TONES } from './CheckboxRadio';
 
+import meta from './CheckboxRadio.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+import { axisStory } from '@/docs/axis';
+
 export default {
   title: 'Components/Checkboxes-Radios',
   component: CheckboxRadio,
   parameters: { defaultTheme: 'light-white' },
   args: { type: 'Checkboxes', tone: 'Light', 'aria-label': 'Opción' },
-  argTypes: {
+  argTypes: argTypesFromMeta(meta, {
     type: { control: 'inline-radio', options: TYPES },
     tone: { control: 'inline-radio', options: TONES },
     state: { control: 'select', options: [undefined, ...STATES] },
-  },
+  }),
 };
 
 export const Default = {};
@@ -34,3 +38,24 @@ export const GrupoRadios = {
     </div>
   ),
 };
+
+/** Eje «State»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisState = axisStory(CheckboxRadio, [
+  { label: "Not Selected", args: {"state":"Not Selected"} },
+  { label: "Hover", args: {"state":"Hover"} },
+  { label: "Selected Disabled", args: {"state":"Selected Disabled"} },
+  { label: "Selected", args: {"state":"Selected"} },
+  { label: "Disabled", args: {"state":"Disabled"} },
+], { name: "Eje · State" });
+
+/** Eje «Type»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisType = axisStory(CheckboxRadio, [
+  { label: "Checkboxes", story: CheckboxesDark },
+  { label: "Radio", story: RadioDark },
+], { name: "Eje · Type" });
+
+/** Eje «Theme»: todas las opciones juntas (página Doc → Variantes). */
+export const AxisTheme = axisStory(CheckboxRadio, [
+  { label: "Dark", story: CheckboxesDark },
+  { label: "Light", story: CheckboxesLight },
+], { name: "Eje · Theme" });

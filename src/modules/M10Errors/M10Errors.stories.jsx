@@ -1,11 +1,14 @@
 import M10Errors, { TYPES } from './M10Errors';
 
+import meta from './M10Errors.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M10-Errors',
   component: M10Errors,
   parameters: { layout: 'fullscreen', defaultTheme: 'dark-black-neutral' },
   args: { type: '404' },
-  argTypes: { type: { control: 'inline-radio', options: TYPES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES } }),
 };
 
 export const Default = {};

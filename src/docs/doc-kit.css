@@ -1,0 +1,107 @@
+/* token-audit-ignore-file — estilos de la página de documentación (DocKit). Son del propio Storybook,
+ * no del proyecto: Inter, neutros y un acento. Para cambiar el acento: --hzd-accent. */
+
+.hzd {
+  --hzd-font: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --hzd-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --hzd-ink: #162d3d;
+  --hzd-ink-2: #577083;
+  --hzd-line: #dfe5eb;
+  --hzd-soft: #f4f7f9;
+  --hzd-accent: #116dff;
+  --hzd-do: #2fb87a;
+  --hzd-dont: #e62214;
+  font-family: var(--hzd-font);
+  color: var(--hzd-ink);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.hzd *, .hzd *::before, .hzd *::after { box-sizing: border-box; }
+.hzd a { color: var(--hzd-accent); text-decoration: none; }
+.hzd a:hover { text-decoration: underline; }
+.hzd p { margin: 0 0 12px; }
+
+/* Cabecera */
+.hzd-header { border-bottom: 1px solid var(--hzd-line); margin-bottom: 32px; }
+.hzd-header__top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.hzd-header__kind { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--hzd-ink-2); margin-bottom: 4px; }
+.hzd-title { font-size: 32px; line-height: 1.2; font-weight: 700; margin: 0; letter-spacing: -.01em; }
+.hzd-header__links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; padding-bottom: 6px; }
+.hzd-lead { color: var(--hzd-ink-2); font-size: 16px; max-width: 70ch; margin: 12px 0 20px; }
+.hzd-tabs { display: flex; gap: 28px; }
+.hzd-tab {
+  appearance: none; background: none; border: 0; cursor: pointer; font: inherit; font-weight: 500;
+  color: var(--hzd-ink-2); padding: 10px 0 12px; border-bottom: 3px solid transparent; margin-bottom: -1px;
+}
+.hzd-tab:hover { color: var(--hzd-ink); }
+.hzd-tab.is-active { color: var(--hzd-accent); border-bottom-color: var(--hzd-accent); }
+.hzd-tab__count { margin-left: 6px; font-size: 11px; background: var(--hzd-soft); border-radius: 10px; padding: 1px 7px; color: var(--hzd-ink-2); }
+
+/* Secciones y títulos con ancla */
+.hzd-section { margin: 0 0 48px; }
+.hzd-h { position: relative; font-weight: 700; margin: 0 0 12px; }
+.hzd-section--h2 > .hzd-h { font-size: 22px; line-height: 1.3; }
+.hzd-h--3 { font-size: 16px; line-height: 1.4; margin-bottom: 8px; }
+.hzd-h__anchor { position: absolute; left: -20px; opacity: 0; color: var(--hzd-ink-2) !important; font-weight: 400; }
+.hzd-h:hover .hzd-h__anchor { opacity: 1; text-decoration: none; }
+.hzd-muted { color: var(--hzd-ink-2); font-size: 13px; }
+.hzd-md > *:last-child { margin-bottom: 0; }
+.hzd-md p { margin: 0 0 8px; }
+.hzd-md ul { padding-left: 20px; margin: 0 0 8px; }
+.hzd-md code, .hzd-code {
+  font-family: var(--hzd-mono); font-size: 12px; background: var(--hzd-soft); border: 1px solid var(--hzd-line);
+  border-radius: 4px; padding: 1px 5px; margin-right: 4px; color: var(--hzd-ink); white-space: nowrap;
+}
+.hzd-list { list-style: disc; padding-left: 20px; margin: 0 0 12px; }
+.hzd-list li { margin-bottom: 6px; }
+.hzd-list li > .hzd-md { display: inline; }
+.hzd-list li > .hzd-md > div, .hzd-list li > .hzd-md p { display: inline; margin: 0; }
+.hzd-list--options { list-style: none; padding-left: 0; }
+
+/* Demo: el lienzo de Storybook sin sombras, con borde fino */
+.hzd-demo .sbdocs-preview, .hzd-demo .docs-story { margin: 0; }
+.hzd-demo .sbdocs-preview { box-shadow: none; border: 1px solid var(--hzd-line); border-radius: 8px; }
+
+/* Do / Don't */
+.hzd-dodont { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+.hzd-dodont__card { border: 1px solid var(--hzd-line); border-top: 4px solid; border-radius: 8px; padding: 16px 20px; background: #fff; }
+.hzd-dodont__card--do { border-top-color: var(--hzd-do); }
+.hzd-dodont__card--dont { border-top-color: var(--hzd-dont); }
+.hzd-dodont__title { font-weight: 700; margin-bottom: 8px; }
+.hzd-dodont__card--do .hzd-dodont__title { color: var(--hzd-do); }
+.hzd-dodont__card--dont .hzd-dodont__title { color: var(--hzd-dont); }
+.hzd-dodont ul { list-style: none; padding: 0; margin: 0; }
+.hzd-dodont li { position: relative; padding-left: 24px; margin-bottom: 8px; }
+.hzd-dodont li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+.hzd-dodont__card--do li::before { content: '✓'; color: var(--hzd-do); }
+.hzd-dodont__card--dont li::before { content: '✕'; color: var(--hzd-dont); }
+
+/* Variantes por eje: texto a la izquierda, demo a la derecha (apilado en módulos o en pantallas estrechas) */
+.hzd-axis { display: grid; grid-template-columns: minmax(220px, 2fr) 3fr; gap: 32px; align-items: start; padding: 24px 0; border-top: 1px solid var(--hzd-line); }
+.hzd-axis:first-of-type { border-top: 0; padding-top: 4px; }
+.hzd-axis--stacked { grid-template-columns: 1fr; gap: 16px; }
+.hzd-axis__demo { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.hzd-axis__label { font-size: 12px; font-weight: 600; color: var(--hzd-ink-2); margin-bottom: 6px; }
+@media (max-width: 900px) { .hzd-axis { grid-template-columns: 1fr; gap: 16px; } }
+
+/* Tablas */
+.hzd-table-wrap { overflow-x: auto; border: 1px solid var(--hzd-line); border-radius: 8px; }
+.hzd-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hzd-table th { text-align: left; font-weight: 600; color: var(--hzd-ink-2); background: var(--hzd-soft); padding: 10px 14px; border-bottom: 1px solid var(--hzd-line); }
+.hzd-table td { padding: 10px 14px; border-bottom: 1px solid var(--hzd-line); vertical-align: top; }
+.hzd-table tr:last-child td { border-bottom: 0; }
+.hzd-table thead th:empty { display: none; }
+.hzd-type { font-family: var(--hzd-mono); font-size: 12px; color: #8e21a6; }
+
+/* Código */
+.hzd-copyline { display: flex; align-items: center; gap: 12px; background: var(--hzd-soft); border: 1px solid var(--hzd-line); border-radius: 8px; padding: 10px 14px; }
+.hzd-copyline pre { margin: 0; flex: 1; overflow-x: auto; font-family: var(--hzd-mono); font-size: 13px; }
+.hzd-copyline button { font: inherit; font-size: 12px; font-weight: 600; color: var(--hzd-accent); background: none; border: 0; cursor: pointer; }
+.hzd-controls { margin-top: 16px; }
+
+/* Cambios */
+.hzd-changelog__entry { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 16px 0; border-top: 1px solid var(--hzd-line); }
+.hzd-changelog__entry:first-child { border-top: 0; }
+.hzd-changelog__meta { display: flex; flex-direction: column; gap: 4px; color: var(--hzd-ink-2); font-size: 13px; }
+.hzd-badge { align-self: flex-start; font-size: 11px; font-weight: 600; background: var(--hzd-soft); border: 1px solid var(--hzd-line); border-radius: 10px; padding: 0 8px; color: var(--hzd-ink); }

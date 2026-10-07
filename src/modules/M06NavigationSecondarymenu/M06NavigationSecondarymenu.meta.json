@@ -46,6 +46,91 @@
       "title": "Device=Mobile, Type=Dropdown, Open=Yes"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "DesktopOneLine"
+        },
+        {
+          "value": "Mobile",
+          "story": "MobileOneLine"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Forma del menú: fila de `subnavigation-item` o desplegable con lista.",
+      "options": [
+        {
+          "value": "One line",
+          "description": "Fila centrada en escritorio, desplazable en móvil.",
+          "story": "DesktopOneLine"
+        },
+        {
+          "value": "Dropdown",
+          "description": "Escritorio: filtros con caret y panel con lista y foto. Móvil: título con +/− que despliega enlaces.",
+          "story": "DesktopDropdownOpen"
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "description": "Si el desplegable está abierto. Solo afecta a Dropdown.",
+      "options": [
+        {
+          "value": "Yes",
+          "description": "Panel o lista visibles.",
+          "story": "DesktopDropdownOpen"
+        },
+        {
+          "value": "No",
+          "description": "Solo la barra de filtros o el título.",
+          "story": "DesktopOneLine"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como subnavegación dentro de una sección: una fila de categorías o filtros que despliegan una lista.",
+    "do": [
+      "Etiquetas de una o dos palabras en la fila.",
+      "Usa One line para pocas categorías hermanas y Dropdown cuando hay que filtrar entre muchas (p. ej. chefs).",
+      "Marca siempre el elemento activo."
+    ],
+    "dont": [
+      "No lo uses como menú principal: usa `M02-Menu`.",
+      "No mezcles en la fila enlaces de otras secciones.",
+      "No confíes en que la fila se vea entera en móvil: se desplaza en horizontal."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -59,7 +144,7 @@
       "figma": "Open",
       "description": "Desplegado (controlado / inicial).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "showMenu",
@@ -104,7 +189,7 @@
       "name": "panelLinks / panelSelected / panelImage",
       "description": "Contenido del panel de escritorio.",
       "default": "chefs, Ferran Adrià, foto",
-      "control": "object"
+      "control": false
     },
     {
       "name": "onToggle",
@@ -203,7 +288,12 @@
   "images": [
     "b420128cee187dd6f9ba0a8420df8ef9e0e2ee1e"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: fondo #FFFFFF sin variable en el desplegable móvil → Backgrounds/Base.",
     "Figma: separaciones 32 y 20 px y padding superior 24 sin variable → FX-7, FX-5 y FX-6.",

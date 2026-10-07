@@ -1,5 +1,8 @@
 import M11ContentTextonly, { VARIANTS } from './M11ContentTextonly';
 
+import meta from './M11ContentTextonly.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 const SHORT = 'Apasionados por la perfección en cada detalle del proceso: desde la cría del cerdo en libertad hasta la curación natural en bodegas centenarias. Joselito no solo conserva un legado, lo eleva a la categoría de arte gastronómico, reconocido en los cinco continentes.';
 
 export default {
@@ -7,7 +10,7 @@ export default {
   component: M11ContentTextonly,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { variant: '2-column', showLabel: true, showTitle: true, showBoxTitle: true },
-  argTypes: { variant: { control: 'inline-radio', options: VARIANTS }, showSlot2: { control: 'boolean' } },
+  argTypes: argTypesFromMeta(meta, { variant: { control: 'inline-radio', options: VARIANTS }, showSlot2: { control: 'boolean' } }),
 };
 
 export const Default = {};

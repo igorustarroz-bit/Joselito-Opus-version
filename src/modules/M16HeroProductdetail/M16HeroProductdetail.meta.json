@@ -30,6 +30,80 @@
       "title": "Device=Desktop, Type=Receta"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio o de móvil del mismo diseño. En código no es una prop: el elemento se adapta solo por breakpoint a 960 px; en móvil la galería es deslizable con indicador de posición.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Producto"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Contenido y acciones según la ficha.",
+      "options": [
+        {
+          "value": "Producto",
+          "description": "Datos, compra, lista de deseos y avisos de entrega.",
+          "story": "Producto"
+        },
+        {
+          "value": "Receta",
+          "description": "Tres botones (vídeo, imprimir, compartir) y autor.",
+          "story": "Receta"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como cabecera de la ficha de un producto o de una receta.",
+    "do": [
+      "Usa al menos tres imágenes distintas en la galería.",
+      "Muestra hasta cuatro datos clave con etiqueta corta.",
+      "Pon la acción principal en el primer botón."
+    ],
+    "dont": [
+      "No repitas la misma imagen en todas las miniaturas.",
+      "No pongas más de tres botones."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M16: indicador de galería en móvil y datos en una fila"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -119,7 +193,7 @@
       "name": "images / current",
       "description": "Imágenes de la galería e índice inicial.",
       "default": "3 imágenes",
-      "control": "object"
+      "control": false
     },
     {
       "name": "tags",
@@ -137,13 +211,13 @@
       "name": "notes / author",
       "description": "Avisos de entrega (Producto) o autor (Receta).",
       "default": "según type",
-      "control": "object"
+      "control": false
     },
     {
       "name": "back / backHref / onBack",
       "description": "Volver.",
       "default": "PRODUCTOS / RECETAS",
-      "control": "text"
+      "control": false
     },
     {
       "name": "showNavigation",
@@ -247,7 +321,12 @@
     "01e64032ea7aa325d1021146d0a73afadff08b42",
     "c22e64dacd1afe065c97f91396c65c430e8af28b"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: separaciones 4/8/2,1/40/20/32 y paddings 12 sin variable → FX-1/FX-2/FX-0/FX-9/FX-5/FX-7/FX-3.",
     "Figma: miniaturas de 64 px → FX-11.",

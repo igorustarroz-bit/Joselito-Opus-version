@@ -36,6 +36,84 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil, con y sin Toast (en Figma Device4 = escritorio sin Toast y Device5 = móvil con Toast; conviene renombrarlas). En código el dispositivo se adapta por breakpoint (960 px) y el Toast se activa con `showToast`.",
+      "options": [
+        {
+          "value": "Desktop",
+          "description": "Escritorio con Toast: titular centrado y Toast abajo a la derecha.",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "description": "Móvil sin Toast.",
+          "story": "Mobile"
+        },
+        {
+          "value": "Device4",
+          "description": "Escritorio sin Toast: titular al pie.",
+          "story": "DesktopNoToast"
+        },
+        {
+          "value": "Device5",
+          "description": "Móvil con Toast: el Toast va al pie.",
+          "story": "MobileToast"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como primer bloque de la home: hero a pantalla completa sobre vídeo o imagen, con la cabecera superpuesta y un gran titular.",
+    "do": [
+      "Escribe un titular de hasta dos líneas y una etiqueta corta en mayúsculas.",
+      "Usa el `Toast` para destacar un lanzamiento o colaboración; si no hay nada que destacar, ocúltalo.",
+      "Usa vídeo o imagen oscura de fondo: el texto va en subtema oscuro sobre un velo."
+    ],
+    "dont": [
+      "No lo uses en páginas interiores: para secciones usa `M15-Hero-Sectionhero`.",
+      "No pongas una segunda cabecera encima: ya incluye `M01-Navigation` en modo Dark.",
+      "No uses fondos claros: el titular perdería contraste."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Fotograma de Figma como imagen por defecto (el vídeo no se puede exportar desde Figma)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M13 toast alineado"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "showToast",
@@ -54,7 +132,7 @@
       "name": "label / title",
       "description": "Etiqueta y titular.",
       "default": "LUJO DEL TIEMPO / Nada excepcional ocurre deprisa",
-      "control": "text"
+      "control": false
     },
     {
       "name": "media",
@@ -72,7 +150,7 @@
       "name": "scrollTarget / onScroll",
       "description": "Destino (selector) o acción de la flecha.",
       "default": "—",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -153,7 +231,12 @@
     "5b4b71e3443c0f3cee30ca4ae7d7b259588e23bb",
     "c2f9781d0eedc663e3b4e375b354c262dc74e3c1"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: velo negro al 20 % sin variable → Backgrounds/Overlay (30 %), la variable más cercana.",
     "Figma: las variantes se llaman Device4 y Device5 (escritorio sin Toast y móvil con Toast); conviene renombrarlas.",

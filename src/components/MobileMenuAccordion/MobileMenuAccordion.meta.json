@@ -31,6 +31,57 @@
       "title": "State=Open 2"
     }
   ],
+  "axes": [
+    {
+      "name": "State",
+      "prop": "content",
+      "description": "Cerrado o abierto, y qué contenido muestra al abrir. En código el contenido se elige con `content` y la apertura con `open` / `defaultOpen`.",
+      "story": "AxisState",
+      "options": [
+        {
+          "value": "Close",
+          "description": "Solo título y caret."
+        },
+        {
+          "value": "Open 1",
+          "description": "Lista de enlaces y tarjeta destacada con foto."
+        },
+        {
+          "value": "Open 2",
+          "description": "Fila de fotos con título desplazable en horizontal."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como sección desplegable del menú móvil (`M02-Menu`).",
+    "do": [
+      "Título de sección corto, en mayúsculas.",
+      "Usa enlaces + tarjeta destacada para catálogos y fotos para secciones de marca.",
+      "Fotos con título corto; en la fila de fotos, 3–4 elementos."
+    ],
+    "dont": [
+      "No lo uses en escritorio: allí el menú usa el panel de `M02-Menu`.",
+      "No metas más de una tarjeta destacada.",
+      "No uses fotos sin título en la fila desplazable."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "title",
@@ -69,7 +120,7 @@
       "name": "open / defaultOpen / onToggle",
       "description": "Abierto (controlado o no).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "theme",
@@ -168,7 +219,12 @@
       "usage": "foto de la tarjeta y de las fotos"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: padding 16/24 y gaps 50/60/40/20/12 px sin variable → FX-4, FX-6, space-between, FX-9, FX-5.",
     "Figma: el ancho de la foto destacada (164 de 348 px) y de las fotos de Open 2 (161 px) se expresa en porcentaje del contenedor (48 % / 46 %).",

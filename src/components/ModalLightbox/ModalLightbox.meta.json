@@ -57,6 +57,92 @@
       "title": "Como modal real (Overlay)"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (ancho de 6 columnas, 624 px) y de móvil (ancho completo). En código se adapta por breakpoint; en Collapsed móvil se oculta la foto.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "DesktopCollapsed"
+        },
+        {
+          "value": "Mobile",
+          "story": "MobileCollapsed"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Tipo de contenido de la ventana: cambia el cuerpo y si lleva pie con botones.",
+      "story": "AxisStatus",
+      "options": [
+        {
+          "value": "Collapsed",
+          "description": "Barra de producto con foto, nombre, precio y botón \"elige\"."
+        },
+        {
+          "value": "Ticket",
+          "description": "Texto con dos botones (p. ej. tras añadir a la cesta)."
+        },
+        {
+          "value": "Basic",
+          "description": "Solo texto, sin botones."
+        },
+        {
+          "value": "List",
+          "description": "Opciones de selección única (radios) con botones."
+        },
+        {
+          "value": "Video",
+          "description": "Vídeo 16:9 con botón de cerrar."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para avisos, elección de formato o vídeos que requieren la atención del usuario sobre la página.",
+    "do": [
+      "Elige el Status según el contenido: Basic para texto, Ticket para confirmar con dos botones, List para elegir una opción, Video para reproducir.",
+      "Usa el modo modal sobre `Overlay`: Esc, clic fuera y la X cierran.",
+      "Mantén el texto breve."
+    ],
+    "dont": [
+      "No lo uses para contenido largo o formularios extensos.",
+      "No pongas más de dos botones en el pie: usa `RowButtons`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Valores sin variable en Figma pasados a la variable más cercana (anotados en notas)"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "status",
@@ -77,32 +163,32 @@
       "figma": "Slot",
       "description": "Contenido (texto Body/02 por defecto) o hijos propios.",
       "default": "texto del máster",
-      "control": "text"
+      "control": false
     },
     {
       "name": "options / name / value / onChange",
       "figma": "List",
       "description": "Opciones de List (listbox_Item_Dropdown con descripción y radio).",
       "default": "50 g … 200 g",
-      "control": "object"
+      "control": false
     },
     {
       "name": "primaryText / secondaryText / onPrimary / onSecondary",
       "description": "Botones del pie (Ticket, List).",
       "default": "SEGUIR COMPRANDO / IR A LA CESTA",
-      "control": "text"
+      "control": false
     },
     {
       "name": "video / poster",
       "description": "Vídeo (Video) e imagen previa.",
       "default": "imagen del máster",
-      "control": "text"
+      "control": false
     },
     {
       "name": "product / onChoose",
       "description": "Datos de la barra Collapsed (image, name, price, cta).",
       "default": "Jamón Gran Reserva · 599,00 €",
-      "control": "object"
+      "control": false
     },
     {
       "name": "showAlert",
@@ -115,7 +201,7 @@
       "name": "modal / open / onClose",
       "description": "Modal real sobre Overlay (Esc, clic fuera y X cierran; foco atrapado).",
       "default": "false / true",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "theme",
@@ -209,7 +295,12 @@
       "usage": "foto de producto (Collapsed)"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el nombre del producto en Collapsed usa #211E1D sin variable → Texts/Base.",
     "Figma: la sombra de Collapsed (0 2 11 px, 10 %) no tiene estilo → Elevation On Light M (0 0 12 px, 10 %). Avisar a diseño.",

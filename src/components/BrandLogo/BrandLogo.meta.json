@@ -34,6 +34,75 @@
       "title": "Firmas de chefs (9)"
     }
   ],
+  "axes": [
+    {
+      "name": "Horizontal",
+      "prop": "horizontal",
+      "description": "Elige entre el logotipo horizontal y el pictograma vertical de la marca.",
+      "story": "AxisHorizontal",
+      "options": [
+        {
+          "value": "Yes",
+          "description": "Logotipo horizontal: cabeceras, pies y espacios anchos."
+        },
+        {
+          "value": "No",
+          "description": "Pictograma: espacios estrechos o cuadrados."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo siempre que haya que mostrar el logo de Joselito o cualquier brand asset (partners, certificaciones, firmas de chefs).",
+    "do": [
+      "Usa la versión horizontal en cabeceras y pies (`Header`, `Footer`) y el pictograma donde haya poco ancho.",
+      "Escala con `width`: el alto se ajusta solo a la proporción de Figma.",
+      "Si el logo enlaza a home, da nombre accesible al enlace; si es decorativo, deja el título vacío."
+    ],
+    "dont": [
+      "No añadas SVG sueltos: usa los ficheros de `src/assets/logos` con `Logo`.",
+      "No cambies el color de logos de terceros (PEFC, Junta…): conservan sus colores de marca.",
+      "No uses la Logo Grid como logo: es una retícula de construcción de referencia."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M03: ajustes (sin mensaje en el input, selector de idioma)",
+        "Logo con alto proporcional"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Brand Logo: alto proporcional al ancho"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Brand assets: 22 SVG (logos, PEFC, Junta, firmas) + componente BrandLogo"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "horizontal",
@@ -106,7 +175,12 @@
     "Footer"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "SVG descargados con download_assets (export SVG del nodo) y comprobados por tamaño (22/22). El export incluía fondos del lienzo (#D1D1D1, #F7F7F7) y el borde discontinuo del component set (#9747FF): se eliminan antes de SVGO.",
     "Colores sin variable en Figma: logos en black y firmas en #E23636 (= Primary/50) → currentColor + tokens. Avisar a diseño.",

@@ -12,6 +12,42 @@
   "variantAxes": {},
   "codeOnlyAxes": [],
   "variants": [],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para enlazar a un producto o categoría con una foto vertical y el nombre y el precio encima.",
+    "do": [
+      "Usa fotos 3:4 con la parte inferior clara para que el texto negro se lea bien.",
+      "Título corto (nombre del producto) y una línea de precio o subtítulo.",
+      "Agrúpalas en rejilla, como en `M25-Cards-Links`."
+    ],
+    "dont": [
+      "No metas botones ni enlaces dentro: toda la tarjeta ya es un enlace.",
+      "No uses fotos oscuras en la zona del texto: el texto va en negro y perdería contraste.",
+      "No la uses para fichas con más datos (etiquetas, cantidad): usa `Card Product`."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Card Link"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "image / imageAlt",
@@ -96,7 +132,12 @@
       "usage": "foto"
     }
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: padding 32 y gap 8 px sin variable → FX-7 y FX-2.",
     "Figma: el texto es Texts/Base (negro) sobre la foto: según la imagen puede faltar contraste. Avisar a diseño."

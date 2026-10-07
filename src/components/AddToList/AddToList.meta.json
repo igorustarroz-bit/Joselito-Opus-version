@@ -26,19 +26,65 @@
       "title": "Added=Yes"
     }
   ],
+  "axes": [
+    {
+      "name": "Added",
+      "description": "Estado del producto respecto a la lista. Sin añadir muestra solo el enlace; añadido muestra la confirmación y el enlace «quitar».",
+      "story": "AxisAdded",
+      "options": [
+        {
+          "value": "No",
+          "description": "Estado inicial: enlace para añadir."
+        },
+        {
+          "value": "Yes",
+          "description": "Tras añadir: texto de confirmación + «quitar»."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en la ficha de producto para que el usuario guarde o quite un producto de su lista de deseos.",
+    "do": [
+      "Colócalo junto a las acciones de compra del producto, como en `M16-Hero-Productdetail`.",
+      "Mantén textos cortos y en mayúsculas para el enlace, como en el máster (AÑADIR A LA LISTA DE DESEOS).",
+      "Deja que la confirmación sustituya al enlace: el cambio se anuncia a lectores de pantalla."
+    ],
+    "dont": [
+      "No lo uses como CTA principal de compra: para eso está `Button`.",
+      "No lo uses para acciones que no sean añadir/quitar de una lista; para enlaces sueltos usa `Button-Action-Link`.",
+      "No escondas el enlace «quitar» una vez añadido: el usuario debe poder deshacer."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "added / defaultAdded / onChange",
       "figma": "Added",
       "description": "Estado (controlado o no).",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "addText / addedText / removeText",
       "description": "Textos del enlace, la confirmación y quitar.",
       "default": "textos del máster",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -90,7 +136,12 @@
     "M16-Hero-Productdetail"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [],
   "codePath": "src/components/AddToList/AddToList.jsx"
 }

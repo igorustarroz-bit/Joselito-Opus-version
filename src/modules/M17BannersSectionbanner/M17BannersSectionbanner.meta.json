@@ -44,6 +44,107 @@
       "title": "Device=Desktop, Type=Animated - Product, Status=Animated"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint (960 px): en `Borders` móvil la tarjeta va encima y la imagen debajo.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Borders"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Composición del banner: imagen con márgenes y tarjeta, imagen a sangre con texto, o producto animado.",
+      "options": [
+        {
+          "value": "Borders",
+          "description": "Imagen con márgenes y tarjeta blanca superpuesta.",
+          "story": "Borders"
+        },
+        {
+          "value": "Full Screen",
+          "description": "Imagen a sangre con velo y texto al pie.",
+          "story": "FullScreen"
+        },
+        {
+          "value": "Animated - Product",
+          "description": "Producto: pasa de enmarcado a pantalla completa con título, etiquetas y precio.",
+          "story": "ProductStatic"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "prop": "status",
+      "description": "Solo aplica al banner de producto. En Figma mezcla estados: Default es sin animación; en código solo existen Static y Animated, y con `animateOnView` el cambio ocurre al entrar en pantalla.",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Banners `Borders` y `Full Screen`, que no tienen estado."
+        },
+        {
+          "value": "Static",
+          "description": "Producto enmarcado, sin texto.",
+          "story": "Borders"
+        },
+        {
+          "value": "Animated",
+          "description": "Producto a sangre con su información.",
+          "story": "ProductAnimated"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para abrir o separar secciones con una imagen grande y un mensaje con enlace; en la versión de producto, para destacar una pieza concreta con precio.",
+    "do": [
+      "Titulares de hasta dos líneas y un enlace claro (p. ej. DESCUBRE MÁS).",
+      "Usa `Borders` en páginas claras, `Full Screen` para momentos de impacto y `Animated - Product` para un producto destacado.",
+      "Sustituye los textos de relleno de Figma (lorem ipsum) por contenido real."
+    ],
+    "dont": [
+      "No encadenes varios banners seguidos: para varias imágenes usa `M18-Banners-Full Screen Slider`.",
+      "No uses `Full Screen` con imágenes claras: el texto va en blanco sobre un velo.",
+      "No metas más de tres etiquetas en el banner de producto."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Producto que se expande al hacer scroll",
+      "description": "El banner de producto pasa de enmarcado a pantalla completa al entrar en pantalla.",
+      "story": "ProductOnView"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -125,19 +226,19 @@
       "name": "tags / price",
       "description": "Producto: etiquetas y precio.",
       "default": "100% NATURAL… / Desde 280€",
-      "control": "object"
+      "control": false
     },
     {
       "name": "linkText / href",
       "description": "Enlace.",
       "default": "DESCUBRE MÁS",
-      "control": "text"
+      "control": false
     },
     {
       "name": "image / imageAlt",
       "description": "Imagen.",
       "default": "según type",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -217,7 +318,11 @@
     "de6fed704c4d8bafdd86f740c752aea3cb47f3de"
   ],
   "placeholders": [
-    "Textos de relleno (lorem ipsum) copiados de Figma."
+    "Textos de relleno (lorem ipsum) copiados de Figma.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: velos negros al 15/20/30 % sin variable → Backgrounds/Overlay.",

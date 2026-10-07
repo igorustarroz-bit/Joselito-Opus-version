@@ -26,6 +26,57 @@
       "title": "Property 1=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Property 1",
+      "description": "En Figma hace de eje de dispositivo: escritorio con fotos laterales y móvil apilado con separadores y sin fotos. En código se adapta por breakpoint a 960 px.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para un archivo de colecciones o ediciones pasadas con nombres grandes y fotos del elemento activo.",
+    "do": [
+      "Enlaza cada entrada a su colección.",
+      "Pasa fotos propias a cada entrada.",
+      "Usa etiquetas con año o colección y nombre del artista."
+    ],
+    "dont": [
+      "No lo uses para listas cortas (menos de 5 entradas).",
+      "No pongas información esencial en las fotos: se ocultan en móvil."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "heading",
@@ -127,7 +178,12 @@
     "bc2b8c80c74d7128d49f51d405aa7fadf680dd05",
     "7cdd4de80df7207cd31c84eebe7748c3382afe8a"
   ],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: variante de escritorio sin autolayout (posiciones absolutas); en código, rejilla superpuesta con fotos en márgenes FX-16/FX-14.",
     "Figma: gap 12 sin variable → FX-3.",

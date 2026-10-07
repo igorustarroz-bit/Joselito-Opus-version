@@ -47,6 +47,109 @@
       "title": "Device=Desktop, Type=Deploy, State=Deployed"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster de Figma. En código es un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "Mobile"
+        },
+        {
+          "value": "Desktop",
+          "story": "Deploy"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Qué hace la fila: llevar a otra página o desplegar contenido en el sitio.",
+      "options": [
+        {
+          "value": "Deploy",
+          "description": "Botón +/− que despliega texto e imagen 3:4.",
+          "story": "Deploy"
+        },
+        {
+          "value": "Direct Link",
+          "description": "Toda la fila es un enlace con flecha y SOLD OUT opcional.",
+          "story": "DirectLink"
+        }
+      ]
+    },
+    {
+      "name": "State",
+      "prop": "state",
+      "description": "Estados de la fila. Hover la pasa al subtema rojo; Deployed muestra el contenido desplegado (solo Deploy).",
+      "options": [
+        {
+          "value": "Default",
+          "story": "Deploy"
+        },
+        {
+          "value": "Hover",
+          "description": "Al pasar el ratón: fondo rojo.",
+          "story": "DeployHover"
+        },
+        {
+          "value": "Deployed",
+          "description": "Desplegada con texto e imagen.",
+          "story": "Deployed"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como fila de un listado (colecciones, artistas…) que enlaza a una página o despliega un texto con imagen.",
+    "do": [
+      "Etiqueta corta arriba y nombre corto como título.",
+      "Agrupa varias filas seguidas para formar la lista.",
+      "Usa SOLD OUT solo en Direct Link y cuando el elemento está agotado."
+    ],
+    "dont": [
+      "No mezcles Direct Link y Deploy en la misma lista.",
+      "No metas textos largos en el título.",
+      "No pongas botones dentro de la fila: toda ella es clicable."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Lista de filas desplegables",
+      "description": "Uso real: varias filas Deploy seguidas formando un listado de artistas.",
+      "story": "Lista"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "M22 columna de etiqueta"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -80,7 +183,7 @@
       "name": "label / title",
       "description": "Etiqueta y título.",
       "default": "COLECCIÓN 2018 / Fernando Bellver",
-      "control": "text"
+      "control": false
     },
     {
       "name": "href",
@@ -92,13 +195,13 @@
       "name": "text / image / imageAlt",
       "description": "Contenido desplegado (Deploy).",
       "default": "texto e imagen de ejemplo",
-      "control": "text"
+      "control": false
     },
     {
       "name": "open / defaultOpen / onToggle",
       "description": "Estado del desplegable.",
       "default": "false",
-      "control": "boolean"
+      "control": false
     },
     {
       "name": "soldOutText",
@@ -189,7 +292,11 @@
     "ff7cd014d789405b68041b059983fcbd231c54ad"
   ],
   "placeholders": [
-    "Texto desplegado de relleno (lorem ipsum) copiado de Figma."
+    "Texto desplegado de relleno (lorem ipsum) copiado de Figma.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: separación de 141 px entre etiqueta y título → columna de 3cols + gutter.",

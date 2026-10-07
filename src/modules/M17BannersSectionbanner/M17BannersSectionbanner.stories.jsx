@@ -1,11 +1,14 @@
 import M17BannersSectionbanner, { STATUSES, TYPES } from './M17BannersSectionbanner';
 
+import meta from './M17BannersSectionbanner.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M17-Banners-Sectionbanner',
   component: M17BannersSectionbanner,
   parameters: { layout: 'fullscreen', defaultTheme: 'light-white' },
   args: { type: 'Borders', showLabel: true, showBody: true, showPretitle: false },
-  argTypes: { type: { control: 'inline-radio', options: TYPES }, status: { control: 'inline-radio', options: STATUSES } },
+  argTypes: argTypesFromMeta(meta, { type: { control: 'inline-radio', options: TYPES }, status: { control: 'inline-radio', options: STATUSES } }),
 };
 
 export const Default = {};

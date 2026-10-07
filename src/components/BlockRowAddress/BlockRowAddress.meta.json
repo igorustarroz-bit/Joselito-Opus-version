@@ -24,6 +24,56 @@
       "title": "Device=Desktop, Type=Horizontal"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Solo existe la versión de escritorio en Figma; en código la fila ocupa el ancho del contenedor y se adapta sola.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "DesktopHorizontal"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "description": "Solo existe la disposición horizontal: calle con el botón a la derecha y datos debajo.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Horizontal"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo en el área de cliente para listar direcciones guardadas con acceso a verlas o editarlas.",
+    "do": [
+      "Pon la calle en el título y la ciudad y el titular debajo.",
+      "Enlaza el botón de flecha a la vista o edición de esa dirección.",
+      "Apila varias filas para una lista de direcciones."
+    ],
+    "dont": [
+      "No lo uses en el resumen del pedido: usa `BlockAddress`.",
+      "No dejes el botón sin acción."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "title",
@@ -50,7 +100,7 @@
       "name": "href / onAction / actionLabel",
       "description": "Acción del botón (Button-Icon Terciary S, ArrowRight).",
       "default": "—",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -112,7 +162,12 @@
     "Block Address"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: gaps de 8 y 16 px sin variable → FX-2 y FX-4."
   ],

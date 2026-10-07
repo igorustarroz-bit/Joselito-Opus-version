@@ -1,0 +1,11 @@
+<!-- Inter para la interfaz de Storybook (ver .storybook/theme.js) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+<link rel="icon" type="image/svg+xml" href="brand-logo.svg" />
+<style>
+  /* Logo del cliente: alto contenido, nunca deformado */
+  .sidebar-header img { max-height: 32px; width: auto; object-fit: contain; }
+  /* Barra lateral: solo las flechas de desplegar. Fuera los iconos de tipo (documento, componente, story, grupo). */
+  .sidebar-item svg[type] { display: none !important; }
+</style>

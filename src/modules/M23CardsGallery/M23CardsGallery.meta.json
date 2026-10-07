@@ -39,6 +39,91 @@
       "title": "Device=Desktop, Type=Default, Leyenda=Yes"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y de móvil. En código se adapta por breakpoint a 960 px; en móvil se ven dos tarjetas a la vez.",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Visor"
+        },
+        {
+          "value": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Vista del módulo: carrusel con o sin etiquetas, o el visor a pantalla completa.",
+      "options": [
+        {
+          "value": "Default",
+          "description": "Visor a pantalla completa que se abre al pulsar una tarjeta.",
+          "story": "Visor"
+        },
+        {
+          "value": "Carrousel",
+          "description": "Carrusel con etiquetas; valor por defecto.",
+          "story": "Carrousel"
+        },
+        {
+          "value": "Carrousel - No text",
+          "description": "Carrusel sin etiquetas.",
+          "story": "CarrouselSinTexto"
+        }
+      ]
+    },
+    {
+      "name": "Leyenda",
+      "description": "Muestra u oculta la etiqueta de cada imagen. No es una prop: va ligado a Type (Carrousel - No text equivale a Leyenda=No).",
+      "options": [
+        {
+          "value": "Yes",
+          "story": "Visor"
+        },
+        {
+          "value": "No",
+          "story": "CarrouselSinTexto"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para mostrar imágenes de redes sociales en carrusel con enlace a la cuenta.",
+    "do": [
+      "Etiqueta cada imagen con el @usuario de la publicación.",
+      "Rellena `alt` y leyenda: alimentan también el visor."
+    ],
+    "dont": [
+      "No lo uses para productos: usa `M27-Cards-Categories` o `M24-Cards-Productcarousel`.",
+      "No desactives el visor si las imágenes necesitan verse en grande."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -79,13 +164,13 @@
       "name": "eyebrow / linkText / href",
       "description": "Cabecera.",
       "default": "La dehesa en imágenes / Ver todos",
-      "control": "text"
+      "control": false
     },
     {
       "name": "followLabel / account / accountHref",
       "description": "Enlace a la cuenta.",
       "default": "SÍGUENOS / @JAMONJOSELITO",
-      "control": "text"
+      "control": false
     },
     {
       "name": "openOnClick",
@@ -174,7 +259,11 @@
     "7032b9e7ee4c4fa3bf8122ebb622cf01c12a8129"
   ],
   "placeholders": [
-    "Leyenda del visor de relleno ('EGESTAS NULLA TORTOT PULVINAR')."
+    "Leyenda del visor de relleno ('EGESTAS NULLA TORTOT PULVINAR').",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: paddings 64/112/132/40/88 y gaps 16/131/252 sin variable → FX-11/FX-15/FX-16/FX-9/FX-13/FX-4; entre imágenes del visor 2 columnas.",

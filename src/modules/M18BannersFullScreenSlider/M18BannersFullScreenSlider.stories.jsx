@@ -1,11 +1,14 @@
 import M18BannersFullScreenSlider, { KINDS } from './M18BannersFullScreenSlider';
 
+import meta from './M18BannersFullScreenSlider.meta.json';
+import { argTypesFromMeta } from '@/docs/DocKit';
+
 export default {
   title: 'Modules/M18-Banners-Full Screen Slider',
   component: M18BannersFullScreenSlider,
   parameters: { layout: 'fullscreen' },
   args: { kind: 'Producto' },
-  argTypes: { kind: { control: 'inline-radio', options: KINDS }, index: { control: 'number' } },
+  argTypes: argTypesFromMeta(meta, { kind: { control: 'inline-radio', options: KINDS }, index: { control: 'number' } }),
 };
 
 export const Default = {};

@@ -26,6 +26,58 @@
       "title": "Device=Mobile"
     }
   ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio (menú lateral con `menu-item-list`) y de móvil (menú en desplegable `M06-Navigation-Secondarymenu`). En código se adapta por breakpoint (960 px).",
+      "options": [
+        {
+          "value": "Desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "Mobile",
+          "story": "Mobile"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como estructura del área de cliente: menú de secciones de la cuenta y el contenido de la sección actual.",
+    "do": [
+      "Marca la sección actual en el menú (flecha y aria-current).",
+      "Mete el contenido real de cada sección en el slot (p. ej. `Order by Day` en Pedidos, `Add_to_list` en Lista de deseos).",
+      "Deja «Cerrar sesión» como último elemento del menú."
+    ],
+    "dont": [
+      "No dejes el título «Placeholder» ni el lorem ipsum de Figma: los aporta cada sección.",
+      "No lo uses fuera del área de cliente: para navegación secundaria general usa `M06-Navigation-Secondarymenu`.",
+      "No añadas muchas secciones: el menú debe leerse de un vistazo."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Breakpoints por rangos de la guía de layout (401 / 481 / 960 / 1280 / 1620 / 1920) y anchos sobre la rejilla de columnas elástica"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "menu",
@@ -51,7 +103,7 @@
       "name": "title / text",
       "description": "Contenido de ejemplo.",
       "default": "Placeholder / lorem ipsum",
-      "control": "text"
+      "control": false
     },
     {
       "name": "theme",
@@ -117,7 +169,11 @@
   ],
   "images": [],
   "placeholders": [
-    "Título 'Placeholder' y texto lorem ipsum copiados de Figma: el contenido real lo aporta cada sección."
+    "Título 'Placeholder' y texto lorem ipsum copiados de Figma: el contenido real lo aporta cada sección.",
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
   ],
   "notes": [
     "Figma: separación de 141 px sin variable → Cols gutter1col (141,3 a 1440)."

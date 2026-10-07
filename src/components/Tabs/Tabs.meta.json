@@ -26,6 +26,60 @@
       "title": "Type=Secondary"
     }
   ],
+  "axes": [
+    {
+      "name": "Type",
+      "prop": "type",
+      "description": "Estilo de las pestañas: cambia los colores de fondo, texto y trazo (tokens Button/Tab Primary o Secondary). En Secondary la pestaña seleccionada toma el color de acento.",
+      "story": "AxisType",
+      "options": [
+        {
+          "value": "Primary",
+          "description": "Pestañas con los tokens Tab Primary (`tab_primary`)."
+        },
+        {
+          "value": "Secondary",
+          "description": "Pestañas con los tokens Tab Secondary (`tab_secondary`); la seleccionada va en acento."
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para alternar entre vistas del mismo nivel dentro de una página, con una sola pestaña activa.",
+    "do": [
+      "Usa textos cortos de una o dos palabras (p. ej. Jamón, Paleta, Embutidos).",
+      "Usa el mismo tipo (`Primary` o `Secondary`) en todas las pestañas del grupo.",
+      "Cuenta con que, si no caben, la fila hace scroll horizontal."
+    ],
+    "dont": [
+      "No lo uses para navegar entre páginas distintas: usa la navegación o `menu-item-list`.",
+      "No lo uses para seleccionar varias opciones a la vez: es selección única.",
+      "No anides grupos de pestañas."
+    ]
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Documentación nueva: pestañas Resumen · Código · Cambios, variantes por eje, uso (Do / Don't) y Controls con tipos y descripciones"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "version": "",
+      "changes": [
+        "Tabs (tablist con teclado)"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "version": "",
+      "changes": [
+        "Primera versión desde Figma"
+      ]
+    }
+  ],
   "props": [
     {
       "name": "type",
@@ -52,7 +106,7 @@
       "name": "value / defaultValue / onChange",
       "description": "Índice seleccionado.",
       "default": "0",
-      "control": "number"
+      "control": false
     },
     {
       "name": "showIcons",
@@ -100,7 +154,12 @@
     "tab_secondary"
   ],
   "images": [],
-  "placeholders": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude a partir del meta y del código; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: el máster tiene dos slots (Slot, Slot 2); en código basta una lista."
   ],
