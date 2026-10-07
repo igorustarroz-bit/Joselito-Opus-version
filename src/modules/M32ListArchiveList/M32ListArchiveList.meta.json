@@ -1,0 +1,139 @@
+{
+  "name": "M32ListArchiveList",
+  "kind": "module",
+  "title": "M32-List-ArchiveList",
+  "figma": {
+    "nodeId": "59895:46608",
+    "name": "M32-List-ArchiveList",
+    "fp": "6814a952"
+  },
+  "description": "Archivo de colecciones pasadas: lista de nombres grandes; el elemento activo se resalta y muestra sus fotos a los lados.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Property 1": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Property 1=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Property 1=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "heading",
+      "description": "Antetítulo (Title sin título ni enlace).",
+      "default": "Colecciones pasadas",
+      "control": "text"
+    },
+    {
+      "name": "items",
+      "description": "Entradas (label, title, href e images opcional); la etiqueta alterna izquierda/derecha.",
+      "default": "11 colecciones",
+      "control": "object"
+    },
+    {
+      "name": "images",
+      "description": "Dos fotos (src y alt) por defecto si la entrada activa no trae las suyas.",
+      "default": "2 fotos de Ara Malikian",
+      "control": "object"
+    },
+    {
+      "name": "initialActive",
+      "description": "Índice activo inicial.",
+      "default": "5",
+      "control": "number"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "light-white",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-3",
+        "usage": "nombres inactivos (escritorio)"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "activo"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "separadores"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-10",
+        "usage": "padding vertical"
+      },
+      {
+        "token": "--layout-spacers-responsive-15",
+        "usage": "gap título-lista (móvil)"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "gap de la lista"
+      },
+      {
+        "token": "--layout-cols-size-10cols / 3cols",
+        "usage": "ancho lista / fotos"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Title (antetítulo)",
+    "Lista de Block Archive List",
+    "Dos fotos 3:4 (solo escritorio)"
+  ],
+  "behavior": [
+    "Al pasar el ratón o enfocar una entrada se vuelve activa y, si trae images, se muestran sus fotos.",
+    "Por debajo de 1024 px la lista se apila con separadores y las fotos se ocultan."
+  ],
+  "content": [
+    {
+      "field": "Entradas",
+      "notes": "Año/colección y nombre del artista o edición."
+    }
+  ],
+  "a11y": [
+    "Lista ul con enlaces; las fotos son decorativas (alt vacío por defecto)."
+  ],
+  "related": [
+    "M20-List",
+    "M31-Navigation-PreviousNext"
+  ],
+  "images": [
+    "bc2b8c80c74d7128d49f51d405aa7fadf680dd05",
+    "7cdd4de80df7207cd31c84eebe7748c3382afe8a"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: variante de escritorio sin autolayout (posiciones absolutas); en código, rejilla superpuesta con fotos en márgenes FX-16/FX-14.",
+    "Figma: gap 12 sin variable → FX-3.",
+    "Figma: la propiedad se llama 'Property 1' en vez de 'Device'.",
+    "Figma: en móvil las etiquetas dicen 'Collection 2020' y en escritorio 'Collection 2008'.",
+    "El bloque cambia a fila desde 768; el módulo fuerza la pila hasta 1024."
+  ],
+  "codePath": "src/modules/M32ListArchiveList/M32ListArchiveList.jsx"
+}

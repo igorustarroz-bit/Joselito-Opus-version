@@ -418,5 +418,10 @@
     "name": "M31NavigationPreviousNext",
     "path": "src/modules/M31NavigationPreviousNext/M31NavigationPreviousNext.jsx",
     "fp": "68f664e8"
+  },
+  "59895:46608": {
+    "name": "M32ListArchiveList",
+    "path": "src/modules/M32ListArchiveList/M32ListArchiveList.jsx",
+    "fp": "6814a952"
   }
 }

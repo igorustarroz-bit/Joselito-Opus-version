@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 105/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 106/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -132,4 +132,4 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M29-User-Profile `63559:53572` — 2 variantes · usa: M06-Navigation-Secondarymenu, menu-item-list <!-- k:module:m29-user-profile -->
 - [x] M30-Hero-Joselito-Lab `63928:325885` — 2 variantes · 12 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton · autolayout 0/2 → análisis de geometría <!-- k:module:m30-hero-joselito-lab -->
 - [x] M31-Navigation-PreviousNext `58464:36878` — 2 variantes · usa: Button-Icon <!-- k:module:m31-navigation-previous-next -->
-- [ ] M32-List-ArchiveList `59895:46608` — 2 variantes · 2 img · usa: Aspect Ratio, Block Archive List, Button, Title · autolayout 1/2 → análisis de geometría <!-- k:module:m32-list-archive-list -->
+- [x] M32-List-ArchiveList `59895:46608` — 2 variantes · 2 img · usa: Aspect Ratio, Block Archive List, Button, Title · autolayout 1/2 → análisis de geometría <!-- k:module:m32-list-archive-list -->

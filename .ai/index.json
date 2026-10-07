@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:11:40.734Z",
+  "generatedAt": "2026-10-07T12:14:04.001Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1884,7 +1884,7 @@
       "builtFp": "bcd49f76"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M32-List-ArchiveList",
@@ -1900,7 +1900,8 @@
       ],
       "images": 2,
       "autolayout": "1/2",
-      "key": "module:m32-list-archive-list"
+      "key": "module:m32-list-archive-list",
+      "builtFp": "4fa4c859"
     }
   ],
   "removed": [],

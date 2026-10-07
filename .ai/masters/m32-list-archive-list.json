@@ -1,0 +1,43 @@
+{
+ "id": "59895:46608",
+ "name": "M32-List-ArchiveList",
+ "type": "COMPONENT_SET",
+ "fp": "6814a952",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Property 1": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Property 1=Mobile"
+  },
+  {
+   "name": "Property 1=Desktop"
+  }
+ ],
+ "spec": "Desktop 1440\u00d71106 sin autolayout: Title (sin t\u00edtulo ni enlace) 12 cols arriba a la izquierda; lista de 11 Block Archive List (Left/Right alternos, gap 12) de 10 cols centrada; dos Aspect Ratio 3:4 de 3 cols (derecha arriba, izquierda abajo) con fotos de Ara Malikian (activo). Mobile 390: AL vertical pad resp-10/wrapper, gap resp-15; bloques m\u00f3viles con separador.",
+ "deps": [
+  "Title",
+  "Block Archive List",
+  "Aspect Ratio"
+ ],
+ "images": [
+  "bc2b8c80c74d7128d49f51d405aa7fadf680dd05",
+  "7cdd4de80df7207cd31c84eebe7748c3382afe8a"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "Frame 2087332014 itemSpacing 12"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "Desktop compuesto a mano"
+   }
+  ]
+ }
+}
