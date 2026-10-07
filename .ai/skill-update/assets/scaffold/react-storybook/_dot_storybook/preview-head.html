@@ -1,0 +1,23 @@
+<!-- Inter para las páginas de documentación (DocKit). Las stories usan las fuentes del proyecto. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+<style>
+  /* Página de documentación (contenedor de Storybook, .sbdocs-wrapper): más aire alrededor */
+  .sbdocs.sbdocs-wrapper { padding: 6rem 4rem; }
+  /* Titulares de TODAS las páginas de documentación (MDX: Welcome, Tokens…) iguales que los de DocKit:
+     Inter light, line-height 1.5; h1 32 → 46 px, h2 22 → 26 px, h3 16 → 20 px desde 960 px; margen inferior 24/16 px. */
+  /* (Storybook 10 no pone clases .sbdocs-hN en los títulos del MDX: se seleccionan por etiqueta, fuera de DocKit) */
+  .sbdocs.sbdocs-wrapper :is(h1, h2, h3, h4):not(.hzd *) {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-weight: 300; line-height: 1.5; letter-spacing: -.01em; border: 0; color: #162d3d;
+  }
+  .sbdocs.sbdocs-wrapper h1:not(.hzd *) { font-size: 32px; margin: 0 0 24px; }
+  .sbdocs.sbdocs-wrapper h2:not(.hzd *) { font-size: 22px; margin: 48px 0 24px; padding: 0; }
+  .sbdocs.sbdocs-wrapper h3:not(.hzd *) { font-size: 16px; margin: 32px 0 16px; }
+  .sbdocs.sbdocs-wrapper h4:not(.hzd *) { font-size: 16px; margin: 24px 0 16px; }
+  @media (min-width: 960px) {
+    .sbdocs.sbdocs-wrapper h1:not(.hzd *) { font-size: 46px; }
+    .sbdocs.sbdocs-wrapper h2:not(.hzd *) { font-size: 26px; }
+    .sbdocs.sbdocs-wrapper h3:not(.hzd *) { font-size: 20px; }
+  }
+</style>

@@ -1,0 +1,20 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+import { SizeTokens } from './TokenDocs';
+
+<Meta title="Foundations/Espaciados y radios" />
+
+# Espaciados y radios
+
+Generados desde las variables y estilos de Figma con `npm run tokens`. No se editan a mano. Usa el selector de **viewport** para ver cómo cambian por breakpoint.
+
+## Espaciados
+
+<Unstyled>
+<SizeTokens match={/^(?!.*letter).*(spac|gap|wrapper|gutter|padding|margin)/} />
+</Unstyled>
+
+## Radios
+
+<Unstyled>
+<SizeTokens match={/corner|radius/} kind="radius" />
+</Unstyled>
