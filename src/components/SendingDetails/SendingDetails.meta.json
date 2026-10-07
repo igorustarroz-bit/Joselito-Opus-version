@@ -1,0 +1,105 @@
+{
+  "name": "SendingDetails",
+  "kind": "component",
+  "title": "Sending Details",
+  "figma": {
+    "nodeId": "63609:144166",
+    "name": "Sending Details",
+    "fp": "c0a0e5f9"
+  },
+  "description": "Resumen de envío del pedido: título y bloques de dirección de envío, facturación, pago y fecha en dos columnas (una en móvil).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título (Title/01).",
+      "default": "\"Detalles del envío\"",
+      "control": "text"
+    },
+    {
+      "name": "blocks",
+      "figma": "Slot",
+      "description": "Props de cada Block Address (o hijos propios).",
+      "default": "4 bloques del máster",
+      "control": "object"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "título"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "título–bloques (24 px sin variable)"
+      }
+    ],
+    "typography": [
+      "ts-title-01"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Título h2",
+    "Rejilla de Block Address"
+  ],
+  "behavior": [
+    "Container query: 2 columnas desde 600 px de ancho; 1 por debajo."
+  ],
+  "content": [],
+  "a11y": [
+    "Título como encabezado h2."
+  ],
+  "related": [
+    "Block Address",
+    "Order Summary"
+  ],
+  "images": [
+    {
+      "hash": "e526e4023728c4640f86b641b12e882159a35883",
+      "usage": "logo Visa"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: los bloques de pago y fecha repiten el título \"Dirección de facturación\" (parece un error de contenido; debería ser \"Método de pago\" y \"Fecha de entrega\"). Avisar a diseño.",
+    "Figma: gap 24 px sin variable → FX-6."
+  ],
+  "codePath": "src/components/SendingDetails/SendingDetails.jsx"
+}

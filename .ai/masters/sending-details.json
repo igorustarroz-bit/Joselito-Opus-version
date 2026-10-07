@@ -1,0 +1,27 @@
+{
+ "id": "63609:144166",
+ "name": "Sending Details",
+ "type": "COMPONENT_SET",
+ "fp": "c0a0e5f9",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Slot": "SLOT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "spec": "V gap 24: Title/01 + Slot (2 filas de 2 Block Address en Desktop; apiladas en Mobile)",
+ "deps": [
+  "Block Address"
+ ],
+ "images": [
+  {
+   "hash": "e526e4023728c4640f86b641b12e882159a35883"
+  }
+ ],
+ "audit": {
+  "items": []
+ }
+}

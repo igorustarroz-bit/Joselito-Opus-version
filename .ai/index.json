@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:17:45.335Z",
+  "generatedAt": "2026-10-07T07:17:45.458Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1213,7 +1213,7 @@
       "builtFp": "e42e31ed"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Sending Details",
@@ -1227,7 +1227,8 @@
       ],
       "images": 2,
       "autolayout": "2/2",
-      "key": "component:sending-details"
+      "key": "component:sending-details",
+      "builtFp": "88acf727"
     },
     {
       "status": "done",

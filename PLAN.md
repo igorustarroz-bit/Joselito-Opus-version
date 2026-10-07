@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 69/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 70/107 hechos · 0 en curso · 0 bloqueados
 
 ## Fase 0 — Setup
 
@@ -96,7 +96,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Placeholder-Text `57961:792` <!-- k:component:placeholder-text -->
 - [x] row_2_input `57953:9134` — usa: Input <!-- k:component:row-2-input -->
 - [x] row_3_input `57953:9192` — usa: Input <!-- k:component:row-3-input -->
-- [ ] Sending Details `63609:144166` — 2 variantes · 2 img · usa: Block Address, Visa <!-- k:component:sending-details -->
+- [x] Sending Details `63609:144166` — 2 variantes · 2 img · usa: Block Address, Visa <!-- k:component:sending-details -->
 - [x] Tabs `57943:45783` — 2 variantes · usa: tab_primary, tab_secondary <!-- k:component:tabs -->
 
 ## Fase 4 — Módulos (100% ancho, grid de columnas del sistema, por breakpoint)

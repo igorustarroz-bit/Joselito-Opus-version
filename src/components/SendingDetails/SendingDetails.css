@@ -1,0 +1,5 @@
+/* Sending Details — Figma 63609:144166. Solo tokens. Dos columnas cuando el bloque mide 600 px o más (container query). */
+.sending-details { container-type: inline-size; display: flex; flex-direction: column; gap: var(--spacers-fixed-fx-6); width: 100%; }
+.sending-details__title { margin: 0; color: var(--texts-base); }
+.sending-details__grid { display: grid; grid-template-columns: 1fr; align-items: start; }
+@container (min-width: 600px) { .sending-details__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
