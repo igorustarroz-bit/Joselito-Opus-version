@@ -1,0 +1,39 @@
+{
+ "id": "58153:32094",
+ "name": "M12-Content-Introtext",
+ "type": "COMPONENT_SET",
+ "fp": "b5b93804",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "-> Button": "BOOLEAN",
+  "Show Boxes": "BOOLEAN",
+  "Show body": "BOOLEAN",
+  "Show title": "BOOLEAN",
+  "Label": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Desktop pad Resp/16/Wrapper-Default, columna centrada gap Resp/9: [8cols: etiqueta Body/03 Neutral 2 · gap Resp/6 · (título Title/03 + Body/03, 624, gap 24) gap 40 (2 cajas 422 pad 32, Body/04 Neutral 2 + Base gap 4, borde Neutral 3)] · Button-Action-Link L. Mobile pad fx-15, gaps 20/40/20, cajas apiladas pad 24/32.",
+ "deps": [
+  "Button-Action-Link"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gaps 40/24/4/20, paddings 32 y 24 sin variable"
+   }
+  ]
+ }
+}

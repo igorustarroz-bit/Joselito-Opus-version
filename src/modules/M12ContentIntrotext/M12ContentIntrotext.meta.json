@@ -1,0 +1,175 @@
+{
+  "name": "M12ContentIntrotext",
+  "kind": "module",
+  "title": "M12-Content-Introtext",
+  "figma": {
+    "nodeId": "58153:32094",
+    "name": "M12-Content-Introtext",
+    "fp": "b5b93804"
+  },
+  "description": "Introducción centrada de una sección: etiqueta, título, párrafo, cajas de datos (por ejemplo, email y teléfono) y enlace.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "showLabel",
+      "figma": "Label",
+      "description": "Muestra la etiqueta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showTitle",
+      "figma": "Show title",
+      "description": "Muestra el título.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBody",
+      "figma": "Show body",
+      "description": "Muestra el párrafo.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBoxes",
+      "figma": "Show Boxes",
+      "description": "Muestra las cajas de datos.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showButton",
+      "figma": "-> Button",
+      "description": "Muestra el enlace.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "label / title / body",
+      "description": "Textos.",
+      "default": "UN LEGADO ÚNICO / Seis generaciones…",
+      "control": "text"
+    },
+    {
+      "name": "boxes",
+      "description": "Cajas: label, value, href.",
+      "default": "Email, Teléfono",
+      "control": "object"
+    },
+    {
+      "name": "linkText / href",
+      "description": "Enlace final.",
+      "default": "DESCUBRE MÁS",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-neutral-2",
+        "usage": "etiqueta y etiquetas de caja"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "textos"
+      },
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "bordes"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-16 / fx-15",
+        "usage": "padding vertical escritorio / móvil"
+      },
+      {
+        "token": "--layout-spacers-responsive-9",
+        "usage": "contenido-enlace"
+      },
+      {
+        "token": "--layout-spacers-responsive-6",
+        "usage": "etiqueta-contenido"
+      },
+      {
+        "token": "--spacers-fixed-fx-9 / fx-6 / fx-5 / fx-1",
+        "usage": "separaciones internas"
+      },
+      {
+        "token": "--spacers-fixed-fx-7",
+        "usage": "padding de las cajas"
+      },
+      {
+        "token": "--layout-cols-size-8cols / 6cols",
+        "usage": "anchos"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "Etiqueta Body/03",
+    "Título Title/03 · párrafo Body/03",
+    "Cajas (Body/04)",
+    "Button-Action-Link L"
+  ],
+  "behavior": [
+    "Breakpoint a 1024 px: cajas en fila o apiladas."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Hasta tres líneas."
+    },
+    {
+      "field": "Cajas",
+      "notes": "Dos datos breves."
+    }
+  ],
+  "a11y": [
+    "Título como h2.",
+    "Los datos de contacto son enlaces mailto/tel."
+  ],
+  "related": [
+    "Button-Action-Link",
+    "M11-Content-Textonly"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: separaciones 40/24/20/4 y paddings 32/24 sin variable → FX-9/FX-6/FX-5/FX-1 y FX-7/FX-6.",
+    "Figma: el título repite la primera frase del párrafo.",
+    "Figma: los textos de las cajas tienen nombres de capa de otro proyecto ('Type of cuisine', 'Gourmet, with season…')."
+  ],
+  "codePath": "src/modules/M12ContentIntrotext/M12ContentIntrotext.jsx"
+}

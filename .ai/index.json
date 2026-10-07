@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T08:05:44.800Z",
+  "generatedAt": "2026-10-07T08:07:21.112Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1478,7 +1478,7 @@
       "builtFp": "008c4777"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M12-Content-Introtext",
@@ -1491,7 +1491,8 @@
       ],
       "images": 0,
       "autolayout": "2/2",
-      "key": "module:m12-content-introtext"
+      "key": "module:m12-content-introtext",
+      "builtFp": "7e809aac"
     },
     {
       "status": "todo",

@@ -318,5 +318,10 @@
     "name": "M11ContentTextonly",
     "path": "src/modules/M11ContentTextonly/M11ContentTextonly.jsx",
     "fp": "98588acc"
+  },
+  "58153:32094": {
+    "name": "M12ContentIntrotext",
+    "path": "src/modules/M12ContentIntrotext/M12ContentIntrotext.jsx",
+    "fp": "b5b93804"
   }
 }
