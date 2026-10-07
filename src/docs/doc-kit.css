@@ -26,7 +26,8 @@
 .hzd-header { border-bottom: 1px solid var(--hzd-line); margin-bottom: 32px; }
 .hzd-header__top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
 .hzd-header__kind { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--hzd-ink-2); margin-bottom: 4px; }
-.hzd-title { font-size: 32px; line-height: 1.2; font-weight: 700; margin: 0; letter-spacing: -.01em; }
+.hzd-title { font-size: 32px; line-height: 1.2; font-weight: 300; margin: 0; letter-spacing: -.01em; }
+@media (min-width: 960px) { .hzd-title { font-size: 46px; line-height: 1.15; } }
 .hzd-header__links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; padding-bottom: 6px; }
 .hzd-lead { color: var(--hzd-ink-2); font-size: 16px; max-width: 70ch; margin: 12px 0 20px; }
 .hzd-tabs { display: flex; gap: 28px; }
@@ -59,18 +60,25 @@
 .hzd-list li > .hzd-md > div, .hzd-list li > .hzd-md p { display: inline; margin: 0; }
 .hzd-list--options { list-style: none; padding-left: 0; }
 
-/* Demo: el lienzo de Storybook sin sombras, con borde fino */
+/* Demo (como Wix Design System): lienzo gris sin borde ni sombra y «Show code / Copy code» DEBAJO.
+   Componentes en el subtema base: fondo transparente sobre el gris y más aire. Con otro subtema o en
+   módulos (layout fullscreen) la story conserva su fondo. */
 .hzd-demo .sbdocs-preview, .hzd-demo .docs-story { margin: 0; }
+.hzd-demo .sbdocs-preview { box-shadow: none; border: 0; border-radius: 8px; background: var(--hzd-soft); overflow: hidden; }
+.hzd-demo .docs-story { background: transparent; }
+.hzd-demo .hz-story[data-layout="padded"][data-base-theme] { background: transparent !important; }
+.hzd-demo .sbdocs-preview-actions { margin-top: 4px !important; background: transparent; }
+.hzd-demo .sbdocs-preview-actions > div { padding-left: 0; }
+.hzd-demo .sbdocs-preview-actions button { background: transparent; color: var(--hzd-ink-2); }
+.hzd-demo .sbdocs-preview-actions button:hover { color: var(--hzd-accent); }
+/* El código desplegado («Show code») también fuera del lienzo */
+.hzd-demo .docblock-source { margin: 8px 0 0; border-radius: 8px; }
 /* La story NO hereda la tipografía ni los colores de la doc (Inter, 14 px, enlaces azules…): vuelve a la base
    del proyecto (la misma que en la vista de story: preflight de Tailwind + body de index.css). */
 .hzd-demo .docs-story {
   font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif); font-size: 16px; line-height: 1.5;
   font-weight: 400; letter-spacing: normal; color: var(--texts-base); -webkit-font-smoothing: antialiased;
-  /* Franja reservada para «Show code / Copy code» (Storybook la pinta 40 px por encima del borde inferior):
-     sin ella, en módulos a sangre (layout fullscreen) los botones quedan encima del módulo. */
-  padding-bottom: 40px;
 }
-.hzd-demo .sbdocs-preview { box-shadow: none; border: 1px solid var(--hzd-line); border-radius: 8px; }
 
 /* Do / Don't */
 .hzd-dodont { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }

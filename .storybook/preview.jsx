@@ -60,6 +60,7 @@ const preview = {
       return (
         <div style={{ containerType: 'inline-size' }}>
           <div data-grid-scope data-theme={effective || undefined} className="hz-story"
+            data-layout={fullscreen ? 'fullscreen' : 'padded'} data-base-theme={!effective || effective === meta.defaultTheme ? '' : undefined}
             style={{ background: 'var(--backgrounds-base)', color: 'var(--texts-base)', padding: fullscreen ? 0 : 16, minHeight: '100%' }}>
             <Story />
             {context.globals.grid === 'on' && (

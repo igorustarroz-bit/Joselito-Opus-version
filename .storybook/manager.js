@@ -31,7 +31,7 @@ function GridToggle() {
 
   return React.createElement(
     IconButton,
-    { key: TOOL_ID, active: on, title: on ? 'Ocultar columnas (Alt+G)' : 'Mostrar columnas (Alt+G)', 'aria-pressed': on, onClick: toggle },
+    { key: TOOL_ID, 'data-hz-grid': '', active: on, title: on ? 'Ocultar columnas (Alt+G)' : 'Mostrar columnas (Alt+G)', 'aria-pressed': on, onClick: toggle },
     React.createElement(GridIcon),
   );
 }
