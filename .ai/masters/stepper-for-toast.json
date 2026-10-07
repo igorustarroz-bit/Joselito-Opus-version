@@ -1,0 +1,29 @@
+{
+ "id": "59964:130709",
+ "name": "Stepper_for_toast",
+ "type": "COMPONENT_SET",
+ "fp": "de77f3a7",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Property 1": [
+   "In progress",
+   "Completed",
+   "Not selected"
+  ]
+ },
+ "spec": "1,5×24 fill Strokes-Icons/Neutral 3; relleno #211e1d (rotado −90): In progress 15 px, Completed 24 px",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "#211e1d"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "rectángulo rotado"
+   }
+  ]
+ }
+}

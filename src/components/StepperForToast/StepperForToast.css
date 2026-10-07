@@ -1,0 +1,18 @@
+/* Stepper_for_toast — Figma 59964:130709. Solo tokens. Barra de 1,5 × 24 px (FX-0 × 0,75 · FX-6). */
+.stepper-toast {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: calc(var(--spacers-fixed-fx-0) * 0.75);
+  height: var(--spacers-fixed-fx-6);
+  overflow: hidden;
+  background: var(--strokes-icons-neutral-3);
+}
+.stepper-toast__fill {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: calc(var(--st-progress, 0) * 100%);
+  background: var(--strokes-icons-base);
+  transition: height var(--st-duration, 0s) linear;
+}
+@media (prefers-reduced-motion: reduce) { .stepper-toast__fill { transition: none; } }

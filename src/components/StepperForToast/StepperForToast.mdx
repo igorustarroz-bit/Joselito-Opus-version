@@ -1,0 +1,87 @@
+{/* Generado por scripts/docs-generator.mjs desde StepperForToast.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './StepperForToast.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Stepper_for_toast
+
+## Introducción
+
+Barra vertical de progreso que acompaña al Toast (un paso por barra): vacía, en curso o completada.
+
+
+Figma: `Stepper_for_toast` (`59964:130709`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Barra de fondo
+- Relleno de arriba abajo
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- El relleno crece de arriba abajo; con --st-duration se anima (respeta prefers-reduced-motion).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Property 1=In progress
+
+<Canvas of={Stories.InProgress} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Property 1=Not selected
+
+<Canvas of={Stories.NotSelected} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Property 1=Completed
+
+<Canvas of={Stories.Completed} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--strokes-icons-neutral-3` | fondo de la barra |
+| color | `--strokes-icons-base` | relleno |
+| spacing | `calc(fx-0 × 0,75)` | ancho 1,5 px |
+| spacing | `--spacers-fixed-fx-6` | alto 24 px |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| status | `Not selected`, `In progress` o `Completed`. | In progress | inline-radio |
+| progress | Relleno de 0 a 1 en `In progress` (por defecto 15/24 como en Figma). Útil para animarlo. | 0.625 | range |
+
+## Accesibilidad
+
+- role=progressbar con aria-valuenow.
+
+## Componentes relacionados
+
+- Toast

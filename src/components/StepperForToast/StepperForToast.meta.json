@@ -1,0 +1,103 @@
+{
+  "name": "StepperForToast",
+  "kind": "component",
+  "title": "Stepper_for_toast",
+  "figma": {
+    "nodeId": "59964:130709",
+    "name": "Stepper_for_toast",
+    "fp": "de77f3a7"
+  },
+  "description": "Barra vertical de progreso que acompaña al Toast (un paso por barra): vacía, en curso o completada.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Property 1": [
+      "In progress",
+      "Completed",
+      "Not selected"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "InProgress",
+      "title": "Property 1=In progress"
+    },
+    {
+      "story": "NotSelected",
+      "title": "Property 1=Not selected"
+    },
+    {
+      "story": "Completed",
+      "title": "Property 1=Completed"
+    }
+  ],
+  "props": [
+    {
+      "name": "status",
+      "figma": "Property 1",
+      "description": "`Not selected`, `In progress` o `Completed`.",
+      "default": "In progress",
+      "control": "inline-radio"
+    },
+    {
+      "name": "progress",
+      "description": "Relleno de 0 a 1 en `In progress` (por defecto 15/24 como en Figma). Útil para animarlo.",
+      "default": "0.625",
+      "control": "range"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-3",
+        "usage": "fondo de la barra"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "relleno"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "calc(fx-0 × 0,75)",
+        "usage": "ancho 1,5 px"
+      },
+      {
+        "token": "--spacers-fixed-fx-6",
+        "usage": "alto 24 px"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Barra de fondo",
+    "Relleno de arriba abajo"
+  ],
+  "behavior": [
+    "El relleno crece de arriba abajo; con --st-duration se anima (respeta prefers-reduced-motion)."
+  ],
+  "content": [],
+  "a11y": [
+    "role=progressbar con aria-valuenow."
+  ],
+  "related": [
+    "Toast"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el relleno usa #211E1D sin variable → Strokes-Icons/Base. Avisar a diseño.",
+    "Figma: sin autolayout; el relleno es un rectángulo rotado −90°.",
+    "Figma: la propiedad se llama \"Property 1\" (sin nombre): conviene renombrarla a Status."
+  ],
+  "codePath": "src/components/StepperForToast/StepperForToast.jsx"
+}
