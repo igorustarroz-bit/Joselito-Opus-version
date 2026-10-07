@@ -408,5 +408,10 @@
     "name": "M29UserProfile",
     "path": "src/modules/M29UserProfile/M29UserProfile.jsx",
     "fp": "4c367882"
+  },
+  "63928:325885": {
+    "name": "M30HeroJoselitoLab",
+    "path": "src/modules/M30HeroJoselitoLab/M30HeroJoselitoLab.jsx",
+    "fp": "0237642c"
   }
 }

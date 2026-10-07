@@ -1,0 +1,48 @@
+{
+ "id": "63928:325885",
+ "name": "M30-Hero-Joselito-Lab",
+ "type": "COMPONENT_SET",
+ "fp": "0237642c",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Mobile",
+   "Desktop"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Desktop"
+  },
+  {
+   "name": "Device=Mobile"
+  }
+ ],
+ "spec": "Sin autolayout. Desktop 1440×800: retícula de cuadrados 420 (subdivididos a 210) con trazo; fotos en celdas (plato arriba izquierda, tarta arriba derecha, chef grande abajo derecha, chef pequeño abajo); 'Square 100' 148×148 #E23636 centrado (646,326) con el símbolo Joselito blanco 64; M01-Navigation encima. Mobile 390×800: cuadrados 277, sello 112 con símbolo 48.",
+ "deps": [
+  "Aspect Ratio",
+  "M01-Navigation"
+ ],
+ "images": [
+  "5df2a892a49b6cc6795c6b1af7f833bf31e3c6a9",
+  "c22e64dacd1afe065c97f91396c65c430e8af28b",
+  "ac8f992db815cb73779ab884d5e760303f1f9bf2",
+  "95fa3e687ad6979cd012883e23d2bb7e007ea2b5"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "Square 100 #E23636 y Rectangle 32/33 #030202 sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "Square 100 padding 32 y gap 8"
+   },
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "composición libre"
+   }
+  ]
+ }
+}

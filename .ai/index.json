@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:06:50.359Z",
+  "generatedAt": "2026-10-07T12:08:55.664Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1847,7 +1847,7 @@
       "builtFp": "ec913ba9"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M30-Hero-Joselito-Lab",
@@ -1863,7 +1863,8 @@
       ],
       "images": 12,
       "autolayout": "0/2",
-      "key": "module:m30-hero-joselito-lab"
+      "key": "module:m30-hero-joselito-lab",
+      "builtFp": "554e6275"
     },
     {
       "status": "todo",

@@ -1,0 +1,125 @@
+{
+  "name": "M30HeroJoselitoLab",
+  "kind": "module",
+  "title": "M30-Hero-Joselito-Lab",
+  "figma": {
+    "nodeId": "63928:325885",
+    "name": "M30-Hero-Joselito-Lab",
+    "fp": "0237642c"
+  },
+  "description": "Hero de Joselito Lab: retícula de líneas finas con fotos en algunas celdas y el sello de la marca en un cuadrado rojo en el centro.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Mobile",
+      "Desktop"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "Device=Desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "Device=Mobile"
+    }
+  ],
+  "props": [
+    {
+      "name": "tiles",
+      "description": "Fotos: image y area (dish, tart, chef, chef2).",
+      "default": "4 fotos",
+      "control": "object"
+    },
+    {
+      "name": "showNavigation",
+      "description": "Incluye la M01 (Grey) encima.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "homeHref / title",
+      "description": "Destino y nombre del sello.",
+      "default": "/ · Joselito Lab",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema.",
+      "default": "light-white",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-4",
+        "usage": "líneas de la retícula"
+      },
+      {
+        "token": "--backgrounds-base (dark-red-primary)",
+        "usage": "cuadrado del sello"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "símbolo"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-17 / fx-15",
+        "usage": "tamaño del sello (escritorio / móvil)"
+      },
+      {
+        "token": "--spacers-fixed-fx-11 / fx-10",
+        "usage": "tamaño del símbolo"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-red-primary"
+    ],
+    "notes": "El sello usa Dark - Red - Primary."
+  },
+  "anatomy": [
+    "Retícula de celdas",
+    "Fotos",
+    "Sello (brand-logo-mark)",
+    "M01-Navigation Grey"
+  ],
+  "behavior": [
+    "Celdas cuadradas: 7 columnas en escritorio y 3 en móvil; la composición se reinterpreta sobre esa retícula."
+  ],
+  "content": [
+    {
+      "field": "Fotos",
+      "notes": "4 imágenes (platos y cocineros)."
+    }
+  ],
+  "a11y": [
+    "La retícula es decorativa (aria-hidden); el sello es un enlace con nombre."
+  ],
+  "related": [
+    "M01-Navigation",
+    "M13-Hero-Homepagehero"
+  ],
+  "images": [
+    "5df2a892a49b6cc6795c6b1af7f833bf31e3c6a9",
+    "c22e64dacd1afe065c97f91396c65c430e8af28b",
+    "ac8f992db815cb73779ab884d5e760303f1f9bf2",
+    "95fa3e687ad6979cd012883e23d2bb7e007ea2b5"
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: composición sin autolayout con cuadrados de 420 px subdivididos; en código, retícula CSS de celdas cuadradas.",
+    "Figma: rojo #E23636 sin variable (= Primary/50) → subtema Dark - Red - Primary.",
+    "Figma: #030202 sin variable bajo una foto (no se usa).",
+    "Nuevo asset: brand-logo-mark.svg (símbolo exportado de Figma)."
+  ],
+  "codePath": "src/modules/M30HeroJoselitoLab/M30HeroJoselitoLab.jsx"
+}
