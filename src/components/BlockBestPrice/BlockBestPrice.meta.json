@@ -1,0 +1,102 @@
+{
+  "name": "BlockBestPrice",
+  "kind": "component",
+  "title": "Block best price",
+  "figma": {
+    "nodeId": "59966:4909",
+    "name": "Block best price",
+    "fp": "f6494a93"
+  },
+  "description": "Bloque informativo \"Mejor precio garantizado\" con un texto explicativo, enmarcado con un borde fino.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [],
+  "props": [
+    {
+      "name": "title",
+      "description": "Título (Labels/02).",
+      "default": "\"Mejor precio garantizado\"",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "description": "Texto (Body/03, Neutral 2).",
+      "default": "texto del máster",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--strokes-icons-neutral-4",
+        "usage": "borde"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "título"
+      },
+      {
+        "token": "--texts-neutral-2",
+        "usage": "texto"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-spacers-responsive-8",
+        "usage": "padding"
+      },
+      {
+        "token": "--spacers-fixed-fx-2",
+        "usage": "separación (8 px sin variable)"
+      }
+    ],
+    "typography": [
+      "ts-labels-02",
+      "ts-body-03"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Marco de 1 px",
+    "Título",
+    "Texto"
+  ],
+  "behavior": [
+    "Ancho del contenedor (428 px en Figma)."
+  ],
+  "content": [
+    {
+      "field": "Texto",
+      "notes": "Una o dos frases."
+    }
+  ],
+  "a11y": [
+    "Texto plano, sin interacción."
+  ],
+  "related": [
+    "M16-Hero-Productdetail"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el texto del máster está duplicado (\"…Vintage.Selección entre…\"): parece un error de contenido; se mantiene.",
+    "Figma: separaciones de 8 px sin variable → FX-2."
+  ],
+  "codePath": "src/components/BlockBestPrice/BlockBestPrice.jsx"
+}

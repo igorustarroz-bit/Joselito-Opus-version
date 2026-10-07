@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:06:33.156Z",
+  "generatedAt": "2026-10-07T07:06:33.274Z",
   "output": "react-storybook",
   "items": [
     {
@@ -818,7 +818,7 @@
       "builtFp": "10631c65"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Block best price",
@@ -829,7 +829,8 @@
       "deps": [],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:block-best-price"
+      "key": "component:block-best-price",
+      "builtFp": "a4ba402c"
     },
     {
       "status": "todo",

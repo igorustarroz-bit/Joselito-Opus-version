@@ -1,0 +1,19 @@
+{
+ "id": "59966:4909",
+ "name": "Block best price",
+ "type": "COMPONENT",
+ "fp": "f6494a93",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {},
+ "spec": "428×178 AL:V gap 8 pad Responsive/8, borde Neutral 4 1 px; 'Mejor precio garantizado' Labels/02 Base; texto Body/03 Neutral 2",
+ "deps": [],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "gap 8"
+   }
+  ]
+ }
+}

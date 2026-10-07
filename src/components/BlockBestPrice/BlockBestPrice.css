@@ -1,0 +1,12 @@
+/* Block best price — Figma 59966:4909. Solo tokens. */
+.block-best-price {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-2);
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--layout-spacers-responsive-8);
+  border: 1px solid var(--strokes-icons-neutral-4);
+}
+.block-best-price__title { margin: 0; color: var(--texts-base); }
+.block-best-price__text { margin: 0; color: var(--texts-neutral-2); }
