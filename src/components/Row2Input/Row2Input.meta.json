@@ -1,0 +1,78 @@
+{
+  "name": "Row2Input",
+  "kind": "component",
+  "title": "row_2_input",
+  "figma": {
+    "nodeId": "57953:9134",
+    "name": "row_2_input",
+    "fp": "30f84470"
+  },
+  "description": "Fila de 2 campos de formulario (Input Big sin mensaje) que se reparten el ancho; en móvil se apilan.",
+  "defaultStory": "Default",
+  "variantAxes": {},
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "NombreApellidos",
+      "title": "Ejemplo con etiquetas reales"
+    }
+  ],
+  "props": [
+    {
+      "name": "fields",
+      "description": "Props de cada Input (2).",
+      "default": "2 × Label",
+      "control": "object"
+    },
+    {
+      "name": "children",
+      "description": "Campos propios.",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4",
+        "usage": "separación"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "2 × Input"
+  ],
+  "behavior": [
+    "Columnas iguales desde 768 px; apilados por debajo."
+  ],
+  "content": [],
+  "a11y": [
+    "Cada Input con su etiqueta."
+  ],
+  "related": [
+    "Input",
+    "Form"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: no hay variante móvil; se apilan por debajo de 768 px (propuesta)."
+  ],
+  "codePath": "src/components/Row2Input/Row2Input.jsx"
+}

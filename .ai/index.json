@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:15:21.790Z",
+  "generatedAt": "2026-10-07T07:17:44.766Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1176,7 +1176,7 @@
       "key": "component:placeholder-text"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "row_2_input",
@@ -1189,7 +1189,8 @@
       ],
       "images": 0,
       "autolayout": "1/1",
-      "key": "component:row-2-input"
+      "key": "component:row-2-input",
+      "builtFp": "f04ada59"
     },
     {
       "status": "todo",

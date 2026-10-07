@@ -1,0 +1,6 @@
+/* row_2_input / row_3_input — Figma 57953:9134 / 57953:9192. Solo tokens. Por debajo de 768 px se apilan. */
+.row-inputs { display: grid; grid-template-columns: 1fr; gap: var(--spacers-fixed-fx-4); width: 100%; }
+@media (min-width: 768px) {
+  .row-inputs--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .row-inputs--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

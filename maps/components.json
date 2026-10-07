@@ -213,5 +213,35 @@
     "name": "InputCode",
     "path": "src/components/InputCode/InputCode.jsx",
     "fp": "7ce54e3c"
+  },
+  "57953:9134": {
+    "name": "Row2Input",
+    "path": "src/components/Row2Input/Row2Input.jsx",
+    "fp": "30f84470"
+  },
+  "57953:9192": {
+    "name": "Row3Input",
+    "path": "src/components/Row3Input/Row3Input.jsx",
+    "fp": "31c4f1aa"
+  },
+  "58786:13661": {
+    "name": "Overlay",
+    "path": "src/components/Overlay/Overlay.jsx",
+    "fp": "8b112fa7"
+  },
+  "57961:792": {
+    "name": "PlaceholderText",
+    "path": "src/components/PlaceholderText/PlaceholderText.jsx",
+    "fp": "a127a2a0"
+  },
+  "63609:148071": {
+    "name": "BlockRowAddress",
+    "path": "src/components/BlockRowAddress/BlockRowAddress.jsx",
+    "fp": "c821785f"
+  },
+  "63609:144166": {
+    "name": "SendingDetails",
+    "path": "src/components/SendingDetails/SendingDetails.jsx",
+    "fp": "c0a0e5f9"
   }
 }
