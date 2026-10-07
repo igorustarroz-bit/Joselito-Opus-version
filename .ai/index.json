@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T06:58:56.792Z",
+  "generatedAt": "2026-10-07T06:58:56.914Z",
   "output": "react-storybook",
   "items": [
     {
@@ -768,7 +768,7 @@
       "builtFp": "6cdcd095"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "Alert",
@@ -781,7 +781,8 @@
       ],
       "images": 0,
       "autolayout": "4/4",
-      "key": "component:alert"
+      "key": "component:alert",
+      "builtFp": "64811aec"
     },
     {
       "status": "todo",

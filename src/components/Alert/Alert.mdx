@@ -1,0 +1,107 @@
+{/* Generado por scripts/docs-generator.mjs desde Alert.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './Alert.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# Alert
+
+## Introducción
+
+Barra de aviso a ancho completo: mensaje con acción (suscripción) o confirmación del idioma con selector. Se adapta a su propio ancho: fila desde 768 px, apilada por debajo.
+
+
+Figma: `Alert` (`58786:10976`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Mensaje
+- Selector de idioma con CaretDown 12 px (Language)
+- Button-Action-Link S con aspecto Hover
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Responsive por container query: fila (space-between) desde 768 px de ancho; apilada por debajo.
+- El selector de idioma es un select nativo (accesible) con la apariencia de Figma.
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Default
+
+<Canvas of={Stories.DesktopDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=Language
+
+<Canvas of={Stories.DesktopLanguage} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Default
+
+<Canvas of={Stories.MobileDefault} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=Language
+
+<Canvas of={Stories.MobileLanguage} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--backgrounds-base` | fondo |
+| color | `--texts-neutral-3` | mensaje |
+| color | `--texts-base` | idioma |
+| color | `--strokes-icons-base` | caret |
+| spacing | `--spacers-fixed-fx-4 / fx-6 / fx-9` | padding (vertical / lateral móvil / lateral escritorio) |
+| spacing | `--spacers-fixed-fx-3` | separaciones en móvil |
+| typography | `ts-body-02` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `Default` (mensaje + SUBCRÍBETE) o `Language` (selector de idioma + CONFIRMAR). | Default | inline-radio |
+| text | Mensaje (Body/02, Neutral 3). Por defecto el del máster. | — | text |
+| buttonText / onAction | Texto y acción del enlace. | — | text |
+| showButton | Muestra el enlace de acción. | true | boolean |
+| showDropdown | Muestra el selector de idioma (Language). | true | boolean |
+| languages / language / onLanguageChange | Idiomas disponibles (lista de value y label), idioma actual y cambio. | es/en/fr |  |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- Región con aria-label "Aviso".
+- Select nativo con aria-label "Idioma".
+
+## Componentes relacionados
+
+- Button-Action-Link
+- M01-Navigation
+- M03-Navigation-Footer

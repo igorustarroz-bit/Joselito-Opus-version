@@ -1,0 +1,33 @@
+{
+ "id": "58786:10976",
+ "name": "Alert",
+ "type": "COMPONENT_SET",
+ "fp": "019882cf",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Button": "BOOLEAN",
+  "Show Dropdown": "BOOLEAN",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Default",
+   "Language"
+  ]
+ },
+ "spec": "Desktop 1440×56 pad 16/40 fila space-between; Mobile 390 pad 16/24 columna gap 16; texto Body/02 Neutral 3; BAL S Type=Hover; Language: 'English' Body/02 + CaretDown 12",
+ "deps": [
+  "Button-Action-Link",
+  "CaretDown"
+ ],
+ "images": [],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings y gaps sin variable"
+   }
+  ]
+ }
+}

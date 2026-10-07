@@ -1,0 +1,160 @@
+{
+  "name": "Alert",
+  "kind": "component",
+  "title": "Alert",
+  "figma": {
+    "nodeId": "58786:10976",
+    "name": "Alert",
+    "fp": "019882cf"
+  },
+  "description": "Barra de aviso a ancho completo: mensaje con acción (suscripción) o confirmación del idioma con selector. Se adapta a su propio ancho: fila desde 768 px, apilada por debajo.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Default",
+      "Language"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "DesktopDefault",
+      "title": "Device=Desktop, Type=Default"
+    },
+    {
+      "story": "DesktopLanguage",
+      "title": "Device=Desktop, Type=Language"
+    },
+    {
+      "story": "MobileDefault",
+      "title": "Device=Mobile, Type=Default"
+    },
+    {
+      "story": "MobileLanguage",
+      "title": "Device=Mobile, Type=Language"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Default` (mensaje + SUBCRÍBETE) o `Language` (selector de idioma + CONFIRMAR).",
+      "default": "Default",
+      "control": "inline-radio"
+    },
+    {
+      "name": "text",
+      "description": "Mensaje (Body/02, Neutral 3). Por defecto el del máster.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "buttonText / onAction",
+      "description": "Texto y acción del enlace.",
+      "default": "—",
+      "control": "text"
+    },
+    {
+      "name": "showButton",
+      "figma": "Show Button",
+      "description": "Muestra el enlace de acción.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showDropdown",
+      "figma": "Show Dropdown",
+      "description": "Muestra el selector de idioma (Language).",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "languages / language / onLanguageChange",
+      "description": "Idiomas disponibles (lista de value y label), idioma actual y cambio.",
+      "default": "es/en/fr",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo"
+      },
+      {
+        "token": "--texts-neutral-3",
+        "usage": "mensaje"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "idioma"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "caret"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-4 / fx-6 / fx-9",
+        "usage": "padding (vertical / lateral móvil / lateral escritorio)"
+      },
+      {
+        "token": "--spacers-fixed-fx-3",
+        "usage": "separaciones en móvil"
+      }
+    ],
+    "typography": [
+      "ts-body-02"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Mensaje",
+    "Selector de idioma con CaretDown 12 px (Language)",
+    "Button-Action-Link S con aspecto Hover"
+  ],
+  "behavior": [
+    "Responsive por container query: fila (space-between) desde 768 px de ancho; apilada por debajo.",
+    "El selector de idioma es un select nativo (accesible) con la apariencia de Figma."
+  ],
+  "content": [],
+  "a11y": [
+    "Región con aria-label \"Aviso\".",
+    "Select nativo con aria-label \"Idioma\"."
+  ],
+  "related": [
+    "Button-Action-Link",
+    "M01-Navigation",
+    "M03-Navigation-Footer"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: paddings 16/18/40/24, gaps 140/32/26/12/10 px sin variable → FX-4, FX-4+FX-0, FX-9, FX-6, space-between, FX-6, FX-3, FX-2+FX-0.",
+    "Figma: el enlace usa Type=Hover de Button-Action-Link de forma fija (gris) → state Hover.",
+    "Figma: el texto de la capa se llama \"© 2019. All rights r…\" (nombre heredado).",
+    "Figma: \"Confirmar el idioma seleccionada\" tiene una errata (seleccionado); se mantiene como en el máster. Avisar a contenido.",
+    "Figma: el borde superior de 1 px no tiene color (invisible)."
+  ],
+  "codePath": "src/components/Alert/Alert.jsx"
+}

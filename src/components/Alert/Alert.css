@@ -1,0 +1,38 @@
+/* Alert — Figma 58786:10976. Solo tokens. Móvil: columna, padding FX-4 / FX-6, separación FX-4.
+   Desde 768 px de ancho de la barra (container query): fila con el mensaje a la izquierda y la acción a la derecha, padding FX-4 / FX-9. */
+.alert { container-type: inline-size; width: 100%; background: var(--backgrounds-base); }
+.alert__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+  padding: var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-6);
+}
+.alert__main { display: flex; align-items: center; justify-content: space-between; gap: var(--spacers-fixed-fx-3); }
+.alert__text { margin: 0; color: var(--texts-neutral-3); }
+.alert__cta--desktop { display: none; }
+.alert--language .alert__main { justify-content: flex-start; }
+.alert__select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacers-fixed-fx-3);
+  color: var(--texts-base);
+  cursor: pointer;
+}
+.alert__select .icon { color: var(--strokes-icons-base); }
+.alert__select select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }
+.alert__select:has(select:focus-visible) { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
+@container (min-width: 768px) {
+  .alert__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacers-fixed-fx-4) var(--spacers-fixed-fx-9);
+  }
+  .alert--language .alert__inner { padding-block: calc(var(--spacers-fixed-fx-4) + var(--spacers-fixed-fx-0)); }
+  .alert__cta--inline { display: none; }
+  .alert__cta--desktop { display: inline-flex; }
+  .alert__main { gap: 0; }
+  .alert__select { gap: var(--spacers-fixed-fx-6); padding: calc(var(--spacers-fixed-fx-2) + var(--spacers-fixed-fx-0)) var(--spacers-fixed-fx-4); }
+}
