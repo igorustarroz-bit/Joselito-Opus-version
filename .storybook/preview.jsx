@@ -31,7 +31,9 @@ const preview = {
         const top = (e) => { const i = ORDER.indexOf(e.title.split('/')[0].trim().toLowerCase()); return i < 0 ? ORDER.length : i; };
         if (top(a) !== top(b)) return top(a) - top(b);
         if (a.title !== b.title) {
-          const tok = (e) => (/^foundations\/tokens/i.test(e.title) ? 0 : 1);
+          // Foundations: primero las páginas de tokens en este orden, luego el resto alfabético
+          const FOUND = ['colores', 'tipografía', 'espaciados y radios', 'efectos', 'breakpoints y rejilla'];
+          const tok = (e) => { const i = FOUND.indexOf((e.title.split('/')[1] || '').trim().toLowerCase()); return i < 0 ? FOUND.length : i; };
           return tok(a) - tok(b) || a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' });
         }
         const rank = (e) => (e.type === 'docs' ? 0 : e.name === 'Default' ? 1 : 2);

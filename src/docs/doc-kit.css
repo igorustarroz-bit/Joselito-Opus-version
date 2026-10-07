@@ -127,11 +127,12 @@
 /* Tokens de color (formato Wix: buscador + tablas Nombre · Valor · Vista) */
 .hzd-tok__search { width: 100%; max-width: 560px; font: inherit; font-size: 14px; padding: 10px 16px; border: 1px solid var(--hzd-line); border-radius: 999px; margin: 8px 0 32px; outline: none; }
 .hzd-tok__search:focus { border-color: var(--hzd-accent); }
-.hzd-tok__h2 { font-size: 22px; margin: 24px 0 8px; }
+.hzd-tok__h2 { font-size: 22px; margin: 48px 0 24px; }
 @media (min-width: 960px) { .hzd-tok__h2 { font-size: 26px; } }
 .hzd-tok__themes { margin: 8px 0 24px; border-bottom: 1px solid var(--hzd-line); flex-wrap: wrap; row-gap: 0; }
 .hzd-tok__group { margin: 0 0 32px; }
-.hzd-tok__group-title { font-size: 16px; font-weight: 600; line-height: 1.5; margin: 0 0 12px; }
+.hzd-tok__group-title { font-size: 16px; font-weight: 300; line-height: 1.5; margin: 0 0 16px; }
+@media (min-width: 960px) { .hzd-tok__group-title { font-size: 20px; } }
 .hzd-tok__group-title .hzd-muted { font-weight: 400; margin-left: 6px; }
 .hzd-tok__table .hzd-table td { vertical-align: middle; }
 .hzd-tok__name, .hzd-tok__alias { font-family: var(--hzd-mono); font-size: 12px; background: var(--hzd-soft); border-radius: 4px; padding: 3px 8px; color: var(--hzd-ink); word-break: break-all; }

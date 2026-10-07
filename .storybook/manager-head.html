@@ -11,4 +11,9 @@
   /* Botón «Columnas» justo a la izquierda de «Change viewport»: el viewport y todo lo que le sigue pasan detrás. */
   .sb-bar button[aria-label="Viewport size"], .sb-bar button[aria-label="Viewport size"] ~ * { order: 2; }
   .sb-bar button[aria-label="Viewport size"] ~ button[data-hz-grid] { order: 1; }
+  /* Sangrías de la barra lateral = Wix Design System: ítems desde x=14 (2 px de padding en el árbol);
+     el texto de hojas y de desplegables queda alineado (36 px) y los hijos de un componente a 54 px.
+     Las hojas no reservan hueco para el icono de tipo (que está oculto). */
+  #storybook-explorer-tree { padding-left: 2px; }
+  .sidebar-item a > div:has(> svg[type]:only-child) { display: none; }
 </style>
