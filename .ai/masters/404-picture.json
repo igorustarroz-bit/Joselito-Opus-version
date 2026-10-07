@@ -1,0 +1,42 @@
+{
+ "id": "63681:482695",
+ "name": "404_picture",
+ "type": "COMPONENT_SET",
+ "fp": "aba22f68",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "404",
+   "500",
+   "300"
+  ]
+ },
+ "spec": "Sin autolayout. Desktop 404/300 377×279: dígitos Title/08 @10/265,47 + AR 2:3 186 @100,0; 500 368×279: AR 1:1 187 @91,40. Mobile 280×221 escalado (dígitos sin estilo)",
+ "deps": [
+  "Aspect Ratio"
+ ],
+ "images": [
+  {
+   "hash": "f7803a0587a650072e6bf2c812fc25efe3f2d610"
+  },
+  {
+   "hash": "23cfef758b720c47c4ce748eb814e40af47887c1"
+  }
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "NO_AUTOLAYOUT",
+    "msg": "posiciones absolutas"
+   },
+   {
+    "code": "NO_TEXT_STYLE",
+    "msg": "cifras Mobile"
+   }
+  ]
+ }
+}

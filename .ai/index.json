@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:10:18.566Z",
+  "generatedAt": "2026-10-07T07:10:18.682Z",
   "output": "react-storybook",
   "items": [
     {
@@ -722,7 +722,7 @@
       "builtFp": "6807359c"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "components",
       "kind": "component",
       "name": "404_picture",
@@ -735,7 +735,8 @@
       ],
       "images": 6,
       "autolayout": "0/6",
-      "key": "component:404-picture"
+      "key": "component:404-picture",
+      "builtFp": "4c55729a"
     },
     {
       "status": "done",

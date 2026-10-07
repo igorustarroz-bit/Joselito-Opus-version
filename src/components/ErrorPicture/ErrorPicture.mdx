@@ -1,0 +1,108 @@
+{/* Generado por scripts/docs-generator.mjs desde ErrorPicture.meta.json. Editar el meta.json y regenerar. */}
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as Stories from './ErrorPicture.stories';
+
+<Meta of={Stories} name="Doc" />
+
+# 404_picture
+
+## Introducción
+
+Ilustración de las páginas de error: el código (404, 500, 300) en cifras gigantes con una foto superpuesta en el centro. Escala con el ancho de su contenedor.
+
+
+Figma: `404_picture` (`63681:482695`)
+
+## Demo
+
+<Canvas of={Stories.Default} />
+
+<Controls of={Stories.Default} />
+
+## Anatomía
+
+- Cifra izquierda
+- Foto 2:3 (1:1 en 500) superpuesta
+- Cifra derecha
+
+## Subtemas
+
+Subtema por defecto: `light-white`
+
+Subtemas soportados: `light-white`, `light-grey`, `dark-red-primary`, `dark-black-neutral`
+
+Hereda el subtema.
+
+## Comportamiento
+
+- Escala proporcionalmente con su contenedor (377 × 279 en escritorio, 280 × 221 en móvil).
+
+## Variantes y tamaños
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'flex-start' }}>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=404
+
+<Canvas of={Stories.Desktop404} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=500
+
+<Canvas of={Stories.Desktop500} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Desktop, Type=300
+
+<Canvas of={Stories.Desktop300} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=404
+
+<Canvas of={Stories.Mobile404} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=500
+
+<Canvas of={Stories.Mobile500} />
+
+  </div>
+  <div style={{ flex: '1 1 320px', minWidth: 0 }}>
+
+### Device=Mobile, Type=300
+
+<Canvas of={Stories.Mobile300} />
+
+  </div>
+</div>
+
+## Tokens
+
+| Nombre | Token | Uso |
+| --- | --- | --- |
+| color | `--texts-base` | cifras |
+| typography | `ts-title-08 (familia y peso; tamaño escalado)` |  |
+
+## Propiedades
+
+| Nombre | Descripción | Por defecto | Control |
+| --- | --- | --- | --- |
+| type | `404`, `500` o `300`. | 404 | inline-radio |
+| image / imageAlt | Foto central (por defecto la del máster). | — |  |
+| theme | Fija un subtema. Por defecto hereda. | — | text |
+
+## Accesibilidad
+
+- role=img con aria-label "Error 404".
+
+## Componentes relacionados
+
+- M10-Errors

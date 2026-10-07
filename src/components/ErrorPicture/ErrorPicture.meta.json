@@ -1,0 +1,124 @@
+{
+  "name": "ErrorPicture",
+  "kind": "component",
+  "title": "404_picture",
+  "figma": {
+    "nodeId": "63681:482695",
+    "name": "404_picture",
+    "fp": "aba22f68"
+  },
+  "description": "Ilustración de las páginas de error: el código (404, 500, 300) en cifras gigantes con una foto superpuesta en el centro. Escala con el ancho de su contenedor.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "404",
+      "500",
+      "300"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop404",
+      "title": "Device=Desktop, Type=404"
+    },
+    {
+      "story": "Desktop500",
+      "title": "Device=Desktop, Type=500"
+    },
+    {
+      "story": "Desktop300",
+      "title": "Device=Desktop, Type=300"
+    },
+    {
+      "story": "Mobile404",
+      "title": "Device=Mobile, Type=404"
+    },
+    {
+      "story": "Mobile500",
+      "title": "Device=Mobile, Type=500"
+    },
+    {
+      "story": "Mobile300",
+      "title": "Device=Mobile, Type=300"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`404`, `500` o `300`.",
+      "default": "404",
+      "control": "inline-radio"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Foto central (por defecto la del máster).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "cifras"
+      }
+    ],
+    "typography": [
+      "ts-title-08 (familia y peso; tamaño escalado)"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Cifra izquierda",
+    "Foto 2:3 (1:1 en 500) superpuesta",
+    "Cifra derecha"
+  ],
+  "behavior": [
+    "Escala proporcionalmente con su contenedor (377 × 279 en escritorio, 280 × 221 en móvil)."
+  ],
+  "content": [],
+  "a11y": [
+    "role=img con aria-label \"Error 404\"."
+  ],
+  "related": [
+    "M10-Errors"
+  ],
+  "images": [
+    {
+      "hash": "f7803a0587a650072e6bf2c812fc25efe3f2d610",
+      "usage": "foto 1:1 (500)"
+    },
+    {
+      "hash": "23cfef758b720c47c4ce748eb814e40af47887c1",
+      "usage": "foto 2:3 (404, 300)"
+    }
+  ],
+  "placeholders": [],
+  "notes": [
+    "Figma: sin autolayout; posiciones absolutas. En código se expresan en % del máster Desktop y la cifra en unidades de contenedor (48,8 cqw ≈ 184/377): el móvil es la misma composición escalada.",
+    "Figma: en Mobile las cifras no tienen estilo de texto (143/136 px sueltos). Avisar a diseño.",
+    "Figma: Type=300 no es un código de error HTTP habitual (¿301?). Revisar con diseño."
+  ],
+  "codePath": "src/components/ErrorPicture/ErrorPicture.jsx"
+}

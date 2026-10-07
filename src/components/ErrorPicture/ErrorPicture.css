@@ -1,0 +1,19 @@
+/* 404_picture — Figma 63681:482695. Solo tokens. Sin autolayout en Figma: posiciones en % del
+   máster Desktop (377 × 279) y cifras en unidades de contenedor (184 / 377 ≈ 48,8 cqw). */
+.error-picture {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 377 / 279;
+  color: var(--texts-base);
+}
+.error-picture__digit {
+  position: absolute;
+  top: 16.8%;
+  font-size: 48.8cqw;
+  line-height: 1;
+}
+.error-picture__digit--a { left: 2.7%; }
+.error-picture__digit--b { right: 2.7%; }
+.error-picture__img { position: absolute; top: 0; left: 26.5%; width: 49.3%; }
+.error-picture--square .error-picture__img { top: 14.3%; left: 24.7%; width: 50.8%; }
