@@ -343,5 +343,10 @@
     "name": "M16HeroProductdetail",
     "path": "src/modules/M16HeroProductdetail/M16HeroProductdetail.jsx",
     "fp": "1a3749fa"
+  },
+  "58182:4380": {
+    "name": "M17BannersSectionbanner",
+    "path": "src/modules/M17BannersSectionbanner/M17BannersSectionbanner.jsx",
+    "fp": "942e61cd"
   }
 }

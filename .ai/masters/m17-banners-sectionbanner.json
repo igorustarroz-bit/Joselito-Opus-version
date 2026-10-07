@@ -1,0 +1,79 @@
+{
+ "id": "58182:4380",
+ "name": "M17-Banners-Sectionbanner",
+ "type": "COMPONENT_SET",
+ "fp": "942e61cd",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Show Body": "BOOLEAN",
+  "Show Label": "BOOLEAN",
+  "Show Antetitulo": "BOOLEAN",
+  "Title 1": "TEXT",
+  "Title 2": "TEXT",
+  "Text": "TEXT",
+  "Subtitle": "TEXT",
+  "Text 2": "TEXT",
+  "Device": [
+   "Desktop",
+   "Mobile"
+  ],
+  "Type": [
+   "Borders",
+   "Full Screen",
+   "Animated - Product"
+  ],
+  "Status": [
+   "Default",
+   "Static",
+   "Animated"
+  ]
+ },
+ "variants": [
+  {
+   "name": "Device=Mobile, Type=Borders, Status=Default"
+  },
+  {
+   "name": "Device=Mobile, Type=Animated - Product, Status=Static"
+  },
+  {
+   "name": "Device=Mobile, Type=Animated - Product, Status=Animated"
+  },
+  {
+   "name": "Device=Mobile, Type=Full Screen, Status=Default"
+  },
+  {
+   "name": "Device=Desktop, Type=Borders, Status=Static"
+  },
+  {
+   "name": "Device=Desktop, Type=Full Screen, Status=Static"
+  },
+  {
+   "name": "Device=Desktop, Type=Animated - Product, Status=Animated"
+  },
+  {
+   "name": "Device=Desktop, Type=Animated - Product, Status=Static"
+  }
+ ],
+ "spec": "Borders desktop: pad Wrapper-Default, imagen 16:9 1280×720 pad 40 con card 384×640 (fill Base, pad 32/32/40/32, space-between: Labels/02 Neutral 2 · Title/02 · Body/03 Neutral 1 gap Resp/5; Button-Action-Link L). Full Screen: imagen + #00000026 + degradado, contenido 515 al pie (Labels/02, Title/04, Body/04 gap Resp/6; link gap 32). Animated - Product: Static = imagen enmarcada (pad 80) sin texto; Animated = a sangre con Title/04, Body/03, Tags XS gap 8, precio Body/03, link (gap Resp/9). Mobile: Borders apila tarjeta e imagen (pad 40/24, gap 40).",
+ "deps": [
+  "Button-Action-Link",
+  "Aspect Ratio",
+  "Tag"
+ ],
+ "images": [
+  "c1336c98989e9f8c951d700cb5c6fd61d3eaa14d",
+  "de6fed704c4d8bafdd86f740c752aea3cb47f3de"
+ ],
+ "audit": {
+  "items": [
+   {
+    "code": "HARD_COLOR",
+    "msg": "velos #00000026 / #00000033 / #0000004d sin variable"
+   },
+   {
+    "code": "HARD_SPACING",
+    "msg": "paddings 40/24/32/48 y gaps 40/32/48/150/8 sin variable"
+   }
+  ]
+ }
+}

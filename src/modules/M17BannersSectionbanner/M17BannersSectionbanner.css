@@ -1,0 +1,48 @@
+/* M17-Banners-Sectionbanner — Figma 58182:4380. Solo tokens. Escritorio desde 1024 px. */
+.m17-banner { box-sizing: border-box; width: 100%; background: var(--backgrounds-base); color: var(--texts-base); }
+.m17-banner p, .m17-banner h2 { margin: 0; }
+.m17-banner ul { margin: 0; padding: 0; list-style: none; }
+.m17-banner__title { font-weight: inherit; }
+.m17-banner__frame { position: relative; display: flex; flex-direction: column; overflow: hidden; color: var(--texts-base); }
+.m17-banner__media.aspect-ratio { position: absolute; inset: 0; height: 100%; }
+.m17-banner__titles { display: flex; flex-direction: column; gap: var(--layout-spacers-responsive-6); }
+.m17-banner__label { color: var(--texts-neutral-2); }
+.m17-banner__text { color: var(--texts-neutral-1); }
+.m17-banner__tags { display: flex; flex-wrap: wrap; gap: var(--spacers-fixed-fx-2); }
+/* Velo: Figma negro 15-30 % sin variable → Backgrounds/Overlay, con degradado inferior hasta el fondo */
+.m17-banner__shade { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 35%, var(--backgrounds-base) 100%), var(--backgrounds-overlay); }
+
+/* Borders */
+.m17-banner--borders { display: flex; flex-direction: column; padding: var(--spacers-fixed-fx-9) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-6); }
+.m17-banner--borders .m17-banner__frame { flex-direction: column-reverse; gap: var(--spacers-fixed-fx-9); overflow: visible; }
+.m17-banner--borders .m17-banner__media.aspect-ratio { position: relative; aspect-ratio: 3 / 4; height: auto; }
+.m17-banner__card { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacers-fixed-fx-9); background: var(--backgrounds-base); color: var(--texts-base); }
+.m17-banner--borders .m17-banner__label { color: var(--texts-neutral-2); }
+
+/* Full Screen y producto */
+.m17-banner--full-screen .m17-banner__frame, .m17-banner--animated-product .m17-banner__frame {
+  justify-content: flex-end;
+  min-height: 100dvh;
+  padding: var(--spacers-fixed-fx-7) var(--layout-grids-wrapper-default) var(--spacers-fixed-fx-9);
+}
+.m17-banner__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacers-fixed-fx-7); }
+.m17-banner__content--product { gap: var(--layout-spacers-responsive-9); }
+
+/* Producto: enmarcado (Static) → a sangre (Animated) */
+.m17-banner--animated-product { padding: var(--layout-grids-wrapper-default); transition: padding 0.6s ease; }
+.m17-banner--animated-product .m17-banner__frame { min-height: calc(100dvh - 2 * var(--layout-grids-wrapper-default)); }
+.m17-banner--animated-product .m17-banner__shade, .m17-banner--animated-product .m17-banner__content { opacity: 0; transition: opacity 0.6s ease; }
+.m17-banner--animated-product.is-animated { padding: 0; }
+.m17-banner--animated-product.is-animated .m17-banner__frame { min-height: 100dvh; }
+.m17-banner--animated-product.is-animated .m17-banner__shade, .m17-banner--animated-product.is-animated .m17-banner__content { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .m17-banner--animated-product, .m17-banner__shade, .m17-banner__content { transition: none !important; } }
+
+@media (min-width: 1024px) {
+  .m17-banner--borders { padding: var(--layout-grids-wrapper-default); }
+  .m17-banner--borders .m17-banner__frame { flex-direction: row; justify-content: flex-end; align-items: flex-end; padding: var(--spacers-fixed-fx-9); aspect-ratio: 16 / 9; overflow: hidden; }
+  .m17-banner--borders .m17-banner__media.aspect-ratio { position: absolute; aspect-ratio: auto; height: 100%; }
+  .m17-banner__card { position: relative; justify-content: space-between; width: var(--layout-cols-size-3cols); height: 100%; box-sizing: border-box; padding: var(--spacers-fixed-fx-7) var(--spacers-fixed-fx-7) var(--spacers-fixed-fx-9); }
+  .m17-banner__card .m17-banner__titles { gap: var(--layout-spacers-responsive-5); padding-right: var(--layout-spacers-responsive-3); }
+  .m17-banner--full-screen .m17-banner__frame, .m17-banner--animated-product .m17-banner__frame { padding: var(--layout-grids-wrapper-default); }
+  .m17-banner__content { width: var(--layout-cols-size-5cols); }
+}

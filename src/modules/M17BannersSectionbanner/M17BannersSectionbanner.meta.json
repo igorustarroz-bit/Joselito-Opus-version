@@ -1,0 +1,230 @@
+{
+  "name": "M17BannersSectionbanner",
+  "kind": "module",
+  "title": "M17-Banners-Sectionbanner",
+  "figma": {
+    "nodeId": "58182:4380",
+    "name": "M17-Banners-Sectionbanner",
+    "fp": "942e61cd"
+  },
+  "description": "Banner de sección con imagen grande: con márgenes y tarjeta superpuesta, a pantalla completa con texto al pie, o de producto que pasa de enmarcado a pantalla completa al animarse.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "Desktop",
+      "Mobile"
+    ],
+    "Type": [
+      "Borders",
+      "Full Screen",
+      "Animated - Product"
+    ],
+    "Status": [
+      "Default",
+      "Static",
+      "Animated"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Borders",
+      "title": "Device=Desktop, Type=Borders, Status=Static"
+    },
+    {
+      "story": "FullScreen",
+      "title": "Device=Desktop, Type=Full Screen, Status=Static"
+    },
+    {
+      "story": "ProductStatic",
+      "title": "Device=Desktop, Type=Animated - Product, Status=Static"
+    },
+    {
+      "story": "ProductAnimated",
+      "title": "Device=Desktop, Type=Animated - Product, Status=Animated"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Borders`, `Full Screen` o `Animated - Product`.",
+      "default": "Borders",
+      "control": "inline-radio"
+    },
+    {
+      "name": "status",
+      "figma": "Status",
+      "description": "Solo producto: `Static` (enmarcado) o `Animated` (a sangre con texto). Default en Figma = sin animación.",
+      "default": "—",
+      "control": "inline-radio"
+    },
+    {
+      "name": "animateOnView",
+      "description": "Producto: anima al entrar en pantalla (60 % visible).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "showLabel",
+      "figma": "Show Label",
+      "description": "Muestra la etiqueta.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showBody",
+      "figma": "Show Body",
+      "description": "Muestra el texto.",
+      "default": "true",
+      "control": "boolean"
+    },
+    {
+      "name": "showPretitle",
+      "figma": "Show Antetitulo",
+      "description": "Producto: muestra la etiqueta sobre el título.",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "title",
+      "figma": "Title 1",
+      "description": "Título (Borders y Full Screen).",
+      "default": "Lorem ipsum…",
+      "control": "text"
+    },
+    {
+      "name": "productTitle",
+      "figma": "Title 2",
+      "description": "Título del producto.",
+      "default": "Jamón Millésime",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "figma": "Text",
+      "description": "Texto (Borders y Full Screen).",
+      "default": "Lorem ipsum…",
+      "control": "text"
+    },
+    {
+      "name": "productText",
+      "figma": "Text 2",
+      "description": "Texto del producto.",
+      "default": "Lorem ipsum…",
+      "control": "text"
+    },
+    {
+      "name": "label",
+      "figma": "Subtitle",
+      "description": "Etiqueta.",
+      "default": "LOREM IPSUM",
+      "control": "text"
+    },
+    {
+      "name": "tags / price",
+      "description": "Producto: etiquetas y precio.",
+      "default": "100% NATURAL… / Desde 280€",
+      "control": "object"
+    },
+    {
+      "name": "linkText / href",
+      "description": "Enlace.",
+      "default": "DESCUBRE MÁS",
+      "control": "text"
+    },
+    {
+      "name": "image / imageAlt",
+      "description": "Imagen.",
+      "default": "según type",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema del medio (por defecto oscuro salvo Borders).",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo y tarjeta"
+      },
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "velo"
+      },
+      {
+        "token": "--texts-neutral-1 / 2",
+        "usage": "texto / etiqueta"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default",
+        "usage": "márgenes y marco"
+      },
+      {
+        "token": "--spacers-fixed-fx-7 / fx-9",
+        "usage": "paddings de la tarjeta y separaciones"
+      },
+      {
+        "token": "--layout-spacers-responsive-5 / 6 / 9",
+        "usage": "separaciones de títulos"
+      },
+      {
+        "token": "--layout-cols-size-3cols / 5cols",
+        "usage": "tarjeta / contenido"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "dark-black-neutral"
+    ],
+    "notes": "Full Screen y producto usan el modo oscuro sobre la imagen."
+  },
+  "anatomy": [
+    "Aspect Ratio (imagen)",
+    "Tarjeta o contenido: Labels/02 · Title/02 o /04 · Body/03 o /04 · Tag · Button-Action-Link"
+  ],
+  "behavior": [
+    "Producto: transición de 0,6 s (sin animación con reduced motion).",
+    "Breakpoint a 1024 px."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Hasta dos líneas."
+    }
+  ],
+  "a11y": [
+    "Título como h2.",
+    "El contenido oculto del producto estático lleva aria-hidden."
+  ],
+  "related": [
+    "Aspect Ratio",
+    "Tag",
+    "Button-Action-Link",
+    "M18-Banners-Full Screen Slider"
+  ],
+  "images": [
+    "c1336c98989e9f8c951d700cb5c6fd61d3eaa14d",
+    "de6fed704c4d8bafdd86f740c752aea3cb47f3de"
+  ],
+  "placeholders": [
+    "Textos de relleno (lorem ipsum) copiados de Figma."
+  ],
+  "notes": [
+    "Figma: velos negros al 15/20/30 % sin variable → Backgrounds/Overlay.",
+    "Figma: paddings 40/24/32/48 y gaps 40/32/48 sin variable → FX-9/FX-6/FX-7/FX-9.",
+    "Figma: la tarjeta (384 px) → 3 columnas.",
+    "Figma: Status Default/Static/Animated mezcla estados; en código solo el producto tiene status.",
+    "Figma: 'Descubre más' en minúsculas en algunas variantes."
+  ],
+  "codePath": "src/modules/M17BannersSectionbanner/M17BannersSectionbanner.jsx"
+}
