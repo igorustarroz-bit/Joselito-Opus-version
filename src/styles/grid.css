@@ -2,7 +2,7 @@
    (nombres configurables en hanzo.config.json → grid). Cambian solas por breakpoint. */
 .wrapper {
   width: 100%;
-  max-width: 1920px; /* token-audit-ignore */
+  max-width: none; /* Sin tope: por encima de 1920 la rejilla sigue estirándose (decisión de Igor, 7-oct) */
   margin-inline: auto;
   padding-inline: var(--layout-grids-wrapper-default);
   box-sizing: border-box;

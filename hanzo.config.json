@@ -28,8 +28,9 @@
   "grid": {
     "gutter": "--layout-grids-gutter",
     "wrapper": "--layout-grids-wrapper-default",
-    "maxWidth": "1920px",
-    "fluid": true
+    "maxWidth": "none",
+    "fluid": true,
+    "$maxWidth": "Sin tope: el layout se estira más allá de 1920 px (XXXL usa los valores del frame 1920 con columnas elásticas)."
   },
   "paths": {
     "tokens": "src/tokens",
