@@ -53,7 +53,7 @@ button.input__field { cursor: pointer; }
 .input:not(.is-floating) .input__control { position: absolute; width: 1px; height: 1px; opacity: 0; }
 .input__icon { flex: 0 0 auto; color: var(--in-icon); }
 .input__info { margin: 0; color: var(--in-msg); }
-.input__listbox { position: absolute; top: calc(var(--in-size) + var(--spacers-fixed-fx-2)); left: 0; z-index: 10; }
+.input__listbox { position: absolute; top: calc(var(--in-size) + var(--spacers-fixed-fx-2)); left: 0; z-index: 10; padding-inline: var(--spacers-fixed-fx-2); }
 .input__field:focus-visible { outline: 1px solid var(--strokes-icons-base); outline-offset: var(--spacers-fixed-fx-0); }
 
 .input.is-default {

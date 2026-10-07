@@ -49,7 +49,8 @@ export default function Input({
   const isDropdown = type === 'Dropdown';
   const isDisabled = disabled || state === 'Disabled';
   const forcedFloat = ['Focused', 'Filled', 'Error', 'Validated'].includes(state);
-  const floating = forcedFloat || focused || open || String(current ?? '') !== '';
+  const hasValue = String(current ?? '') !== '';
+  const floating = forcedFloat || hasValue || (!isDropdown && focused);
   const st = state ? state.toLowerCase() : isDisabled ? 'disabled' : error ? 'error' : validated ? 'validated'
     : focused || open ? 'focused' : String(current ?? '') !== '' ? 'filled' : 'default';
 
