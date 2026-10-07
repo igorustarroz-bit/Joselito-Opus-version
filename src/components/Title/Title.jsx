@@ -3,7 +3,7 @@ import './Title.css';
 
 /**
  * Cabecera de sección: antetítulo (Body/04) con enlace "Ver todos" opcional a la derecha y, debajo,
- * el título (Title/03). Ocupa todo el ancho del contenedor. `as` fija el nivel del título (h2 por defecto).
+ * el título (Title/03). Ocupa el ancho completo del contenedor. `as` fija el nivel del título (h2 por defecto).
  */
 export default function Title({
   eyebrow = 'Nuestra colección',

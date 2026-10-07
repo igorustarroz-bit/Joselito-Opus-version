@@ -1,0 +1,26 @@
+{
+ "id": "57943:46054",
+ "name": "accordion",
+ "type": "COMPONENT_SET",
+ "fp": "12337231",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Title": "TEXT",
+  "Content": "SLOT",
+  "Subtitle": "TEXT",
+  "Show Subtitle": "BOOLEAN",
+  "Open": [
+   "No",
+   "Yes"
+  ]
+ },
+ "spec": "AL:V gap fx-4 pad fx-4/0, borde sup. Neutral 3; cabecera gap fx-2: Title CTA-Link-Footer/01 Texts/Base + Plus/Minus 16; contenido Body/02 Texts/Neutral 1",
+ "deps": [
+  "Plus",
+  "Minus"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
