@@ -1,0 +1,108 @@
+{
+  "name": "Tabs",
+  "kind": "component",
+  "title": "Tabs",
+  "figma": {
+    "nodeId": "57943:45783",
+    "name": "Tabs",
+    "fp": "a83b2392"
+  },
+  "description": "Grupo de pestañas (Primary o Secondary) con selección única.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Type": [
+      "Primary",
+      "Secondary"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "TypePrimary",
+      "title": "Type=Primary"
+    },
+    {
+      "story": "TypeSecondary",
+      "title": "Type=Secondary"
+    }
+  ],
+  "props": [
+    {
+      "name": "type",
+      "figma": "Type",
+      "description": "`Primary` o `Secondary`.",
+      "default": "Primary",
+      "control": "inline-radio"
+    },
+    {
+      "name": "items",
+      "figma": "Slot",
+      "description": "Textos de las pestañas (o hijos propios).",
+      "default": "[\"item\",\"item\"]",
+      "control": "object"
+    },
+    {
+      "name": "children",
+      "figma": "Slot 2",
+      "description": "Pestañas propias (los dos slots de Figma se unifican en uno).",
+      "default": "—",
+      "control": false
+    },
+    {
+      "name": "value / defaultValue / onChange",
+      "description": "Índice seleccionado.",
+      "default": "0",
+      "control": "number"
+    },
+    {
+      "name": "showIcons",
+      "description": "Muestra los iconos de las pestañas (en el máster de Tabs están ocultos).",
+      "default": "false",
+      "control": "boolean"
+    },
+    {
+      "name": "label",
+      "description": "Nombre accesible del grupo.",
+      "default": "\"Pestañas\"",
+      "control": "text"
+    },
+    {
+      "name": "theme",
+      "description": "Fija un subtema. Por defecto hereda.",
+      "default": "—",
+      "control": "text"
+    }
+  ],
+  "tokens": {},
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey",
+      "dark-red-primary",
+      "dark-black-neutral"
+    ],
+    "notes": "Hereda el subtema."
+  },
+  "anatomy": [
+    "Fila de tab_primary o tab_secondary (slot)"
+  ],
+  "behavior": [
+    "Clic o flechas ← → cambian la pestaña activa.",
+    "Si no caben, la fila hace scroll horizontal."
+  ],
+  "content": [],
+  "a11y": [
+    "role=tablist; pestañas con aria-selected y roving tabindex."
+  ],
+  "related": [
+    "tab_primary",
+    "tab_secondary"
+  ],
+  "images": [],
+  "placeholders": [],
+  "notes": [
+    "Figma: el máster tiene dos slots (Slot, Slot 2); en código basta una lista."
+  ],
+  "codePath": "src/components/Tabs/Tabs.jsx"
+}

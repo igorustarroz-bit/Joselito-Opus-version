@@ -1,0 +1,24 @@
+{
+ "id": "57943:45783",
+ "name": "Tabs",
+ "type": "COMPONENT_SET",
+ "fp": "a83b2392",
+ "$note": "Digest compacto (.ai/tmp/spec.js).",
+ "props": {
+  "Slot": "SLOT",
+  "Slot 2": "SLOT",
+  "Type": [
+   "Primary",
+   "Secondary"
+  ]
+ },
+ "spec": "Slot AL:H gap 0 con tab_* (iconos ocultos; 1ª Selected, 2ª Hover)",
+ "deps": [
+  "tab_primary",
+  "tab_secondary"
+ ],
+ "images": [],
+ "audit": {
+  "items": []
+ }
+}
