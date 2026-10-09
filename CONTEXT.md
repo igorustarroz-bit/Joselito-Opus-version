@@ -82,7 +82,7 @@ Ver la skill (references/dod.md). Resumen: contrato `.meta.json` completo · tod
 - MCP Figma: ~22 llamadas.
 
 ## Sesión 2026-10-09 (2) — M38 revisado y M39 con gráfica
-- M38: alto mínimo 1200 px, fondo en parallax (±8 %), sin anclaje; el titular móvil se desliza mientras el módulo cruza la pantalla (decisión de Igor).
+- M38: alto mínimo 1200 px, foto de fondo fija en cover (position: fixed + clip-path; antes parallax), sin anclaje; el titular móvil se desliza mientras el módulo cruza la pantalla (decisión de Igor).
 - M39-Graph Right: primera gráfica del proyecto. Sistema de gráficas de la skill copiado a `src/components/Chart` (ChartSpec + D3 por defecto / ECharts; `hanzo.config.json → charts.renderer = d3`). Storybook: Components/Graph.
 - Perfil visual (chart-style.js): medidas de la plantilla (540 × 360, área 12/0/24/32) y papeles → tokens de Joselito: texto Texts/Base, ejes Texts/Neutral-1, rejilla Backgrounds/Neutral-2, línea base Strokes-Icons/Neutral-2, borde de barras y puntos Strokes-Icons/Base, relleno/halo Backgrounds/Base, hover Backgrounds/Accent-Base (rojo). Tooltip propuesto (Figma no lo diseña).
 - Datos de la gráfica PROVISIONALES (leídos de la captura). Pendiente: origen real de los datos.

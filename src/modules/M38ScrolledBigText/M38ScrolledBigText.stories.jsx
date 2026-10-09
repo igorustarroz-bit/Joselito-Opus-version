@@ -14,9 +14,9 @@ export default {
 };
 
 export const Default = {};
-/** Device=desktop (desde 960 px): haz scroll — el fondo va en parallax (mínimo 1200 px de alto). */
+/** Device=desktop (desde 960 px): haz scroll — la foto de fondo queda fija y el módulo pasa por encima (mínimo 1200 px). */
 export const Desktop = {};
 /** Device=mobile (ver con el viewport XS): el titular se desliza hacia la izquierda. */
 export const Mobile = {};
-/** Sin animación (como con prefers-reduced-motion): fondo quieto y titular móvil recortado. */
+/** Sin animación (como con prefers-reduced-motion): titular móvil recortado. */
 export const Static = { args: { scrub: false }, name: 'Sin animación' };

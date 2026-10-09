@@ -9,7 +9,7 @@
     "fileKey": "9pjwT8L6tbhQ05JjTFcaSP",
     "digest": ".ai/masters/m38-scrolled-big-text.json"
   },
-  "description": "Foto de fondo a sangre en parallax con velo, titular gigante y, al lado, párrafo y botón. Mide como mínimo 1200 px; si el titular no cabe (móvil) se desliza con el scroll hasta verse entero.",
+  "description": "Foto de fondo fija a pantalla completa (cover, no se mueve con el scroll) con velo, titular gigante y, al lado, párrafo y botón. Mide como mínimo 1200 px; si el titular no cabe (móvil) se desliza con el scroll hasta verse entero.",
   "defaultStory": "Default",
   "variantAxes": {
     "Device": [
@@ -85,6 +85,13 @@
       "date": "2026-10-09",
       "version": "",
       "changes": [
+        "Foto de fondo fija en cover (sustituye al parallax)"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "version": "",
+      "changes": [
         "Alto mínimo 1200 px y fondo en parallax",
         "Sin anclaje: el titular móvil se desliza mientras el módulo cruza la pantalla"
       ]
@@ -137,7 +144,7 @@
     },
     {
       "name": "scrub",
-      "description": "Activa el parallax del fondo y el deslizamiento del titular con el scroll.",
+      "description": "Activa el deslizamiento del titular con el scroll (móvil).",
       "default": true,
       "control": "boolean"
     },
@@ -189,9 +196,9 @@
     "Button Primary L con flecha"
   ],
   "behavior": [
-    "Decisión de Igor (9-oct, revisión): alto mínimo 1200 px y sin anclaje. Mientras el módulo cruza la pantalla, la foto de fondo va en parallax (±8 % de su alto, más lenta que el scroll) — GSAP ScrollTrigger con scrub.",
+    "Decisión de Igor (9-oct): alto mínimo 1200 px, sin anclaje y con la foto de fondo FIJA a la pantalla en cover: ocupa todo el fondo y no se mueve al hacer scroll; el módulo hace de ventana (position: fixed + clip-path, equivalente a background-attachment: fixed, que no funciona en iOS).",
     "Si el titular no cabe en ancho (móvil: 9 columnas en un frame de 6) se desliza hacia la izquierda mientras el módulo sube desde el borde inferior hasta el superior de la pantalla; cuando el módulo llega arriba se lee entero. En escritorio cabe y no se mueve.",
-    "Con prefers-reduced-motion o `scrub=false`: todo estático y el titular móvil recortado como en Figma.",
+    "Con prefers-reduced-motion o `scrub=false`: el titular móvil queda recortado como en Figma (la foto sigue fija: no es una animación).",
     "Escritorio desde 960 px: titular 1–8, columna 9 libre, párrafo y botón 10–12. Móvil: titular de 9 columnas, debajo párrafo (1–5) y botón."
   ],
   "content": [
@@ -244,7 +251,7 @@
         "width": 1440,
         "piece": "Foto",
         "role": "background",
-        "placement": "relleno del frame → capa a sangre detrás, object-fit: cover"
+        "placement": "foto fija a la pantalla en cover (el módulo hace de ventana)"
       },
       {
         "variant": "desktop",
@@ -265,7 +272,7 @@
         "width": 390,
         "piece": "Foto",
         "role": "background",
-        "placement": "a sangre detrás, object-fit: cover"
+        "placement": "foto fija a la pantalla en cover (el módulo hace de ventana)"
       },
       {
         "variant": "mobile",
