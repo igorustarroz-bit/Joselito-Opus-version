@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T08:34:04.047Z",
+  "generatedAt": "2026-10-09T08:48:58.024Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1769,7 +1769,7 @@
       "builtFp": "840730a4"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M37-narrative",
@@ -1783,7 +1783,8 @@
       ],
       "images": 2,
       "autolayout": "0/2",
-      "key": "module:m37-narrative"
+      "key": "module:m37-narrative",
+      "builtFp": "b880fe79"
     },
     {
       "status": "todo",

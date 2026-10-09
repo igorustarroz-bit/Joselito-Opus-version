@@ -428,5 +428,10 @@
     "name": "M36ContentDoblePhoto",
     "path": "src/modules/M36ContentDoblePhoto/M36ContentDoblePhoto.jsx",
     "fp": "36492da9"
+  },
+  "68927:7582": {
+    "name": "M37Narrative",
+    "path": "src/modules/M37Narrative/M37Narrative.jsx",
+    "fp": "1e62fc6b"
   }
 }

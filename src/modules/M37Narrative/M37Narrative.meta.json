@@ -1,0 +1,323 @@
+{
+  "name": "M37Narrative",
+  "kind": "module",
+  "title": "M37-narrative",
+  "figma": {
+    "nodeId": "68927:7582",
+    "name": "M37-narrative",
+    "fp": "1e62fc6b",
+    "fileKey": "9pjwT8L6tbhQ05JjTFcaSP"
+  },
+  "description": "Relato por pasos: título fijo, paginador 01–06, párrafo y botón «Siguiente». Cada paso cambia el texto y la foto vertical (2:3).",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Device": [
+      "desktop",
+      "mobile"
+    ],
+    "type": [
+      "with-image"
+    ]
+  },
+  "codeOnlyAxes": [],
+  "variants": [
+    {
+      "story": "Desktop",
+      "title": "type=with-image, Device=desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "type=with-image, Device=mobile"
+    }
+  ],
+  "axes": [
+    {
+      "name": "Device",
+      "description": "Versión de escritorio y versión móvil del máster. En código es un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "mobile",
+          "story": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "type",
+      "description": "El máster solo tiene `with-image`: no se expone como prop.",
+      "options": [
+        {
+          "value": "with-image",
+          "story": "Default"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para contar algo en pasos cortos (proceso, historia, hitos) con una foto por paso.",
+    "do": [
+      "Entre 3 y 6 pasos, cada uno con un párrafo corto y su propia foto vertical.",
+      "Mantén el título igual en todos los pasos: es el tema del relato."
+    ],
+    "dont": [
+      "No metas más de 6 pasos: el paginador está pensado para dos cifras cortas.",
+      "No lo uses para un solo bloque de texto: para eso está `M07-Content-Text+Image`."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "Proceso de elaboración",
+      "description": "Seis pasos de la crianza a la curación, con una foto en cada uno.",
+      "story": "Default"
+    },
+    {
+      "title": "Abrir en un paso concreto",
+      "description": "`initialStep` para enlazar a un paso.",
+      "story": "Step3"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-09",
+      "version": "",
+      "changes": [
+        "Primera versión (módulo sin autolayout en Figma, interpretado por columnas y captura)"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Título fijo del relato (Title/04, h2).",
+      "default": "Lorem ipsum dolor sit amet",
+      "control": "text"
+    },
+    {
+      "name": "steps",
+      "description": "Pasos: `[{ text, image, imageAlt }]`. El paginador muestra tantos números como pasos.",
+      "default": "6 pasos",
+      "control": false
+    },
+    {
+      "name": "initialStep",
+      "description": "Paso activo al cargar (0 = 01).",
+      "default": 0,
+      "control": "number"
+    },
+    {
+      "name": "buttonText",
+      "description": "Texto del botón que avanza al siguiente paso.",
+      "default": "Siguente",
+      "control": "text"
+    },
+    {
+      "name": "onStepChange",
+      "description": "Se llama con el índice del nuevo paso.",
+      "default": "",
+      "control": false
+    },
+    {
+      "name": "theme",
+      "description": "Fija el subtema (si no, hereda el de la página).",
+      "default": "",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo y fondo del número"
+      },
+      {
+        "token": "--texts-base",
+        "usage": "título y número en hover"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "párrafo y números"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "borde del número seleccionado y foco"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default / --layout-grids-gutter",
+        "usage": "márgenes y columnas"
+      },
+      {
+        "token": "--spacers-fixed-fx-11 / fx-15 / fx-10 / fx-13",
+        "usage": "paddings del módulo"
+      },
+      {
+        "token": "--spacers-fixed-fx-1 / fx-2 / fx-6 / fx-9 / fx-10 / fx-12",
+        "usage": "paginador y separaciones"
+      }
+    ],
+    "radius": [
+      "--layout-corners-s"
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Hereda el subtema de la página."
+  },
+  "anatomy": [
+    "Título Title/04",
+    "Paginador 01–06 (Body/02; el activo con borde)",
+    "Párrafo Body/02",
+    "Button Primary (L en escritorio, XS en móvil) con flecha",
+    "Aspect Ratio 2:3"
+  ],
+  "behavior": [
+    "Seis pasos (decisión de Igor, 9-oct): cada número es un paso con su propio texto y foto; el título se mantiene. «Siguiente» avanza y tras el último vuelve al 01; pulsar un número salta a ese paso.",
+    "Al cambiar de paso, texto y foto aparecen con un fundido (GSAP, 0,45 s); sin animación con prefers-reduced-motion.",
+    "Escritorio desde 960 px: rejilla de 12 columnas; título 1–6 arriba; paginador (1–2), texto (1–4) y botón abajo a la izquierda; foto 2:3 en 9–12 a toda la altura; 7–8 libres.",
+    "Móvil y tablet: título → paginador → texto → botón → foto a ancho completo (a sangre). Tablet (8 columnas) se infiere del móvil."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Una o dos líneas; común a todos los pasos."
+    },
+    {
+      "field": "Texto de cada paso",
+      "notes": "40–60 palabras."
+    },
+    {
+      "field": "Foto de cada paso",
+      "notes": "Vertical 2:3."
+    }
+  ],
+  "a11y": [
+    "Paginador como lista ordenada de botones con aria-label «Paso n de N» y aria-current=\"step\" en el activo.",
+    "El párrafo es una región aria-live=\"polite\": se anuncia al cambiar de paso.",
+    "Las fotos necesitan imageAlt si aportan información."
+  ],
+  "related": [
+    "Aspect Ratio",
+    "Button",
+    "M36-content doble photo"
+  ],
+  "layout": {
+    "type": "Columnas",
+    "grid": "12 columnas desde 960 px (rango L); 6 en XS/SM y 8 en M, apilado con la foto a sangre.",
+    "columns": [
+      {
+        "variant": "desktop",
+        "story": "Desktop",
+        "piece": "Título",
+        "selector": ".m37-narrative__title",
+        "columns": "1–6 (7–8 libres)"
+      },
+      {
+        "variant": "desktop",
+        "story": "Desktop",
+        "piece": "Texto",
+        "selector": ".m37-narrative__text",
+        "columns": "1–4"
+      },
+      {
+        "variant": "desktop",
+        "story": "Desktop",
+        "piece": "Foto 2:3",
+        "selector": ".m37-narrative__media",
+        "columns": "9–12 (7–8 libres)"
+      }
+    ],
+    "noColumns": [],
+    "pieces": [
+      {
+        "variant": "desktop",
+        "width": 1440,
+        "piece": "Paginador",
+        "role": "start",
+        "placement": "desde la columna 1, fit-content (mide ~2 columnas por casualidad: es de ancho propio)"
+      },
+      {
+        "variant": "desktop",
+        "width": 1440,
+        "piece": "Botón",
+        "role": "start",
+        "placement": "desde la columna 1, fit-content"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Paginador",
+        "role": "start",
+        "placement": "desde la columna 1, fit-content"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Botón",
+        "role": "start",
+        "placement": "desde la columna 1, fit-content"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Foto 2:3",
+        "role": "bleed",
+        "placement": "100 % a sangre al final del módulo"
+      }
+    ],
+    "order": {
+      "desktop (1440)": [
+        "Título",
+        "Paginador",
+        "Texto",
+        "Botón",
+        "Foto"
+      ],
+      "mobile (390)": [
+        "Título",
+        "Paginador",
+        "Texto",
+        "Botón",
+        "Foto"
+      ]
+    }
+  },
+  "images": [
+    "99ad72551c2bb43ead01d135e290d0a20dab5c35"
+  ],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude; pendiente de revisar con diseño"
+    },
+    {
+      "what": "Pasos 02–06 (texto y foto)",
+      "why": "el máster solo dibuja el paso 01: se repite su texto y se usan fotos ya exportadas del proyecto"
+    },
+    {
+      "what": "Título",
+      "why": "en el máster es lorem ipsum"
+    }
+  ],
+  "notes": [
+    "Figma: el frame no tiene autolayout; layout interpretado con layout-boxes + grid-columns + captura. grid-columns lo resolvió sin piezas en «ask».",
+    "grid-columns propuso un orden de lectura en escritorio con la foto primero (empieza más arriba); por la captura y por el móvil el orden es título → paginador → texto → botón → foto.",
+    "grid-columns midió el paginador de escritorio como columnas 1–2 (186 px ≈ 2 col por casualidad); layout-check lo detectó (no escala con la rejilla) → es de ancho propio (start). Mejora propuesta para la skill: grupos HUG de elementos repetidos → start, no columns.",
+    "Figma: colores sin variable — fondo #fff → Backgrounds/Base; título #000 → Texts/Base; párrafo y números #666 → Texts/Neutral-1; borde del activo #000 → Strokes-Icons/Base.",
+    "Figma: paginador con valores sueltos — radio 4 → Corners/S (6); padding 4 → FX-1; gap 16 entre números → FX-2 (8) con todos los números en la misma caja (en Figma solo el activo tiene padding y saltaría al cambiar).",
+    "Figma: separaciones sin variable — escritorio 112/64/56 → FX-15/FX-11/FX-10, paginador→texto 27 → FX-6, texto→botón 50 → FX-10, botón→borde 83 → FX-10 + FX-6; móvil 86/44/27/27/76 → FX-13/FX-9/FX-6/FX-6/FX-12.",
+    "Móvil: en Figma la foto 2:3 se sale 62 px por abajo y el frame la recorta; en código se muestra completa.",
+    "Botón: Primary L en escritorio y XS en móvil (dos instancias del máster); en código se alternan por breakpoint.",
+    "Errata en el máster: «Siguente» (Siguiente). Se replica como valor por defecto.",
+    "Nomenclatura: nombre en minúsculas («M37-narrative»)."
+  ],
+  "codePath": "src/modules/M37Narrative/M37Narrative.jsx"
+}

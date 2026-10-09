@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 94/96 hechos · 0 en curso · 0 bloqueados · ⚠ 1 cambiados en Figma
+**Progreso:** 95/96 hechos · 0 en curso · 0 bloqueados · ⚠ 1 cambiados en Figma
 
 ## Fase 0 — Setup
 
@@ -120,5 +120,5 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M31-Navigation-PreviousNext `58464:36878` — 2 variantes · usa: Button-Icon <!-- k:module:m31-navigation-previous-next -->
 - [x] M32-List-ArchiveList `59895:46608` — 2 variantes · 2 img · usa: Aspect Ratio, Block Archive List, Button, Title · autolayout 1/2 → análisis de geometría <!-- k:module:m32-list-archive-list -->
 - [x] M36-content doble photo `68927:7315` — 2 variantes · 4 img · usa: Aspect Ratio, Button-Action-Link · autolayout 0/2 → análisis de geometría <!-- k:module:m36-content-doble-photo -->
-- [ ] M37-narrative `68927:7582` — 2 variantes · 2 img · usa: Aspect Ratio, Button · autolayout 0/2 → análisis de geometría <!-- k:module:m37-narrative -->
+- [x] M37-narrative `68927:7582` — 2 variantes · 2 img · usa: Aspect Ratio, Button · autolayout 0/2 → análisis de geometría <!-- k:module:m37-narrative -->
 - [ ] M38-scrolled-big-text `68927:7670` — 2 variantes · 2 img · usa: Button, Overlay · autolayout 0/2 → análisis de geometría <!-- k:module:m38-scrolled-big-text -->
