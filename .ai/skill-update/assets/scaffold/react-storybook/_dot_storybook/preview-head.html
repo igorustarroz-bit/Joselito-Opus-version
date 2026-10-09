@@ -5,6 +5,8 @@
 <style>
   /* Página de documentación (contenedor de Storybook, .sbdocs-wrapper): más aire alrededor */
   .sbdocs.sbdocs-wrapper { padding: 6rem 4rem; }
+  /* Contenido de la doc a todo el ancho disponible (Storybook lo limita a 1000 px en .sbdocs-content) */
+  .sbdocs.sbdocs-content { max-width: none; }
   /* Titulares de TODAS las páginas de documentación (MDX: Welcome, Tokens…) iguales que los de DocKit:
      Inter light, line-height 1.5; h1 32 → 46 px, h2 22 → 26 px, h3 16 → 20 px desde 960 px; margen inferior 24/16 px. */
   /* (Storybook 10 no pone clases .sbdocs-hN en los títulos del MDX: se seleccionan por etiqueta, fuera de DocKit) */

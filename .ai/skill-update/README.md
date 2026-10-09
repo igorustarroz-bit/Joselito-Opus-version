@@ -33,7 +33,7 @@ Los únicos marcadores son `{{CLIENT}}` (Welcome.mdx; `theme.js` ya lo tenía). 
   si se pasa, el «Show code» lo serializa entero y la página Doc se cuelga (pasó en 15 elementos).
 
 ### Toda la documentación (`.storybook/preview-head.html`)
-- `.sbdocs.sbdocs-wrapper { padding: 6rem 4rem; }`
+- `.sbdocs.sbdocs-wrapper { padding: 6rem 4rem; }` y `.sbdocs.sbdocs-content { max-width: none; }` (contenido a todo el ancho)
 - Titulares de las páginas MDX (Welcome, Foundations…) iguales que DocKit: Inter 300, line-height 1.5,
   h1 32 → 46 px, h2 22 → 26 px, h3 16 → 20 px desde 960 px. Storybook 10 no pone `.sbdocs-hN`: se seleccionan
   por etiqueta con `:not(.hzd *)`.

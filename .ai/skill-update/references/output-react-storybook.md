@@ -64,7 +64,7 @@ maps/components.json · maps/images.json
   del icono de las hojas). No lo cambies por proyecto.
 - **Tipografía de Storybook: Inter** (interfaz y páginas de doc: `.storybook/theme.js` +
   `manager-head.html`/`preview-head.html` con Google Fonts, pesos 300–700). Las stories usan las fuentes del proyecto.
-- **Páginas de documentación** (todas, DocKit y MDX): contenedor `.sbdocs-wrapper` con `padding: 6rem 4rem`;
+- **Páginas de documentación** (todas, DocKit y MDX): contenedor `.sbdocs-wrapper` con `padding: 6rem 4rem` y `.sbdocs-content` sin `max-width` (todo el ancho);
   titulares en **Inter light (300) y line-height 1.5**: h1 32 → **46 px**, h2 22 → 26 px, h3 16 → 20 px desde
   960 px; margen inferior 24 px (h1/h2) y 16 px (h3/h4). DocKit lo trae en `doc-kit.css` y los MDX en
   `preview-head.html` (Storybook 10 no pone clases `.sbdocs-hN` en los títulos del MDX: se seleccionan por
