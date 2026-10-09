@@ -28,15 +28,28 @@ export default function M38ScrolledBigText({
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       const box = root.current; const t = titleRef.current;
-      // Titular: si no cabe (móvil: por la derecha), se desliza hasta verse entero mientras el módulo
-      // sube desde el borde inferior hasta el superior de la pantalla. Sin anclaje.
+      // Titular: si no cabe (móvil: por la derecha), se desliza hasta verse entero mientras el módulo sube. Sin anclaje.
       const overX = () => {
         const b = box.getBoundingClientRect(); const cs = getComputedStyle(box);
         return Math.max(0, t.offsetLeft + t.offsetWidth - (b.width - parseFloat(cs.paddingRight)));
       };
+      const range = () => {
+        const top = box.getBoundingClientRect().top + window.scrollY; const vh = window.innerHeight;
+        const max = ScrollTrigger.maxScroll(window);
+        const start = Math.max(0, top - vh);
+        let end = Math.min(max, top - vh * 0.2);
+        if (end <= start + 1) end = Math.min(max, start + vh * 0.8);
+        return { start, end: Math.max(end, start + 1) };
+      };
       const slide = gsap.to(t, {
         x: () => -overX(), ease: 'none',
-        scrollTrigger: { trigger: box, start: 'top bottom', end: 'top top', scrub: true, invalidateOnRefresh: true },
+        scrollTrigger: {
+          trigger: box, scrub: true, invalidateOnRefresh: true,
+          // Desde que el módulo asoma por abajo hasta que su borde superior llega al 20 % de la pantalla.
+          // Si ya está visible al cargar (arriba de la página) empieza en 0 y dura lo que quede de scroll.
+          start: () => range().start,
+          end: () => range().end,
+        },
       });
       return () => { slide.scrollTrigger?.kill(); };
     });

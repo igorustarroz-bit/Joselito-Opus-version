@@ -85,7 +85,8 @@
       "date": "2026-10-09",
       "version": "",
       "changes": [
-        "Foto de fondo fija en cover (sustituye al parallax)"
+        "Foto de fondo fija en cover (sustituye al parallax)",
+        "Stories sin bandas de relleno arriba y abajo; el deslizamiento del titular funciona también con el módulo arriba de la página"
       ]
     },
     {
@@ -197,7 +198,7 @@
   ],
   "behavior": [
     "Decisión de Igor (9-oct): alto mínimo 1200 px, sin anclaje y con la foto de fondo FIJA a la pantalla en cover: ocupa todo el fondo y no se mueve al hacer scroll; el módulo hace de ventana (position: fixed + clip-path, equivalente a background-attachment: fixed, que no funciona en iOS).",
-    "Si el titular no cabe en ancho (móvil: 9 columnas en un frame de 6) se desliza hacia la izquierda mientras el módulo sube desde el borde inferior hasta el superior de la pantalla; cuando el módulo llega arriba se lee entero. En escritorio cabe y no se mueve.",
+    "Si el titular no cabe en ancho (móvil: 9 columnas en un frame de 6) se desliza hacia la izquierda mientras el módulo sube: desde que asoma por abajo hasta que su borde superior llega al 20 % de la pantalla (si ya está visible al cargar, desde el scroll 0). En escritorio cabe y no se mueve.",
     "Con prefers-reduced-motion o `scrub=false`: el titular móvil queda recortado como en Figma (la foto sigue fija: no es una animación).",
     "Escritorio desde 960 px: titular 1–8, columna 9 libre, párrafo y botón 10–12. Móvil: titular de 9 columnas, debajo párrafo (1–5) y botón."
   ],
