@@ -1,0 +1,96 @@
+/* Marco de gráfica. Medidas por defecto = plantilla Hanzo; proporción y margen izquierdo salen de chart-style.js.
+   Si el Figma del proyecto dibuja otro marco (leyenda abajo, sin pie…), se ajusta AQUÍ y en chart-style.js.
+   Solo tokens. El área de datos (.hz-chart__plot) la rellena el motor (ECharts o D3). */
+.hz-chart {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: var(--hz-chart-aspect, 1.5);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  color: var(--texts-base);
+  font-family: var(--tipography-font-family-body);
+  position: relative;
+}
+
+.hz-chart__head {
+  display: flex;
+  gap: var(--spacers-fixed-fx-2);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: calc(var(--typography-body-1-lh) + var(--spacers-fixed-fx-4));
+  padding-bottom: var(--spacers-fixed-fx-4);
+  box-sizing: border-box;
+}
+.hz-chart__title { flex: 1 1 auto; margin: 0; color: var(--texts-base); }
+.hz-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacers-fixed-fx-1) var(--spacers-fixed-fx-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--texts-neutral-1);
+}
+.hz-chart__legend li { display: flex; align-items: center; gap: var(--spacers-fixed-fx-2); white-space: nowrap; }
+.hz-chart__marker { flex: none; }
+
+.hz-chart__body { flex: 1; position: relative; min-height: 0; }
+.hz-chart__unit {
+  position: absolute;
+  left: var(--hz-chart-plot-left, 32px);
+  top: calc(-1 * var(--spacers-fixed-fx-1));
+  color: var(--texts-neutral-1);
+  pointer-events: none;
+  z-index: 1;
+}
+.hz-chart__plot { position: absolute; inset: 0; }
+.hz-chart__plot svg { display: block; overflow: visible; }
+
+.hz-chart__caption {
+  min-height: var(--spacers-fixed-fx-4);
+  padding: 0 var(--spacers-fixed-fx-1) var(--spacers-fixed-fx-1);
+  text-align: center;
+  color: var(--texts-neutral-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Tooltip (mismo HTML en los dos motores: shared.js → tooltipHTML) ──
+   Figma no tiene estado de hover ni tooltip: propuesta con tokens, pendiente de validar con diseño. */
+.hz-chart-tooltip {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.hz-chart-tooltip.is-visible { opacity: 1; }
+.hz-chart-tooltip__inner {
+  min-width: 112px;
+  padding: var(--spacers-fixed-fx-2) var(--spacers-fixed-fx-3);
+  background: var(--backgrounds-base);
+  border: 1px solid var(--strokes-icons-neutral-2);
+  color: var(--texts-base);
+  font-family: var(--tipography-font-family-body);
+  font-size: var(--typography-body-1-sz);
+  line-height: var(--typography-body-1-lh);
+}
+.hz-chart-tooltip__title { margin: 0 0 var(--spacers-fixed-fx-1); color: var(--texts-neutral-1); }
+.hz-chart-tooltip ul { margin: 0; padding: 0; list-style: none; }
+.hz-chart-tooltip li { display: flex; align-items: center; gap: var(--spacers-fixed-fx-2); }
+.hz-chart-tooltip li i { width: var(--spacers-fixed-fx-2); height: var(--spacers-fixed-fx-2); flex: none; }
+.hz-chart-tooltip li span { flex: 1; }
+.hz-chart-tooltip li b { font-weight: 400; font-variant-numeric: tabular-nums; }
+
+/* ECharts monta su propio contenedor de tooltip: se neutraliza para que mande .hz-chart-tooltip__inner. */
+.hz-chart .hz-ec-tooltip { padding: 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important; }
+
+/* D3: estados de hover (ECharts los define en `emphasis`/`blur` con los mismos valores). */
+.hz-chart .is-dimmed { opacity: var(--hz-chart-dim, 0.25); transition: opacity 150ms ease; }
+.hz-chart [data-hover] { transition: opacity 150ms ease, fill 150ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hz-chart-tooltip, .hz-chart .is-dimmed, .hz-chart [data-hover] { transition: none; }
+}

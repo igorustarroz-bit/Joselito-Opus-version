@@ -2,84 +2,328 @@
   "name": "M38ScrolledBigText",
   "kind": "module",
   "title": "M38-scrolled-big-text",
-  "figma": { "nodeId": "68927:7670", "name": "M38-scrolled-big-text", "fp": "731e3ad2", "fileKey": "9pjwT8L6tbhQ05JjTFcaSP", "digest": ".ai/masters/m38-scrolled-big-text.json" },
-  "description": "Foto de fondo a sangre con velo y un titular gigante que no cabe en el módulo: al hacer scroll el módulo se ancla y el titular se desplaza hasta verse entero. Al lado, párrafo y botón.",
+  "figma": {
+    "nodeId": "68927:7670",
+    "name": "M38-scrolled-big-text",
+    "fp": "731e3ad2",
+    "fileKey": "9pjwT8L6tbhQ05JjTFcaSP",
+    "digest": ".ai/masters/m38-scrolled-big-text.json"
+  },
+  "description": "Foto de fondo a sangre en parallax con velo, titular gigante y, al lado, párrafo y botón. Mide como mínimo 1200 px; si el titular no cabe (móvil) se desliza con el scroll hasta verse entero.",
   "defaultStory": "Default",
-  "variantAxes": { "Device": ["desktop", "mobile"], "type": ["with-image"] },
+  "variantAxes": {
+    "Device": [
+      "desktop",
+      "mobile"
+    ],
+    "type": [
+      "with-image"
+    ]
+  },
   "codeOnlyAxes": [],
   "variants": [
-    { "story": "Desktop", "title": "type=with-image, Device=desktop" },
-    { "story": "Mobile", "title": "type=with-image, Device=mobile" }
+    {
+      "story": "Desktop",
+      "title": "type=with-image, Device=desktop"
+    },
+    {
+      "story": "Mobile",
+      "title": "type=with-image, Device=mobile"
+    }
   ],
   "axes": [
-    { "name": "Device", "description": "Escritorio: el titular sube con el scroll. Móvil: se desliza hacia la izquierda. Un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
-      "options": [ { "value": "desktop", "story": "Desktop" }, { "value": "mobile", "story": "Mobile" } ] },
-    { "name": "type", "description": "El máster solo tiene `with-image`: no se expone como prop.", "options": [ { "value": "with-image", "story": "Default" } ] }
+    {
+      "name": "Device",
+      "description": "Escritorio: el titular cabe entero (1–8) y solo el fondo se mueve. Móvil: el titular mide 9 columnas y se desliza hacia la izquierda con el scroll. Un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [
+        {
+          "value": "desktop",
+          "story": "Desktop"
+        },
+        {
+          "value": "mobile",
+          "story": "Mobile"
+        }
+      ]
+    },
+    {
+      "name": "type",
+      "description": "El máster solo tiene `with-image`: no se expone como prop.",
+      "options": [
+        {
+          "value": "with-image",
+          "story": "Default"
+        }
+      ]
+    }
   ],
   "usage": {
     "intro": "_Propuesta pendiente de OK de diseño._ Úsalo como pausa visual de gran impacto: una frase corta a tamaño display sobre una foto.",
-    "do": ["Frase de 6–10 palabras: el efecto necesita que el titular no quepa, pero se tiene que poder leer entero.", "Foto con zonas oscuras o tranquilas para que el texto blanco contraste con el velo."],
-    "dont": ["No pongas dos seguidos: el anclaje con scroll cansa.", "No lo uses para textos largos ni para información crítica (con «reducir movimiento» el titular queda recortado)."]
+    "do": [
+      "Frase de 6–10 palabras: el efecto necesita que el titular no quepa, pero se tiene que poder leer entero.",
+      "Foto con zonas oscuras o tranquilas para que el texto blanco contraste con el velo."
+    ],
+    "dont": [
+      "No pongas dos seguidos: dos parallax grandes seguidos cansan.",
+      "No lo uses para información crítica (con «reducir movimiento» el titular móvil queda recortado)."
+    ]
   },
-  "useCases": [ { "title": "Sección de marca", "description": "Entre bloques editoriales, para cerrar un capítulo con una frase.", "story": "Default" }, { "title": "Sin animación", "description": "Cómo se ve con prefers-reduced-motion.", "story": "Static" } ],
-  "changelog": [ { "date": "2026-10-09", "version": "", "changes": ["Primera versión (módulo sin autolayout en Figma, interpretado por columnas y captura; titular con scroll anclado)"] } ],
+  "useCases": [
+    {
+      "title": "Sección de marca",
+      "description": "Entre bloques editoriales, para cerrar un capítulo con una frase.",
+      "story": "Default"
+    },
+    {
+      "title": "Sin animación",
+      "description": "Cómo se ve con prefers-reduced-motion.",
+      "story": "Static"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-09",
+      "version": "",
+      "changes": [
+        "Alto mínimo 1200 px y fondo en parallax",
+        "Sin anclaje: el titular móvil se desliza mientras el módulo cruza la pantalla"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "version": "",
+      "changes": [
+        "Primera versión (módulo sin autolayout en Figma, interpretado por columnas y captura; titular con scroll anclado)"
+      ]
+    }
+  ],
   "props": [
-    { "name": "title", "figma": "Title", "description": "Titular display (Title/08, h2).", "default": "El campo es lo más bello en la viña del señor", "control": "text" },
-    { "name": "text", "description": "Párrafo (Body/02).", "default": "Joselito ofrece, a través de sus Entidades Emisoras…", "control": "text" },
-    { "name": "buttonText", "description": "Texto del botón (Primary L con flecha). Vacío = sin botón.", "default": "Conoce más", "control": "text" },
-    { "name": "buttonHref", "description": "Destino del botón.", "default": "", "control": "text" },
-    { "name": "image", "description": "Foto de fondo (cubre el módulo).", "default": "m23-cards-gallery.webp", "control": "text" },
-    { "name": "imageAlt", "description": "Texto alternativo de la foto (vacío si es decorativa).", "default": "", "control": "text" },
-    { "name": "scrub", "description": "Activa el anclaje y el desplazamiento del titular con el scroll.", "default": true, "control": "boolean" },
-    { "name": "theme", "description": "Subtema del módulo (texto claro sobre la foto).", "default": "dark-black-neutral", "control": "text" }
+    {
+      "name": "title",
+      "figma": "Title",
+      "description": "Titular display (Title/08, h2).",
+      "default": "El campo es lo más bello en la viña del señor",
+      "control": "text"
+    },
+    {
+      "name": "text",
+      "description": "Párrafo (Body/02).",
+      "default": "Joselito ofrece, a través de sus Entidades Emisoras…",
+      "control": "text"
+    },
+    {
+      "name": "buttonText",
+      "description": "Texto del botón (Primary L con flecha). Vacío = sin botón.",
+      "default": "Conoce más",
+      "control": "text"
+    },
+    {
+      "name": "buttonHref",
+      "description": "Destino del botón.",
+      "default": "",
+      "control": "text"
+    },
+    {
+      "name": "image",
+      "description": "Foto de fondo (cubre el módulo).",
+      "default": "m23-cards-gallery.webp",
+      "control": "text"
+    },
+    {
+      "name": "imageAlt",
+      "description": "Texto alternativo de la foto (vacío si es decorativa).",
+      "default": "",
+      "control": "text"
+    },
+    {
+      "name": "scrub",
+      "description": "Activa el parallax del fondo y el deslizamiento del titular con el scroll.",
+      "default": true,
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Subtema del módulo (texto claro sobre la foto).",
+      "default": "dark-black-neutral",
+      "control": "text"
+    }
   ],
   "tokens": {
-    "color": [ { "token": "--texts-base (dark-black-neutral)", "usage": "titular y párrafo en blanco" }, { "token": "--backgrounds-overlay", "usage": "velo sobre la foto (componente Overlay)" }, { "token": "--backgrounds-base", "usage": "fondo mientras carga la foto" } ],
-    "spacing": [ { "token": "--layout-grids-wrapper-default / --layout-grids-gutter", "usage": "márgenes y columnas" }, { "token": "--spacers-fixed-fx-9 / fx-10 / fx-11", "usage": "paddings y separaciones" } ]
+    "color": [
+      {
+        "token": "--texts-base (dark-black-neutral)",
+        "usage": "titular y párrafo en blanco"
+      },
+      {
+        "token": "--backgrounds-overlay",
+        "usage": "velo sobre la foto (componente Overlay)"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "fondo mientras carga la foto"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--layout-grids-wrapper-default / --layout-grids-gutter",
+        "usage": "márgenes y columnas"
+      },
+      {
+        "token": "--spacers-fixed-fx-9 / fx-10 / fx-11",
+        "usage": "paddings y separaciones"
+      }
+    ]
   },
-  "subthemes": { "default": "dark-black-neutral", "supported": ["dark-black-neutral"], "notes": "Texto siempre claro sobre la foto; el botón conserva el subtema light-white (negro como en Figma), igual que en M13/M17." },
-  "anatomy": ["Foto de fondo a sangre", "Overlay (velo)", "Titular Title/08", "Párrafo Body/02", "Button Primary L con flecha"],
-  "behavior": [
-    "Decisión de Igor (9-oct): el módulo ocupa la pantalla y se ancla al llegar arriba; mientras se hace scroll, el titular se desplaza hasta verse entero — hacia arriba en escritorio (no cabe en alto) y hacia la izquierda en móvil (no cabe en ancho) — y luego la página sigue. Foto, velo, párrafo y botón quedan quietos. GSAP ScrollTrigger (pin + scrub).",
-    "El recorrido se calcula con lo que sobra del titular, así que funciona con cualquier frase y ancho; se recalcula al cambiar el tamaño de la ventana.",
-    "Con prefers-reduced-motion o `scrub=false`: sin anclaje, el titular queda recortado como en Figma.",
-    "Escritorio desde 960 px: titular 1–8, columna 9 libre, párrafo y botón 10–12. Móvil: titular de 9 columnas (más ancho que la pantalla), debajo párrafo (1–5) y botón."
+  "subthemes": {
+    "default": "dark-black-neutral",
+    "supported": [
+      "dark-black-neutral"
+    ],
+    "notes": "Texto siempre claro sobre la foto; el botón conserva el subtema light-white (negro como en Figma), igual que en M13/M17."
+  },
+  "anatomy": [
+    "Foto de fondo a sangre",
+    "Overlay (velo)",
+    "Titular Title/08",
+    "Párrafo Body/02",
+    "Button Primary L con flecha"
   ],
-  "content": [ { "field": "Titular", "notes": "6–10 palabras." }, { "field": "Párrafo", "notes": "40–60 palabras." }, { "field": "Botón", "notes": "1–2 palabras." } ],
-  "a11y": ["Titular como h2 (el texto completo está en el DOM aunque se vea recortado).", "Respeta prefers-reduced-motion.", "La foto de fondo es decorativa por defecto (alt vacío)."],
-  "related": ["Overlay", "Button", "M13-Hero-Homepagehero"],
+  "behavior": [
+    "Decisión de Igor (9-oct, revisión): alto mínimo 1200 px y sin anclaje. Mientras el módulo cruza la pantalla, la foto de fondo va en parallax (±8 % de su alto, más lenta que el scroll) — GSAP ScrollTrigger con scrub.",
+    "Si el titular no cabe en ancho (móvil: 9 columnas en un frame de 6) se desliza hacia la izquierda mientras el módulo sube desde el borde inferior hasta el superior de la pantalla; cuando el módulo llega arriba se lee entero. En escritorio cabe y no se mueve.",
+    "Con prefers-reduced-motion o `scrub=false`: todo estático y el titular móvil recortado como en Figma.",
+    "Escritorio desde 960 px: titular 1–8, columna 9 libre, párrafo y botón 10–12. Móvil: titular de 9 columnas, debajo párrafo (1–5) y botón."
+  ],
+  "content": [
+    {
+      "field": "Titular",
+      "notes": "6–10 palabras."
+    },
+    {
+      "field": "Párrafo",
+      "notes": "40–60 palabras."
+    },
+    {
+      "field": "Botón",
+      "notes": "1–2 palabras."
+    }
+  ],
+  "a11y": [
+    "Titular como h2 (el texto completo está en el DOM aunque se vea recortado).",
+    "Respeta prefers-reduced-motion.",
+    "La foto de fondo es decorativa por defecto (alt vacío)."
+  ],
+  "related": [
+    "Overlay",
+    "Button",
+    "M13-Hero-Homepagehero"
+  ],
   "layout": {
     "type": "Mezcla (fondo a sangre + columnas)",
     "grid": "12 columnas desde 960 px (rango L); 6 en XS/SM y 8 en M.",
     "columns": [
-      { "variant": "desktop", "story": "Static", "piece": "Titular", "selector": ".m38-bigtext__title", "columns": "1–8 (9 libre)" },
-      { "variant": "desktop", "story": "Static", "piece": "Párrafo + botón", "selector": ".m38-bigtext__aside", "columns": "10–12" }
+      {
+        "variant": "desktop",
+        "story": "Static",
+        "piece": "Titular",
+        "selector": ".m38-bigtext__title",
+        "columns": "1–8 (9 libre)"
+      },
+      {
+        "variant": "desktop",
+        "story": "Static",
+        "piece": "Párrafo + botón",
+        "selector": ".m38-bigtext__aside",
+        "columns": "10–12"
+      }
     ],
     "noColumns": [],
     "pieces": [
-      { "variant": "desktop", "width": 1440, "piece": "Foto", "role": "background", "placement": "relleno del frame → capa a sangre detrás, object-fit: cover" },
-      { "variant": "desktop", "width": 1440, "piece": "Overlay", "role": "overlay", "placement": "velo a sangre (--backgrounds-overlay)" },
-      { "variant": "desktop", "width": 1440, "piece": "Botón", "role": "start", "placement": "debajo del párrafo, desde la col 10, fit-content" },
-      { "variant": "mobile", "width": 390, "piece": "Foto", "role": "background", "placement": "a sangre detrás, object-fit: cover" },
-      { "variant": "mobile", "width": 390, "piece": "Overlay", "role": "overlay", "placement": "velo a sangre" },
-      { "variant": "mobile", "width": 390, "piece": "Titular", "role": "art", "placement": "9 columnas de ancho (desborda por la derecha a propósito); se desliza con el scroll" },
-      { "variant": "mobile", "width": 390, "piece": "Botón", "role": "start", "placement": "desde la col 1, fit-content" }
+      {
+        "variant": "desktop",
+        "width": 1440,
+        "piece": "Foto",
+        "role": "background",
+        "placement": "relleno del frame → capa a sangre detrás, object-fit: cover"
+      },
+      {
+        "variant": "desktop",
+        "width": 1440,
+        "piece": "Overlay",
+        "role": "overlay",
+        "placement": "velo a sangre (--backgrounds-overlay)"
+      },
+      {
+        "variant": "desktop",
+        "width": 1440,
+        "piece": "Botón",
+        "role": "start",
+        "placement": "debajo del párrafo, desde la col 10, fit-content"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Foto",
+        "role": "background",
+        "placement": "a sangre detrás, object-fit: cover"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Overlay",
+        "role": "overlay",
+        "placement": "velo a sangre"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Titular",
+        "role": "art",
+        "placement": "9 columnas de ancho (desborda por la derecha a propósito); se desliza con el scroll"
+      },
+      {
+        "variant": "mobile",
+        "width": 390,
+        "piece": "Botón",
+        "role": "start",
+        "placement": "desde la col 1, fit-content"
+      }
     ],
     "order": {
-      "desktop (1440)": ["Foto", "Velo", "Titular", "Párrafo", "Botón"],
-      "mobile (390)": ["Foto", "Velo", "Titular", "Párrafo", "Botón"]
+      "desktop (1440)": [
+        "Foto",
+        "Velo",
+        "Titular",
+        "Párrafo",
+        "Botón"
+      ],
+      "mobile (390)": [
+        "Foto",
+        "Velo",
+        "Titular",
+        "Párrafo",
+        "Botón"
+      ]
     }
   },
-  "images": ["d8ecc788ed606aeca65175de5f846fac5d1bb068"],
-  "placeholders": [ { "what": "Uso (Do / Don't)", "why": "propuesta de Claude; pendiente de revisar con diseño" } ],
+  "images": [
+    "d8ecc788ed606aeca65175de5f846fac5d1bb068"
+  ],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude; pendiente de revisar con diseño"
+    }
+  ],
   "notes": [
     "Figma: sin autolayout; interpretado con layout-boxes + grid-columns + captura. grid-columns dio el velo como «bleed» (es overlay: instancia de Overlay a sangre) y no clasificó la foto, que es el relleno del propio frame (lo avisó en texto) → roles background/overlay fijados a mano.",
     "grid-columns dejó el botón móvil en «ask» (ancho 196 ≠ columnas): empieza en la col 1 con ancho propio → start.",
     "Móvil: el titular mide 509 px = 9 columnas exactas en un frame de 6 (lo marcó como composición artística); en código se conserva ese ancho para que desborde igual.",
     "Figma: textos blancos y fondo #fff sin variable → subtema dark-black-neutral (Texts/Base) como en M13; el botón negro conserva light-white.",
     "Figma: separaciones sin variable — escritorio 62/63/40 → FX-11/FX-11/FX-9; móvil 57/49/40 → FX-10/FX-10/FX-9.",
-    "Alto del módulo: en Figma 726 px; en código ocupa la pantalla (100svh) porque se ancla durante el scroll.",
-    "Figma renombrado durante el trabajo: M37-scrolled-big-text → M38-scrolled-big-text."
+    "Figma renombrado durante el trabajo: M37-scrolled-big-text → M38-scrolled-big-text.",
+    "Alto del módulo: en Figma 726 px; en código mínimo 1200 px (decisión de Igor, 9-oct). Valor fijo sin token: avisar a diseño para reflejarlo en el máster.",
+    "La primera versión anclaba el módulo (pin); se quitó al pasar a 1200 px porque un módulo más alto que la pantalla anclado esconde su parte inferior."
   ],
   "codePath": "src/modules/M38ScrolledBigText/M38ScrolledBigText.jsx"
 }

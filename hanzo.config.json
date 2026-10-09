@@ -59,5 +59,8 @@
     "1620": 1620,
     "1920": 1920,
     "$comment": "Inicio del rango de cada modo responsive (documentación de layout de Figma, node 51284:8588): XS –400 · SM 401–480 · M 481–959 · L 960–1279 · XL 1280–1619 · XXL 1620–1919 · XXXL 1920+."
+  },
+  "charts": {
+    "renderer": "d3"
   }
 }

@@ -1,0 +1,196 @@
+{
+  "name": "Chart",
+  "kind": "component",
+  "title": "Graph",
+  "figma": {
+    "nodeId": "66979:20849",
+    "name": "Graph",
+    "fp": "remote-01vbars",
+    "fileKey": "9pjwT8L6tbhQ05JjTFcaSP",
+    "digest": ".ai/masters/graph.json"
+  },
+  "description": "Gráfica de datos del sistema: marco HTML con tokens (título, leyenda, unidad, pie) y área de datos pintada por un motor intercambiable (D3 por defecto o ECharts) a partir de un ChartSpec. Interactiva con el ratón y con animación de construcción al entrar en pantalla.",
+  "defaultStory": "Default",
+  "variantAxes": {
+    "Name": [
+      "01 - V bars white"
+    ]
+  },
+  "codeOnlyAxes": [
+    "renderer"
+  ],
+  "variants": [
+    {
+      "story": "Default",
+      "title": "Name=01 - V bars white"
+    }
+  ],
+  "axes": [
+    {
+      "name": "Name",
+      "description": "Tipo de gráfica. En Joselito solo se usa «01 - V bars white» (M39); el sistema admite también áreas apiladas, radar y velas (ver la guía de gráficas de la skill).",
+      "options": [
+        {
+          "value": "01 - V bars white",
+          "story": "Default"
+        }
+      ]
+    },
+    {
+      "name": "Motor",
+      "prop": "renderer",
+      "story": "AxisRenderer",
+      "description": "Mismo ChartSpec, dos motores. `d3` por defecto (hanzo.config.json → charts.renderer).",
+      "options": [
+        "d3",
+        "echarts"
+      ]
+    }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Para datos cuantitativos cortos dentro de un módulo editorial.",
+    "do": [
+      "Datos reales del cliente (JSON/CSV/CMS): los del Figma son provisionales.",
+      "Título corto y pie con la unidad y la fuente."
+    ],
+    "dont": [
+      "No dibujes gráficas como imagen: pierden el hover, la animación y la accesibilidad.",
+      "No metas colores literales: series con tokens."
+    ]
+  },
+  "useCases": [
+    {
+      "title": "En M39-Graph Right",
+      "description": "A la derecha del texto, columnas 8–12.",
+      "story": "Default"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-09",
+      "version": "",
+      "changes": [
+        "Primera versión: sistema de gráficas de la skill (ChartSpec + D3/ECharts) con el perfil visual de Joselito"
+      ]
+    }
+  ],
+  "props": [
+    {
+      "name": "spec",
+      "description": "ChartSpec: type, title, caption, description (alt), format, axis, series… (ver la guía de gráficas).",
+      "default": "",
+      "control": "json"
+    },
+    {
+      "name": "renderer",
+      "description": "Motor: `d3` o `echarts`.",
+      "default": "d3",
+      "control": "radio"
+    },
+    {
+      "name": "animateOnView",
+      "description": "Anima la construcción al entrar en pantalla (umbral 35 %).",
+      "default": true,
+      "control": "boolean"
+    },
+    {
+      "name": "theme",
+      "description": "Fija el subtema (si no, hereda).",
+      "default": "",
+      "control": "text"
+    }
+  ],
+  "tokens": {
+    "color": [
+      {
+        "token": "--texts-base",
+        "usage": "título"
+      },
+      {
+        "token": "--texts-neutral-1",
+        "usage": "ejes, leyenda, unidad, pie"
+      },
+      {
+        "token": "--backgrounds-neutral-2",
+        "usage": "rejilla"
+      },
+      {
+        "token": "--strokes-icons-neutral-2",
+        "usage": "línea base"
+      },
+      {
+        "token": "--strokes-icons-base",
+        "usage": "borde de barras y puntos"
+      },
+      {
+        "token": "--backgrounds-base",
+        "usage": "relleno de barras, halo, tooltip"
+      },
+      {
+        "token": "--backgrounds-accent-base",
+        "usage": "barra en hover"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "--spacers-fixed-fx-1 / fx-2 / fx-3 / fx-4",
+        "usage": "marco, leyenda y tooltip"
+      }
+    ]
+  },
+  "subthemes": {
+    "default": "light-white",
+    "supported": [
+      "light-white",
+      "light-grey"
+    ],
+    "notes": "Lee los tokens del DOM en tiempo de ejecución: cambia con el subtema."
+  },
+  "anatomy": [
+    "Título (Body/01)",
+    "Leyenda (icono 8 px + nombre)",
+    "Unidad del eje Y",
+    "Área de datos (motor)",
+    "Pie del eje X (Body/01)",
+    "Tooltip (propuesta)"
+  ],
+  "behavior": [
+    "Animación de construcción al entrar en pantalla (IntersectionObserver, 35 %): las barras crecen desde la base con retardo por índice.",
+    "Hover: tooltip con el valor y la barra bajo el puntero resaltada; las demás se atenúan.",
+    "Con prefers-reduced-motion se pinta sin animación y conserva el hover. En resize se redibuja sin animación."
+  ],
+  "content": [
+    {
+      "field": "Título",
+      "notes": "Una línea."
+    },
+    {
+      "field": "Pie",
+      "notes": "Unidad y fuente; una línea."
+    }
+  ],
+  "a11y": [
+    "El área de datos es role=img con aria-label = spec.description.",
+    "La leyenda es una lista con aria-label."
+  ],
+  "related": [
+    "M39-Graph Right"
+  ],
+  "images": [],
+  "placeholders": [
+    {
+      "what": "Uso (Do / Don't)",
+      "why": "propuesta de Claude; pendiente de revisar con diseño"
+    },
+    {
+      "what": "Tooltip y hover",
+      "why": "el Figma no los diseña: propuesta con tokens pendiente de validar"
+    }
+  ],
+  "notes": [
+    "El componente «Graph» del Figma viene de la librería de la plantilla Hanzo (colección graph/*), que Joselito no tiene: papeles mapeados a tokens de Joselito en chart-style.js (graph-two → Strokes-Icons/Base, graph-seven → Backgrounds/Base, background/quaternary → Backgrounds/Neutral-2, text/high → Texts/Base).",
+    "Figma: etiquetas del eje X en Poppins 10 px (Paragraph/XS) y del eje Y en Inter 12 px (Body/01) → Body/01 en los dos.",
+    "Figma: no hay estado de hover ni tooltip diseñados → propuesta con tokens."
+  ],
+  "codePath": "src/components/Chart/Chart.jsx"
+}

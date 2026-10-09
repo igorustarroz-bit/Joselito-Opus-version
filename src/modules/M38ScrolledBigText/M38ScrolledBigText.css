@@ -1,5 +1,5 @@
 /* M38-scrolled-big-text — Figma 68927:7670 (sin autolayout: interpretado por columnas + captura). Solo tokens.
-   Fondo a sangre + velo; titular Title/08 más grande que el módulo (se desplaza con el scroll, ver JSX). */
+   Fondo a sangre + velo; fondo en parallax y titular que se desliza si no cabe (ver JSX). */
 .m38-bigtext {
   position: relative;
   display: grid;
@@ -8,14 +8,15 @@
   align-content: start;
   box-sizing: border-box;
   width: 100%;
-  height: 100svh;
+  min-height: 1200px; /* decisión de Igor (9-oct): como poco 1200 px */
   overflow: hidden; /* el titular se sale: el módulo recorta, como el frame de Figma */
   padding: var(--spacers-fixed-fx-10) var(--layout-grids-wrapper-default);
   background: var(--backgrounds-base);
   color: var(--texts-base);
 }
 .m38-bigtext__bg, .m38-bigtext > .m38-bigtext__veil { position: absolute; inset: 0; }
-.m38-bigtext__bg { width: 100%; height: 100%; object-fit: cover; }
+/* Fondo 20 % más alto que el módulo: margen para el parallax (±8 %) sin dejar huecos */
+.m38-bigtext__bg { top: -10%; bottom: auto; width: 100%; height: 120%; object-fit: cover; will-change: transform; }
 .m38-bigtext__title, .m38-bigtext__aside { position: relative; }
 .m38-bigtext__title, .m38-bigtext__text { margin: 0; }
 /* Móvil: el titular mide 9 columnas de las 6 (más ancho que la pantalla, como en Figma) */

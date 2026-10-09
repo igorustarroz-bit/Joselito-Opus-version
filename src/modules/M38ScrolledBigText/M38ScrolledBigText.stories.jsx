@@ -3,7 +3,7 @@ import M38ScrolledBigText from './M38ScrolledBigText';
 import meta from './M38ScrolledBigText.meta.json';
 import { argTypesFromMeta } from '@/docs/DocKit';
 
-const Scroll = (Story) => (<div><Story /><div style={{ height: '100vh' }} /></div>);
+const Scroll = (Story) => (<div><div style={{ height: '60vh' }} /><Story /><div style={{ height: '100vh' }} /></div>);
 
 export default {
   title: 'Modules/M38-scrolled-big-text',
@@ -14,9 +14,9 @@ export default {
 };
 
 export const Default = {};
-/** Device=desktop (desde 960 px): haz scroll — el módulo se ancla y el titular sube hasta verse entero. */
+/** Device=desktop (desde 960 px): haz scroll — el fondo va en parallax (mínimo 1200 px de alto). */
 export const Desktop = {};
 /** Device=mobile (ver con el viewport XS): el titular se desliza hacia la izquierda. */
 export const Mobile = {};
-/** Sin animación (como con prefers-reduced-motion): el titular queda recortado. */
+/** Sin animación (como con prefers-reduced-motion): fondo quieto y titular móvil recortado. */
 export const Static = { args: { scrub: false }, name: 'Sin animación' };

@@ -1,0 +1,73 @@
+{
+  "name": "M39GraphRight",
+  "kind": "module",
+  "title": "M39-Graph Right",
+  "figma": { "nodeId": "68927:7766", "name": "M39-Graph Right", "fp": "ae2230f7", "fileKey": "9pjwT8L6tbhQ05JjTFcaSP" },
+  "description": "Título y párrafo a la izquierda y una gráfica interactiva a la derecha (componente Graph: barras verticales, motor D3 por defecto).",
+  "defaultStory": "Default",
+  "variantAxes": { "Device": ["desktop", "mobile"], "type": ["with-image"] },
+  "codeOnlyAxes": ["renderer"],
+  "variants": [
+    { "story": "Desktop", "title": "type=with-image, Device=desktop" },
+    { "story": "Mobile", "title": "type=with-image, Device=mobile" }
+  ],
+  "axes": [
+    { "name": "Device", "description": "Escritorio: texto 1–4 y gráfica 8–12. Móvil: apilado con la gráfica a ancho completo. Un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [ { "value": "desktop", "story": "Desktop" }, { "value": "mobile", "story": "Mobile" } ] },
+    { "name": "type", "description": "El máster solo tiene `with-image` (nombre heredado: en realidad lleva gráfica). No se expone como prop.", "options": [ { "value": "with-image", "story": "Default" } ] }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para apoyar un texto con un dato cuantitativo sencillo.",
+    "do": ["Una sola gráfica con pocas categorías (≤ 8 barras).", "Que el párrafo explique lo que se ve en la gráfica."],
+    "dont": ["No pongas una captura de la gráfica: usa el componente Graph con un ChartSpec.", "No uses datos inventados en producción: los del Figma son provisionales."]
+  },
+  "useCases": [ { "title": "Dato de negocio", "description": "Evolución de una magnitud por tramos.", "story": "Default" }, { "title": "Motor ECharts", "description": "La misma gráfica con el motor alternativo.", "story": "ECharts" } ],
+  "changelog": [ { "date": "2026-10-09", "version": "", "changes": ["Primera versión (módulo sin autolayout en Figma; primera gráfica del proyecto)"] } ],
+  "props": [
+    { "name": "title", "figma": "Title", "description": "Título (Title/04, h2).", "default": "Lorem ipsum dolor sit amet", "control": "text" },
+    { "name": "text", "description": "Párrafo (Body/02).", "default": "Joselito ofrece, a través de sus Entidades Emisoras…", "control": "text" },
+    { "name": "chart", "description": "ChartSpec de la gráfica (por defecto: V bars white con datos provisionales).", "default": "m39Spec", "control": false },
+    { "name": "renderer", "description": "Motor de la gráfica: `d3` (por defecto) o `echarts`.", "default": "d3", "control": "radio" },
+    { "name": "theme", "description": "Fija el subtema (si no, hereda el de la página).", "default": "", "control": "text" }
+  ],
+  "tokens": {
+    "color": [ { "token": "--backgrounds-base", "usage": "fondo" }, { "token": "--texts-base", "usage": "título" }, { "token": "--texts-neutral-1", "usage": "párrafo" } ],
+    "spacing": [ { "token": "--layout-grids-wrapper-default / --layout-grids-gutter", "usage": "márgenes y columnas" }, { "token": "--spacers-fixed-fx-15 / fx-14 / fx-11 / fx-16", "usage": "paddings escritorio / móvil" }, { "token": "--spacers-fixed-fx-6 / fx-9 / fx-12", "usage": "separaciones" } ]
+  },
+  "subthemes": { "default": "light-white", "supported": ["light-white", "light-grey"], "notes": "Hereda el subtema; la gráfica lee los tokens del DOM." },
+  "anatomy": ["Título Title/04", "Párrafo Body/02", "Graph (V bars white): título, leyenda, unidad, barras con punto, pie"],
+  "behavior": [
+    "Escritorio desde 960 px: rejilla de 12; título y párrafo 1–4; gráfica 8–12 (3:2) arriba a la derecha; 5–7 libres.",
+    "Móvil y tablet: título (1–5) → párrafo (1–5) → gráfica a ancho completo (proporción 342:293 de Figma).",
+    "Gráfica: animación de construcción al entrar en pantalla, tooltip y resaltado al pasar el ratón; sin animación con prefers-reduced-motion (ver Components/Graph)."
+  ],
+  "content": [ { "field": "Título", "notes": "Una o dos líneas." }, { "field": "Párrafo", "notes": "40–60 palabras." }, { "field": "Datos", "notes": "ChartSpec con datos del cliente." } ],
+  "a11y": ["Título como h2.", "La gráfica tiene aria-label con la descripción del ChartSpec."],
+  "related": ["Graph", "M36-content doble photo"],
+  "layout": {
+    "type": "Columnas",
+    "grid": "12 columnas desde 960 px (rango L); 6 en XS/SM y 8 en M, apilado.",
+    "columns": [
+      { "variant": "desktop", "story": "Desktop", "piece": "Título", "selector": ".m39-graph__title", "columns": "1–4" },
+      { "variant": "desktop", "story": "Desktop", "piece": "Párrafo", "selector": ".m39-graph__text", "columns": "1–4 (5–7 libres)" },
+      { "variant": "desktop", "story": "Desktop", "piece": "Gráfica", "selector": ".m39-graph__chart", "columns": "8–12" }
+    ],
+    "noColumns": [],
+    "pieces": [],
+    "order": { "desktop (1440)": ["Título", "Párrafo", "Gráfica"], "mobile (390)": ["Título", "Párrafo", "Gráfica"] }
+  },
+  "images": [],
+  "placeholders": [
+    { "what": "Datos de la gráfica", "why": "en Figma está dibujada: valores leídos de la captura (provisionales). Falta el origen real (JSON/CSV/CMS)." },
+    { "what": "Uso (Do / Don't)", "why": "propuesta de Claude; pendiente de revisar con diseño" },
+    { "what": "Título", "why": "en el máster es lorem ipsum" }
+  ],
+  "notes": [
+    "Figma: sin autolayout; interpretado por columnas + captura. La gráfica es una instancia del componente «Graph» de la plantilla Hanzo (540 × 360) que termina en la columna 12 y empieza a mitad de la 7 → en código ocupa 8–12 (5 columnas, 3:2) y escala con la rejilla.",
+    "Figma móvil: la misma instancia redimensionada a 342 × 293; el SVG aplanado se estira y las barras no coinciden con las de escritorio (8,5 en vez de 18,5…). Se usan los valores de escritorio en los dos.",
+    "Figma: colores sin variable — fondo #fff → Backgrounds/Base; título #000 → Texts/Base; párrafo #666 → Texts/Neutral-1.",
+    "Figma: separaciones sin variable — escritorio 112/103/47 → FX-15/FX-14/FX-9; móvil 65/25/73/123 → FX-11/FX-6/FX-12/FX-16.",
+    "El máster se llama type=with-image pero no lleva imagen (heredado de M36/M37)."
+  ],
+  "codePath": "src/modules/M39GraphRight/M39GraphRight.jsx"
+}

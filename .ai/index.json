@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T08:55:17.851Z",
+  "generatedAt": "2026-10-09T09:08:30.258Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1803,6 +1803,23 @@
       "autolayout": "0/2",
       "key": "module:m38-scrolled-big-text",
       "builtFp": "d94892d7"
+    },
+    {
+      "status": "done",
+      "phase": "modules",
+      "kind": "module",
+      "name": "M39-Graph Right",
+      "nodeId": "68927:7766",
+      "pageId": "53927:2121",
+      "fp": "12f91a91",
+      "variants": 2,
+      "deps": [
+        "Graph"
+      ],
+      "images": 0,
+      "autolayout": "0/2",
+      "key": "module:m39-graph-right",
+      "builtFp": "12f91a91"
     }
   ],
   "removed": [],

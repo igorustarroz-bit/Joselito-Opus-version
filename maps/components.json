@@ -438,5 +438,15 @@
     "name": "M38ScrolledBigText",
     "path": "src/modules/M38ScrolledBigText/M38ScrolledBigText.jsx",
     "fp": "731e3ad2"
+  },
+  "68927:7766": {
+    "name": "M39GraphRight",
+    "path": "src/modules/M39GraphRight/M39GraphRight.jsx",
+    "fp": "ae2230f7"
+  },
+  "66979:20849": {
+    "name": "Chart",
+    "path": "src/components/Chart/Chart.jsx",
+    "fp": ""
   }
 }

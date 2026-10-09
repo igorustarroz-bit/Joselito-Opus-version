@@ -1150,6 +1150,32 @@
         "Overlay"
       ],
       "fp": "d94892d7"
+    },
+    {
+      "id": "68927:7766",
+      "name": "M39-Graph Right",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 575,
+      "variants": 2,
+      "props": {
+        "Title": "TEXT",
+        "type": [
+          "with-image"
+        ],
+        "Device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Graph"
+      ],
+      "fp": "12f91a91"
     }
   ],
   "frames": [],
