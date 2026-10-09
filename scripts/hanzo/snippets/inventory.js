@@ -1,6 +1,7 @@
 // inventory.js — SOLO LECTURA. Inventario de UNA página: másters (component sets y componentes
 // sueltos) con sus dependencias, variantes, imágenes y una huella ligera (fp) para detectar cambios,
-// más los frames de primer nivel que parecen page templates. Una página por llamada (si no, timeout).
+// más los frames de primer nivel que parecen page templates y los módulos dibujados como frame suelto
+// (notMasters: el único acuerdo obligatorio con diseño es que cada módulo sea un máster). Una página por llamada (si no, timeout).
 // Para varias páginas: lanzar N llamadas EN PARALELO en el mismo mensaje.
 // Claude guarda el resultado tal cual en .ai/figma/inventory/<pageId>.json → scripts/plan.mjs
 //
@@ -70,4 +71,12 @@ for (const f of page.children.filter((c) => c.type === 'FRAME' && c.width >= 320
   if (kids.length >= 2) frames.push({ id: f.id, name: f.name, w: r(f.width), h: r(f.height), modules: kids, fp: lightSig(f), hasReactions: f.findAll((n) => (n.reactions || []).length > 0).length > 0 });
 }
 
-return { pageId: page.id, page: page.name, readAt: new Date().toISOString(), masters, frames };
+// Módulos dibujados como frame suelto (no máster): único acuerdo obligatorio con diseño → avisar
+const modulesPage = /module|m[oó]dulo/i.test(page.name);
+const tplIds = new Set(frames.map((f) => f.id));
+const notMasters = page.children
+  .filter((c) => (c.type === 'FRAME' || c.type === 'GROUP') && !tplIds.has(c.id) &&
+    (/^M\d+[\s_-]/i.test(c.name) || (modulesPage && [1440, 1920, 390].includes(Math.round(c.width)))))
+  .map((c) => ({ id: c.id, name: c.name, type: c.type, w: r(c.width), h: r(c.height) }));
+
+return { pageId: page.id, page: page.name, readAt: new Date().toISOString(), masters, frames, notMasters };

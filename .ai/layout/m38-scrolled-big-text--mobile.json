@@ -1,0 +1,148 @@
+{
+ "id": "68927:7689",
+ "name": "type=with-image, Device=mobile",
+ "type": "COMPONENT",
+ "variant": {
+  "type": "with-image",
+  "Device": "mobile"
+ },
+ "w": 390,
+ "h": 726,
+ "layoutGrids": [
+  {
+   "pattern": "COLUMNS",
+   "count": 6,
+   "gutter": 12,
+   "offset": 24,
+   "alignment": "STRETCH"
+  }
+ ],
+ "tree": {
+  "id": "68927:7689",
+  "name": "type=with-image, Device=mobile",
+  "type": "COMPONENT",
+  "x": 0,
+  "y": 0,
+  "w": 390,
+  "h": 726,
+  "constraints": {
+   "horizontal": "MIN",
+   "vertical": "MIN"
+  },
+  "sizing": [
+   "FIXED",
+   "FIXED"
+  ],
+  "fill": [
+   "SOLID",
+   "IMAGE"
+  ],
+  "clip": true,
+  "kids": 4,
+  "bind": {
+   "paddingLeft": "Layout/Grids/Wrapper-Default",
+   "paddingRight": "Layout/Grids/Wrapper-Default",
+   "itemSpacing": "Spacers Fixed/fx-9"
+  },
+  "children": [
+   {
+    "id": "68927:7755",
+    "name": "Overlay",
+    "type": "INSTANCE",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 1079,
+    "constraints": {
+     "horizontal": "STRETCH",
+     "vertical": "STRETCH"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "comp": "Overlay"
+   },
+   {
+    "id": "68927:7758",
+    "name": "El campo es lo más bello en la viña del señor",
+    "type": "TEXT",
+    "x": 24,
+    "y": 57,
+    "w": 509,
+    "h": 240,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "El campo es lo más bello en la viña del "
+   },
+   {
+    "id": "68927:7759",
+    "name": "Joselito ofrece, a través de sus Entidades Emisoras…",
+    "type": "TEXT",
+    "x": 24,
+    "y": 346,
+    "w": 283,
+    "h": 154,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Joselito ofrece, a través de sus Entidad"
+   },
+   {
+    "id": "68927:7760",
+    "name": "Button",
+    "type": "INSTANCE",
+    "x": 24,
+    "y": 540,
+    "w": 196,
+    "h": 64,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      32,
+      0,
+      32
+     ],
+     "gap": 8,
+     "wrap": "NO_WRAP",
+     "align": "CENTER"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "comp": "Button",
+    "bind": {
+     "paddingLeft": "Layout/Button/L/Padding",
+     "paddingRight": "Layout/Button/L/Padding",
+     "itemSpacing": "Layout/Spacers Responsive/2"
+    }
+   }
+  ]
+ }
+}

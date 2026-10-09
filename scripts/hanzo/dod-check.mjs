@@ -18,7 +18,7 @@
  *   6. Placeholders/TODO del código anotados en meta.placeholders
  *   7. Imágenes declaradas presentes en maps/images.json y el fichero WebP en disco
  *   8. Módulos: meta.layout con tipología de la guía «Módulos por layout» (Columnas, Líquido, A sangre,
- *      Mezcla) y, si es Columnas/Mezcla, columnas por cada variante de escritorio (o en layout.noColumns)
+ *      Mezcla, Composición artística), sin piezas con rol «ask» en meta.layout.pieces y, si es Columnas/Mezcla, columnas por cada variante de escritorio (o en layout.noColumns)
  *      (--strict: el CSS del módulo usa grid-column / .grid-12 salvo Líquido o A sangre)
  *   9. @media en el INICIO DE RANGO de los breakpoints (tokens.meta.json → breakpoints[].min), nunca en
  *      el ancho del frame (1024, 768…) ni en anchos sueltos. Los @container no se comprueban.
@@ -111,7 +111,7 @@ async function check(metaPath) {
   }
 
   // 4. Cobertura frente al digest
-  const digest = m.figma?.digest || `.ai/masters/${ds}.json`; // [parche Joselito] figma.digest: override si dos másters comparten slug (accordion / Accordion)
+  const digest = m.figma?.digest || `.ai/masters/${ds}.json`; // figma.digest: override si dos másters comparten slug (accordion / Accordion)
   if (await exists(digest)) {
     const r = spawnSync(process.execPath, [path.join(HERE, 'figma-diff.mjs'), '--digest', digest, '--meta', metaPath], { encoding: 'utf8' });
     ok(r.status === 0, 'Cubre lo que tiene el máster de Figma (figma-diff)', r.status === 0 ? '' : r.stdout.trim().split('\n').slice(1, 6).join(' / '));
@@ -144,8 +144,10 @@ async function check(metaPath) {
   // 8. Layout por columnas (módulos)
   if (m.kind === 'module') {
     const L = m.layout || {};
-    const TYPES = /columnas|l[ií]quido|a sangre|mezcla|columns|liquid|full[\s-]?bleed|mixed/i;
-    ok(L.type && TYPES.test(L.type), 'meta.layout.type con tipología de «Módulos por layout»', L.type ? (TYPES.test(L.type) ? L.type : `"${L.type}" no es Columnas / Líquido / A sangre / Mezcla`) : 'falta meta.layout (npm run grid -- … --meta)');
+    const TYPES = /columnas|l[ií]quido|a sangre|mezcla|art[ií]stic|columns|liquid|full[\s-]?bleed|mixed|art/i;
+    ok(L.type && TYPES.test(L.type), 'meta.layout.type con tipología de «Módulos por layout»', L.type ? (TYPES.test(L.type) ? L.type : `"${L.type}" no es Columnas / Líquido / A sangre / Mezcla / Composición artística`) : 'falta meta.layout (npm run grid -- … --meta)');
+    const asks = (L.pieces || []).filter((p) => p.role === 'ask');
+    ok(!asks.length, 'Todas las piezas interpretadas (meta.layout.pieces sin rol «ask»)', asks.length ? `sin resolver: ${asks.map((p) => `${p.piece} (${p.variant})`).join(', ')} → mirar la captura o preguntar y fijar el rol` : `${(L.pieces || []).length} piezas fuera de columnas interpretadas`);
     const needCols = /columnas|mezcla|columns|mixed/i.test(L.type || '');
     if (needCols) {
       const norm = (x) => slug(x || '');
@@ -168,7 +170,7 @@ async function check(metaPath) {
       if (!/\.(css|scss|jsx|tsx|html|liquid)$/.test(f) || !(await exists(f))) continue;
       const t = await fs.readFile(f, 'utf8');
       for (const mm of t.matchAll(/@media[^{]*?\((min|max)-width:\s*(\d+(?:\.\d+)?)px\)/g)) {
-        const n = Math.round(Number(mm[2])), okN = mm[1] === 'min' ? bpStarts.has(n) : bpStarts.has(Math.floor(Number(mm[2])) + 1); // [parche Joselito] max-width 959.98px = fin del rango anterior a 960
+        const n = Math.round(Number(mm[2])), okN = mm[1] === 'min' ? bpStarts.has(n) : bpStarts.has(Math.floor(Number(mm[2])) + 1); // max-width 959.98px = fin del rango anterior a 960
         if (!okN) bad.push(`${path.basename(f)}: ${mm[1]}-width ${mm[2]}px${frameWidths.has(n) ? ' (ancho de frame)' : ''}`);
       }
     }

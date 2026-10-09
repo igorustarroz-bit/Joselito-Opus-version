@@ -4,7 +4,7 @@ Estados: `[ ]` pendiente · `[~]` en progreso · `[x]` hecho · `[!]` bloqueado 
 Nada se marca hecho sin cumplir la **Definition of Done** (CONTEXT.md / references/dod.md).
 Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa `npm run plan -- --set <clave>=done --fp` o marca el checkbox (se respeta al regenerar).
 
-**Progreso:** 107/107 hechos · 0 en curso · 0 bloqueados
+**Progreso:** 94/96 hechos · 0 en curso · 0 bloqueados · ⚠ 1 cambiados en Figma
 
 ## Fase 0 — Setup
 
@@ -21,36 +21,22 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 - [x] Aspect Ratio `50942:37236` — 8 variantes · 8 img <!-- k:foundation:aspect-ratio -->
 
-## Fase 2b — Iconos y brand assets
+## Fase 2b — Vectores de Brand Assets (iconos, logos, certificaciones, firmas…)
 
-- [x] Set de iconos (137) → SVGR/SVGO <!-- k:icons:set -->
-- [x] Visa `63609:144103` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:visa -->
-- [x] Brand Logo `58073:6883` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:brand-logo -->
-- [x] Logo Grid `51027:8208` — 2 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-grid -->
-- [x] Logo Riu `52007:6841` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-riu -->
-- [x] Logo UFV `49722:3620` — 4 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-ufv -->
-- [x] PEFC CERTIFICATE `58786:48814` — 3 variantes · confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:pefc-certificate -->
-- [x] Customer Award Ekomi `58786:48912` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:customer-award-ekomi -->
-- [x] Logo_junta_de_castilla_y_leon `58799:2555` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:logo-junta-de-castilla-y-leon -->
-- [x] firma_ferran_adria `62303:284950` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-ferran-adria -->
-- [x] firma_nou_manolín `62348:109683` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-nou-manolin -->
-- [x] firma_eneko_atxa `62348:110429` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-eneko-atxa -->
-- [x] firma_bittor_arginzoniz `62348:110843` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-bittor-arginzoniz -->
-- [x] firma_yannick_alleno `62348:111288` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-yannick-alleno -->
-- [x] firma_joaquim_wissler `62348:111452` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-joaquim-wissler -->
-- [x] firma_seiji_yamamoto `62348:111667` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-seiji-yamamoto -->
-- [x] firma_jonnie_boer `62348:111829` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-jonnie-boer -->
-- [x] firma_massimiliano_alajmo `62348:111888` — confirmar alcance (logos de terceros, certificaciones…) <!-- k:brand:firma-massimiliano-alajmo -->
+- [x] Vectores de Brand Assets (151 másters) → SVG optimizado (SVGO/SVGR) — Icons: 137 · Brand Logo: 4 · Related Logos: 1 · Firmas: 9 · ⚠ CAMBIÓ EN FIGMA <!-- k:icons:set -->
+- [x] Visa `63609:144103` — 1 img · brand asset con imagen raster (su imagen va en el hito de imágenes) <!-- k:brand:visa -->
+- [x] PEFC CERTIFICATE `58786:48814` — 3 variantes · brand asset con texto sin contornear: pedir a diseño que lo vectorice o construirlo como componente <!-- k:brand:pefc-certificate -->
+- [x] Customer Award Ekomi `58786:48912` — 1 img · brand asset con imagen raster (su imagen va en el hito de imágenes) <!-- k:brand:customer-award-ekomi -->
 
 ## Fase 2.5 — HITO de imágenes (justo después de los iconos; no se salta)
 
-- [x] HITO: descarga de imágenes raster → WebP + maps/images.json (npm run images) — 242 img <!-- k:milestone:images -->
+- [x] HITO: descarga de imágenes raster → WebP + maps/images.json (npm run images) — 250 img <!-- k:milestone:images -->
 
 ## Fase 3 — Componentes (ordenados: primero los que son base de otros)
 
 - [x] Button-Action-Link `49038:9486` — 12 variantes <!-- k:component:button-action-link -->
-- [x] Button-Icon `49038:9364` — 65 variantes <!-- k:component:button-icon -->
 - [x] Button `49038:9189` — 60 variantes <!-- k:component:button -->
+- [x] Button-Icon `49038:9364` — 65 variantes <!-- k:component:button-icon -->
 - [x] Tag `49723:4763` — 9 variantes <!-- k:component:tag -->
 - [x] Title `61387:120074` — 2 variantes <!-- k:component:title -->
 - [x] NavButton `59214:48916` — 5 variantes <!-- k:component:nav-button -->
@@ -80,6 +66,7 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Checkbox-List `57947:46573` — 2 variantes · usa: Checkbox-Label, Checkboxes-Radios <!-- k:component:checkbox-list -->
 - [x] Form `57947:46433` — usa: Button, Button-Action-Link, Checkbox-Label, Checkbox-List, Checkboxes-Radios, Input… <!-- k:component:form -->
 - [x] InputAndButton `58786:21956` — 14 variantes · usa: Button-Icon <!-- k:component:input-and-button -->
+- [x] Overlay `58786:13661` — autolayout 0/1 → análisis de geometría <!-- k:component:overlay -->
 - [x] subnavigation-item `59289:60784` — 2 variantes <!-- k:component:subnavigation-item -->
 - [x] tab_primary `57943:37527` — 5 variantes <!-- k:component:tab-primary -->
 - [x] tab_secondary `57943:45626` — 5 variantes <!-- k:component:tab-secondary -->
@@ -92,7 +79,6 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] Modal_Lightbox `60581:102087` — 10 variantes · 11 img · usa: Alert, Aspect Ratio, Button, Button-Icon, Checkboxes-Radios, RowButtons… <!-- k:component:modal-lightbox -->
 - [x] Order by Day `63559:58027` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Card Product, Tag <!-- k:component:order-by-day -->
 - [x] Order Summary `63609:146051` — 2 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Card Product, Tag <!-- k:component:order-summary -->
-- [x] Overlay `58786:13661` — autolayout 0/1 → análisis de geometría <!-- k:component:overlay -->
 - [x] Placeholder-Text `57961:792` <!-- k:component:placeholder-text -->
 - [x] row_2_input `57953:9134` — usa: Input <!-- k:component:row-2-input -->
 - [x] row_3_input `57953:9192` — usa: Input <!-- k:component:row-3-input -->
@@ -101,11 +87,11 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 
 ## Fase 4 — Módulos (100% ancho, grid de columnas del sistema, por breakpoint)
 
-- [x] M01-Navigation `58182:4143` — 6 variantes · usa: Brand Logo, NavButton <!-- k:module:m01-navigation -->
-- [x] M02-Menu `58182:4350` — 5 variantes · 10 img · usa: Aspect Ratio, Brand Logo, Button-Action-Link, M01-Navigation, NavButton, menu-item-list… <!-- k:module:m02-menu -->
+- [x] M01-Navigation `58182:4143` — 6 variantes · usa: NavButton <!-- k:module:m01-navigation -->
+- [x] M02-Menu `58182:4350` — 5 variantes · 10 img · usa: Aspect Ratio, Button-Action-Link, M01-Navigation, NavButton, menu-item-list, mobile_menu_accordion <!-- k:module:m02-menu -->
 - [x] M06-Navigation-Secondarymenu `60634:75153` — 5 variantes · 1 img · usa: Aspect Ratio, M02-Menu, NavButton, menu-item-list, subnavigation-item <!-- k:module:m06-navigation-secondarymenu -->
 - [x] M03-Navigation-Footer `58163:33397` — 2 variantes · 2 img · usa: Aspect Ratio, Button-Action-Link, Button-Icon, Checkbox-Label, Checkboxes-Radios, Customer Award Ekomi… <!-- k:module:m03-navigation-footer -->
-- [x] M04-Login `63727:483351` — 2 variantes · usa: Aspect Ratio, Brand Logo, Button, Divider, Form, Input… <!-- k:module:m04-login -->
+- [x] M04-Login `63727:483351` — 2 variantes · usa: Aspect Ratio, Button, Divider, Form, Input, M01-Navigation… <!-- k:module:m04-login -->
 - [x] M05-Filter-Secondary Menu `61276:141868` — 8 variantes · usa: Button, Button-Action-Link, Button-Icon, Checkboxes-Radios, Tag, listbox_Item_Dropdown <!-- k:module:m05-filter-secondary-menu -->
 - [x] M07-Content-Text+Image `58363:34365` — 12 variantes · 12 img · usa: Aspect Ratio, Divider, RowButtons <!-- k:module:m07-content-text-image -->
 - [x] M08-Content-Imageonly `59895:103739` — 6 variantes · 8 img · usa: Aspect Ratio · autolayout 5/6 → análisis de geometría <!-- k:module:m08-content-imageonly -->
@@ -113,10 +99,10 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M10-Errors `63688:482735` — 2 variantes · 2 img · usa: 404_picture, Aspect Ratio, Button-Action-Link · autolayout 0/2 → análisis de geometría <!-- k:module:m10-errors -->
 - [x] M11-Content-Textonly `58163:39972` — 5 variantes · usa: button <!-- k:module:m11-content-textonly -->
 - [x] M12-Content-Introtext `58153:32094` — 2 variantes · usa: Button-Action-Link <!-- k:module:m12-content-introtext -->
-- [x] M13-Hero-Homepagehero `58182:4353` — 4 variantes · 2 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton, Stepper_for_toast, Toast · autolayout 0/4 → análisis de geometría <!-- k:module:m13-hero-homepagehero -->
-- [x] M14-Hero-Sectionheader `58508:6679` — 6 variantes · 9 img · usa: Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back, Tag… <!-- k:module:m14-hero-sectionheader -->
-- [x] M15-Hero-Sectionhero `58508:35830` — 12 variantes · usa: Aspect Ratio, Brand Logo, Button-Action-Link, Button-Icon, M01-Navigation, NavButton · autolayout 4/12 → análisis de geometría <!-- k:module:m15-hero-sectionhero -->
-- [x] M16-Hero-Productdetail `61365:56297` — 4 variantes · 11 img · usa: Add_to_list, Aspect Ratio, Brand Logo, Button, Button-Action-Link, Button-Icon… · autolayout 2/4 → análisis de geometría <!-- k:module:m16-hero-productdetail -->
+- [x] M13-Hero-Homepagehero `58182:4353` — 4 variantes · 2 img · usa: Aspect Ratio, M01-Navigation, NavButton, Stepper_for_toast, Toast · autolayout 0/4 → análisis de geometría <!-- k:module:m13-hero-homepagehero -->
+- [x] M14-Hero-Sectionheader `58508:6679` — 6 variantes · 9 img · usa: Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back, Tag <!-- k:module:m14-hero-sectionheader -->
+- [x] M15-Hero-Sectionhero `58508:35830` — 12 variantes · usa: Aspect Ratio, Button-Action-Link, Button-Icon, M01-Navigation, NavButton · autolayout 4/12 → análisis de geometría <!-- k:module:m15-hero-sectionhero -->
+- [x] M16-Hero-Productdetail `61365:56297` — 4 variantes · 11 img · usa: Add_to_list, Aspect Ratio, Button, Button-Action-Link, Button-Icon, Go_Back… · autolayout 2/4 → análisis de geometría <!-- k:module:m16-hero-productdetail -->
 - [x] M17-Banners-Sectionbanner `58182:4380` — 8 variantes · 8 img · usa: Aspect Ratio, Button-Action-Link, Tag · autolayout 6/8 → análisis de geometría <!-- k:module:m17-banners-sectionbanner -->
 - [x] M18-Banners-Full Screen Slider `59895:79904` — 14 variantes · 26 img · usa: Aspect Ratio, Button-Action-Link, Tag, Title · autolayout 2/14 → análisis de geometría <!-- k:module:m18-banners-full-screen-slider -->
 - [x] M19-Card-Grid `61387:153548` — 2 variantes · 12 img · usa: Aspect Ratio, Card Product, Tag, Title <!-- k:module:m19-card-grid -->
@@ -126,10 +112,13 @@ Generado por `scripts/plan.mjs` desde `.ai/index.json`: para cambiar estados usa
 - [x] M23-Cards-Gallery `60054:12474` — 6 variantes · 16 img · usa: Aspect Ratio, Button-Icon, Card-Social-media, Title · autolayout 5/6 → análisis de geometría <!-- k:module:m23-cards-gallery -->
 - [x] M24-Cards-Productcarousel `60286:43172` — 2 variantes · 7 img · usa: Arrow, Aspect Ratio, Card Product, Title <!-- k:module:m24-cards-productcarousel -->
 - [x] M25-Cards-Links `58182:4396` — 4 variantes · 6 img · usa: Aspect Ratio, Button, Button-Action-Link, Card Carrusel, Title <!-- k:module:m25-cards-links -->
-- [x] M26-Buscador `61439:232705` — 6 variantes · usa: Brand Logo, Button, Button-Action-Link, Button-Icon <!-- k:module:m26-buscador -->
+- [x] M26-Buscador `61439:232705` — 6 variantes · usa: Button, Button-Action-Link, Button-Icon <!-- k:module:m26-buscador -->
 - [x] M27-Cards-Categories `58163:40311` — 2 variantes · 6 img · usa: Aspect Ratio, Button-Icon, Card Product <!-- k:module:m27-cards-categories -->
 - [x] M28-Cards-Accordion `58512:9289` — 5 variantes · 13 img · usa: */Overrides/Stars/Star, Aspect Ratio, Button, Button-Action-Link, Tag, Title <!-- k:module:m28-cards-accordion -->
 - [x] M29-User-Profile `63559:53572` — 2 variantes · usa: M06-Navigation-Secondarymenu, menu-item-list <!-- k:module:m29-user-profile -->
-- [x] M30-Hero-Joselito-Lab `63928:325885` — 2 variantes · 12 img · usa: Aspect Ratio, Brand Logo, M01-Navigation, NavButton · autolayout 0/2 → análisis de geometría <!-- k:module:m30-hero-joselito-lab -->
+- [x] M30-Hero-Joselito-Lab `63928:325885` — 2 variantes · 12 img · usa: Aspect Ratio, M01-Navigation, NavButton · autolayout 0/2 → análisis de geometría <!-- k:module:m30-hero-joselito-lab -->
 - [x] M31-Navigation-PreviousNext `58464:36878` — 2 variantes · usa: Button-Icon <!-- k:module:m31-navigation-previous-next -->
 - [x] M32-List-ArchiveList `59895:46608` — 2 variantes · 2 img · usa: Aspect Ratio, Block Archive List, Button, Title · autolayout 1/2 → análisis de geometría <!-- k:module:m32-list-archive-list -->
+- [x] M36-content doble photo `68927:7315` — 2 variantes · 4 img · usa: Aspect Ratio, Button-Action-Link · autolayout 0/2 → análisis de geometría <!-- k:module:m36-content-doble-photo -->
+- [ ] M37-narrative `68927:7582` — 2 variantes · 2 img · usa: Aspect Ratio, Button · autolayout 0/2 → análisis de geometría <!-- k:module:m37-narrative -->
+- [ ] M38-scrolled-big-text `68927:7670` — 2 variantes · 2 img · usa: Button, Overlay · autolayout 0/2 → análisis de geometría <!-- k:module:m38-scrolled-big-text -->

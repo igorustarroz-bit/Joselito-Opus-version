@@ -1,0 +1,182 @@
+{
+ "id": "68927:7589",
+ "name": "type=with-image, Device=mobile",
+ "type": "COMPONENT",
+ "variant": {
+  "type": "with-image",
+  "Device": "mobile"
+ },
+ "w": 390,
+ "h": 1079,
+ "layoutGrids": [
+  {
+   "pattern": "COLUMNS",
+   "count": 6,
+   "gutter": 12,
+   "offset": 24,
+   "alignment": "STRETCH"
+  }
+ ],
+ "tree": {
+  "id": "68927:7589",
+  "name": "type=with-image, Device=mobile",
+  "type": "COMPONENT",
+  "x": 0,
+  "y": 0,
+  "w": 390,
+  "h": 1079,
+  "constraints": {
+   "horizontal": "MIN",
+   "vertical": "MIN"
+  },
+  "sizing": [
+   "FIXED",
+   "FIXED"
+  ],
+  "fill": [
+   "SOLID"
+  ],
+  "clip": true,
+  "kids": 5,
+  "bind": {
+   "paddingLeft": "Layout/Grids/Wrapper-Default",
+   "paddingRight": "Layout/Grids/Wrapper-Default",
+   "itemSpacing": "Spacers Fixed/fx-9"
+  },
+  "children": [
+   {
+    "id": "68927:7642",
+    "name": "Lorem ipsum dolor sit amet",
+    "type": "TEXT",
+    "x": 24,
+    "y": 86,
+    "w": 283,
+    "h": 76,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Lorem ipsum dolor sit amet "
+   },
+   {
+    "id": "68927:7643",
+    "name": "Aspect Ratio",
+    "type": "INSTANCE",
+    "x": -1,
+    "y": 554,
+    "w": 391,
+    "h": 587,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "IMAGE"
+    ],
+    "comp": "Aspect Ratio"
+   },
+   {
+    "id": "68927:7644",
+    "name": "Joselito ofrece, a través de sus Entidades Emisoras…",
+    "type": "TEXT",
+    "x": 24,
+    "y": 257,
+    "w": 283,
+    "h": 154,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Joselito ofrece, a través de sus Entidad"
+   },
+   {
+    "id": "68927:7645",
+    "name": "Frame 2087332515",
+    "type": "FRAME",
+    "x": 24,
+    "y": 206,
+    "w": 186,
+    "h": 24,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "gap": 16,
+     "wrap": "NO_WRAP",
+     "align": "MIN"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "HUG"
+    ],
+    "repeat": 5,
+    "kids": 6
+   },
+   {
+    "id": "68927:7658",
+    "name": "Button",
+    "type": "INSTANCE",
+    "x": 24,
+    "y": 438,
+    "w": 120,
+    "h": 40,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      16,
+      0,
+      16
+     ],
+     "gap": 8,
+     "wrap": "NO_WRAP",
+     "align": "CENTER"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "comp": "Button",
+    "bind": {
+     "minWidth": "Layout/Button/XS/Min-Width",
+     "paddingLeft": "Layout/Button/XS/Padding",
+     "paddingRight": "Layout/Button/XS/Padding",
+     "itemSpacing": "Layout/Spacers Responsive/2"
+    }
+   }
+  ]
+ }
+}

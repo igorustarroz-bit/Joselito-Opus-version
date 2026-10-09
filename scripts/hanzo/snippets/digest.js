@@ -111,7 +111,7 @@ async function walk(node, variant, depth, sig, inInstance) {
         sig.push(`${k}:${n || r(v)}`);
       }
     } else if ('children' in node && node.children.filter((c) => c.visible).length > 1 && depth > 0) {
-      issue('info', 'NO_AUTOLAYOUT', variant, node, 'Frame sin autolayout: usar análisis de geometría/columnas (grid-columns.mjs)');
+      issue('info', 'NO_AUTOLAYOUT', variant, node, 'Frame sin autolayout: no es un error; se interpreta por geometría + captura (layout-boxes.js → grid-columns.mjs)');
     }
     for (const k of ['width', 'height', 'minWidth', 'maxWidth']) { const n = await vname(b[k]?.id); if (n) tokens.sizes.add(n); }
     if (node.layoutPositioning === 'ABSOLUTE') sig.push('abs');
@@ -151,6 +151,8 @@ for (const v of variantNodes) {
 }
 
 // Auditoría a nivel de máster
+// ÚNICO acuerdo obligatorio con diseño: cada módulo/componente es un máster (componente o component set)
+if (root.type !== 'COMPONENT_SET' && root.type !== 'COMPONENT') issue('error', 'NOT_MASTER', null, root, `Es un ${root.type}, no un máster: pedir a diseño que lo convierta en componente (Mxx-Nombre) antes de construir`);
 const devKey = Object.keys(props).find((k) => /device|breakpoint|viewport|dispositivo/i.test(k));
 if (/^M\d+/i.test(root.name) || root.width >= 1200) {
   if (!devKey) issue('warn', 'NO_DEVICE_PROP', null, root, 'Módulo sin propiedad Device (Desktop/Mobile): habrá que inferir el responsive');

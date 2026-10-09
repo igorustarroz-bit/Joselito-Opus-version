@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:56:25.584Z",
+  "generatedAt": "2026-10-09T08:34:04.047Z",
   "output": "react-storybook",
   "items": [
     {
@@ -56,8 +56,8 @@
       "phase": "brand",
       "kind": "icons",
       "key": "icons:set",
-      "name": "Set de iconos (137) → SVGR/SVGO",
-      "count": 137,
+      "name": "Vectores de Brand Assets (151 másters) → SVG optimizado (SVGO/SVGR)",
+      "count": 151,
       "nodeIds": [
         "49026:6521",
         "49026:6534",
@@ -195,10 +195,31 @@
         "52060:10470",
         "52299:5242",
         "58195:44167",
-        "61406:198000"
+        "61406:198000",
+        "58073:6883",
+        "51027:8208",
+        "52007:6841",
+        "49722:3620",
+        "58799:2555",
+        "62303:284950",
+        "62348:109683",
+        "62348:110429",
+        "62348:110843",
+        "62348:111288",
+        "62348:111452",
+        "62348:111667",
+        "62348:111829",
+        "62348:111888"
       ],
-      "fp": "70b13aa5",
-      "builtFp": "70b13aa5"
+      "fp": "681354cd",
+      "builtFp": "70b13aa5",
+      "note": "Icons: 137 · Brand Logo: 4 · Related Logos: 1 · Firmas: 9",
+      "sections": {
+        "Icons": 137,
+        "Brand Logo": 4,
+        "Related Logos": 1,
+        "Firmas": 9
+      }
     },
     {
       "status": "done",
@@ -209,56 +230,9 @@
       "pageId": "51027:4238",
       "fp": "3daede52",
       "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:visa"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "Brand Logo",
-      "nodeId": "58073:6883",
-      "pageId": "51027:4238",
-      "fp": "87b119e2",
-      "variants": 2,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:brand-logo"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "Logo Grid",
-      "nodeId": "51027:8208",
-      "pageId": "51027:4238",
-      "fp": "d13b48fc",
-      "variants": 2,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:logo-grid"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "Logo Riu",
-      "nodeId": "52007:6841",
-      "pageId": "51027:4238",
-      "fp": "25632721",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:logo-riu"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "Logo UFV",
-      "nodeId": "49722:3620",
-      "pageId": "51027:4238",
-      "fp": "47d0cdaa",
-      "variants": 4,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:logo-ufv"
+      "note": "brand asset con imagen raster (su imagen va en el hito de imágenes)",
+      "key": "brand:visa",
+      "images": 1
     },
     {
       "status": "done",
@@ -269,8 +243,9 @@
       "pageId": "51027:4238",
       "fp": "606b2f18",
       "variants": 3,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:pefc-certificate"
+      "note": "brand asset con texto sin contornear: pedir a diseño que lo vectorice o construirlo como componente",
+      "key": "brand:pefc-certificate",
+      "images": 0
     },
     {
       "status": "done",
@@ -281,128 +256,9 @@
       "pageId": "51027:4238",
       "fp": "fb7bdf03",
       "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:customer-award-ekomi"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "Logo_junta_de_castilla_y_leon",
-      "nodeId": "58799:2555",
-      "pageId": "51027:4238",
-      "fp": "e848e85e",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:logo-junta-de-castilla-y-leon"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_ferran_adria",
-      "nodeId": "62303:284950",
-      "pageId": "51027:4238",
-      "fp": "1b4d6723",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-ferran-adria"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_nou_manolín",
-      "nodeId": "62348:109683",
-      "pageId": "51027:4238",
-      "fp": "fcf169a4",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-nou-manolin"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_eneko_atxa",
-      "nodeId": "62348:110429",
-      "pageId": "51027:4238",
-      "fp": "c5c83f17",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-eneko-atxa"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_bittor_arginzoniz",
-      "nodeId": "62348:110843",
-      "pageId": "51027:4238",
-      "fp": "ec1bae03",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-bittor-arginzoniz"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_yannick_alleno",
-      "nodeId": "62348:111288",
-      "pageId": "51027:4238",
-      "fp": "96b3cf2d",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-yannick-alleno"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_joaquim_wissler",
-      "nodeId": "62348:111452",
-      "pageId": "51027:4238",
-      "fp": "71746e5b",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-joaquim-wissler"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_seiji_yamamoto",
-      "nodeId": "62348:111667",
-      "pageId": "51027:4238",
-      "fp": "62252c0e",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-seiji-yamamoto"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_jonnie_boer",
-      "nodeId": "62348:111829",
-      "pageId": "51027:4238",
-      "fp": "6ce17e29",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-jonnie-boer"
-    },
-    {
-      "status": "done",
-      "phase": "brand",
-      "kind": "brand",
-      "name": "firma_massimiliano_alajmo",
-      "nodeId": "62348:111888",
-      "pageId": "51027:4238",
-      "fp": "bfc3e73d",
-      "variants": 1,
-      "note": "confirmar alcance (logos de terceros, certificaciones…)",
-      "key": "brand:firma-massimiliano-alajmo"
+      "note": "brand asset con imagen raster (su imagen va en el hito de imágenes)",
+      "key": "brand:customer-award-ekomi",
+      "images": 1
     },
     {
       "status": "done",
@@ -410,7 +266,7 @@
       "kind": "milestone",
       "key": "milestone:images",
       "name": "HITO: descarga de imágenes raster → WebP + maps/images.json (npm run images)",
-      "images": 242
+      "images": 250
     },
     {
       "status": "done",
@@ -431,21 +287,6 @@
       "status": "done",
       "phase": "components",
       "kind": "component",
-      "name": "Button-Icon",
-      "nodeId": "49038:9364",
-      "pageId": "5027:345",
-      "fp": "a8a675d7",
-      "variants": 65,
-      "deps": [],
-      "images": 0,
-      "autolayout": "65/65",
-      "key": "component:button-icon",
-      "builtFp": "a8a675d7"
-    },
-    {
-      "status": "done",
-      "phase": "components",
-      "kind": "component",
       "name": "Button",
       "nodeId": "49038:9189",
       "pageId": "5027:345",
@@ -456,6 +297,21 @@
       "autolayout": "60/60",
       "key": "component:button",
       "builtFp": "205b8454"
+    },
+    {
+      "status": "done",
+      "phase": "components",
+      "kind": "component",
+      "name": "Button-Icon",
+      "nodeId": "49038:9364",
+      "pageId": "5027:345",
+      "fp": "a8a675d7",
+      "variants": 65,
+      "deps": [],
+      "images": 0,
+      "autolayout": "65/65",
+      "key": "component:button-icon",
+      "builtFp": "a8a675d7"
     },
     {
       "status": "done",
@@ -948,6 +804,21 @@
       "status": "done",
       "phase": "components",
       "kind": "component",
+      "name": "Overlay",
+      "nodeId": "58786:13661",
+      "pageId": "5027:345",
+      "fp": "4768eb43",
+      "variants": 1,
+      "deps": [],
+      "images": 0,
+      "autolayout": "0/1",
+      "key": "component:overlay",
+      "builtFp": "4768eb43"
+    },
+    {
+      "status": "done",
+      "phase": "components",
+      "kind": "component",
       "name": "subnavigation-item",
       "nodeId": "59289:60784",
       "pageId": "5027:345",
@@ -1157,21 +1028,6 @@
       "status": "done",
       "phase": "components",
       "kind": "component",
-      "name": "Overlay",
-      "nodeId": "58786:13661",
-      "pageId": "5027:345",
-      "fp": "4768eb43",
-      "variants": 1,
-      "deps": [],
-      "images": 0,
-      "autolayout": "0/1",
-      "key": "component:overlay",
-      "builtFp": "4768eb43"
-    },
-    {
-      "status": "done",
-      "phase": "components",
-      "kind": "component",
       "name": "Placeholder-Text",
       "nodeId": "57961:792",
       "pageId": "5027:345",
@@ -1263,7 +1119,6 @@
       "fp": "698b4bf3",
       "variants": 6,
       "deps": [
-        "Brand Logo",
         "NavButton"
       ],
       "images": 0,
@@ -1282,7 +1137,6 @@
       "variants": 5,
       "deps": [
         "Aspect Ratio",
-        "Brand Logo",
         "Button-Action-Link",
         "M01-Navigation",
         "NavButton",
@@ -1332,7 +1186,6 @@
         "Checkboxes-Radios",
         "Customer Award Ekomi",
         "InputAndButton",
-        "Logo_junta_de_castilla_y_leon",
         "PEFC CERTIFICATE",
         "mobile_menu_accordion"
       ],
@@ -1352,7 +1205,6 @@
       "variants": 2,
       "deps": [
         "Aspect Ratio",
-        "Brand Logo",
         "Button",
         "Divider",
         "Form",
@@ -1506,7 +1358,6 @@
       "variants": 4,
       "deps": [
         "Aspect Ratio",
-        "Brand Logo",
         "M01-Navigation",
         "NavButton",
         "Stepper_for_toast",
@@ -1532,8 +1383,7 @@
         "Button-Action-Link",
         "Button-Icon",
         "Go_Back",
-        "Tag",
-        "firma_ferran_adria"
+        "Tag"
       ],
       "images": 9,
       "autolayout": "6/6",
@@ -1551,7 +1401,6 @@
       "variants": 12,
       "deps": [
         "Aspect Ratio",
-        "Brand Logo",
         "Button-Action-Link",
         "Button-Icon",
         "M01-Navigation",
@@ -1574,7 +1423,6 @@
       "deps": [
         "Add_to_list",
         "Aspect Ratio",
-        "Brand Logo",
         "Button",
         "Button-Action-Link",
         "Button-Icon",
@@ -1778,7 +1626,6 @@
       "fp": "eadad876",
       "variants": 6,
       "deps": [
-        "Brand Logo",
         "Button",
         "Button-Action-Link",
         "Button-Icon"
@@ -1858,7 +1705,6 @@
       "variants": 2,
       "deps": [
         "Aspect Ratio",
-        "Brand Logo",
         "M01-Navigation",
         "NavButton"
       ],
@@ -1903,6 +1749,58 @@
       "autolayout": "1/2",
       "key": "module:m32-list-archive-list",
       "builtFp": "4fa4c859"
+    },
+    {
+      "status": "done",
+      "phase": "modules",
+      "kind": "module",
+      "name": "M36-content doble photo",
+      "nodeId": "68927:7315",
+      "pageId": "53927:2121",
+      "fp": "840730a4",
+      "variants": 2,
+      "deps": [
+        "Aspect Ratio",
+        "Button-Action-Link"
+      ],
+      "images": 4,
+      "autolayout": "0/2",
+      "key": "module:m36-content-doble-photo",
+      "builtFp": "840730a4"
+    },
+    {
+      "status": "todo",
+      "phase": "modules",
+      "kind": "module",
+      "name": "M37-narrative",
+      "nodeId": "68927:7582",
+      "pageId": "53927:2121",
+      "fp": "b880fe79",
+      "variants": 2,
+      "deps": [
+        "Aspect Ratio",
+        "Button"
+      ],
+      "images": 2,
+      "autolayout": "0/2",
+      "key": "module:m37-narrative"
+    },
+    {
+      "status": "todo",
+      "phase": "modules",
+      "kind": "module",
+      "name": "M38-scrolled-big-text",
+      "nodeId": "68927:7670",
+      "pageId": "53927:2121",
+      "fp": "d94892d7",
+      "variants": 2,
+      "deps": [
+        "Button",
+        "Overlay"
+      ],
+      "images": 2,
+      "autolayout": "0/2",
+      "key": "module:m38-scrolled-big-text"
     }
   ],
   "removed": [],

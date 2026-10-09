@@ -1,0 +1,90 @@
+{
+  "name": "M36ContentDoblePhoto",
+  "kind": "module",
+  "title": "M36-content doble photo",
+  "figma": { "nodeId": "68927:7315", "name": "M36-content doble photo", "fp": "36492da9", "fileKey": "9pjwT8L6tbhQ05JjTFcaSP" },
+  "description": "Bloque editorial con título, enlace de acción, párrafo y dos fotos: una vertical dentro de la rejilla y otra horizontal que sale a sangre por la derecha y se apoya en el borde inferior del módulo.",
+  "defaultStory": "Default",
+  "variantAxes": { "Device": ["desktop", "mobile"], "type": ["with-image"] },
+  "codeOnlyAxes": [],
+  "variants": [
+    { "story": "Desktop", "title": "type=with-image, Device=desktop" },
+    { "story": "Mobile", "title": "type=with-image, Device=mobile" }
+  ],
+  "axes": [
+    { "name": "Device", "description": "Versión de escritorio y versión móvil del máster. En código es un solo componente que se adapta por breakpoint (960 px); para ver la móvil, usa el viewport XS.",
+      "options": [ { "value": "desktop", "story": "Desktop" }, { "value": "mobile", "story": "Mobile" } ] },
+    { "name": "type", "description": "El máster solo tiene `with-image`: no se expone como prop.", "options": [ { "value": "with-image", "story": "Default" } ] }
+  ],
+  "usage": {
+    "intro": "_Propuesta pendiente de OK de diseño._ Úsalo para un bloque editorial con dos imágenes que dan ritmo a la página: una vertical acompañando al texto y otra horizontal que rompe la rejilla hacia el borde.",
+    "do": ["Usa una foto vertical (2:3) y una horizontal panorámica (9:4).", "Mantén el párrafo en unas 40–60 palabras para que no choque con la foto horizontal.", "Usa el enlace para llevar al siguiente paso o sección."],
+    "dont": ["No lo uses con una sola foto: para eso está `M07-Content-Text+Image`.", "No pongas títulos de más de dos líneas en escritorio."]
+  },
+  "useCases": [ { "title": "Página editorial", "description": "Entre bloques de texto para presentar un producto o una historia con dos imágenes.", "story": "Default" } ],
+  "changelog": [ { "date": "2026-10-09", "version": "", "changes": ["Primera versión (módulo sin autolayout en Figma, interpretado por columnas y captura)"] } ],
+  "props": [
+    { "name": "title", "figma": "Title", "description": "Título (Title/04, h2).", "default": "Lorem ipsum dolor sit amet", "control": "text" },
+    { "name": "text", "description": "Párrafo (Body/02).", "default": "Joselito ofrece, a través de sus Entidades Emisoras…", "control": "text" },
+    { "name": "linkText", "description": "Texto del enlace de acción (Button-Action-Link con flecha). Vacío = sin enlace.", "default": "Siguente", "control": "text" },
+    { "name": "linkHref", "description": "Destino del enlace (si no hay, es un botón).", "default": "", "control": "text" },
+    { "name": "imageVertical", "description": "Foto vertical 2:3.", "default": "m23-cards-gallery-6.webp", "control": "text" },
+    { "name": "imageVerticalAlt", "description": "Texto alternativo de la foto vertical.", "default": "", "control": "text" },
+    { "name": "imageHorizontal", "description": "Foto horizontal 9:4 (a sangre).", "default": "m32-list-archive-list.webp", "control": "text" },
+    { "name": "imageHorizontalAlt", "description": "Texto alternativo de la foto horizontal.", "default": "", "control": "text" },
+    { "name": "theme", "description": "Fija el subtema (si no, hereda el de la página).", "default": "", "control": "text" }
+  ],
+  "tokens": {
+    "color": [ { "token": "--backgrounds-base", "usage": "fondo" }, { "token": "--texts-base", "usage": "título" }, { "token": "--texts-neutral-1", "usage": "párrafo" } ],
+    "spacing": [
+      { "token": "--layout-grids-wrapper-default / --layout-grids-gutter", "usage": "márgenes y columnas" },
+      { "token": "--spacers-fixed-fx-15 / fx-11", "usage": "padding superior escritorio / móvil" },
+      { "token": "--spacers-fixed-fx-4 / fx-9 / fx-10 / fx-12 / fx-14", "usage": "separaciones entre piezas" }
+    ]
+  },
+  "subthemes": { "default": "light-white", "supported": ["light-white", "light-grey"], "notes": "Hereda el subtema de la página." },
+  "anatomy": ["Título Title/04", "Button-Action-Link (L, flecha derecha)", "Aspect Ratio 2:3 (foto vertical)", "Párrafo Body/02", "Aspect Ratio 9:4 a sangre (foto horizontal)"],
+  "behavior": [
+    "Escritorio desde 960 px (inicio del rango L): rejilla de 12 columnas del sistema; título 1–6 con el enlace alineado al final de la fila; foto vertical 2–4 y texto 6–9; la foto horizontal empieza en la columna 8 y sale a sangre hasta el borde derecho, apoyada en el borde inferior del módulo (sin padding inferior).",
+    "Móvil y tablet: apilado en orden visual — título, enlace, foto vertical (3 columnas), texto (5 columnas) y foto horizontal a 2/3 del ancho, a sangre por la derecha y pegada abajo. Tablet (8 columnas) no está en Figma: se infiere del móvil con los mismos spans."
+  ],
+  "content": [ { "field": "Título", "notes": "Una o dos líneas." }, { "field": "Párrafo", "notes": "40–60 palabras." }, { "field": "Enlace", "notes": "Una o dos palabras." } ],
+  "a11y": ["Título como h2.", "Las fotos necesitan alt si aportan información; si son decorativas, alt vacío.", "El enlace es `<a>` con href o `<button>` sin él."],
+  "related": ["Aspect Ratio", "Button-Action-Link", "M07-Content-Text+Image"],
+  "layout": {
+    "type": "Mezcla (Columnas + foto a sangre)",
+    "grid": "12 columnas desde 960 px (rango L); 6 en XS/SM y 8 en M, apilado con spans propios.",
+    "columns": [
+      { "variant": "desktop", "story": "Desktop", "piece": "Título", "selector": ".m36-doble__title", "columns": "1–6 (7–11 libres; el enlace va al final de la fila)" },
+      { "variant": "desktop", "story": "Desktop", "piece": "Foto vertical 2:3", "selector": ".m36-doble__photo-v", "columns": "2–4 (1 y 5 libres)" },
+      { "variant": "desktop", "story": "Desktop", "piece": "Texto", "selector": ".m36-doble__text", "columns": "6–9 (10–12 libres)" }
+    ],
+    "noColumns": [],
+    "pieces": [
+      { "variant": "desktop", "width": 1440, "piece": "Enlace (Button-Action-Link)", "role": "end", "placement": "fila del título, alineado al final de la columna 12 (en Figma sobresale 13 px: se ajusta a la rejilla)" },
+      { "variant": "desktop", "width": 1440, "piece": "Foto horizontal", "role": "bleed", "placement": "desde la columna 8 hasta el borde derecho (a sangre), pegada al borde inferior; 9:4" },
+      { "variant": "mobile", "width": 390, "piece": "Enlace (Button-Action-Link)", "role": "start", "placement": "desde la columna 1, fit-content" },
+      { "variant": "mobile", "width": 390, "piece": "Foto horizontal", "role": "bleed", "placement": "2/3 del ancho, a sangre por la derecha y pegada abajo; 9:4" }
+    ],
+    "order": {
+      "desktop (1440)": ["Título", "Enlace", "Foto vertical", "Texto", "Foto horizontal"],
+      "mobile (390)": ["Título", "Enlace", "Foto vertical", "Texto", "Foto horizontal"]
+    }
+  },
+  "images": ["f5eb552e2ca5a345e7607e6b35446c6be7419347", "7cdd4de80df7207cd31c84eebe7748c3382afe8a"],
+  "placeholders": [
+    { "what": "Uso (Do / Don't)", "why": "propuesta de Claude; pendiente de revisar con diseño" },
+    { "what": "Título", "why": "en el máster es lorem ipsum" }
+  ],
+  "notes": [
+    "Figma: el frame no tiene autolayout ni constraints útiles; layout interpretado con layout-boxes + grid-columns + captura (skill nueva).",
+    "grid-columns marcó la foto horizontal de escritorio como «ancho propio» (start): visualmente toca el borde derecho y el inferior → se construye como a sangre (bleed). Mejora propuesta para la skill: un elemento que empieza en columna y toca el borde del frame es bleed aunque no mida 50/33 %.",
+    "grid-columns dejó el enlace de escritorio en «ask» (13 px fuera de la columna 12): por la captura es el final de la fila del título (role end).",
+    "Figma: colores sin variable — fondo #fff → Backgrounds/Base; título #000 → Texts/Base; párrafo #666 → Texts/Neutral-1 (mismo valor).",
+    "Figma: separaciones sin variable — 112/64 → FX-15/FX-11; 50 → FX-10 (56); 39 → FX-9 (40); 70 → FX-12 (72); 100 → FX-14 (96); móvil 16/43/60/59 → FX-4/FX-9/FX-10/FX-10.",
+    "Foto horizontal: 594×263 (escritorio) y 260×117 (móvil) no son proporciones del máster Aspect Ratio → 9:4 en código (Aspect Ratio Fill + aspect-ratio). Avisar a diseño.",
+    "Errata en el máster: «Siguente» (Siguiente). Se replica el texto del máster como valor por defecto.",
+    "Nomenclatura: el nombre del máster está en minúsculas («M36-content doble photo») a diferencia del resto (M07-Content-Text+Image)."
+  ],
+  "codePath": "src/modules/M36ContentDoblePhoto/M36ContentDoblePhoto.jsx"
+}

@@ -1,1 +1,1157 @@
-{"pageId":"53927:2121","page":"🧩 Raw Modules","readAt":"2026-10-06T14:51:07.928Z","masters":[{"id":"58163:39972","name":"M11-Content-Textonly","kind":"set","section":null,"w":1440,"h":420,"variants":5,"props":{"Slot 1":"SLOT","Slot 2":"SLOT","⌙ Title":"TEXT","⌙ Label":"TEXT","Show Slot 2":"BOOLEAN","Show Label":"BOOLEAN","Show Title":"BOOLEAN","Show Box Title":"BOOLEAN","Device":["Desktop","Mobile"],"Variant":["2-column","1-Center-Column","split","All","1-Left-Column"]},"autolayout":5,"vectorsOnly":false,"images":0,"deps":["button"],"fp":"008c4777"},{"id":"58508:35830","name":"M15-Hero-Sectionhero","kind":"set","section":null,"w":1440,"h":786,"variants":12,"props":{"Link":"BOOLEAN","Bodycopy":"BOOLEAN","Back":"BOOLEAN","Title":"TEXT","Subtitle":"TEXT","Device":["Desktop","Mobile"],"Image":["Horizontal","Vertical","None - Producto","None"],"Status":["Default","Scroll Down"]},"autolayout":4,"vectorsOnly":false,"images":0,"deps":["Aspect Ratio","Bag","Brand Logo","Button-Action-Link","Button-Icon","Equals","M01-Navigation","MagnifyingGlass","NavButton"],"fp":"95185793"},{"id":"58163:40311","name":"M27-Cards-Categories","kind":"set","section":null,"w":1440,"h":964,"variants":2,"props":{"List":"SLOT","Show Arrows":"BOOLEAN","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":6,"deps":["ArrowLeft","ArrowRight","Aspect Ratio","Button-Icon","Card Product","CaretRight"],"fp":"1bfb6ed4"},{"id":"58153:32094","name":"M12-Content-Introtext","kind":"set","section":null,"w":1440,"h":774,"variants":2,"props":{"-> Button":"BOOLEAN","Show Boxes":"BOOLEAN","Show body":"BOOLEAN","Show title":"BOOLEAN","Label":"BOOLEAN","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":0,"deps":["Button-Action-Link"],"fp":"7e809aac"},{"id":"58163:33397","name":"M03-Navigation-Footer","kind":"set","section":null,"w":1440,"h":1247,"variants":2,"props":{"Quote":"TEXT","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":2,"deps":["ArrowRight","Aspect Ratio","Button-Action-Link","Button-Icon","CaretDown","Checkbox-Label","Checkboxes-Radios","Customer Award Ekomi","FacebookLogo","InputAndButton","InstagramLogo","Logo_junta_de_castilla_y_leon","PEFC CERTIFICATE","XLogo","mobile_menu_accordion"],"fp":"eafb15fc"},{"id":"58182:4143","name":"M01-Navigation","kind":"set","section":null,"w":390,"h":56,"variants":6,"props":{"Menu":"SLOT","Tools":"SLOT","Device":["Desktop","Mobile"],"Mode":["Dark","Light","Grey"]},"autolayout":6,"vectorsOnly":false,"images":0,"deps":["Bag","Brand Logo","Equals","MagnifyingGlass","NavButton"],"fp":"698b4bf3"},{"id":"58182:4350","name":"M02-Menu","kind":"set","section":null,"w":1440,"h":415,"variants":5,"props":{"Show Photo":"BOOLEAN","Photo List":"SLOT","Device":["Desktop","Mobile"],"Type":["Collapsed","Product","About"]},"autolayout":5,"vectorsOnly":false,"images":10,"deps":["ArrowRight","Aspect Ratio","Bag - Items","Brand Logo","Button-Action-Link","CaretDown","CaretUp","M01-Navigation","MagnifyingGlass","NavButton","X","menu-item-list","mobile_menu_accordion"],"fp":"afcee56a"},{"id":"63928:325885","name":"M30-Hero-Joselito-Lab","kind":"set","section":null,"w":1440,"h":800,"variants":2,"props":{"Device":["Mobile","Desktop"]},"autolayout":0,"vectorsOnly":false,"images":12,"deps":["Aspect Ratio","Bag","Brand Logo","Equals","M01-Navigation","MagnifyingGlass","NavButton"],"fp":"554e6275"},{"id":"58182:4353","name":"M13-Hero-Homepagehero","kind":"set","section":null,"w":1440,"h":860,"variants":4,"props":{"Show Toast":"BOOLEAN","Device":["Desktop","Mobile","Device4","Device5"]},"autolayout":0,"vectorsOnly":false,"images":2,"deps":["ArrowDown","Aspect Ratio","Bag","Brand Logo","Equals","M01-Navigation","MagnifyingGlass","NavButton","Stepper_for_toast","Toast"],"fp":"273776b0"},{"id":"58182:4380","name":"M17-Banners-Sectionbanner","kind":"set","section":null,"w":390,"h":824,"variants":8,"props":{"Show Body":"BOOLEAN","Show Label":"BOOLEAN","Show Antetitulo":"BOOLEAN","Title 1":"TEXT","Title 2":"TEXT","Text":"TEXT","Subtitle":"TEXT","Text 2":"TEXT","Device":["Desktop","Mobile"],"Type":["Borders","Full Screen","Animated - Product"],"Status":["Default","Static","Animated"]},"autolayout":6,"vectorsOnly":false,"images":8,"deps":["Aspect Ratio","Button-Action-Link","Tag"],"fp":"177acdb9"},{"id":"58182:4396","name":"M25-Cards-Links","kind":"set","section":null,"w":390,"h":619,"variants":4,"props":{"Device":["Desktop","Mobile"],"Type":["One","Many"]},"autolayout":4,"vectorsOnly":false,"images":6,"deps":["Aspect Ratio","Button","Button-Action-Link","Card Carrusel","CaretRight","Title"],"fp":"036a592d"},{"id":"58363:34365","name":"M07-Content-Text+Image","kind":"set","section":null,"w":1440,"h":692,"variants":12,"props":{"Slot":"SLOT","Device":["Desktop","Mobile"],"Type":["Left","Right","Half-Left","Half-Right"],"Image Format":["Horizontal","Vertical"]},"autolayout":12,"vectorsOnly":false,"images":12,"deps":["Aspect Ratio","Divider","RowButtons"],"fp":"13934548"},{"id":"58464:36878","name":"M31-Navigation-PreviousNext","kind":"set","section":null,"w":390,"h":296,"variants":2,"props":{"Title Left":"TEXT","Title Right":"TEXT","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":0,"deps":["ArrowLeft","ArrowRight","Button-Icon"],"fp":"bcd49f76"},{"id":"58468:60216","name":"M09-ContentStack-Text+ Image","kind":"set","section":null,"w":1440,"h":700,"variants":7,"props":{"-> Button":"BOOLEAN","-> Description":"BOOLEAN","-> Number":"BOOLEAN","Device":["Desktop","Mobile"],"Image":["Horizontal","Vertical","None"],"Mode":["Collapsed","Expanded","Collapsed Hover"]},"autolayout":7,"vectorsOnly":false,"images":7,"deps":["Aspect Ratio","Button"],"fp":"e82f4782"},{"id":"58508:6679","name":"M14-Hero-Sectionheader","kind":"set","section":null,"w":1440,"h":800,"variants":6,"props":{"Show Labels":"BOOLEAN","Show toast":"BOOLEAN","Show Button":"BOOLEAN","Device":["Desktop","Mobile"],"Property":["Experiencias","Tiendas y Restaurantes","Cocinero"]},"autolayout":6,"vectorsOnly":false,"images":9,"deps":["ArrowLeft","Aspect Ratio","Button","Button-Action-Link","Button-Icon","Go_Back","Tag","firma_ferran_adria"],"fp":"f8f154c4"},{"id":"58627:43781","name":"M21-List-Numbers","kind":"set","section":null,"w":390,"h":636,"variants":2,"props":{"Titulo":"BOOLEAN","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":2,"deps":["Aspect Ratio","Block Big Numbers","Title"],"fp":"25b0d7f2"},{"id":"59895:46608","name":"M32-List-ArchiveList","kind":"set","section":null,"w":390,"h":1196,"variants":2,"props":{"Property 1":["Desktop","Mobile"]},"autolayout":1,"vectorsOnly":false,"images":2,"deps":["Aspect Ratio","Block Archive List","Button","Title"],"fp":"4fa4c859"},{"id":"59895:79904","name":"M18-Banners-Full Screen Slider","kind":"set","section":null,"w":390,"h":700,"variants":14,"props":{"Device":["Mobile","Desktop"],"Type":["Añadas 1","Origen 1","Origen 2","Añadas 2","Producto 1","Producto 2","Perfil Sensorial"]},"autolayout":2,"vectorsOnly":false,"images":26,"deps":["Aspect Ratio","Button-Action-Link","Tag","Title"],"fp":"f2d4aef3"},{"id":"59895:103739","name":"M08-Content-Imageonly","kind":"set","section":null,"w":1440,"h":810,"variants":6,"props":{"Device":["Desktop","Mobile"],"Type":["Split","Full Screen","Borders"]},"autolayout":5,"vectorsOnly":false,"images":8,"deps":["Aspect Ratio"],"fp":"8f435678"},{"id":"60054:12474","name":"M23-Cards-Gallery","kind":"set","section":null,"w":1440,"h":743,"variants":6,"props":{"Instagram Link":"BOOLEAN","Title":"BOOLEAN","Slot 1":"SLOT","Slot 2":"SLOT","Device":["Desktop","Mobile"],"Type":["Default","Carrousel","Carrousel - No text"],"Leyenda":["Yes","No"]},"autolayout":5,"vectorsOnly":false,"images":16,"deps":["ArrowLeft","ArrowRight","Aspect Ratio","Button-Icon","Card-Social-media","CaretRight","Title","X"],"fp":"da8fe300"},{"id":"60186:9313","name":"M20-List","kind":"set","section":null,"w":1440,"h":430,"variants":2,"props":{"-> Extra Item":"BOOLEAN","Titulo":"BOOLEAN","Property 1":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":0,"deps":["Arrow","Arrow Dropdown","Block best price","Main_Secondary-Link","Title"],"fp":"6447857e"},{"id":"60286:43172","name":"M24-Cards-Productcarousel","kind":"set","section":null,"w":1440,"h":858,"variants":2,"props":{"List":"SLOT","Device":["Mobile","Desktop"]},"autolayout":2,"vectorsOnly":false,"images":7,"deps":["Arrow","Aspect Ratio","Card Product","CaretRight","Title"],"fp":"7e995df7"},{"id":"60603:144636","name":"M22-NavigationDirectLink","kind":"set","section":null,"w":1440,"h":129,"variants":8,"props":{"Sold Out":"BOOLEAN","Arrow":"BOOLEAN","Device":["Mobile","Desktop"],"Type":["Deploy","Direct Link"],"State":["Default","Hover","Deployed"]},"autolayout":8,"vectorsOnly":false,"images":2,"deps":["ArrowRight","Aspect Ratio","Button-Icon","Minus","Plus","Tag"],"fp":"11530eaa"},{"id":"60634:75153","name":"M06-Navigation-Secondarymenu","kind":"set","section":null,"w":390,"h":68,"variants":5,"props":{"Show M02-Menu":"BOOLEAN","Slot":"SLOT","Slot 2":"SLOT","Device":["Desktop","Mobile"],"Type":["One line","Dropdown"],"Open":["Yes","No"]},"autolayout":5,"vectorsOnly":false,"images":1,"deps":["ArrowRight","Aspect Ratio","CaretDown","M02-Menu","Minus","NavButton","Plus","menu-item-list","subnavigation-item"],"fp":"e61c3f4c"},{"id":"61276:141868","name":"M05-Filter-Secondary Menu","kind":"set","section":null,"w":390,"h":68,"variants":8,"props":{"Slot":"SLOT","Device":["Desktop","Mobile"],"Status":["Default","Desplegado"],"Filtros Aplicados":["Yes","No"]},"autolayout":8,"vectorsOnly":false,"images":0,"deps":["ArrowRight","Button","Button-Action-Link","Button-Icon","Checkboxes-Radios","Tag","X","listbox_Item_Dropdown"],"fp":"7e18831a"},{"id":"61365:56297","name":"M16-Hero-Productdetail","kind":"set","section":null,"w":1440,"h":900,"variants":4,"props":{"Title Producto":"TEXT","Title Receta":"TEXT","Text Product":"TEXT","Text Receta":"TEXT","Col1":"TEXT","Col2":"TEXT","Col3":"TEXT","Col4":"TEXT","Show Col 4":"BOOLEAN","Show Col 3":"BOOLEAN","Show Col 2":"BOOLEAN","Device":["Desktop","Mobile"],"Type":["Producto","Receta"]},"autolayout":2,"vectorsOnly":false,"images":11,"deps":["Add_to_list","ArrowLeft","Aspect Ratio","Brand Logo","Button","Button-Action-Link","Button-Icon","Go_Back","M01-Navigation","MagnifyingGlass","NavButton","Stepper_for_toast","Tag"],"fp":"783bd7d0"},{"id":"61439:232705","name":"M26-Buscador","kind":"set","section":null,"w":1440,"h":325,"variants":6,"props":{"Recientes":"BOOLEAN","Device":["Mobile","Desktop"],"Status":["Default","Typing","Filled"]},"autolayout":6,"vectorsOnly":false,"images":0,"deps":["ArrowRight","Brand Logo","Button","Button-Action-Link","Button-Icon","X"],"fp":"eadad876"},{"id":"61387:153548","name":"M19-Card-Grid","kind":"set","section":null,"w":1440,"h":1471,"variants":2,"props":{"Título":"BOOLEAN","Slot":"SLOT","Device":["Mobile","Desktop"]},"autolayout":2,"vectorsOnly":false,"images":12,"deps":["Aspect Ratio","Card Product","CaretRight","Tag","Title"],"fp":"2d72b5b9"},{"id":"63559:53572","name":"M29-User-Profile","kind":"set","section":null,"w":1440,"h":356,"variants":2,"props":{"Slot":"SLOT","Menu":"SLOT","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":0,"deps":["ArrowRight","M06-Navigation-Secondarymenu","Plus","menu-item-list"],"fp":"ec913ba9"},{"id":"63688:482735","name":"M10-Errors","kind":"set","section":null,"w":1440,"h":860,"variants":2,"props":{"Title":"TEXT","Description":"TEXT","Device":["Desktop","Mobile"]},"autolayout":0,"vectorsOnly":false,"images":2,"deps":["404_picture","Aspect Ratio","Button-Action-Link"],"fp":"628e8dec"},{"id":"63727:483351","name":"M04-Login","kind":"set","section":null,"w":390,"h":844,"variants":2,"props":{"Show Photo":"BOOLEAN","Slot":"SLOT","Device":["Desktop","Mobile"]},"autolayout":2,"vectorsOnly":false,"images":0,"deps":["Aspect Ratio","Bag","Brand Logo","Button","Divider","Equals","Form","Input","M01-Navigation","MagnifyingGlass","NavButton","RowButtons"],"fp":"6fbed94c"},{"id":"58512:9289","name":"M28-Cards-Accordion","kind":"set","section":null,"w":1440,"h":1034,"variants":5,"props":{},"autolayout":5,"vectorsOnly":false,"images":13,"deps":["*/Overrides/Stars/Star","Aspect Ratio","Button","Button-Action-Link","CaretRight","Tag","Title"],"fp":"e84dc044"}],"frames":[]}
+{
+  "pageId": "53927:2121",
+  "page": "🧩 Raw Modules",
+  "readAt": "2026-10-09T08:33:47.996Z",
+  "masters": [
+    {
+      "id": "58163:39972",
+      "name": "M11-Content-Textonly",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 420,
+      "variants": 5,
+      "props": {
+        "Slot 1": "SLOT",
+        "Slot 2": "SLOT",
+        "⌙ Title": "TEXT",
+        "⌙ Label": "TEXT",
+        "Show Slot 2": "BOOLEAN",
+        "Show Label": "BOOLEAN",
+        "Show Title": "BOOLEAN",
+        "Show Box Title": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Variant": [
+          "2-column",
+          "1-Center-Column",
+          "split",
+          "All",
+          "1-Left-Column"
+        ]
+      },
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "button"
+      ],
+      "fp": "008c4777"
+    },
+    {
+      "id": "58508:35830",
+      "name": "M15-Hero-Sectionhero",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 786,
+      "variants": 12,
+      "props": {
+        "Link": "BOOLEAN",
+        "Bodycopy": "BOOLEAN",
+        "Back": "BOOLEAN",
+        "Title": "TEXT",
+        "Subtitle": "TEXT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Image": [
+          "Horizontal",
+          "Vertical",
+          "None - Producto",
+          "None"
+        ],
+        "Status": [
+          "Default",
+          "Scroll Down"
+        ]
+      },
+      "autolayout": 4,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Aspect Ratio",
+        "Bag",
+        "Brand Logo",
+        "Button-Action-Link",
+        "Button-Icon",
+        "Equals",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton"
+      ],
+      "fp": "95185793"
+    },
+    {
+      "id": "58163:40311",
+      "name": "M27-Cards-Categories",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 964,
+      "variants": 2,
+      "props": {
+        "List": "SLOT",
+        "Show Arrows": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 6,
+      "deps": [
+        "ArrowLeft",
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button-Icon",
+        "Card Product",
+        "CaretRight"
+      ],
+      "fp": "1bfb6ed4"
+    },
+    {
+      "id": "58153:32094",
+      "name": "M12-Content-Introtext",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 774,
+      "variants": 2,
+      "props": {
+        "-> Button": "BOOLEAN",
+        "Show Boxes": "BOOLEAN",
+        "Show body": "BOOLEAN",
+        "Show title": "BOOLEAN",
+        "Label": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Button-Action-Link"
+      ],
+      "fp": "7e809aac"
+    },
+    {
+      "id": "58163:33397",
+      "name": "M03-Navigation-Footer",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 1247,
+      "variants": 2,
+      "props": {
+        "Quote": "TEXT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button-Action-Link",
+        "Button-Icon",
+        "CaretDown",
+        "Checkbox-Label",
+        "Checkboxes-Radios",
+        "Customer Award Ekomi",
+        "FacebookLogo",
+        "InputAndButton",
+        "InstagramLogo",
+        "Logo_junta_de_castilla_y_leon",
+        "PEFC CERTIFICATE",
+        "XLogo",
+        "mobile_menu_accordion"
+      ],
+      "fp": "eafb15fc"
+    },
+    {
+      "id": "58182:4143",
+      "name": "M01-Navigation",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 56,
+      "variants": 6,
+      "props": {
+        "Menu": "SLOT",
+        "Tools": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Mode": [
+          "Dark",
+          "Light",
+          "Grey"
+        ]
+      },
+      "autolayout": 6,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Bag",
+        "Brand Logo",
+        "Equals",
+        "MagnifyingGlass",
+        "NavButton"
+      ],
+      "fp": "698b4bf3"
+    },
+    {
+      "id": "58182:4350",
+      "name": "M02-Menu",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 415,
+      "variants": 5,
+      "props": {
+        "Show Photo": "BOOLEAN",
+        "Photo List": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Collapsed",
+          "Product",
+          "About"
+        ]
+      },
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 10,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "Bag - Items",
+        "Brand Logo",
+        "Button-Action-Link",
+        "CaretDown",
+        "CaretUp",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton",
+        "X",
+        "menu-item-list",
+        "mobile_menu_accordion"
+      ],
+      "fp": "afcee56a"
+    },
+    {
+      "id": "63928:325885",
+      "name": "M30-Hero-Joselito-Lab",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 800,
+      "variants": 2,
+      "props": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 12,
+      "deps": [
+        "Aspect Ratio",
+        "Bag",
+        "Brand Logo",
+        "Equals",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton"
+      ],
+      "fp": "554e6275"
+    },
+    {
+      "id": "58182:4353",
+      "name": "M13-Hero-Homepagehero",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 860,
+      "variants": 4,
+      "props": {
+        "Show Toast": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile",
+          "Device4",
+          "Device5"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "ArrowDown",
+        "Aspect Ratio",
+        "Bag",
+        "Brand Logo",
+        "Equals",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton",
+        "Stepper_for_toast",
+        "Toast"
+      ],
+      "fp": "273776b0"
+    },
+    {
+      "id": "58182:4380",
+      "name": "M17-Banners-Sectionbanner",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 824,
+      "variants": 8,
+      "props": {
+        "Show Body": "BOOLEAN",
+        "Show Label": "BOOLEAN",
+        "Show Antetitulo": "BOOLEAN",
+        "Title 1": "TEXT",
+        "Title 2": "TEXT",
+        "Text": "TEXT",
+        "Subtitle": "TEXT",
+        "Text 2": "TEXT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Borders",
+          "Full Screen",
+          "Animated - Product"
+        ],
+        "Status": [
+          "Default",
+          "Static",
+          "Animated"
+        ]
+      },
+      "autolayout": 6,
+      "vectorsOnly": false,
+      "images": 8,
+      "deps": [
+        "Aspect Ratio",
+        "Button-Action-Link",
+        "Tag"
+      ],
+      "fp": "177acdb9"
+    },
+    {
+      "id": "58182:4396",
+      "name": "M25-Cards-Links",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 619,
+      "variants": 4,
+      "props": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "One",
+          "Many"
+        ]
+      },
+      "autolayout": 4,
+      "vectorsOnly": false,
+      "images": 6,
+      "deps": [
+        "Aspect Ratio",
+        "Button",
+        "Button-Action-Link",
+        "Card Carrusel",
+        "CaretRight",
+        "Title"
+      ],
+      "fp": "036a592d"
+    },
+    {
+      "id": "58363:34365",
+      "name": "M07-Content-Text+Image",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 692,
+      "variants": 12,
+      "props": {
+        "Slot": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Left",
+          "Right",
+          "Half-Left",
+          "Half-Right"
+        ],
+        "Image Format": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "autolayout": 12,
+      "vectorsOnly": false,
+      "images": 12,
+      "deps": [
+        "Aspect Ratio",
+        "Divider",
+        "RowButtons"
+      ],
+      "fp": "13934548"
+    },
+    {
+      "id": "58464:36878",
+      "name": "M31-Navigation-PreviousNext",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 296,
+      "variants": 2,
+      "props": {
+        "Title Left": "TEXT",
+        "Title Right": "TEXT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "ArrowLeft",
+        "ArrowRight",
+        "Button-Icon"
+      ],
+      "fp": "bcd49f76"
+    },
+    {
+      "id": "58468:60216",
+      "name": "M09-ContentStack-Text+ Image",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 700,
+      "variants": 7,
+      "props": {
+        "-> Button": "BOOLEAN",
+        "-> Description": "BOOLEAN",
+        "-> Number": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Image": [
+          "Horizontal",
+          "Vertical",
+          "None"
+        ],
+        "Mode": [
+          "Collapsed",
+          "Expanded",
+          "Collapsed Hover"
+        ]
+      },
+      "autolayout": 7,
+      "vectorsOnly": false,
+      "images": 7,
+      "deps": [
+        "Aspect Ratio",
+        "Button"
+      ],
+      "fp": "e82f4782"
+    },
+    {
+      "id": "58508:6679",
+      "name": "M14-Hero-Sectionheader",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 800,
+      "variants": 6,
+      "props": {
+        "Show Labels": "BOOLEAN",
+        "Show toast": "BOOLEAN",
+        "Show Button": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Property": [
+          "Experiencias",
+          "Tiendas y Restaurantes",
+          "Cocinero"
+        ]
+      },
+      "autolayout": 6,
+      "vectorsOnly": false,
+      "images": 9,
+      "deps": [
+        "ArrowLeft",
+        "Aspect Ratio",
+        "Button",
+        "Button-Action-Link",
+        "Button-Icon",
+        "Go_Back",
+        "Tag",
+        "firma_ferran_adria"
+      ],
+      "fp": "f8f154c4"
+    },
+    {
+      "id": "58627:43781",
+      "name": "M21-List-Numbers",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 636,
+      "variants": 2,
+      "props": {
+        "Titulo": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "Aspect Ratio",
+        "Block Big Numbers",
+        "Title"
+      ],
+      "fp": "25b0d7f2"
+    },
+    {
+      "id": "59895:46608",
+      "name": "M32-List-ArchiveList",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 1196,
+      "variants": 2,
+      "props": {
+        "Property 1": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 1,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "Aspect Ratio",
+        "Block Archive List",
+        "Button",
+        "Title"
+      ],
+      "fp": "4fa4c859"
+    },
+    {
+      "id": "59895:79904",
+      "name": "M18-Banners-Full Screen Slider",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 700,
+      "variants": 14,
+      "props": {
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ],
+        "Type": [
+          "Añadas 1",
+          "Origen 1",
+          "Origen 2",
+          "Añadas 2",
+          "Producto 1",
+          "Producto 2",
+          "Perfil Sensorial"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 26,
+      "deps": [
+        "Aspect Ratio",
+        "Button-Action-Link",
+        "Tag",
+        "Title"
+      ],
+      "fp": "f2d4aef3"
+    },
+    {
+      "id": "59895:103739",
+      "name": "M08-Content-Imageonly",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 810,
+      "variants": 6,
+      "props": {
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Split",
+          "Full Screen",
+          "Borders"
+        ]
+      },
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 8,
+      "deps": [
+        "Aspect Ratio"
+      ],
+      "fp": "8f435678"
+    },
+    {
+      "id": "60054:12474",
+      "name": "M23-Cards-Gallery",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 743,
+      "variants": 6,
+      "props": {
+        "Instagram Link": "BOOLEAN",
+        "Title": "BOOLEAN",
+        "Slot 1": "SLOT",
+        "Slot 2": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Default",
+          "Carrousel",
+          "Carrousel - No text"
+        ],
+        "Leyenda": [
+          "Yes",
+          "No"
+        ]
+      },
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 16,
+      "deps": [
+        "ArrowLeft",
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button-Icon",
+        "Card-Social-media",
+        "CaretRight",
+        "Title",
+        "X"
+      ],
+      "fp": "da8fe300"
+    },
+    {
+      "id": "60186:9313",
+      "name": "M20-List",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 430,
+      "variants": 2,
+      "props": {
+        "-> Extra Item": "BOOLEAN",
+        "Titulo": "BOOLEAN",
+        "Property 1": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Arrow",
+        "Arrow Dropdown",
+        "Block best price",
+        "Main_Secondary-Link",
+        "Title"
+      ],
+      "fp": "6447857e"
+    },
+    {
+      "id": "60286:43172",
+      "name": "M24-Cards-Productcarousel",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 858,
+      "variants": 2,
+      "props": {
+        "List": "SLOT",
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 7,
+      "deps": [
+        "Arrow",
+        "Aspect Ratio",
+        "Card Product",
+        "CaretRight",
+        "Title"
+      ],
+      "fp": "7e995df7"
+    },
+    {
+      "id": "60603:144636",
+      "name": "M22-NavigationDirectLink",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 129,
+      "variants": 8,
+      "props": {
+        "Sold Out": "BOOLEAN",
+        "Arrow": "BOOLEAN",
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ],
+        "Type": [
+          "Deploy",
+          "Direct Link"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Deployed"
+        ]
+      },
+      "autolayout": 8,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button-Icon",
+        "Minus",
+        "Plus",
+        "Tag"
+      ],
+      "fp": "11530eaa"
+    },
+    {
+      "id": "60634:75153",
+      "name": "M06-Navigation-Secondarymenu",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 68,
+      "variants": 5,
+      "props": {
+        "Show M02-Menu": "BOOLEAN",
+        "Slot": "SLOT",
+        "Slot 2": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "One line",
+          "Dropdown"
+        ],
+        "Open": [
+          "Yes",
+          "No"
+        ]
+      },
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 1,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "CaretDown",
+        "M02-Menu",
+        "Minus",
+        "NavButton",
+        "Plus",
+        "menu-item-list",
+        "subnavigation-item"
+      ],
+      "fp": "e61c3f4c"
+    },
+    {
+      "id": "61276:141868",
+      "name": "M05-Filter-Secondary Menu",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 68,
+      "variants": 8,
+      "props": {
+        "Slot": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Status": [
+          "Default",
+          "Desplegado"
+        ],
+        "Filtros Aplicados": [
+          "Yes",
+          "No"
+        ]
+      },
+      "autolayout": 8,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "ArrowRight",
+        "Button",
+        "Button-Action-Link",
+        "Button-Icon",
+        "Checkboxes-Radios",
+        "Tag",
+        "X",
+        "listbox_Item_Dropdown"
+      ],
+      "fp": "7e18831a"
+    },
+    {
+      "id": "61365:56297",
+      "name": "M16-Hero-Productdetail",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 900,
+      "variants": 4,
+      "props": {
+        "Title Producto": "TEXT",
+        "Title Receta": "TEXT",
+        "Text Product": "TEXT",
+        "Text Receta": "TEXT",
+        "Col1": "TEXT",
+        "Col2": "TEXT",
+        "Col3": "TEXT",
+        "Col4": "TEXT",
+        "Show Col 4": "BOOLEAN",
+        "Show Col 3": "BOOLEAN",
+        "Show Col 2": "BOOLEAN",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Type": [
+          "Producto",
+          "Receta"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 11,
+      "deps": [
+        "Add_to_list",
+        "ArrowLeft",
+        "Aspect Ratio",
+        "Brand Logo",
+        "Button",
+        "Button-Action-Link",
+        "Button-Icon",
+        "Go_Back",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton",
+        "Stepper_for_toast",
+        "Tag"
+      ],
+      "fp": "783bd7d0"
+    },
+    {
+      "id": "61439:232705",
+      "name": "M26-Buscador",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 325,
+      "variants": 6,
+      "props": {
+        "Recientes": "BOOLEAN",
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ],
+        "Status": [
+          "Default",
+          "Typing",
+          "Filled"
+        ]
+      },
+      "autolayout": 6,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "ArrowRight",
+        "Brand Logo",
+        "Button",
+        "Button-Action-Link",
+        "Button-Icon",
+        "X"
+      ],
+      "fp": "eadad876"
+    },
+    {
+      "id": "61387:153548",
+      "name": "M19-Card-Grid",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 1471,
+      "variants": 2,
+      "props": {
+        "Título": "BOOLEAN",
+        "Slot": "SLOT",
+        "Device": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 12,
+      "deps": [
+        "Aspect Ratio",
+        "Card Product",
+        "CaretRight",
+        "Tag",
+        "Title"
+      ],
+      "fp": "2d72b5b9"
+    },
+    {
+      "id": "63559:53572",
+      "name": "M29-User-Profile",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 356,
+      "variants": 2,
+      "props": {
+        "Slot": "SLOT",
+        "Menu": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "ArrowRight",
+        "M06-Navigation-Secondarymenu",
+        "Plus",
+        "menu-item-list"
+      ],
+      "fp": "ec913ba9"
+    },
+    {
+      "id": "63688:482735",
+      "name": "M10-Errors",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 860,
+      "variants": 2,
+      "props": {
+        "Title": "TEXT",
+        "Description": "TEXT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "404_picture",
+        "Aspect Ratio",
+        "Button-Action-Link"
+      ],
+      "fp": "628e8dec"
+    },
+    {
+      "id": "63727:483351",
+      "name": "M04-Login",
+      "kind": "set",
+      "section": null,
+      "w": 390,
+      "h": 844,
+      "variants": 2,
+      "props": {
+        "Show Photo": "BOOLEAN",
+        "Slot": "SLOT",
+        "Device": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "autolayout": 2,
+      "vectorsOnly": false,
+      "images": 0,
+      "deps": [
+        "Aspect Ratio",
+        "Bag",
+        "Brand Logo",
+        "Button",
+        "Divider",
+        "Equals",
+        "Form",
+        "Input",
+        "M01-Navigation",
+        "MagnifyingGlass",
+        "NavButton",
+        "RowButtons"
+      ],
+      "fp": "6fbed94c"
+    },
+    {
+      "id": "58512:9289",
+      "name": "M28-Cards-Accordion",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 1034,
+      "variants": 5,
+      "props": {},
+      "autolayout": 5,
+      "vectorsOnly": false,
+      "images": 13,
+      "deps": [
+        "*/Overrides/Stars/Star",
+        "Aspect Ratio",
+        "Button",
+        "Button-Action-Link",
+        "CaretRight",
+        "Tag",
+        "Title"
+      ],
+      "fp": "e84dc044"
+    },
+    {
+      "id": "68927:7315",
+      "name": "M36-content doble photo",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 726,
+      "variants": 2,
+      "props": {
+        "Title": "TEXT",
+        "type": [
+          "with-image"
+        ],
+        "Device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 4,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button-Action-Link"
+      ],
+      "fp": "840730a4"
+    },
+    {
+      "id": "68927:7582",
+      "name": "M37-narrative",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 726,
+      "variants": 2,
+      "props": {
+        "Title": "TEXT",
+        "type": [
+          "with-image"
+        ],
+        "Device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "ArrowRight",
+        "Aspect Ratio",
+        "Button"
+      ],
+      "fp": "b880fe79"
+    },
+    {
+      "id": "68927:7670",
+      "name": "M38-scrolled-big-text",
+      "kind": "set",
+      "section": null,
+      "w": 1440,
+      "h": 726,
+      "variants": 2,
+      "props": {
+        "Title": "TEXT",
+        "type": [
+          "with-image"
+        ],
+        "Device": [
+          "desktop",
+          "mobile"
+        ]
+      },
+      "autolayout": 0,
+      "vectorsOnly": false,
+      "images": 2,
+      "deps": [
+        "ArrowRight",
+        "Button",
+        "Overlay"
+      ],
+      "fp": "d94892d7"
+    }
+  ],
+  "frames": [],
+  "notMasters": []
+}

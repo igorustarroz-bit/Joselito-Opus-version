@@ -5,7 +5,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 // Flags booleanos: nunca consumen el siguiente argumento
-// [parche Joselito] 'meta' NO es booleano: figma-diff usa --meta <ruta> (grid-columns lo trata aparte)
+// 'meta' NO es booleano: figma-diff usa --meta <ruta> (grid-columns lo trata aparte)
 const BOOL = new Set(['build', 'all', 'fp', 'drift', 'next', 'keys', 'force', 'json', 'strict', 'dry-run', 'no-tailwind', 'no-fluid', 'measure', 'overflow', 'write',
   'update-scripts', 'status', 'rest', 'webp', 'no-optimize', 'help']);
 

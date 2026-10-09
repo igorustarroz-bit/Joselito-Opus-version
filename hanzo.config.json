@@ -13,8 +13,8 @@
     "files": [
       {
         "role": "main",
-        "key": "nANHdr2nKaFD6UCXAMND4s",
-        "url": "https://www.figma.com/design/nANHdr2nKaFD6UCXAMND4s/Design-To-code?node-id=42880-1062"
+        "key": "9pjwT8L6tbhQ05JjTFcaSP",
+        "url": "https://www.figma.com/design/9pjwT8L6tbhQ05JjTFcaSP/Design-to-Code?node-id=42880-1062"
       }
     ],
     "collections": {},
@@ -51,13 +51,13 @@
     "extra": {}
   },
   "breakpoints": {
-    "$comment": "Inicio del rango de cada modo responsive (documentación de layout de Figma, node 51284:8588): XS –400 · SM 401–480 · M 481–959 · L 960–1279 · XL 1280–1619 · XXL 1620–1919 · XXXL 1920+.",
     "390": 0,
     "480": 401,
     "768": 481,
     "1024": 960,
     "1440": 1280,
     "1620": 1620,
-    "1920": 1920
+    "1920": 1920,
+    "$comment": "Inicio del rango de cada modo responsive (documentación de layout de Figma, node 51284:8588): XS –400 · SM 401–480 · M 481–959 · L 960–1279 · XL 1280–1619 · XXL 1620–1919 · XXXL 1920+."
   }
 }

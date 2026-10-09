@@ -423,5 +423,10 @@
     "name": "M32ListArchiveList",
     "path": "src/modules/M32ListArchiveList/M32ListArchiveList.jsx",
     "fp": "6814a952"
+  },
+  "68927:7315": {
+    "name": "M36ContentDoblePhoto",
+    "path": "src/modules/M36ContentDoblePhoto/M36ContentDoblePhoto.jsx",
+    "fp": "36492da9"
   }
 }

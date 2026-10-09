@@ -1,0 +1,246 @@
+{
+ "id": "68927:7583",
+ "name": "type=with-image, Device=desktop",
+ "type": "COMPONENT",
+ "variant": {
+  "type": "with-image",
+  "Device": "desktop"
+ },
+ "w": 1440,
+ "h": 725.9,
+ "layoutGrids": [
+  {
+   "pattern": "COLUMNS",
+   "count": 12,
+   "gutter": 32,
+   "offset": 80,
+   "alignment": "STRETCH"
+  }
+ ],
+ "tree": {
+  "id": "68927:7583",
+  "name": "type=with-image, Device=desktop",
+  "type": "COMPONENT",
+  "x": 0,
+  "y": 0,
+  "w": 1440,
+  "h": 725.9,
+  "constraints": {
+   "horizontal": "MIN",
+   "vertical": "MIN"
+  },
+  "sizing": [
+   "FIXED",
+   "FIXED"
+  ],
+  "fill": [
+   "SOLID"
+  ],
+  "clip": true,
+  "kids": 5,
+  "bind": {
+   "paddingLeft": "Layout/Grids/Wrapper-Default",
+   "paddingRight": "Layout/Grids/Wrapper-Default",
+   "itemSpacing": "Spacers Fixed/fx-11"
+  },
+  "children": [
+   {
+    "id": "68927:7584",
+    "name": "Lorem ipsum dolor sit amet",
+    "type": "TEXT",
+    "x": 80,
+    "y": 112,
+    "w": 616,
+    "h": 52,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Lorem ipsum dolor sit amet "
+   },
+   {
+    "id": "68927:7586",
+    "name": "Aspect Ratio",
+    "type": "INSTANCE",
+    "x": 955,
+    "y": 64,
+    "w": 405,
+    "h": 607,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "IMAGE"
+    ],
+    "comp": "Aspect Ratio"
+   },
+   {
+    "id": "68927:7587",
+    "name": "Joselito ofrece, a través de sus Entidades Emisoras…",
+    "type": "TEXT",
+    "x": 79,
+    "y": 419,
+    "w": 406,
+    "h": 110,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Joselito ofrece, a través de sus Entidad"
+   },
+   {
+    "id": "68927:7628",
+    "name": "Frame 2087332515",
+    "type": "FRAME",
+    "x": 80,
+    "y": 368,
+    "w": 186,
+    "h": 24,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "gap": 16,
+     "wrap": "NO_WRAP",
+     "align": "MIN"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "HUG"
+    ],
+    "repeat": 5,
+    "kids": 6,
+    "children": [
+     {
+      "id": "68927:7630",
+      "name": "selected",
+      "type": "FRAME",
+      "x": 80,
+      "y": 368,
+      "w": 26,
+      "h": 24,
+      "fill": [
+       "SOLID"
+      ],
+      "kids": 1
+     },
+     {
+      "id": "68927:7629",
+      "name": "num",
+      "type": "FRAME",
+      "x": 122,
+      "y": 368,
+      "w": 16,
+      "h": 22,
+      "kids": 1
+     },
+     {
+      "id": "68927:7637",
+      "name": "num",
+      "type": "FRAME",
+      "x": 154,
+      "y": 368,
+      "w": 16,
+      "h": 22,
+      "kids": 1
+     },
+     {
+      "id": "68927:7639",
+      "name": "num",
+      "type": "FRAME",
+      "x": 186,
+      "y": 368,
+      "w": 16,
+      "h": 22,
+      "kids": 1
+     },
+     {
+      "id": "68927:7632",
+      "name": "num",
+      "type": "FRAME",
+      "x": 218,
+      "y": 368,
+      "w": 16,
+      "h": 22,
+      "kids": 1
+     },
+     {
+      "id": "68927:7634",
+      "name": "num",
+      "type": "FRAME",
+      "x": 250,
+      "y": 368,
+      "w": 16,
+      "h": 22,
+      "kids": 1
+     }
+    ]
+   },
+   {
+    "id": "68927:7588",
+    "name": "Button",
+    "type": "INSTANCE",
+    "x": 79,
+    "y": 579,
+    "w": 170,
+    "h": 64,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      32,
+      0,
+      32
+     ],
+     "gap": 8,
+     "wrap": "NO_WRAP",
+     "align": "CENTER"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "comp": "Button",
+    "bind": {
+     "paddingLeft": "Layout/Button/L/Padding",
+     "paddingRight": "Layout/Button/L/Padding",
+     "itemSpacing": "Layout/Spacers Responsive/2"
+    }
+   }
+  ]
+ }
+}

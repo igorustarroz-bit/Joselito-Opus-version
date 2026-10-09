@@ -64,7 +64,7 @@ const isFoundation = RE(naming.foundation, '^(aspect ratio|grid|icon sizer|space
 const items = [];
 const add = (it) => {
   let key = it.key || `${it.kind}:${slug(it.name)}`;
-  // [parche Joselito] Nombres que solo difieren en mayúsculas (accordion / Accordion) darían la misma clave:
+  // Nombres que solo difieren en mayúsculas (accordion / Accordion) darían la misma clave:
   // la segunda se desambigua con el nodeId para que cada máster tenga su propio estado.
   if (items.some((i) => i.key === key)) key = `${key}--${String(it.nodeId || items.length).replace(':', '-')}`;
   const p = prevBy[key] || {};
@@ -259,3 +259,9 @@ console.log(`✓ Plan: ${items.length} elementos (${masters.length} másters de 
 console.log(`  Siguiente: ${next ? next.name : '—'}`);
 if (comp.cycles.length || mods.cycles.length) console.warn(`⚠ Dependencias circulares: ${[...comp.cycles, ...mods.cycles].join(', ')}`);
 if (drift.length) console.warn(`⚠ ${drift.length} elementos hechos han cambiado en Figma (ver --drift)`);
+// Único acuerdo obligatorio con diseño: cada módulo es un máster (no un frame suelto)
+const loose = pages.flatMap((p) => (p.notMasters || []).map((f) => ({ ...f, page: p.page })));
+if (loose.length) {
+  console.warn(`⚠ ${loose.length} módulo(s) dibujados como frame suelto, no como máster (no entran en el plan):`);
+  for (const f of loose.slice(0, 15)) console.warn(`  - ${f.name} (${f.id}, ${f.w}px) en «${f.page}» → pedir a diseño que lo convierta en componente Mxx-Nombre`);
+}

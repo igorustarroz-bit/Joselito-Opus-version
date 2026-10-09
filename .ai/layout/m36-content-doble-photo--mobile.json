@@ -1,0 +1,166 @@
+{
+ "id": "68927:7324",
+ "name": "type=with-image, Device=mobile",
+ "type": "COMPONENT",
+ "variant": {
+  "type": "with-image",
+  "Device": "mobile"
+ },
+ "w": 390,
+ "h": 860,
+ "layoutGrids": [
+  {
+   "pattern": "COLUMNS",
+   "count": 6,
+   "gutter": 12,
+   "offset": 24,
+   "alignment": "STRETCH"
+  }
+ ],
+ "tree": {
+  "id": "68927:7324",
+  "name": "type=with-image, Device=mobile",
+  "type": "COMPONENT",
+  "x": 0,
+  "y": 0,
+  "w": 390,
+  "h": 860,
+  "constraints": {
+   "horizontal": "MIN",
+   "vertical": "MIN"
+  },
+  "sizing": [
+   "FIXED",
+   "FIXED"
+  ],
+  "fill": [
+   "SOLID"
+  ],
+  "clip": true,
+  "kids": 5,
+  "bind": {
+   "paddingLeft": "Layout/Grids/Wrapper-Default",
+   "paddingRight": "Layout/Grids/Wrapper-Default",
+   "itemSpacing": "Spacers Fixed/fx-9"
+  },
+  "children": [
+   {
+    "id": "68927:7558",
+    "name": "Lorem ipsum dolor sit amet",
+    "type": "TEXT",
+    "x": 24,
+    "y": 64,
+    "w": 283,
+    "h": 76,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Lorem ipsum dolor sit amet "
+   },
+   {
+    "id": "68927:7559",
+    "name": "Aspect Ratio",
+    "type": "INSTANCE",
+    "x": 24,
+    "y": 223,
+    "w": 165,
+    "h": 247,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "IMAGE"
+    ],
+    "comp": "Aspect Ratio"
+   },
+   {
+    "id": "68927:7560",
+    "name": "Aspect Ratio",
+    "type": "INSTANCE",
+    "x": 130,
+    "y": 743,
+    "w": 260,
+    "h": 117,
+    "constraints": {
+     "horizontal": "MAX",
+     "vertical": "MAX"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "IMAGE"
+    ],
+    "comp": "Aspect Ratio"
+   },
+   {
+    "id": "68927:7561",
+    "name": "Joselito ofrece, a través de sus Entidades Emisoras…",
+    "type": "TEXT",
+    "x": 24,
+    "y": 530,
+    "w": 283,
+    "h": 154,
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "FIXED",
+     "FIXED"
+    ],
+    "fill": [
+     "SOLID"
+    ],
+    "text": "Joselito ofrece, a través de sus Entidad"
+   },
+   {
+    "id": "68927:7562",
+    "name": "Button-Action-Link",
+    "type": "INSTANCE",
+    "x": 24,
+    "y": 156,
+    "w": 102,
+    "h": 24,
+    "layout": {
+     "mode": "HORIZONTAL",
+     "padding": [
+      0,
+      0,
+      4,
+      0
+     ],
+     "gap": 8,
+     "wrap": "NO_WRAP",
+     "align": "CENTER"
+    },
+    "constraints": {
+     "horizontal": "MIN",
+     "vertical": "MIN"
+    },
+    "sizing": [
+     "HUG",
+     "HUG"
+    ],
+    "comp": "Button-Action-Link",
+    "bind": {
+     "itemSpacing": "Layout/Spacers Responsive/2"
+    }
+   }
+  ]
+ }
+}

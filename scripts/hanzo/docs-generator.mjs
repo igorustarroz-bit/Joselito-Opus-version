@@ -62,6 +62,7 @@ function sections(m, demo, variantBlock) {
       m.layout.grid || '',
       table([T.variant, T.piece, T.columns], (m.layout.columns || []).map((c) => [c.variant, c.piece, c.columns])),
       m.layout.noColumns?.length ? `_${m.layout.noColumns.join(', ')}: ${LANG === 'es' ? 'sin rejilla (a sangre / líquido)' : 'no grid (full-bleed / liquid)'}_` : '',
+      m.layout.pieces?.length ? table([T.variant, T.piece, LANG === 'es' ? 'Rol' : 'Role', LANG === 'es' ? 'Colocación' : 'Placement'], m.layout.pieces.filter((p) => p.role !== 'nav' && p.role !== 'sliver').map((p) => [p.variant, p.piece, p.role, p.placement || ''])) : '',
     ].filter(Boolean).join('\n\n')] : []),
     `## ${T.variants}`, [...(m.axes || []).map((a) => `### ${a.title || a.name}\n\n${a.description || ''}\n\n${list((a.options || []).map((o) => (typeof o === 'string' ? `\`${o}\`` : `\`${o.value}\`${o.description ? ` — ${o.description}` : ''}`)))}`), variantBlock].filter(Boolean).join('\n\n'),
     `## ${T.tokens}`, table([T.name, 'Token', T.usage], tokenRows),
