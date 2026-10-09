@@ -433,5 +433,10 @@
     "name": "M37Narrative",
     "path": "src/modules/M37Narrative/M37Narrative.jsx",
     "fp": "1e62fc6b"
+  },
+  "68927:7670": {
+    "name": "M38ScrolledBigText",
+    "path": "src/modules/M38ScrolledBigText/M38ScrolledBigText.jsx",
+    "fp": "731e3ad2"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T08:48:58.024Z",
+  "generatedAt": "2026-10-09T08:55:17.851Z",
   "output": "react-storybook",
   "items": [
     {
@@ -1787,7 +1787,7 @@
       "builtFp": "b880fe79"
     },
     {
-      "status": "todo",
+      "status": "done",
       "phase": "modules",
       "kind": "module",
       "name": "M38-scrolled-big-text",
@@ -1801,7 +1801,8 @@
       ],
       "images": 2,
       "autolayout": "0/2",
-      "key": "module:m38-scrolled-big-text"
+      "key": "module:m38-scrolled-big-text",
+      "builtFp": "d94892d7"
     }
   ],
   "removed": [],
